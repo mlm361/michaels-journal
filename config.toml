@@ -1,0 +1,79 @@
+base_url = "https://example.com"
+theme = "ergo"
+
+title = "Michael’s Blog Journal"
+description = "A quiet place for thoughts, tech, and reflections."
+default_language = "en"
+
+generate_feeds = true
+feed_limit = 20
+feed_filenames = ["atom.xml"]
+
+compile_sass = true
+build_search_index = false
+
+[markdown]
+highlight_code = true
+
+[extra]
+# Profile avatar image located at static/img/avatar.png
+profile = "avatar.png"
+color_themes = ["default", "dark"]
+country_flags = false
+
+[[extra.socials]]
+icon = "envelope"
+icon_class = "fas"
+display = "Email"
+uri = "mailto:michael@michaelmitchell.email"
+
+[[extra.socials]]
+icon = "microblog"
+icon_class = "fab"
+display = "Micro.blog"
+uri = "https://mitchelltribe.com"
+
+[[extra.socials]]
+icon = "mastodon"
+icon_class = "fab"
+display = "Mastodon"
+uri = "https://mitchelltribe.social/@michael"
+
+[[extra.socials]]
+icon = "cloud"
+icon_class = "fas"
+display = "Bluesky"
+uri = "https://bsky.app/profile/mitchelltribe.com"
+
+[[extra.socials]]
+icon = "horse-head"
+icon_class = "fas"
+display = "Sharkey"
+uri = "https://mitchelltribe.rodeo/@michael"
+
+[[extra.socials]]
+icon = "key"
+icon_class = "fas"
+display = "Nostr"
+uri = "https://njump.me/npub19af39pdnr0cpg0ntakhdprfz8fkhkdn4t0f383gj0zw8hy4wf8lqh0nfur"
+
+[[extra.socials]]
+icon = "pen"
+icon_class = "fas"
+display = "Scribbles"
+uri = "https://michaelmusings.com"
+
+[[extra.socials]]
+icon = "file-alt"
+icon_class = "fas"
+display = "Write.as"
+uri = "https://michaelmitchell.blog"
+
+[[extra.socials]]
+icon = "blogger"
+icon_class = "fab"
+display = "Blogger"
+uri = "https://michaelleemitchell.net"
+
+[extra.font_awesome]
+kit = "6ab1c683ab"
