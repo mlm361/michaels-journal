@@ -1,0 +1,24 @@
+{% import "macros.html" as macros %}
+
+{% block language_selector %}
+{% if config.languages | length %}
+<div id="languageSelector">
+    <ul>
+        {% set defpath = current_path | trim_start_matches(pat="/" ~ lang ~ "/") %}
+
+        {% for l, value in config.languages %}
+        <li>
+            <a href="{{get_url(path=defpath, lang=l)}}">
+            {% if config.extra.country_flags %}
+                {{ macros::country_flag(language=l) }}
+            {% else %}
+                {{ l }}
+            {% endif %}
+            </a>
+        </li>
+        {% endfor %}
+
+    </ul>
+</div>
+{% endif %}
+{% endblock %}
