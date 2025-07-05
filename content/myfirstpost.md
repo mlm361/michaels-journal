@@ -1,6 +1,7 @@
 +++
 title = "Blogging My Way: Typora + Git + Cloudflare + Micro.blog"
 date = 2025-07-05
+draft = false
 +++
 
 
