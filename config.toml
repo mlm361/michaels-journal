@@ -4,6 +4,7 @@ theme = "ergo"
 title = "Michael’s Blog Journal"
 description = "A quiet place for thoughts, tech, and reflections."
 default_language = "en"
+author = "Michael Mitchell"
 
 generate_feeds = true
 feed_limit = 20

@@ -6,7 +6,6 @@ date = "2025-07-06"
 draft = false
 tags = ["astronomy", "photography", "telescopes", "moon"]
 categories = ["tech gear", "personal"] 
-author = "Michael Mitchell"
 
 +++
 
@@ -18,9 +17,6 @@ I’ve owned it for a couple of months, but only recently started using it serio
   <img src="/uploads/seestars3007042025.jpg" alt="Close-up moon photo from Seestar S30" width="600" />
   <figcaption>Close-up moon photo taken with the Seestar S30 from my backyard.</figcaption>
 </figure>
-
-<!--more-->
-
 <figure>
   <img src="/uploads/seestars3007042025(1).jpg" alt="Detailed moon surface from Seestar S30" width="600" />
   <figcaption>Detailed view of the moon's surface with the Seestar S30.</figcaption>
