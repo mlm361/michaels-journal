@@ -1,5 +1,5 @@
 +++
-title = "Capturing the Moon with My Zwo Seestar S30"
+title = ""
 description = "First impressions and photos from my new Zwo Seestar S30 telescope."
 date = "2025-07-06T12:05:00-04:00"
 draft = false
