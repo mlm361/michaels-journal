@@ -4,10 +4,6 @@ date = 2025-07-05
 draft = false
 +++
 
-
-
-# Blogging My Way: Typora + Git + Cloudflare + Micro.blog
-
 This post serves two purposes. First, it marks the inaugural entry 🥳 on my new blogging system.
  I'm using Typora ✍️ to write and save my posts locally in a folder. From there, I `git push` them to my GitHub repo 🔁, which then deploys to Cloudflare Pages 🌐. Finally, the RSS feed is imported into Micro.blog 📰.
 
