@@ -1,22 +1,25 @@
 @echo off
-cd /d "%~dp0"
+cd /d "C:\Users\mlm36\documents\michaels-journal"
 
-echo 🔧 Building site with Zola...
+echo 🔨 Building Zola site...
 zola build
-IF %ERRORLEVEL% NEQ 0 (
-    echo ❌ Zola build failed.
+
+if %errorlevel% neq 0 (
+    echo ❌ Zola build failed. Aborting.
     pause
-    exit /b %ERRORLEVEL%
+    exit /b %errorlevel%
 )
 
-echo 📝 Staging all changes...
-git add .
+echo 🧠 Staging all changes for Git...
+git add -A
 
 echo 💬 Enter commit message:
-set /p commitMessage=
+set /p msg="> "
+git commit -m "%msg%"
 
-git commit -m "%commitMessage%"
+echo 🚀 Pushing to GitHub...
 git push
 
-echo ✅ Site updated and pushed to GitHub!
+echo ✅ Done! Your site is being deployed by Cloudflare Pages.
 pause
+

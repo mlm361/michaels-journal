@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Michael’s Blog Journal</title>
+    <subtitle>A quiet place for thoughts, tech, and reflections.</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://michaels-journal.pages.dev/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-07-06T12:05:00-04:00</updated>
+    <id>https://michaels-journal.pages.dev/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Capturing the Moon with My Zwo Seestar S30</title>
+        <published>2025-07-06T12:05:00-04:00</published>
+        <updated>2025-07-06T12:05:00-04:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/zwo-seestar-s30-post/"/>
+        <id>https://michaels-journal.pages.dev/zwo-seestar-s30-post/</id>
+        
+        <summary type="html">&lt;h1 id=&quot;capturing-the-moon-with-my-zwo-seestar-s30&quot;&gt;Capturing the Moon with My Zwo Seestar S30&lt;&#x2F;h1&gt;
+&lt;p&gt;I’ve always wanted a telescope. Something I could use to take photos and videos of the night sky with my phone or camera. I recently came across a YouTube video about the Zwo Seestar S50, but since this is my first telescope, I decided to start with the more beginner-friendly &lt;strong&gt;S30&lt;&#x2F;strong&gt; and bought it for my birthday.&lt;&#x2F;p&gt;
+&lt;p&gt;I’ve owned it for a couple of months, but only recently started using it seriously. Here are some of the first photos I captured with it on &lt;strong&gt;July 4, 2025&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
+&lt;img src=&quot;&#x2F;uploads&#x2F;seestars3007042025.jpg&quot; alt=&quot;Close-up moon photo from Seestar S30&quot; width=&quot;600&quot; &#x2F;&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Blogging My Way: Typora + Git + Cloudflare + Micro.blog</title>
+        <published>2025-07-05T00:00:00+00:00</published>
+        <updated>2025-07-05T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/myfirstpost/"/>
+        <id>https://michaels-journal.pages.dev/myfirstpost/</id>
+        
+        <content type="html" xml:base="https://michaels-journal.pages.dev/myfirstpost/">&lt;h1 id=&quot;blogging-my-way-typora-git-cloudflare-micro-blog&quot;&gt;Blogging My Way: Typora + Git + Cloudflare + Micro.blog&lt;&#x2F;h1&gt;
+&lt;p&gt;This post serves two purposes. First, it marks the inaugural entry 🥳 on my new blogging system.
+I&#x27;m using Typora ✍️ to write and save my posts locally in a folder. From there, I &lt;code&gt;git push&lt;&#x2F;code&gt; them to my GitHub repo 🔁, which then deploys to Cloudflare Pages 🌐. Finally, the RSS feed is imported into Micro.blog 📰.&lt;&#x2F;p&gt;
+&lt;p&gt;It’s not as elegant as MarsEdit 💻—the polished Mac-only tool—but it works for now and lets me keep using Typora, which I really like.
+I tried Obsidian 🧩, but it felt too complicated. The whole &quot;vaults&quot; system 🤯 didn’t click with me. Typora is just simple and clean ✅.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;#blogging&lt;&#x2F;code&gt; &lt;code&gt;#typora&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
