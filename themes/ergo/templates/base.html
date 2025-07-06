@@ -20,38 +20,113 @@
         <script src="{{ config.base_url }}/theme_selector.js"></script>
         <script src="https://kit.fontawesome.com/{{ config.extra.font_awesome.kit }}.js" crossorigin="anonymous"></script>
 
-        <!--  css -->
+        <!-- css -->
         <link id="themeCSS" rel="stylesheet"
-                            href="{{ config.base_url }}/{% if config.extra.color_themes %}{{ config.extra.color_themes[0] }}{% else %}default{% endif%}.css"
-                            />
+              href="{{ config.base_url }}/{% if config.extra.color_themes %}{{ config.extra.color_themes[0] }}{% else %}default{% endif%}.css" />
 
         <!-- fonts -->
-        <!-- preload  -->
         <link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,500,500i,600,700,800,900|Raleway" as="style">
-        <!-- load -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,500,500i,600,700,800,900|Raleway">
         {% endblock head %}
 
         {% block rss %}
         {% if config.generate_feeds %}
-        <link rel="alternate" type="{{ macros::feed_mimetype(feed_filename=config.feed_filenames[0]) }}" title="{{ config.title }} RSS" href="{{ get_url(path=config.feed_filenames[0], trailing_slash=false) }}">
+        <link rel="alternate" type="{{ macros::feed_mimetype(feed_filename=config.feed_filenames[0]) }}"
+              title="{{ config.title }} RSS"
+              href="{{ get_url(path=config.feed_filenames[0], trailing_slash=false) }}">
         {% endif %}
         {% endblock rss %}
     </head>
 
     <body onload="main();">
-      {% include "menu.html" %}
+        {% include "menu.html" %}
 
-      {% block content %} {% endblock content %}
-      {% block pagination %} {% endblock pagination %}
+        {% block content %} {% endblock content %}
+        {% block pagination %} {% endblock pagination %}
 
-      <footer>
-        {% block footer %}
-          {% set base_url = get_url(path="/", lang=lang) %}
-          {{ macros::mini_logo(classes="", title=config.title, siteurl=base_url, logourl=config.extra.profile) }}
-          {{ macros::social_list(classes="foot_list", bsize="extra_small") }}
-          {{ macros::theme_selector(themes=config.extra.color_themes) }}
-        {% endblock footer %}
-      </footer>
+        <footer>
+            {% block footer %}
+              {% set base_url = get_url(path="/", lang=lang) %}
+              {{ macros::mini_logo(classes="", title=config.title, siteurl=base_url, logourl=config.extra.profile) }}
+              {{ macros::social_list(classes="foot_list", bsize="extra_small") }}
+              {{ macros::theme_selector(themes=config.extra.color_themes) }}
+            {% endblock footer %}
+
+            <!-- Footer metadata: breaks layout row and forces new line -->
+            <div style="clear: both; display: block; margin-top: 30px;">
+              <p id="copyright-line" class="footer-meta">
+                © <span id="startYear">2025</span>–<span id="currentYear"></span> Michael Mitchell
+              </p>
+              <p id="blog-uptime" class="footer-meta"></p>
+              <p id="last-updated" class="footer-meta"></p>
+            </div>
+
+            <!-- Creative Commons License -->
+            <div style="margin-top: 15px; text-align: center;">
+              <a rel="license" href="https://creativecommons.org/licenses/by/4.0/"
+                 style="display: inline-block; text-decoration: none; color: inherit;">
+                <img alt="Creative Commons License" style="border-width:0; vertical-align: middle;"
+                     src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+              </a>
+              <br />
+              <span style="display: block; margin-top: 5px; font-size: 0.9em;">
+                This work is licensed under a
+                <a rel="license" href="https://creativecommons.org/licenses/by/4.0/"
+                   style="color: #666; text-decoration: none; font-weight: bold;">
+                  Creative Commons Attribution 4.0 International License
+                </a>.
+              </span>
+            </div>
+        </footer>
+
+        <!-- Optional styling -->
+        <style>
+          .footer-meta {
+            font-size: 0.85em;
+            color: #666;
+            text-align: center;
+            margin: 8px 0;
+          }
+
+          .footer-meta:first-of-type {
+            margin-top: 30px;
+          }
+        </style>
+
+        <!-- Tinylytics Embed -->
+        <script src="https://tinylytics.app/embed/h2Q2CzgAf-te_SJUBWQ1.js" defer></script>
+
+        <!-- Footer Scripts -->
+        <script>
+          // Blog uptime (since Jan 1, 2025)
+          const startDate = new Date("2025-01-01T00:00:00Z");
+          function updateUptime() {
+              const now = new Date();
+              let diff = now - startDate;
+              const years = Math.floor(diff / (365.25 * 24 * 60 * 60 * 1000));
+              diff -= years * 365.25 * 24 * 60 * 60 * 1000;
+              const months = Math.floor(diff / (30.44 * 24 * 60 * 60 * 1000));
+              diff -= months * 30.44 * 24 * 60 * 60 * 1000;
+              const days = Math.floor(diff / (24 * 60 * 60 * 1000));
+              const text = `This blog has been running for: ${years} years, ${months} months, ${days} days.`;
+              const uptime = document.getElementById("blog-uptime");
+              if (uptime) uptime.textContent = text;
+          }
+
+          document.addEventListener("DOMContentLoaded", function () {
+              // Current year
+              const now = new Date();
+              const yearEl = document.getElementById("currentYear");
+              if (yearEl) yearEl.textContent = now.getFullYear();
+
+              // Last updated
+              const formattedDate = now.toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
+              const updatedEl = document.getElementById("last-updated");
+              if (updatedEl) updatedEl.textContent = `Last updated on: ${formattedDate}`;
+
+              // Uptime
+              updateUptime();
+          });
+        </script>
     </body>
 </html>

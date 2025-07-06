@@ -17,27 +17,26 @@
         <script src="https:&#x2F;&#x2F;michaels-journal.pages.dev/theme_selector.js"></script>
         <script src="https://kit.fontawesome.com/6ab1c683ab.js" crossorigin="anonymous"></script>
 
-        <!--  css -->
+        <!-- css -->
         <link id="themeCSS" rel="stylesheet"
-                            href="https:&#x2F;&#x2F;michaels-journal.pages.dev/default.css"
-                            />
+              href="https:&#x2F;&#x2F;michaels-journal.pages.dev/default.css" />
 
         <!-- fonts -->
-        <!-- preload  -->
         <link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,500,500i,600,700,800,900|Raleway" as="style">
-        <!-- load -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,500,500i,600,700,800,900|Raleway">
         
 
         
         
-        <link rel="alternate" type="application/atom+xml" title="Michael’s Blog Journal RSS" href="https://michaels-journal.pages.dev/atom.xml">
+        <link rel="alternate" type="application/atom+xml"
+              title="Michael’s Blog Journal RSS"
+              href="https://michaels-journal.pages.dev/atom.xml">
         
         
     </head>
 
     <body onload="main();">
-      
+        
 <input type="checkbox" id="openSidebarMenu" class="openSidebarMenu">
 <label class="menu cross menu--1" for="openSidebarMenu">
     <svg viewBox="0 0 75 75" xmlns="https://www.w3.org/2000/svg">
@@ -158,7 +157,7 @@
 
 
 
-      
+        
 <nav id="overlord" class="overlord" >
   
   
@@ -206,12 +205,12 @@
 </section>
 
 
-       
+         
 
-      <footer>
-        
-          
-          
+        <footer>
+            
+              
+              
 <figure class="mini_logo ">
     <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev" style="background-image: url(/img/avatar.png)"></a>
 </figure>
@@ -219,7 +218,7 @@
     <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev">Michael’s Blog Journal</a>
 </h5>
 
-          
+              
 <ul class="social_list foot_list">
     
 
@@ -319,7 +318,7 @@
 
 </ul>
 
-          
+              
 <select id="theme_selector" size=1>
     <option value="default" selected>default</option>
     
@@ -327,7 +326,83 @@
     
 </select>
 
-        
-      </footer>
+            
+
+            <!-- Footer metadata: breaks layout row and forces new line -->
+            <div style="clear: both; display: block; margin-top: 30px;">
+              <p id="copyright-line" class="footer-meta">
+                © <span id="startYear">2025</span>–<span id="currentYear"></span> Michael Mitchell
+              </p>
+              <p id="blog-uptime" class="footer-meta"></p>
+              <p id="last-updated" class="footer-meta"></p>
+            </div>
+
+            <!-- Creative Commons License -->
+            <div style="margin-top: 15px; text-align: center;">
+              <a rel="license" href="https://creativecommons.org/licenses/by/4.0/"
+                 style="display: inline-block; text-decoration: none; color: inherit;">
+                <img alt="Creative Commons License" style="border-width:0; vertical-align: middle;"
+                     src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+              </a>
+              <br />
+              <span style="display: block; margin-top: 5px; font-size: 0.9em;">
+                This work is licensed under a
+                <a rel="license" href="https://creativecommons.org/licenses/by/4.0/"
+                   style="color: #666; text-decoration: none; font-weight: bold;">
+                  Creative Commons Attribution 4.0 International License
+                </a>.
+              </span>
+            </div>
+        </footer>
+
+        <!-- Optional styling -->
+        <style>
+          .footer-meta {
+            font-size: 0.85em;
+            color: #666;
+            text-align: center;
+            margin: 8px 0;
+          }
+
+          .footer-meta:first-of-type {
+            margin-top: 30px;
+          }
+        </style>
+
+        <!-- Tinylytics Embed -->
+        <script src="https://tinylytics.app/embed/h2Q2CzgAf-te_SJUBWQ1.js" defer></script>
+
+        <!-- Footer Scripts -->
+        <script>
+          // Blog uptime (since Jan 1, 2025)
+          const startDate = new Date("2025-01-01T00:00:00Z");
+          function updateUptime() {
+              const now = new Date();
+              let diff = now - startDate;
+              const years = Math.floor(diff / (365.25 * 24 * 60 * 60 * 1000));
+              diff -= years * 365.25 * 24 * 60 * 60 * 1000;
+              const months = Math.floor(diff / (30.44 * 24 * 60 * 60 * 1000));
+              diff -= months * 30.44 * 24 * 60 * 60 * 1000;
+              const days = Math.floor(diff / (24 * 60 * 60 * 1000));
+              const text = `This blog has been running for: ${years} years, ${months} months, ${days} days.`;
+              const uptime = document.getElementById("blog-uptime");
+              if (uptime) uptime.textContent = text;
+          }
+
+          document.addEventListener("DOMContentLoaded", function () {
+              // Current year
+              const now = new Date();
+              const yearEl = document.getElementById("currentYear");
+              if (yearEl) yearEl.textContent = now.getFullYear();
+
+              // Last updated
+              const formattedDate = now.toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
+              const updatedEl = document.getElementById("last-updated");
+              if (updatedEl) updatedEl.textContent = `Last updated on: ${formattedDate}`;
+
+              // Uptime
+              updateUptime();
+          });
+        </script>
     </body>
 </html>
