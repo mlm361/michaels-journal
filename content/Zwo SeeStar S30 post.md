@@ -10,10 +10,6 @@ author = "Michael Mitchell"
 
 +++
 
-
-
-# Capturing the Moon with My Zwo Seestar S30
-
 I’ve always wanted a telescope. Something I could use to take photos and videos of the night sky with my phone or camera. I recently came across a YouTube video about the Zwo Seestar S50, but since this is my first telescope, I decided to start with the more beginner-friendly **S30** and bought it for my birthday.
 
 I’ve owned it for a couple of months, but only recently started using it seriously. Here are some of the first photos I captured with it on **July 4, 2025**:
