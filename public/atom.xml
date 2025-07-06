@@ -5,12 +5,12 @@
     <link rel="self" type="application/atom+xml" href="https://michaels-journal.pages.dev/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-07-06T12:05:00-04:00</updated>
+    <updated>2025-07-06T00:00:00+00:00</updated>
     <id>https://michaels-journal.pages.dev/atom.xml</id>
     <entry xml:lang="en">
-        <title></title>
-        <published>2025-07-06T12:05:00-04:00</published>
-        <updated>2025-07-06T12:05:00-04:00</updated>
+        <title>Capturing the Moon with My Zwo Seestar S30</title>
+        <published>2025-07-06T00:00:00+00:00</published>
+        <updated>2025-07-06T00:00:00+00:00</updated>
         
         <author>
           <name>
@@ -26,7 +26,10 @@
         <summary type="html">&lt;h1 id=&quot;capturing-the-moon-with-my-zwo-seestar-s30&quot;&gt;Capturing the Moon with My Zwo Seestar S30&lt;&#x2F;h1&gt;
 &lt;p&gt;I’ve always wanted a telescope. Something I could use to take photos and videos of the night sky with my phone or camera. I recently came across a YouTube video about the Zwo Seestar S50, but since this is my first telescope, I decided to start with the more beginner-friendly &lt;strong&gt;S30&lt;&#x2F;strong&gt; and bought it for my birthday.&lt;&#x2F;p&gt;
 &lt;p&gt;I’ve owned it for a couple of months, but only recently started using it seriously. Here are some of the first photos I captured with it on &lt;strong&gt;July 4, 2025&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
-&lt;img src=&quot;&#x2F;uploads&#x2F;seestars3007042025.jpg&quot; alt=&quot;Close-up moon photo from Seestar S30&quot; width=&quot;600&quot; &#x2F;&gt;</summary>
+&lt;figure&gt;
+  &lt;img src=&quot;&#x2F;uploads&#x2F;seestars3007042025.jpg&quot; alt=&quot;Close-up moon photo from Seestar S30&quot; width=&quot;600&quot; &#x2F;&gt;
+  &lt;figcaption&gt;Close-up moon photo taken with the Seestar S30 from my backyard.&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;</summary>
         
     </entry>
     <entry xml:lang="en">
