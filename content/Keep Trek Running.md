@@ -17,7 +17,7 @@ Then Paramount+/CBS introduced new series: *Discovery*, *Picard*, *Strange New W
 
 Why am I even writing this post? Because I think they need to keep a Star Trek series running constantly. And if there’s no show currently airing, there should be a movie in development. The Star Trek universe is expansive enough to support both quality and quantity. There are fans who will keep these stories going. For me, Star Trek represents a future that feels more achievable than the world of Star Wars.
 
-I believe we’re close to living in a Star Trek–inspired society technologically. Politically, we may resemble Star Wars more with wannabe wannabe emperors, kings, queens, and dictators everywhere or bubbling under the surface.  Still, I prefer the world of Star Trek, it’s more attainable in terms of its technology and processes.
+I believe we’re close to living in a Star Trek–inspired society technologically. Politically, we may resemble Star Wars more with wannabe emperors, kings, queens, and dictators everywhere or bubbling under the surface.  Still, I prefer the world of Star Trek, it’s more attainable in terms of its technology and processes.
 
 Take Star Wars, for example. It’s supposed to be highly advanced, yet some aspects feel oddly underdeveloped. Star Trek isn’t perfect either, but its depiction of artificial intelligence seems closer to where we are today. I think we should take inspiration from how AI is portrayed in Star Trek. "The Computer" is always just a word away—accessible, helpful, and never intrusive or obstructive like some AI experiences today.
 
