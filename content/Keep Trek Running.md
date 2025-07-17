@@ -5,7 +5,7 @@ description = "Why Star Trek should always have a series on the air and how its 
 date = "2025-07-16T20:09:07-04:00"
 draft = false
 tags = ["entertainment", "tv", "startrek"]
-categories = ["tv', "personal"]
+categories = ["tv", "personal"]
 
 +++
 
