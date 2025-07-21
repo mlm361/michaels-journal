@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFC 3339 Local Time Generator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        h1 {
+            margin-bottom: 10px;
+            font-size: 2.2em;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            opacity: 0.8;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+        
+        .time-display {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .label {
+            font-size: 0.9em;
+            opacity: 0.7;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .time-value {
+            font-family: 'Courier New', monospace;
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #4CAF50;
+            word-break: break-all;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .copy-btn {
+            background: linear-gradient(45deg, #4CAF50, #45a049);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .copy-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+        }
+        
+        .copy-btn:active {
+            transform: translateY(0);
+        }
+        
+        .status {
+            margin-top: 20px;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+        
+        .note {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            font-size: 0.95em;
+            border-left: 4px solid #4CAF50;
+        }
+        
+        .live-indicator {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #4CAF50;
+            border-radius: 50%;
+            margin-right: 8px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        
+        .update-info {
+            margin-top: 15px;
+            font-size: 0.8em;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>RFC 3339 Local Time Generator</h1>
+        <p class="subtitle">Perfect for Zola Static Site Generator</p>
+        
+        <div class="time-display">
+            <div class="label">
+                <span class="live-indicator"></span>
+                Current Local Time (RFC 3339)
+            </div>
+            <div class="time-value" id="localTime">Loading...</div>
+            <div class="update-info">Updates every second</div>
+        </div>
+        
+        <button class="copy-btn" onclick="copyToClipboard()">
+            📋 Copy to Clipboard
+        </button>
+        
+        <div class="status" id="status"></div>
+        
+        <div class="note">
+            <strong>💡 For Zola:</strong> This generates your local time with timezone offset to prevent "yesterday" issues. 
+            Just copy and paste into your front matter:<br><br>
+            <code>date = "2025-07-16T12:05:00-04:00"</code>
+        </div>
+    </div>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const localTime = formatLocalTimeRFC3339(now);
+            document.getElementById('localTime').textContent = localTime;
+        }
+        
+        function formatLocalTimeRFC3339(date) {
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            const hours = String(date.getHours()).padStart(2, '0');
+            const minutes = String(date.getMinutes()).padStart(2, '0');
+            const seconds = String(date.getSeconds()).padStart(2, '0');
+            
+            // Get timezone offset in minutes and convert to ±HH:MM format
+            const offsetMinutes = -date.getTimezoneOffset();
+            const offsetHours = Math.floor(Math.abs(offsetMinutes) / 60);
+            const offsetMins = Math.abs(offsetMinutes) % 60;
+            const offsetSign = offsetMinutes >= 0 ? '+' : '-';
+            const offsetString = `${offsetSign}${String(offsetHours).padStart(2, '0')}:${String(offsetMins).padStart(2, '0')}`;
+            
+            return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}${offsetString}`;
+        }
+        
+        function copyToClipboard() {
+            const timeValue = document.getElementById('localTime').textContent;
+            
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(timeValue).then(() => {
+                    showStatus('✅ Copied to clipboard!', 'success');
+                }).catch(() => {
+                    fallbackCopy(timeValue);
+                });
+            } else {
+                fallbackCopy(timeValue);
+            }
+        }
+        
+        function fallbackCopy(text) {
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            textArea.style.position = 'fixed';
+            textArea.style.opacity = '0';
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            
+            try {
+                document.execCommand('copy');
+                showStatus('✅ Copied to clipboard!', 'success');
+            } catch (err) {
+                showStatus('❌ Copy failed - please select and copy manually', 'error');
+            }
+            
+            document.body.removeChild(textArea);
+        }
+        
+        function showStatus(message, type) {
+            const status = document.getElementById('status');
+            status.textContent = message;
+            status.style.color = type === 'success' ? '#4CAF50' : '#f44336';
+            
+            setTimeout(() => {
+                status.textContent = '';
+            }, 3000);
+        }
+        
+        // Update time immediately and then every second
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
