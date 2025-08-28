@@ -1,3 +1,5 @@
+
+
 +++
 
 title = "When Police Lights Stay On: Law Enforcement Cruise Mode"
@@ -6,12 +8,18 @@ date = "2025-08-28T11:49:57-04:00"
 draft = false
 author = "Michael"
 lang = "en-us"
+image = "/uploads/police-cruiser.png"
+image_alt = "Driver confused as a police car follows with steady red/blue lights"
 tags = ["Florida", "traffic-law", "police-lights"]
 categories = ["public-safety", "transportation"]
 
 +++
 
+
+
 <img src="/uploads/police-cruise-mode-confused-driver-illustration.png" alt=" Illustration of a driver looking confused as a police car follows with steady red and blue lights." width="600" />
+
+
 
 I live in Hillsborough County, Florida. Within the last few months, our Hillsborough County Sheriff's Office (HCSO) and at least one other local agency have been using what they call *cruise mode* with their emergency lights. This is creating a lot of confusion for motorists, myself included.
 
