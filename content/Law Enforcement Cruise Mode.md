@@ -46,7 +46,7 @@ One key issue is that HCSO did not widely publicize this change until after they
 
 The statute does not appear to authorize steady, non-flashing lights while the vehicle is driving normally. Cruise mode is also not mentioned in the [Florida Driver’s Handbook](https://www.flhsmv.gov/pdf/handbooks/englishdriverhandbook.pdf), leaving motorists with no official guidance on how to respond:
 
-> Emergency Vehicles
+> Emergency Vehicles:
 > Motorists, bicyclists, and pedestrians must yield the right-of-way to law enforcement vehicles, fire engines, and other emergency vehicles using sirens or flashing lights. Pull over to the closest edge of the roadway immediately and stop until the emergency vehicle has passed. Do not block intersections.[^1]
 
 This confusion is not theoretical. I experienced it first-hand a couple of months ago. A deputy was driving behind me with cruise lights on, and I had no idea if he wanted me to move over or not. He did not try to pass, so I continued driving normally through heavy traffic.
