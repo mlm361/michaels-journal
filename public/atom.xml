@@ -5,8 +5,35 @@
     <link rel="self" type="application/atom+xml" href="https://michaels-journal.pages.dev/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-08-28T11:49:57-04:00</updated>
+    <updated>2025-09-27T16:09:37-04:00</updated>
     <id>https://michaels-journal.pages.dev/atom.xml</id>
+    <entry xml:lang="en">
+        <title>My Hypertrophic Cardiomyopathy Update</title>
+        <published>2025-09-27T16:09:37-04:00</published>
+        <updated>2025-09-27T16:09:37-04:00</updated>
+        
+        <author>
+          <name>
+            
+              Michael Mitchell
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/my-hypertrophic-cardiomyopathy-update/"/>
+        <id>https://michaels-journal.pages.dev/my-hypertrophic-cardiomyopathy-update/</id>
+        
+        <content type="html" xml:base="https://michaels-journal.pages.dev/my-hypertrophic-cardiomyopathy-update/">&lt;p&gt;I went to the doctors on Friday, hopefully for the last of the required three ECHOs I need while on my medication called &lt;a href=&quot;https:&#x2F;&#x2F;www.camzyos.com&#x2F;&quot;&gt;Camzyos&lt;&#x2F;a&gt; (you may have seen the commercials on TV for it). I have been on 5mg since June for my Hypertrophic Cardiomyopathy, and I am oversimplifying here, but the results have been mixed.&lt;&#x2F;p&gt;
+&lt;p&gt;On the positive side, it has helped significantly. My numbers have definitely improved, not only on my LVOT obstruction (how much oxygenated blood gets out of my heart) but also on my ejection fraction. My shortness of breath during exertion or regular activities is completely gone.&lt;&#x2F;p&gt;
+&lt;p&gt;However, there are concerning side effects. My fatigue is still there, if not a little worse, and my heart rate is consistently fast with tachycardia episodes. Your heart should slow down during sleep, but mine stays at 75-90 beats per minute or higher all night long, and I can feel it constantly. This is not AFib (an irregular fast heartbeat) but rather a fast, rhythmic beat.&lt;&#x2F;p&gt;
+&lt;p&gt;The doctor reviewed my previous Holter monitor readings and saw the tachycardia episodes and abnormal beats firsthand. He decided I need to be put on Verapamil to address these short runs of tachycardia and the SVT (Supraventricular Tachycardia) and VT (Ventricular Tachycardia) abnormal beats I experience.&lt;&#x2F;p&gt;
+&lt;p&gt;There was also other news from my cardiac MRI done last week, though they are not sure how to interpret it yet. Both radiologists who read my MRI need to provide clarification on quantifying my heart scarring. The report only stated &quot;diffuse LGE&quot; (Late Gadolinium Enhancement), which on its own is concerning, but they need a specific number to determine if I need an implantable ICD device to prevent sudden episodes of Ventricular Fibrillation (VFib), which anyone who has watched medical shows knows is the reason for Code Blues at hospitals.&lt;&#x2F;p&gt;
+&lt;p&gt;The treatment protocol is complicated. I cannot start Verapamil immediately because Camzyos has a REMS protocol (&lt;a href=&quot;https:&#x2F;&#x2F;www.fda.gov&#x2F;drugs&#x2F;drug-safety-and-availability&#x2F;risk-evaluation-and-mitigation-strategies-rems&quot;&gt;Risk Evaluation and Mitigation Strategies&lt;&#x2F;a&gt;). Camzyos can cause heart failure if not properly monitored, though this is reversible by stopping the medication. The protocol requires cutting the Camzyos dose in half when starting Verapamil, but my doctors do not want to do that in my case because that reduced dose would probably be ineffective.&lt;&#x2F;p&gt;
+&lt;p&gt;Instead, they are increasing my dose to 10mg and monitoring how I respond for two to three weeks with another ECHO (which are painless and no problem to do). Then they will add Verapamil, which will require cutting my Camzyos dose in half, allowing me to benefit from both medications. They must proceed this way because concurrent use of both drugs can potentially lower ejection fraction and cause heart failure, so they have to take it slowly.&lt;&#x2F;p&gt;
+&lt;p&gt;So much for my hoped-for six-month reprieve from ECHOs. I now have another one scheduled for next month, plus visits with my cardiologist, the HCM medication specialist cardiologist, and my electrophysiologist. All of these appointments just happen to be converging next month due to their regular yearly or six-month checkup schedules, in addition to this newly added ECHO.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>When Police Lights Stay On: Law Enforcement Cruise Mode</title>
         <published>2025-08-28T11:49:57-04:00</published>
