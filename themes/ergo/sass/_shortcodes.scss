@@ -36,3 +36,21 @@ figure {
         height: 340px;
     }
 }
+
+.footnote-reference {
+    a {
+        text-decoration: none;
+        padding: 0 2px;
+    }
+}
+
+.footnote-definition {
+    font-size: 0.9em;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding-top: 0.5em;
+    margin-top: 1em;
+    
+    sup {
+        margin-right: 0.5em;
+    }
+}
