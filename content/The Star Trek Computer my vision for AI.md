@@ -16,7 +16,7 @@ categories = ["AI"]
 +++
 
 <figure class="captioned">
-  <img src="/uploads/ship-bridge_robot-orchestra_enterprise-closer_08.png"
+  <img src="/uploads/starship-bridge_robot-orchestra_08.png"
        alt="A human conductor stands on a podium, baton raised, directing a futuristic orchestra of humanoid robots with glowing blue accents. The robots sit in traditional orchestral formation with violins, cellos, and other instruments. Through the large curved observation window behind them, the saucer section and nacelles of a Federation starship resembling the USS Enterprise are visible against the backdrop of deep space. The walls of the starship interior feature subtle LCARS-style glowing panels."
        width="600" />
   <figcaption>
