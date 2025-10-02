@@ -51,5 +51,6 @@ Humans will be the conductor and the AI will be the orchestra. This is how I wan
 
 ---
 
-[^1]:Greg Morris, *I Did It Myself*, https://gregmorris.co.uk/2025/09/24/i-did-it-myself.html  
-[^2]:Ed Zitron, *The Case Against Generative AI*, https://www.wheresyoured.at/the-case-against-generative-ai/
+[^1]: Greg Morris, *I Did It Myself*, https://gregmorris.co.uk/2025/09/24/i-did-it-myself.html
+
+[^2]: Ed Zitron, *The Case Against Generative AI*, https://www.wheresyoured.at/the-case-against-generative-ai/
