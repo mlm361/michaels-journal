@@ -1,5 +1,28 @@
 // SCSS for ergo shortcodes
 
+figure {
+    margin: 2em auto;
+    max-width: 625px;
+    text-align: center;
+    
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+    
+    figcaption {
+        font-size: 0.9em;
+        font-style: italic;
+        color: $text;
+        opacity: 0.85;
+        text-align: center;
+        margin-top: 0.75em;
+        line-height: 1.5;
+    }
+}
+
 .youtube {
     > iframe {
         width: 100%;

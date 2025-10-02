@@ -5,8 +5,53 @@
     <link rel="self" type="application/atom+xml" href="https://michaels-journal.pages.dev/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-09-27T16:09:37-04:00</updated>
+    <updated>2025-10-02T07:35:00-04:00</updated>
     <id>https://michaels-journal.pages.dev/atom.xml</id>
+    <entry xml:lang="en">
+        <title>The Star Trek Computer: My Vision for AI</title>
+        <published>2025-10-02T07:35:00-04:00</published>
+        <updated>2025-10-02T07:35:00-04:00</updated>
+        
+        <author>
+          <name>
+            
+              Michael Mitchell
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/the-star-trek-computer-my-vision-for-ai/"/>
+        <id>https://michaels-journal.pages.dev/the-star-trek-computer-my-vision-for-ai/</id>
+        
+        <content type="html" xml:base="https://michaels-journal.pages.dev/the-star-trek-computer-my-vision-for-ai/">&lt;figure class=&quot;captioned&quot;&gt;
+  &lt;img src=&quot;&#x2F;uploads&#x2F;ship-bridge_robot-orchestra_enterprise-closer_08.png&quot;
+       alt=&quot;A human conductor stands on a podium, baton raised, directing a futuristic orchestra of humanoid robots with glowing blue accents. The robots sit in traditional orchestral formation with violins, cellos, and other instruments. Through the large curved observation window behind them, the saucer section and nacelles of a Federation starship resembling the USS Enterprise are visible against the backdrop of deep space. The walls of the starship interior feature subtle LCARS-style glowing panels.&quot;
+       width=&quot;600&quot; &#x2F;&gt;
+  &lt;figcaption&gt;
+    A conductor leads a robotic orchestra aboard a starship, with the USS Enterprise framed through the observation deck windows.
+  &lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Computer: Personal log, Stardate: Current.&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I want AI that resembles two distinct concepts, not the general artificial intelligence (AGI) that others are trying to create. I envision AI to be like the &lt;em&gt;Star Trek&lt;&#x2F;em&gt; computer and helpful robots like Robby the Robot from &lt;em&gt;Forbidden Planet&lt;&#x2F;em&gt; or Sonny from &lt;em&gt;I, Robot&lt;&#x2F;em&gt;, without any violent programming. I also want a robot companion like the one from &lt;em&gt;Red Planet&lt;&#x2F;em&gt;. I do not want androids, cyborgs, or anything in between.&lt;&#x2F;p&gt;
+&lt;p&gt;I have listened to Ed Zitron and read a post from Greg Morris, who think AI systems are merely slop machines and a fad &quot;word salad&quot; generator.&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I am having to proactively ask others not to send me AI slop to make my life easier. If I am having to rewrite the shallow nonsense that every LLM produces anyway, I might as well just do it myself from scratch.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;However, I believe AI is useful. I am using these services as &lt;strong&gt;tools&lt;&#x2F;strong&gt;, and you have to look at them that way. I am not a coder, so I use these machines to accomplish what I want. I do not care if the resulting programs are long and &quot;slop,&quot; as long as they perform the intended task and pose no security problems. Modern computers and software can easily handle code that is not perfectly efficient. I believe that within five years, AI will have coding mastered and will be able to fix all the &quot;slop code&quot; it might be producing today.&lt;&#x2F;p&gt;
+&lt;p&gt;Greg Morris&#x27;s frustration is understandable. He has spent decades building his skills as a designer and communicator, and now he has to deal with people sending him AI-generated &quot;slop&quot; content that he has to rewrite. Ed Zitron raises similar concerns about &quot;slop code,&quot; arguing that AI-generated code is unreliable and that LLMs cannot be trusted to do the same thing every time.&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#2&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; Both critiques are valid, particularly when AI outputs are passed off as professional work or sent to professionals who then have to fix them. However, I am not claiming to be a designer or coder, nor am I sending AI-generated work to professionals. I am using AI to build things for myself that I wouldn&#x27;t otherwise be able to create or pay to have created.&lt;&#x2F;p&gt;
+&lt;p&gt;Shows like &lt;em&gt;Star Wars&lt;&#x2F;em&gt;, &lt;em&gt;Star Trek&lt;&#x2F;em&gt;, and &lt;em&gt;Aliens&lt;&#x2F;em&gt; all have AI that is very advanced, yet the technology remains in the background rather than replacing humans entirely. They have androids, synthetics, holograms, hyperspace travel, and computers that navigate across galaxies. But computers do not run everything. Humans fly the ships, make the decisions, and win the battles. The computer in &lt;em&gt;Star Trek&lt;&#x2F;em&gt; is the way I see AI eventually being: always accessible, able to perform any task asked of it, capable of writing flawless code, but humans remain at the heart of technology.&lt;&#x2F;p&gt;
+&lt;p&gt;Humans will be the conductor and the AI will be the orchestra. This is how I want my AI to be for the future: not replacing humans but supporting us.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Computer: End Personal log.&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;
+&lt;p&gt;Greg Morris, &lt;em&gt;I Did It Myself&lt;&#x2F;em&gt;, https:&#x2F;&#x2F;gregmorris.co.uk&#x2F;2025&#x2F;09&#x2F;24&#x2F;i-did-it-myself.html&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;2&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;2&lt;&#x2F;sup&gt;
+&lt;p&gt;Ed Zitron, &lt;em&gt;The Case Against Generative AI&lt;&#x2F;em&gt;, https:&#x2F;&#x2F;www.wheresyoured.at&#x2F;the-case-against-generative-ai&#x2F;&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>My Hypertrophic Cardiomyopathy Update</title>
         <published>2025-09-27T16:09:37-04:00</published>
