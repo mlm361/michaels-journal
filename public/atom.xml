@@ -5,8 +5,38 @@
     <link rel="self" type="application/atom+xml" href="https://michaels-journal.pages.dev/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-10-02T07:35:00-04:00</updated>
+    <updated>2025-10-25T00:33:41-04:00</updated>
     <id>https://michaels-journal.pages.dev/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Two Pis, many plans, limited focus</title>
+        <published>2025-10-25T00:33:41-04:00</published>
+        <updated>2025-10-25T00:33:41-04:00</updated>
+        
+        <author>
+          <name>
+            
+              Michael Mitchell
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/lot-to-do/"/>
+        <id>https://michaels-journal.pages.dev/lot-to-do/</id>
+        
+        <content type="html" xml:base="https://michaels-journal.pages.dev/lot-to-do/">&lt;figure class=&quot;captioned&quot;&gt;
+  &lt;img src=&quot;&#x2F;uploads&#x2F;electronics_researcher_working_on_circuit_board.png&quot;
+       alt=&quot;A middle-aged man with a beard and glasses is deeply focused while working on an electronic circuit board in a high-tech lab environment. The view is framed as if seen through a circular lens, highlighting the intricate details of the circuitry and the thoughtful expression of the man. The background features futuristic digital displays and diagrams, enhancing the scene&#x27;s innovative and technical atmosphere.&quot;
+       width=&quot;600&quot; &#x2F;&gt;
+  &lt;figcaption&gt;
+   An engineer lost in thought, surrounded by a maze of circuits and the glow of futuristic interfaces.
+  &lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;Lately, I’ve been swamped with projects and short on energy to tackle them, partly because of my worsening eyesight. I have glaucoma, but thankfully no loss of vision. My treatment includes twice-yearly eye pressure checks and nightly latanoprost. Even so, my glasses prescription seems to need constant updates, and I’ve always had a lot of floaters. My ophthalmologist reassures me that the floaters and eye pressure are fine, but my vision keeps changing, which is frustrating. After a recent visit to an optometrist for new glasses (an immediate improvement at first), I quickly found myself struggling again. It’s baffling how fast my eyesight shifts.&lt;&#x2F;p&gt;
+&lt;p&gt;This ongoing vision issue is a big reason I’m putting off other projects. Other medical concerns, like my heart health, are actually improving. I have two SunFounder Pis to build, a few minor tasks, and I’m refining my blog and social-event posting software. I expect these projects to be fully functional soon, and I’ll update my blog as they progress.&lt;&#x2F;p&gt;
+&lt;p&gt;Despite having plenty to work on, my motivation is flagging.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>The Star Trek Computer: My Vision for AI</title>
         <published>2025-10-02T07:35:00-04:00</published>
