@@ -1,6 +1,6 @@
 +++
 title = "Comparing Notes on Retirement Planning"
-date = "2025-11-29T21:44:28+00:00"
+date = "2025-11-29T21:45:49+00:00"
 draft = false
 tags = [ "personal", "travel", "retirement",]
 +++
@@ -12,6 +12,7 @@ tags = [ "personal", "travel", "retirement",]
 I was reading my RSS reader BazQux the other day and came across a post by [rscottjones](https://rscottjones.com/how-weve-thought-about-where-to-live-in-retirement/) about retirement planning. With approximately 8 years until my own retirement, I've started planning too. I found his approach very interesting.
 
 I like reading what other people are thinking and comparing ideas. Since he shared his and his wife's general plans, I thought I'd share mine to help organize my own thinking.
+<!--more-->
 
 My situation is different from his. It's just me, and I'm helping my elderly parents right now. I'll probably stay where I am for the foreseeable future. Once they're both gone, though, I'll need to reassess. I'm not particularly close to my brother or sister, or to my nieces and nephews (though that's not for lack of trying on my part).
 
