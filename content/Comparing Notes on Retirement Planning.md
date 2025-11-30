@@ -1,6 +1,6 @@
 +++
 title = "Comparing Notes on Retirement Planning"
-date = "2025-11-29T22:45:23+00:00"
+date = "2025-11-29T22:59:30+00:00"
 draft = false
 tags = [ "personal", "travel", "retirement",]
 +++
@@ -10,7 +10,7 @@ tags = [ "personal", "travel", "retirement",]
 
 
 
-<figcaption>Photo attribution: Maria Rosaria Sannino. Envisioning retirement as serene as this secluded coastal paradise, where every day feels like a vacation.</figcaption>
+<figcaption>Photo attribution: Maria Rosaria Sannino “<a href="https://www.flickr.com/photos/mrsannino/14973660029" title="Corfu, The Beauty of Cape Drastis">Corfu, The Beauty of Cape Drastis</a>” by <a href="https://www.flickr.com/photos/mrsannino/">Maria Rosaria Sannino</a>, <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/deed.en" rel="license noopener noreferrer">CC BY-NC-SA 2.0</a>. Envisioning retirement as serene as this secluded coastal paradise, where every day feels like a vacation.</figcaption>
 
 I was reading my RSS reader BazQux the other day and came across a post by [rscottjones](https://rscottjones.com/how-weve-thought-about-where-to-live-in-retirement/) about retirement planning. With approximately 8 years until my own retirement, I've started planning too. I found his approach very interesting.
 
