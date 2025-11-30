@@ -1,11 +1,13 @@
 +++
 title = "Comparing Notes on Retirement Planning"
-date = "2025-11-29T21:45:49+00:00"
+date = "2025-11-29T22:22:38+00:00"
 draft = false
 tags = [ "personal", "travel", "retirement",]
 +++
 
-![A breathtaking coastal landscape featuring turquoise waters, layered sedimentary rock formations, and lush greenery. The scene includes a series of small, unique rock islets close to the shore and a prominent cliff topped with dense vegetation overlooking the sea. A solitary sailboat drifts near the horizon under a partly cloudy sky.](/uploads/5e55fdca985f.jpg)
+<img src="/uploads/5e55fdca985f.jpg" alt="A breathtaking coastal landscape featuring turquoise waters, layered sedimentary rock formations, and lush greenery. The scene includes a series of small, unique rock islets close to the shore and a prominent cliff topped with dense vegetation overlooking the sea. A solitary sailboat drifts near the horizon under a partly cloudy sky." width="600">
+
+
 
 <figcaption>Photo attribution: Maria Rosaria Sannino. Envisioning retirement as serene as this secluded coastal paradise, where every day feels like a vacation.</figcaption>
 
