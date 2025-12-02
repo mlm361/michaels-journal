@@ -1,6 +1,6 @@
 +++
 title = "December 2, 2025"
-date = "2025-12-02T13:27:59+00:00"
+date = "2025-12-02T14:14:05+00:00"
 draft = false
 tags = [ "photography", "photos", "landscape",]
 +++
@@ -11,3 +11,5 @@ tags = [ "photography", "photos", "landscape",]
 
 
 <figcaption>Morning blaze: Silhouetted branches against a fiery sunrise sky, painting a dramatic beginning to the day.</figcaption>
+
+<!--more-->
