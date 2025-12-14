@@ -1,8 +1,8 @@
 +++
 title = "🎥 Watched Superman (2025)"
-date = "2025-12-14T09:51:00+00:00"
+date = "2025-12-14T10:21:43+00:00"
 draft = false
-tags = [ "movies", "review",]
+tags = [ "review", "movies",]
 +++
 
 ⚠️ **SPOILER WARNING:** FULL SPOILERS
