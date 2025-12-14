@@ -1,6 +1,6 @@
 +++
 title = "🎥 Watched Superman (2025)"
-date = "2025-12-14T10:22:38+00:00"
+date = "2025-12-14T10:23:07+00:00"
 draft = false
 tags = [ "review", "movies",]
 +++
@@ -21,6 +21,5 @@ Unfortunately, this film might be the weakest Superman installment to date. Desp
 
 A more compelling story line and perhaps sticking with Henry Cavill as Superman could have improved the film. While the new actor wasn't terrible, and might have been acceptable had Cavill not already owned the role, he couldn't save the film.
 
----
 
 <div style="text-align: center; padding: 10px; margin: 20px 0 0; border-top: 1px solid #ddd; font-size: 0.85em; color: #666;"><div style="margin-bottom: 8px;"><img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg" alt="TMDb" style="height: 16px; display: inline-block;"></div><div>This product uses the TMDb API but is not endorsed or certified by <a href="https://www.themoviedb.org" target="_blank" style="color: #01b4e4; text-decoration: none;">TMDb</a>.</div></div>
