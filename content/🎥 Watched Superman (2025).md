@@ -1,13 +1,13 @@
 +++
 title = "🎥 Watched Superman (2025)"
-date = "2025-12-14T10:23:07+00:00"
+date = "2025-12-14T10:29:49+00:00"
 draft = false
 tags = [ "review", "movies",]
 +++
 
 ⚠️ **SPOILER WARNING:** FULL SPOILERS
 
-<img src="/uploads/tmdb_102cc9c05fe1.jpg" alt="Promotional poster for a Superman movie featuring the superhero in a vibrant blue and red suit, confidently standing with his arms crossed, against a brightly lit, colorful background. The logo of DC Studios and the title "SUPERMAN" are prominently displayed." width="600">
+<img src="/uploads/tmdb_102cc9c05fe1.jpg" alt="Promotional poster for a Superman movie featuring the superhero in a vibrant blue and red suit, confidently standing with his arms crossed, against a brightly lit, colorful background. The logo of DC Studios and the title &quot;SUPERMAN&quot; are prominently displayed." width="600">
 
 
 
