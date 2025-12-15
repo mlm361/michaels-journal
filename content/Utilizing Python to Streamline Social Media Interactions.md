@@ -1,6 +1,6 @@
 +++
 title = "Utilizing Python to Streamline Social Media Interactions"
-date = "2025-12-14T19:46:55+00:00"
+date = "2025-12-14T19:50:25+00:00"
 draft = false
 tags = [ "personal", "programming", "ai",]
 +++
@@ -10,11 +10,11 @@ In recent months, I've been building a social media aggregation platform using t
 Developed in Python using AI coding assistants (Claude and ChatGPT 5.2 High Reasoning) to accelerate development, I designed the platform structure and verified the implementation through testing. The screenshot shows the current interface. Some posts appear duplicated because I follow the same people across multiple platforms.
 <!--more-->
 
-<img src="/uploads/4e425b7596c4.png" alt="Alt text: A long, vertical screenshot showing a series of Facebook posts in a news feed. The posts include various types of content such as text updates, shared articles, and images, each accompanied by reactions and comments from other users. The interface elements like the navigation bar, search bar, and user icons are visible, typical of the Facebook platform." width="600">
+<img src="/uploads/33938ba58abe.png" alt="A screenshot of a social media dashboard interface titled &quot;Personal Events Poster&quot; showing a post from &quot;The Starship Entity ✨ 2025&quot; about NASA&#x27;s Moon Mission Plume-Surface Interaction Tests. The post includes a link to a NASA article and a thumbnail of a video featuring a spacecraft engine test setup. Below this post are comments from other users discussing unrelated topics." width="600">
 
 
 
 
-<figcaption>Scrolling through digital snippets: a glimpse into the diverse and dynamic world of online content.</figcaption>
+<figcaption>NASA's latest technology captures the dynamic interaction of the Firefly Aerospace Blue Ghost Mission-1 lander's engine plumes with the lunar surface.</figcaption>
 
 The platform works well and I appreciate having one central location to read and respond to posts. There are occasional bugs to fix and a few features left to implement, but it serves its purpose.
