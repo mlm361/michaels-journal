@@ -1,7 +1,8 @@
 +++
 title = "Utilizing Python to Streamline Social Media Interactions"
-date = "2025-12-14T19:35:08+00:00"
+date = "2025-12-14T19:37:05+00:00"
 draft = false
+tags = [ "personal", "programming",]
 +++
 
 In recent months, I've been building a social media aggregation platform using the Windsurf AI IDE. The platform displays a multimedia timeline that pulls content from Mastodon, Bluesky, Sharkey, Nostr, and Micro.blog. The goal was to centralize my social media interactions in one location instead of checking multiple sites.
