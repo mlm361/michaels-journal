@@ -1,8 +1,8 @@
 +++
 title = "📺 Watched The Morning Show (2019)"
-date = "2025-12-18T23:45:15+00:00"
+date = "2025-12-18T23:59:31+00:00"
 draft = false
-tags = [ "review", "streaming", "tv",]
+tags = [ "review", "tv", "streaming",]
 +++
 
 ⚠️ **SPOILER WARNING:** MINOR SPOILERS
