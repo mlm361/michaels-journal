@@ -1,6 +1,6 @@
 +++
 title = "My 2025 in Review"
-date = "2025-12-31T09:44:47+00:00"
+date = "2025-12-31T09:53:08+00:00"
 draft = false
 tags = [ "personal",]
 +++
@@ -8,7 +8,7 @@ tags = [ "personal",]
 
 
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
-<img src="http://192.168.1.21:5001/api/uploads/dalle_temp_abeea3651599.png" alt="Illustration of a focused middle-aged man with glasses and a beard, sitting at a desk in a cozy, sunlit room filled with books. He is sketching or writing in a notebook, surrounded by art supplies and books. Ethereal, futuristic diagrams and clocks float around him, suggesting a blend of creativity and concepts of time. Rays of sunlight stream through a window, casting warm light and creating a serene, inspirational atmosphere." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
+<img src="/uploads/dalle_temp_abeea3651599.png" alt="Illustration of a focused middle-aged man with glasses and a beard, sitting at a desk in a cozy, sunlit room filled with books. He is sketching or writing in a notebook, surrounded by art supplies and books. Ethereal, futuristic diagrams and clocks float around him, suggesting a blend of creativity and concepts of time. Rays of sunlight stream through a window, casting warm light and creating a serene, inspirational atmosphere." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
 <figcaption style="font-size: 0.9em; color: #666; text-align: center; margin-top: 0.5em; font-style: italic;">Illustration of a focused middle-aged man with glasses and a beard, sitting at a desk in a cozy, sunlit room filled with books. He is sketching or writing in a notebook, surrounded by art supplies and books. Ethereal, futuristic diagrams and clocks float around him, suggesting a blend of creativity and concepts of time. Rays of sunlight stream through a window, casting warm light and creating a serene, inspirational atmosphere.</figcaption>
 </figure>
 
@@ -32,4 +32,4 @@ Also in 2025, I got really into self-hosting and am preparing to get rid of a lo
 
 As for 2026, I am hoping to maintain my weight and improve my health, especially my heart and eyes. I am also hoping the political and economic uncertainty settles down. I am looking forward to completing the buildout and population of my Plex server, continuing my self-hosting journey, and working on custom software to make my home life balance and personal goals just work. I am also looking forward to seeing how AI will factor into all of this in a positive way, instead of a negative way like the DRAM crisis it has caused.
 
-So while 2025 has not been a bad year or a great year, it was an okay year. Not one of my worst, but not one of my best either. Hopefully, prayerfully, and blessedly, 2026 will be a great year, not just for me but for you too. Here's to 2026!!
+So while 2025 has not been a bad year or a great year, it was an okay year. Not one of my worst, but not one of my best either. Hopefully, prayerfully, and blessedly, 2026 will be a great year, not just for me but for you too. Here's to 2026!
