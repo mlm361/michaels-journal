@@ -1,6 +1,6 @@
 +++
 title = "My 2025 in Review"
-date = "2025-12-31T09:00:25+00:00"
+date = "2025-12-31T09:09:19+00:00"
 draft = false
 tags = [ "personal",]
 +++
