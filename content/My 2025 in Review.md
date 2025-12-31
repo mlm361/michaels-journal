@@ -1,11 +1,18 @@
 +++
 title = "My 2025 in Review"
-date = "2025-12-31T09:09:19+00:00"
+date = "2025-12-31T09:43:24+00:00"
 draft = false
 tags = [ "personal",]
 +++
 
-<figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;"><img src="http://192.168.1.21:5001/api/uploads/dalle_temp_abeea3651599.png" alt="Illustration of a focused middle-aged man with glasses and a beard, sitting at a desk in a cozy, sunlit room filled with books. He is sketching or writing in a notebook, surrounded by art supplies and books. Ethereal, futuristic diagrams and clocks float around him, suggesting a blend of creativity and concepts of time. Rays of sunlight stream through a window, casting warm light and creating a serene, inspirational atmosphere." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;"><figcaption style="font-size: 0.9em; color: #666; text-align: center; margin-top: 0.5em; font-style: italic;">Illustration of a focused middle-aged man with glasses and a beard, sitting at a desk in a cozy, sunlit room filled with books. He is sketching or writing in a notebook, surrounded by art supplies and books. Ethereal, futuristic diagrams and clocks float around him, suggesting a blend of creativity and concepts of time. Rays of sunlight stream through a window, casting warm light and creating a serene, inspirational atmosphere.</figcaption></figure>
+
+
+<figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
+<img src="http://192.168.1.21:5001/api/uploads/dalle_temp_abeea3651599.png" alt="Illustration of a focused middle-aged man with glasses and a beard, sitting at a desk in a cozy, sunlit room filled with books. He is sketching or writing in a notebook, surrounded by art supplies and books. Ethereal, futuristic diagrams and clocks float around him, suggesting a blend of creativity and concepts of time. Rays of sunlight stream through a window, casting warm light and creating a serene, inspirational atmosphere." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
+<figcaption style="font-size: 0.9em; color: #666; text-align: center; margin-top: 0.5em; font-style: italic;">Illustration of a focused middle-aged man with glasses and a beard, sitting at a desk in a cozy, sunlit room filled with books. He is sketching or writing in a notebook, surrounded by art supplies and books. Ethereal, futuristic diagrams and clocks float around him, suggesting a blend of creativity and concepts of time. Rays of sunlight stream through a window, casting warm light and creating a serene, inspirational atmosphere.</figcaption>
+</figure>
+
+
 
 
 
