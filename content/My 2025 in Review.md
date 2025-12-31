@@ -1,6 +1,6 @@
 +++
 title = "My 2025 in Review"
-date = "2025-12-31T10:04:01+00:00"
+date = "2025-12-31T10:04:37+00:00"
 draft = false
 tags = [ "personal",]
 +++
@@ -44,4 +44,4 @@ Also in 2025, I got really into self-hosting and am preparing to get rid of a lo
 
 As for 2026, I am hoping to maintain my weight and improve my health, especially my heart and eyes. I am also hoping the political and economic uncertainty settles down. I am looking forward to completing the buildout and population of my Plex server, continuing my self-hosting journey, and working on custom software to make my home life balance and personal goals just work. I am also looking forward to seeing how AI will factor into all of this in a positive way, instead of a negative way like the DRAM crisis it has caused.
 
-So while 2025 has not been a bad year or a great year, it was an okay year. Not one of my worst, but not one of my best either. Hopefully, prayerfully, and blessedly, 2026 will be a great year, not just for me but for you too. Here's to 2026!!
+So while 2025 has not been a bad year or a great year, it was an okay year. Not one of my worst, but not one of my best either. Hopefully, prayerfully, and blessedly, 2026 will be a great year, not just for me but for you too. Here's to 2026!
