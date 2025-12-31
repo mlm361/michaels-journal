@@ -1,6 +1,6 @@
 +++
 title = "My 2025 in Review"
-date = "2025-12-31T09:53:08+00:00"
+date = "2025-12-31T10:02:39+00:00"
 draft = false
 tags = [ "personal",]
 +++
@@ -26,7 +26,19 @@ I thought I would give a roundup from my point of view for 2025 and share some t
 I moved to Write.as and thought I would like it. I had been trying it out before I left InMotion Hosting. I purchased a 6-year stint up front after trying it for about 3 months on the free version. But I soon learned it was not all that I had hoped for. I went to Micro.blog, and even though it had a shorter trial, I really liked it and saw how outdated Write.as was. I really liked, and still like, what Manton Reece is doing. So I changed from InMotion Hosting to Micro.blog and MXRoute for email hosting (as Micro.blog doesn't offer that and InMotion Hosting had the whole bundle). Both services have been fantastic, and both are owned and operated by individuals, not corporations, and both care about their service. I will be making a detailed post about these services coming up in the new year for a one-year usage review.
 <!--more-->
 
-2025 also brought many health-related issues. I have Obstructive Hypertrophic Cardiomyopathy (HCM for short). Here is a good video that explains it: https://www.youtube.com/watch?v=oblQE0LNbf8. So I went on a medication called Camzyos (you have probably seen the TV commercials for it). It has worked as far as I am concerned, but my doctors tell me the obstruction is worse upon exertion. So I have two options now, both explained again by Tufts Medical videos pretty well. The first way has a 90 percent rate of success of relieving the problem https://www.youtube.com/watch?v=bxX6jvdiHk8 but is also the riskiest, takes a long time to recover from, and is very invasive. The other procedure has a 70 to 80 percent chance of eliminating or reducing the problem upon exertion and is less invasive, but has a higher risk of not working https://www.youtube.com/watch?v=pZ4-mH7R-XE. My eyeglass prescription changed in March and was great, but nine months later it feels worse than before. I already need a new prescription, and the cataract in my right eye is interfering with my eyesight. Hoping that improves in 2026 too. So as you can see, this has been a most challenging year for my health. But it isn't all bad news. My type 2 diabetes has been under great control, and I have lost 35 pounds, going from 255 lbs to 220 lbs.
+2025 also brought many health-related issues. I have Obstructive Hypertrophic Cardiomyopathy (HCM for short). Here is a good video that explains it: 
+
+{{ youtube(id="oblQE0LNbf8") }}
+
+ So I went on a medication called Camzyos (you have probably seen the TV commercials for it). It has worked as far as I am concerned, but my doctors tell me the obstruction is worse upon exertion. So I have two options now, both explained again by Tufts Medical videos pretty well. The first way has a 90 percent rate of success of relieving the problem 
+
+{{ youtube(id="bxX6jvdiHk8") }}
+
+ but is also the riskiest, takes a long time to recover from, and is very invasive. The other procedure has a 70 to 80 percent chance of eliminating or reducing the problem upon exertion and is less invasive, but has a higher risk of not working 
+
+{{ youtube(id="pZ4-mH7R-XE") }}
+
+ My eyeglass prescription changed in March and was great, but nine months later it feels worse than before. I already need a new prescription, and the cataract in my right eye is interfering with my eyesight. Hoping that improves in 2026 too. So as you can see, this has been a most challenging year for my health. But it isn't all bad news. My type 2 diabetes has been under great control, and I have lost 35 pounds, going from 255 lbs to 220 lbs.
 
 Also in 2025, I got really into self-hosting and am preparing to get rid of a lot of big tech in 2026, if the DRAM crisis doesn't get ahold of me. Storage-wise, I have taken steps and gotten ahead of this looming crisis. I have a couple more things I want to do and get regarding storage. But, more to come on all that later.
 
