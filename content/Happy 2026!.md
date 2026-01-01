@@ -1,6 +1,6 @@
 +++
 title = "Happy 2026!"
-date = "2026-01-01T10:34:24+00:00"
+date = "2026-01-01T10:38:32+00:00"
 draft = false
 tags = [ "personal",]
 +++
