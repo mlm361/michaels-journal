@@ -1,6 +1,6 @@
 +++
 title = "My 2025 in Review"
-date = "2025-12-31T10:28:22+00:00"
+date = "2026-01-01T23:29:30+00:00"
 draft = false
 tags = [ "personal",]
 +++
@@ -22,7 +22,7 @@ I thought I would give a roundup from my point of view for 2025 and share some t
 
 2025 brought so many new things for me. I left InMotion Hosting and WordPress after 9 years with them. I probably would still be with them if it weren't for three factors. First, they had given me a discount for three years, and when it expired, they would not renew it and offered me nothing. Second, they had switched to a new spam email system called MailChannels that was more concerned with outgoing spam instead of incoming spam. I think they started to concentrate on outgoing spam because of complaints coming in. The last issue was WordPress. I started to get the same feeling of craziness from the owner/co-owner that I got from Elon Musk.
 
-I moved to Write.as and thought I would like it. I had been trying it out before I left InMotion Hosting. I purchased a 6-year stint up front after trying it for about 3 months on the free version. But I soon learned it was not all that I had hoped for. I went to Micro.blog, and even though it had a shorter trial, I really liked it and saw how outdated Write.as was. I really liked, and still like, what Manton Reece is doing. So I changed from InMotion Hosting to Micro.blog and MXRoute for email hosting (as Micro.blog doesn't offer that and InMotion Hosting had the whole bundle). Both services have been fantastic, and both are owned and operated by individuals, not corporations, and both care about their service. I will be making a detailed post about these services coming up in the new year for a one-year usage review.
+I moved to Write.as and thought I would like it. I had been trying it out before I left InMotion Hosting. I purchased a 6-year stint up front after trying it for about 3 months on the free version. But I soon learned it was not all that I had hoped for. I went to Micro.blog, and even though it had a shorter trial, I really liked it and saw how outdated Write.as was. I really liked, and still like, what Manton Reece is doing. So I changed from InMotion Hosting to Micro.blog and MXRoute for email hosting (as Micro.blog doesn't offer that and InMotion Hosting had the whole bundle). Both services have been fantastic, and Micro.blog is operated by an individual, not a big corporation and Manton Reece cares about his service. MXGuarddog is a small company from what I can tell and has been flawless. I will be making a detailed post about these services coming up in the new year for a one-year usage review.
 <!--more-->
 
 2025 also brought many health-related issues. I have Obstructive Hypertrophic Cardiomyopathy (HCM for short). Here is a good video that explains it: 
