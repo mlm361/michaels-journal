@@ -1,8 +1,8 @@
 +++
 title = "Spooky Full Moon January 2, 2026"
-date = "2026-01-03T14:58:44+00:00"
+date = "2026-01-03T15:00:08+00:00"
 draft = false
-tags = [ "photography", "photos",]
+tags = [ "photos", "landscape",]
 +++
 
 
