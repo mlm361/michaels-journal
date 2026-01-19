@@ -1,8 +1,8 @@
 +++
 title = "🍿 Watched TRON: Ares (2025) on Disney+"
-date = "2026-01-18T23:16:30+00:00"
+date = "2026-01-18T23:30:44+00:00"
 draft = false
-tags = [ "movies", "review",]
+tags = [ "review", "movies",]
 +++
 
 
