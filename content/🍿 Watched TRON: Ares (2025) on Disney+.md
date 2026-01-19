@@ -1,6 +1,6 @@
 +++
 title = "🍿 Watched TRON: Ares (2025) on Disney+"
-date = "2026-01-19T16:12:47+00:00"
+date = "2026-01-19T16:13:56+00:00"
 draft = false
 tags = [ "review", "movies",]
 +++
@@ -17,7 +17,6 @@ tags = [ "review", "movies",]
 
 **My Rating:** ⭐⭐⭐½ (3.5/5 stars)
 
-### Final Verdict
 A solid, if unremarkable, entry in the Tron series. Jared Leto stands out, and the plot introduces a novel twist: the digital world invades ours, spotlighting AI. It's a fine way to kill almost 2 hours. However, it's not worth a theater visit. Watching it on Disney+ is your best bet.
 
 
