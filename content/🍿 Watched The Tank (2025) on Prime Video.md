@@ -1,8 +1,8 @@
 +++
 title = "🍿 Watched The Tank (2025) on Prime Video"
-date = "2026-01-19T16:04:49+00:00"
+date = "2026-01-20T18:25:29+00:00"
 draft = false
-tags = [ "movies", "review",]
+tags = [ "review", "movies",]
 +++
 
 ⚠️ **SPOILER WARNING:** FULL SPOILERS
@@ -17,8 +17,6 @@ tags = [ "movies", "review",]
 
 **My Rating:** ⭐⭐⭐ (3/5 stars)
 
-
-### Final Verdict
 I thought it was partly a drama and partly a horror movie. It was engaging and it also made me think about how history repeats itself through some of its themes. It was two hours long and maybe about half an hour too long. Still, it was interesting, and it was sad in parts. A lot of what was portrayed in some scenes probably did happen.
 
 
