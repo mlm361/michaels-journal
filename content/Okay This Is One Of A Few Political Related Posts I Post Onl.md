@@ -1,7 +1,8 @@
 +++
 title = "Okay this is one of a few political related posts I post onl"
-date = "2026-03-02T22:26:53+00:00"
+date = "2026-03-02T22:26:59+00:00"
 draft = false
+tags = [ "opinion", "politics",]
 +++
 
 
@@ -11,6 +12,7 @@ draft = false
 Okay, this is one of the few politically related posts I make each year because politics are so divisive. So here’s your warning: if you’d rather not read political commentary, feel free to stop here.
 
 The recent armed action against Iran has me conflicted. I believe it's more of a distraction and a pretext than a genuine strategic necessity. While the issues we face in America come from the neglect of both parties, Trump seems to be using these problems to his advantage. This situation should have been addressed years ago when Iran first began developing its nuclear program. The United States is skilled at acting as a global police force and solving immediate problems but not at handling long-term challenges such as nation building. We have never successfully created a functioning foreign democracy.
+<!--more-->
 
 Historically, outside powers that try to build nations in their own image often fail in the long run. They either cannot fully erase local culture, or they create deep resentment in the process. The British Empire tried to project its institutions and values onto places like India and large parts of the Middle East, disrupting older political and cultural systems. When the British Empire withdrew, it left behind borders and governments that did not always match local realities, which helped fuel instability that continues today. There are certainly aspects of our own Constitution that could be improved, and Trump has exploited some of its weaknesses.
 
