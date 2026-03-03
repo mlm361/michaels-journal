@@ -1,5 +1,5 @@
 +++
-title = "Okay this is one of a few political related posts I post onl"
+title = "Political Disillusionment"
 date = "2026-03-02T22:26:59+00:00"
 draft = false
 tags = [ "opinion", "politics",]
