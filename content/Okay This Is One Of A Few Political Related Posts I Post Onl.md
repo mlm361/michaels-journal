@@ -9,7 +9,7 @@ tags = [ "opinion", "politics",]
 > ⚠️ **Warning:** Political Rant
 
 
-Okay, this is one of the few politically related posts I make each year because politics are so divisive. So here’s your warning: if you’d rather not read political commentary, feel free to stop here.  E
+Okay, this is one of the few politically related posts I make each year because politics are so divisive. So here’s your warning: if you’d rather not read political commentary, feel free to stop here.  
 
 The recent armed action against Iran has me conflicted. I believe it's more of a distraction and a pretext than a genuine strategic necessity. While the issues we face in America come from the neglect of both parties, Trump seems to be using these problems to his advantage. This situation should have been addressed years ago when Iran first began developing its nuclear program. The United States is skilled at acting as a global police force and solving immediate problems but not at handling long-term challenges such as nation building. We have never successfully created a functioning foreign democracy.
 <!--more-->
