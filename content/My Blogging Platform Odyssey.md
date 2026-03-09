@@ -2,7 +2,7 @@
 title = "My Blogging Platform Odyssey"
 date = "2026-03-08T21:45:36+00:00"
 draft = false
-tags = [ "review", "opinion", "blogging",]
+tags = [ "review", "opinion",]
 +++
 
 
@@ -57,7 +57,7 @@ The price has increased from $7 to $9 a month, though the proprietor regularly r
 
 ***Micro.blog*** is almost the opposite of Write.as in all ways, and 90 percent of those differences are positive.
 
-I've already reviewed Micro.blog extensively in this blog post https://mtribe.link/slga7, so I won't rehash everything here. The premium plan is only $1 more than Write.as ($10 vs $9), but you get dramatically more value. Micro.blog is constantly evolving, and the owner maintains development pace while keeping the platform stable and minimally disrupted. Also, keep in mind every tier has different features.
+I've already reviewed Micro.blog extensively in this blog post [here](https://mtribe.link/slga7), so I won't rehash everything here. The premium plan is only $1 more than Write.as ($10 vs $9), but you get dramatically more value. Micro.blog is constantly evolving, and the owner maintains development pace while keeping the platform stable and minimally disrupted. Also, keep in mind every tier has different features.
 
 **Pros:**
 
