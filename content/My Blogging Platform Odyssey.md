@@ -1,7 +1,8 @@
 +++
 title = "My Blogging Platform Odyssey"
-date = "2026-03-08T21:45:31+00:00"
+date = "2026-03-08T21:45:36+00:00"
 draft = false
+tags = [ "review", "opinion", "blogging",]
 +++
 
 
