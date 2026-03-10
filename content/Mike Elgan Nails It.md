@@ -2,6 +2,7 @@
 title = "Mike Elgan Nails It"
 date = "2026-03-10T14:51:55+00:00"
 draft = false
+tags = [ "blogging", "opinion",]
 +++
 
 > **[https://elgan.com/why-you-should-love-blogs-now-more-than-ever](https://elgan.com/why-you-should-love-blogs-now-more-than-ever)**
