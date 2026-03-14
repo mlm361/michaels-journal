@@ -1,8 +1,8 @@
 +++
 title = "Exploring Stardock's Clairvoyance"
-date = "2026-03-14T18:00:27+00:00"
+date = "2026-03-14T18:00:43+00:00"
 draft = false
-tags = [ "ai", "innovation", "technology",]
+tags = [ "technology", "ai", "innovation",]
 +++
 
 
