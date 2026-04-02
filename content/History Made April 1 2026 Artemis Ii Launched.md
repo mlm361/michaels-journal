@@ -2,6 +2,7 @@
 title = "History Made April 1, 2026 Artemis II Launched!"
 date = "2026-04-01T21:42:12+00:00"
 draft = false
+tags = [ "news", "photos", "history",]
 +++
 
 History was made today. The kind of history that will be written about and studied for years to come, and I was able to capture it from my backyard. Artemis II successfully launched with a crew of four and is heading to the Moon. Not as great, magnificent, or universe changing as what we will celebrate this Sunday with Easter and the resurrection of Jesus Christ, not even close. But still amazing.
