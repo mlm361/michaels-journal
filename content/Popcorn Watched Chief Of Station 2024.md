@@ -2,6 +2,7 @@
 title = "🍿 Watched Chief of Station (2024)"
 date = "2026-03-22T00:26:45+00:00"
 draft = false
+tags = [ "review", "movies",]
 +++
 
 ⚠️ **SPOILER WARNING:** MAJOR SPOILERS
