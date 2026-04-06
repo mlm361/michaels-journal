@@ -2,7 +2,7 @@
 title = "Birthday Thoughts on a Country at a Crossroads"
 date = "2026-04-06T11:01:39+00:00"
 draft = false
-tags = [ "current-events", "personal", "politics",]
+tags = [ "personal", "politics", "current-events",]
 +++
 
 
@@ -20,8 +20,7 @@ tags = [ "current-events", "personal", "politics",]
 
 I turn 57 this month, and with everything going on in the world, it almost feels like an afterthought. This year feels worse, more doom and gloom than others. I am not entirely sure why, but it is not just politics. The economy has been rough too, with gas prices staying high, in my case over $4.25 a gallon, along with rising costs across the board and ongoing tech hardware shortages. It all adds to the sense that things are off. 
 
-I have never seen as much upheaval as I have this past year.
-I have also never witnessed in my adult life companies and wealthy individuals fawn over a President to this extent, while much of the media seems complicit. Then they wonder why their trustworthiness is at an all-time low. I believe in a neutral, fact-based media, but in reality we have never truly had one in this country except when it suited particular interests.
+I have never seen as much upheaval as I have this past year. I have also never witnessed in my adult life companies and wealthy individuals fawn over a President to this extent, while much of the media seems complicit. Then they wonder why their trustworthiness is at an all-time low. I believe in a neutral, fact-based media, but in reality we have never truly had one in this country except when it suited particular interests.
 <!--more-->
 
 What do I mean by that? Yellow journalism is a term that emerged in the late 1800s, around the time of the Spanish-American War. It was fueled in part by sensationalized reporting about the explosion of the USS Maine in Havana Harbor in 1898. At the time, many blamed Spain, though the exact cause of the explosion has never been definitively determined. That kind of reporting helped push the country toward war. Personally, I think we probably should have kept control of Cuba at that time and eventually made it a state or states.
