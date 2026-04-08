@@ -1,8 +1,8 @@
 +++
 title = "Moon Views, Earth Love"
-date = "2026-04-07T23:39:05+00:00"
+date = "2026-04-07T23:39:06+00:00"
 draft = false
-tags = [ "current-events", "inspiration", "opinion",]
+tags = [ "opinion", "current-events", "inspiration",]
 +++
 
 I have been watching the **Artemis II** mission off and on. I saw these pictures on the NASA website, and here are a few that I really like. They definitely got me thinking.
