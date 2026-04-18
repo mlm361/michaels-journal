@@ -162,17 +162,15 @@ no_kudos = true
     await loadChartJs();
 
     progress('Fetching post index…', 30);
-    const resp = await fetch('/search_index.en.json');
-    if (!resp.ok) throw new Error('search_index.en.json not available');
-    const idx  = await resp.json();
+    const resp = await fetch('/post-index.json');
+    if (!resp.ok) throw new Error('post-index.json not available');
+    const rawDocs = await resp.json();
 
     progress('Processing posts…', 55);
-    const rawDocs = Object.entries(idx.documentStore?.docs || {});
-
-    const posts = rawDocs.map(([key, doc]) => {
-      const url  = doc.url || doc.path || key;
+    const posts = rawDocs.map(doc => {
+      const url  = doc.url;
       const date = doc.date ? new Date(doc.date) : null;
-      return { url, title: doc.title || '', date, words: wc(doc.body || '') };
+      return { url, title: doc.title || '', date, words: doc.words || 0 };
     }).filter(p => {
       if (!p.date || isNaN(p.date)) return false;
       const path = p.url.replace(/^https?:\/\/[^/]+/,'');

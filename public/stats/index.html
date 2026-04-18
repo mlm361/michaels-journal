@@ -111,7 +111,7 @@ function toggleNav() {
         <time class="article_time" datetime="2025-01-01">January 01, 2025</time>
     </li>
     <span class="dotDivider"></span>
-    <li> 2178 words </li>
+    <li> 2172 words </li>
     <span class="dotDivider" ></span>
     <li> 11 min </li>
 </ul>
@@ -260,17 +260,15 @@ function toggleNav() {
     await loadChartJs();
 
     progress('Fetching post index…', 30);
-    const resp = await fetch('/search_index.en.json');
-    if (!resp.ok) throw new Error('search_index.en.json not available');
-    const idx  = await resp.json();
+    const resp = await fetch('/post-index.json');
+    if (!resp.ok) throw new Error('post-index.json not available');
+    const rawDocs = await resp.json();
 
     progress('Processing posts…', 55);
-    const rawDocs = Object.entries(idx.documentStore?.docs || {});
-
-    const posts = rawDocs.map(([key, doc]) => {
-      const url  = doc.url || doc.path || key;
+    const posts = rawDocs.map(doc => {
+      const url  = doc.url;
       const date = doc.date ? new Date(doc.date) : null;
-      return { url, title: doc.title || '', date, words: wc(doc.body || '') };
+      return { url, title: doc.title || '', date, words: doc.words || 0 };
     }).filter(p => {
       if (!p.date || isNaN(p.date)) return false;
       const path = p.url.replace(/^https?:\/\/[^/]+/,'');
@@ -537,6 +535,7 @@ function toggleNav() {
 
             <p class="footer-line" id="blog-uptime"></p>
             <p class="footer-line">Visits: <span class="tinylytics_hits"></span></p>
+            <p class="footer-line">Uptime: <span class="tinylytics_uptime"></span></p>
             <p class="footer-line">© 2001–<span id="currentYear"></span> Michael Mitchell</p>
             <p class="footer-line"><a href="/privacy" class="footer-link">Privacy Policy</a></p>
             <p class="footer-line footer-powered">Built with ❤️ using <a href="https://www.getzola.org" target="_blank" rel="noopener" class="footer-link">Zola</a></p>
@@ -616,7 +615,7 @@ function toggleNav() {
         </style>
 
         <!-- Tinylytics + Kudos -->
-        <script src="https://tinylytics.app/embed/h2Q2CzgAf-te_SJUBWQ1.js?hits&kudos" defer></script>
+        <script src="https://tinylytics.app/embed/h2Q2CzgAf-te_SJUBWQ1.js?hits&kudos&uptime" defer></script>
 
         <script>
           document.addEventListener("DOMContentLoaded", function () {

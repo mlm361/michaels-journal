@@ -1,0 +1,1 @@
+[{% set section = get_section(path="_index.md") %}{% set_global sep = "" %}{% for page in section.pages %}{% if page.date %}{{ sep }}{"url":{{ page.permalink | json_encode | safe }},"title":{{ page.title | json_encode | safe }},"date":"{{ page.date | date(format="%Y-%m-%d") }}","words":{{ page.word_count }}}{% set_global sep = "," %}{% endif %}{% endfor %}]
