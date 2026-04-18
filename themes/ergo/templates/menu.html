@@ -1,26 +1,35 @@
-{% import "macros.html" as macros %}
-
 {% block menu %}
-<input type="checkbox" id="openSidebarMenu" class="openSidebarMenu">
-<label class="menu cross menu--1" for="openSidebarMenu">
-    <svg viewBox="0 0 75 75" xmlns="https://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="30" />
-        <path class="line--1" d="M0 40h62c13 0 6 28-4 18L35 35" />
-        <path class="line--2" d="M0 50h70" />
-        <path class="line--3" d="M0 60h62c13 0 6-28-4-18L35 65" />
-    </svg>
-</label>
-
-<div id="sidebarMenu">
-    <div class="menu_wrapper">
-        <ul class="sidebarMenuInner">
-            <li>
-                <a href="{{ config.base_url }}" >{{ config.title }}</a>
-                <div class="menu_div" ></div>
-            </li>
-            {% include "partials/menu-extra.html" %}
-            {{ macros::social_common(classes="", icon_class="fab") }}
-        </ul>
+<nav class="top-nav">
+  <div class="top-nav-inner">
+    <a class="top-nav-brand" href="{{ config.base_url }}">{{ config.title }}</a>
+    <button class="top-nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="top-nav-links" id="nav-links">
+      <a href="{{ config.base_url }}">🏠 Home</a>
+      <a href="{{ config.base_url }}/about">👤 About</a>
+      <a href="{{ config.base_url }}/archive">🗄️ Archive</a>
+      <a href="{{ config.base_url }}/on-this-day">📅 On This Day</a>
+      <a href="{{ config.base_url }}/stats">📊 Stats</a>
+      <a href="{{ config.base_url }}/tweets">🐦 Tweets</a>
+      <a href="{{ config.base_url }}/search">🔍 Search</a>
+      <a href="{{ get_url(path='atom.xml', trailing_slash=false) }}" class="rss-link" title="RSS Feed">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px;margin-right:3px;"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19.01 7.38 20 6.18 20C4.98 20 4 19.01 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/></svg>RSS
+      </a>
     </div>
-</div>
+    <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+      <span id="theme-icon">🌙</span>
+      <span id="theme-label">Dark</span>
+    </button>
+  </div>
+</nav>
+
+<script>
+function toggleNav() {
+  var links = document.getElementById('nav-links');
+  var btn = document.getElementById('nav-hamburger');
+  links.classList.toggle('open');
+  btn.classList.toggle('open');
+}
+</script>
 {% endblock menu %}

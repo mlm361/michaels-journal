@@ -195,7 +195,7 @@ tr {
     postion: relative;
     display: block;
     margin: auto;
-    margin-top: 140px;
+    margin-top: 80px;
     padding-bottom: 50px;
     margin-bottom: 50px;
     border-bottom: 0px solid $accent;
@@ -383,7 +383,7 @@ nav.pagination {
 
 .post_container {
     margin: 0 auto;
-    margin-top: 130px;
+    margin-top: 80px;
     padding: 0;
     display: block;
     position: relative;
@@ -475,4 +475,94 @@ nav.pagination {
 .overlord > #languageSelector > ul {
   margin-top: 50px;
   transform: translateY(-50%) translateX(20px);
+}
+
+// ── Tags ──────────────────────────────────────────────────────────────────────
+
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0.5rem 0 1.25rem;
+}
+
+.post-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid $accent;
+  color: $accent;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+
+  &:hover {
+    background: $accent;
+    color: $background;
+    text-decoration: none;
+  }
+}
+
+.taxonomy-wrap {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 1.5rem 0;
+}
+
+.tag-cloud-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1px solid $outline;
+  font-size: 0.88rem;
+  text-decoration: none;
+  color: $text;
+  transition: border-color 0.15s, color 0.15s;
+
+  &:hover {
+    border-color: $accent;
+    color: $accent;
+    text-decoration: none;
+  }
+
+  .tag-count {
+    font-size: 0.72rem;
+    opacity: 0.55;
+  }
+}
+
+.taxonomy-post-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+
+  li {
+    display: flex;
+    gap: 1rem;
+    align-items: baseline;
+    padding: 0.45rem 0;
+    border-bottom: 1px solid rgba(128,128,128,0.1);
+
+    .tax-date {
+      font-size: 0.8rem;
+      opacity: 0.45;
+      min-width: 6rem;
+      flex-shrink: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: $text;
+      &:hover { color: $accent; }
+    }
+  }
 }

@@ -1,7 +1,7 @@
 base_url = "https://michaels-journal.pages.dev"
 theme = "ergo"
 
-title = "Michael’s Blog Journal"
+title = "Michael’s Journal"
 description = "A quiet place for thoughts, tech, and reflections."
 default_language = "en"
 author = "Michael Mitchell"
@@ -11,7 +11,11 @@ feed_limit = 20
 feed_filenames = ["atom.xml"]
 
 compile_sass = true
-build_search_index = false
+build_search_index = true
+
+[[taxonomies]]
+name = "tags"
+feed = true
 
 [extra]
 # Profile avatar image located at static/img/avatar.png
@@ -19,59 +23,74 @@ profile = "avatar.png"
 color_themes = ["default", "dark"]
 country_flags = false
 
+# Webmention receiving endpoint.
+# To cut over to webmention.io: set provider = "webmentions_io" and update
+# endpoint to your webmention.io URL (e.g. https://webmention.io/michaels-journal.pages.dev/webmention)
+webmention_provider = "tinylytics"
+webmention_endpoint  = "https://tinylytics.app/webmention/h2Q2CzgAf-te_SJUBWQ1"
+
 [[extra.socials]]
 icon = "envelope"
 icon_class = "fas"
-display = "Email"
+display = "Email Me"
 uri = "mailto:michael@michaelmitchell.email"
+color = "#555555"
 
 [[extra.socials]]
 icon = "microblog"
 icon_class = "fab"
 display = "Micro.blog"
 uri = "https://mitchelltribe.com"
+color = "#FF5500"
 
 [[extra.socials]]
 icon = "mastodon"
 icon_class = "fab"
 display = "Mastodon"
 uri = "https://mitchelltribe.social/@michael"
+color = "#6364FF"
 
 [[extra.socials]]
-icon = "cloud"
-icon_class = "fas"
+icon = "bluesky"
+icon_class = "fab"
 display = "Bluesky"
 uri = "https://bsky.app/profile/mitchelltribe.com"
+color = "#0085FF"
 
 [[extra.socials]]
 icon = "horse-head"
 icon_class = "fas"
 display = "Sharkey"
 uri = "https://mitchelltribe.rodeo/@michael"
+color = "#0070B9"
 
 [[extra.socials]]
 icon = "key"
 icon_class = "fas"
 display = "Nostr"
 uri = "https://njump.me/npub19af39pdnr0cpg0ntakhdprfz8fkhkdn4t0f383gj0zw8hy4wf8lqh0nfur"
+color = "#7B2FBE"
 
 [[extra.socials]]
 icon = "pen"
 icon_class = "fas"
 display = "Scribbles"
 uri = "https://michaelmusings.com"
+color = "#228822"
 
 [[extra.socials]]
 icon = "file-alt"
 icon_class = "fas"
 display = "Write.as"
 uri = "https://michaelmitchell.blog"
+color = "#00ACDA"
 
 [[extra.socials]]
 icon = "blogger"
 icon_class = "fab"
 display = "Blogger"
 uri = "https://michaelleemitchell.net"
+color = "#FF5722"
 
 [extra.font_awesome]
 kit = "6ab1c683ab"

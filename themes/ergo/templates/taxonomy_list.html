@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="post_container">
+  <article>
+    <h1 class="article_title">Tags</h1>
+    <p style="opacity:0.55;font-size:0.9rem;margin-top:0;">{{ terms | length }} tag{% if terms | length != 1 %}s{% endif %} across all posts</p>
+
+    <div class="tag-cloud">
+      {% for term in terms | sort(attribute="name") %}
+      <a href="{{ term.permalink }}" class="tag-cloud-item">
+        #{{ term.name }}<span class="tag-count">{{ term.pages | length }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </article>
+</section>
+{% endblock content %}

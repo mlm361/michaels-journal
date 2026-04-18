@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% set root = get_section(path="_index.md") %}
+
+<section class="post_container">
+  <article>
+    <h1 class="article_title">📁 Archive</h1>
+
+    <div class="archive-filter">
+      <label for="year-select">Jump to year:</label>
+      <select id="year-select" onchange="jumpToYear(this.value)">
+        <option value="">— All years —</option>
+      </select>
+    </div>
+
+    <div id="archive-list">
+      {% set_global cur_year = "" %}
+      {% set_global cur_month = "" %}
+
+      {% for page in root.pages %}
+        {% set y = page.date | date(format="%Y") %}
+        {% set m = page.date | date(format="%B %Y") %}
+
+        {% if y != cur_year %}
+          {% if cur_year != "" %}</ul></section>{% endif %}
+          {% set_global cur_year = y %}
+          {% set_global cur_month = "" %}
+          <section class="archive-year" id="year-{{ y }}">
+          <h2 class="archive-year-heading">{{ y }}</h2>
+        {% endif %}
+
+        {% if m != cur_month %}
+          {% if cur_month != "" %}</ul>{% endif %}
+          {% set_global cur_month = m %}
+          <h3 class="archive-month-heading">{{ m }}</h3>
+          <ul class="archive-month-list">
+        {% endif %}
+
+        <li class="archive-entry">
+          <time>{{ page.date | date(format="%b %d") }}</time>
+          <a href="{{ page.permalink }}">{{ page.title }}</a>
+        </li>
+
+      {% endfor %}
+      </ul></section>
+    </div>
+  </article>
+</section>
+
+<script>
+(function() {
+  var years = [];
+  document.querySelectorAll('.archive-year').forEach(function(el) {
+    years.push(el.id.replace('year-', ''));
+  });
+  var sel = document.getElementById('year-select');
+  years.forEach(function(y) {
+    var opt = document.createElement('option');
+    opt.value = y;
+    opt.textContent = y;
+    sel.appendChild(opt);
+  });
+})();
+
+function jumpToYear(y) {
+  if (!y) return;
+  var el = document.getElementById('year-' + y);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+</script>
+
+<style>
+.archive-filter {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+}
+.archive-filter select {
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid var(--outline, rgba(0,0,0,.2));
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.archive-year { margin-bottom: 2rem; }
+.archive-year-heading {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid currentColor;
+  opacity: 0.9;
+}
+.archive-month-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1rem 0 0.4rem;
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.archive-month-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.archive-entry {
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid rgba(128,128,128,0.12);
+}
+.archive-entry time {
+  font-size: 0.8rem;
+  opacity: 0.5;
+  white-space: nowrap;
+  min-width: 4rem;
+}
+.archive-entry a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s;
+}
+.archive-entry a:hover { opacity: 0.6; }
+</style>
+{% endblock content %}

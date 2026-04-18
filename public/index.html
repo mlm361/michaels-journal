@@ -7,7 +7,7 @@
 
         <!-- SEO -->
         
-        <title> Michael’s Blog Journal </title>
+        <title> Michael’s Journal </title>
         
 
         <!-- Enable responsiveness on mobile devices-->
@@ -17,9 +17,16 @@
         <script src="https:&#x2F;&#x2F;michaels-journal.pages.dev/theme_selector.js"></script>
         <script src="https://kit.fontawesome.com/6ab1c683ab.js" crossorigin="anonymous"></script>
 
-        <!-- css -->
-        <link id="themeCSS" rel="stylesheet"
-              href="https:&#x2F;&#x2F;michaels-journal.pages.dev/default.css" />
+        <!-- css: inline script prevents flash of wrong theme before JS runs -->
+        <script>
+          (function() {
+            var t = localStorage.getItem('ergo-theme') || 'default';
+            document.write('<link id="themeCSS" rel="stylesheet" href="/' + t + '.css">');
+          })();
+        </script>
+        <noscript>
+          <link id="themeCSS" rel="stylesheet" href="https:&#x2F;&#x2F;michaels-journal.pages.dev/default.css" />
+        </noscript>
 
         <!-- fonts -->
         <link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,500,500i,600,700,800,900|Raleway" as="style">
@@ -29,131 +36,51 @@
         
         
         <link rel="alternate" type="application/atom+xml"
-              title="Michael’s Blog Journal RSS"
+              title="Michael’s Journal RSS"
               href="https://michaels-journal.pages.dev/atom.xml">
         
+        
+
+        
+        <link rel="webmention" href="https:&#x2F;&#x2F;tinylytics.app&#x2F;webmention&#x2F;h2Q2CzgAf-te_SJUBWQ1">
         
     </head>
 
     <body onload="main();">
         
-<input type="checkbox" id="openSidebarMenu" class="openSidebarMenu">
-<label class="menu cross menu--1" for="openSidebarMenu">
-    <svg viewBox="0 0 75 75" xmlns="https://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="30" />
-        <path class="line--1" d="M0 40h62c13 0 6 28-4 18L35 35" />
-        <path class="line--2" d="M0 50h70" />
-        <path class="line--3" d="M0 60h62c13 0 6-28-4-18L35 65" />
-    </svg>
-</label>
-
-<div id="sidebarMenu">
-    <div class="menu_wrapper">
-        <ul class="sidebarMenuInner">
-            <li>
-                <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev" >Michael’s Blog Journal</a>
-                <div class="menu_div" ></div>
-            </li>
-            
-            
-
-
-
-<li >
-    <a href="mailto:michael@michaelmitchell.email" target="_blank">
-        Email
-        <i class="fas fa-envelope"></i>
-    </a>
-</li>
-
-
-
-<li >
-    <a href="https:&#x2F;&#x2F;mitchelltribe.com" target="_blank">
-        Micro.blog
-        <i class="fab fa-microblog"></i>
-    </a>
-</li>
-
-
-
-<li >
-    <a href="https:&#x2F;&#x2F;mitchelltribe.social&#x2F;@michael" target="_blank">
-        Mastodon
-        <i class="fab fa-mastodon"></i>
-    </a>
-</li>
-
-
-
-<li >
-    <a href="https:&#x2F;&#x2F;bsky.app&#x2F;profile&#x2F;mitchelltribe.com" target="_blank">
-        Bluesky
-        <i class="fas fa-cloud"></i>
-    </a>
-</li>
-
-
-
-<li >
-    <a href="https:&#x2F;&#x2F;mitchelltribe.rodeo&#x2F;@michael" target="_blank">
-        Sharkey
-        <i class="fas fa-horse-head"></i>
-    </a>
-</li>
-
-
-
-<li >
-    <a href="https:&#x2F;&#x2F;njump.me&#x2F;npub19af39pdnr0cpg0ntakhdprfz8fkhkdn4t0f383gj0zw8hy4wf8lqh0nfur" target="_blank">
-        Nostr
-        <i class="fas fa-key"></i>
-    </a>
-</li>
-
-
-
-<li >
-    <a href="https:&#x2F;&#x2F;michaelmusings.com" target="_blank">
-        Scribbles
-        <i class="fas fa-pen"></i>
-    </a>
-</li>
-
-
-
-<li >
-    <a href="https:&#x2F;&#x2F;michaelmitchell.blog" target="_blank">
-        Write.as
-        <i class="fas fa-file-alt"></i>
-    </a>
-</li>
-
-
-
-<li >
-    <a href="https:&#x2F;&#x2F;michaelleemitchell.net" target="_blank">
-        Blogger
-        <i class="fab fa-blogger"></i>
-    </a>
-</li>
-
-
-
-
-
-<li >
-    <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;atom.xml" target="_blank">
-        atom
-        <i class="fas fa-rss"></i>
-    </a>
-</li>
-
-
-
-        </ul>
+<nav class="top-nav">
+  <div class="top-nav-inner">
+    <a class="top-nav-brand" href="https:&#x2F;&#x2F;michaels-journal.pages.dev">Michael’s Journal</a>
+    <button class="top-nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="top-nav-links" id="nav-links">
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev">🏠 Home</a>
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev/about">👤 About</a>
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev/archive">🗄️ Archive</a>
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev/on-this-day">📅 On This Day</a>
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev/stats">📊 Stats</a>
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev/tweets">🐦 Tweets</a>
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev/search">🔍 Search</a>
+      <a href="https://michaels-journal.pages.dev/atom.xml" class="rss-link" title="RSS Feed">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px;margin-right:3px;"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19.01 7.38 20 6.18 20C4.98 20 4 19.01 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/></svg>RSS
+      </a>
     </div>
-</div>
+    <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+      <span id="theme-icon">🌙</span>
+      <span id="theme-label">Dark</span>
+    </button>
+  </div>
+</nav>
+
+<script>
+function toggleNav() {
+  var links = document.getElementById('nav-links');
+  var btn = document.getElementById('nav-hamburger');
+  links.classList.toggle('open');
+  btn.classList.toggle('open');
+}
+</script>
 
 
 
@@ -168,320 +95,242 @@
   <figure class="user_logo">
       <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev" style="background-image: url(https:&#x2F;&#x2F;michaels-journal.pages.dev/img/avatar.png"></a>
   </figure>
-  <h2 class="site_title">Michael’s Blog Journal</h2>
+  <h2 class="site_title">Michael’s Journal</h2>
   <div>A quiet place for thoughts, tech, and reflections.</div>
-  
-<ul class="social_list header_list">
-    
-
-
-
-<li class="button small font_faint">
-    <a href="mailto:michael@michaelmitchell.email" target="_blank">
-        Email
-        <i class="fas fa-envelope"></i>
-    </a>
-</li>
-
-
-
-<li class="button small font_faint">
-    <a href="https:&#x2F;&#x2F;mitchelltribe.com" target="_blank">
-        Micro.blog
-        <i class="fab fa-microblog"></i>
-    </a>
-</li>
-
-
-
-<li class="button small font_faint">
-    <a href="https:&#x2F;&#x2F;mitchelltribe.social&#x2F;@michael" target="_blank">
-        Mastodon
-        <i class="fab fa-mastodon"></i>
-    </a>
-</li>
-
-
-
-<li class="button small font_faint">
-    <a href="https:&#x2F;&#x2F;bsky.app&#x2F;profile&#x2F;mitchelltribe.com" target="_blank">
-        Bluesky
-        <i class="fas fa-cloud"></i>
-    </a>
-</li>
-
-
-
-<li class="button small font_faint">
-    <a href="https:&#x2F;&#x2F;mitchelltribe.rodeo&#x2F;@michael" target="_blank">
-        Sharkey
-        <i class="fas fa-horse-head"></i>
-    </a>
-</li>
-
-
-
-<li class="button small font_faint">
-    <a href="https:&#x2F;&#x2F;njump.me&#x2F;npub19af39pdnr0cpg0ntakhdprfz8fkhkdn4t0f383gj0zw8hy4wf8lqh0nfur" target="_blank">
-        Nostr
-        <i class="fas fa-key"></i>
-    </a>
-</li>
-
-
-
-<li class="button small font_faint">
-    <a href="https:&#x2F;&#x2F;michaelmusings.com" target="_blank">
-        Scribbles
-        <i class="fas fa-pen"></i>
-    </a>
-</li>
-
-
-
-<li class="button small font_faint">
-    <a href="https:&#x2F;&#x2F;michaelmitchell.blog" target="_blank">
-        Write.as
-        <i class="fas fa-file-alt"></i>
-    </a>
-</li>
-
-
-
-<li class="button small font_faint">
-    <a href="https:&#x2F;&#x2F;michaelleemitchell.net" target="_blank">
-        Blogger
-        <i class="fab fa-blogger"></i>
-    </a>
-</li>
-
-
-
-
-
-<li class="button small font_faint">
-    <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;atom.xml" target="_blank">
-        atom
-        <i class="fas fa-rss"></i>
-    </a>
-</li>
-
-
-
-</ul>
-
   
 </header>
 
 <section class="post_list">
     
-    <article id="Two Pis, many plans, limited focus" class="post_list_item">
+    <article id="Moon Views, Earth Love" class="post_list_item">
         <h1 class="article_title" >
-            <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;lot-to-do&#x2F;"  id="article_link" >Two Pis, many plans, limited focus</a>
+            <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;moon-views-earth-love&#x2F;"  id="article_link" >Moon Views, Earth Love</a>
         </h1>
             
 <ul class="frontmatter " id="frontmatter">
     <li>
-        <time class="article_time" datetime="2025-10-25T00:33:41-04:00">October 25, 2025</time>
+        <time class="article_time" datetime="2026-04-07T23:39:06+00:00">April 07, 2026</time>
     </li>
     <span class="dotDivider"></span>
-    <li> 271 words </li>
+    <li> 1094 words </li>
     <span class="dotDivider" ></span>
-    <li> 2 min </li>
+    <li> 6 min </li>
 </ul>
 
-            <p class="article_content">
-  
-  
-   An engineer lost in thought, surrounded by a maze of circuits and the glow of futuristic interfaces.
-  
-
-Lately, I’ve been swamped with projects and short on energy to tackle them, partly because of my worsening eyesight. I have glaucoma, but th…</p>
-        <a class="button small" href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;lot-to-do&#x2F;">Continue Reading →</a>
+            <p class="article_content">I have been watching the Artemis II mission off and on. I saw these pictures on the NASA website, and here are a few that I really like. They definitely got me thinking.
+I have always been fascinated by space and the Heavens. I would like to go to space, …</p>
+        <a class="button small" href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;moon-views-earth-love&#x2F;">Continue Reading →</a>
       </article>
     
-    <article id="The Star Trek Computer: My Vision for AI" class="post_list_item">
+    <article id="Birthday Thoughts on a Country at a Crossroads" class="post_list_item">
         <h1 class="article_title" >
-            <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;the-star-trek-computer-my-vision-for-ai&#x2F;"  id="article_link" >The Star Trek Computer: My Vision for AI</a>
+            <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;birthday-thoughts-on-a-country-at-a-crossroads&#x2F;"  id="article_link" >Birthday Thoughts on a Country at a Crossroads</a>
         </h1>
             
 <ul class="frontmatter " id="frontmatter">
     <li>
-        <time class="article_time" datetime="2025-10-02T07:35:00-04:00">October 02, 2025</time>
+        <time class="article_time" datetime="2026-04-06T11:01:39+00:00">April 06, 2026</time>
     </li>
     <span class="dotDivider"></span>
-    <li> 645 words </li>
-    <span class="dotDivider" ></span>
-    <li> 4 min </li>
-</ul>
-
-            <p class="article_content">
-  
-  
-    A conductor leads a robotic orchestra aboard a starship, with the USS Enterprise framed through the observation deck windows.
-  
-
-Computer: Personal log, Stardate: Current.
-I want AI that resembles two distinct concepts, not the general artific…</p>
-        <a class="button small" href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;the-star-trek-computer-my-vision-for-ai&#x2F;">Continue Reading →</a>
-      </article>
-    
-    <article id="My Hypertrophic Cardiomyopathy Update" class="post_list_item">
-        <h1 class="article_title" >
-            <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;my-hypertrophic-cardiomyopathy-update&#x2F;"  id="article_link" >My Hypertrophic Cardiomyopathy Update</a>
-        </h1>
-            
-<ul class="frontmatter " id="frontmatter">
-    <li>
-        <time class="article_time" datetime="2025-09-27T16:09:37-04:00">September 27, 2025</time>
-    </li>
-    <span class="dotDivider"></span>
-    <li> 529 words </li>
-    <span class="dotDivider" ></span>
-    <li> 3 min </li>
-</ul>
-
-            <p class="article_content">I went to the doctors on Friday, hopefully for the last of the required three ECHOs I need while on my medication called Camzyos (you may have seen the commercials on TV for it). I have been on 5mg since June for my Hypertrophic Cardiomyopathy, and I am o…</p>
-        <a class="button small" href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;my-hypertrophic-cardiomyopathy-update&#x2F;">Continue Reading →</a>
-      </article>
-    
-    <article id="When Police Lights Stay On: Law Enforcement Cruise Mode" class="post_list_item">
-        <h1 class="article_title" >
-            <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;law-enforcement-cruise-mode&#x2F;"  id="article_link" >When Police Lights Stay On: Law Enforcement Cruise Mode</a>
-        </h1>
-            
-<ul class="frontmatter " id="frontmatter">
-    <li>
-        <time class="article_time" datetime="2025-08-28T11:49:57-04:00">August 28, 2025</time>
-    </li>
-    <span class="dotDivider"></span>
-    <li> 939 words </li>
+    <li> 950 words </li>
     <span class="dotDivider" ></span>
     <li> 5 min </li>
 </ul>
 
-            <p class="article_content">
-I live in Hillsborough County, Florida. Within the last few months, our Hillsborough County Sheriff&#x27;s Office (HCSO) and at least one other local agency have been using what they call cruise mode with their emergency lights. This is creating a lot of conf…</p>
-        <a class="button small" href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;law-enforcement-cruise-mode&#x2F;">Continue Reading →</a>
+            <p class="article_content"><figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
+<img src="/uploads/ai_gen_temp_76fc10a9e310.png" alt="A pastoral scene at sunset with a dirt road splitting into two paths in the center, symbolizing a crossroads. On the left side, near a cozy cottage with smoke rising from the chimney, there are stacks of gold coins, a large gold dollar sign, an oil barrel labeled &quot;OIL,&quot; a red gas pump, and a blackboard with a green upward-trending graph, representing economic and industrial interests. In the background, a factory with smokestacks emits smoke into the sky. On the right side, near another similar cottage with an American flag flying, there is a wooden ballot box labeled &quot;VOTE,&quot; a megaphone, political campaign signs, an American flag, and an old television showing a suited man speaking, symbolizing democracy, voting, and political engagement. The sky is filled with warm golden clouds, and the entire scene is framed by trees and colorful flowers. At the top, the text reads &quot;Birthday Thoughts on a Country at a Crossroads&quot; in elegant script." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
+</figure>
+<figcaption>At a pivotal crossroads, a nation contemplates its future between the pursuit of wealth and industry or the call to civic duty and democratic engagement.</figcaption>
+<p>I turn 57 this month, and with everything going on in the world, it almost feels like an afterthought. This year feels worse, more doom and gloom than others. I am not entirely sure why, but it is not just politics. The economy has been rough too, with gas prices staying high, in my case over $4.25 a gallon, along with rising costs across the board and ongoing tech hardware shortages. It all adds to the sense that things are off.</p>
+<p>I have never seen as much upheaval as I have this past year. I have also never witnessed in my adult life companies and wealthy individuals fawn over a President to this extent, while much of the media seems complicit. Then they wonder why their trustworthiness is at an all-time low. I believe in a neutral, fact-based media, but in reality we have never truly had one in this country except when it suited particular interests.</p></p>
+        <a class="button small" href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;birthday-thoughts-on-a-country-at-a-crossroads&#x2F;">Continue Reading →</a>
       </article>
     
-    <article id="Summer Gratitude: A&#x2F;C" class="post_list_item">
+    <article id="🍿Watched Civil War (2024)" class="post_list_item">
         <h1 class="article_title" >
-            <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;ac-summer-blog-post&#x2F;"  id="article_link" >Summer Gratitude: A&#x2F;C</a>
+            <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;popcorn-watched-civil-war-2024&#x2F;"  id="article_link" >🍿Watched Civil War (2024)</a>
         </h1>
             
 <ul class="frontmatter " id="frontmatter">
     <li>
-        <time class="article_time" datetime="2025-08-21T23:16:44-04:00">August 21, 2025</time>
+        <time class="article_time" datetime="2026-04-05T14:27:12+00:00">April 05, 2026</time>
     </li>
     <span class="dotDivider"></span>
-    <li> 227 words </li>
+    <li> 407 words </li>
     <span class="dotDivider" ></span>
-    <li> 2 min </li>
+    <li> 3 min </li>
 </ul>
 
-            <p class="article_content">
-Lately, especially in the heart of summer, I’ve been thinking about air conditioning and the inventions I’m most grateful for that have matured over my lifetime. I don’t think I could have lived in Florida back in the day without air conditioning. You re…</p>
-        <a class="button small" href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;ac-summer-blog-post&#x2F;">Continue Reading →</a>
+            <p class="article_content">⚠️ SPOILER WARNING: FULL SPOILERS
+
+
+
+In &quot;Civil War&quot; (2024), the iconic torch of liberty becomes a battleground as soldiers clash atop its flame, symbolizing the fierce struggle for freedom amid chaos.
+My Rating: ½ (0.5&#x2F;5 stars)
+The movie stunk, and it stun…</p>
+        <a class="button small" href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;popcorn-watched-civil-war-2024&#x2F;">Continue Reading →</a>
       </article>
     
-    <article id="I Didn’t Need a Report to Know Tampa Traffic Is Bad" class="post_list_item">
+    <article id="History Made April 1, 2026 Artemis II Launched!" class="post_list_item">
         <h1 class="article_title" >
-            <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;traffic-in-tampa&#x2F;"  id="article_link" >I Didn’t Need a Report to Know Tampa Traffic Is Bad</a>
+            <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;history-made-april-1-2026-artemis-ii-launched&#x2F;"  id="article_link" >History Made April 1, 2026 Artemis II Launched!</a>
         </h1>
             
 <ul class="frontmatter " id="frontmatter">
     <li>
-        <time class="article_time" datetime="2025-08-05T22:57:47-04:00">August 05, 2025</time>
+        <time class="article_time" datetime="2026-04-01T21:42:12+00:00">April 01, 2026</time>
     </li>
     <span class="dotDivider"></span>
-    <li> 644 words </li>
+    <li> 416 words </li>
     <span class="dotDivider" ></span>
-    <li> 4 min </li>
+    <li> 3 min </li>
 </ul>
 
-            <p class="article_content">
-I was just watching our local news on fox13tampabay.com, and they had a story on a ConsumerAffairs report about which cities have the worst traffic. The city I have to travel to for work (Tampa) was ranked 13th worst in the nation and number 3 in the sta…</p>
-        <a class="button small" href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;traffic-in-tampa&#x2F;">Continue Reading →</a>
+            <p class="article_content">History was made today. The kind of history that will be written about and studied for years to come, and I was able to capture it from my backyard. Artemis II successfully launched with a crew of four and is heading to the Moon. Not as great, magnificent…</p>
+        <a class="button small" href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;history-made-april-1-2026-artemis-ii-launched&#x2F;">Continue Reading →</a>
       </article>
     
-    <article id="Living with HOCM: A Mid-Year Update" class="post_list_item">
+    <article id="🍿 Watched Chief of Station (2024)" class="post_list_item">
         <h1 class="article_title" >
-            <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;living-with-hocm-a-mid-year-update&#x2F;"  id="article_link" >Living with HOCM: A Mid-Year Update</a>
+            <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;popcorn-watched-chief-of-station-2024&#x2F;"  id="article_link" >🍿 Watched Chief of Station (2024)</a>
         </h1>
             
 <ul class="frontmatter " id="frontmatter">
     <li>
-        <time class="article_time" datetime="2025-07-20T20:18:52-04:00">July 20, 2025</time>
+        <time class="article_time" datetime="2026-03-22T00:26:45+00:00">March 22, 2026</time>
     </li>
     <span class="dotDivider"></span>
-    <li> 731 words </li>
-    <span class="dotDivider" ></span>
-    <li> 4 min </li>
-</ul>
-
-            <p class="article_content">
-Back in March, I had my six-month checkup with my cardiologist. I told him I was feeling tired and fatigued all the time, more than usual. I thought it might be the medication. My last echocardiogram in August 2024 had shown some improvement, and my PVCs…</p>
-        <a class="button small" href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;living-with-hocm-a-mid-year-update&#x2F;">Continue Reading →</a>
-      </article>
-    
-    <article id="Keep Trek Running" class="post_list_item">
-        <h1 class="article_title" >
-            <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;keep-trek-running&#x2F;"  id="article_link" >Keep Trek Running</a>
-        </h1>
-            
-<ul class="frontmatter " id="frontmatter">
-    <li>
-        <time class="article_time" datetime="2025-07-16T20:09:07-04:00">July 16, 2025</time>
-    </li>
-    <span class="dotDivider"></span>
-    <li> 372 words </li>
-    <span class="dotDivider" ></span>
-    <li> 2 min </li>
-</ul>
-
-            <p class="article_content">
-I was just watching an old episode of Star Trek: Deep Space Nine. I’ve always been into Star Trek, every series except Star Trek: The Next Generation. I’m not sure why, but I never fully got into that one. The others: The Original Series, Deep Space Nine…</p>
-        <a class="button small" href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;keep-trek-running&#x2F;">Continue Reading →</a>
-      </article>
-    
-    <article id="Capturing the Moon with My Seestar S30" class="post_list_item">
-        <h1 class="article_title" >
-            <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;zwo-seestar-s30-post&#x2F;"  id="article_link" >Capturing the Moon with My Seestar S30</a>
-        </h1>
-            
-<ul class="frontmatter " id="frontmatter">
-    <li>
-        <time class="article_time" datetime="2025-07-06T13:15:00-04:00">July 06, 2025</time>
-    </li>
-    <span class="dotDivider"></span>
-    <li> 283 words </li>
-    <span class="dotDivider" ></span>
-    <li> 2 min </li>
-</ul>
-
-            <p class="article_content">I’ve always wanted a telescope. Something I could use to take photos and videos of the night sky with my phone or camera. I recently came across a YouTube video about the Zwo Seestar S50, but since this is my first telescope, I decided to start with the m…</p>
-        <a class="button small" href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;zwo-seestar-s30-post&#x2F;">Continue Reading →</a>
-      </article>
-    
-    <article id="Blogging My Way: Typora + Git + Cloudflare + Micro.blog" class="post_list_item">
-        <h1 class="article_title" >
-            <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;myfirstpost&#x2F;"  id="article_link" >Blogging My Way: Typora + Git + Cloudflare + Micro.blog</a>
-        </h1>
-            
-<ul class="frontmatter " id="frontmatter">
-    <li>
-        <time class="article_time" datetime="2025-07-05">July 05, 2025</time>
-    </li>
-    <span class="dotDivider"></span>
-    <li> 103 words </li>
+    <li> 198 words </li>
     <span class="dotDivider" ></span>
     <li> 1 min </li>
 </ul>
 
-            <p class="article_content">This post serves two purposes. First, it marks the inaugural entry 🥳 on my new blogging system.
-I&#x27;m using Typora ✍️ to write and save my posts locally in a folder. From there, I git push them to my GitHub repo 🔁, which then deploys to Cloudflare Pages 🌐. F…</p>
-        <a class="button small" href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;myfirstpost&#x2F;">Continue Reading →</a>
+            <p class="article_content">⚠️ SPOILER WARNING: MAJOR SPOILERS
+
+
+
+My Rating: ⭐⭐½ (2.5&#x2F;5 stars)
+The cast has done good work in other films, but not here. They were probably paid, but the story was terrible. Calling it a 2.5 felt generous. In my view, there was nothing redeeming about …</p>
+        <a class="button small" href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;popcorn-watched-chief-of-station-2024&#x2F;">Continue Reading →</a>
+      </article>
+    
+    <article id="Exploring Stardock&#x27;s Clairvoyance" class="post_list_item">
+        <h1 class="article_title" >
+            <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;exploring-stardocks-clairvoyance&#x2F;"  id="article_link" >Exploring Stardock&#x27;s Clairvoyance</a>
+        </h1>
+            
+<ul class="frontmatter " id="frontmatter">
+    <li>
+        <time class="article_time" datetime="2026-03-14T18:00:43+00:00">March 14, 2026</time>
+    </li>
+    <span class="dotDivider"></span>
+    <li> 1195 words </li>
+    <span class="dotDivider" ></span>
+    <li> 6 min </li>
+</ul>
+
+            <p class="article_content"><figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
+<img src="/uploads/ai_gen_temp_1ab263269230.png" alt="A black-and-white illustration titled &quot;Exploring Stardock&#x27;s Clairvoyance&quot; shows a man smiling and adjusting a slider labeled &quot;SETTINGS&quot; on a large transparent screen filled with graphs, charts, binary code, and a neural network diagram with the word &quot;ANALYZING&quot; underneath. The man is standing at a desk with a coffee cup on a side table nearby. In the background, there is a cozy room setting with an armchair, a side table with a potted plant, and a floor lamp." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
+</figure>
+<figcaption>A man joyfully adjusts settings on a futuristic interface labeled "Analyzing," exploring the possibilities of Stardock's Clairvoyance technology in a cozy, modern workspace.</figcaption>
+<p>I have been trying out a new app from <a rel="external" href="https://www.stardock.com/">Stardock</a> called <a rel="external" href="https://clairvoyanceai.com/">Clairvoyance</a>. It is a nice AI interface that is very powerful and lets you use API keys to interact with large language models and do all kinds of things. It also takes a privacy-first approach and is a bit more user friendly than some other tools I have tried. I will say this has been very compelling and interesting to use. I honestly cannot believe it is free, and I hope it stays free. That said, there are still some bugs and rough edges. For example, it does not always make it clear whether it is actively working or if something has hung. When subagents get stuck there does not seem to be an obvious way to stop or cancel the task, at least that I have found so far. I have also seen cases where the interface says it is finished but still reports that it is working. On occasion I have asked it what it is doing or what is going on, and the response mentions something running in the background but does not really answer the question directly. It almost feels like it is ignoring the question and returning a vague or nonsense response instead of explaining what is happening. So there are definitely some areas that still need to be fleshed out. To be fair, the software is clearly marked as being in alpha. When it is on target and working, especially when it is helping with coding, it actually works quite well.</p></p>
+        <a class="button small" href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;exploring-stardocks-clairvoyance&#x2F;">Continue Reading →</a>
+      </article>
+    
+    <article id="Mike Elgan Nails It" class="post_list_item">
+        <h1 class="article_title" >
+            <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;mike-elgan-nails-it&#x2F;"  id="article_link" >Mike Elgan Nails It</a>
+        </h1>
+            
+<ul class="frontmatter " id="frontmatter">
+    <li>
+        <time class="article_time" datetime="2026-03-10T14:51:55+00:00">March 10, 2026</time>
+    </li>
+    <span class="dotDivider"></span>
+    <li> 352 words </li>
+    <span class="dotDivider" ></span>
+    <li> 2 min </li>
+</ul>
+
+            <p class="article_content">
+https:&#x2F;&#x2F;elgan.com&#x2F;why-you-should-love-blogs-now-more-than-ever
+Why you should love blogs now more than ever
+, Mike Elgan (@MikeElgan@mastodon.social) on sharkey (source)
+
+I saw Mike&#x27;s post in my timeline, and it&#x27;s referenced above. While I know some peop…</p>
+        <a class="button small" href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;mike-elgan-nails-it&#x2F;">Continue Reading →</a>
+      </article>
+    
+    <article id="My Blogging Platform Odyssey" class="post_list_item">
+        <h1 class="article_title" >
+            <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;my-blogging-platform-odyssey&#x2F;"  id="article_link" >My Blogging Platform Odyssey</a>
+        </h1>
+            
+<ul class="frontmatter " id="frontmatter">
+    <li>
+        <time class="article_time" datetime="2026-03-08T21:45:36+00:00">March 08, 2026</time>
+    </li>
+    <span class="dotDivider"></span>
+    <li> 1369 words </li>
+    <span class="dotDivider" ></span>
+    <li> 7 min </li>
+</ul>
+
+            <p class="article_content"><figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
+<img src="/uploads/dalle_temp_d62d72a5b90f.png" alt="A digital painting of a person walking down a sunlit path through a vibrant, colorful valley filled with flowers and trees. The trees have large, floating app icons instead of leaves, including icons resembling Twitter and other social media or tech platforms. The scene is bathed in warm, golden light with a dreamy, painterly texture, and butterflies flutter in the sky near the glowing sun." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
+</figure>
+<figcaption>A lone traveler embarks on a journey through a vibrant valley of blogging platforms, seeking the perfect path to share their voice and stories with the world.</figcaption>
+<p>Okay, it has been one year since I joined Micro.blog and Scribbles.page, and just over a year since I joined Write.as. I thought I would review all three services with a clear winner, a hard "can't wait for my subscription to end and won't be renewing," and a dark horse.</p>
+<p>I joined all three within months of each other looking to get rid of my InMotionHosting web host and get away from WordPress. I didn't like the direction that Matt Mullenweg was heading and didn't want to get burned like I did with Elon Musk and Twitter. Twitter was a special place for me as I refused to use any Zuckerberg product, especially since he ruined Instagram.</p>
+<p>Now with the history out of the way, here we go.</p></p>
+        <a class="button small" href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;my-blogging-platform-odyssey&#x2F;">Continue Reading →</a>
+      </article>
+    
+    <article id="Political Disillusionment" class="post_list_item">
+        <h1 class="article_title" >
+            <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;okay-this-is-one-of-a-few-political-related-posts-i-post-onl&#x2F;"  id="article_link" >Political Disillusionment</a>
+        </h1>
+            
+<ul class="frontmatter " id="frontmatter">
+    <li>
+        <time class="article_time" datetime="2026-03-02T22:26:59+00:00">March 02, 2026</time>
+    </li>
+    <span class="dotDivider"></span>
+    <li> 594 words </li>
+    <span class="dotDivider" ></span>
+    <li> 3 min </li>
+</ul>
+
+            <p class="article_content"><blockquote>
+<p>⚠️ <strong>Warning:</strong> Political Rant</p>
+</blockquote>
+<p>Okay, this is one of the few politically related posts I make each year because politics are so divisive. So here’s your warning: if you’d rather not read political commentary, feel free to stop here.</p>
+<p>The recent armed action against Iran has me conflicted. I believe it's more of a distraction and a pretext than a genuine strategic necessity. While the issues we face in America come from the neglect of both parties, Trump seems to be using these problems to his advantage. This situation should have been addressed years ago when Iran first began developing its nuclear program. The United States is skilled at acting as a global police force and solving immediate problems but not at handling long-term challenges such as nation building. We have never successfully created a functioning foreign democracy.</p></p>
+        <a class="button small" href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;okay-this-is-one-of-a-few-political-related-posts-i-post-onl&#x2F;">Continue Reading →</a>
+      </article>
+    
+    <article id="Better Health, Bigger To-Do List" class="post_list_item">
+        <h1 class="article_title" >
+            <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;better-health-bigger-to-do-list&#x2F;"  id="article_link" >Better Health, Bigger To-Do List</a>
+        </h1>
+            
+<ul class="frontmatter " id="frontmatter">
+    <li>
+        <time class="article_time" datetime="2026-02-15T13:48:14+00:00">February 15, 2026</time>
+    </li>
+    <span class="dotDivider"></span>
+    <li> 759 words </li>
+    <span class="dotDivider" ></span>
+    <li> 4 min </li>
+</ul>
+
+            <p class="article_content"><figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
+<img src="/uploads/dalle_temp_3903fa70293c.png" alt="A cluttered desk filled with numerous stacks of DVDs and CDs, some scattered and some in cases, alongside two black game controllers and a white coffee mug. In the center of the desk is a black computer tower with a digital display showing the number &quot;3.&quot; Behind the desk is a large monitor displaying lines of code or text, and a bookshelf filled with more DVDs or books. A desk lamp on the left side casts warm light over the scene, creating a cozy atmosphere." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
+</figure>
+<figcaption>A cluttered desk overflowing with DVDs, game controllers, and a computer setup highlights the challenge of balancing a busy to-do list with the pursuit of better health and productivity.</figcaption>
+<p>I haven't blogged lately for several reasons. I have been feeling much better from my Obstructive Hypertrophic Cardiomyopathy (I have blogged extensively about it in several past posts). I will just say my Camzyos and Metoprolol 200 mg ER twice daily seems to be working. I am sleeping at night and I hardly feel my heart symptoms anymore. The only lingering negative is a high heart rate most of the time, even when sleeping. But I have more energy, and that is actually why I haven't been blogging as much.</p>
+<p>I know what you are thinking: if you are feeling better, why aren't you blogging? Well, it is because I am catching up on backlogged personal projects I have wanted to get done, and spending too much money in the process. Ever since AI came on the scene, I have been getting up to speed and, with its help, doing things I have wanted to do but didn't have the knowledge or know where to look. For instance, I have over 2,000 discs (DVDs, CDs, and Blu-rays) from over 30 years of accumulation that I am finally archiving and getting into my Plex server for my home. I had no one to ask and couldn't find resources, so I just had the discs sitting around, many never opened, as I relied on streaming services. But I have been on a purge of subscription services since early last year. I am also finding approximately 100 DVDs that have either disc rot or are scratched. That last one really hurts, as most of the disc-rotted and scratched discs have never been opened. So there has been a renewed sense of urgency on my part to get these things archivally backed up.</p></p>
+        <a class="button small" href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;better-health-bigger-to-do-list&#x2F;">Continue Reading →</a>
       </article>
     
 </section>
@@ -491,205 +340,157 @@ I&#x27;m using Typora ✍️ to write and save my posts locally in a folder. Fro
     
 
     
+    <span class="next" ><a rel="next" href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;page&#x2F;2&#x2F;" class="button medium font_faint">next →</a></span>
+    
 </nav>
 
 
-        <footer>
-            
-              
-              
-<figure class="mini_logo ">
-    <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev" style="background-image: url(/img/avatar.png)"></a>
-</figure>
-<h5>
-    <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev">Michael’s Blog Journal</a>
-</h5>
+        <footer class="site-footer">
 
-              
-<ul class="social_list foot_list">
-    
-
-
-
-<li class="button extra_small font_faint">
-    <a href="mailto:michael@michaelmitchell.email" target="_blank">
-        Email
-        <i class="fas fa-envelope"></i>
-    </a>
-</li>
-
-
-
-<li class="button extra_small font_faint">
-    <a href="https:&#x2F;&#x2F;mitchelltribe.com" target="_blank">
-        Micro.blog
-        <i class="fab fa-microblog"></i>
-    </a>
-</li>
-
-
-
-<li class="button extra_small font_faint">
-    <a href="https:&#x2F;&#x2F;mitchelltribe.social&#x2F;@michael" target="_blank">
-        Mastodon
-        <i class="fab fa-mastodon"></i>
-    </a>
-</li>
-
-
-
-<li class="button extra_small font_faint">
-    <a href="https:&#x2F;&#x2F;bsky.app&#x2F;profile&#x2F;mitchelltribe.com" target="_blank">
-        Bluesky
-        <i class="fas fa-cloud"></i>
-    </a>
-</li>
-
-
-
-<li class="button extra_small font_faint">
-    <a href="https:&#x2F;&#x2F;mitchelltribe.rodeo&#x2F;@michael" target="_blank">
-        Sharkey
-        <i class="fas fa-horse-head"></i>
-    </a>
-</li>
-
-
-
-<li class="button extra_small font_faint">
-    <a href="https:&#x2F;&#x2F;njump.me&#x2F;npub19af39pdnr0cpg0ntakhdprfz8fkhkdn4t0f383gj0zw8hy4wf8lqh0nfur" target="_blank">
-        Nostr
-        <i class="fas fa-key"></i>
-    </a>
-</li>
-
-
-
-<li class="button extra_small font_faint">
-    <a href="https:&#x2F;&#x2F;michaelmusings.com" target="_blank">
-        Scribbles
-        <i class="fas fa-pen"></i>
-    </a>
-</li>
-
-
-
-<li class="button extra_small font_faint">
-    <a href="https:&#x2F;&#x2F;michaelmitchell.blog" target="_blank">
-        Write.as
-        <i class="fas fa-file-alt"></i>
-    </a>
-</li>
-
-
-
-<li class="button extra_small font_faint">
-    <a href="https:&#x2F;&#x2F;michaelleemitchell.net" target="_blank">
-        Blogger
-        <i class="fab fa-blogger"></i>
-    </a>
-</li>
-
-
-
-
-
-<li class="button extra_small font_faint">
-    <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;atom.xml" target="_blank">
-        atom
-        <i class="fas fa-rss"></i>
-    </a>
-</li>
-
-
-
-</ul>
-
-              
-<select id="theme_selector" size=1>
-    <option value="default" selected>default</option>
-    
-    <option value="dark">dark</option>
-    
-</select>
-
-            
-
-            <!-- Footer metadata: breaks layout row and forces new line -->
-            <div style="clear: both; display: block; margin-top: 30px;">
-              <p id="copyright-line" class="footer-meta">
-                © <span id="startYear">2025</span>–<span id="currentYear"></span> Michael Mitchell
-              </p>
-              <p id="blog-uptime" class="footer-meta"></p>
-              <p id="last-updated" class="footer-meta"></p>
-            </div>
-
-            <!-- Creative Commons License -->
-            <div style="margin-top: 15px; text-align: center;">
-              <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-                 style="display: inline-block; text-decoration: none; color: inherit;">
-                <img alt="Creative Commons License" style="border-width:0; vertical-align: middle;"
-                     src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" />
+            <!-- Social Links -->
+            <p class="footer-social-heading">Social Links</p>
+            <div id="social_links">
+              <!-- Social networks -->
+              <a rel="me" href="https://mitchelltribe.social/@michael">
+                <img src="https://cdn.simpleicons.org/mastodon/6364FF.svg" alt="Mastodon" />Mastodon
               </a>
-              <br />
-              <span style="display: block; margin-top: 5px; font-size: 0.9em;">
-                This work is licensed under a
-                <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-                   style="color: #666; text-decoration: none; font-weight: bold;">
-                  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
-                </a>.
-              </span>
+              <a rel="me" href="https://mitchelltribe.rodeo/@michael">
+                <img src="/img/sharkey-icon.png" alt="Sharkey" />Sharkey
+              </a>
+              <a rel="me" href="https://pixelfed.social/mlm361">
+                <img src="https://cdn.simpleicons.org/pixelfed/000000.svg" alt="Pixelfed" class="footer-icon-invert" />Pixelfed
+              </a>
+              <a rel="me" href="https://bsky.app/profile/mitchelltribe.com">
+                <img src="https://cdn.simpleicons.org/bluesky/0061F2.svg" alt="Bluesky" />Bluesky
+              </a>
+              <a rel="me" href="https://iris.to/npub19af39pdnr0cpg0ntakhdprfz8fkhkdn4t0f383gj0zw8hy4wf8lqh0nfur">
+                <img src="/img/nostr-icon.gif" alt="Nostr" />Nostr
+              </a>
+              <!-- Websites / blogs -->
+              <a rel="me" href="https://mitchelltribe.com">
+                <img src="https://cdn.simpleicons.org/micro.blog/FF8800.svg" alt="Micro.blog" />Micro.blog
+              </a>
+              <a rel="me" href="https://michaelmusings.com" aria-label="Scribbles">
+                <img src="/img/scribbles-icon.png" alt="Scribbles" class="scribbles-icon" />Scribbles
+              </a>
+              <a rel="me" href="https://michaelmitchell.blog">
+                <img src="https://cdn.simpleicons.org/write.as/222222.svg" alt="Write.as" class="footer-icon-invert" />Write.as
+              </a>
+              <!-- Contact & feed -->
+              <a href="mailto:michael@michaelmitchell.email">
+                <img src="/img/email-icon.png" alt="Email" />Email Me
+              </a>
+              <a href="https://michaels-journal.pages.dev/atom.xml">
+                <img src="https://cdn.simpleicons.org/rss/FFA500.svg" alt="RSS" />RSS
+              </a>
             </div>
+
+            <hr class="footer-rule" />
+
+            <p class="footer-line" id="blog-uptime"></p>
+            <p class="footer-line">© 2001–<span id="currentYear"></span> Michael Mitchell</p>
+            <p class="footer-line"><a href="/privacy" class="footer-link">Privacy Policy</a></p>
+            <p class="footer-line footer-powered">Built with ❤️ using <a href="https://www.getzola.org" target="_blank" rel="noopener" class="footer-link">Zola</a></p>
+
         </footer>
 
-        <!-- Optional styling -->
         <style>
-          .footer-meta {
-            font-size: 0.85em;
-            color: #666;
+          .site-footer {
+            margin-top: 4rem;
+            padding: 2.5rem 1.25rem 2rem;
+            border-top: 1px solid rgba(128,128,128,0.15);
             text-align: center;
-            margin: 8px 0;
           }
-
-          .footer-meta:first-of-type {
-            margin-top: 30px;
+          .footer-social-heading {
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            opacity: 0.5;
+            margin: 0 0 0.9rem;
           }
+          #social_links {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 16px 20px;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 0.5rem;
+          }
+          #social_links a {
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.88rem;
+            color: inherit;
+            transition: opacity 0.15s;
+          }
+          #social_links a:hover { opacity: 0.65; text-decoration: none; }
+          #social_links img {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.15s ease;
+            flex-shrink: 0;
+          }
+          #social_links a:hover img { transform: translateY(-1px); }
+          /* Photogrid captions */
+          .photogrid-caption { color: #666; }
+          /* Scribbles green accent ring */
+          .scribbles-icon {
+            border-radius: 50%;
+            padding: 3px;
+            background: #fff;
+            box-shadow: 0 0 0 2px #006400 inset, 0 2px 6px rgba(0,0,0,.15);
+          }
+          #social_links a[aria-label="Scribbles"]:hover .scribbles-icon {
+            box-shadow: 0 0 0 2px #00a37a inset, 0 4px 12px rgba(0,0,0,.25);
+          }
+          .footer-rule {
+            border: none;
+            border-top: 1px solid rgba(128,128,128,0.15);
+            margin: 1.25rem auto;
+            max-width: 400px;
+          }
+          .footer-line {
+            font-size: 0.82rem;
+            opacity: 0.6;
+            margin: 0.35rem 0;
+          }
+          .footer-link {
+            color: inherit;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+          }
+          .footer-powered { margin-top: 0.75rem; }
         </style>
 
-        <!-- Tinylytics Embed -->
-        <script src="https://tinylytics.app/embed/h2Q2CzgAf-te_SJUBWQ1.js" defer></script>
+        <!-- Tinylytics + Kudos -->
+        <script src="https://tinylytics.app/embed/h2Q2CzgAf-te_SJUBWQ1.js?kudos" defer></script>
 
-        <!-- Footer Scripts -->
         <script>
-          // Blog uptime (since Jan 1, 2025)
-          const startDate = new Date("2025-07-05T00:00:00Z");
-          function updateUptime() {
-              const now = new Date();
-              let diff = now - startDate;
-              const years = Math.floor(diff / (365.25 * 24 * 60 * 60 * 1000));
-              diff -= years * 365.25 * 24 * 60 * 60 * 1000;
-              const months = Math.floor(diff / (30.44 * 24 * 60 * 60 * 1000));
-              diff -= months * 30.44 * 24 * 60 * 60 * 1000;
-              const days = Math.floor(diff / (24 * 60 * 60 * 1000));
-              const text = `This blog has been running for: ${years} years, ${months} months, ${days} days.`;
-              const uptime = document.getElementById("blog-uptime");
-              if (uptime) uptime.textContent = text;
-          }
-
           document.addEventListener("DOMContentLoaded", function () {
-              // Current year
-              const now = new Date();
-              const yearEl = document.getElementById("currentYear");
-              if (yearEl) yearEl.textContent = now.getFullYear();
-
-              // Last updated
-              const formattedDate = now.toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
-              const updatedEl = document.getElementById("last-updated");
-              if (updatedEl) updatedEl.textContent = `Last updated on: ${formattedDate}`;
-
-              // Uptime
-              updateUptime();
+            var yearEl = document.getElementById("currentYear");
+            if (yearEl) yearEl.textContent = new Date().getFullYear();
           });
+
+          var _uptimeStart = new Date("2025-07-05T00:00:00Z");
+          function _updateUptime() {
+            var diff    = new Date() - _uptimeStart;
+            var days    = Math.floor(diff / 86400000);
+            var years   = Math.floor(days / 365);
+            var months  = Math.floor((days % 365) / 30);
+            var remDays = days % 365 % 30;
+            var parts   = [];
+            if (years)   parts.push(years   + (years   === 1 ? " year"  : " years"));
+            if (months)  parts.push(months  + (months  === 1 ? " month" : " months"));
+            if (remDays || !parts.length) parts.push(remDays + (remDays === 1 ? " day" : " days"));
+            var el = document.getElementById("blog-uptime");
+            if (el) el.textContent = "This blog has been running for: " + parts.join(", ") + ".";
+          }
+          _updateUptime();
+          setInterval(_updateUptime, 86400000);
         </script>
     </body>
 </html>

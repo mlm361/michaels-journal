@@ -7,7 +7,7 @@
 
         <!-- SEO -->
         
-        <title> The Star Trek Computer: My Vision for AI | Michael’s Blog Journal </title>
+        <title> The Star Trek Computer: My Vision for AI | Michael’s Journal </title>
         
 
         <!-- Enable responsiveness on mobile devices-->
@@ -17,9 +17,16 @@
         <script src="https:&#x2F;&#x2F;michaels-journal.pages.dev/theme_selector.js"></script>
         <script src="https://kit.fontawesome.com/6ab1c683ab.js" crossorigin="anonymous"></script>
 
-        <!-- css -->
-        <link id="themeCSS" rel="stylesheet"
-              href="https:&#x2F;&#x2F;michaels-journal.pages.dev/default.css" />
+        <!-- css: inline script prevents flash of wrong theme before JS runs -->
+        <script>
+          (function() {
+            var t = localStorage.getItem('ergo-theme') || 'default';
+            document.write('<link id="themeCSS" rel="stylesheet" href="/' + t + '.css">');
+          })();
+        </script>
+        <noscript>
+          <link id="themeCSS" rel="stylesheet" href="https:&#x2F;&#x2F;michaels-journal.pages.dev/default.css" />
+        </noscript>
 
         <!-- fonts -->
         <link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,500,500i,600,700,800,900|Raleway" as="style">
@@ -29,131 +36,51 @@
         
         
         <link rel="alternate" type="application/atom+xml"
-              title="Michael’s Blog Journal RSS"
+              title="Michael’s Journal RSS"
               href="https://michaels-journal.pages.dev/atom.xml">
         
+        
+
+        
+        <link rel="webmention" href="https:&#x2F;&#x2F;tinylytics.app&#x2F;webmention&#x2F;h2Q2CzgAf-te_SJUBWQ1">
         
     </head>
 
     <body onload="main();">
         
-<input type="checkbox" id="openSidebarMenu" class="openSidebarMenu">
-<label class="menu cross menu--1" for="openSidebarMenu">
-    <svg viewBox="0 0 75 75" xmlns="https://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="30" />
-        <path class="line--1" d="M0 40h62c13 0 6 28-4 18L35 35" />
-        <path class="line--2" d="M0 50h70" />
-        <path class="line--3" d="M0 60h62c13 0 6-28-4-18L35 65" />
-    </svg>
-</label>
-
-<div id="sidebarMenu">
-    <div class="menu_wrapper">
-        <ul class="sidebarMenuInner">
-            <li>
-                <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev" >Michael’s Blog Journal</a>
-                <div class="menu_div" ></div>
-            </li>
-            
-            
-
-
-
-<li >
-    <a href="mailto:michael@michaelmitchell.email" target="_blank">
-        Email
-        <i class="fas fa-envelope"></i>
-    </a>
-</li>
-
-
-
-<li >
-    <a href="https:&#x2F;&#x2F;mitchelltribe.com" target="_blank">
-        Micro.blog
-        <i class="fab fa-microblog"></i>
-    </a>
-</li>
-
-
-
-<li >
-    <a href="https:&#x2F;&#x2F;mitchelltribe.social&#x2F;@michael" target="_blank">
-        Mastodon
-        <i class="fab fa-mastodon"></i>
-    </a>
-</li>
-
-
-
-<li >
-    <a href="https:&#x2F;&#x2F;bsky.app&#x2F;profile&#x2F;mitchelltribe.com" target="_blank">
-        Bluesky
-        <i class="fas fa-cloud"></i>
-    </a>
-</li>
-
-
-
-<li >
-    <a href="https:&#x2F;&#x2F;mitchelltribe.rodeo&#x2F;@michael" target="_blank">
-        Sharkey
-        <i class="fas fa-horse-head"></i>
-    </a>
-</li>
-
-
-
-<li >
-    <a href="https:&#x2F;&#x2F;njump.me&#x2F;npub19af39pdnr0cpg0ntakhdprfz8fkhkdn4t0f383gj0zw8hy4wf8lqh0nfur" target="_blank">
-        Nostr
-        <i class="fas fa-key"></i>
-    </a>
-</li>
-
-
-
-<li >
-    <a href="https:&#x2F;&#x2F;michaelmusings.com" target="_blank">
-        Scribbles
-        <i class="fas fa-pen"></i>
-    </a>
-</li>
-
-
-
-<li >
-    <a href="https:&#x2F;&#x2F;michaelmitchell.blog" target="_blank">
-        Write.as
-        <i class="fas fa-file-alt"></i>
-    </a>
-</li>
-
-
-
-<li >
-    <a href="https:&#x2F;&#x2F;michaelleemitchell.net" target="_blank">
-        Blogger
-        <i class="fab fa-blogger"></i>
-    </a>
-</li>
-
-
-
-
-
-<li >
-    <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;atom.xml" target="_blank">
-        atom
-        <i class="fas fa-rss"></i>
-    </a>
-</li>
-
-
-
-        </ul>
+<nav class="top-nav">
+  <div class="top-nav-inner">
+    <a class="top-nav-brand" href="https:&#x2F;&#x2F;michaels-journal.pages.dev">Michael’s Journal</a>
+    <button class="top-nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="top-nav-links" id="nav-links">
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev">🏠 Home</a>
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev/about">👤 About</a>
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev/archive">🗄️ Archive</a>
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev/on-this-day">📅 On This Day</a>
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev/stats">📊 Stats</a>
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev/tweets">🐦 Tweets</a>
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev/search">🔍 Search</a>
+      <a href="https://michaels-journal.pages.dev/atom.xml" class="rss-link" title="RSS Feed">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px;margin-right:3px;"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19.01 7.38 20 6.18 20C4.98 20 4 19.01 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/></svg>RSS
+      </a>
     </div>
-</div>
+    <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+      <span id="theme-icon">🌙</span>
+      <span id="theme-label">Dark</span>
+    </button>
+  </div>
+</nav>
+
+<script>
+function toggleNav() {
+  var links = document.getElementById('nav-links');
+  var btn = document.getElementById('nav-hamburger');
+  links.classList.toggle('open');
+  btn.classList.toggle('open');
+}
+</script>
 
 
 
@@ -165,7 +92,7 @@
     <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev" style="background-image: url(/img/avatar.png)"></a>
 </figure>
 <h5>
-    <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev">Michael’s Blog Journal</a>
+    <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev">Michael’s Journal</a>
 </h5>
 
   
@@ -189,6 +116,7 @@
     <li> 4 min </li>
 </ul>
 
+      
       <figure class="captioned">
   <img src="/uploads/starship-bridge_robot-orchestra_08.png"
        alt="A human conductor stands on a podium, baton raised, directing a futuristic orchestra of humanoid robots with glowing blue accents. The robots sit in traditional orchestral formation with violins, cellos, and other instruments. Through the large curved observation window behind them, the saucer section and nacelles of a Federation starship resembling the USS Enterprise are visible against the backdrop of deep space. The walls of the starship interior feature subtle LCARS-style glowing panels."
@@ -221,204 +149,156 @@
 </section>
 
 
+
+
          
 
-        <footer>
-            
-              
-              
-<figure class="mini_logo ">
-    <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev" style="background-image: url(/img/avatar.png)"></a>
-</figure>
-<h5>
-    <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev">Michael’s Blog Journal</a>
-</h5>
+        <footer class="site-footer">
 
-              
-<ul class="social_list foot_list">
-    
-
-
-
-<li class="button extra_small font_faint">
-    <a href="mailto:michael@michaelmitchell.email" target="_blank">
-        Email
-        <i class="fas fa-envelope"></i>
-    </a>
-</li>
-
-
-
-<li class="button extra_small font_faint">
-    <a href="https:&#x2F;&#x2F;mitchelltribe.com" target="_blank">
-        Micro.blog
-        <i class="fab fa-microblog"></i>
-    </a>
-</li>
-
-
-
-<li class="button extra_small font_faint">
-    <a href="https:&#x2F;&#x2F;mitchelltribe.social&#x2F;@michael" target="_blank">
-        Mastodon
-        <i class="fab fa-mastodon"></i>
-    </a>
-</li>
-
-
-
-<li class="button extra_small font_faint">
-    <a href="https:&#x2F;&#x2F;bsky.app&#x2F;profile&#x2F;mitchelltribe.com" target="_blank">
-        Bluesky
-        <i class="fas fa-cloud"></i>
-    </a>
-</li>
-
-
-
-<li class="button extra_small font_faint">
-    <a href="https:&#x2F;&#x2F;mitchelltribe.rodeo&#x2F;@michael" target="_blank">
-        Sharkey
-        <i class="fas fa-horse-head"></i>
-    </a>
-</li>
-
-
-
-<li class="button extra_small font_faint">
-    <a href="https:&#x2F;&#x2F;njump.me&#x2F;npub19af39pdnr0cpg0ntakhdprfz8fkhkdn4t0f383gj0zw8hy4wf8lqh0nfur" target="_blank">
-        Nostr
-        <i class="fas fa-key"></i>
-    </a>
-</li>
-
-
-
-<li class="button extra_small font_faint">
-    <a href="https:&#x2F;&#x2F;michaelmusings.com" target="_blank">
-        Scribbles
-        <i class="fas fa-pen"></i>
-    </a>
-</li>
-
-
-
-<li class="button extra_small font_faint">
-    <a href="https:&#x2F;&#x2F;michaelmitchell.blog" target="_blank">
-        Write.as
-        <i class="fas fa-file-alt"></i>
-    </a>
-</li>
-
-
-
-<li class="button extra_small font_faint">
-    <a href="https:&#x2F;&#x2F;michaelleemitchell.net" target="_blank">
-        Blogger
-        <i class="fab fa-blogger"></i>
-    </a>
-</li>
-
-
-
-
-
-<li class="button extra_small font_faint">
-    <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;atom.xml" target="_blank">
-        atom
-        <i class="fas fa-rss"></i>
-    </a>
-</li>
-
-
-
-</ul>
-
-              
-<select id="theme_selector" size=1>
-    <option value="default" selected>default</option>
-    
-    <option value="dark">dark</option>
-    
-</select>
-
-            
-
-            <!-- Footer metadata: breaks layout row and forces new line -->
-            <div style="clear: both; display: block; margin-top: 30px;">
-              <p id="copyright-line" class="footer-meta">
-                © <span id="startYear">2025</span>–<span id="currentYear"></span> Michael Mitchell
-              </p>
-              <p id="blog-uptime" class="footer-meta"></p>
-              <p id="last-updated" class="footer-meta"></p>
-            </div>
-
-            <!-- Creative Commons License -->
-            <div style="margin-top: 15px; text-align: center;">
-              <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-                 style="display: inline-block; text-decoration: none; color: inherit;">
-                <img alt="Creative Commons License" style="border-width:0; vertical-align: middle;"
-                     src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" />
+            <!-- Social Links -->
+            <p class="footer-social-heading">Social Links</p>
+            <div id="social_links">
+              <!-- Social networks -->
+              <a rel="me" href="https://mitchelltribe.social/@michael">
+                <img src="https://cdn.simpleicons.org/mastodon/6364FF.svg" alt="Mastodon" />Mastodon
               </a>
-              <br />
-              <span style="display: block; margin-top: 5px; font-size: 0.9em;">
-                This work is licensed under a
-                <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-                   style="color: #666; text-decoration: none; font-weight: bold;">
-                  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
-                </a>.
-              </span>
+              <a rel="me" href="https://mitchelltribe.rodeo/@michael">
+                <img src="/img/sharkey-icon.png" alt="Sharkey" />Sharkey
+              </a>
+              <a rel="me" href="https://pixelfed.social/mlm361">
+                <img src="https://cdn.simpleicons.org/pixelfed/000000.svg" alt="Pixelfed" class="footer-icon-invert" />Pixelfed
+              </a>
+              <a rel="me" href="https://bsky.app/profile/mitchelltribe.com">
+                <img src="https://cdn.simpleicons.org/bluesky/0061F2.svg" alt="Bluesky" />Bluesky
+              </a>
+              <a rel="me" href="https://iris.to/npub19af39pdnr0cpg0ntakhdprfz8fkhkdn4t0f383gj0zw8hy4wf8lqh0nfur">
+                <img src="/img/nostr-icon.gif" alt="Nostr" />Nostr
+              </a>
+              <!-- Websites / blogs -->
+              <a rel="me" href="https://mitchelltribe.com">
+                <img src="https://cdn.simpleicons.org/micro.blog/FF8800.svg" alt="Micro.blog" />Micro.blog
+              </a>
+              <a rel="me" href="https://michaelmusings.com" aria-label="Scribbles">
+                <img src="/img/scribbles-icon.png" alt="Scribbles" class="scribbles-icon" />Scribbles
+              </a>
+              <a rel="me" href="https://michaelmitchell.blog">
+                <img src="https://cdn.simpleicons.org/write.as/222222.svg" alt="Write.as" class="footer-icon-invert" />Write.as
+              </a>
+              <!-- Contact & feed -->
+              <a href="mailto:michael@michaelmitchell.email">
+                <img src="/img/email-icon.png" alt="Email" />Email Me
+              </a>
+              <a href="https://michaels-journal.pages.dev/atom.xml">
+                <img src="https://cdn.simpleicons.org/rss/FFA500.svg" alt="RSS" />RSS
+              </a>
             </div>
+
+            <hr class="footer-rule" />
+
+            <p class="footer-line" id="blog-uptime"></p>
+            <p class="footer-line">© 2001–<span id="currentYear"></span> Michael Mitchell</p>
+            <p class="footer-line"><a href="/privacy" class="footer-link">Privacy Policy</a></p>
+            <p class="footer-line footer-powered">Built with ❤️ using <a href="https://www.getzola.org" target="_blank" rel="noopener" class="footer-link">Zola</a></p>
+
         </footer>
 
-        <!-- Optional styling -->
         <style>
-          .footer-meta {
-            font-size: 0.85em;
-            color: #666;
+          .site-footer {
+            margin-top: 4rem;
+            padding: 2.5rem 1.25rem 2rem;
+            border-top: 1px solid rgba(128,128,128,0.15);
             text-align: center;
-            margin: 8px 0;
           }
-
-          .footer-meta:first-of-type {
-            margin-top: 30px;
+          .footer-social-heading {
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            opacity: 0.5;
+            margin: 0 0 0.9rem;
           }
+          #social_links {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 16px 20px;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 0.5rem;
+          }
+          #social_links a {
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.88rem;
+            color: inherit;
+            transition: opacity 0.15s;
+          }
+          #social_links a:hover { opacity: 0.65; text-decoration: none; }
+          #social_links img {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.15s ease;
+            flex-shrink: 0;
+          }
+          #social_links a:hover img { transform: translateY(-1px); }
+          /* Photogrid captions */
+          .photogrid-caption { color: #666; }
+          /* Scribbles green accent ring */
+          .scribbles-icon {
+            border-radius: 50%;
+            padding: 3px;
+            background: #fff;
+            box-shadow: 0 0 0 2px #006400 inset, 0 2px 6px rgba(0,0,0,.15);
+          }
+          #social_links a[aria-label="Scribbles"]:hover .scribbles-icon {
+            box-shadow: 0 0 0 2px #00a37a inset, 0 4px 12px rgba(0,0,0,.25);
+          }
+          .footer-rule {
+            border: none;
+            border-top: 1px solid rgba(128,128,128,0.15);
+            margin: 1.25rem auto;
+            max-width: 400px;
+          }
+          .footer-line {
+            font-size: 0.82rem;
+            opacity: 0.6;
+            margin: 0.35rem 0;
+          }
+          .footer-link {
+            color: inherit;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+          }
+          .footer-powered { margin-top: 0.75rem; }
         </style>
 
-        <!-- Tinylytics Embed -->
-        <script src="https://tinylytics.app/embed/h2Q2CzgAf-te_SJUBWQ1.js" defer></script>
+        <!-- Tinylytics + Kudos -->
+        <script src="https://tinylytics.app/embed/h2Q2CzgAf-te_SJUBWQ1.js?kudos" defer></script>
 
-        <!-- Footer Scripts -->
         <script>
-          // Blog uptime (since Jan 1, 2025)
-          const startDate = new Date("2025-07-05T00:00:00Z");
-          function updateUptime() {
-              const now = new Date();
-              let diff = now - startDate;
-              const years = Math.floor(diff / (365.25 * 24 * 60 * 60 * 1000));
-              diff -= years * 365.25 * 24 * 60 * 60 * 1000;
-              const months = Math.floor(diff / (30.44 * 24 * 60 * 60 * 1000));
-              diff -= months * 30.44 * 24 * 60 * 60 * 1000;
-              const days = Math.floor(diff / (24 * 60 * 60 * 1000));
-              const text = `This blog has been running for: ${years} years, ${months} months, ${days} days.`;
-              const uptime = document.getElementById("blog-uptime");
-              if (uptime) uptime.textContent = text;
-          }
-
           document.addEventListener("DOMContentLoaded", function () {
-              // Current year
-              const now = new Date();
-              const yearEl = document.getElementById("currentYear");
-              if (yearEl) yearEl.textContent = now.getFullYear();
-
-              // Last updated
-              const formattedDate = now.toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
-              const updatedEl = document.getElementById("last-updated");
-              if (updatedEl) updatedEl.textContent = `Last updated on: ${formattedDate}`;
-
-              // Uptime
-              updateUptime();
+            var yearEl = document.getElementById("currentYear");
+            if (yearEl) yearEl.textContent = new Date().getFullYear();
           });
+
+          var _uptimeStart = new Date("2025-07-05T00:00:00Z");
+          function _updateUptime() {
+            var diff    = new Date() - _uptimeStart;
+            var days    = Math.floor(diff / 86400000);
+            var years   = Math.floor(days / 365);
+            var months  = Math.floor((days % 365) / 30);
+            var remDays = days % 365 % 30;
+            var parts   = [];
+            if (years)   parts.push(years   + (years   === 1 ? " year"  : " years"));
+            if (months)  parts.push(months  + (months  === 1 ? " month" : " months"));
+            if (remDays || !parts.length) parts.push(remDays + (remDays === 1 ? " day" : " days"));
+            var el = document.getElementById("blog-uptime");
+            if (el) el.textContent = "This blog has been running for: " + parts.join(", ") + ".";
+          }
+          _updateUptime();
+          setInterval(_updateUptime, 86400000);
         </script>
     </body>
 </html>

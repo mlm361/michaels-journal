@@ -11,7 +11,6 @@
   </figure>
   <h2 class="site_title">{{config.title}}</h2>
   <div>{{ config.description | as_str | markdown(inline=true) | safe }}</div>
-  {{ macros::social_list(classes="header_list", bsize="small") }}
   {% endblock header %}
 </header>
 

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-    <title>Michael’s Blog Journal</title>
+    <title>Michael’s Journal</title>
     <subtitle>A quiet place for thoughts, tech, and reflections.</subtitle>
     <link rel="self" type="application/atom+xml" href="https://michaels-journal.pages.dev/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-10-25T00:33:41-04:00</updated>
+    <updated>2026-04-07T23:39:06+00:00</updated>
     <id>https://michaels-journal.pages.dev/atom.xml</id>
     <entry xml:lang="en">
-        <title>Two Pis, many plans, limited focus</title>
-        <published>2025-10-25T00:33:41-04:00</published>
-        <updated>2025-10-25T00:33:41-04:00</updated>
+        <title>Moon Views, Earth Love</title>
+        <published>2026-04-07T23:39:06+00:00</published>
+        <updated>2026-04-07T23:39:06+00:00</updated>
         
         <author>
           <name>
@@ -20,27 +20,30 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/lot-to-do/"/>
-        <id>https://michaels-journal.pages.dev/lot-to-do/</id>
+        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/moon-views-earth-love/"/>
+        <id>https://michaels-journal.pages.dev/moon-views-earth-love/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/lot-to-do/">&lt;figure class=&quot;captioned&quot;&gt;
-  &lt;img src=&quot;&#x2F;uploads&#x2F;electronics_researcher_working_on_circuit_board.png&quot;
-       alt=&quot;A middle-aged man with a beard and glasses is deeply focused while working on an electronic circuit board in a high-tech lab environment. The view is framed as if seen through a circular lens, highlighting the intricate details of the circuitry and the thoughtful expression of the man. The background features futuristic digital displays and diagrams, enhancing the scene&#x27;s innovative and technical atmosphere.&quot;
-       width=&quot;600&quot; &#x2F;&gt;
-  &lt;figcaption&gt;
-   An engineer lost in thought, surrounded by a maze of circuits and the glow of futuristic interfaces.
-  &lt;&#x2F;figcaption&gt;
-&lt;&#x2F;figure&gt;
-&lt;p&gt;Lately, I’ve been swamped with projects and short on energy to tackle them, partly because of my worsening eyesight. I have glaucoma, but thankfully no loss of vision. My treatment includes twice-yearly eye pressure checks and nightly latanoprost. Even so, my glasses prescription seems to need constant updates, and I’ve always had a lot of floaters. My ophthalmologist reassures me that the floaters and eye pressure are fine, but my vision keeps changing, which is frustrating. After a recent visit to an optometrist for new glasses (an immediate improvement at first), I quickly found myself struggling again. It’s baffling how fast my eyesight shifts.&lt;&#x2F;p&gt;
-&lt;p&gt;This ongoing vision issue is a big reason I’m putting off other projects. Other medical concerns, like my heart health, are actually improving. I have two SunFounder Pis to build, a few minor tasks, and I’m refining my blog and social-event posting software. I expect these projects to be fully functional soon, and I’ll update my blog as they progress.&lt;&#x2F;p&gt;
-&lt;p&gt;Despite having plenty to work on, my motivation is flagging.&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://michaels-journal.pages.dev/moon-views-earth-love/">&lt;p&gt;I have been watching the &lt;strong&gt;Artemis II&lt;&#x2F;strong&gt; mission off and on. I saw these pictures on the NASA website, and here are a few that I really like. They definitely got me thinking.&lt;&#x2F;p&gt;
+&lt;p&gt;I have always been fascinated by space and the Heavens. I would like to go to space, but not like we do today. If I went, I would want it to be on a &lt;strong&gt;Star Trek&lt;&#x2F;strong&gt; type shuttle or ship. Our spacecraft, much like our planes, are little more than thin tin cans.&lt;&#x2F;p&gt;
+&lt;p&gt;Looking at these pictures really affected me. The Moon is very dead and very unwelcoming, and space is the same way. Then, seeing our planet &quot;Earth&quot; from that vantage point just shows the miracle God made for us and the love Jesus purchased for us. Why would you want to go anywhere else?&lt;&#x2F;p&gt;
+&lt;div style=&quot;margin:24px 0;&quot;&gt;
+&lt;div style=&quot;display:grid;grid-template-columns:repeat(2,1fr);gap:12px;&quot;&gt;
+&lt;div style=&quot;min-width:0;&quot;&gt;&lt;img src=&quot;https:&#x2F;&#x2F;media.mitchelltribe.xyz&#x2F;b6c80270e9a0.jpg&quot; alt=&quot;A detailed image of Earth taken from space, showing the planet against a black background dotted with small stars. The view focuses on the Eastern Hemisphere, prominently featuring Australia with its reddish-brown landmass on the left side of the globe. Surrounding Australia are vast expanses of deep blue ocean with swirling white cloud formations scattered across the atmosphere. The curvature of the Earth is clearly visible, with a thin, bright blue atmospheric glow outlining the planet’s edge. Near the bottom right of the image, a bright white star or planet is visible in space. The overall scene captures the beauty and fragility of Earth from a distant vantage point in space.&quot; style=&quot;width:100%;height:auto;display:block;border-radius:4px;&quot; &#x2F;&gt;&lt;p style=&quot;font-size:12px;color:#666;margin:4px 0 0;font-style:italic;line-height:1.4;&quot;&gt;Hello, World  NASA astronaut and Artemis II Commander Reid Wiseman took this picture of Earth from the Orion spacecraft&amp;#x27;s window on April 2, 2026, after completing the translunar injection burn.&lt;&#x2F;p&gt;&lt;&#x2F;div&gt;
+&lt;div style=&quot;min-width:0;&quot;&gt;&lt;img src=&quot;https:&#x2F;&#x2F;media.mitchelltribe.xyz&#x2F;2571ed099196.jpg&quot; alt=&quot;A detailed, high-resolution photograph of the full moon centered against a completely black night sky. The moon appears bright white with various shades of gray, showing its textured surface clearly. Visible are numerous craters, darker lunar maria (large, flat basaltic plains), and lighter highland areas. The moon’s round shape is well-defined, and the contrast between the illuminated surface and the dark sky highlights the moon’s detailed topography. No other objects, stars, or light sources are visible in the image. The overall composition focuses solely on the moon, emphasizing its natural features and surface details.&quot; style=&quot;width:100%;height:auto;display:block;border-radius:4px;&quot; &#x2F;&gt;&lt;p style=&quot;font-size:12px;color:#666;margin:4px 0 0;font-style:italic;line-height:1.4;&quot;&gt;The Nearside of the Moon (April 4, 2026) - A view of the nearside of the Moon, the side we always see from Earth. Some of the far side is visible, as well, on the left edge, just beyond the black patch that is Orientale basin, a nearly 600-mile-wide crater that straddles the Moon’s ne&lt;&#x2F;p&gt;&lt;&#x2F;div&gt;
+&lt;div style=&quot;min-width:0;&quot;&gt;&lt;img src=&quot;https:&#x2F;&#x2F;media.mitchelltribe.xyz&#x2F;fde4612f9dc7.jpg&quot; alt=&quot;A detailed view of the Moon&amp;#x27;s surface dominates the foreground, showing a vast expanse covered with numerous craters of varying sizes and depths. The surface appears gray and textured, with shadows accentuating the rugged terrain and crater rims. In the background, partially visible above the Moon&amp;#x27;s horizon, is the Earth, appearing as a bright, blue and white sphere. The Earth’s surface shows cloud formations and oceanic areas, illuminated by sunlight, contrasting sharply against the blackness of space. The image captures the stark contrast between the barren, cratered lunar surface and the vibrant, life-supporting Earth rising behind it. The overall scene conveys a sense of vastness and isolation in space.&quot; style=&quot;width:100%;height:auto;display:block;border-radius:4px;&quot; &#x2F;&gt;&lt;p style=&quot;font-size:12px;color:#666;margin:4px 0 0;font-style:italic;line-height:1.4;&quot;&gt;A Setting Earth (April 6, 2026) – The lunar surface fills the frame in sharp detail, as seen during the Artemis II lunar flyby, while a distant Earth sets in the background. This image was captured at 6:41 p.m. EDT, on April 6, 2026, just three minutes before the Orion spacecraft and&lt;&#x2F;p&gt;&lt;&#x2F;div&gt;
+&lt;div style=&quot;min-width:0;&quot;&gt;&lt;img src=&quot;https:&#x2F;&#x2F;media.mitchelltribe.xyz&#x2F;bf3f8eaa3fb1.jpg&quot; alt=&quot;A view from the surface of the Moon showing its gray, cratered terrain in the foreground. The lunar surface is covered with numerous small and medium-sized impact craters, giving it a rough and pockmarked appearance. Beyond the Moon&amp;#x27;s horizon, the Earth is visible partially illuminated against the blackness of space. The Earth appears as a blue and white crescent with visible cloud formations and oceanic areas, with the shadowed portion blending into the dark background. The image captures the stark contrast between the barren, cratered lunar surface and the vibrant, cloud-covered Earth rising above it. The overall scene conveys a sense of vastness and isolation in space.&quot; style=&quot;width:100%;height:auto;display:block;border-radius:4px;&quot; &#x2F;&gt;&lt;p style=&quot;font-size:12px;color:#666;margin:4px 0 0;font-style:italic;line-height:1.4;&quot;&gt;Earthset  Earthset captured through the Orion spacecraft window at 6:41 p.m. EDT, April 6, 2026, during the Artemis II crew’s flyby of the Moon.&lt;&#x2F;p&gt;&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;div style=&quot;margin-top:10px;padding-top:8px;border-top:1px solid #e5e5e5;&quot;&gt;&lt;span style=&quot;display:block;font-size:12px;color:#888;margin:6px 0 0;font-style:italic;&quot;&gt;Source: &lt;a href=&quot;https:&#x2F;&#x2F;www.nasa.gov&#x2F;gallery&#x2F;lunar-flyby&#x2F;&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot; style=&quot;text-decoration:none;&quot;&gt;&lt;span style=&quot;display:inline-flex;align-items:center;padding:2px 8px;background:#f0f0f0;border-radius:4px;font-size:12px;color:#333;font-weight:500;font-style:normal;&quot;&gt;NASA&lt;&#x2F;span&gt;&lt;&#x2F;a&gt; — April 2026&lt;&#x2F;span&gt;&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;I don&#x27;t know how people can look at these incredible images and not think there is a grand designer. I am staying where we should. Think about it, in the oceans or in space, you will always need a suit that could puncture, rupture, or run out of life-saving air or water. But God made our Earth its own spacesuit that self-replicates the air and water we need.&lt;&#x2F;p&gt;
+&lt;p&gt;These pictures are just beautiful. Space, the Moon, and Mars are places to visit for a day or two, but not places to live. It would be very isolating, even with other people. Look at that multicolored marble. It is home, and it is just beautiful.&lt;&#x2F;p&gt;
 </content>
         
     </entry>
     <entry xml:lang="en">
-        <title>The Star Trek Computer: My Vision for AI</title>
-        <published>2025-10-02T07:35:00-04:00</published>
-        <updated>2025-10-02T07:35:00-04:00</updated>
+        <title>Birthday Thoughts on a Country at a Crossroads</title>
+        <published>2026-04-06T11:01:39+00:00</published>
+        <updated>2026-04-06T11:01:39+00:00</updated>
         
         <author>
           <name>
@@ -50,42 +53,255 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/the-star-trek-computer-my-vision-for-ai/"/>
-        <id>https://michaels-journal.pages.dev/the-star-trek-computer-my-vision-for-ai/</id>
+        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/birthday-thoughts-on-a-country-at-a-crossroads/"/>
+        <id>https://michaels-journal.pages.dev/birthday-thoughts-on-a-country-at-a-crossroads/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/the-star-trek-computer-my-vision-for-ai/">&lt;figure class=&quot;captioned&quot;&gt;
-  &lt;img src=&quot;&#x2F;uploads&#x2F;starship-bridge_robot-orchestra_08.png&quot;
-       alt=&quot;A human conductor stands on a podium, baton raised, directing a futuristic orchestra of humanoid robots with glowing blue accents. The robots sit in traditional orchestral formation with violins, cellos, and other instruments. Through the large curved observation window behind them, the saucer section and nacelles of a Federation starship resembling the USS Enterprise are visible against the backdrop of deep space. The walls of the starship interior feature subtle LCARS-style glowing panels.&quot;
-       width=&quot;600&quot; &#x2F;&gt;
-  &lt;figcaption&gt;
-    A conductor leads a robotic orchestra aboard a starship, with the USS Enterprise framed through the observation deck windows.
-  &lt;&#x2F;figcaption&gt;
+        <summary type="html">&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
+&lt;img src=&quot;&#x2F;uploads&#x2F;ai_gen_temp_76fc10a9e310.png&quot; alt=&quot;A pastoral scene at sunset with a dirt road splitting into two paths in the center, symbolizing a crossroads. On the left side, near a cozy cottage with smoke rising from the chimney, there are stacks of gold coins, a large gold dollar sign, an oil barrel labeled &amp;quot;OIL,&amp;quot; a red gas pump, and a blackboard with a green upward-trending graph, representing economic and industrial interests. In the background, a factory with smokestacks emits smoke into the sky. On the right side, near another similar cottage with an American flag flying, there is a wooden ballot box labeled &amp;quot;VOTE,&amp;quot; a megaphone, political campaign signs, an American flag, and an old television showing a suited man speaking, symbolizing democracy, voting, and political engagement. The sky is filled with warm golden clouds, and the entire scene is framed by trees and colorful flowers. At the top, the text reads &amp;quot;Birthday Thoughts on a Country at a Crossroads&amp;quot; in elegant script.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
 &lt;&#x2F;figure&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Computer: Personal log, Stardate: Current.&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;I want AI that resembles two distinct concepts, not the general artificial intelligence (AGI) that others are trying to create. I envision AI to be like the &lt;em&gt;Star Trek&lt;&#x2F;em&gt; computer and helpful robots like Robby the Robot from &lt;em&gt;Forbidden Planet&lt;&#x2F;em&gt; or Sonny from &lt;em&gt;I, Robot&lt;&#x2F;em&gt;, without any violent programming. I also want a robot companion like the one from &lt;em&gt;Red Planet&lt;&#x2F;em&gt;. I do not want androids, cyborgs, or anything in between.&lt;&#x2F;p&gt;
-&lt;p&gt;I have listened to Ed Zitron and read a post from Greg Morris, who think AI systems are merely slop machines and a fad &quot;word salad&quot; generator.&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;I am having to proactively ask others not to send me AI slop to make my life easier. If I am having to rewrite the shallow nonsense that every LLM produces anyway, I might as well just do it myself from scratch.&lt;&#x2F;p&gt;
+&lt;figcaption&gt;At a pivotal crossroads, a nation contemplates its future between the pursuit of wealth and industry or the call to civic duty and democratic engagement.&lt;&#x2F;figcaption&gt;
+&lt;p&gt;I turn 57 this month, and with everything going on in the world, it almost feels like an afterthought. This year feels worse, more doom and gloom than others. I am not entirely sure why, but it is not just politics. The economy has been rough too, with gas prices staying high, in my case over $4.25 a gallon, along with rising costs across the board and ongoing tech hardware shortages. It all adds to the sense that things are off.&lt;&#x2F;p&gt;
+&lt;p&gt;I have never seen as much upheaval as I have this past year. I have also never witnessed in my adult life companies and wealthy individuals fawn over a President to this extent, while much of the media seems complicit. Then they wonder why their trustworthiness is at an all-time low. I believe in a neutral, fact-based media, but in reality we have never truly had one in this country except when it suited particular interests.&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>🍿Watched Civil War (2024)</title>
+        <published>2026-04-05T14:27:12+00:00</published>
+        <updated>2026-04-05T14:27:12+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Michael Mitchell
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/popcorn-watched-civil-war-2024/"/>
+        <id>https://michaels-journal.pages.dev/popcorn-watched-civil-war-2024/</id>
+        
+        <content type="html" xml:base="https://michaels-journal.pages.dev/popcorn-watched-civil-war-2024/">&lt;p&gt;⚠️ &lt;strong&gt;SPOILER WARNING:&lt;&#x2F;strong&gt; FULL SPOILERS&lt;&#x2F;p&gt;
+&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
+&lt;img src=&quot;&#x2F;uploads&#x2F;tmdb_6a498ca8700d.jpg&quot; alt=&quot;A close-up image of the torch held by the Statue of Liberty against a cloudy, dramatic sky. The torch&amp;#x27;s flame is golden and stylized, glowing with a warm light. Surrounding the base of the flame are sandbags and two soldiers in combat gear, positioned as if in a battle, aiming rifles in opposite directions. The soldiers and sandbags create a wartime scene atop the torch. Bold, bright green text reading &amp;quot;CIVIL WAR&amp;quot; is prominently displayed across the middle of the image, partially covering the torch and soldiers. The overall tone is intense and somber, suggesting conflict and struggle.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
+&lt;&#x2F;figure&gt;
+&lt;figcaption&gt;In &quot;Civil War&quot; (2024), the iconic torch of liberty becomes a battleground as soldiers clash atop its flame, symbolizing the fierce struggle for freedom amid chaos.&lt;&#x2F;figcaption&gt;
+&lt;p&gt;&lt;strong&gt;My Rating:&lt;&#x2F;strong&gt; ½ (0.5&#x2F;5 stars)&lt;&#x2F;p&gt;
+&lt;p&gt;The movie stunk, and it stunk so bad I kept watching only for the action at the end. It made no sense to me. Why were we in a civil war? Seems more like a feel-good piece for the press. There were undertones of innuendo but no reason was given, nothing clear was given. It was basically like the viewer came in the middle of a tale and only got none  of the backstory. Totally stupid movie. If you were supposed to guess about the relationship to today&#x27;s politics, this movie will be bad in 25 years&#x27; time since there is no context at all, and I mean at all. Every good movie has some backstory, either through flashbacks or other ways. My big takeaway: no context, skip it. Don&#x27;t waste 2 hours like I did. Yes, there were some good action and thrilling one-off action moments, but that was it.&lt;&#x2F;p&gt;
+&lt;div style=&quot;text-align: center; padding: 10px; margin: 20px 0 0; border-top: 1px solid #ddd; font-size: 0.85em; color: #666;&quot;&gt;&lt;div style=&quot;margin-bottom: 8px;&quot;&gt;&lt;img src=&quot;https:&#x2F;&#x2F;www.themoviedb.org&#x2F;assets&#x2F;2&#x2F;v4&#x2F;logos&#x2F;v2&#x2F;blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg&quot; alt=&quot;TMDb&quot; style=&quot;height: 16px; display: inline-block;&quot;&gt;&lt;&#x2F;div&gt;&lt;div&gt;This product uses the TMDb API but is not endorsed or certified by &lt;a href=&quot;https:&#x2F;&#x2F;www.themoviedb.org&quot; target=&quot;_blank&quot; style=&quot;color: #01b4e4; text-decoration: none;&quot;&gt;TMDb&lt;&#x2F;a&gt;.&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>History Made April 1, 2026 Artemis II Launched!</title>
+        <published>2026-04-01T21:42:12+00:00</published>
+        <updated>2026-04-01T21:42:12+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Michael Mitchell
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/history-made-april-1-2026-artemis-ii-launched/"/>
+        <id>https://michaels-journal.pages.dev/history-made-april-1-2026-artemis-ii-launched/</id>
+        
+        <content type="html" xml:base="https://michaels-journal.pages.dev/history-made-april-1-2026-artemis-ii-launched/">&lt;p&gt;History was made today. The kind of history that will be written about and studied for years to come, and I was able to capture it from my backyard. Artemis II successfully launched with a crew of four and is heading to the Moon. Not as great, magnificent, or universe changing as what we will celebrate this Sunday with Easter and the resurrection of Jesus Christ, not even close. But still amazing.&lt;&#x2F;p&gt;
+&lt;p&gt;Here is what I get to see from my house on the other side of the coast of Florida. Not as amazing as being there, but still awesome.&lt;&#x2F;p&gt;
+&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
+&lt;img src=&quot;&#x2F;uploads&#x2F;f35316f8e18b.jpg&quot; alt=&quot;A clear blue sky dominates the image with no clouds visible. At the bottom of the image, the tops of two tall trees with green and brown leaves are seen. The trees have thin branches with sparse foliage, indicating a possible seasonal change or type of tree. Rising diagonally from the lower left corner towards the upper center of the image is a white smoke trail, likely from a rocket or missile launch, which is faint but distinct against the blue sky. The smoke trail starts thick near the trees and gradually becomes thinner as it ascends. The overall scene suggests a rocket launch viewed from a distance with natural greenery in the foreground.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
+&lt;&#x2F;figure&gt;
+&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
+&lt;img src=&quot;&#x2F;uploads&#x2F;c42e6b13e03d.jpg&quot; alt=&quot;A clear blue sky dominates the image with a faint white contrail diagonally crossing from the lower left to the upper center, indicating the recent passage of a fast-moving object. Near the top of the contrail, a small bright object, possibly a rocket or missile, is visible ascending. The bottom portion of the image shows the tops of two tall trees with green and brown leaves, suggesting a mix of healthy and drying foliage. The trees have thin branches with sparse leaves, allowing some sky to be seen through them. The overall setting appears to be outdoors on a clear day with no clouds, focusing on the sky and the ascending object.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;No Fools today on this 1st of April. Pretty surreal to watch it from here.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>🍿 Watched Chief of Station (2024)</title>
+        <published>2026-03-22T00:26:45+00:00</published>
+        <updated>2026-03-22T00:26:45+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Michael Mitchell
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/popcorn-watched-chief-of-station-2024/"/>
+        <id>https://michaels-journal.pages.dev/popcorn-watched-chief-of-station-2024/</id>
+        
+        <content type="html" xml:base="https://michaels-journal.pages.dev/popcorn-watched-chief-of-station-2024/">&lt;p&gt;⚠️ &lt;strong&gt;SPOILER WARNING:&lt;&#x2F;strong&gt; MAJOR SPOILERS&lt;&#x2F;p&gt;
+&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
+&lt;img src=&quot;&#x2F;uploads&#x2F;tmdb_6da3996e49ad.jpg&quot; alt=&quot;Alt text: A man in a suit holding a handgun with a serious expression, set against a dark, smoky background with flames at the bottom. The text &amp;quot;CHIEF OF STATION&amp;quot; is displayed prominently at the top.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;&lt;strong&gt;My Rating:&lt;&#x2F;strong&gt; ⭐⭐½ (2.5&#x2F;5 stars)&lt;&#x2F;p&gt;
+&lt;p&gt;The cast has done good work in other films, but not here. They were probably paid, but the story was terrible. Calling it a 2.5 felt generous. In my view, there was nothing redeeming about this movie.&lt;&#x2F;p&gt;
+&lt;div style=&quot;text-align: center; padding: 10px; margin: 20px 0 0; border-top: 1px solid #ddd; font-size: 0.85em; color: #666;&quot;&gt;&lt;div style=&quot;margin-bottom: 8px;&quot;&gt;&lt;img src=&quot;https:&#x2F;&#x2F;www.themoviedb.org&#x2F;assets&#x2F;2&#x2F;v4&#x2F;logos&#x2F;v2&#x2F;blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg&quot; alt=&quot;TMDb&quot; style=&quot;height: 16px; display: inline-block;&quot;&gt;&lt;&#x2F;div&gt;&lt;div&gt;This product uses the TMDb API but is not endorsed or certified by &lt;a href=&quot;https:&#x2F;&#x2F;www.themoviedb.org&quot; target=&quot;_blank&quot; style=&quot;color: #01b4e4; text-decoration: none;&quot;&gt;TMDb&lt;&#x2F;a&gt;.&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Exploring Stardock&#x27;s Clairvoyance</title>
+        <published>2026-03-14T18:00:43+00:00</published>
+        <updated>2026-03-14T18:00:43+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Michael Mitchell
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/exploring-stardocks-clairvoyance/"/>
+        <id>https://michaels-journal.pages.dev/exploring-stardocks-clairvoyance/</id>
+        
+        <summary type="html">&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
+&lt;img src=&quot;&#x2F;uploads&#x2F;ai_gen_temp_1ab263269230.png&quot; alt=&quot;A black-and-white illustration titled &amp;quot;Exploring Stardock&amp;#x27;s Clairvoyance&amp;quot; shows a man smiling and adjusting a slider labeled &amp;quot;SETTINGS&amp;quot; on a large transparent screen filled with graphs, charts, binary code, and a neural network diagram with the word &amp;quot;ANALYZING&amp;quot; underneath. The man is standing at a desk with a coffee cup on a side table nearby. In the background, there is a cozy room setting with an armchair, a side table with a potted plant, and a floor lamp.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
+&lt;&#x2F;figure&gt;
+&lt;figcaption&gt;A man joyfully adjusts settings on a futuristic interface labeled &quot;Analyzing,&quot; exploring the possibilities of Stardock&#x27;s Clairvoyance technology in a cozy, modern workspace.&lt;&#x2F;figcaption&gt;
+&lt;p&gt;I have been trying out a new app from &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.stardock.com&#x2F;&quot;&gt;Stardock&lt;&#x2F;a&gt; called &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;clairvoyanceai.com&#x2F;&quot;&gt;Clairvoyance&lt;&#x2F;a&gt;. It is a nice AI interface that is very powerful and lets you use API keys to interact with large language models and do all kinds of things. It also takes a privacy-first approach and is a bit more user friendly than some other tools I have tried. I will say this has been very compelling and interesting to use. I honestly cannot believe it is free, and I hope it stays free. That said, there are still some bugs and rough edges. For example, it does not always make it clear whether it is actively working or if something has hung. When subagents get stuck there does not seem to be an obvious way to stop or cancel the task, at least that I have found so far. I have also seen cases where the interface says it is finished but still reports that it is working. On occasion I have asked it what it is doing or what is going on, and the response mentions something running in the background but does not really answer the question directly. It almost feels like it is ignoring the question and returning a vague or nonsense response instead of explaining what is happening. So there are definitely some areas that still need to be fleshed out. To be fair, the software is clearly marked as being in alpha. When it is on target and working, especially when it is helping with coding, it actually works quite well.&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Mike Elgan Nails It</title>
+        <published>2026-03-10T14:51:55+00:00</published>
+        <updated>2026-03-10T14:51:55+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Michael Mitchell
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/mike-elgan-nails-it/"/>
+        <id>https://michaels-journal.pages.dev/mike-elgan-nails-it/</id>
+        
+        <content type="html" xml:base="https://michaels-journal.pages.dev/mike-elgan-nails-it/">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;elgan.com&#x2F;why-you-should-love-blogs-now-more-than-ever&quot;&gt;https:&#x2F;&#x2F;elgan.com&#x2F;why-you-should-love-blogs-now-more-than-ever&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Why you should love blogs now more than ever&lt;&#x2F;p&gt;
+&lt;p&gt;, &lt;strong&gt;Mike Elgan&lt;&#x2F;strong&gt; (@MikeElgan@mastodon.social) on sharkey (&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;mitchelltribe.rodeo&#x2F;notes&#x2F;aiyrjwc80dzh07c3&quot;&gt;source&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;p&gt;However, I believe AI is useful. I am using these services as &lt;strong&gt;tools&lt;&#x2F;strong&gt;, and you have to look at them that way. I am not a coder, so I use these machines to accomplish what I want. I do not care if the resulting programs are long and &quot;slop,&quot; as long as they perform the intended task and pose no security problems. Modern computers and software can easily handle code that is not perfectly efficient. I believe that within five years, AI will have coding mastered and will be able to fix all the &quot;slop code&quot; it might be producing today.&lt;&#x2F;p&gt;
-&lt;p&gt;Greg Morris&#x27;s frustration is understandable. He has spent decades building his skills as a designer and communicator, and now he has to deal with people sending him AI-generated &quot;slop&quot; content that he has to rewrite. Ed Zitron raises similar concerns about &quot;slop code,&quot; arguing that AI-generated code is unreliable and that LLMs cannot be trusted to do the same thing every time.&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#2&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; Both critiques are valid, particularly when AI outputs are passed off as professional work or sent to professionals who then have to fix them. However, I am not claiming to be a designer or coder, nor am I sending AI-generated work to professionals. I am using AI to build things for myself that I wouldn&#x27;t otherwise be able to create or pay to have created.&lt;&#x2F;p&gt;
-&lt;p&gt;Shows like &lt;em&gt;Star Wars&lt;&#x2F;em&gt;, &lt;em&gt;Star Trek&lt;&#x2F;em&gt;, and &lt;em&gt;Aliens&lt;&#x2F;em&gt; all have AI that is very advanced, yet the technology remains in the background rather than replacing humans entirely. They have androids, synthetics, holograms, hyperspace travel, and computers that navigate across galaxies. But computers do not run everything. Humans fly the ships, make the decisions, and win the battles. The computer in &lt;em&gt;Star Trek&lt;&#x2F;em&gt; is the way I see AI eventually being: always accessible, able to perform any task asked of it, capable of writing flawless code, but humans remain at the heart of technology.&lt;&#x2F;p&gt;
-&lt;p&gt;Humans will be the conductor and the AI will be the orchestra. This is how I want my AI to be for the future: not replacing humans but supporting us.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Computer: End Personal log.&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I saw Mike&#x27;s post in my timeline, and it&#x27;s referenced above. While I know some people hate AI with a passion, I agree that AI content has, for the most part, made the internet harder to enjoy. I agree with his post wholeheartedly, and maybe it will bring blogs - and hearing from people on blogs - back into the spotlight.&lt;&#x2F;p&gt;
+&lt;p&gt;There was a time when most blogs looked quaint and personal, reflecting the owner&#x27;s personality not only in their words but in the site&#x27;s visuals. I also agree with Dave Winer&#x27;s views on blogs, though not the idea of leaving everything completely unedited. If by &quot;unedited&quot; he means honest, uncensored feelings, I&#x27;m fine with that. But I do think having an AI or another human proofread your work is usually a good idea.&lt;&#x2F;p&gt;
+&lt;p&gt;When I read some of my earlier posts from my youth - about 35 years ago when I was in my mid-twenties - I often think, what did I even mean there? It may make no sense now, and when I see something like that I cringe and immediately do some blog gardening and fix it. I don&#x27;t want an AI to turn everything into perfect polish, but I do want my writing to make sense. Sometimes I ramble and chase rabbits the way I do in conversation, and that can lose readers&#x27; attention. I hate walking away from someone and thinking, what were we even talking about? That was all over the place.&lt;&#x2F;p&gt;
+&lt;p&gt;So yes blogs look like they are coming back and that is a good thing in my opinion, and Google if you are listening, Blogger will be 30 years old in a few years. How about doing some updates to it, but keep it conservative and non-AI related and keep the spirit of it alive and just bring it forward into the modern age.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>My Blogging Platform Odyssey</title>
+        <published>2026-03-08T21:45:36+00:00</published>
+        <updated>2026-03-08T21:45:36+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Michael Mitchell
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/my-blogging-platform-odyssey/"/>
+        <id>https://michaels-journal.pages.dev/my-blogging-platform-odyssey/</id>
+        
+        <summary type="html">&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
+&lt;img src=&quot;&#x2F;uploads&#x2F;dalle_temp_d62d72a5b90f.png&quot; alt=&quot;A digital painting of a person walking down a sunlit path through a vibrant, colorful valley filled with flowers and trees. The trees have large, floating app icons instead of leaves, including icons resembling Twitter and other social media or tech platforms. The scene is bathed in warm, golden light with a dreamy, painterly texture, and butterflies flutter in the sky near the glowing sun.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
+&lt;&#x2F;figure&gt;
+&lt;figcaption&gt;A lone traveler embarks on a journey through a vibrant valley of blogging platforms, seeking the perfect path to share their voice and stories with the world.&lt;&#x2F;figcaption&gt;
+&lt;p&gt;Okay, it has been one year since I joined Micro.blog and Scribbles.page, and just over a year since I joined Write.as. I thought I would review all three services with a clear winner, a hard &quot;can&#x27;t wait for my subscription to end and won&#x27;t be renewing,&quot; and a dark horse.&lt;&#x2F;p&gt;
+&lt;p&gt;I joined all three within months of each other looking to get rid of my InMotionHosting web host and get away from WordPress. I didn&#x27;t like the direction that Matt Mullenweg was heading and didn&#x27;t want to get burned like I did with Elon Musk and Twitter. Twitter was a special place for me as I refused to use any Zuckerberg product, especially since he ruined Instagram.&lt;&#x2F;p&gt;
+&lt;p&gt;Now with the history out of the way, here we go.&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Political Disillusionment</title>
+        <published>2026-03-02T22:26:59+00:00</published>
+        <updated>2026-03-02T22:26:59+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Michael Mitchell
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/okay-this-is-one-of-a-few-political-related-posts-i-post-onl/"/>
+        <id>https://michaels-journal.pages.dev/okay-this-is-one-of-a-few-political-related-posts-i-post-onl/</id>
+        
+        <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;⚠️ &lt;strong&gt;Warning:&lt;&#x2F;strong&gt; Political Rant&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Okay, this is one of the few politically related posts I make each year because politics are so divisive. So here’s your warning: if you’d rather not read political commentary, feel free to stop here.&lt;&#x2F;p&gt;
+&lt;p&gt;The recent armed action against Iran has me conflicted. I believe it&#x27;s more of a distraction and a pretext than a genuine strategic necessity. While the issues we face in America come from the neglect of both parties, Trump seems to be using these problems to his advantage. This situation should have been addressed years ago when Iran first began developing its nuclear program. The United States is skilled at acting as a global police force and solving immediate problems but not at handling long-term challenges such as nation building. We have never successfully created a functioning foreign democracy.&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Better Health, Bigger To-Do List</title>
+        <published>2026-02-15T13:48:14+00:00</published>
+        <updated>2026-02-15T13:48:14+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Michael Mitchell
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/better-health-bigger-to-do-list/"/>
+        <id>https://michaels-journal.pages.dev/better-health-bigger-to-do-list/</id>
+        
+        <summary type="html">&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
+&lt;img src=&quot;&#x2F;uploads&#x2F;dalle_temp_3903fa70293c.png&quot; alt=&quot;A cluttered desk filled with numerous stacks of DVDs and CDs, some scattered and some in cases, alongside two black game controllers and a white coffee mug. In the center of the desk is a black computer tower with a digital display showing the number &amp;quot;3.&amp;quot; Behind the desk is a large monitor displaying lines of code or text, and a bookshelf filled with more DVDs or books. A desk lamp on the left side casts warm light over the scene, creating a cozy atmosphere.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
+&lt;&#x2F;figure&gt;
+&lt;figcaption&gt;A cluttered desk overflowing with DVDs, game controllers, and a computer setup highlights the challenge of balancing a busy to-do list with the pursuit of better health and productivity.&lt;&#x2F;figcaption&gt;
+&lt;p&gt;I haven&#x27;t blogged lately for several reasons. I have been feeling much better from my Obstructive Hypertrophic Cardiomyopathy (I have blogged extensively about it in several past posts). I will just say my Camzyos and Metoprolol 200 mg ER twice daily seems to be working. I am sleeping at night and I hardly feel my heart symptoms anymore. The only lingering negative is a high heart rate most of the time, even when sleeping. But I have more energy, and that is actually why I haven&#x27;t been blogging as much.&lt;&#x2F;p&gt;
+&lt;p&gt;I know what you are thinking: if you are feeling better, why aren&#x27;t you blogging? Well, it is because I am catching up on backlogged personal projects I have wanted to get done, and spending too much money in the process. Ever since AI came on the scene, I have been getting up to speed and, with its help, doing things I have wanted to do but didn&#x27;t have the knowledge or know where to look. For instance, I have over 2,000 discs (DVDs, CDs, and Blu-rays) from over 30 years of accumulation that I am finally archiving and getting into my Plex server for my home. I had no one to ask and couldn&#x27;t find resources, so I just had the discs sitting around, many never opened, as I relied on streaming services. But I have been on a purge of subscription services since early last year. I am also finding approximately 100 DVDs that have either disc rot or are scratched. That last one really hurts, as most of the disc-rotted and scratched discs have never been opened. So there has been a renewed sense of urgency on my part to get these things archivally backed up.&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>📺 Watched Fallout (2024) on Prime Video</title>
+        <published>2026-02-08T17:37:09+00:00</published>
+        <updated>2026-02-08T17:37:09+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Michael Mitchell
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/tv-watched-fallout-2024-on-prime-video/"/>
+        <id>https://michaels-journal.pages.dev/tv-watched-fallout-2024-on-prime-video/</id>
+        
+        <content type="html" xml:base="https://michaels-journal.pages.dev/tv-watched-fallout-2024-on-prime-video/">&lt;p&gt;⚠️ &lt;strong&gt;SPOILER WARNING:&lt;&#x2F;strong&gt; MAJOR SPOILERS&lt;&#x2F;p&gt;
+&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
+&lt;img src=&quot;&#x2F;uploads&#x2F;tmdb_e79096142df1.jpg&quot; alt=&quot;Alt text: Promotional poster for the video game &amp;quot;Fallout&amp;quot; featuring three characters and a dog walking towards the viewer on a dusty road with a large, weathered &amp;quot;Welcome to New Vegas&amp;quot; sign in the background under a dusky sky. The word &amp;quot;Fallout&amp;quot; is prominently displayed at the top in bold yellow letters with a lightning bolt through the &amp;quot;o&amp;quot;.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
+&lt;&#x2F;figure&gt;
+&lt;figcaption&gt;In the desolate wasteland of New Vegas, three survivors and their loyal dog embark on a perilous journey through a post-apocalyptic world where every step could be their last.&lt;&#x2F;figcaption&gt;
+&lt;p&gt;&lt;strong&gt;My Rating:&lt;&#x2F;strong&gt; ⭐⭐⭐⭐ (4&#x2F;5 stars)&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Episodes:&lt;&#x2F;strong&gt; 8 | &lt;strong&gt;Aired:&lt;&#x2F;strong&gt; 12-16-2025&lt;&#x2F;p&gt;
+&lt;p&gt;This season answered a lot of questions and introduced a few new ones. But I actually liked this season better than the first season. I think they did the flashbacks much better this season, and this is thoroughly engaging and enjoyable entertainment. The one negative I would have is that this is not the first TV show or movie that has tried to technologize the 50s after World War 2 and the 60s. I am always astonished at the technology they built but other things that seem like simpler items that they miss, and I say why doesn&#x27;t the technology they have built work here or there. Oh, and I didn&#x27;t miss the few references to modern day issues and Trump. I find it amazing how politics of today is meshing into TV shows. Some do it well (like here) and some don&#x27;t (like the recent Superman of 2025). But one thing on the real life side is the old axiom, history seems to always repeat itself.
+Looking forward to Season 3.&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
-&lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;
-&lt;p&gt;Greg Morris, &lt;em&gt;I Did It Myself&lt;&#x2F;em&gt;, https:&#x2F;&#x2F;gregmorris.co.uk&#x2F;2025&#x2F;09&#x2F;24&#x2F;i-did-it-myself.html&lt;&#x2F;p&gt;
-&lt;&#x2F;div&gt;
-&lt;div class=&quot;footnote-definition&quot; id=&quot;2&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;2&lt;&#x2F;sup&gt;
-&lt;p&gt;Ed Zitron, &lt;em&gt;The Case Against Generative AI&lt;&#x2F;em&gt;, https:&#x2F;&#x2F;www.wheresyoured.at&#x2F;the-case-against-generative-ai&#x2F;&lt;&#x2F;p&gt;
-&lt;&#x2F;div&gt;
+&lt;div style=&quot;text-align: center; padding: 10px; margin: 20px 0 0; border-top: 1px solid #ddd; font-size: 0.85em; color: #666;&quot;&gt;&lt;div style=&quot;margin-bottom: 8px;&quot;&gt;&lt;img src=&quot;https:&#x2F;&#x2F;www.themoviedb.org&#x2F;assets&#x2F;2&#x2F;v4&#x2F;logos&#x2F;v2&#x2F;blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg&quot; alt=&quot;TMDb&quot; style=&quot;height: 16px; display: inline-block;&quot;&gt;&lt;&#x2F;div&gt;&lt;div&gt;This product uses the TMDb API but is not endorsed or certified by &lt;a href=&quot;https:&#x2F;&#x2F;www.themoviedb.org&quot; target=&quot;_blank&quot; style=&quot;color: #01b4e4; text-decoration: none;&quot;&gt;TMDb&lt;&#x2F;a&gt;.&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
 </content>
         
     </entry>
     <entry xml:lang="en">
-        <title>My Hypertrophic Cardiomyopathy Update</title>
-        <published>2025-09-27T16:09:37-04:00</published>
-        <updated>2025-09-27T16:09:37-04:00</updated>
+        <title>🍿 Watched The Tank (2025) on Prime Video</title>
+        <published>2026-01-22T14:41:58+00:00</published>
+        <updated>2026-01-22T14:41:58+00:00</updated>
         
         <author>
           <name>
@@ -95,24 +311,23 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/my-hypertrophic-cardiomyopathy-update/"/>
-        <id>https://michaels-journal.pages.dev/my-hypertrophic-cardiomyopathy-update/</id>
+        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/popcorn-watched-the-tank-2025-on-prime-video/"/>
+        <id>https://michaels-journal.pages.dev/popcorn-watched-the-tank-2025-on-prime-video/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/my-hypertrophic-cardiomyopathy-update/">&lt;p&gt;I went to the doctors on Friday, hopefully for the last of the required three ECHOs I need while on my medication called &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.camzyos.com&#x2F;&quot;&gt;Camzyos&lt;&#x2F;a&gt; (you may have seen the commercials on TV for it). I have been on 5mg since June for my Hypertrophic Cardiomyopathy, and I am oversimplifying here, but the results have been mixed.&lt;&#x2F;p&gt;
-&lt;p&gt;On the positive side, it has helped significantly. My numbers have definitely improved, not only on my LVOT obstruction (how much oxygenated blood gets out of my heart) but also on my ejection fraction. My shortness of breath during exertion or regular activities is completely gone.&lt;&#x2F;p&gt;
-&lt;p&gt;However, there are concerning side effects. My fatigue is still there, if not a little worse, and my heart rate is consistently fast with tachycardia episodes. Your heart should slow down during sleep, but mine stays at 75-90 beats per minute or higher all night long, and I can feel it constantly. This is not AFib (an irregular fast heartbeat) but rather a fast, rhythmic beat.&lt;&#x2F;p&gt;
-&lt;p&gt;The doctor reviewed my previous Holter monitor readings and saw the tachycardia episodes and abnormal beats firsthand. He decided I need to be put on Verapamil to address these short runs of tachycardia and the SVT (Supraventricular Tachycardia) and VT (Ventricular Tachycardia) abnormal beats I experience.&lt;&#x2F;p&gt;
-&lt;p&gt;There was also other news from my cardiac MRI done last week, though they are not sure how to interpret it yet. Both radiologists who read my MRI need to provide clarification on quantifying my heart scarring. The report only stated &quot;diffuse LGE&quot; (Late Gadolinium Enhancement), which on its own is concerning, but they need a specific number to determine if I need an implantable ICD device to prevent sudden episodes of Ventricular Fibrillation (VFib), which anyone who has watched medical shows knows is the reason for Code Blues at hospitals.&lt;&#x2F;p&gt;
-&lt;p&gt;The treatment protocol is complicated. I cannot start Verapamil immediately because Camzyos has a REMS protocol (&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.fda.gov&#x2F;drugs&#x2F;drug-safety-and-availability&#x2F;risk-evaluation-and-mitigation-strategies-rems&quot;&gt;Risk Evaluation and Mitigation Strategies&lt;&#x2F;a&gt;). Camzyos can cause heart failure if not properly monitored, though this is reversible by stopping the medication. The protocol requires cutting the Camzyos dose in half when starting Verapamil, but my doctors do not want to do that in my case because that reduced dose would probably be ineffective.&lt;&#x2F;p&gt;
-&lt;p&gt;Instead, they are increasing my dose to 10mg and monitoring how I respond for two to three weeks with another ECHO (which are painless and no problem to do). Then they will add Verapamil, which will require cutting my Camzyos dose in half, allowing me to benefit from both medications. They must proceed this way because concurrent use of both drugs can potentially lower ejection fraction and cause heart failure, so they have to take it slowly.&lt;&#x2F;p&gt;
-&lt;p&gt;So much for my hoped-for six-month reprieve from ECHOs. I now have another one scheduled for next month, plus visits with my cardiologist, the HCM medication specialist cardiologist, and my electrophysiologist. All of these appointments just happen to be converging next month due to their regular yearly or six-month checkup schedules, in addition to this newly added ECHO.&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://michaels-journal.pages.dev/popcorn-watched-the-tank-2025-on-prime-video/">&lt;p&gt;⚠️ &lt;strong&gt;SPOILER WARNING:&lt;&#x2F;strong&gt; FULL SPOILERS&lt;&#x2F;p&gt;
+&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
+&lt;img src=&quot;&#x2F;uploads&#x2F;tmdb_de9ec758327c.jpg&quot; alt=&quot;Movie poster for &amp;quot;The Tank&amp;quot; featuring five soldiers in military uniforms sitting and standing on a large tank with a prominent gun barrel. The background shows a smoky, fiery battlefield, and the title &amp;quot;THE TANK&amp;quot; is displayed in large, bold letters at the top.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;&lt;strong&gt;My Rating:&lt;&#x2F;strong&gt; ⭐⭐⭐ (3&#x2F;5 stars)&lt;&#x2F;p&gt;
+&lt;p&gt;I thought it was partly a drama and partly a horror movie. It was engaging and it also made me think about how history repeats itself through some of its themes. It was two hours long and maybe about half an hour too long. Still, it was interesting, and it was sad in parts. A lot of what was portrayed in some scenes probably did happen.&lt;&#x2F;p&gt;
+&lt;div style=&quot;text-align: center; padding: 10px; margin: 20px 0 0; border-top: 1px solid #ddd; font-size: 0.85em; color: #666;&quot;&gt;&lt;div style=&quot;margin-bottom: 8px;&quot;&gt;&lt;img src=&quot;https:&#x2F;&#x2F;www.themoviedb.org&#x2F;assets&#x2F;2&#x2F;v4&#x2F;logos&#x2F;v2&#x2F;blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg&quot; alt=&quot;TMDb&quot; style=&quot;height: 16px; display: inline-block;&quot;&gt;&lt;&#x2F;div&gt;&lt;div&gt;This product uses the TMDb API but is not endorsed or certified by &lt;a href=&quot;https:&#x2F;&#x2F;www.themoviedb.org&quot; target=&quot;_blank&quot; style=&quot;color: #01b4e4; text-decoration: none;&quot;&gt;TMDb&lt;&#x2F;a&gt;.&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
 </content>
         
     </entry>
     <entry xml:lang="en">
-        <title>When Police Lights Stay On: Law Enforcement Cruise Mode</title>
-        <published>2025-08-28T11:49:57-04:00</published>
-        <updated>2025-08-28T11:49:57-04:00</updated>
+        <title>🍿 Watched TRON: Ares (2025) on Disney+</title>
+        <published>2026-01-20T18:26:14+00:00</published>
+        <updated>2026-01-20T18:26:14+00:00</updated>
         
         <author>
           <name>
@@ -122,49 +337,22 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/law-enforcement-cruise-mode/"/>
-        <id>https://michaels-journal.pages.dev/law-enforcement-cruise-mode/</id>
+        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/popcorn-watched-tron-ares-2025-on-disney-plus/"/>
+        <id>https://michaels-journal.pages.dev/popcorn-watched-tron-ares-2025-on-disney-plus/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/law-enforcement-cruise-mode/">&lt;img src=&quot;&#x2F;uploads&#x2F;police-cruise-mode-confused-driver-illustration.png&quot; alt=&quot; Illustration of a driver looking confused as a police car follows with steady red and blue lights.&quot; width=&quot;600&quot; &#x2F;&gt;
-&lt;p&gt;I live in Hillsborough County, Florida. Within the last few months, our Hillsborough County Sheriff&#x27;s Office (HCSO) and at least one other local agency have been using what they call &lt;em&gt;cruise mode&lt;&#x2F;em&gt; with their emergency lights. This is creating a lot of confusion for motorists, myself included.&lt;&#x2F;p&gt;
-&lt;p&gt;In this mode, the emergency lights are steady and static while the deputy drives normally. The problem is you cannot tell if they want you to move over, pull over, or simply let them pass with priority. Traditionally, emergency lights flash, sometimes with sirens, which signals drivers how to respond. The issue is especially acute when a patrol car is directly behind you or approaching an intersection in front of you. I’ve been in both of these situations, and each time I was unsure how to react.&lt;&#x2F;p&gt;
-&lt;p&gt;Apparently, HCSO received enough questions, complaints, and inquiries that local news media began covering the issue. At least one couple was involved in a serious accident linked to confusion over this policy.&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.tampabay28.com&#x2F;news&#x2F;local-news&#x2F;i-team-investigates&#x2F;cruise-lights-on-hillsborough-county-sheriffs-office-patrol-cars-raise-questions-confusion-among-drivers&quot;&gt;ABC Action News Tampa Bay (WFTS) report&lt;&#x2F;a&gt; documents one such accident.&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.fox13news.com&#x2F;news&#x2F;hcso-deputies-begin-using-cruise-lights-patrol-cars-deter-crime&quot;&gt;FOX 13 Tampa Bay report&lt;&#x2F;a&gt; explains the reasoning behind the new lighting mode.&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;div class=&quot;youtube &quot;&gt;
-    &lt;iframe src=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;SPM-CGaE-BE&quot;
-    webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder=&quot;0&quot;
-    &gt;
-  &lt;&#x2F;iframe&gt;
-&lt;&#x2F;div&gt;
-&lt;p&gt;One key issue is that HCSO did not widely publicize this change until after they had already begun using it. Nor did they hold any public hearings, request public input, or take comments about this non-statutory change. Florida law is clear about when emergency lights may be used and when emergency vehicles may claim special driving privileges:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;§316.2397(3)(c)&lt;&#x2F;strong&gt; Authorized emergency vehicles may operate emergency lights and sirens in an emergency. &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.leg.state.fl.us&#x2F;Statutes&#x2F;index.cfm?App_mode=Display_Statute&amp;amp;URL=0300-0399%2F0316%2FSections%2F0316.2397.html&quot;&gt;Online Sunshine&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;§316.072(5)(a)&lt;&#x2F;strong&gt;, a driver of an authorized emergency vehicle may claim special privileges when responding to an emergency call, transporting organs or surgical teams for transplant, pursuing a suspect, or responding to a fire alarm. The driver &lt;strong&gt;“may exercise the privileges set forth in this section, but subject to the conditions herein stated.”&lt;&#x2F;strong&gt; &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.leg.state.fl.us&#x2F;Statutes&#x2F;index.cfm?App_mode=Display_Statute&amp;amp;URL=0300-0399%2F0316%2FSections%2F0316.072.html&quot;&gt;Online Sunshine&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;The privileges in &lt;strong&gt;§316.072(5)(b)&lt;&#x2F;strong&gt; include parking or standing as needed, carefully proceeding past a red or stop after slowing, exceeding speed limits without endangering life or property, and disregarding movement or turning regulations without endangering life or property. &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.leg.state.fl.us&#x2F;Statutes&#x2F;index.cfm?App_mode=Display_Statute&amp;amp;URL=0300-0399%2F0316%2FSections%2F0316.072.html&quot;&gt;Online Sunshine&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;§316.072(5)(c)&lt;&#x2F;strong&gt; requires “due regard for the safety of all persons” and does not protect a driver from reckless disregard. &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.leg.state.fl.us&#x2F;Statutes&#x2F;index.cfm?App_mode=Display_Statute&amp;amp;URL=0300-0399%2F0316%2FSections%2F0316.072.html&quot;&gt;Online Sunshine&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;Separately, &lt;strong&gt;§316.126(3)&lt;&#x2F;strong&gt; says that when an emergency vehicle is en route to an existing emergency, it must warn other traffic by an audible signal or a visible signal using displayed blue or red lights, and otherwise proceed consistent with the traffic laws. &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.leg.state.fl.us&#x2F;Statutes&#x2F;index.cfm?App_mode=Display_Statute&amp;amp;URL=0300-0399%2F0316%2FSections%2F0316.126.html&amp;amp;utm_source=chatgpt.com&quot;&gt;Online Sunshine&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;The statute does not appear to authorize steady, non-flashing lights while the vehicle is driving normally. Cruise mode is also not mentioned in the &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.flhsmv.gov&#x2F;pdf&#x2F;handbooks&#x2F;englishdriverhandbook.pdf&quot;&gt;Florida Driver’s Handbook&lt;&#x2F;a&gt;, leaving motorists with no official guidance on how to respond:&lt;&#x2F;p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Emergency Vehicles:
-Motorists, bicyclists, and pedestrians must yield the right-of-way to law enforcement vehicles, fire engines, and other emergency vehicles using sirens or flashing lights. Pull over to the closest edge of the roadway immediately and stop until the emergency vehicle has passed. Do not block intersections.&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;This confusion is not theoretical. I experienced it first-hand a couple of months ago. A deputy was driving behind me with cruise lights on, and I had no idea if he wanted me to move over or not. He did not try to pass, so I continued driving normally through heavy traffic.&lt;&#x2F;p&gt;
-&lt;p&gt;Another example happened just the other morning on the University of South Florida campus. A USF Police vehicle was coming the opposite way with static emergency lights on. It was 6:25 a.m. and still dark, so the lights were especially bright. I had a green turn arrow but hesitated because I did not know if he intended to proceed through the intersection. After three or four seconds, I realized he wasn’t moving, so I made my left turn. Even though I already knew about cruise mode, I was still uncertain.&lt;&#x2F;p&gt;
-&lt;p&gt;If the law only permits these lights to be used in flashing emergency mode and requires officers to obey traffic laws otherwise, then this static always-on mode while on routine patrol does not appear to be supported by statute. It also creates unnecessary confusion, especially in a state with a large elderly population who do not need added uncertainty behind the wheel. In addition, tourists and residents from other parts of Florida where agencies do not use cruise mode face even more confusion. I understand the goal is to deter crime, discourage traffic violations, and increase visibility, but in practice cruise mode is causing more confusion and risk than it prevents.&lt;&#x2F;p&gt;
-&lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;
-&lt;p&gt;Page 84 Official Florida Driver License Handbook as issued by the Florida Department of Highway Safety and Motor Vehicles 2025 Edition&lt;&#x2F;p&gt;
-&lt;&#x2F;div&gt;
-</content>
+        <content type="html" xml:base="https://michaels-journal.pages.dev/popcorn-watched-tron-ares-2025-on-disney-plus/">&lt;p&gt;⚠️ &lt;strong&gt;SPOILER WARNING:&lt;&#x2F;strong&gt; FULL SPOILERS&lt;&#x2F;p&gt;
+&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
+&lt;img src=&quot;&#x2F;uploads&#x2F;tmdb_90facd798a4e.jpg&quot; alt=&quot;Promotional poster for &amp;quot;TRON Ares&amp;quot; featuring a futuristic motorcycle and rider in a reflective suit, standing on a rain-soaked city street bathed in red light. The towering buildings fade into a foggy, overcast sky.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;&lt;strong&gt;My Rating:&lt;&#x2F;strong&gt; ⭐⭐⭐½ (3.5&#x2F;5 stars)&lt;&#x2F;p&gt;
+&lt;p&gt;A solid, if unremarkable, entry in the Tron series. Jared Leto stands out, and the plot introduces a novel twist: the digital world invades ours, spotlighting AI. It&#x27;s a fine way to kill almost 2 hours. However, it&#x27;s not worth a theater visit. Watching it on Disney+ is your best bet.&lt;&#x2F;p&gt;
+&lt;div style=&quot;text-align: center; padding: 10px; margin: 20px 0 0; border-top: 1px solid #ddd; font-size: 0.85em; color: #666;&quot;&gt;&lt;div style=&quot;margin-bottom: 8px;&quot;&gt;&lt;img src=&quot;https:&#x2F;&#x2F;www.themoviedb.org&#x2F;assets&#x2F;2&#x2F;v4&#x2F;logos&#x2F;v2&#x2F;blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg&quot; alt=&quot;TMDb&quot; style=&quot;height: 16px; display: inline-block;&quot;&gt;&lt;&#x2F;div&gt;&lt;div&gt;This product uses the TMDb API but is not endorsed or certified by &lt;a href=&quot;https:&#x2F;&#x2F;www.themoviedb.org&quot; target=&quot;_blank&quot; style=&quot;color: #01b4e4; text-decoration: none;&quot;&gt;TMDb&lt;&#x2F;a&gt;.&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;</content>
         
     </entry>
     <entry xml:lang="en">
-        <title>Summer Gratitude: A&#x2F;C</title>
-        <published>2025-08-21T23:16:44-04:00</published>
-        <updated>2025-08-21T23:16:44-04:00</updated>
+        <title>Article I Was First for a Reason</title>
+        <published>2026-01-15T19:52:01+00:00</published>
+        <updated>2026-01-15T19:52:01+00:00</updated>
         
         <author>
           <name>
@@ -174,27 +362,22 @@ Motorists, bicyclists, and pedestrians must yield the right-of-way to law enforc
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/ac-summer-blog-post/"/>
-        <id>https://michaels-journal.pages.dev/ac-summer-blog-post/</id>
+        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/article-i-was-first-for-a-reason/"/>
+        <id>https://michaels-journal.pages.dev/article-i-was-first-for-a-reason/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/ac-summer-blog-post/">&lt;img src=&quot;&#x2F;uploads&#x2F;florida-ac-comfort-man-reading-recliner-flat-vector.png&quot; alt=&quot; Illustration of a man in a recliner reading a tablet; sunlit palm trees outside a large window, mini-split A&#x2F;C on the wall, and an iced tea on a side table.&quot; width=&quot;600&quot; &#x2F;&gt;
-&lt;p&gt;Lately, especially in the heart of summer, I’ve been thinking about air conditioning and the inventions I’m most grateful for that have matured over my lifetime. I don’t think I could have lived in Florida back in the day without air conditioning. You really notice it when it’s gone. Last year, after Hurricane Milton, we lost power for four days. I couldn’t sleep, not only because the A&#x2F;C was off but also because my CPAP had no power. That got me thinking about the top five inventions I’m grateful for:&lt;&#x2F;p&gt;
-&lt;ol&gt;
-&lt;li&gt;Air conditioning&lt;&#x2F;li&gt;
-&lt;li&gt;Television&lt;&#x2F;li&gt;
-&lt;li&gt;Personal computer&lt;&#x2F;li&gt;
-&lt;li&gt;Internet&lt;&#x2F;li&gt;
-&lt;li&gt;Indoor bathroom&lt;&#x2F;li&gt;
-&lt;&#x2F;ol&gt;
-&lt;p&gt;A quick story about number five. My grandmother had a cabin in rural Florida with an outhouse until she brought in a trailer with an indoor bathroom. I hated having to go outside to that outhouse, especially at night. You never knew what might have made its way in.&lt;&#x2F;p&gt;
-&lt;p&gt;Each of these is pretty self-explanatory, but in Florida I’ve always said the state would be a ghost town without air conditioning. That’s why it’s number one.&lt;&#x2F;p&gt;
-</content>
+        <summary type="html">&lt;p&gt;&lt;em&gt;&lt;strong&gt;This is your Content Warning: this is going to be a Political Rant&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
+&lt;img src=&quot;&#x2F;uploads&#x2F;fe041ca2fed9.png&quot; alt=&quot;Alt text: &amp;quot;Illustrative poster featuring a stylized muscular arm wielding a gavel labeled &amp;#x27;Article I&amp;#x27; and another arm wielding a similar gavel, both extending from the central image of the U.S. Capitol building. The background is divided into two sections, with the left showing a star and a plane flying over a map labeled &amp;#x27;Greenland&amp;#x27;, and the right depicting a dark throne with a crown, a tank, and pirate ships over a map labeled &amp;#x27;Venezuela&amp;#x27;. The overall theme suggests geopolitical themes or influences.&amp;quot;&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
+&lt;&#x2F;figure&gt;
+&lt;figcaption&gt;Flexing the power of Article I, this bold graphic underscores the enduring strength and influence of legislative authority across diverse global arenas.&lt;&#x2F;figcaption&gt;
+&lt;p&gt;Where is Congress while Trump talks like a king? I am going to let everyone in on a little secret. Congress, the Article I institution, is supposed to be the most powerful branch because it is closest to the people. Article I comes first in the Constitution and is the longest. The Founders had just fought a war against a king and were deeply wary of executive power. Alexander Hamilton called the judiciary the &quot;least dangerous branch&quot; in Federalist 78.&lt;&#x2F;p&gt;
+&lt;p&gt;Think about it: the Judicial Branch is unelected and can be constrained by Congress. Both Article II (the President) and Article III (federal judges) can be impeached and removed by Congress. The only way to get rid of a member of Congress is expulsion by their own chamber or being voted out by the people. And &quot;high crimes and misdemeanors&quot;? That&#x27;s whatever Congress decides it is. Gerald Ford said it best: an impeachable offense is whatever the House considers it to be. Congress holds the power to remove, and that is not an accident.&lt;&#x2F;p&gt;</summary>
         
     </entry>
     <entry xml:lang="en">
-        <title>I Didn’t Need a Report to Know Tampa Traffic Is Bad</title>
-        <published>2025-08-05T22:57:47-04:00</published>
-        <updated>2025-08-05T22:57:47-04:00</updated>
+        <title>Finally, Great Heart News</title>
+        <published>2026-01-09T22:35:14+00:00</published>
+        <updated>2026-01-09T22:35:14+00:00</updated>
         
         <author>
           <name>
@@ -204,32 +387,24 @@ Motorists, bicyclists, and pedestrians must yield the right-of-way to law enforc
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/traffic-in-tampa/"/>
-        <id>https://michaels-journal.pages.dev/traffic-in-tampa/</id>
+        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/finally-great-heart-news/"/>
+        <id>https://michaels-journal.pages.dev/finally-great-heart-news/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/traffic-in-tampa/">&lt;img src=&quot;&#x2F;uploads&#x2F;i75-fowler-crash-.jpg&quot; alt=&quot;Traffic camera view of I-75 Southbound near Fowler Avenue in Tampa at night, showing heavy congestion in the right lanes with long lines of red brake lights.&quot; width=&quot;600&quot; &#x2F;&gt;
-&lt;p&gt;I was just watching our local news on &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.fox13news.com&#x2F;news&#x2F;tampa-ranks-13th-worst-city-us-traffic-consumeraffairs-study&quot;&gt;fox13tampabay.com&lt;&#x2F;a&gt;, and they had a story on a &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.consumeraffairs.com&#x2F;automotive&#x2F;cities-with-the-worst-traffic.html#methodology&quot;&gt;ConsumerAffairs&lt;&#x2F;a&gt; report about which cities have the worst traffic. The city I have to travel to for work (Tampa) was ranked 13th worst in the nation and number 3 in the state, behind Miami and Orlando.&lt;&#x2F;p&gt;
-&lt;p&gt;I will say I don&#x27;t know much about Miami. I’ve only been there once for a few hours before leaving. Orlando, though, is definitely worse than Tampa. I&#x27;ve lived in the City of Tampa proper and now live in the suburbs, Brandon, and the traffic has always been bad in both places. But over the last couple of years, since everyone returned to the office, it has been the worst I’ve ever seen.&lt;&#x2F;p&gt;
-&lt;p&gt;The only time I saw traffic improve around here was during the early days of the COVID-19 pandemic.&lt;&#x2F;p&gt;
-&lt;p&gt;I drive from Brandon to the USF area of Tampa for work. It used to take me about 30 to 35 minutes. Nowadays, no matter what time I leave, it takes me 40 to 45 minutes if I have to be at work at 9 AM. On Mondays, when I have to be there by 6:30 AM, it is manageable and still takes me exactly 30 minutes. I can attest to what the researchers found and say it&#x27;s worse than they make it out to be. The commute times they cite are probably too optimistic. If you get caught behind a crash, good luck.  You could be stuck for an hour or more on the interstate.&lt;&#x2F;p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Researchers found the Tampa driver has an average commute time of 28.3 minutes, which is a 1.1% decrease from last year, but is still higher than the national average (26.9 minutes). Meanwhile, Tampa reported 14.01 fatal car crashes per 100,000 people, which is a 12.8% decrease from last year, but also higher than the national average (11.33).&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;What makes it worse is that I-75 is under construction. I think they are trying to add a lane in both directions. I can&#x27;t say for sure, because it&#x27;s really hard to tell what they’re doing right now. Most of the work is on one bridge over a waterway called the Bypass Canal.&lt;&#x2F;p&gt;
-&lt;p&gt;I’m glad I don’t have to drive downtown anymore. I dread having to go that way when I visit Tampa General Hospital for echocardiograms during these first few months on my new heart medication. I would much rather drive to USF Health.&lt;&#x2F;p&gt;
-&lt;p&gt;All I know is that I’m so glad to get home on the days I have to drive in, and I feel blessed that my job now lets me work remotely three days a week. If I had to go back to driving all five days, I would pull my hair out. The one day I go in early is fine on the way there, and I can tolerate it. But even coming home at 3 PM is a challenge. Wednesdays are tough both ways, and my blood pressure peaks on the drive home.&lt;&#x2F;p&gt;
-&lt;p&gt;So when I saw this report, I said to myself, “Yes, I could have told you that.” The real question is, when will Tampa and Hillsborough County stop growing, when will people stop moving here, and when will the state and county finally upgrade the roads — or better yet, &lt;strong&gt;overbuild&lt;&#x2F;strong&gt; them for once?&lt;&#x2F;p&gt;
-&lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;
-&lt;p&gt;Consumer Affairs Report – &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.consumeraffairs.com&#x2F;automotive&#x2F;cities-with-the-worst-traffic.html&quot;&gt;https:&#x2F;&#x2F;www.consumeraffairs.com&#x2F;automotive&#x2F;cities-with-the-worst-traffic.html&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;div&gt;
-&lt;p&gt;#TampaTraffic #CommuterLife #FloridaLiving&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://michaels-journal.pages.dev/finally-great-heart-news/">&lt;p&gt;Great news today at my follow-up with my hypertrophic cardiomyopathy specialist. Camzyos is really starting to work. My most recent echo earlier this week was excellent, and so was the heart cath I had in late December.&lt;&#x2F;p&gt;
+&lt;p&gt;In fact, the heart cath showed that Camzyos is working well enough that I do not need to rush into an alcohol ablation or a septal myectomy. If I ever do need an intervention in the future, my doctor said I would be a good candidate for septal alcohol ablation.&lt;&#x2F;p&gt;
+&lt;p&gt;I also told my doctor that, if at all possible, I would prefer to stay on medication and avoid any surgical treatment.&lt;&#x2F;p&gt;
+&lt;p&gt;More good news: I will not have to see him or have another echo for six months.&lt;&#x2F;p&gt;
+&lt;p&gt;I told the doctor I have been feeling great since starting Camzyos. My metoprolol dose was increased last month, and I have been sleeping much better. He said everything seems to have calmed down, and my gradients with exertion have improved greatly. So, no immediate decisions need to be made.&lt;&#x2F;p&gt;
+&lt;p&gt;He also had a positive conversation with the cardiac interventionist and personally read my echo himself. It looked good, and he is pleased. I told him that I think staying consistent with my medication has helped. Lately, I have not had delays caused by the pharmacy needing certain tests before refilling my prescription, and I have not had any breaks where I was off the medication.&lt;&#x2F;p&gt;
+&lt;p&gt;That means my main job now is simply dealing with the pharmacy and making sure I get my Camzyos on time each month.&lt;&#x2F;p&gt;
+&lt;p&gt;So let&#x27;s pray it keeps trending in the right direction. I actually feel normal for once.&lt;&#x2F;p&gt;
 </content>
         
     </entry>
     <entry xml:lang="en">
-        <title>Living with HOCM: A Mid-Year Update</title>
-        <published>2025-07-20T20:18:52-04:00</published>
-        <updated>2025-07-20T20:18:52-04:00</updated>
+        <title>🍿 Watched The Pickup (2025) from Amazon Prime</title>
+        <published>2026-01-04T17:45:42+00:00</published>
+        <updated>2026-01-04T17:45:42+00:00</updated>
         
         <author>
           <name>
@@ -239,27 +414,24 @@ Motorists, bicyclists, and pedestrians must yield the right-of-way to law enforc
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/living-with-hocm-a-mid-year-update/"/>
-        <id>https://michaels-journal.pages.dev/living-with-hocm-a-mid-year-update/</id>
+        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/popcorn-watched-the-pickup-2025-from-amazon-prime/"/>
+        <id>https://michaels-journal.pages.dev/popcorn-watched-the-pickup-2025-from-amazon-prime/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/living-with-hocm-a-mid-year-update/">&lt;img src=&quot;&#x2F;uploads&#x2F;heart-condition-checkup-ink-illustration.png&quot; alt=&quot;Black-and-white hand-drawn illustration of a doctor’s office, showing a doctor with a stethoscope seated at a desk, attentively listening to a male patient. The office includes a computer, medical supplies, bookshelves, and an anatomical heart chart on the wall, all rendered in detailed pen-and-ink linework with subtle cross-hatching.&quot; width=&quot;600&quot; &#x2F;&gt;
-&lt;p&gt;Back in March, I had my six-month checkup with my cardiologist. I told him I was feeling tired and fatigued all the time, more than usual. I thought it might be the medication. My last echocardiogram in August 2024 had shown some improvement, and my PVCs (premature ventricular contractions) were down. So I figured it was just the burden of the meds.&lt;&#x2F;p&gt;
-&lt;p&gt;At the time, I was taking Metoprolol 100mg ER twice a day and Diltiazem 240mg ER once a day. My heart had been doing okay. The few times I went into AFib, the episodes were short. Sometimes just a minute or two, long enough for me to catch it with my Galaxy Watch 6 Classic or my Kardia device, and then it would stop. These episodes only happened maybe every other month.&lt;&#x2F;p&gt;
-&lt;p&gt;Still, the fatigue concerned both my doctor and his resident. They recommended I see a specialist at Tampa General Hospital, which USF Health is now integrated with. I made the appointment and went in on May 30, 2025.&lt;&#x2F;p&gt;
-&lt;p&gt;At that visit, the specialist said I was a good candidate for a drug I had already been following for a while. It’s called Mavacamten, sold under the brand name Camzyos. It has only been available in the United States for a few years. I started taking it last month. My echocardiogram just before that appointment showed a Valsalva gradient of 100 mmHg. A normal reading is typically below 30 mmHg, and anything above 50 mmHg is considered obstructive.&lt;&#x2F;p&gt;
-&lt;p&gt;On Friday, July 18, I had my first follow-up echocardiogram and visit with the doctor. He asked how I was feeling, and I told him the truth. I don’t really notice much yet, other than my heart rate sometimes being a little fast when I try to sleep. The good news is that my PVCs have almost disappeared.&lt;&#x2F;p&gt;
-&lt;p&gt;He reminded me that it may take 8 to 12 weeks to really feel or see significant improvement. This medication is meant to ease the symptoms of my condition, but it is not a cure.&lt;&#x2F;p&gt;
-&lt;p&gt;I also wore a 2-week Holter monitor during this time. It didn’t show anything too concerning for PVCs, but it did catch a significant SVT load. For now, we’re going to keep an eye on it. I have a cardiac MRI scheduled in September to check for any scarring, and we’ll reevaluate then.&lt;&#x2F;p&gt;
-&lt;p&gt;He told me the medicine is starting to work. My Valsalva gradient dropped from 100 mmHg to about 50 mmHg, an improvement of nearly 50 percent. That means my body is now receiving better oxygenated blood. That was encouraging. He asked if I was having any side effects. Other than the same fatigue and the faster heart rate at night, I haven’t noticed anything unusual.&lt;&#x2F;p&gt;
-&lt;p&gt;He ordered a full prescription. Without a copay card, it would have cost me $250 a month, even with insurance. Thankfully, I have the copay card, so I only pay $10 a month. The actual cost to my employer (we are self-insured) is over $8,000 a month for a 30-day supply. The capsule is just slightly bigger than a grain of rice. Incredible, right? It makes me truly grateful for financial support programs and insurance that help cover treatments for a rare, yet commonly underdiagnosed, genetic heart condition.&lt;&#x2F;p&gt;
-&lt;p&gt;Still, the results speak for themselves. A 50 percent improvement is something to be thankful for. I also know that starting a drug like Camzyos is a big step, but right now, I would much rather take a medication that I can stop if needed, with little to no long-term consequences, than face surgery. One option would be alcohol septal ablation. The other, more invasive route, involves literally stopping the heart during open-heart surgery and cutting away the thickened part of the muscle, then hoping my heart restarts normally. That is a path I would prefer to avoid if possible, as both are permanent and the medication is not.&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://michaels-journal.pages.dev/popcorn-watched-the-pickup-2025-from-amazon-prime/">&lt;p&gt;⚠️ &lt;strong&gt;SPOILER WARNING:&lt;&#x2F;strong&gt; MILD SPOILERS&lt;&#x2F;p&gt;
+&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
+&lt;img src=&quot;&#x2F;uploads&#x2F;tmdb_5fecd70089e6.jpg&quot; alt=&quot;Promotional poster for the movie &amp;quot;The Pickup&amp;quot; featuring three characters: a woman in a black leather jacket, a man in a security uniform labeled &amp;quot;Guardian,&amp;quot; and another man in a casual outfit, all surrounded by falling money.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
+&lt;&#x2F;figure&gt;
+&lt;figcaption&gt;When the heist goes right: Meet the trio behind the biggest score of their lives in &#x27;The Pickup&#x27;.&lt;&#x2F;figcaption&gt;
+&lt;p&gt;&lt;strong&gt;My Rating:&lt;&#x2F;strong&gt; ⭐⭐⭐ (3&#x2F;5 stars)&lt;&#x2F;p&gt;
+&lt;p&gt;&quot;The Pickup&quot; serves as a pleasant diversion with its fairly engaging plot and commendable performances. The film is entirely a work of fiction. A notable concern, however, is the excessive crude language, particularly from Pete Davidson, which seemed unnecessary for its comedic aspirations.&lt;&#x2F;p&gt;
+&lt;div style=&quot;text-align: center; padding: 10px; margin: 20px 0 0; border-top: 1px solid #ddd; font-size: 0.85em; color: #666;&quot;&gt;&lt;div style=&quot;margin-bottom: 8px;&quot;&gt;&lt;img src=&quot;https:&#x2F;&#x2F;www.themoviedb.org&#x2F;assets&#x2F;2&#x2F;v4&#x2F;logos&#x2F;v2&#x2F;blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg&quot; alt=&quot;TMDb&quot; style=&quot;height: 16px; display: inline-block;&quot;&gt;&lt;&#x2F;div&gt;&lt;div&gt;This product uses the TMDb API but is not endorsed or certified by &lt;a href=&quot;https:&#x2F;&#x2F;www.themoviedb.org&quot; target=&quot;_blank&quot; style=&quot;color: #01b4e4; text-decoration: none;&quot;&gt;TMDb&lt;&#x2F;a&gt;.&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
 </content>
         
     </entry>
     <entry xml:lang="en">
-        <title>Keep Trek Running</title>
-        <published>2025-07-16T20:09:07-04:00</published>
-        <updated>2025-07-16T20:09:07-04:00</updated>
+        <title>Spooky Full Moon January 2, 2026</title>
+        <published>2026-01-03T15:00:08+00:00</published>
+        <updated>2026-01-03T15:00:08+00:00</updated>
         
         <author>
           <name>
@@ -269,23 +441,20 @@ Motorists, bicyclists, and pedestrians must yield the right-of-way to law enforc
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/keep-trek-running/"/>
-        <id>https://michaels-journal.pages.dev/keep-trek-running/</id>
+        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/spooky-full-moon-january-2-2026/"/>
+        <id>https://michaels-journal.pages.dev/spooky-full-moon-january-2-2026/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/keep-trek-running/">&lt;img src=&quot;&#x2F;uploads&#x2F;star_trek_constant_exploration.png&quot; alt=&quot;Futuristic starship gliding past a distant planet with nebula clouds in the background, symbolizing Star Trek&#x27;s enduring journey and its vision of an attainable future&quot; width=&quot;600&quot; &#x2F;&gt;
-&lt;p&gt;I was just watching an old episode of &lt;em&gt;Star Trek: Deep Space Nine&lt;&#x2F;em&gt;. I’ve always been into Star Trek, every series except &lt;em&gt;Star Trek: The Next Generation&lt;&#x2F;em&gt;. I’m not sure why, but I never fully got into that one. The others: &lt;em&gt;The Original Series&lt;&#x2F;em&gt;, &lt;em&gt;Deep Space Nine&lt;&#x2F;em&gt;, &lt;em&gt;Voyager&lt;&#x2F;em&gt;, &lt;em&gt;Enterprise&lt;&#x2F;em&gt;, and all the movies (except the &lt;em&gt;Next Generation&lt;&#x2F;em&gt; ones), I loved and eagerly awaited. Whether it was a new film release or the next week’s episode, I was always excited. I never watched &lt;em&gt;Star Trek: The Animated Series&lt;&#x2F;em&gt; either, even though I own it on DVD.&lt;&#x2F;p&gt;
-&lt;p&gt;Then Paramount+&#x2F;CBS introduced new series: &lt;em&gt;Discovery&lt;&#x2F;em&gt;, &lt;em&gt;Picard&lt;&#x2F;em&gt;, &lt;em&gt;Strange New Worlds&lt;&#x2F;em&gt;, &lt;em&gt;Prodigy&lt;&#x2F;em&gt;, and &lt;em&gt;Lower Decks&lt;&#x2F;em&gt;. I enjoyed those too, though I hated waiting a week between episodes. I think Netflix got it right: if a show isn’t airing on linear TV, just drop the whole season at once.&lt;&#x2F;p&gt;
-&lt;p&gt;Why am I even writing this post? Because I think they need to keep a Star Trek series running constantly. And if there’s no show currently airing, there should be a movie in development. The Star Trek universe is expansive enough to support both quality and quantity. There are fans who will keep these stories going. For me, Star Trek represents a future that feels more achievable than the world of Star Wars.&lt;&#x2F;p&gt;
-&lt;p&gt;I believe we’re close to living in a Star Trek–inspired society technologically. Politically, we may resemble Star Wars more with wannabe emperors, kings, queens, and dictators everywhere or bubbling under the surface.  Still, I prefer the world of Star Trek, it’s more attainable in terms of its technology and processes.&lt;&#x2F;p&gt;
-&lt;p&gt;Take Star Wars, for example. It’s supposed to be highly advanced, yet some aspects feel oddly underdeveloped. Star Trek isn’t perfect either, but its depiction of artificial intelligence seems closer to where we are today. I think we should take inspiration from how AI is portrayed in Star Trek. &quot;The Computer&quot; is always just a word away—accessible, helpful, and never intrusive or obstructive like some AI experiences today.&lt;&#x2F;p&gt;
-&lt;p&gt;#StarTrek #TV #SciFi #entertainment&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://michaels-journal.pages.dev/spooky-full-moon-january-2-2026/">&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
+&lt;img src=&quot;&#x2F;uploads&#x2F;a1e616407c3f.jpg&quot; alt=&quot;A moody night sky with a bright moon partially obscured by thick, textured clouds, with silhouettes of tree tops visible at the bottom.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;I just had to snap a photo when I saw this scene.  A full moon peeking out from behind those clouds. It was such a dramatic, moody sight with the silhouettes of trees just barely visible at the bottom. Isn&#x27;t it amazing how nature puts on a show like this? This is a werewolf&#x27;s nightmare 😉.&lt;&#x2F;p&gt;
 </content>
         
     </entry>
     <entry xml:lang="en">
-        <title>Capturing the Moon with My Seestar S30</title>
-        <published>2025-07-06T13:15:00-04:00</published>
-        <updated>2025-07-06T13:15:00-04:00</updated>
+        <title>My 2025 in Review</title>
+        <published>2026-01-01T23:29:30+00:00</published>
+        <updated>2026-01-01T23:29:30+00:00</updated>
         
         <author>
           <name>
@@ -295,26 +464,22 @@ Motorists, bicyclists, and pedestrians must yield the right-of-way to law enforc
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/zwo-seestar-s30-post/"/>
-        <id>https://michaels-journal.pages.dev/zwo-seestar-s30-post/</id>
+        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/my-2025-in-review/"/>
+        <id>https://michaels-journal.pages.dev/my-2025-in-review/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/zwo-seestar-s30-post/">&lt;p&gt;I’ve always wanted a telescope. Something I could use to take photos and videos of the night sky with my phone or camera. I recently came across a YouTube video about the Zwo Seestar S50, but since this is my first telescope, I decided to start with the more beginner-friendly &lt;strong&gt;S30&lt;&#x2F;strong&gt; and bought it for my birthday.&lt;&#x2F;p&gt;
-&lt;p&gt;I’ve owned it for a couple of months, but only recently started using it seriously. Here are some of the first photos I captured with it on &lt;strong&gt;July 4, 2025&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
-&lt;img src=&quot;&#x2F;uploads&#x2F;seestars3007042025.jpg&quot; alt=&quot;Moon from Seestar S30&quot; width=&quot;600&quot; &#x2F;&gt;
-&lt;img src=&quot;&#x2F;uploads&#x2F;seestars3007042025(1).jpg&quot; alt=&quot;Detailed moon surface from Seestar S30&quot; width=&quot;600&quot; &#x2F;&gt;
-&lt;p&gt;These images were taken right from my front yard — I still can’t believe the clarity. Here’s one I took with my phone (Galaxy S24 Ultra, no zoom) while I was setting up the Seestar:&lt;&#x2F;p&gt;
-&lt;img src=&quot;&#x2F;uploads&#x2F;moonfromphnes24ultranonzoom07042005.jpg&quot; alt=&quot;Moon from phone with no zoom before telescope setup&quot; width=&quot;600&quot; &#x2F;&gt;
-&lt;p&gt;Later that evening, we heard fireworks going off in the distance. While the moon was the star of the night, I also caught this fun fireworks shot from our front yard. We were hearing more fireworks from our neighbors all around us than we were actually seeing.&lt;&#x2F;p&gt;
-&lt;img src=&quot;&#x2F;uploads&#x2F;fireworksathome07042025.jpg&quot; alt=&quot;Fireworks from home on July 4th&quot; width=&quot;600&quot; &#x2F;&gt;
-&lt;p&gt;I’m planning to set up a dedicated page in the future as I learn more about using the &lt;strong&gt;Seestar S30&lt;&#x2F;strong&gt;. I hope you enjoyed these photos as much as I enjoyed experimenting with the telescope. It’s truly amazing how it filters out light and zooms in on the moon with such detail.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;code&gt;#astronomy&lt;&#x2F;code&gt; &lt;code&gt;#telescopes&lt;&#x2F;code&gt; &lt;code&gt;#moon&lt;&#x2F;code&gt; &lt;code&gt;#personal&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
-</content>
+        <summary type="html">&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
+&lt;img src=&quot;&#x2F;uploads&#x2F;dalle_temp_abeea3651599.png&quot; alt=&quot;Illustration of a focused middle-aged man with glasses and a beard, sitting at a desk in a cozy, sunlit room filled with books. He is sketching or writing in a notebook, surrounded by art supplies and books. Ethereal, futuristic diagrams and clocks float around him, suggesting a blend of creativity and concepts of time. Rays of sunlight stream through a window, casting warm light and creating a serene, inspirational atmosphere.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
+&lt;&#x2F;figure&gt;
+&lt;figcaption&gt;Amidst a cascade of light and time, a visionary crafts his dreams for 2025, blending art and aspiration in his timeless sanctuary.&lt;&#x2F;figcaption&gt;
+&lt;p&gt;I thought I would give a roundup from my point of view for 2025 and share some thoughts on 2026.&lt;&#x2F;p&gt;
+&lt;p&gt;2025 brought so many new things for me. I left InMotion Hosting and WordPress after 9 years with them. I probably would still be with them if it weren&#x27;t for three factors. First, they had given me a discount for three years, and when it expired, they would not renew it and offered me nothing. Second, they had switched to a new spam email system called MailChannels that was more concerned with outgoing spam instead of incoming spam. I think they started to concentrate on outgoing spam because of complaints coming in. The last issue was WordPress. I started to get the same feeling of craziness from the owner&#x2F;co-owner that I got from Elon Musk.&lt;&#x2F;p&gt;
+&lt;p&gt;I moved to Write.as and thought I would like it. I had been trying it out before I left InMotion Hosting. I purchased a 6-year stint up front after trying it for about 3 months on the free version. But I soon learned it was not all that I had hoped for. I went to Micro.blog, and even though it had a shorter trial, I really liked it and saw how outdated Write.as was. I really liked, and still like, what Manton Reece is doing. So I changed from InMotion Hosting to Micro.blog and MXRoute for email hosting (as Micro.blog doesn&#x27;t offer that and InMotion Hosting had the whole bundle). Both services have been fantastic, and Micro.blog is operated by an individual, not a big corporation and Manton Reece cares about his service. MXGuarddog is a small company from what I can tell and has been flawless. I will be making a detailed post about these services coming up in the new year for a one-year usage review.&lt;&#x2F;p&gt;</summary>
         
     </entry>
     <entry xml:lang="en">
-        <title>Blogging My Way: Typora + Git + Cloudflare + Micro.blog</title>
-        <published>2025-07-05T00:00:00+00:00</published>
-        <updated>2025-07-05T00:00:00+00:00</updated>
+        <title>Happy 2026!</title>
+        <published>2026-01-01T11:03:20+00:00</published>
+        <updated>2026-01-01T11:03:20+00:00</updated>
         
         <author>
           <name>
@@ -324,14 +489,42 @@ Motorists, bicyclists, and pedestrians must yield the right-of-way to law enforc
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/myfirstpost/"/>
-        <id>https://michaels-journal.pages.dev/myfirstpost/</id>
+        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/happy-2026/"/>
+        <id>https://michaels-journal.pages.dev/happy-2026/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/myfirstpost/">&lt;p&gt;This post serves two purposes. First, it marks the inaugural entry 🥳 on my new blogging system.
-I&#x27;m using Typora ✍️ to write and save my posts locally in a folder. From there, I &lt;code&gt;git push&lt;&#x2F;code&gt; them to my GitHub repo 🔁, which then deploys to Cloudflare Pages 🌐. Finally, the RSS feed is imported into Micro.blog 📰.&lt;&#x2F;p&gt;
-&lt;p&gt;It’s not as elegant as MarsEdit 💻—the polished Mac-only tool—but it works for now and lets me keep using Typora, which I really like.
-I tried Obsidian 🧩, but it felt too complicated. The whole &quot;vaults&quot; system 🤯 didn’t click with me. Typora is just simple and clean ✅.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;code&gt;#blogging&lt;&#x2F;code&gt; &lt;code&gt;#typora&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://michaels-journal.pages.dev/happy-2026/">&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
+&lt;img src=&quot;&#x2F;uploads&#x2F;dalle_temp_c5a41d54263a.png&quot; alt=&quot;A serene watercolor illustration of a cozy workspace by a window, featuring a laptop displaying code, an open book, a steaming mug, and a potted plant, all bathed in warm sunlight streaming through the window. The artwork combines realistic elements with abstract watercolor splashes.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;I just wanted to put up a quick blog post and wish everyone a Happy New Year. Let&#x27;s pray and hope that God blesses us all.
+I&#x27;m looking forward to this year on many fronts. I want to continue getting my heart under control with my Obstructive Hypertrophic Cardiomyopathy, do more self-hosting with AI, and learn more coding. This is also my 25th year of proper blogging (more posts coming on that later).&lt;&#x2F;p&gt;
+&lt;p&gt;With all the computing power I&#x27;m putting together, I&#x27;m hoping to learn more about web development, self-hosting, and becoming less dependent on big tech. I&#x27;m one year closer to retirement, which I&#x27;m looking forward to. Instead of focusing on an employer&#x27;s needs, I&#x27;ll be able to focus 100 percent on what interests me and devote more time to my faith. Putting my love of God and technology together.&lt;&#x2F;p&gt;
+&lt;p&gt;So Happy New Year to everyone, and let&#x27;s see what 2026 brings for us all. Should be an interesting year, especially on the home front with the United States of America hitting 250 years.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>A Day of Celestial Discoveries and Misty Mornings</title>
+        <published>2025-12-30T14:31:07+00:00</published>
+        <updated>2025-12-30T14:31:07+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Michael Mitchell
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/a-day-of-celestial-discoveries-and-misty-mornings/"/>
+        <id>https://michaels-journal.pages.dev/a-day-of-celestial-discoveries-and-misty-mornings/</id>
+        
+        <content type="html" xml:base="https://michaels-journal.pages.dev/a-day-of-celestial-discoveries-and-misty-mornings/">&lt;p&gt;Today was a peculiar yet fulfilling day. It started with a dense fog but cleared up nicely. I managed to capture the sun through my telescope for the first time, and I also spotted the moon in broad daylight, though the telescope had some trouble pinpointing it. I hope you find the images as delightful as I did. They were taken with my Zwo Seestar S30, except for the fog picture, which I captured with the Samsung Galaxy S24 Ultra.&lt;&#x2F;p&gt;
+&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;&lt;img src=&quot;&#x2F;uploads&#x2F;55108e7f537c.jpg&quot; alt=&quot;A blurry photograph taken from inside a car at night, showing a view of a road with traffic lights and faint outlines of trees in foggy or misty conditions. The dashboard of the car is visible in the foreground.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;&lt;figcaption style=&quot;font-size: 0.9em; color: #666; text-align: center; margin-top: 0.5em; font-style: italic;&quot;&gt;A blurry photograph taken from inside a car at night, showing a view of a road with traffic lights and faint outlines of trees in foggy or misty conditions. The dashboard of the car is visible in the foreground.&lt;&#x2F;figcaption&gt;&lt;&#x2F;figure&gt;
+&lt;figcaption&gt;Driving through a foggy night, the world blurs into a mysterious haze of lights and shadows.&lt;&#x2F;figcaption&gt;
+&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;&lt;img src=&quot;&#x2F;uploads&#x2F;2bfe96fbdf8b.jpg&quot; alt=&quot;A serene sky with a soft gradient from deep to light blue, featuring a pale moon visible in daylight and several small birds flying in the distance.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;&lt;figcaption style=&quot;font-size: 0.9em; color: #666; text-align: center; margin-top: 0.5em; font-style: italic;&quot;&gt;A serene sky with a soft gradient from deep to light blue, featuring a pale moon visible in daylight and several small birds flying in the distance.&lt;&#x2F;figcaption&gt;&lt;&#x2F;figure&gt;
+&lt;figcaption&gt;Birds dance around the daylit moon, painting a serene scene in the vast blue canvas above.&lt;&#x2F;figcaption&gt;
+&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;&lt;img src=&quot;&#x2F;uploads&#x2F;c8381284a939.jpg&quot; alt=&quot;A close-up image of the sun showing a detailed and textured orange surface surrounded by darkness, highlighting sunspots and solar features.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;&lt;figcaption style=&quot;font-size: 0.9em; color: #666; text-align: center; margin-top: 0.5em; font-style: italic;&quot;&gt;A close-up image of the sun showing a detailed and textured orange surface surrounded by darkness, highlighting sunspots and solar features.&lt;&#x2F;figcaption&gt;&lt;&#x2F;figure&gt;
+&lt;figcaption&gt;Gazing into the cosmic abyss, the sun reveals its fiery solitude surrounded by the dark embrace of space.&lt;&#x2F;figcaption&gt;
 </content>
         
     </entry>

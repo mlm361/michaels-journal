@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="post_container">
+  <article>
+    <h1 class="article_title">🔍 Search</h1>
+
+    <div class="search-wrap">
+      <input
+        type="search"
+        id="search-input"
+        class="search-input"
+        placeholder="Search posts…"
+        autocomplete="off"
+        autofocus
+      />
+      <p id="search-status" class="search-status"></p>
+      <ul id="search-results" class="search-results"></ul>
+    </div>
+  </article>
+</section>
+
+<script src="/elasticlunr.min.js"></script>
+<script>
+(function() {
+  var idx, store;
+
+  fetch('/search_index.en.json')
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      idx   = elasticlunr.Index.load(data);
+      store = data.documentStore.docs;
+      document.getElementById('search-status').textContent = 'Ready — start typing above.';
+    })
+    .catch(function() {
+      document.getElementById('search-status').textContent = 'Search index could not be loaded.';
+    });
+
+  document.getElementById('search-input').addEventListener('input', function() {
+    var q = this.value.trim();
+    var list = document.getElementById('search-results');
+    var status = document.getElementById('search-status');
+    list.innerHTML = '';
+
+    if (!q || q.length < 2) {
+      status.textContent = q ? 'Keep typing…' : 'Ready — start typing above.';
+      return;
+    }
+    if (!idx) { status.textContent = 'Index still loading…'; return; }
+
+    var results = idx.search(q, { expand: true });
+    if (!results.length) {
+      status.textContent = 'No results for "' + q + '".';
+      return;
+    }
+
+    status.textContent = results.length + ' result' + (results.length !== 1 ? 's' : '');
+    results.forEach(function(r) {
+      var doc = store[r.ref];
+      if (!doc) return;
+      var li = document.createElement('li');
+      li.className = 'search-result';
+      li.innerHTML =
+        '<a href="' + doc.url + '">' + (doc.title || 'Untitled') + '</a>' +
+        (doc.description ? '<p>' + doc.description + '</p>' : '');
+      list.appendChild(li);
+    });
+  });
+})();
+</script>
+
+<style>
+.search-wrap { max-width: 600px; }
+.search-input {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 1px solid rgba(128,128,128,0.35);
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+.search-input:focus { border-color: currentColor; }
+.search-status {
+  font-size: 0.82rem;
+  opacity: 0.5;
+  margin: 0.5rem 0 1rem;
+}
+.search-results {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.search-result {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(128,128,128,0.15);
+}
+.search-result a {
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s;
+}
+.search-result a:hover { opacity: 0.6; }
+.search-result p {
+  font-size: 0.85rem;
+  opacity: 0.6;
+  margin: 0.2rem 0 0;
+}
+</style>
+{% endblock content %}

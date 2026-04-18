@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <!-- SEO -->
+        
+        <title> Stats | Michael’s Journal </title>
+        
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" >
+
+        <!-- js -->
+        <script src="https:&#x2F;&#x2F;michaels-journal.pages.dev/theme_selector.js"></script>
+        <script src="https://kit.fontawesome.com/6ab1c683ab.js" crossorigin="anonymous"></script>
+
+        <!-- css: inline script prevents flash of wrong theme before JS runs -->
+        <script>
+          (function() {
+            var t = localStorage.getItem('ergo-theme') || 'default';
+            document.write('<link id="themeCSS" rel="stylesheet" href="/' + t + '.css">');
+          })();
+        </script>
+        <noscript>
+          <link id="themeCSS" rel="stylesheet" href="https:&#x2F;&#x2F;michaels-journal.pages.dev/default.css" />
+        </noscript>
+
+        <!-- fonts -->
+        <link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,500,500i,600,700,800,900|Raleway" as="style">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,500,500i,600,700,800,900|Raleway">
+        
+
+        
+        
+        <link rel="alternate" type="application/atom+xml"
+              title="Michael’s Journal RSS"
+              href="https://michaels-journal.pages.dev/atom.xml">
+        
+        
+
+        
+        <link rel="webmention" href="https:&#x2F;&#x2F;tinylytics.app&#x2F;webmention&#x2F;h2Q2CzgAf-te_SJUBWQ1">
+        
+    </head>
+
+    <body onload="main();">
+        
+<nav class="top-nav">
+  <div class="top-nav-inner">
+    <a class="top-nav-brand" href="https:&#x2F;&#x2F;michaels-journal.pages.dev">Michael’s Journal</a>
+    <button class="top-nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="top-nav-links" id="nav-links">
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev">🏠 Home</a>
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev/about">👤 About</a>
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev/archive">🗄️ Archive</a>
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev/on-this-day">📅 On This Day</a>
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev/stats">📊 Stats</a>
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev/tweets">🐦 Tweets</a>
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev/search">🔍 Search</a>
+      <a href="https://michaels-journal.pages.dev/atom.xml" class="rss-link" title="RSS Feed">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px;margin-right:3px;"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19.01 7.38 20 6.18 20C4.98 20 4 19.01 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/></svg>RSS
+      </a>
+    </div>
+    <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+      <span id="theme-icon">🌙</span>
+      <span id="theme-label">Dark</span>
+    </button>
+  </div>
+</nav>
+
+<script>
+function toggleNav() {
+  var links = document.getElementById('nav-links');
+  var btn = document.getElementById('nav-hamburger');
+  links.classList.toggle('open');
+  btn.classList.toggle('open');
+}
+</script>
+
+
+
+        
+<nav id="overlord" class="overlord" >
+  
+  
+<figure class="mini_logo ">
+    <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev" style="background-image: url(/img/avatar.png)"></a>
+</figure>
+<h5>
+    <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev">Michael’s Journal</a>
+</h5>
+
+  
+
+
+
+</nav>
+
+<section class="post_container">
+  <article>
+    
+      <h1 class="article_title"><a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;stats&#x2F;" id="article_link">Stats</a></h1>
+      
+<ul class="frontmatter frontmatter_page" id="frontmatter">
+    <li>
+        <time class="article_time" datetime="2025-01-01">January 01, 2025</time>
+    </li>
+    <span class="dotDivider"></span>
+    <li> 2178 words </li>
+    <span class="dotDivider" ></span>
+    <li> 11 min </li>
+</ul>
+
+      
+      <div id="stats-page" style="max-width:900px;">
+  <!-- Loader -->
+  <div id="stats-loader" class="sl-wrap">
+    <div class="sl-card">
+      <div class="sl-icon">📊</div>
+      <div class="sl-text">
+        <div class="sl-title">Loading blog stats…</div>
+        <div id="sl-phase" class="sl-phase">Fetching data…</div>
+      </div>
+      <div class="sl-bar"><div id="sl-fill" class="sl-fill"></div></div>
+    </div>
+  </div>
+  <h3 class="stats-section-head">Posts Per Year</h3>
+  <div style="position:relative;height:300px;margin:0 0 .5rem;">
+    <canvas id="stats-chart" aria-label="Posts per year"></canvas>
+  </div>
+  <div id="top-quiet" style="display:none;gap:1rem;margin:.75rem 0 1.5rem;"></div>
+  <div id="year-recap" style="display:none;border:1px solid rgba(128,128,128,.2);border-radius:12px;padding:1.1rem 1.4rem;margin-bottom:1.25rem;"></div>
+  <h3 class="stats-section-head">Summary</h3>
+  <div id="summary" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:.85rem;margin:0 0 1.5rem;"></div>
+  <h3 class="stats-section-head">Year Breakdown</h3>
+  <div id="picker-wrap" style="display:none;margin:0 0 .5rem;">
+    <label style="font-size:.9rem;">Year:
+      <select id="year-picker" style="margin-left:6px;padding:4px 8px;border-radius:6px;"></select>
+    </label>
+    <div id="year-summary" style="font-size:.88rem;color:#666;margin-top:.4rem;"></div>
+  </div>
+  <div id="monthly-grid" style="display:none;gap:.65rem;margin:0 0 1.75rem;"></div>
+  <h3 class="stats-section-head">Top Posts</h3>
+  <div id="top-posts" style="display:none;gap:1rem;margin:0 0 1.75rem;"></div>
+  <h3 class="stats-section-head">Milestones</h3>
+  <div id="milestones" style="display:none;gap:.85rem;margin:0 0 1.5rem;"></div>
+  <h3 class="stats-section-head">Reading Time</h3>
+  <div id="reading" style="display:none;gap:.85rem;margin:0 0 1.5rem;"></div>
+  <h3 class="stats-section-head">Posting Streaks</h3>
+  <div id="streaks" style="display:none;gap:.85rem;margin:0 0 1.5rem;"></div>
+  <p id="stats-foot" style="color:#888;font-size:.82rem;margin-top:1rem;"></p>
+</div>
+<style>
+.stats-section-head { font-size:.8rem; font-weight:700; text-transform:uppercase; letter-spacing:.07em; opacity:.45; margin:1.5rem 0 .6rem; }
+.sl-wrap  { margin:.5rem 0 1.25rem; }
+.sl-card  { border:1px solid rgba(128,128,128,.2); border-radius:12px; background:rgba(128,128,128,.04); padding:14px 16px; display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+.sl-icon  { font-size:22px; }
+.sl-title { font-weight:700; font-size:.95rem; }
+.sl-phase { color:#555; font-size:.85rem; }
+.sl-bar   { height:8px; background:rgba(128,128,128,.15); border-radius:8px; overflow:hidden; width:200px; margin-left:auto; }
+.sl-fill  { height:100%; background:#4a90e2; border-radius:8px; transition:width .25s; width:0%; }
+.stat-tile     { border:1px solid rgba(128,128,128,.2); border-radius:12px; padding:1rem 1.1rem; }
+.stat-tile .tl { font-size:.85rem; color:#666; margin-bottom:.3rem; }
+.stat-tile .tv { font-size:1.6rem; font-weight:700; line-height:1.2; }
+.stat-tile .ts { font-size:.82rem; color:#666; margin-top:.25rem; }
+.stat-tile a   { color:inherit; }
+.mo-card       { border:1px solid rgba(128,128,128,.15); border-radius:10px; padding:.75rem; text-align:center; }
+.mo-label      { font-weight:700; font-size:.8rem; margin-bottom:.15rem; }
+.mo-count      { font-size:1.6rem; font-weight:700; line-height:1.2; }
+.mo-sub        { font-size:.78rem; color:#666; }
+@media(max-width:600px){ .sl-bar{width:120px;margin-left:0;margin-top:8px} }
+</style>
+<script>
+(async function(){
+  const LAUNCH   = new Date('2025-07-05T00:00:00Z'); // Cloudflare Pages launch
+  const WPM      = 200;
+  const EXCLUDE  = new Set(['/about/','/archive/','/on-this-day/','/stats/','/tweets/','/search/','/privacy/']);
+
+  const loaderEl = document.getElementById('stats-loader');
+  const phaseEl  = document.getElementById('sl-phase');
+  const fillEl   = document.getElementById('sl-fill');
+
+  function progress(msg, pct) {
+    phaseEl.textContent = msg;
+    if (pct != null) fillEl.style.width = pct + '%';
+  }
+
+  function tile(label, value, sub, href) {
+    const d = document.createElement('div');
+    d.className = 'stat-tile';
+    const v = href ? `<div class="tv"><a href="${href}">${value}</a></div>`
+                   : `<div class="tv">${value}</div>`;
+    d.innerHTML = `<div class="tl">${label}</div>${v}${sub ? `<div class="ts">${sub}</div>` : ''}`;
+    return d;
+  }
+
+  function wc(text) {
+    return text ? text.trim().split(/\s+/).filter(Boolean).length : 0;
+  }
+
+  function fmtDate(d) {
+    if (!d) return '';
+    const dt = (d instanceof Date) ? d : new Date(String(d).length===10 ? d+'T12:00:00' : d);
+    return dt.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+  }
+
+  function fmtUptime(ms) {
+    const d=Math.floor(ms/86400000),y=Math.floor(d/365),rem=d%365,m=Math.floor(rem/30),dd=rem%30;
+    const p=[];
+    if(y)  p.push(y+'y');
+    if(m)  p.push(m+'mo');
+    if(dd||!p.length) p.push((dd||0)+'d');
+    return p.join(' ');
+  }
+
+  function calcStreaks(dates) {
+    const days = [...new Set(dates.map(d=>d.toISOString().slice(0,10)))].sort();
+    if (!days.length) return {cur:0,cS:'',cE:'',max:0,mS:'',mE:''};
+    let max=1,mS=days[0],mE=days[0],run=1,rS=days[0];
+    for(let i=1;i<days.length;i++){
+      const gap=(new Date(days[i])-new Date(days[i-1]))/86400000;
+      if(gap===1){ run++; if(run>max){max=run;mS=rS;mE=days[i];} }
+      else {run=1;rS=days[i];}
+    }
+    const today=new Date().toISOString().slice(0,10);
+    const last=days[days.length-1];
+    const gapToday=(new Date(today)-new Date(last))/86400000;
+    let cur=0,cS='',cE='';
+    if(gapToday<=1){
+      cur=1;cE=last;cS=last;
+      for(let i=days.length-2;i>=0;i--){
+        if((new Date(days[i+1])-new Date(days[i]))/86400000===1){cur++;cS=days[i];}else break;
+      }
+    }
+    return {cur,cS,cE,max,mS,mE};
+  }
+
+  function fmtStreak(s,e){
+    if(!s) return 'None yet';
+    return s===e ? fmtDate(s) : `${fmtDate(s)} – ${fmtDate(e)}`;
+  }
+
+  function loadChartJs(){
+    return new Promise((res,rej)=>{
+      if(window.Chart) return res();
+      const s=document.createElement('script');
+      s.src='https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js';
+      s.async=true; s.onload=res; s.onerror=()=>rej(new Error('Chart.js failed'));
+      document.head.appendChild(s);
+    });
+  }
+
+  try {
+    progress('Loading Chart.js…', 10);
+    await loadChartJs();
+
+    progress('Fetching post index…', 30);
+    const resp = await fetch('/search_index.en.json');
+    if (!resp.ok) throw new Error('search_index.en.json not available');
+    const idx  = await resp.json();
+
+    progress('Processing posts…', 55);
+    const rawDocs = Object.entries(idx.documentStore?.docs || {});
+
+    const posts = rawDocs.map(([key, doc]) => {
+      const url  = doc.url || doc.path || key;
+      const date = doc.date ? new Date(doc.date) : null;
+      return { url, title: doc.title || '', date, words: wc(doc.body || '') };
+    }).filter(p => {
+      if (!p.date || isNaN(p.date)) return false;
+      const path = p.url.replace(/^https?:\/\/[^/]+/,'');
+      return !EXCLUDE.has(path);
+    });
+
+    if (!posts.length) throw new Error('No blog posts found in index');
+
+    progress('Building charts…', 72);
+
+    const now         = new Date();
+    const curYear     = now.getFullYear();
+    const byYear      = new Map();
+    const byYM        = {};
+
+    posts.forEach(p => {
+      const y  = p.date.getFullYear();
+      const ys = String(y);
+      const mo = String(p.date.getMonth()+1).padStart(2,'0');
+      if (!byYear.has(y)) byYear.set(y,[]);
+      byYear.get(y).push(p);
+      if (!byYM[ys]) byYM[ys] = {};
+      if (!byYM[ys][mo]) byYM[ys][mo] = {posts:0,words:0};
+      byYM[ys][mo].posts++;
+      byYM[ys][mo].words += p.words;
+    });
+
+    const years     = [...byYear.keys()].sort((a,b)=>a-b);
+    const firstYear = years[0], lastYear = years[years.length-1];
+    const labels=[], counts=[];
+    for (let y=firstYear; y<=lastYear; y++){
+      labels.push(String(y));
+      counts.push((byYear.get(y)||[]).length);
+    }
+
+    const total      = posts.length;
+    const totalWords = posts.reduce((s,p)=>s+p.words,0);
+    const avgWords   = total ? Math.round(totalWords/total) : 0;
+    const nonZero    = posts.filter(p=>p.words>0);
+    const longest    = nonZero.length ? nonZero.reduce((a,b)=>b.words>a.words?b:a) : null;
+    const topLong    = [...nonZero].sort((a,b)=>b.words-a.words).slice(0,5);
+    const topShort   = [...nonZero].sort((a,b)=>a.words-b.words).slice(0,5);
+    const firstPost  = posts.reduce((a,b)=>a.date<b.date?a:b);
+    const maxCount   = Math.max(...counts);
+    const minCount   = Math.min(...counts.filter(v=>v>0));
+    const maxYear    = labels[counts.indexOf(maxCount)];
+    const minYear    = labels[counts.indexOf(minCount)];
+    const ytd        = (byYear.get(curYear)||[]).length;
+    const avgPerYear = (lastYear-firstYear)>0 ? (total/(lastYear-firstYear+1)).toFixed(1) : String(total);
+    const totalReadMins = Math.round(totalWords/WPM);
+    const avgReadMins   = avgWords ? Math.max(1,Math.round(avgWords/WPM)) : 0;
+    const readDisplay   = totalReadMins>=60
+      ? `${Math.floor(totalReadMins/60)}h ${totalReadMins%60}m`
+      : `${totalReadMins}m`;
+
+    // ── Chart ──────────────────────────────────────────────────────────────
+    new Chart(document.getElementById('stats-chart').getContext('2d'),{
+      type:'bar',
+      data:{labels,datasets:[{label:'Posts',data:counts,backgroundColor:'rgba(74,144,226,.6)',borderColor:'#4a90e2',borderWidth:1,borderRadius:5}]},
+      options:{
+        responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>` ${ctx.parsed.y} post${ctx.parsed.y===1?'':'s'}`}}},
+        scales:{
+          x:{title:{display:true,text:'Year'},grid:{color:'rgba(128,128,128,.15)'}},
+          y:{beginAtZero:true,title:{display:true,text:'Posts'},grid:{color:'rgba(128,128,128,.15)'},ticks:{precision:0}}
+        }
+      }
+    });
+
+    // ── Top / quiet years ──────────────────────────────────────────────────
+    const pairs    = labels.map((y,i)=>[y,counts[i]]).filter(([,v])=>v>0);
+    const busiest  = [...pairs].sort((a,b)=>b[1]-a[1]).slice(0,5);
+    const quietest = [...pairs].sort((a,b)=>a[1]-b[1]).slice(0,5);
+    const tqEl     = document.getElementById('top-quiet');
+    tqEl.style.cssText = 'display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin:.75rem 0 1.5rem;';
+    tqEl.innerHTML = `
+      <div class="stat-tile">
+        <div class="tl" style="font-weight:700;font-size:.95rem;margin-bottom:.6rem;">Top 5 busiest years</div>
+        <ol style="margin:0;padding-left:1.3rem;line-height:2;font-size:.9rem;">
+          ${busiest.map(([y,v])=>`<li>${y} <span style="color:#666">(${v} posts)</span></li>`).join('')}
+        </ol>
+      </div>
+      <div class="stat-tile">
+        <div class="tl" style="font-weight:700;font-size:.95rem;margin-bottom:.6rem;">Top 5 quietest years</div>
+        <ol style="margin:0;padding-left:1.3rem;line-height:2;font-size:.9rem;">
+          ${quietest.map(([y,v])=>`<li>${y} <span style="color:#666">(${v} posts)</span></li>`).join('')}
+        </ol>
+      </div>`;
+
+    // ── Current year recap ─────────────────────────────────────────────────
+    const cyPosts = byYear.get(curYear) || [];
+    if (cyPosts.length) {
+      const cyW = cyPosts.reduce((s,p)=>s+p.words,0);
+      const cyL = cyPosts.filter(p=>p.words>0).length ? cyPosts.reduce((a,b)=>b.words>a.words?b:a) : null;
+      const cyAvg = cyPosts.length ? Math.round(cyW/cyPosts.length) : 0;
+      const recapEl = document.getElementById('year-recap');
+      recapEl.style.display='block';
+      recapEl.innerHTML=`
+        <div style="font-weight:700;font-size:1rem;margin-bottom:.8rem;">${curYear} — Year in Progress</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:.6rem .85rem;margin-bottom:.65rem;">
+          <div><span style="font-size:1.5rem;font-weight:700;">${cyPosts.length.toLocaleString()}</span> <span style="color:#666;font-size:.85rem;">Posts</span></div>
+          <div><span style="font-size:1.5rem;font-weight:700;">${cyW.toLocaleString()}</span> <span style="color:#666;font-size:.85rem;">Words</span></div>
+          <div><span style="font-size:1.5rem;font-weight:700;">${cyAvg}</span> <span style="color:#666;font-size:.85rem;">Avg words</span></div>
+        </div>
+        ${cyL?`<p style="margin:.25rem 0 0;font-size:.88rem;color:#555;">Longest: <a href="${cyL.url}">${cyL.title||cyL.url}</a> · ${cyL.words.toLocaleString()} words</p>`:''}`;
+    }
+
+    // ── Summary tiles ──────────────────────────────────────────────────────
+    const sumEl = document.getElementById('summary');
+    [
+      tile('Total posts',       total.toLocaleString()),
+      tile('Years active',      `${firstYear}–${lastYear}`, `${lastYear-firstYear+1} years`),
+      tile('Avg posts / year',  avgPerYear),
+      tile('Most in a year',    maxCount.toLocaleString(), maxYear),
+      tile('Least in a year',   String(minCount), minYear),
+      tile('This year (YTD)',   String(ytd)),
+      tile('Total words',       totalWords.toLocaleString(), 'estimated from post text'),
+      tile('Avg words / post',  String(avgWords)),
+      tile('Total reading time',readDisplay, `~${avgReadMins} min avg per post`),
+      tile('Blog uptime',       fmtUptime(now-LAUNCH), 'since Cloudflare Pages launch'),
+    ].forEach(t => sumEl.appendChild(t));
+
+    // ── Year picker + monthly grid ─────────────────────────────────────────
+    const pickerEl  = document.getElementById('year-picker');
+    const pickWrap  = document.getElementById('picker-wrap');
+    const yearSumEl = document.getElementById('year-summary');
+    const moGrid    = document.getElementById('monthly-grid');
+    const MO_NAMES  = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+    function renderYear(y) {
+      const yp  = byYear.get(parseInt(y)) || [];
+      const yw  = yp.reduce((s,p)=>s+p.words,0);
+      const ya  = yp.length ? Math.round(yw/yp.length) : 0;
+      yearSumEl.innerHTML = `<strong>${y}:</strong> ${yp.length} posts · ${yw.toLocaleString()} words · ${ya} avg words/post`;
+      moGrid.style.cssText = 'display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:.65rem;margin:.5rem 0 1.75rem;';
+      moGrid.innerHTML = '';
+      for(let i=0;i<12;i++){
+        const mo = String(i+1).padStart(2,'0');
+        const d  = (byYM[y]||{})[mo] || {posts:0,words:0};
+        const c  = document.createElement('div');
+        c.className = 'mo-card';
+        c.innerHTML = `<div class="mo-label">${MO_NAMES[i]} ${y}</div>
+          <div class="mo-count">${d.posts}</div>
+          <div class="mo-sub">${d.posts===1?'post':'posts'}${d.words?' · '+d.words.toLocaleString()+' w':''}</div>`;
+        moGrid.appendChild(c);
+      }
+    }
+
+    [...years].reverse().forEach(y=>{
+      const o=document.createElement('option');
+      o.value=o.textContent=y;
+      pickerEl.appendChild(o);
+    });
+    pickerEl.onchange = () => renderYear(pickerEl.value);
+    pickWrap.style.display = 'block';
+    renderYear(String(lastYear));
+
+    // ── Top 5 longest / shortest ──────────────────────────────────────────
+    if (topLong.length) {
+      const tpEl = document.getElementById('top-posts');
+      tpEl.style.cssText='display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:0 0 1.75rem;';
+      function mkTopList(heading, list){
+        const div=document.createElement('div');
+        div.className='stat-tile';
+        div.innerHTML=`<div class="tl" style="font-weight:700;font-size:.95rem;margin-bottom:.6rem;">${heading}</div>
+          <ol style="margin:0;padding-left:1.3rem;line-height:1.9;font-size:.88rem;">
+            ${list.map(p=>`<li><a href="${p.url}">${p.title||p.url}</a> <span style="color:#666">· ${p.words.toLocaleString()}w</span></li>`).join('')}
+          </ol>`;
+        return div;
+      }
+      tpEl.appendChild(mkTopList('Top 5 Longest Posts',  topLong));
+      tpEl.appendChild(mkTopList('Top 5 Shortest Posts', topShort));
+    }
+
+    // ── Milestones ────────────────────────────────────────────────────────
+    const msEl = document.getElementById('milestones');
+    msEl.style.cssText='display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.85rem;margin:0 0 1.5rem;';
+    msEl.appendChild(tile('First post', firstPost.title||firstPost.url, fmtDate(firstPost.date), firstPost.url));
+    if (longest) msEl.appendChild(tile('Longest post', longest.title||longest.url, `${longest.words.toLocaleString()} words`, longest.url));
+
+    // ── Reading time ──────────────────────────────────────────────────────
+    const rdEl = document.getElementById('reading');
+    rdEl.style.cssText='display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:.85rem;margin:0 0 1.5rem;';
+    rdEl.appendChild(tile('Total reading time', readDisplay));
+    rdEl.appendChild(tile('Avg per post', `~${avgReadMins} min`));
+    if (longest){
+      const lr=Math.max(1,Math.round(longest.words/WPM));
+      rdEl.appendChild(tile('Longest post read', `~${lr} min`));
+    }
+
+    // ── Streaks ───────────────────────────────────────────────────────────
+    const streaks = calcStreaks(posts.map(p=>p.date));
+    const stEl    = document.getElementById('streaks');
+    stEl.style.cssText='display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.85rem;margin:0 0 1.5rem;';
+    stEl.appendChild(tile('Current streak', `${streaks.cur} day${streaks.cur!==1?'s':''}`, fmtStreak(streaks.cS,streaks.cE)));
+    stEl.appendChild(tile('Longest streak', `${streaks.max} day${streaks.max!==1?'s':''}`, fmtStreak(streaks.mS,streaks.mE)));
+
+    // ── Footer ────────────────────────────────────────────────────────────
+    document.getElementById('stats-foot').textContent =
+      `${total.toLocaleString()} posts · ${firstYear}–${lastYear} · Powered by Zola search index · Word counts and reading time are estimates from indexed plain text`;
+
+    progress('Done!', 100);
+    setTimeout(()=>{ loaderEl.style.display='none'; }, 600);
+
+  } catch(err) {
+    loaderEl.innerHTML = `<p style="color:#c00;padding:.5rem;">Could not load stats: ${err.message}</p>`;
+    console.error('Stats error:', err);
+  }
+})();
+</script>
+
+      
+  </article>
+</section>
+
+
+
+
+         
+
+        <footer class="site-footer">
+
+            <!-- Social Links -->
+            <p class="footer-social-heading">Social Links</p>
+            <div id="social_links">
+              <!-- Social networks -->
+              <a rel="me" href="https://mitchelltribe.social/@michael">
+                <img src="https://cdn.simpleicons.org/mastodon/6364FF.svg" alt="Mastodon" />Mastodon
+              </a>
+              <a rel="me" href="https://mitchelltribe.rodeo/@michael">
+                <img src="/img/sharkey-icon.png" alt="Sharkey" />Sharkey
+              </a>
+              <a rel="me" href="https://pixelfed.social/mlm361">
+                <img src="https://cdn.simpleicons.org/pixelfed/000000.svg" alt="Pixelfed" class="footer-icon-invert" />Pixelfed
+              </a>
+              <a rel="me" href="https://bsky.app/profile/mitchelltribe.com">
+                <img src="https://cdn.simpleicons.org/bluesky/0061F2.svg" alt="Bluesky" />Bluesky
+              </a>
+              <a rel="me" href="https://iris.to/npub19af39pdnr0cpg0ntakhdprfz8fkhkdn4t0f383gj0zw8hy4wf8lqh0nfur">
+                <img src="/img/nostr-icon.gif" alt="Nostr" />Nostr
+              </a>
+              <!-- Websites / blogs -->
+              <a rel="me" href="https://mitchelltribe.com">
+                <img src="https://cdn.simpleicons.org/micro.blog/FF8800.svg" alt="Micro.blog" />Micro.blog
+              </a>
+              <a rel="me" href="https://michaelmusings.com" aria-label="Scribbles">
+                <img src="/img/scribbles-icon.png" alt="Scribbles" class="scribbles-icon" />Scribbles
+              </a>
+              <a rel="me" href="https://michaelmitchell.blog">
+                <img src="https://cdn.simpleicons.org/write.as/222222.svg" alt="Write.as" class="footer-icon-invert" />Write.as
+              </a>
+              <!-- Contact & feed -->
+              <a href="mailto:michael@michaelmitchell.email">
+                <img src="/img/email-icon.png" alt="Email" />Email Me
+              </a>
+              <a href="https://michaels-journal.pages.dev/atom.xml">
+                <img src="https://cdn.simpleicons.org/rss/FFA500.svg" alt="RSS" />RSS
+              </a>
+            </div>
+
+            <hr class="footer-rule" />
+
+            <p class="footer-line" id="blog-uptime"></p>
+            <p class="footer-line">© 2001–<span id="currentYear"></span> Michael Mitchell</p>
+            <p class="footer-line"><a href="/privacy" class="footer-link">Privacy Policy</a></p>
+            <p class="footer-line footer-powered">Built with ❤️ using <a href="https://www.getzola.org" target="_blank" rel="noopener" class="footer-link">Zola</a></p>
+
+        </footer>
+
+        <style>
+          .site-footer {
+            margin-top: 4rem;
+            padding: 2.5rem 1.25rem 2rem;
+            border-top: 1px solid rgba(128,128,128,0.15);
+            text-align: center;
+          }
+          .footer-social-heading {
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            opacity: 0.5;
+            margin: 0 0 0.9rem;
+          }
+          #social_links {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 16px 20px;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 0.5rem;
+          }
+          #social_links a {
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.88rem;
+            color: inherit;
+            transition: opacity 0.15s;
+          }
+          #social_links a:hover { opacity: 0.65; text-decoration: none; }
+          #social_links img {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.15s ease;
+            flex-shrink: 0;
+          }
+          #social_links a:hover img { transform: translateY(-1px); }
+          /* Photogrid captions */
+          .photogrid-caption { color: #666; }
+          /* Scribbles green accent ring */
+          .scribbles-icon {
+            border-radius: 50%;
+            padding: 3px;
+            background: #fff;
+            box-shadow: 0 0 0 2px #006400 inset, 0 2px 6px rgba(0,0,0,.15);
+          }
+          #social_links a[aria-label="Scribbles"]:hover .scribbles-icon {
+            box-shadow: 0 0 0 2px #00a37a inset, 0 4px 12px rgba(0,0,0,.25);
+          }
+          .footer-rule {
+            border: none;
+            border-top: 1px solid rgba(128,128,128,0.15);
+            margin: 1.25rem auto;
+            max-width: 400px;
+          }
+          .footer-line {
+            font-size: 0.82rem;
+            opacity: 0.6;
+            margin: 0.35rem 0;
+          }
+          .footer-link {
+            color: inherit;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+          }
+          .footer-powered { margin-top: 0.75rem; }
+        </style>
+
+        <!-- Tinylytics + Kudos -->
+        <script src="https://tinylytics.app/embed/h2Q2CzgAf-te_SJUBWQ1.js?kudos" defer></script>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            var yearEl = document.getElementById("currentYear");
+            if (yearEl) yearEl.textContent = new Date().getFullYear();
+          });
+
+          var _uptimeStart = new Date("2025-07-05T00:00:00Z");
+          function _updateUptime() {
+            var diff    = new Date() - _uptimeStart;
+            var days    = Math.floor(diff / 86400000);
+            var years   = Math.floor(days / 365);
+            var months  = Math.floor((days % 365) / 30);
+            var remDays = days % 365 % 30;
+            var parts   = [];
+            if (years)   parts.push(years   + (years   === 1 ? " year"  : " years"));
+            if (months)  parts.push(months  + (months  === 1 ? " month" : " months"));
+            if (remDays || !parts.length) parts.push(remDays + (remDays === 1 ? " day" : " days"));
+            var el = document.getElementById("blog-uptime");
+            if (el) el.textContent = "This blog has been running for: " + parts.join(", ") + ".";
+          }
+          _updateUptime();
+          setInterval(_updateUptime, 86400000);
+        </script>
+    </body>
+</html>

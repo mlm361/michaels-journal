@@ -6,3 +6,22 @@ $text: #f8f8f2;
 $title: $text;
 
 @import "ergo";
+
+// ── Dark-mode overrides ───────────────────────────────────────────────────────
+
+// Invert black SVG icons so they read on the dark background
+.footer-icon-invert { filter: invert(1); }
+
+// Scribbles icon: strip white background
+.scribbles-icon {
+  background: transparent;
+  box-shadow: 0 0 0 2px #00a37a inset, 0 2px 6px rgba(0,0,0,.3);
+}
+
+// figcaptions: muted so they don't blend with body text (#f8f8f2)
+figcaption { color: #9ca3af; opacity: 1; }
+figure + p em, figure + em { color: #9ca3af; opacity: 1; }
+
+// Photogrid captions — class on new posts, attribute selector covers existing inline style
+.photogrid-caption { color: #9ca3af; }
+p[style*="color:#666"] { color: #9ca3af !important; }
