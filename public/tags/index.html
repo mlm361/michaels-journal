@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <!-- SEO -->
+        
+        <title> Michael’s Journal </title>
+        
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" >
+
+        <!-- js -->
+        <script src="https:&#x2F;&#x2F;michaels-journal.pages.dev/theme_selector.js"></script>
+        <script src="https://kit.fontawesome.com/6ab1c683ab.js" crossorigin="anonymous"></script>
+
+        <!-- css: inline script prevents flash of wrong theme before JS runs -->
+        <script>
+          (function() {
+            var t = localStorage.getItem('ergo-theme') || 'default';
+            document.write('<link id="themeCSS" rel="stylesheet" href="/' + t + '.css">');
+          })();
+        </script>
+        <noscript>
+          <link id="themeCSS" rel="stylesheet" href="https:&#x2F;&#x2F;michaels-journal.pages.dev/default.css" />
+        </noscript>
+
+        <!-- fonts -->
+        <link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,500,500i,600,700,800,900|Raleway" as="style">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,500,500i,600,700,800,900|Raleway">
+        
+
+        
+        
+        <link rel="alternate" type="application/atom+xml"
+              title="Michael’s Journal RSS"
+              href="https://michaels-journal.pages.dev/atom.xml">
+        
+        
+
+        
+        <link rel="webmention" href="https:&#x2F;&#x2F;tinylytics.app&#x2F;webmention&#x2F;h2Q2CzgAf-te_SJUBWQ1">
+        
+    </head>
+
+    <body onload="main();">
+        
+<nav class="top-nav">
+  <div class="top-nav-inner">
+    <a class="top-nav-brand" href="https:&#x2F;&#x2F;michaels-journal.pages.dev">Michael’s Journal</a>
+    <button class="top-nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="top-nav-links" id="nav-links">
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev">🏠 Home</a>
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev/about">👤 About</a>
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev/archive">🗄️ Archive</a>
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev/on-this-day">📅 On This Day</a>
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev/stats">📊 Stats</a>
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev/tweets">🐦 Tweets</a>
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev/search">🔍 Search</a>
+      <a href="https://michaels-journal.pages.dev/atom.xml" class="rss-link" title="RSS Feed">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px;margin-right:3px;"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19.01 7.38 20 6.18 20C4.98 20 4 19.01 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/></svg>RSS
+      </a>
+    </div>
+    <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+      <span id="theme-icon">🌙</span>
+      <span id="theme-label">Dark</span>
+    </button>
+  </div>
+</nav>
+
+<script>
+function toggleNav() {
+  var links = document.getElementById('nav-links');
+  var btn = document.getElementById('nav-hamburger');
+  links.classList.toggle('open');
+  btn.classList.toggle('open');
+}
+</script>
+
+
+
+        
+<section class="post_container">
+  <article>
+    <h1 class="article_title">Tags</h1>
+    <p style="opacity:0.55;font-size:0.9rem;margin-top:0;">44 tags across all posts</p>
+
+    <div class="tag-cloud">
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;ai&#x2F;" class="tag-cloud-item">
+        #AI<span class="tag-count">3</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;camzyos&#x2F;" class="tag-cloud-item">
+        #Camzyos<span class="tag-count">1</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;commuterlife&#x2F;" class="tag-cloud-item">
+        #CommuterLife<span class="tag-count">1</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;florida&#x2F;" class="tag-cloud-item">
+        #Florida<span class="tag-count">1</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;floridaliving&#x2F;" class="tag-cloud-item">
+        #FloridaLiving<span class="tag-count">1</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;hcm&#x2F;" class="tag-cloud-item">
+        #HCM<span class="tag-count">1</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;hocm&#x2F;" class="tag-cloud-item">
+        #HOCM<span class="tag-count">1</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;hearthealth&#x2F;" class="tag-cloud-item">
+        #HeartHealth<span class="tag-count">1</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;star-trek&#x2F;" class="tag-cloud-item">
+        #Star Trek<span class="tag-count">1</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;tampatraffic&#x2F;" class="tag-cloud-item">
+        #TampaTraffic<span class="tag-count">1</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;technology&#x2F;" class="tag-cloud-item">
+        #Technology<span class="tag-count">3</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;tools&#x2F;" class="tag-cloud-item">
+        #Tools<span class="tag-count">1</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;astronomy&#x2F;" class="tag-cloud-item">
+        #astronomy<span class="tag-count">1</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;blogging&#x2F;" class="tag-cloud-item">
+        #blogging<span class="tag-count">1</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;cardiology&#x2F;" class="tag-cloud-item">
+        #cardiology<span class="tag-count">1</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;current-events&#x2F;" class="tag-cloud-item">
+        #current-events<span class="tag-count">2</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;entertainment&#x2F;" class="tag-cloud-item">
+        #entertainment<span class="tag-count">1</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;hardware&#x2F;" class="tag-cloud-item">
+        #hardware<span class="tag-count">1</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;health&#x2F;" class="tag-cloud-item">
+        #health<span class="tag-count">2</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;history&#x2F;" class="tag-cloud-item">
+        #history<span class="tag-count">1</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;innovation&#x2F;" class="tag-cloud-item">
+        #innovation<span class="tag-count">1</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;inspiration&#x2F;" class="tag-cloud-item">
+        #inspiration<span class="tag-count">1</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;landscape&#x2F;" class="tag-cloud-item">
+        #landscape<span class="tag-count">3</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;moon&#x2F;" class="tag-cloud-item">
+        #moon<span class="tag-count">1</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;movies&#x2F;" class="tag-cloud-item">
+        #movies<span class="tag-count">7</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;nature&#x2F;" class="tag-cloud-item">
+        #nature<span class="tag-count">1</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;news&#x2F;" class="tag-cloud-item">
+        #news<span class="tag-count">2</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;opinion&#x2F;" class="tag-cloud-item">
+        #opinion<span class="tag-count">6</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;personal&#x2F;" class="tag-cloud-item">
+        #personal<span class="tag-count">8</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;photography&#x2F;" class="tag-cloud-item">
+        #photography<span class="tag-count">2</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;photos&#x2F;" class="tag-cloud-item">
+        #photos<span class="tag-count">4</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;police-lights&#x2F;" class="tag-cloud-item">
+        #police-lights<span class="tag-count">1</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;politics&#x2F;" class="tag-cloud-item">
+        #politics<span class="tag-count">3</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;productivity&#x2F;" class="tag-cloud-item">
+        #productivity<span class="tag-count">1</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;programming&#x2F;" class="tag-cloud-item">
+        #programming<span class="tag-count">1</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;retirement&#x2F;" class="tag-cloud-item">
+        #retirement<span class="tag-count">1</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;review&#x2F;" class="tag-cloud-item">
+        #review<span class="tag-count">10</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;startrek&#x2F;" class="tag-cloud-item">
+        #startrek<span class="tag-count">1</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;streaming&#x2F;" class="tag-cloud-item">
+        #streaming<span class="tag-count">4</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;tech-gadgets&#x2F;" class="tag-cloud-item">
+        #tech-gadgets<span class="tag-count">1</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;telescopes&#x2F;" class="tag-cloud-item">
+        #telescopes<span class="tag-count">1</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;traffic-law&#x2F;" class="tag-cloud-item">
+        #traffic-law<span class="tag-count">1</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;travel&#x2F;" class="tag-cloud-item">
+        #travel<span class="tag-count">1</span>
+      </a>
+      
+      <a href="https:&#x2F;&#x2F;michaels-journal.pages.dev&#x2F;tags&#x2F;tv&#x2F;" class="tag-cloud-item">
+        #tv<span class="tag-count">3</span>
+      </a>
+      
+    </div>
+  </article>
+</section>
+
+         
+
+        <footer class="site-footer">
+
+            <!-- Social Links -->
+            <p class="footer-social-heading">Social Links</p>
+            <div id="social_links">
+              <!-- Social networks -->
+              <a rel="me" href="https://mitchelltribe.social/@michael">
+                <img src="https://cdn.simpleicons.org/mastodon/6364FF.svg" alt="Mastodon" />Mastodon
+              </a>
+              <a rel="me" href="https://mitchelltribe.rodeo/@michael">
+                <img src="/img/sharkey-icon.png" alt="Sharkey" />Sharkey
+              </a>
+              <a rel="me" href="https://pixelfed.social/mlm361">
+                <img src="https://cdn.simpleicons.org/pixelfed/000000.svg" alt="Pixelfed" class="footer-icon-invert" />Pixelfed
+              </a>
+              <a rel="me" href="https://bsky.app/profile/mitchelltribe.com">
+                <img src="https://cdn.simpleicons.org/bluesky/0061F2.svg" alt="Bluesky" />Bluesky
+              </a>
+              <a rel="me" href="https://iris.to/npub19af39pdnr0cpg0ntakhdprfz8fkhkdn4t0f383gj0zw8hy4wf8lqh0nfur">
+                <img src="/img/nostr-icon.gif" alt="Nostr" />Nostr
+              </a>
+              <!-- Websites / blogs -->
+              <a rel="me" href="https://mitchelltribe.com">
+                <img src="https://cdn.simpleicons.org/micro.blog/FF8800.svg" alt="Micro.blog" />Micro.blog
+              </a>
+              <a rel="me" href="https://michaelmusings.com" aria-label="Scribbles">
+                <img src="/img/scribbles-icon.png" alt="Scribbles" class="scribbles-icon" />Scribbles
+              </a>
+              <a rel="me" href="https://michaelmitchell.blog">
+                <img src="https://cdn.simpleicons.org/write.as/222222.svg" alt="Write.as" class="footer-icon-invert" />Write.as
+              </a>
+              <!-- Contact & feed -->
+              <a href="mailto:michael@michaelmitchell.email">
+                <img src="/img/email-icon.png" alt="Email" />Email Me
+              </a>
+              <a href="https://michaels-journal.pages.dev/atom.xml">
+                <img src="https://cdn.simpleicons.org/rss/FFA500.svg" alt="RSS" />RSS
+              </a>
+            </div>
+
+            <hr class="footer-rule" />
+
+            <p class="footer-line" id="blog-uptime"></p>
+            <p class="footer-line">Visits: <span class="tinylytics_hits"></span></p>
+            <p class="footer-line">Uptime: <span class="tinylytics_uptime"></span></p>
+            <p class="footer-line">© 2001–<span id="currentYear"></span> Michael Mitchell</p>
+            <p class="footer-line"><a href="/privacy" class="footer-link">Privacy Policy</a></p>
+            <p class="footer-line footer-powered">Built with ❤️ using <a href="https://www.getzola.org" target="_blank" rel="noopener" class="footer-link">Zola</a></p>
+
+        </footer>
+
+        <style>
+          .site-footer {
+            margin-top: 4rem;
+            padding: 2.5rem 1.25rem 2rem;
+            border-top: 1px solid rgba(128,128,128,0.15);
+            text-align: center;
+          }
+          .footer-social-heading {
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            opacity: 0.5;
+            margin: 0 0 0.9rem;
+          }
+          #social_links {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 16px 20px;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 0.5rem;
+          }
+          #social_links a {
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.88rem;
+            color: inherit;
+            transition: opacity 0.15s;
+          }
+          #social_links a:hover { opacity: 0.65; text-decoration: none; }
+          #social_links img {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.15s ease;
+            flex-shrink: 0;
+          }
+          #social_links a:hover img { transform: translateY(-1px); }
+          /* Photogrid captions */
+          .photogrid-caption { color: #666; }
+          /* Scribbles green accent ring */
+          .scribbles-icon {
+            border-radius: 50%;
+            padding: 3px;
+            background: #fff;
+            box-shadow: 0 0 0 2px #006400 inset, 0 2px 6px rgba(0,0,0,.15);
+          }
+          #social_links a[aria-label="Scribbles"]:hover .scribbles-icon {
+            box-shadow: 0 0 0 2px #00a37a inset, 0 4px 12px rgba(0,0,0,.25);
+          }
+          .footer-rule {
+            border: none;
+            border-top: 1px solid rgba(128,128,128,0.15);
+            margin: 1.25rem auto;
+            max-width: 400px;
+          }
+          .footer-line {
+            font-size: 0.82rem;
+            opacity: 0.6;
+            margin: 0.35rem 0;
+          }
+          .footer-link {
+            color: inherit;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+          }
+          .footer-powered { margin-top: 0.75rem; }
+        </style>
+
+        <!-- Tinylytics + Kudos -->
+        <script src="https://tinylytics.app/embed/h2Q2CzgAf-te_SJUBWQ1.js?hits&kudos&uptime" defer></script>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            var yearEl = document.getElementById("currentYear");
+            if (yearEl) yearEl.textContent = new Date().getFullYear();
+          });
+
+          var _uptimeStart = new Date("2025-07-05T00:00:00Z");
+          function _updateUptime() {
+            var diff    = new Date() - _uptimeStart;
+            var days    = Math.floor(diff / 86400000);
+            var years   = Math.floor(days / 365);
+            var months  = Math.floor((days % 365) / 30);
+            var remDays = days % 365 % 30;
+            var parts   = [];
+            if (years)   parts.push(years   + (years   === 1 ? " year"  : " years"));
+            if (months)  parts.push(months  + (months  === 1 ? " month" : " months"));
+            if (remDays || !parts.length) parts.push(remDays + (remDays === 1 ? " day" : " days"));
+            var el = document.getElementById("blog-uptime");
+            if (el) el.textContent = "This blog has been running for: " + parts.join(", ") + ".";
+          }
+          _updateUptime();
+          setInterval(_updateUptime, 86400000);
+        </script>
+    </body>
+</html>

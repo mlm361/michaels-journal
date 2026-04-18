@@ -5,11 +5,11 @@
   <article>
     <h1 class="article_title">#{{ term.name }}</h1>
     <p style="opacity:0.55;font-size:0.9rem;margin-top:0;">
-      {{ paginator.number_pagers }} post{% if paginator.number_pagers != 1 %}s{% endif %} tagged with #{{ term.name }}
+      {{ term.pages | length }} post{% if term.pages | length != 1 %}s{% endif %} tagged with #{{ term.name }}
     </p>
 
     <ul class="taxonomy-post-list">
-      {% for page in paginator.pages %}
+      {% for page in term.pages %}
       <li>
         <span class="tax-date">
           {% if page.date %}{{ page.date | date(format="%b %d, %Y") }}{% endif %}
@@ -18,17 +18,6 @@
       </li>
       {% endfor %}
     </ul>
-
-    {% if paginator.number_pagers > 1 %}
-    <nav class="pagination" style="margin-top:2rem;">
-      {% if paginator.previous %}
-      <a rel="prev" href="{{ paginator.previous }}" class="button medium font_faint">← newer</a>
-      {% endif %}
-      {% if paginator.next %}
-      <a rel="next" href="{{ paginator.next }}" class="button medium font_faint">older →</a>
-      {% endif %}
-    </nav>
-    {% endif %}
   </article>
 </section>
 {% endblock content %}

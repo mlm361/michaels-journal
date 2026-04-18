@@ -8,7 +8,6 @@ author = "Michael"
 lang = "en-us"
 [taxonomies]
 tags = ["TampaTraffic", "CommuterLife", "FloridaLiving"]
-categories = ["Traffic", "Florida"]
 
 +++
 

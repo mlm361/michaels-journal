@@ -8,7 +8,6 @@ author = "Michael"
 lang = "en-us"
 [taxonomies]
 tags = ["health", "cardiology", "HCM", "personal"]
-categories = ["Health Updates"]
 
 +++
 

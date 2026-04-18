@@ -1,5 +1,3 @@
-
-
 +++
 
 title = "When Police Lights Stay On: Law Enforcement Cruise Mode"
@@ -10,8 +8,8 @@ author = "Michael"
 lang = "en-us"
 image = "/uploads/police-cruiser.png"
 image_alt = "Driver confused as a police car follows with steady red/blue lights"
+[taxonomies]
 tags = ["Florida", "traffic-law", "police-lights"]
-categories = ["public-safety", "transportation"]
 
 +++
 

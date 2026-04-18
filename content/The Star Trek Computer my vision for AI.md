@@ -1,7 +1,3 @@
-
-
-
-
 +++
 
 title = "The Star Trek Computer: My Vision for AI"
@@ -10,8 +6,8 @@ date = "2025-10-02T07:35:00-04:00"
 draft = false
 author = "Michael"
 lang = "en-us"
+[taxonomies]
 tags = ["Star Trek", "AI", "Tools", "Technology"]
-categories = ["AI"]
 
 +++
 

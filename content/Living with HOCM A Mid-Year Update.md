@@ -8,7 +8,6 @@ author = "Michael"
 lang = "en-us"
 [taxonomies]
 tags = ["HOCM", "Camzyos", "HeartHealth"]
-categories = ["Health", "Personal"]
 
 +++
 

@@ -6,7 +6,7 @@ date = "2025-07-06T13:15:00-04:00"
 draft = false
 [taxonomies]
 tags = ["astronomy", "photography", "telescopes", "moon"]
-categories = ["tech gear", "personal"] 
+ 
 
 +++
 
