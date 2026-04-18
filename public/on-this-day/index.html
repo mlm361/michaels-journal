@@ -425,19 +425,28 @@ document.addEventListener('DOMContentLoaded', async () => {
           var _uptimeStart = new Date("2025-07-05T00:00:00Z");
           function _updateUptime() {
             var diff    = new Date() - _uptimeStart;
-            var days    = Math.floor(diff / 86400000);
+            var secs    = Math.floor(diff / 1000);
+            var mins    = Math.floor(secs / 60);
+            var hours   = Math.floor(mins / 60);
+            var days    = Math.floor(hours / 24);
             var years   = Math.floor(days / 365);
             var months  = Math.floor((days % 365) / 30);
             var remDays = days % 365 % 30;
+            var remHrs  = hours % 24;
+            var remMins = mins % 60;
+            var remSecs = secs % 60;
             var parts   = [];
-            if (years)   parts.push(years   + (years   === 1 ? " year"  : " years"));
-            if (months)  parts.push(months  + (months  === 1 ? " month" : " months"));
-            if (remDays || !parts.length) parts.push(remDays + (remDays === 1 ? " day" : " days"));
+            if (years)             parts.push(years   + (years   === 1 ? " year"   : " years"));
+            if (months)            parts.push(months  + (months  === 1 ? " month"  : " months"));
+            if (remDays || parts.length) parts.push(remDays + (remDays === 1 ? " day"    : " days"));
+            parts.push(remHrs  + (remHrs  === 1 ? " hour"   : " hours"));
+            parts.push(remMins + (remMins === 1 ? " minute" : " minutes"));
+            parts.push(remSecs + (remSecs === 1 ? " second" : " seconds"));
             var el = document.getElementById("blog-uptime");
             if (el) el.textContent = "This blog has been running for: " + parts.join(", ") + ".";
           }
           _updateUptime();
-          setInterval(_updateUptime, 86400000);
+          setInterval(_updateUptime, 1000);
         </script>
     </body>
 </html>
