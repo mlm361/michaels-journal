@@ -25,3 +25,6 @@ figure + p em, figure + em { color: #9ca3af; opacity: 1; }
 // Photogrid captions — class on new posts, attribute selector covers existing inline style
 .photogrid-caption { color: #9ca3af; }
 p[style*="color:#666"] { color: #9ca3af !important; }
+
+// CC license link in dark mode
+.footer-cc-link { color: $accent; }
