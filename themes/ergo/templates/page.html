@@ -22,9 +22,11 @@
       {% endif %}
       {{ page.content | safe }}
 
+      {% if not page.extra.no_kudos %}
       <div class="kudos-wrap">
         <button class="tinylytics_kudos"></button>
       </div>
+      {% endif %}
       {% endblock post %}
   </article>
 </section>

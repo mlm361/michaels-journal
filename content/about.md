@@ -2,6 +2,8 @@
 title = "About"
 date = 2025-01-01
 template = "page.html"
+[extra]
+no_kudos = true
 +++
 
 <div class="about-wrap">

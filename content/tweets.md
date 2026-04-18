@@ -2,6 +2,8 @@
 title = "Tweets"
 date = 2025-01-01
 template = "page.html"
+[extra]
+no_kudos = true
 +++
 
 <p style="font-size:0.85rem;opacity:0.55;margin-bottom:1rem;">My Twitter archive — preserved from when the bird app was still worth using.</p>

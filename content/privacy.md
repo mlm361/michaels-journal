@@ -2,6 +2,8 @@
 title = "Privacy Policy"
 date = 2025-07-05
 template = "page.html"
+[extra]
+no_kudos = true
 +++
 
 <img src="/img/privacy-policy.png" alt="Privacy Policy" style="max-width:100%;height:auto;border-radius:8px;margin-bottom:1.5rem;">

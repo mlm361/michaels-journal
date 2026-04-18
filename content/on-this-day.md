@@ -2,6 +2,8 @@
 title = "On This Day"
 date = 2025-01-01
 template = "page.html"
+[extra]
+no_kudos = true
 +++
 
 <div id="on-this-day">Loading...</div>
