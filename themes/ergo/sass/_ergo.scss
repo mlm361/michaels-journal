@@ -190,6 +190,10 @@ tr {
     z-index: 90;
 }
 
+@media (max-width: 700px) {
+    .overlord { display: none; }
+}
+
 .header {
     postion: relative;
     display: block;

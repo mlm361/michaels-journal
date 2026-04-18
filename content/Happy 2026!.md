@@ -2,6 +2,7 @@
 title = "Happy 2026!"
 date = "2026-01-01T11:03:20+00:00"
 draft = false
+[taxonomies]
 tags = [ "personal",]
 +++
 

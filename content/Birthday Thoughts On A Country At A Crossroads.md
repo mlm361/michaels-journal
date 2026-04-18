@@ -2,6 +2,7 @@
 title = "Birthday Thoughts on a Country at a Crossroads"
 date = "2026-04-06T11:01:39+00:00"
 draft = false
+[taxonomies]
 tags = [ "personal", "politics", "current-events",]
 +++
 

@@ -2,6 +2,7 @@
 title = "Utilizing Python to Streamline Social Media Interactions"
 date = "2025-12-14T19:50:25+00:00"
 draft = false
+[taxonomies]
 tags = [ "personal", "programming", "ai",]
 +++
 

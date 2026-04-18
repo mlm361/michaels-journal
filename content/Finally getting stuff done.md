@@ -2,6 +2,7 @@
 title = "Finally getting stuff done"
 date = "2025-12-21T20:58:59+00:00"
 draft = false
+[taxonomies]
 tags = [ "hardware", "tech-gadgets", "technology",]
 +++
 

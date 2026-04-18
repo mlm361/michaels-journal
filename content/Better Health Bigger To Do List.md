@@ -2,6 +2,7 @@
 title = "Better Health, Bigger To-Do List"
 date = "2026-02-15T13:48:14+00:00"
 draft = false
+[taxonomies]
 tags = [ "personal", "productivity",]
 +++
 

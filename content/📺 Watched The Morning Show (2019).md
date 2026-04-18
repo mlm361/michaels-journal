@@ -2,6 +2,7 @@
 title = "📺 Watched The Morning Show (2019)"
 date = "2025-12-19T00:05:11+00:00"
 draft = false
+[taxonomies]
 tags = [ "review", "tv", "streaming",]
 +++
 

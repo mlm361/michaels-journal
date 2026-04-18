@@ -2,6 +2,7 @@
 title = "Exploring Stardock's Clairvoyance"
 date = "2026-03-14T18:00:43+00:00"
 draft = false
+[taxonomies]
 tags = [ "technology", "ai", "innovation",]
 +++
 

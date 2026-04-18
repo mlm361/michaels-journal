@@ -2,6 +2,7 @@
 title = "My 2025 in Review"
 date = "2026-01-01T23:29:30+00:00"
 draft = false
+[taxonomies]
 tags = [ "personal",]
 +++
 

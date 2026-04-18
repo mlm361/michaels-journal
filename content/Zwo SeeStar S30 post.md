@@ -4,6 +4,7 @@ title = "Capturing the Moon with My Seestar S30"
 description = "First impressions and photos from my new Zwo Seestar S30 telescope."
 date = "2025-07-06T13:15:00-04:00"
 draft = false
+[taxonomies]
 tags = ["astronomy", "photography", "telescopes", "moon"]
 categories = ["tech gear", "personal"] 
 

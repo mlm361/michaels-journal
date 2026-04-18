@@ -2,6 +2,7 @@
 title = "📺 Watched Fallout (2024) on Prime Video"
 date = "2026-02-08T17:37:09+00:00"
 draft = false
+[taxonomies]
 tags = [ "review", "streaming", "tv",]
 +++
 

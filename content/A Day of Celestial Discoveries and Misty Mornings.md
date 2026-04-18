@@ -2,6 +2,7 @@
 title = "A Day of Celestial Discoveries and Misty Mornings"
 date = "2025-12-30T14:31:07+00:00"
 draft = false
+[taxonomies]
 tags = [ "photos", "landscape", "nature",]
 +++
 

@@ -2,6 +2,7 @@
 title = "Moon Views, Earth Love"
 date = "2026-04-07T23:39:06+00:00"
 draft = false
+[taxonomies]
 tags = [ "opinion", "current-events", "inspiration",]
 +++
 

@@ -2,6 +2,7 @@
 title = "Comparing Notes on Retirement Planning"
 date = "2025-11-29T23:01:50+00:00"
 draft = false
+[taxonomies]
 tags = [ "personal", "travel", "retirement",]
 +++
 

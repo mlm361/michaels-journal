@@ -2,6 +2,7 @@
 title = "🎬 Watched The Fantastic 4: First Steps (2025) on Disney+"
 date = "2025-12-28T13:57:30+00:00"
 draft = false
+[taxonomies]
 tags = [ "review", "movies", "streaming",]
 +++
 

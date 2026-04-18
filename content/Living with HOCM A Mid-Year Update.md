@@ -6,6 +6,7 @@ date = "2025-07-20T20:18:52-04:00"
 draft = false
 author = "Michael"
 lang = "en-us"
+[taxonomies]
 tags = ["HOCM", "Camzyos", "HeartHealth"]
 categories = ["Health", "Personal"]
 

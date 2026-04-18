@@ -2,6 +2,7 @@
 title = "Article I Was First for a Reason"
 date = "2026-01-15T19:52:01+00:00"
 draft = false
+[taxonomies]
 tags = [ "opinion", "politics",]
 +++
 

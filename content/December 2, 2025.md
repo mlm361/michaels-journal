@@ -2,6 +2,7 @@
 title = "December 2, 2025"
 date = "2025-12-02T14:14:05+00:00"
 draft = false
+[taxonomies]
 tags = [ "photography", "photos", "landscape",]
 +++
 

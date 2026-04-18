@@ -2,6 +2,7 @@
 title = "My Blogging Platform Odyssey"
 date = "2026-03-08T21:45:36+00:00"
 draft = false
+[taxonomies]
 tags = [ "review", "opinion",]
 +++
 

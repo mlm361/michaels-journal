@@ -2,6 +2,7 @@
 title = "🍿 Watched The Pickup (2025) from Amazon Prime"
 date = "2026-01-04T17:45:42+00:00"
 draft = false
+[taxonomies]
 tags = [ "review", "movies", "streaming",]
 +++
 

@@ -2,6 +2,7 @@
 title = "History Made April 1, 2026 Artemis II Launched!"
 date = "2026-04-01T21:42:12+00:00"
 draft = false
+[taxonomies]
 tags = [ "news", "photos", "history",]
 +++
 

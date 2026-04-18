@@ -6,6 +6,7 @@ date = "2025-08-05T22:57:47-04:00"
 draft = false 
 author = "Michael"
 lang = "en-us"
+[taxonomies]
 tags = ["TampaTraffic", "CommuterLife", "FloridaLiving"]
 categories = ["Traffic", "Florida"]
 

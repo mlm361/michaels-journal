@@ -2,6 +2,7 @@
 title = "Spooky Full Moon January 2, 2026"
 date = "2026-01-03T15:00:08+00:00"
 draft = false
+[taxonomies]
 tags = [ "photos", "landscape",]
 +++
 

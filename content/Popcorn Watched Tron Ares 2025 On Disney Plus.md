@@ -2,6 +2,7 @@
 title = "🍿 Watched TRON: Ares (2025) on Disney+"
 date = "2026-01-20T18:26:14+00:00"
 draft = false
+[taxonomies]
 tags = [ "review", "movies",]
 +++
 

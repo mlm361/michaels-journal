@@ -2,6 +2,7 @@
 title = "🍿Watched Civil War (2024)"
 date = "2026-04-05T14:27:12+00:00"
 draft = false
+[taxonomies]
 tags = [ "movies", "opinion", "review",]
 +++
 
