@@ -13,18 +13,25 @@
 
   <div class="photo-grid">
     {% for slug in page.extra.photos %}
-    <a
-      href="{{ page.extra.r2_base }}/{{ slug }}.webp"
-      class="glightbox photo-cell"
-      data-gallery="album"
-      data-type="image"
-    >
-      <img
-        src="{{ page.extra.r2_base }}/thumbs/{{ slug }}.webp"
-        alt="Photo {{ loop.index }}"
-        loading="lazy"
+    {% set i = loop.index0 %}
+    {% set alt_text = page.extra.alts[i] | default(value="Photo") %}
+    {% set caption  = page.extra.captions[i] | default(value="") %}
+    <div class="photo-item">
+      <a
+        href="{{ page.extra.r2_base }}/{{ slug }}.webp"
+        class="glightbox photo-cell"
+        data-gallery="album"
+        data-type="image"
+        data-description="{{ caption }}"
       >
-    </a>
+        <img
+          src="{{ page.extra.r2_base }}/thumbs/{{ slug }}.webp"
+          alt="{{ alt_text }}"
+          loading="lazy"
+        >
+      </a>
+      {% if caption %}<p class="photo-caption">{{ caption }}</p>{% endif %}
+    </div>
     {% endfor %}
   </div>
 
@@ -51,8 +58,10 @@
   .photo-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 6px;
+    gap: 1rem;
   }
+
+  .photo-item { display: flex; flex-direction: column; gap: .4rem; }
 
   .photo-cell {
     aspect-ratio: 4/3;
@@ -70,6 +79,13 @@
   .photo-cell:hover img {
     transform: scale(1.05);
     opacity: .9;
+  }
+  .photo-caption {
+    font-size: .78rem;
+    opacity: .6;
+    margin: 0;
+    line-height: 1.3;
+    text-align: center;
   }
 
   .video-heading { margin: 2.5rem 0 1rem; }
