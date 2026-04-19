@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <h1>Gallery</h1>
+
+  <div class="album-grid">
+    {% for page in section.pages %}
+    <a href="{{ page.permalink }}" class="album-card">
+      <div class="album-thumb-wrap">
+        <img
+          src="{{ page.extra.r2_base }}/thumbs/{{ page.extra.cover }}.webp"
+          alt="{{ page.title }}"
+          loading="lazy"
+        >
+      </div>
+      <div class="album-info">
+        <h2>{{ page.title }}</h2>
+        <p class="album-meta">
+          {{ page.date | date(format="%B %Y") }}
+          &middot; {{ page.extra.photos | length }} photos
+          {% if page.extra.videos | length > 0 %}
+            &middot; {{ page.extra.videos | length }} videos
+          {% endif %}
+        </p>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  .container { max-width: 900px; margin: 0 auto; padding: 1.5rem 1rem; }
+  .container h1 { margin-bottom: 1.5rem; }
+
+  .album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .album-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,.12);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .album-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,.18);
+    text-decoration: none;
+  }
+
+  .album-thumb-wrap {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: #111;
+  }
+  .album-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .3s;
+  }
+  .album-card:hover .album-thumb-wrap img { transform: scale(1.04); }
+
+  .album-info { padding: .85rem 1rem .9rem; }
+  .album-info h2 { font-size: 1rem; margin: 0 0 .3rem; line-height: 1.3; }
+  .album-meta { font-size: .82rem; opacity: .6; margin: 0; }
+</style>
+{% endblock content %}
