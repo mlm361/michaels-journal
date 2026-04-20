@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>Michael’s Journal</title>
     <subtitle>A quiet place for thoughts, tech, and reflections.</subtitle>
-    <link rel="self" type="application/atom+xml" href="https://michaels-journal.pages.dev/atom.xml"/>
-    <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev"/>
+    <link rel="self" type="application/atom+xml" href="https://michaelreflects.com/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://michaelreflects.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2026-04-07T23:39:06+00:00</updated>
-    <id>https://michaels-journal.pages.dev/atom.xml</id>
+    <id>https://michaelreflects.com/atom.xml</id>
     <entry xml:lang="en">
         <title>Moon Views, Earth Love</title>
         <published>2026-04-07T23:39:06+00:00</published>
@@ -20,10 +20,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/moon-views-earth-love/"/>
-        <id>https://michaels-journal.pages.dev/moon-views-earth-love/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/moon-views-earth-love/"/>
+        <id>https://michaelreflects.com/moon-views-earth-love/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/moon-views-earth-love/">&lt;p&gt;I have been watching the &lt;strong&gt;Artemis II&lt;&#x2F;strong&gt; mission off and on. I saw these pictures on the NASA website, and here are a few that I really like. They definitely got me thinking.&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://michaelreflects.com/moon-views-earth-love/">&lt;p&gt;I have been watching the &lt;strong&gt;Artemis II&lt;&#x2F;strong&gt; mission off and on. I saw these pictures on the NASA website, and here are a few that I really like. They definitely got me thinking.&lt;&#x2F;p&gt;
 &lt;p&gt;I have always been fascinated by space and the Heavens. I would like to go to space, but not like we do today. If I went, I would want it to be on a &lt;strong&gt;Star Trek&lt;&#x2F;strong&gt; type shuttle or ship. Our spacecraft, much like our planes, are little more than thin tin cans.&lt;&#x2F;p&gt;
 &lt;p&gt;Looking at these pictures really affected me. The Moon is very dead and very unwelcoming, and space is the same way. Then, seeing our planet &quot;Earth&quot; from that vantage point just shows the miracle God made for us and the love Jesus purchased for us. Why would you want to go anywhere else?&lt;&#x2F;p&gt;
 &lt;div style=&quot;margin:24px 0;&quot;&gt;
@@ -53,8 +53,8 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/birthday-thoughts-on-a-country-at-a-crossroads/"/>
-        <id>https://michaels-journal.pages.dev/birthday-thoughts-on-a-country-at-a-crossroads/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/birthday-thoughts-on-a-country-at-a-crossroads/"/>
+        <id>https://michaelreflects.com/birthday-thoughts-on-a-country-at-a-crossroads/</id>
         
         <summary type="html">&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
 &lt;img src=&quot;&#x2F;uploads&#x2F;ai_gen_temp_76fc10a9e310.png&quot; alt=&quot;A pastoral scene at sunset with a dirt road splitting into two paths in the center, symbolizing a crossroads. On the left side, near a cozy cottage with smoke rising from the chimney, there are stacks of gold coins, a large gold dollar sign, an oil barrel labeled &amp;quot;OIL,&amp;quot; a red gas pump, and a blackboard with a green upward-trending graph, representing economic and industrial interests. In the background, a factory with smokestacks emits smoke into the sky. On the right side, near another similar cottage with an American flag flying, there is a wooden ballot box labeled &amp;quot;VOTE,&amp;quot; a megaphone, political campaign signs, an American flag, and an old television showing a suited man speaking, symbolizing democracy, voting, and political engagement. The sky is filled with warm golden clouds, and the entire scene is framed by trees and colorful flowers. At the top, the text reads &amp;quot;Birthday Thoughts on a Country at a Crossroads&amp;quot; in elegant script.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
@@ -77,10 +77,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/popcorn-watched-civil-war-2024/"/>
-        <id>https://michaels-journal.pages.dev/popcorn-watched-civil-war-2024/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/popcorn-watched-civil-war-2024/"/>
+        <id>https://michaelreflects.com/popcorn-watched-civil-war-2024/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/popcorn-watched-civil-war-2024/">&lt;p&gt;⚠️ &lt;strong&gt;SPOILER WARNING:&lt;&#x2F;strong&gt; FULL SPOILERS&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://michaelreflects.com/popcorn-watched-civil-war-2024/">&lt;p&gt;⚠️ &lt;strong&gt;SPOILER WARNING:&lt;&#x2F;strong&gt; FULL SPOILERS&lt;&#x2F;p&gt;
 &lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
 &lt;img src=&quot;&#x2F;uploads&#x2F;tmdb_6a498ca8700d.jpg&quot; alt=&quot;A close-up image of the torch held by the Statue of Liberty against a cloudy, dramatic sky. The torch&amp;#x27;s flame is golden and stylized, glowing with a warm light. Surrounding the base of the flame are sandbags and two soldiers in combat gear, positioned as if in a battle, aiming rifles in opposite directions. The soldiers and sandbags create a wartime scene atop the torch. Bold, bright green text reading &amp;quot;CIVIL WAR&amp;quot; is prominently displayed across the middle of the image, partially covering the torch and soldiers. The overall tone is intense and somber, suggesting conflict and struggle.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
 &lt;&#x2F;figure&gt;
@@ -104,10 +104,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/history-made-april-1-2026-artemis-ii-launched/"/>
-        <id>https://michaels-journal.pages.dev/history-made-april-1-2026-artemis-ii-launched/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/history-made-april-1-2026-artemis-ii-launched/"/>
+        <id>https://michaelreflects.com/history-made-april-1-2026-artemis-ii-launched/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/history-made-april-1-2026-artemis-ii-launched/">&lt;p&gt;History was made today. The kind of history that will be written about and studied for years to come, and I was able to capture it from my backyard. Artemis II successfully launched with a crew of four and is heading to the Moon. Not as great, magnificent, or universe changing as what we will celebrate this Sunday with Easter and the resurrection of Jesus Christ, not even close. But still amazing.&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://michaelreflects.com/history-made-april-1-2026-artemis-ii-launched/">&lt;p&gt;History was made today. The kind of history that will be written about and studied for years to come, and I was able to capture it from my backyard. Artemis II successfully launched with a crew of four and is heading to the Moon. Not as great, magnificent, or universe changing as what we will celebrate this Sunday with Easter and the resurrection of Jesus Christ, not even close. But still amazing.&lt;&#x2F;p&gt;
 &lt;p&gt;Here is what I get to see from my house on the other side of the coast of Florida. Not as amazing as being there, but still awesome.&lt;&#x2F;p&gt;
 &lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
 &lt;img src=&quot;&#x2F;uploads&#x2F;f35316f8e18b.jpg&quot; alt=&quot;A clear blue sky dominates the image with no clouds visible. At the bottom of the image, the tops of two tall trees with green and brown leaves are seen. The trees have thin branches with sparse foliage, indicating a possible seasonal change or type of tree. Rising diagonally from the lower left corner towards the upper center of the image is a white smoke trail, likely from a rocket or missile launch, which is faint but distinct against the blue sky. The smoke trail starts thick near the trees and gradually becomes thinner as it ascends. The overall scene suggests a rocket launch viewed from a distance with natural greenery in the foreground.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
@@ -132,10 +132,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/popcorn-watched-chief-of-station-2024/"/>
-        <id>https://michaels-journal.pages.dev/popcorn-watched-chief-of-station-2024/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/popcorn-watched-chief-of-station-2024/"/>
+        <id>https://michaelreflects.com/popcorn-watched-chief-of-station-2024/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/popcorn-watched-chief-of-station-2024/">&lt;p&gt;⚠️ &lt;strong&gt;SPOILER WARNING:&lt;&#x2F;strong&gt; MAJOR SPOILERS&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://michaelreflects.com/popcorn-watched-chief-of-station-2024/">&lt;p&gt;⚠️ &lt;strong&gt;SPOILER WARNING:&lt;&#x2F;strong&gt; MAJOR SPOILERS&lt;&#x2F;p&gt;
 &lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
 &lt;img src=&quot;&#x2F;uploads&#x2F;tmdb_6da3996e49ad.jpg&quot; alt=&quot;Alt text: A man in a suit holding a handgun with a serious expression, set against a dark, smoky background with flames at the bottom. The text &amp;quot;CHIEF OF STATION&amp;quot; is displayed prominently at the top.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
 &lt;&#x2F;figure&gt;
@@ -158,8 +158,8 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/exploring-stardocks-clairvoyance/"/>
-        <id>https://michaels-journal.pages.dev/exploring-stardocks-clairvoyance/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/exploring-stardocks-clairvoyance/"/>
+        <id>https://michaelreflects.com/exploring-stardocks-clairvoyance/</id>
         
         <summary type="html">&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
 &lt;img src=&quot;&#x2F;uploads&#x2F;ai_gen_temp_1ab263269230.png&quot; alt=&quot;A black-and-white illustration titled &amp;quot;Exploring Stardock&amp;#x27;s Clairvoyance&amp;quot; shows a man smiling and adjusting a slider labeled &amp;quot;SETTINGS&amp;quot; on a large transparent screen filled with graphs, charts, binary code, and a neural network diagram with the word &amp;quot;ANALYZING&amp;quot; underneath. The man is standing at a desk with a coffee cup on a side table nearby. In the background, there is a cozy room setting with an armchair, a side table with a potted plant, and a floor lamp.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
@@ -181,10 +181,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/mike-elgan-nails-it/"/>
-        <id>https://michaels-journal.pages.dev/mike-elgan-nails-it/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/mike-elgan-nails-it/"/>
+        <id>https://michaelreflects.com/mike-elgan-nails-it/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/mike-elgan-nails-it/">&lt;blockquote&gt;
+        <content type="html" xml:base="https://michaelreflects.com/mike-elgan-nails-it/">&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;elgan.com&#x2F;why-you-should-love-blogs-now-more-than-ever&quot;&gt;https:&#x2F;&#x2F;elgan.com&#x2F;why-you-should-love-blogs-now-more-than-ever&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Why you should love blogs now more than ever&lt;&#x2F;p&gt;
 &lt;p&gt;, &lt;strong&gt;Mike Elgan&lt;&#x2F;strong&gt; (@MikeElgan@mastodon.social) on sharkey (&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;mitchelltribe.rodeo&#x2F;notes&#x2F;aiyrjwc80dzh07c3&quot;&gt;source&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
@@ -209,8 +209,8 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/my-blogging-platform-odyssey/"/>
-        <id>https://michaels-journal.pages.dev/my-blogging-platform-odyssey/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/my-blogging-platform-odyssey/"/>
+        <id>https://michaelreflects.com/my-blogging-platform-odyssey/</id>
         
         <summary type="html">&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
 &lt;img src=&quot;&#x2F;uploads&#x2F;dalle_temp_d62d72a5b90f.png&quot; alt=&quot;A digital painting of a person walking down a sunlit path through a vibrant, colorful valley filled with flowers and trees. The trees have large, floating app icons instead of leaves, including icons resembling Twitter and other social media or tech platforms. The scene is bathed in warm, golden light with a dreamy, painterly texture, and butterflies flutter in the sky near the glowing sun.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
@@ -234,8 +234,8 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/okay-this-is-one-of-a-few-political-related-posts-i-post-onl/"/>
-        <id>https://michaels-journal.pages.dev/okay-this-is-one-of-a-few-political-related-posts-i-post-onl/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/okay-this-is-one-of-a-few-political-related-posts-i-post-onl/"/>
+        <id>https://michaelreflects.com/okay-this-is-one-of-a-few-political-related-posts-i-post-onl/</id>
         
         <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;⚠️ &lt;strong&gt;Warning:&lt;&#x2F;strong&gt; Political Rant&lt;&#x2F;p&gt;
@@ -257,8 +257,8 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/better-health-bigger-to-do-list/"/>
-        <id>https://michaels-journal.pages.dev/better-health-bigger-to-do-list/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/better-health-bigger-to-do-list/"/>
+        <id>https://michaelreflects.com/better-health-bigger-to-do-list/</id>
         
         <summary type="html">&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
 &lt;img src=&quot;&#x2F;uploads&#x2F;dalle_temp_3903fa70293c.png&quot; alt=&quot;A cluttered desk filled with numerous stacks of DVDs and CDs, some scattered and some in cases, alongside two black game controllers and a white coffee mug. In the center of the desk is a black computer tower with a digital display showing the number &amp;quot;3.&amp;quot; Behind the desk is a large monitor displaying lines of code or text, and a bookshelf filled with more DVDs or books. A desk lamp on the left side casts warm light over the scene, creating a cozy atmosphere.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
@@ -281,10 +281,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/tv-watched-fallout-2024-on-prime-video/"/>
-        <id>https://michaels-journal.pages.dev/tv-watched-fallout-2024-on-prime-video/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/tv-watched-fallout-2024-on-prime-video/"/>
+        <id>https://michaelreflects.com/tv-watched-fallout-2024-on-prime-video/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/tv-watched-fallout-2024-on-prime-video/">&lt;p&gt;⚠️ &lt;strong&gt;SPOILER WARNING:&lt;&#x2F;strong&gt; MAJOR SPOILERS&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://michaelreflects.com/tv-watched-fallout-2024-on-prime-video/">&lt;p&gt;⚠️ &lt;strong&gt;SPOILER WARNING:&lt;&#x2F;strong&gt; MAJOR SPOILERS&lt;&#x2F;p&gt;
 &lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
 &lt;img src=&quot;&#x2F;uploads&#x2F;tmdb_e79096142df1.jpg&quot; alt=&quot;Alt text: Promotional poster for the video game &amp;quot;Fallout&amp;quot; featuring three characters and a dog walking towards the viewer on a dusty road with a large, weathered &amp;quot;Welcome to New Vegas&amp;quot; sign in the background under a dusky sky. The word &amp;quot;Fallout&amp;quot; is prominently displayed at the top in bold yellow letters with a lightning bolt through the &amp;quot;o&amp;quot;.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
 &lt;&#x2F;figure&gt;
@@ -311,10 +311,10 @@ Looking forward to Season 3.&lt;&#x2F;p&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/popcorn-watched-the-tank-2025-on-prime-video/"/>
-        <id>https://michaels-journal.pages.dev/popcorn-watched-the-tank-2025-on-prime-video/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/popcorn-watched-the-tank-2025-on-prime-video/"/>
+        <id>https://michaelreflects.com/popcorn-watched-the-tank-2025-on-prime-video/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/popcorn-watched-the-tank-2025-on-prime-video/">&lt;p&gt;⚠️ &lt;strong&gt;SPOILER WARNING:&lt;&#x2F;strong&gt; FULL SPOILERS&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://michaelreflects.com/popcorn-watched-the-tank-2025-on-prime-video/">&lt;p&gt;⚠️ &lt;strong&gt;SPOILER WARNING:&lt;&#x2F;strong&gt; FULL SPOILERS&lt;&#x2F;p&gt;
 &lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
 &lt;img src=&quot;&#x2F;uploads&#x2F;tmdb_de9ec758327c.jpg&quot; alt=&quot;Movie poster for &amp;quot;The Tank&amp;quot; featuring five soldiers in military uniforms sitting and standing on a large tank with a prominent gun barrel. The background shows a smoky, fiery battlefield, and the title &amp;quot;THE TANK&amp;quot; is displayed in large, bold letters at the top.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
 &lt;&#x2F;figure&gt;
@@ -337,10 +337,10 @@ Looking forward to Season 3.&lt;&#x2F;p&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/popcorn-watched-tron-ares-2025-on-disney-plus/"/>
-        <id>https://michaels-journal.pages.dev/popcorn-watched-tron-ares-2025-on-disney-plus/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/popcorn-watched-tron-ares-2025-on-disney-plus/"/>
+        <id>https://michaelreflects.com/popcorn-watched-tron-ares-2025-on-disney-plus/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/popcorn-watched-tron-ares-2025-on-disney-plus/">&lt;p&gt;⚠️ &lt;strong&gt;SPOILER WARNING:&lt;&#x2F;strong&gt; FULL SPOILERS&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://michaelreflects.com/popcorn-watched-tron-ares-2025-on-disney-plus/">&lt;p&gt;⚠️ &lt;strong&gt;SPOILER WARNING:&lt;&#x2F;strong&gt; FULL SPOILERS&lt;&#x2F;p&gt;
 &lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
 &lt;img src=&quot;&#x2F;uploads&#x2F;tmdb_90facd798a4e.jpg&quot; alt=&quot;Promotional poster for &amp;quot;TRON Ares&amp;quot; featuring a futuristic motorcycle and rider in a reflective suit, standing on a rain-soaked city street bathed in red light. The towering buildings fade into a foggy, overcast sky.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
 &lt;&#x2F;figure&gt;
@@ -362,8 +362,8 @@ Looking forward to Season 3.&lt;&#x2F;p&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/article-i-was-first-for-a-reason/"/>
-        <id>https://michaels-journal.pages.dev/article-i-was-first-for-a-reason/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/article-i-was-first-for-a-reason/"/>
+        <id>https://michaelreflects.com/article-i-was-first-for-a-reason/</id>
         
         <summary type="html">&lt;p&gt;&lt;em&gt;&lt;strong&gt;This is your Content Warning: this is going to be a Political Rant&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
@@ -387,10 +387,10 @@ Looking forward to Season 3.&lt;&#x2F;p&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/finally-great-heart-news/"/>
-        <id>https://michaels-journal.pages.dev/finally-great-heart-news/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/finally-great-heart-news/"/>
+        <id>https://michaelreflects.com/finally-great-heart-news/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/finally-great-heart-news/">&lt;p&gt;Great news today at my follow-up with my hypertrophic cardiomyopathy specialist. Camzyos is really starting to work. My most recent echo earlier this week was excellent, and so was the heart cath I had in late December.&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://michaelreflects.com/finally-great-heart-news/">&lt;p&gt;Great news today at my follow-up with my hypertrophic cardiomyopathy specialist. Camzyos is really starting to work. My most recent echo earlier this week was excellent, and so was the heart cath I had in late December.&lt;&#x2F;p&gt;
 &lt;p&gt;In fact, the heart cath showed that Camzyos is working well enough that I do not need to rush into an alcohol ablation or a septal myectomy. If I ever do need an intervention in the future, my doctor said I would be a good candidate for septal alcohol ablation.&lt;&#x2F;p&gt;
 &lt;p&gt;I also told my doctor that, if at all possible, I would prefer to stay on medication and avoid any surgical treatment.&lt;&#x2F;p&gt;
 &lt;p&gt;More good news: I will not have to see him or have another echo for six months.&lt;&#x2F;p&gt;
@@ -414,10 +414,10 @@ Looking forward to Season 3.&lt;&#x2F;p&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/popcorn-watched-the-pickup-2025-from-amazon-prime/"/>
-        <id>https://michaels-journal.pages.dev/popcorn-watched-the-pickup-2025-from-amazon-prime/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/popcorn-watched-the-pickup-2025-from-amazon-prime/"/>
+        <id>https://michaelreflects.com/popcorn-watched-the-pickup-2025-from-amazon-prime/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/popcorn-watched-the-pickup-2025-from-amazon-prime/">&lt;p&gt;⚠️ &lt;strong&gt;SPOILER WARNING:&lt;&#x2F;strong&gt; MILD SPOILERS&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://michaelreflects.com/popcorn-watched-the-pickup-2025-from-amazon-prime/">&lt;p&gt;⚠️ &lt;strong&gt;SPOILER WARNING:&lt;&#x2F;strong&gt; MILD SPOILERS&lt;&#x2F;p&gt;
 &lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
 &lt;img src=&quot;&#x2F;uploads&#x2F;tmdb_5fecd70089e6.jpg&quot; alt=&quot;Promotional poster for the movie &amp;quot;The Pickup&amp;quot; featuring three characters: a woman in a black leather jacket, a man in a security uniform labeled &amp;quot;Guardian,&amp;quot; and another man in a casual outfit, all surrounded by falling money.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
 &lt;&#x2F;figure&gt;
@@ -441,10 +441,10 @@ Looking forward to Season 3.&lt;&#x2F;p&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/spooky-full-moon-january-2-2026/"/>
-        <id>https://michaels-journal.pages.dev/spooky-full-moon-january-2-2026/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/spooky-full-moon-january-2-2026/"/>
+        <id>https://michaelreflects.com/spooky-full-moon-january-2-2026/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/spooky-full-moon-january-2-2026/">&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
+        <content type="html" xml:base="https://michaelreflects.com/spooky-full-moon-january-2-2026/">&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
 &lt;img src=&quot;&#x2F;uploads&#x2F;a1e616407c3f.jpg&quot; alt=&quot;A moody night sky with a bright moon partially obscured by thick, textured clouds, with silhouettes of tree tops visible at the bottom.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
 &lt;&#x2F;figure&gt;
 &lt;p&gt;I just had to snap a photo when I saw this scene.  A full moon peeking out from behind those clouds. It was such a dramatic, moody sight with the silhouettes of trees just barely visible at the bottom. Isn&#x27;t it amazing how nature puts on a show like this? This is a werewolf&#x27;s nightmare 😉.&lt;&#x2F;p&gt;
@@ -464,8 +464,8 @@ Looking forward to Season 3.&lt;&#x2F;p&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/my-2025-in-review/"/>
-        <id>https://michaels-journal.pages.dev/my-2025-in-review/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/my-2025-in-review/"/>
+        <id>https://michaelreflects.com/my-2025-in-review/</id>
         
         <summary type="html">&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
 &lt;img src=&quot;&#x2F;uploads&#x2F;dalle_temp_abeea3651599.png&quot; alt=&quot;Illustration of a focused middle-aged man with glasses and a beard, sitting at a desk in a cozy, sunlit room filled with books. He is sketching or writing in a notebook, surrounded by art supplies and books. Ethereal, futuristic diagrams and clocks float around him, suggesting a blend of creativity and concepts of time. Rays of sunlight stream through a window, casting warm light and creating a serene, inspirational atmosphere.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
@@ -489,10 +489,10 @@ Looking forward to Season 3.&lt;&#x2F;p&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/happy-2026/"/>
-        <id>https://michaels-journal.pages.dev/happy-2026/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/happy-2026/"/>
+        <id>https://michaelreflects.com/happy-2026/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/happy-2026/">&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
+        <content type="html" xml:base="https://michaelreflects.com/happy-2026/">&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
 &lt;img src=&quot;&#x2F;uploads&#x2F;dalle_temp_c5a41d54263a.png&quot; alt=&quot;A serene watercolor illustration of a cozy workspace by a window, featuring a laptop displaying code, an open book, a steaming mug, and a potted plant, all bathed in warm sunlight streaming through the window. The artwork combines realistic elements with abstract watercolor splashes.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
 &lt;&#x2F;figure&gt;
 &lt;p&gt;I just wanted to put up a quick blog post and wish everyone a Happy New Year. Let&#x27;s pray and hope that God blesses us all.
@@ -515,10 +515,10 @@ I&#x27;m looking forward to this year on many fronts. I want to continue getting
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/a-day-of-celestial-discoveries-and-misty-mornings/"/>
-        <id>https://michaels-journal.pages.dev/a-day-of-celestial-discoveries-and-misty-mornings/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/a-day-of-celestial-discoveries-and-misty-mornings/"/>
+        <id>https://michaelreflects.com/a-day-of-celestial-discoveries-and-misty-mornings/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/a-day-of-celestial-discoveries-and-misty-mornings/">&lt;p&gt;Today was a peculiar yet fulfilling day. It started with a dense fog but cleared up nicely. I managed to capture the sun through my telescope for the first time, and I also spotted the moon in broad daylight, though the telescope had some trouble pinpointing it. I hope you find the images as delightful as I did. They were taken with my Zwo Seestar S30, except for the fog picture, which I captured with the Samsung Galaxy S24 Ultra.&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://michaelreflects.com/a-day-of-celestial-discoveries-and-misty-mornings/">&lt;p&gt;Today was a peculiar yet fulfilling day. It started with a dense fog but cleared up nicely. I managed to capture the sun through my telescope for the first time, and I also spotted the moon in broad daylight, though the telescope had some trouble pinpointing it. I hope you find the images as delightful as I did. They were taken with my Zwo Seestar S30, except for the fog picture, which I captured with the Samsung Galaxy S24 Ultra.&lt;&#x2F;p&gt;
 &lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;&lt;img src=&quot;&#x2F;uploads&#x2F;55108e7f537c.jpg&quot; alt=&quot;A blurry photograph taken from inside a car at night, showing a view of a road with traffic lights and faint outlines of trees in foggy or misty conditions. The dashboard of the car is visible in the foreground.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;&lt;figcaption style=&quot;font-size: 0.9em; color: #666; text-align: center; margin-top: 0.5em; font-style: italic;&quot;&gt;A blurry photograph taken from inside a car at night, showing a view of a road with traffic lights and faint outlines of trees in foggy or misty conditions. The dashboard of the car is visible in the foreground.&lt;&#x2F;figcaption&gt;&lt;&#x2F;figure&gt;
 &lt;figcaption&gt;Driving through a foggy night, the world blurs into a mysterious haze of lights and shadows.&lt;&#x2F;figcaption&gt;
 &lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;&lt;img src=&quot;&#x2F;uploads&#x2F;2bfe96fbdf8b.jpg&quot; alt=&quot;A serene sky with a soft gradient from deep to light blue, featuring a pale moon visible in daylight and several small birds flying in the distance.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;&lt;figcaption style=&quot;font-size: 0.9em; color: #666; text-align: center; margin-top: 0.5em; font-style: italic;&quot;&gt;A serene sky with a soft gradient from deep to light blue, featuring a pale moon visible in daylight and several small birds flying in the distance.&lt;&#x2F;figcaption&gt;&lt;&#x2F;figure&gt;

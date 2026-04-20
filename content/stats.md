@@ -32,6 +32,9 @@ no_kudos = true
   <h3 class="stats-section-head">Summary</h3>
   <div id="summary" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:.85rem;margin:0 0 1.5rem;"></div>
 
+  <h3 class="stats-section-head">Images</h3>
+  <div id="image-stats" style="display:none;gap:.85rem;margin:0 0 1.5rem;"></div>
+
   <h3 class="stats-section-head">Year Breakdown</h3>
   <div id="picker-wrap" style="display:none;margin:0 0 .5rem;">
     <label style="font-size:.9rem;">Year:
@@ -169,8 +172,8 @@ no_kudos = true
     progress('Processing posts…', 55);
     const posts = rawDocs.map(doc => {
       const url  = doc.url;
-      const date = doc.date ? new Date(doc.date) : null;
-      return { url, title: doc.title || '', date, words: doc.words || 0 };
+      const date = doc.date ? new Date(doc.date + 'T12:00:00') : null;
+      return { url, title: doc.title || '', date, words: doc.words || 0, images: Math.max(0, (doc.images || 1) - 1) };
     }).filter(p => {
       if (!p.date || isNaN(p.date)) return false;
       const path = p.url.replace(/^https?:\/\/[^/]+/,'');
@@ -292,6 +295,22 @@ no_kudos = true
       tile('Total reading time',readDisplay, `~${avgReadMins} min avg per post`),
       tile('Blog uptime',       fmtUptime(now-LAUNCH), 'since Cloudflare Pages launch'),
     ].forEach(t => sumEl.appendChild(t));
+
+    // ── Image stats ───────────────────────────────────────────────────────
+    const imgEl        = document.getElementById('image-stats');
+    const withImages   = posts.filter(p => (p.images || 0) > 0);
+    const withoutImgs  = posts.filter(p => (p.images || 0) === 0);
+    const imageOnly    = posts.filter(p => (p.images || 0) > 0 && p.words < 75);
+    const totalImgs    = posts.reduce((s,p) => s + (p.images || 0), 0);
+    const imgPct       = total ? Math.round(withImages.length * 100 / total) : 0;
+    const noImgPct     = total ? 100 - imgPct : 0;
+    imgEl.style.cssText = 'display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:.85rem;margin:0 0 1.5rem;';
+    [
+      tile('Posts with images',   withImages.length.toLocaleString(),  `${imgPct}% of all posts`),
+      tile('Posts without images',withoutImgs.length.toLocaleString(), `${noImgPct}% of all posts`),
+      tile('Image-only posts',    imageOnly.length.toLocaleString(),   'image present, under 75 words'),
+      tile('Total images indexed',totalImgs.toLocaleString(),          'across all posts'),
+    ].forEach(t => imgEl.appendChild(t));
 
     // ── Year picker + monthly grid ─────────────────────────────────────────
     const pickerEl  = document.getElementById('year-picker');

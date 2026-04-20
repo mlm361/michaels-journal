@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>Michael’s Journal - personal</title>
     <subtitle>A quiet place for thoughts, tech, and reflections.</subtitle>
-    <link rel="self" type="application/atom+xml" href="https://michaels-journal.pages.dev/tags/personal/atom.xml"/>
-    <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev"/>
+    <link rel="self" type="application/atom+xml" href="https://michaelreflects.com/tags/personal/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://michaelreflects.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2026-04-06T11:01:39+00:00</updated>
-    <id>https://michaels-journal.pages.dev/tags/personal/atom.xml</id>
+    <id>https://michaelreflects.com/tags/personal/atom.xml</id>
     <entry xml:lang="en">
         <title>Birthday Thoughts on a Country at a Crossroads</title>
         <published>2026-04-06T11:01:39+00:00</published>
@@ -20,8 +20,8 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/birthday-thoughts-on-a-country-at-a-crossroads/"/>
-        <id>https://michaels-journal.pages.dev/birthday-thoughts-on-a-country-at-a-crossroads/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/birthday-thoughts-on-a-country-at-a-crossroads/"/>
+        <id>https://michaelreflects.com/birthday-thoughts-on-a-country-at-a-crossroads/</id>
         
         <summary type="html">&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
 &lt;img src=&quot;&#x2F;uploads&#x2F;ai_gen_temp_76fc10a9e310.png&quot; alt=&quot;A pastoral scene at sunset with a dirt road splitting into two paths in the center, symbolizing a crossroads. On the left side, near a cozy cottage with smoke rising from the chimney, there are stacks of gold coins, a large gold dollar sign, an oil barrel labeled &amp;quot;OIL,&amp;quot; a red gas pump, and a blackboard with a green upward-trending graph, representing economic and industrial interests. In the background, a factory with smokestacks emits smoke into the sky. On the right side, near another similar cottage with an American flag flying, there is a wooden ballot box labeled &amp;quot;VOTE,&amp;quot; a megaphone, political campaign signs, an American flag, and an old television showing a suited man speaking, symbolizing democracy, voting, and political engagement. The sky is filled with warm golden clouds, and the entire scene is framed by trees and colorful flowers. At the top, the text reads &amp;quot;Birthday Thoughts on a Country at a Crossroads&amp;quot; in elegant script.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
@@ -44,8 +44,8 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/better-health-bigger-to-do-list/"/>
-        <id>https://michaels-journal.pages.dev/better-health-bigger-to-do-list/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/better-health-bigger-to-do-list/"/>
+        <id>https://michaelreflects.com/better-health-bigger-to-do-list/</id>
         
         <summary type="html">&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
 &lt;img src=&quot;&#x2F;uploads&#x2F;dalle_temp_3903fa70293c.png&quot; alt=&quot;A cluttered desk filled with numerous stacks of DVDs and CDs, some scattered and some in cases, alongside two black game controllers and a white coffee mug. In the center of the desk is a black computer tower with a digital display showing the number &amp;quot;3.&amp;quot; Behind the desk is a large monitor displaying lines of code or text, and a bookshelf filled with more DVDs or books. A desk lamp on the left side casts warm light over the scene, creating a cozy atmosphere.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
@@ -68,10 +68,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/finally-great-heart-news/"/>
-        <id>https://michaels-journal.pages.dev/finally-great-heart-news/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/finally-great-heart-news/"/>
+        <id>https://michaelreflects.com/finally-great-heart-news/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/finally-great-heart-news/">&lt;p&gt;Great news today at my follow-up with my hypertrophic cardiomyopathy specialist. Camzyos is really starting to work. My most recent echo earlier this week was excellent, and so was the heart cath I had in late December.&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://michaelreflects.com/finally-great-heart-news/">&lt;p&gt;Great news today at my follow-up with my hypertrophic cardiomyopathy specialist. Camzyos is really starting to work. My most recent echo earlier this week was excellent, and so was the heart cath I had in late December.&lt;&#x2F;p&gt;
 &lt;p&gt;In fact, the heart cath showed that Camzyos is working well enough that I do not need to rush into an alcohol ablation or a septal myectomy. If I ever do need an intervention in the future, my doctor said I would be a good candidate for septal alcohol ablation.&lt;&#x2F;p&gt;
 &lt;p&gt;I also told my doctor that, if at all possible, I would prefer to stay on medication and avoid any surgical treatment.&lt;&#x2F;p&gt;
 &lt;p&gt;More good news: I will not have to see him or have another echo for six months.&lt;&#x2F;p&gt;
@@ -95,8 +95,8 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/my-2025-in-review/"/>
-        <id>https://michaels-journal.pages.dev/my-2025-in-review/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/my-2025-in-review/"/>
+        <id>https://michaelreflects.com/my-2025-in-review/</id>
         
         <summary type="html">&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
 &lt;img src=&quot;&#x2F;uploads&#x2F;dalle_temp_abeea3651599.png&quot; alt=&quot;Illustration of a focused middle-aged man with glasses and a beard, sitting at a desk in a cozy, sunlit room filled with books. He is sketching or writing in a notebook, surrounded by art supplies and books. Ethereal, futuristic diagrams and clocks float around him, suggesting a blend of creativity and concepts of time. Rays of sunlight stream through a window, casting warm light and creating a serene, inspirational atmosphere.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
@@ -120,10 +120,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/happy-2026/"/>
-        <id>https://michaels-journal.pages.dev/happy-2026/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/happy-2026/"/>
+        <id>https://michaelreflects.com/happy-2026/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/happy-2026/">&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
+        <content type="html" xml:base="https://michaelreflects.com/happy-2026/">&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
 &lt;img src=&quot;&#x2F;uploads&#x2F;dalle_temp_c5a41d54263a.png&quot; alt=&quot;A serene watercolor illustration of a cozy workspace by a window, featuring a laptop displaying code, an open book, a steaming mug, and a potted plant, all bathed in warm sunlight streaming through the window. The artwork combines realistic elements with abstract watercolor splashes.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
 &lt;&#x2F;figure&gt;
 &lt;p&gt;I just wanted to put up a quick blog post and wish everyone a Happy New Year. Let&#x27;s pray and hope that God blesses us all.
@@ -146,8 +146,8 @@ I&#x27;m looking forward to this year on many fronts. I want to continue getting
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/utilizing-python-to-streamline-social-media-interactions/"/>
-        <id>https://michaels-journal.pages.dev/utilizing-python-to-streamline-social-media-interactions/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/utilizing-python-to-streamline-social-media-interactions/"/>
+        <id>https://michaelreflects.com/utilizing-python-to-streamline-social-media-interactions/</id>
         
         <summary type="html">&lt;p&gt;In recent months, I&#x27;ve been building a social media aggregation platform using the Windsurf AI IDE. The platform displays a multimedia timeline that pulls content from Mastodon, Bluesky, Sharkey, Nostr, and Micro.blog. The goal was to centralize my social media interactions in one location instead of checking multiple sites.&lt;&#x2F;p&gt;
 &lt;p&gt;Developed in Python using AI coding assistants (Claude and ChatGPT 5.2 High Reasoning) to accelerate development, I designed the platform structure and verified the implementation through testing. The screenshot shows the current interface. Some posts appear duplicated because I follow the same people across multiple platforms.&lt;&#x2F;p&gt;</summary>
@@ -166,8 +166,8 @@ I&#x27;m looking forward to this year on many fronts. I want to continue getting
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/comparing-notes-on-retirement-planning/"/>
-        <id>https://michaels-journal.pages.dev/comparing-notes-on-retirement-planning/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/comparing-notes-on-retirement-planning/"/>
+        <id>https://michaelreflects.com/comparing-notes-on-retirement-planning/</id>
         
         <summary type="html">&lt;img src=&quot;&#x2F;uploads&#x2F;5e55fdca985f.jpg&quot; alt=&quot;A breathtaking coastal landscape featuring turquoise waters, layered sedimentary rock formations, and lush greenery. The scene includes a series of small, unique rock islets close to the shore and a prominent cliff topped with dense vegetation overlooking the sea. A solitary sailboat drifts near the horizon under a partly cloudy sky.&quot; width=&quot;600&quot;&gt;
 &lt;figcaption&gt;“&lt;a href=&quot;https:&#x2F;&#x2F;www.flickr.com&#x2F;photos&#x2F;mrsannino&#x2F;14973660029&quot; title=&quot;Corfu, The Beauty of Cape Drastis&quot;&gt;Corfu, The Beauty of Cape Drastis&lt;&#x2F;a&gt;” by &lt;a href=&quot;https:&#x2F;&#x2F;www.flickr.com&#x2F;photos&#x2F;mrsannino&#x2F;&quot;&gt;Maria Rosaria Sannino&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;creativecommons.org&#x2F;licenses&#x2F;by-nc-sa&#x2F;2.0&#x2F;deed.en&quot; rel=&quot;license noopener noreferrer&quot;&gt;CC BY-NC-SA 2.0&lt;&#x2F;a&gt;. Envisioning retirement as serene as this secluded coastal paradise, where every day feels like a vacation.&lt;&#x2F;figcaption&gt;
@@ -188,10 +188,10 @@ I&#x27;m looking forward to this year on many fronts. I want to continue getting
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/my-hypertrophic-cardiomyopathy-update/"/>
-        <id>https://michaels-journal.pages.dev/my-hypertrophic-cardiomyopathy-update/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/my-hypertrophic-cardiomyopathy-update/"/>
+        <id>https://michaelreflects.com/my-hypertrophic-cardiomyopathy-update/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/my-hypertrophic-cardiomyopathy-update/">&lt;p&gt;I went to the doctors on Friday, hopefully for the last of the required three ECHOs I need while on my medication called &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.camzyos.com&#x2F;&quot;&gt;Camzyos&lt;&#x2F;a&gt; (you may have seen the commercials on TV for it). I have been on 5mg since June for my Hypertrophic Cardiomyopathy, and I am oversimplifying here, but the results have been mixed.&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://michaelreflects.com/my-hypertrophic-cardiomyopathy-update/">&lt;p&gt;I went to the doctors on Friday, hopefully for the last of the required three ECHOs I need while on my medication called &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.camzyos.com&#x2F;&quot;&gt;Camzyos&lt;&#x2F;a&gt; (you may have seen the commercials on TV for it). I have been on 5mg since June for my Hypertrophic Cardiomyopathy, and I am oversimplifying here, but the results have been mixed.&lt;&#x2F;p&gt;
 &lt;p&gt;On the positive side, it has helped significantly. My numbers have definitely improved, not only on my LVOT obstruction (how much oxygenated blood gets out of my heart) but also on my ejection fraction. My shortness of breath during exertion or regular activities is completely gone.&lt;&#x2F;p&gt;
 &lt;p&gt;However, there are concerning side effects. My fatigue is still there, if not a little worse, and my heart rate is consistently fast with tachycardia episodes. Your heart should slow down during sleep, but mine stays at 75-90 beats per minute or higher all night long, and I can feel it constantly. This is not AFib (an irregular fast heartbeat) but rather a fast, rhythmic beat.&lt;&#x2F;p&gt;
 &lt;p&gt;The doctor reviewed my previous Holter monitor readings and saw the tachycardia episodes and abnormal beats firsthand. He decided I need to be put on Verapamil to address these short runs of tachycardia and the SVT (Supraventricular Tachycardia) and VT (Ventricular Tachycardia) abnormal beats I experience.&lt;&#x2F;p&gt;

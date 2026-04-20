@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>Michael’s Journal - HeartHealth</title>
     <subtitle>A quiet place for thoughts, tech, and reflections.</subtitle>
-    <link rel="self" type="application/atom+xml" href="https://michaels-journal.pages.dev/tags/hearthealth/atom.xml"/>
-    <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev"/>
+    <link rel="self" type="application/atom+xml" href="https://michaelreflects.com/tags/hearthealth/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://michaelreflects.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2025-07-20T20:18:52-04:00</updated>
-    <id>https://michaels-journal.pages.dev/tags/hearthealth/atom.xml</id>
+    <id>https://michaelreflects.com/tags/hearthealth/atom.xml</id>
     <entry xml:lang="en">
         <title>Living with HOCM: A Mid-Year Update</title>
         <published>2025-07-20T20:18:52-04:00</published>
@@ -20,10 +20,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/living-with-hocm-a-mid-year-update/"/>
-        <id>https://michaels-journal.pages.dev/living-with-hocm-a-mid-year-update/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/living-with-hocm-a-mid-year-update/"/>
+        <id>https://michaelreflects.com/living-with-hocm-a-mid-year-update/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/living-with-hocm-a-mid-year-update/">&lt;img src=&quot;&#x2F;uploads&#x2F;heart-condition-checkup-ink-illustration.png&quot; alt=&quot;Black-and-white hand-drawn illustration of a doctor’s office, showing a doctor with a stethoscope seated at a desk, attentively listening to a male patient. The office includes a computer, medical supplies, bookshelves, and an anatomical heart chart on the wall, all rendered in detailed pen-and-ink linework with subtle cross-hatching.&quot; width=&quot;600&quot; &#x2F;&gt;
+        <content type="html" xml:base="https://michaelreflects.com/living-with-hocm-a-mid-year-update/">&lt;img src=&quot;&#x2F;uploads&#x2F;heart-condition-checkup-ink-illustration.png&quot; alt=&quot;Black-and-white hand-drawn illustration of a doctor’s office, showing a doctor with a stethoscope seated at a desk, attentively listening to a male patient. The office includes a computer, medical supplies, bookshelves, and an anatomical heart chart on the wall, all rendered in detailed pen-and-ink linework with subtle cross-hatching.&quot; width=&quot;600&quot; &#x2F;&gt;
 &lt;p&gt;Back in March, I had my six-month checkup with my cardiologist. I told him I was feeling tired and fatigued all the time, more than usual. I thought it might be the medication. My last echocardiogram in August 2024 had shown some improvement, and my PVCs (premature ventricular contractions) were down. So I figured it was just the burden of the meds.&lt;&#x2F;p&gt;
 &lt;p&gt;At the time, I was taking Metoprolol 100mg ER twice a day and Diltiazem 240mg ER once a day. My heart had been doing okay. The few times I went into AFib, the episodes were short. Sometimes just a minute or two, long enough for me to catch it with my Galaxy Watch 6 Classic or my Kardia device, and then it would stop. These episodes only happened maybe every other month.&lt;&#x2F;p&gt;
 &lt;p&gt;Still, the fatigue concerned both my doctor and his resident. They recommended I see a specialist at Tampa General Hospital, which USF Health is now integrated with. I made the appointment and went in on May 30, 2025.&lt;&#x2F;p&gt;

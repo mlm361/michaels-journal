@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>Michael’s Journal - politics</title>
     <subtitle>A quiet place for thoughts, tech, and reflections.</subtitle>
-    <link rel="self" type="application/atom+xml" href="https://michaels-journal.pages.dev/tags/politics/atom.xml"/>
-    <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev"/>
+    <link rel="self" type="application/atom+xml" href="https://michaelreflects.com/tags/politics/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://michaelreflects.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2026-04-06T11:01:39+00:00</updated>
-    <id>https://michaels-journal.pages.dev/tags/politics/atom.xml</id>
+    <id>https://michaelreflects.com/tags/politics/atom.xml</id>
     <entry xml:lang="en">
         <title>Birthday Thoughts on a Country at a Crossroads</title>
         <published>2026-04-06T11:01:39+00:00</published>
@@ -20,8 +20,8 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/birthday-thoughts-on-a-country-at-a-crossroads/"/>
-        <id>https://michaels-journal.pages.dev/birthday-thoughts-on-a-country-at-a-crossroads/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/birthday-thoughts-on-a-country-at-a-crossroads/"/>
+        <id>https://michaelreflects.com/birthday-thoughts-on-a-country-at-a-crossroads/</id>
         
         <summary type="html">&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;
 &lt;img src=&quot;&#x2F;uploads&#x2F;ai_gen_temp_76fc10a9e310.png&quot; alt=&quot;A pastoral scene at sunset with a dirt road splitting into two paths in the center, symbolizing a crossroads. On the left side, near a cozy cottage with smoke rising from the chimney, there are stacks of gold coins, a large gold dollar sign, an oil barrel labeled &amp;quot;OIL,&amp;quot; a red gas pump, and a blackboard with a green upward-trending graph, representing economic and industrial interests. In the background, a factory with smokestacks emits smoke into the sky. On the right side, near another similar cottage with an American flag flying, there is a wooden ballot box labeled &amp;quot;VOTE,&amp;quot; a megaphone, political campaign signs, an American flag, and an old television showing a suited man speaking, symbolizing democracy, voting, and political engagement. The sky is filled with warm golden clouds, and the entire scene is framed by trees and colorful flowers. At the top, the text reads &amp;quot;Birthday Thoughts on a Country at a Crossroads&amp;quot; in elegant script.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;
@@ -44,8 +44,8 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/okay-this-is-one-of-a-few-political-related-posts-i-post-onl/"/>
-        <id>https://michaels-journal.pages.dev/okay-this-is-one-of-a-few-political-related-posts-i-post-onl/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/okay-this-is-one-of-a-few-political-related-posts-i-post-onl/"/>
+        <id>https://michaelreflects.com/okay-this-is-one-of-a-few-political-related-posts-i-post-onl/</id>
         
         <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;⚠️ &lt;strong&gt;Warning:&lt;&#x2F;strong&gt; Political Rant&lt;&#x2F;p&gt;
@@ -67,8 +67,8 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/article-i-was-first-for-a-reason/"/>
-        <id>https://michaels-journal.pages.dev/article-i-was-first-for-a-reason/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/article-i-was-first-for-a-reason/"/>
+        <id>https://michaelreflects.com/article-i-was-first-for-a-reason/</id>
         
         <summary type="html">&lt;p&gt;&lt;em&gt;&lt;strong&gt;This is your Content Warning: this is going to be a Political Rant&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;

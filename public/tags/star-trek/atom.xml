@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>Michael’s Journal - Star Trek</title>
     <subtitle>A quiet place for thoughts, tech, and reflections.</subtitle>
-    <link rel="self" type="application/atom+xml" href="https://michaels-journal.pages.dev/tags/star-trek/atom.xml"/>
-    <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev"/>
+    <link rel="self" type="application/atom+xml" href="https://michaelreflects.com/tags/star-trek/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://michaelreflects.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2025-10-02T07:35:00-04:00</updated>
-    <id>https://michaels-journal.pages.dev/tags/star-trek/atom.xml</id>
+    <id>https://michaelreflects.com/tags/star-trek/atom.xml</id>
     <entry xml:lang="en">
         <title>The Star Trek Computer: My Vision for AI</title>
         <published>2025-10-02T07:35:00-04:00</published>
@@ -20,10 +20,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/the-star-trek-computer-my-vision-for-ai/"/>
-        <id>https://michaels-journal.pages.dev/the-star-trek-computer-my-vision-for-ai/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/the-star-trek-computer-my-vision-for-ai/"/>
+        <id>https://michaelreflects.com/the-star-trek-computer-my-vision-for-ai/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/the-star-trek-computer-my-vision-for-ai/">&lt;figure class=&quot;captioned&quot;&gt;
+        <content type="html" xml:base="https://michaelreflects.com/the-star-trek-computer-my-vision-for-ai/">&lt;figure class=&quot;captioned&quot;&gt;
   &lt;img src=&quot;&#x2F;uploads&#x2F;starship-bridge_robot-orchestra_08.png&quot;
        alt=&quot;A human conductor stands on a podium, baton raised, directing a futuristic orchestra of humanoid robots with glowing blue accents. The robots sit in traditional orchestral formation with violins, cellos, and other instruments. Through the large curved observation window behind them, the saucer section and nacelles of a Federation starship resembling the USS Enterprise are visible against the backdrop of deep space. The walls of the starship interior feature subtle LCARS-style glowing panels.&quot;
        width=&quot;600&quot; &#x2F;&gt;

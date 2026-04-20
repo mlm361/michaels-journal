@@ -16,11 +16,11 @@ no_kudos = true
 
 I'm Michael Mitchell, a <strong id="age-display">...</strong>-year-old Christian who loves technology, living in Florida with proud Polish heritage.
 
-I spent 18 years in government work before retiring, and now work as a Pharmacy Technician and Purchasing Agent. I studied for two years of college while pursuing an IT degree, a path I had to pause but never lost interest in. My love for technology has stayed with me, and I still enjoy learning, exploring, and finding practical ways to use it in everyday life.
+I spent 18 years working in state and local government before retiring. I now work as a Pharmacy Technician and Purchasing Agent. I studied IT in college for two years, a path I had to put on hold but never lost interest in. My love for technology has remained strong, and I still enjoy learning, exploring, and finding practical ways to use it in everyday life.
 
-I played trombone through school and college, and I still enjoy classical, gospel, and Christian music.
+I played trombone in junior high, high school, and college, and I still enjoy classical, gospel, and Christian music.
 
- 
+
 
 ### 📖 My Current Interests
 

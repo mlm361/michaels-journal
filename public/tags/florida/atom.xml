@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>Michael’s Journal - Florida</title>
     <subtitle>A quiet place for thoughts, tech, and reflections.</subtitle>
-    <link rel="self" type="application/atom+xml" href="https://michaels-journal.pages.dev/tags/florida/atom.xml"/>
-    <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev"/>
+    <link rel="self" type="application/atom+xml" href="https://michaelreflects.com/tags/florida/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://michaelreflects.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2025-08-28T11:49:57-04:00</updated>
-    <id>https://michaels-journal.pages.dev/tags/florida/atom.xml</id>
+    <id>https://michaelreflects.com/tags/florida/atom.xml</id>
     <entry xml:lang="en">
         <title>When Police Lights Stay On: Law Enforcement Cruise Mode</title>
         <published>2025-08-28T11:49:57-04:00</published>
@@ -20,10 +20,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/law-enforcement-cruise-mode/"/>
-        <id>https://michaels-journal.pages.dev/law-enforcement-cruise-mode/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/law-enforcement-cruise-mode/"/>
+        <id>https://michaelreflects.com/law-enforcement-cruise-mode/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/law-enforcement-cruise-mode/">&lt;img src=&quot;&#x2F;uploads&#x2F;police-cruise-mode-confused-driver-illustration.png&quot; alt=&quot; Illustration of a driver looking confused as a police car follows with steady red and blue lights.&quot; width=&quot;600&quot; &#x2F;&gt;
+        <content type="html" xml:base="https://michaelreflects.com/law-enforcement-cruise-mode/">&lt;img src=&quot;&#x2F;uploads&#x2F;police-cruise-mode-confused-driver-illustration.png&quot; alt=&quot; Illustration of a driver looking confused as a police car follows with steady red and blue lights.&quot; width=&quot;600&quot; &#x2F;&gt;
 &lt;p&gt;I live in Hillsborough County, Florida. Within the last few months, our Hillsborough County Sheriff&#x27;s Office (HCSO) and at least one other local agency have been using what they call &lt;em&gt;cruise mode&lt;&#x2F;em&gt; with their emergency lights. This is creating a lot of confusion for motorists, myself included.&lt;&#x2F;p&gt;
 &lt;p&gt;In this mode, the emergency lights are steady and static while the deputy drives normally. The problem is you cannot tell if they want you to move over, pull over, or simply let them pass with priority. Traditionally, emergency lights flash, sometimes with sirens, which signals drivers how to respond. The issue is especially acute when a patrol car is directly behind you or approaching an intersection in front of you. I’ve been in both of these situations, and each time I was unsure how to react.&lt;&#x2F;p&gt;
 &lt;p&gt;Apparently, HCSO received enough questions, complaints, and inquiries that local news media began covering the issue. At least one couple was involved in a serious accident linked to confusion over this policy.&lt;&#x2F;p&gt;

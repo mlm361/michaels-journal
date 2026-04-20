@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>Michael’s Journal - health</title>
     <subtitle>A quiet place for thoughts, tech, and reflections.</subtitle>
-    <link rel="self" type="application/atom+xml" href="https://michaels-journal.pages.dev/tags/health/atom.xml"/>
-    <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev"/>
+    <link rel="self" type="application/atom+xml" href="https://michaelreflects.com/tags/health/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://michaelreflects.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2026-01-09T22:35:14+00:00</updated>
-    <id>https://michaels-journal.pages.dev/tags/health/atom.xml</id>
+    <id>https://michaelreflects.com/tags/health/atom.xml</id>
     <entry xml:lang="en">
         <title>Finally, Great Heart News</title>
         <published>2026-01-09T22:35:14+00:00</published>
@@ -20,10 +20,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/finally-great-heart-news/"/>
-        <id>https://michaels-journal.pages.dev/finally-great-heart-news/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/finally-great-heart-news/"/>
+        <id>https://michaelreflects.com/finally-great-heart-news/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/finally-great-heart-news/">&lt;p&gt;Great news today at my follow-up with my hypertrophic cardiomyopathy specialist. Camzyos is really starting to work. My most recent echo earlier this week was excellent, and so was the heart cath I had in late December.&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://michaelreflects.com/finally-great-heart-news/">&lt;p&gt;Great news today at my follow-up with my hypertrophic cardiomyopathy specialist. Camzyos is really starting to work. My most recent echo earlier this week was excellent, and so was the heart cath I had in late December.&lt;&#x2F;p&gt;
 &lt;p&gt;In fact, the heart cath showed that Camzyos is working well enough that I do not need to rush into an alcohol ablation or a septal myectomy. If I ever do need an intervention in the future, my doctor said I would be a good candidate for septal alcohol ablation.&lt;&#x2F;p&gt;
 &lt;p&gt;I also told my doctor that, if at all possible, I would prefer to stay on medication and avoid any surgical treatment.&lt;&#x2F;p&gt;
 &lt;p&gt;More good news: I will not have to see him or have another echo for six months.&lt;&#x2F;p&gt;
@@ -47,10 +47,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/my-hypertrophic-cardiomyopathy-update/"/>
-        <id>https://michaels-journal.pages.dev/my-hypertrophic-cardiomyopathy-update/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/my-hypertrophic-cardiomyopathy-update/"/>
+        <id>https://michaelreflects.com/my-hypertrophic-cardiomyopathy-update/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/my-hypertrophic-cardiomyopathy-update/">&lt;p&gt;I went to the doctors on Friday, hopefully for the last of the required three ECHOs I need while on my medication called &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.camzyos.com&#x2F;&quot;&gt;Camzyos&lt;&#x2F;a&gt; (you may have seen the commercials on TV for it). I have been on 5mg since June for my Hypertrophic Cardiomyopathy, and I am oversimplifying here, but the results have been mixed.&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://michaelreflects.com/my-hypertrophic-cardiomyopathy-update/">&lt;p&gt;I went to the doctors on Friday, hopefully for the last of the required three ECHOs I need while on my medication called &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.camzyos.com&#x2F;&quot;&gt;Camzyos&lt;&#x2F;a&gt; (you may have seen the commercials on TV for it). I have been on 5mg since June for my Hypertrophic Cardiomyopathy, and I am oversimplifying here, but the results have been mixed.&lt;&#x2F;p&gt;
 &lt;p&gt;On the positive side, it has helped significantly. My numbers have definitely improved, not only on my LVOT obstruction (how much oxygenated blood gets out of my heart) but also on my ejection fraction. My shortness of breath during exertion or regular activities is completely gone.&lt;&#x2F;p&gt;
 &lt;p&gt;However, there are concerning side effects. My fatigue is still there, if not a little worse, and my heart rate is consistently fast with tachycardia episodes. Your heart should slow down during sleep, but mine stays at 75-90 beats per minute or higher all night long, and I can feel it constantly. This is not AFib (an irregular fast heartbeat) but rather a fast, rhythmic beat.&lt;&#x2F;p&gt;
 &lt;p&gt;The doctor reviewed my previous Holter monitor readings and saw the tachycardia episodes and abnormal beats firsthand. He decided I need to be put on Verapamil to address these short runs of tachycardia and the SVT (Supraventricular Tachycardia) and VT (Ventricular Tachycardia) abnormal beats I experience.&lt;&#x2F;p&gt;

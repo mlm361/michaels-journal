@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>Michael’s Journal - TampaTraffic</title>
     <subtitle>A quiet place for thoughts, tech, and reflections.</subtitle>
-    <link rel="self" type="application/atom+xml" href="https://michaels-journal.pages.dev/tags/tampatraffic/atom.xml"/>
-    <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev"/>
+    <link rel="self" type="application/atom+xml" href="https://michaelreflects.com/tags/tampatraffic/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://michaelreflects.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2025-08-05T22:57:47-04:00</updated>
-    <id>https://michaels-journal.pages.dev/tags/tampatraffic/atom.xml</id>
+    <id>https://michaelreflects.com/tags/tampatraffic/atom.xml</id>
     <entry xml:lang="en">
         <title>I Didn’t Need a Report to Know Tampa Traffic Is Bad</title>
         <published>2025-08-05T22:57:47-04:00</published>
@@ -20,10 +20,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/traffic-in-tampa/"/>
-        <id>https://michaels-journal.pages.dev/traffic-in-tampa/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/traffic-in-tampa/"/>
+        <id>https://michaelreflects.com/traffic-in-tampa/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/traffic-in-tampa/">&lt;img src=&quot;&#x2F;uploads&#x2F;i75-fowler-crash-.jpg&quot; alt=&quot;Traffic camera view of I-75 Southbound near Fowler Avenue in Tampa at night, showing heavy congestion in the right lanes with long lines of red brake lights.&quot; width=&quot;600&quot; &#x2F;&gt;
+        <content type="html" xml:base="https://michaelreflects.com/traffic-in-tampa/">&lt;img src=&quot;&#x2F;uploads&#x2F;i75-fowler-crash-.jpg&quot; alt=&quot;Traffic camera view of I-75 Southbound near Fowler Avenue in Tampa at night, showing heavy congestion in the right lanes with long lines of red brake lights.&quot; width=&quot;600&quot; &#x2F;&gt;
 &lt;p&gt;I was just watching our local news on &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.fox13news.com&#x2F;news&#x2F;tampa-ranks-13th-worst-city-us-traffic-consumeraffairs-study&quot;&gt;fox13tampabay.com&lt;&#x2F;a&gt;, and they had a story on a &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.consumeraffairs.com&#x2F;automotive&#x2F;cities-with-the-worst-traffic.html#methodology&quot;&gt;ConsumerAffairs&lt;&#x2F;a&gt; report about which cities have the worst traffic. The city I have to travel to for work (Tampa) was ranked 13th worst in the nation and number 3 in the state, behind Miami and Orlando.&lt;&#x2F;p&gt;
 &lt;p&gt;I will say I don&#x27;t know much about Miami. I’ve only been there once for a few hours before leaving. Orlando, though, is definitely worse than Tampa. I&#x27;ve lived in the City of Tampa proper and now live in the suburbs, Brandon, and the traffic has always been bad in both places. But over the last couple of years, since everyone returned to the office, it has been the worst I’ve ever seen.&lt;&#x2F;p&gt;
 &lt;p&gt;The only time I saw traffic improve around here was during the early days of the COVID-19 pandemic.&lt;&#x2F;p&gt;

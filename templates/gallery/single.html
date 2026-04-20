@@ -18,14 +18,14 @@
     {% set caption  = page.extra.captions[i] | default(value="") %}
     <div class="photo-item">
       <a
-        href="{{ page.extra.r2_base }}/{{ slug }}.webp"
+        href="{{ page.extra.r2_base }}/{{ slug }}.avif"
         class="glightbox photo-cell"
         data-gallery="album"
         data-type="image"
         data-description="{{ caption }}"
       >
         <img
-          src="{{ page.extra.r2_base }}/thumbs/{{ slug }}.webp"
+          src="{{ page.extra.r2_base }}/thumbs/{{ slug }}.avif"
           alt="{{ alt_text }}"
           loading="lazy"
         >

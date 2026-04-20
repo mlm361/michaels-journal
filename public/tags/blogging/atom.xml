@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>Michael’s Journal - blogging</title>
     <subtitle>A quiet place for thoughts, tech, and reflections.</subtitle>
-    <link rel="self" type="application/atom+xml" href="https://michaels-journal.pages.dev/tags/blogging/atom.xml"/>
-    <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev"/>
+    <link rel="self" type="application/atom+xml" href="https://michaelreflects.com/tags/blogging/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://michaelreflects.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2026-03-10T14:51:55+00:00</updated>
-    <id>https://michaels-journal.pages.dev/tags/blogging/atom.xml</id>
+    <id>https://michaelreflects.com/tags/blogging/atom.xml</id>
     <entry xml:lang="en">
         <title>Mike Elgan Nails It</title>
         <published>2026-03-10T14:51:55+00:00</published>
@@ -20,10 +20,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/mike-elgan-nails-it/"/>
-        <id>https://michaels-journal.pages.dev/mike-elgan-nails-it/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/mike-elgan-nails-it/"/>
+        <id>https://michaelreflects.com/mike-elgan-nails-it/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/mike-elgan-nails-it/">&lt;blockquote&gt;
+        <content type="html" xml:base="https://michaelreflects.com/mike-elgan-nails-it/">&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;elgan.com&#x2F;why-you-should-love-blogs-now-more-than-ever&quot;&gt;https:&#x2F;&#x2F;elgan.com&#x2F;why-you-should-love-blogs-now-more-than-ever&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Why you should love blogs now more than ever&lt;&#x2F;p&gt;
 &lt;p&gt;, &lt;strong&gt;Mike Elgan&lt;&#x2F;strong&gt; (@MikeElgan@mastodon.social) on sharkey (&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;mitchelltribe.rodeo&#x2F;notes&#x2F;aiyrjwc80dzh07c3&quot;&gt;source&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;

@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>Michael’s Journal - nature</title>
     <subtitle>A quiet place for thoughts, tech, and reflections.</subtitle>
-    <link rel="self" type="application/atom+xml" href="https://michaels-journal.pages.dev/tags/nature/atom.xml"/>
-    <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev"/>
+    <link rel="self" type="application/atom+xml" href="https://michaelreflects.com/tags/nature/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://michaelreflects.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2025-12-30T14:31:07+00:00</updated>
-    <id>https://michaels-journal.pages.dev/tags/nature/atom.xml</id>
+    <id>https://michaelreflects.com/tags/nature/atom.xml</id>
     <entry xml:lang="en">
         <title>A Day of Celestial Discoveries and Misty Mornings</title>
         <published>2025-12-30T14:31:07+00:00</published>
@@ -20,10 +20,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/a-day-of-celestial-discoveries-and-misty-mornings/"/>
-        <id>https://michaels-journal.pages.dev/a-day-of-celestial-discoveries-and-misty-mornings/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/a-day-of-celestial-discoveries-and-misty-mornings/"/>
+        <id>https://michaelreflects.com/a-day-of-celestial-discoveries-and-misty-mornings/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/a-day-of-celestial-discoveries-and-misty-mornings/">&lt;p&gt;Today was a peculiar yet fulfilling day. It started with a dense fog but cleared up nicely. I managed to capture the sun through my telescope for the first time, and I also spotted the moon in broad daylight, though the telescope had some trouble pinpointing it. I hope you find the images as delightful as I did. They were taken with my Zwo Seestar S30, except for the fog picture, which I captured with the Samsung Galaxy S24 Ultra.&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://michaelreflects.com/a-day-of-celestial-discoveries-and-misty-mornings/">&lt;p&gt;Today was a peculiar yet fulfilling day. It started with a dense fog but cleared up nicely. I managed to capture the sun through my telescope for the first time, and I also spotted the moon in broad daylight, though the telescope had some trouble pinpointing it. I hope you find the images as delightful as I did. They were taken with my Zwo Seestar S30, except for the fog picture, which I captured with the Samsung Galaxy S24 Ultra.&lt;&#x2F;p&gt;
 &lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;&lt;img src=&quot;&#x2F;uploads&#x2F;55108e7f537c.jpg&quot; alt=&quot;A blurry photograph taken from inside a car at night, showing a view of a road with traffic lights and faint outlines of trees in foggy or misty conditions. The dashboard of the car is visible in the foreground.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;&lt;figcaption style=&quot;font-size: 0.9em; color: #666; text-align: center; margin-top: 0.5em; font-style: italic;&quot;&gt;A blurry photograph taken from inside a car at night, showing a view of a road with traffic lights and faint outlines of trees in foggy or misty conditions. The dashboard of the car is visible in the foreground.&lt;&#x2F;figcaption&gt;&lt;&#x2F;figure&gt;
 &lt;figcaption&gt;Driving through a foggy night, the world blurs into a mysterious haze of lights and shadows.&lt;&#x2F;figcaption&gt;
 &lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;&lt;img src=&quot;&#x2F;uploads&#x2F;2bfe96fbdf8b.jpg&quot; alt=&quot;A serene sky with a soft gradient from deep to light blue, featuring a pale moon visible in daylight and several small birds flying in the distance.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;&lt;figcaption style=&quot;font-size: 0.9em; color: #666; text-align: center; margin-top: 0.5em; font-style: italic;&quot;&gt;A serene sky with a soft gradient from deep to light blue, featuring a pale moon visible in daylight and several small birds flying in the distance.&lt;&#x2F;figcaption&gt;&lt;&#x2F;figure&gt;

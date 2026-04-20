@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>Michael’s Journal - inspiration</title>
     <subtitle>A quiet place for thoughts, tech, and reflections.</subtitle>
-    <link rel="self" type="application/atom+xml" href="https://michaels-journal.pages.dev/tags/inspiration/atom.xml"/>
-    <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev"/>
+    <link rel="self" type="application/atom+xml" href="https://michaelreflects.com/tags/inspiration/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://michaelreflects.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2026-04-07T23:39:06+00:00</updated>
-    <id>https://michaels-journal.pages.dev/tags/inspiration/atom.xml</id>
+    <id>https://michaelreflects.com/tags/inspiration/atom.xml</id>
     <entry xml:lang="en">
         <title>Moon Views, Earth Love</title>
         <published>2026-04-07T23:39:06+00:00</published>
@@ -20,10 +20,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://michaels-journal.pages.dev/moon-views-earth-love/"/>
-        <id>https://michaels-journal.pages.dev/moon-views-earth-love/</id>
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/moon-views-earth-love/"/>
+        <id>https://michaelreflects.com/moon-views-earth-love/</id>
         
-        <content type="html" xml:base="https://michaels-journal.pages.dev/moon-views-earth-love/">&lt;p&gt;I have been watching the &lt;strong&gt;Artemis II&lt;&#x2F;strong&gt; mission off and on. I saw these pictures on the NASA website, and here are a few that I really like. They definitely got me thinking.&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://michaelreflects.com/moon-views-earth-love/">&lt;p&gt;I have been watching the &lt;strong&gt;Artemis II&lt;&#x2F;strong&gt; mission off and on. I saw these pictures on the NASA website, and here are a few that I really like. They definitely got me thinking.&lt;&#x2F;p&gt;
 &lt;p&gt;I have always been fascinated by space and the Heavens. I would like to go to space, but not like we do today. If I went, I would want it to be on a &lt;strong&gt;Star Trek&lt;&#x2F;strong&gt; type shuttle or ship. Our spacecraft, much like our planes, are little more than thin tin cans.&lt;&#x2F;p&gt;
 &lt;p&gt;Looking at these pictures really affected me. The Moon is very dead and very unwelcoming, and space is the same way. Then, seeing our planet &quot;Earth&quot; from that vantage point just shows the miracle God made for us and the love Jesus purchased for us. Why would you want to go anywhere else?&lt;&#x2F;p&gt;
 &lt;div style=&quot;margin:24px 0;&quot;&gt;
