@@ -285,7 +285,7 @@ function toggleNav() {
         class="glightbox photo-cell"
         data-gallery="album"
         data-type="image"
-        data-description="Standing at the base of the falls, 145 feet underground"
+        data-description="Standing at the base of the falls, 260 feet underground"
       >
         <img
           src="https:&#x2F;&#x2F;media.mitchelltribe.xyz&#x2F;gallery&#x2F;ruby-fall-chattanooga-2013/thumbs/wp-20131011-041.avif"
@@ -293,7 +293,7 @@ function toggleNav() {
           loading="lazy"
         >
       </a>
-      <p class="photo-caption">Standing at the base of the falls, 145 feet underground</p>
+      <p class="photo-caption">Standing at the base of the falls, 260 feet underground</p>
     </div>
     
     
@@ -325,7 +325,7 @@ function toggleNav() {
         class="glightbox photo-cell"
         data-gallery="album"
         data-type="image"
-        data-description="Ruby Falls — 145 feet underground and 44 feet tall"
+        data-description="Ruby Falls — 260 feet underground and 145 feet tall"
       >
         <img
           src="https:&#x2F;&#x2F;media.mitchelltribe.xyz&#x2F;gallery&#x2F;ruby-fall-chattanooga-2013/thumbs/wp-20131011-043.avif"
@@ -333,7 +333,7 @@ function toggleNav() {
           loading="lazy"
         >
       </a>
-      <p class="photo-caption">Ruby Falls — 145 feet underground and 44 feet tall</p>
+      <p class="photo-caption">Ruby Falls — 260 feet underground and 145 feet tall</p>
     </div>
     
   </div>
@@ -343,19 +343,19 @@ function toggleNav() {
   <div class="video-grid">
     
     <div class="video-wrap">
-      <video controls preload="none" loading="lazy">
+      <video controls preload="none" loading="lazy" class="gallery-video">
         <source src="https:&#x2F;&#x2F;media.mitchelltribe.xyz&#x2F;gallery&#x2F;ruby-fall-chattanooga-2013/videos/wp-20131011-036.mp4" type="video/mp4">
       </video>
     </div>
     
     <div class="video-wrap">
-      <video controls preload="none" loading="lazy">
+      <video controls preload="none" loading="lazy" class="gallery-video">
         <source src="https:&#x2F;&#x2F;media.mitchelltribe.xyz&#x2F;gallery&#x2F;ruby-fall-chattanooga-2013/videos/wp-20131011-040.mp4" type="video/mp4">
       </video>
     </div>
     
     <div class="video-wrap">
-      <video controls preload="none" loading="lazy">
+      <video controls preload="none" loading="lazy" class="gallery-video">
         <source src="https:&#x2F;&#x2F;media.mitchelltribe.xyz&#x2F;gallery&#x2F;ruby-fall-chattanooga-2013/videos/wp-20131011-046.mp4" type="video/mp4">
       </video>
     </div>
@@ -421,6 +421,7 @@ function toggleNav() {
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     GLightbox({ selector: ".glightbox", touchNavigation: true, loop: true });
+    document.querySelectorAll(".gallery-video").forEach(v => v.volume = 0.5);
   });
 </script>
 

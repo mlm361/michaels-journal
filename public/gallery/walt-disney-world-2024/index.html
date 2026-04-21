@@ -323,19 +323,19 @@ function toggleNav() {
   <div class="video-grid">
     
     <div class="video-wrap">
-      <video controls preload="none" loading="lazy">
+      <video controls preload="none" loading="lazy" class="gallery-video">
         <source src="https:&#x2F;&#x2F;media.mitchelltribe.xyz&#x2F;gallery&#x2F;walt-disney-world-2024/videos/2023-09-28-magic-kingdom-park-seven-dwarfs-mine-train.mp4" type="video/mp4">
       </video>
     </div>
     
     <div class="video-wrap">
-      <video controls preload="none" loading="lazy">
+      <video controls preload="none" loading="lazy" class="gallery-video">
         <source src="https:&#x2F;&#x2F;media.mitchelltribe.xyz&#x2F;gallery&#x2F;walt-disney-world-2024/videos/2024-08-26-magic-kingdom-park-tron-lightcycle-run1.mp4" type="video/mp4">
       </video>
     </div>
     
     <div class="video-wrap">
-      <video controls preload="none" loading="lazy">
+      <video controls preload="none" loading="lazy" class="gallery-video">
         <source src="https:&#x2F;&#x2F;media.mitchelltribe.xyz&#x2F;gallery&#x2F;walt-disney-world-2024/videos/2024-08-26-magic-kingdom-park-tron-lightcycle-run.mp4" type="video/mp4">
       </video>
     </div>
@@ -401,6 +401,7 @@ function toggleNav() {
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     GLightbox({ selector: ".glightbox", touchNavigation: true, loop: true });
+    document.querySelectorAll(".gallery-video").forEach(v => v.volume = 0.5);
   });
 </script>
 

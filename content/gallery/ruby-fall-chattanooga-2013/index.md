@@ -30,9 +30,9 @@ captions = [
   "The guides name the formations — this one's Fish",
   "Can you see the turtle?",
   "Dragon's Foot — one of many named formations on the tour",
-  "Standing at the base of the falls, 145 feet underground",
+  "Standing at the base of the falls, 260 feet underground",
   "The waterfall chamber — worth every step",
-  "Ruby Falls — 145 feet underground and 44 feet tall"
+  "Ruby Falls — 260 feet underground and 145 feet tall"
 ]
 videos   = ["wp-20131011-036", "wp-20131011-040", "wp-20131011-046"]
 +++

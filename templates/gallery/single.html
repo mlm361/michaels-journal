@@ -40,7 +40,7 @@
   <div class="video-grid">
     {% for slug in page.extra.videos %}
     <div class="video-wrap">
-      <video controls preload="none" loading="lazy">
+      <video controls preload="none" loading="lazy" class="gallery-video">
         <source src="{{ page.extra.r2_base }}/videos/{{ slug }}.mp4" type="video/mp4">
       </video>
     </div>
@@ -106,6 +106,7 @@
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     GLightbox({ selector: ".glightbox", touchNavigation: true, loop: true });
+    document.querySelectorAll(".gallery-video").forEach(v => v.volume = 0.5);
   });
 </script>
 {% endblock content %}
