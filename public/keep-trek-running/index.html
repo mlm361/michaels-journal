@@ -10,6 +10,18 @@
         <title> Keep Trek Running | Michael’s Journal </title>
         
 
+        <!-- Open Graph -->
+        <meta property="og:site_name" content="Michael’s Journal">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https:&#x2F;&#x2F;michaelreflects.com&#x2F;keep-trek-running&#x2F;">
+        <meta property="og:title" content="Keep Trek Running">
+        <meta property="og:description" content="Why Star Trek should always have a series on the air and how its vision of accessible AI technology offers a more achievable future than      Star Wars.">
+        
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Keep Trek Running">
+        <meta name="twitter:description" content="Why Star Trek should always have a series on the air and how its vision of accessible AI technology offers a more achievable future than      Star Wars.">
+        
+
         <!-- Enable responsiveness on mobile devices-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" >
 
@@ -61,10 +73,12 @@
       <a href="https:&#x2F;&#x2F;michaelreflects.com">🏠 Home</a>
       <a href="https:&#x2F;&#x2F;michaelreflects.com/about">👤 About</a>
       <a href="https:&#x2F;&#x2F;michaelreflects.com/archive">🗄️ Archive</a>
+      <a href="https:&#x2F;&#x2F;michaelreflects.com/blogroll">📚 Blogroll</a>
       <a href="https:&#x2F;&#x2F;michaelreflects.com/gallery">📷 Gallery</a>
       <a href="https:&#x2F;&#x2F;michaelreflects.com/on-this-day">📅 On This Day</a>
       <a href="https:&#x2F;&#x2F;michaelreflects.com/stats">📊 Stats</a>
       <a href="https:&#x2F;&#x2F;michaelreflects.com/tweets">🐦 Tweets</a>
+      <a href="https:&#x2F;&#x2F;michaelreflects.com/tags">🏷️ Tags</a>
       <a href="https:&#x2F;&#x2F;michaelreflects.com/search">🔍 Search</a>
       <a href="https://michaelreflects.com/atom.xml" class="rss-link" title="RSS Feed">
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px;margin-right:3px;"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19.01 7.38 20 6.18 20C4.98 20 4 19.01 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/></svg>RSS
@@ -131,6 +145,8 @@ function toggleNav() {
         
       </div>
       
+      
+
       <img src="/uploads/star_trek_constant_exploration.png" alt="Futuristic starship gliding past a distant planet with nebula clouds in the background, symbolizing Star Trek's enduring journey and its vision of an attainable future" width="600" />
 <p>I was just watching an old episode of <em>Star Trek: Deep Space Nine</em>. I’ve always been into Star Trek, every series except <em>Star Trek: The Next Generation</em>. I’m not sure why, but I never fully got into that one. The others: <em>The Original Series</em>, <em>Deep Space Nine</em>, <em>Voyager</em>, <em>Enterprise</em>, and all the movies (except the <em>Next Generation</em> ones), I loved and eagerly awaited. Whether it was a new film release or the next week’s episode, I was always excited. I never watched <em>Star Trek: The Animated Series</em> either, even though I own it on DVD.</p>
 <p>Then Paramount+/CBS introduced new series: <em>Discovery</em>, <em>Picard</em>, <em>Strange New Worlds</em>, <em>Prodigy</em>, and <em>Lower Decks</em>. I enjoyed those too, though I hated waiting a week between episodes. I think Netflix got it right: if a show isn’t airing on linear TV, just drop the whole season at once.</p>
@@ -143,50 +159,64 @@ function toggleNav() {
       
       <div class="kudos-wrap">
         <button class="tinylytics_kudos"></button>
+        <a class="reply-by-email" href="mailto:michael@michaelmitchell.email?subject=Re: Keep%20Trek%20Running">✍️ Reply by email</a>
       </div>
+      <style>
+        .kudos-wrap { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+        a.reply-by-email { font-size: 0.85rem; text-decoration: none; opacity: 0.6; font-weight: 500; border: 1px solid currentColor; border-radius: 999px; padding: 0.3rem 0.85rem; }
+        a.reply-by-email:hover { opacity: 1; }
+      </style>
       
+
+
+      
+      <div class="webmentions" id="webmentions-wrap" style="display:none;">
+        <h3 class="webmentions-heading">💬 Webmentions</h3>
+        <div id="webmentions-list"></div>
+      </div>
+      <style>
+        .webmentions { margin: 2.5rem 0 1rem; padding-top: 1.5rem; border-top: 1px solid rgba(128,128,128,0.15); }
+        .webmentions-heading { font-size: 0.95rem; font-weight: 700; margin-bottom: 1.25rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.05em; }
+        .wm-item { display: flex; gap: 12px; margin-bottom: 1.25rem; align-items: flex-start; padding: 0.75rem 1rem; background: rgba(128,128,128,0.05); border-radius: 8px; }
+        .wm-avatar { width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0; border: 2px solid rgba(128,128,128,0.15); }
+        .wm-avatar-placeholder { width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0; background: rgba(128,128,128,0.15); display: flex; align-items: center; justify-content: center; font-size: 1rem; }
+        .wm-body { font-size: 0.88rem; line-height: 1.5; padding-top: 2px; }
+        .wm-author { font-weight: 700; text-decoration: none; }
+        .wm-author:hover { text-decoration: underline; }
+        .wm-label { opacity: 0.65; }
+        .wm-content { margin: 0.4rem 0 0; opacity: 0.8; font-style: italic; }
+      </style>
+      <script>
+        (function () {
+          var target = encodeURIComponent("https:&#x2F;&#x2F;michaelreflects.com&#x2F;keep-trek-running&#x2F;");
+          fetch("https://webmention.io/api/mentions.jf2?target=" + target + "&per-page=50")
+            .then(function (r) { return r.json(); })
+            .then(function (data) {
+              var items = (data.children || []);
+              if (!items.length) return;
+              var wrap = document.getElementById("webmentions-wrap");
+              var el = document.getElementById("webmentions-list");
+              var labels = { "like-of": "liked this", "repost-of": "reposted this", "in-reply-to": "replied", "mention-of": "mentioned this" };
+              el.innerHTML = items.map(function (m) {
+                var author = (m.author && m.author.name) ? m.author.name : "Someone";
+                var photo  = (m.author && m.author.photo)
+                  ? "<img src='" + m.author.photo + "' alt='" + author + "' class='wm-avatar'>"
+                  : "<div class='wm-avatar-placeholder'>👤</div>";
+                var type   = m["wm-property"] || "mention-of";
+                var label  = labels[type] || "mentioned this";
+                var content = (m.content && m.content.text) ? "<p class='wm-content'>" + m.content.text.slice(0, 250) + "</p>" : "";
+                return "<div class='wm-item'>" + photo + "<div class='wm-body'><a href='" + m.url + "' class='wm-author' target='_blank' rel='noopener'>" + author + "</a> <span class='wm-label'>" + label + "</span>" + content + "</div></div>";
+              }).join("");
+              wrap.style.display = "block";
+            })
+            .catch(function () {});
+        })();
+      </script>
+      
+
       
   </article>
 </section>
-
-<section class="webmentions">
-  <h3 class="webmentions-heading">Webmentions</h3>
-  <div id="webmentions-list"><p class="webmentions-loading">Loading…</p></div>
-  <script>
-    (function () {
-      var target = encodeURIComponent("https:&#x2F;&#x2F;michaelreflects.com&#x2F;keep-trek-running&#x2F;");
-      fetch("https://webmention.io/api/mentions.jf2?target=" + target + "&per-page=50")
-        .then(function (r) { return r.json(); })
-        .then(function (data) {
-          var el = document.getElementById("webmentions-list");
-          var items = (data.children || []);
-          if (!items.length) { el.innerHTML = "<p class='webmentions-empty'>No webmentions yet.</p>"; return; }
-          el.innerHTML = items.map(function (m) {
-            var author = (m.author && m.author.name) ? m.author.name : "Someone";
-            var photo  = (m.author && m.author.photo) ? "<img src='" + m.author.photo + "' alt='" + author + "' class='wm-avatar'>" : "";
-            var type   = m["wm-property"] || "mention-of";
-            var label  = { "like-of": "liked", "repost-of": "reposted", "in-reply-to": "replied", "mention-of": "mentioned" }[type] || "mentioned";
-            var content = (m.content && m.content.text) ? "<p class='wm-content'>" + m.content.text.slice(0, 200) + "</p>" : "";
-            return "<div class='wm-item'>" + photo + "<div class='wm-body'><a href='" + m.url + "' class='wm-author'>" + author + "</a> " + label + " this post" + content + "</div></div>";
-          }).join("");
-        })
-        .catch(function () {
-          document.getElementById("webmentions-list").innerHTML = "<p class='webmentions-empty'>Could not load webmentions.</p>";
-        });
-    })();
-  </script>
-  <style>
-    .webmentions { margin: 3rem 0 1rem; padding-top: 1.5rem; border-top: 1px solid rgba(128,128,128,0.2); }
-    .webmentions-heading { font-size: 1rem; font-weight: 600; margin-bottom: 1rem; opacity: 0.8; }
-    .webmentions-loading, .webmentions-empty { opacity: 0.5; font-size: 0.9rem; }
-    .wm-item { display: flex; gap: 10px; margin-bottom: 1rem; align-items: flex-start; }
-    .wm-avatar { width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0; }
-    .wm-body { font-size: 0.88rem; }
-    .wm-author { font-weight: 600; text-decoration: none; }
-    .wm-content { margin: 0.25rem 0 0; opacity: 0.75; }
-  </style>
-</section>
-
 
 
 

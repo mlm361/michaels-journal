@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% import "macros.html" as macros %}
+
+{% block content %}
+<nav id="overlord" class="overlord">
+  {% set base_url = get_url(path="/", lang=lang) %}
+  {{ macros::mini_logo(classes="", title=config.title, siteurl=base_url, logourl=config.extra.profile) }}
+</nav>
+
+<section class="post_container">
+  <article>
+    <h1 class="article_title">📚 Blogroll</h1>
+    <p style="opacity:0.55;font-size:0.9rem;margin-top:0;">People worth reading.</p>
+    {% include "partials/blogroll.html" %}
+  </article>
+</section>
+{% endblock content %}

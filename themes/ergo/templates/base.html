@@ -13,6 +13,22 @@
         <title> {{ config.title }} </title>
         {% endif %}
 
+        <!-- Open Graph -->
+        <meta property="og:site_name" content="{{ config.title }}">
+        <meta property="og:type" content="{% if page.title %}article{% else %}website{% endif %}">
+        <meta property="og:url" content="{% if page.permalink %}{{ page.permalink }}{% else %}{{ config.base_url }}{% endif %}">
+        <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ config.title }}{% endif %}">
+        <meta property="og:description" content="{% if page.description %}{{ page.description }}{% elif page.summary %}{{ page.summary | striptags | truncate(length=160) }}{% else %}{{ config.description }}{% endif %}">
+        {% if page.extra.image %}
+        <meta property="og:image" content="{{ config.base_url }}{{ page.extra.image }}">
+        {% endif %}
+        <meta name="twitter:card" content="{% if page.extra.image %}summary_large_image{% else %}summary{% endif %}">
+        <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ config.title }}{% endif %}">
+        <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% elif page.summary %}{{ page.summary | striptags | truncate(length=160) }}{% else %}{{ config.description }}{% endif %}">
+        {% if page.extra.image %}
+        <meta name="twitter:image" content="{{ config.base_url }}{{ page.extra.image }}">
+        {% endif %}
+
         <!-- Enable responsiveness on mobile devices-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" >
 

@@ -20,13 +20,51 @@
         {% endfor %}
       </div>
       {% endif %}
+      {% if page.extra.toc and page.toc %}
+      <nav class="toc">
+        <h3 class="toc-heading">📋 Contents</h3>
+        <ol class="toc-list">
+          {% for h in page.toc %}
+          <li class="toc-item">
+            <a href="{{ h.permalink }}" class="toc-link">{{ h.title }}</a>
+            {% if h.children %}
+            <ol class="toc-sublist">
+              {% for h2 in h.children %}
+              <li><a href="{{ h2.permalink }}" class="toc-link toc-sub">{{ h2.title }}</a></li>
+              {% endfor %}
+            </ol>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ol>
+      </nav>
+      <style>
+        .toc { background: rgba(128,128,128,0.06); border-left: 3px solid rgba(128,128,128,0.25); border-radius: 6px; padding: 1rem 1.25rem; margin: 1.5rem 0; }
+        .toc-heading { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.6; margin-bottom: 0.6rem; }
+        .toc-list, .toc-sublist { margin: 0; padding-left: 1.2rem; }
+        .toc-list { list-style: decimal; }
+        .toc-sublist { list-style: lower-alpha; margin-top: 0.2rem; }
+        .toc-item { margin: 0.25rem 0; }
+        a.toc-link { font-size: 0.88rem; text-decoration: none; opacity: 0.75; }
+        a.toc-link:hover { opacity: 1; text-decoration: underline; }
+        a.toc-sub { font-size: 0.82rem; }
+      </style>
+      {% endif %}
+
       {{ page.content | safe }}
 
       {% if not page.extra.no_kudos %}
       <div class="kudos-wrap">
         <button class="tinylytics_kudos"></button>
+        <a class="reply-by-email" href="mailto:michael@michaelmitchell.email?subject=Re: {{ page.title | urlencode }}">✍️ Reply by email</a>
       </div>
+      <style>
+        .kudos-wrap { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+        a.reply-by-email { font-size: 0.85rem; text-decoration: none; opacity: 0.6; font-weight: 500; border: 1px solid currentColor; border-radius: 999px; padding: 0.3rem 0.85rem; }
+        a.reply-by-email:hover { opacity: 1; }
+      </style>
       {% endif %}
+
 
       {% if config.extra.webmention_provider == "webmentions_io" %}
       <div class="webmentions" id="webmentions-wrap" style="display:none;">

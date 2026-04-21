@@ -6,7 +6,8 @@ date = "2025-08-28T11:49:57-04:00"
 draft = false
 author = "Michael"
 lang = "en-us"
-image = "/uploads/police-cruiser.png"
+[extra]
+image = "/uploads/police-cruise-mode-confused-driver-illustration.png"
 image_alt = "Driver confused as a police car follows with steady red/blue lights"
 [taxonomies]
 tags = ["Florida", "traffic-law", "police-lights"]

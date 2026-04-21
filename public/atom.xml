@@ -5,8 +5,27 @@
     <link rel="self" type="application/atom+xml" href="https://michaelreflects.com/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://michaelreflects.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2026-04-07T23:39:06+00:00</updated>
+    <updated>2026-04-21T00:00:00+00:00</updated>
     <id>https://michaelreflects.com/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Blogroll</title>
+        <published>2026-04-21T00:00:00+00:00</published>
+        <updated>2026-04-21T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Michael Mitchell
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://michaelreflects.com/blogroll/"/>
+        <id>https://michaelreflects.com/blogroll/</id>
+        
+        <content type="html" xml:base="https://michaelreflects.com/blogroll/"></content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Moon Views, Earth Love</title>
         <published>2026-04-07T23:39:06+00:00</published>
@@ -499,32 +518,6 @@ Looking forward to Season 3.&lt;&#x2F;p&gt;
 I&#x27;m looking forward to this year on many fronts. I want to continue getting my heart under control with my Obstructive Hypertrophic Cardiomyopathy, do more self-hosting with AI, and learn more coding. This is also my 25th year of proper blogging (more posts coming on that later).&lt;&#x2F;p&gt;
 &lt;p&gt;With all the computing power I&#x27;m putting together, I&#x27;m hoping to learn more about web development, self-hosting, and becoming less dependent on big tech. I&#x27;m one year closer to retirement, which I&#x27;m looking forward to. Instead of focusing on an employer&#x27;s needs, I&#x27;ll be able to focus 100 percent on what interests me and devote more time to my faith. Putting my love of God and technology together.&lt;&#x2F;p&gt;
 &lt;p&gt;So Happy New Year to everyone, and let&#x27;s see what 2026 brings for us all. Should be an interesting year, especially on the home front with the United States of America hitting 250 years.&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>A Day of Celestial Discoveries and Misty Mornings</title>
-        <published>2025-12-30T14:31:07+00:00</published>
-        <updated>2025-12-30T14:31:07+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Michael Mitchell
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://michaelreflects.com/a-day-of-celestial-discoveries-and-misty-mornings/"/>
-        <id>https://michaelreflects.com/a-day-of-celestial-discoveries-and-misty-mornings/</id>
-        
-        <content type="html" xml:base="https://michaelreflects.com/a-day-of-celestial-discoveries-and-misty-mornings/">&lt;p&gt;Today was a peculiar yet fulfilling day. It started with a dense fog but cleared up nicely. I managed to capture the sun through my telescope for the first time, and I also spotted the moon in broad daylight, though the telescope had some trouble pinpointing it. I hope you find the images as delightful as I did. They were taken with my Zwo Seestar S30, except for the fog picture, which I captured with the Samsung Galaxy S24 Ultra.&lt;&#x2F;p&gt;
-&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;&lt;img src=&quot;&#x2F;uploads&#x2F;55108e7f537c.jpg&quot; alt=&quot;A blurry photograph taken from inside a car at night, showing a view of a road with traffic lights and faint outlines of trees in foggy or misty conditions. The dashboard of the car is visible in the foreground.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;&lt;figcaption style=&quot;font-size: 0.9em; color: #666; text-align: center; margin-top: 0.5em; font-style: italic;&quot;&gt;A blurry photograph taken from inside a car at night, showing a view of a road with traffic lights and faint outlines of trees in foggy or misty conditions. The dashboard of the car is visible in the foreground.&lt;&#x2F;figcaption&gt;&lt;&#x2F;figure&gt;
-&lt;figcaption&gt;Driving through a foggy night, the world blurs into a mysterious haze of lights and shadows.&lt;&#x2F;figcaption&gt;
-&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;&lt;img src=&quot;&#x2F;uploads&#x2F;2bfe96fbdf8b.jpg&quot; alt=&quot;A serene sky with a soft gradient from deep to light blue, featuring a pale moon visible in daylight and several small birds flying in the distance.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;&lt;figcaption style=&quot;font-size: 0.9em; color: #666; text-align: center; margin-top: 0.5em; font-style: italic;&quot;&gt;A serene sky with a soft gradient from deep to light blue, featuring a pale moon visible in daylight and several small birds flying in the distance.&lt;&#x2F;figcaption&gt;&lt;&#x2F;figure&gt;
-&lt;figcaption&gt;Birds dance around the daylit moon, painting a serene scene in the vast blue canvas above.&lt;&#x2F;figcaption&gt;
-&lt;figure style=&quot;max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;&quot;&gt;&lt;img src=&quot;&#x2F;uploads&#x2F;c8381284a939.jpg&quot; alt=&quot;A close-up image of the sun showing a detailed and textured orange surface surrounded by darkness, highlighting sunspots and solar features.&quot; style=&quot;display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;&quot;&gt;&lt;figcaption style=&quot;font-size: 0.9em; color: #666; text-align: center; margin-top: 0.5em; font-style: italic;&quot;&gt;A close-up image of the sun showing a detailed and textured orange surface surrounded by darkness, highlighting sunspots and solar features.&lt;&#x2F;figcaption&gt;&lt;&#x2F;figure&gt;
-&lt;figcaption&gt;Gazing into the cosmic abyss, the sun reveals its fiery solitude surrounded by the dark embrace of space.&lt;&#x2F;figcaption&gt;
 </content>
         
     </entry>
