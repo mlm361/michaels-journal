@@ -27,48 +27,55 @@
         <button class="tinylytics_kudos"></button>
       </div>
       {% endif %}
+
+      {% if config.extra.webmention_provider == "webmentions_io" %}
+      <div class="webmentions" id="webmentions-wrap" style="display:none;">
+        <h3 class="webmentions-heading">💬 Webmentions</h3>
+        <div id="webmentions-list"></div>
+      </div>
+      <style>
+        .webmentions { margin: 2.5rem 0 1rem; padding-top: 1.5rem; border-top: 1px solid rgba(128,128,128,0.15); }
+        .webmentions-heading { font-size: 0.95rem; font-weight: 700; margin-bottom: 1.25rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.05em; }
+        .wm-item { display: flex; gap: 12px; margin-bottom: 1.25rem; align-items: flex-start; padding: 0.75rem 1rem; background: rgba(128,128,128,0.05); border-radius: 8px; }
+        .wm-avatar { width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0; border: 2px solid rgba(128,128,128,0.15); }
+        .wm-avatar-placeholder { width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0; background: rgba(128,128,128,0.15); display: flex; align-items: center; justify-content: center; font-size: 1rem; }
+        .wm-body { font-size: 0.88rem; line-height: 1.5; padding-top: 2px; }
+        .wm-author { font-weight: 700; text-decoration: none; }
+        .wm-author:hover { text-decoration: underline; }
+        .wm-label { opacity: 0.65; }
+        .wm-content { margin: 0.4rem 0 0; opacity: 0.8; font-style: italic; }
+      </style>
+      <script>
+        (function () {
+          var target = encodeURIComponent("{{ page.permalink }}");
+          fetch("https://webmention.io/api/mentions.jf2?target=" + target + "&per-page=50")
+            .then(function (r) { return r.json(); })
+            .then(function (data) {
+              var items = (data.children || []);
+              if (!items.length) return;
+              var wrap = document.getElementById("webmentions-wrap");
+              var el = document.getElementById("webmentions-list");
+              var labels = { "like-of": "liked this", "repost-of": "reposted this", "in-reply-to": "replied", "mention-of": "mentioned this" };
+              el.innerHTML = items.map(function (m) {
+                var author = (m.author && m.author.name) ? m.author.name : "Someone";
+                var photo  = (m.author && m.author.photo)
+                  ? "<img src='" + m.author.photo + "' alt='" + author + "' class='wm-avatar'>"
+                  : "<div class='wm-avatar-placeholder'>👤</div>";
+                var type   = m["wm-property"] || "mention-of";
+                var label  = labels[type] || "mentioned this";
+                var content = (m.content && m.content.text) ? "<p class='wm-content'>" + m.content.text.slice(0, 250) + "</p>" : "";
+                return "<div class='wm-item'>" + photo + "<div class='wm-body'><a href='" + m.url + "' class='wm-author' target='_blank' rel='noopener'>" + author + "</a> <span class='wm-label'>" + label + "</span>" + content + "</div></div>";
+              }).join("");
+              wrap.style.display = "block";
+            })
+            .catch(function () {});
+        })();
+      </script>
+      {% endif %}
+
       {% endblock post %}
   </article>
 </section>
-{% if config.extra.webmention_provider == "webmentions_io" %}
-<section class="webmentions">
-  <h3 class="webmentions-heading">Webmentions</h3>
-  <div id="webmentions-list"><p class="webmentions-loading">Loading…</p></div>
-  <script>
-    (function () {
-      var target = encodeURIComponent("{{ page.permalink }}");
-      fetch("https://webmention.io/api/mentions.jf2?target=" + target + "&per-page=50")
-        .then(function (r) { return r.json(); })
-        .then(function (data) {
-          var el = document.getElementById("webmentions-list");
-          var items = (data.children || []);
-          if (!items.length) { el.innerHTML = "<p class='webmentions-empty'>No webmentions yet.</p>"; return; }
-          el.innerHTML = items.map(function (m) {
-            var author = (m.author && m.author.name) ? m.author.name : "Someone";
-            var photo  = (m.author && m.author.photo) ? "<img src='" + m.author.photo + "' alt='" + author + "' class='wm-avatar'>" : "";
-            var type   = m["wm-property"] || "mention-of";
-            var label  = { "like-of": "liked", "repost-of": "reposted", "in-reply-to": "replied", "mention-of": "mentioned" }[type] || "mentioned";
-            var content = (m.content && m.content.text) ? "<p class='wm-content'>" + m.content.text.slice(0, 200) + "</p>" : "";
-            return "<div class='wm-item'>" + photo + "<div class='wm-body'><a href='" + m.url + "' class='wm-author'>" + author + "</a> " + label + " this post" + content + "</div></div>";
-          }).join("");
-        })
-        .catch(function () {
-          document.getElementById("webmentions-list").innerHTML = "<p class='webmentions-empty'>Could not load webmentions.</p>";
-        });
-    })();
-  </script>
-  <style>
-    .webmentions { margin: 3rem 0 1rem; padding-top: 1.5rem; border-top: 1px solid rgba(128,128,128,0.2); }
-    .webmentions-heading { font-size: 1rem; font-weight: 600; margin-bottom: 1rem; opacity: 0.8; }
-    .webmentions-loading, .webmentions-empty { opacity: 0.5; font-size: 0.9rem; }
-    .wm-item { display: flex; gap: 10px; margin-bottom: 1rem; align-items: flex-start; }
-    .wm-avatar { width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0; }
-    .wm-body { font-size: 0.88rem; }
-    .wm-author { font-weight: 600; text-decoration: none; }
-    .wm-content { margin: 0.25rem 0 0; opacity: 0.75; }
-  </style>
-</section>
-{% endif %}
 
 {% if config.extra.comments %}
 <script src="https://utteranc.es/client.js"
