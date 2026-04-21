@@ -29,8 +29,8 @@ country_flags = false
 # Webmention receiving endpoint.
 # To cut over to webmention.io: set provider = "webmentions_io" and update
 # endpoint to your webmention.io URL (e.g. https://webmention.io/michaels-journal.pages.dev/webmention)
-webmention_provider = "tinylytics"
-webmention_endpoint  = "https://tinylytics.app/webmention/h2Q2CzgAf-te_SJUBWQ1"
+webmention_provider = "webmentions_io"
+webmention_endpoint  = "https://webmention.io/michaelreflects.com/webmention"
 
 [[extra.socials]]
 icon = "envelope"
