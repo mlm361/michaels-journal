@@ -42,7 +42,8 @@
         
 
         
-        <link rel="webmention" href="https:&#x2F;&#x2F;tinylytics.app&#x2F;webmention&#x2F;h2Q2CzgAf-te_SJUBWQ1">
+        <link rel="webmention" href="https:&#x2F;&#x2F;webmention.io&#x2F;michaelreflects.com&#x2F;webmention">
+        <link rel="pingback" href="https://webmention.io/michaelreflects.com/xmlrpc">
         
 
         <link rel="me" href="mailto:michael@michaelmitchell.email">
@@ -146,6 +147,44 @@ function toggleNav() {
       
       
   </article>
+</section>
+
+<section class="webmentions">
+  <h3 class="webmentions-heading">Webmentions</h3>
+  <div id="webmentions-list"><p class="webmentions-loading">Loading…</p></div>
+  <script>
+    (function () {
+      var target = encodeURIComponent("https:&#x2F;&#x2F;michaelreflects.com&#x2F;keep-trek-running&#x2F;");
+      fetch("https://webmention.io/api/mentions.jf2?target=" + target + "&per-page=50")
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          var el = document.getElementById("webmentions-list");
+          var items = (data.children || []);
+          if (!items.length) { el.innerHTML = "<p class='webmentions-empty'>No webmentions yet.</p>"; return; }
+          el.innerHTML = items.map(function (m) {
+            var author = (m.author && m.author.name) ? m.author.name : "Someone";
+            var photo  = (m.author && m.author.photo) ? "<img src='" + m.author.photo + "' alt='" + author + "' class='wm-avatar'>" : "";
+            var type   = m["wm-property"] || "mention-of";
+            var label  = { "like-of": "liked", "repost-of": "reposted", "in-reply-to": "replied", "mention-of": "mentioned" }[type] || "mentioned";
+            var content = (m.content && m.content.text) ? "<p class='wm-content'>" + m.content.text.slice(0, 200) + "</p>" : "";
+            return "<div class='wm-item'>" + photo + "<div class='wm-body'><a href='" + m.url + "' class='wm-author'>" + author + "</a> " + label + " this post" + content + "</div></div>";
+          }).join("");
+        })
+        .catch(function () {
+          document.getElementById("webmentions-list").innerHTML = "<p class='webmentions-empty'>Could not load webmentions.</p>";
+        });
+    })();
+  </script>
+  <style>
+    .webmentions { margin: 3rem 0 1rem; padding-top: 1.5rem; border-top: 1px solid rgba(128,128,128,0.2); }
+    .webmentions-heading { font-size: 1rem; font-weight: 600; margin-bottom: 1rem; opacity: 0.8; }
+    .webmentions-loading, .webmentions-empty { opacity: 0.5; font-size: 0.9rem; }
+    .wm-item { display: flex; gap: 10px; margin-bottom: 1rem; align-items: flex-start; }
+    .wm-avatar { width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0; }
+    .wm-body { font-size: 0.88rem; }
+    .wm-author { font-weight: 600; text-decoration: none; }
+    .wm-content { margin: 0.25rem 0 0; opacity: 0.75; }
+  </style>
 </section>
 
 
