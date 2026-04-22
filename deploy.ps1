@@ -1,5 +1,5 @@
-# Set working directory
-cd "C:\Users\mlm36\documents\michaels-journal"
+# Set working directory to script location
+cd $PSScriptRoot
 
 # Find the newest .md file
 $post = Get-ChildItem -Path ".\content" -Filter *.md | Sort-Object LastWriteTime -Descending | Select-Object -First 1

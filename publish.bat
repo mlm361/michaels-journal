@@ -1,5 +1,5 @@
 @echo off
-cd /d "C:\Users\mlm36\documents\michaels-journal"
+cd /d "%~dp0"
 
 echo 🔨 Building Zola site...
 zola build
