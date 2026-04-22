@@ -63,7 +63,7 @@
           <h2 class="post-card-title">
             <a href="{{ page.permalink }}">{{ page.title }}</a>
           </h2>
-          <p class="post-card-excerpt">{{ page.description | default(value=page.content | striptags | replace(from="&#x27;", to="'") | replace(from="&amp;", to="&") | replace(from="&quot;", to='"') | replace(from="&lt;", to="<") | replace(from="&gt;", to=">") | truncate(length=180)) }}</p>
+          <p class="post-card-excerpt">{{ page.description | default(value=page.content | striptags | truncate(length=180)) | safe }}</p>
         </div>
       </div>
       <footer class="post-card-footer">
