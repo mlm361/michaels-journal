@@ -31,11 +31,23 @@
     {% if page.extra.image %}
       {% set_global _card_img = config.base_url ~ page.extra.image %}
     {% else %}
-      {% set _parts = page.content | split(pat='src="') %}
-      {% if _parts | length > 1 %}
-        {% set _raw = _parts[1] | split(pat='"') | first %}
-        {% if _raw | length > 5 %}
-          {% set_global _card_img = _raw %}
+      {% set _img_parts = page.content | split(pat='<img') %}
+      {% if _img_parts | length > 1 %}
+        {% set _src_parts = _img_parts[1] | split(pat='src="') %}
+        {% if _src_parts | length > 1 %}
+          {% set _raw = _src_parts[1] | split(pat='"') | first %}
+          {% if _raw | length > 5 %}
+            {% set_global _card_img = _raw %}
+          {% endif %}
+        {% endif %}
+      {% endif %}
+      {% if not _card_img %}
+        {% set _yt_parts = page.content | split(pat='youtube.com/embed/') %}
+        {% if _yt_parts | length > 1 %}
+          {% set _yt_id = _yt_parts[1] | split(pat='"') | first | split(pat='?') | first %}
+          {% if _yt_id | length > 3 %}
+            {% set_global _card_img = "https://img.youtube.com/vi/" ~ _yt_id ~ "/mqdefault.jpg" %}
+          {% endif %}
         {% endif %}
       {% endif %}
     {% endif %}
@@ -51,7 +63,7 @@
           <h2 class="post-card-title">
             <a href="{{ page.permalink }}">{{ page.title }}</a>
           </h2>
-          <p class="post-card-excerpt">{{ page.description | default(value=page.content | striptags | truncate(length=180)) }}</p>
+          <p class="post-card-excerpt">{{ page.description | default(value=page.content | striptags | replace(from="&#x27;", to="'") | replace(from="&amp;", to="&") | replace(from="&quot;", to='"') | replace(from="&lt;", to="<") | replace(from="&gt;", to=">") | truncate(length=180)) }}</p>
         </div>
       </div>
       <footer class="post-card-footer">
