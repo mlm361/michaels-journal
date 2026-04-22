@@ -1,3 +1,6 @@
 *.log
 public/
 docs/tinylytics-webmentions.md
+deploy.ps1
+publish.bat
+rfc3339_generator.html
