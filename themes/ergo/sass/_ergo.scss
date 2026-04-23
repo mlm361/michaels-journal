@@ -99,9 +99,9 @@ hr {
 article {
     a {
         text-decoration: underline;
-        text-decoration-color: $outline;
+        text-decoration-color: $accent;
         text-decoration-thickness: 2px;
-        color: $text;
+        color: $accent;
     }
     a:link {
         transition-property: all;
@@ -443,8 +443,8 @@ nav.pagination {
     font-weight: 400;
     text-transform: lowercase;
     background-color: transparent;
-    color: $text;
-    border: 1px solid $outline;
+    color: $accent;
+    border: 1px solid $accent;
     text-decoration: none;
     transition: all 0.35s ease-in-out;
 }
