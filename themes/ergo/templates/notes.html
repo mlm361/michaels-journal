@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% import "macros.html" as macros %}
+
+{% block content %}
+<nav id="overlord" class="overlord">
+  {% set base_url = get_url(path="/", lang=lang) %}
+  {{ macros::mini_logo(classes="", title=config.title, siteurl=base_url, logourl=config.extra.profile) }}
+  {% include "languages.html" %}
+</nav>
+
+<header class="header">
+  <h2 class="site_title">{{ section.title | default(value="Notes") }}</h2>
+  {% if section.description %}
+  <div>{{ section.description | as_str | markdown(inline=true) | safe }}</div>
+  {% endif %}
+</header>
+
+<section class="post_list notes_list">
+  {% set pages = section.pages %}
+  {% set_global current_year = "" %}
+  {% for page in pages %}
+    {% set year = page.date | date(format="%Y") %}
+    {% if year != current_year %}
+    <div class="year-divider">
+      <span class="year-label">{{ year }}</span>
+    </div>
+    {% set_global current_year = year %}
+    {% endif %}
+
+    <article class="note-item">
+      <div class="note-meta">
+        <a href="{{ page.permalink }}" class="note-permalink">
+          <time datetime="{{ page.date | date(format='%+') }}">
+            {{ page.date | date(format="%b %-d, %Y · %-I:%M %p") }}
+          </time>
+        </a>
+      </div>
+      <div class="note-body">
+        {{ page.content | safe }}
+      </div>
+    </article>
+  {% endfor %}
+</section>
+
+<style>
+  .notes_list { max-width: 720px; margin: 0 auto; }
+  .note-item { padding: 1.25rem 0; border-bottom: 1px solid rgba(128,128,128,0.15); }
+  .note-item:last-child { border-bottom: none; }
+  .note-meta { font-size: 0.78rem; opacity: 0.55; margin-bottom: 0.4rem; }
+  .note-permalink { color: inherit; text-decoration: none; }
+  .note-permalink:hover { text-decoration: underline; opacity: 0.85; }
+  .note-body { font-size: 0.98rem; line-height: 1.55; }
+  .note-body p:first-child { margin-top: 0; }
+  .note-body p:last-child { margin-bottom: 0; }
+  .note-body img { max-width: 100%; height: auto; border-radius: 6px; }
+</style>
+{% endblock content %}
