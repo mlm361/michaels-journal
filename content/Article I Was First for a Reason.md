@@ -11,7 +11,7 @@ tags = [ "opinion", "politics",]
 
 
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
-<img src="https://media.mitchelltribe.xyz/gallery/posts/fe041ca2fed9.png.avif" alt="Alt text: &quot;Illustrative poster featuring a stylized muscular arm wielding a gavel labeled &#x27;Article I&#x27; and another arm wielding a similar gavel, both extending from the central image of the U.S. Capitol building. The background is divided into two sections, with the left showing a star and a plane flying over a map labeled &#x27;Greenland&#x27;, and the right depicting a dark throne with a crown, a tank, and pirate ships over a map labeled &#x27;Venezuela&#x27;. The overall theme suggests geopolitical themes or influences.&quot;" style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
+<img src="https://media.mitchelltribe.xyz/gallery/posts/fe041ca2fed9.avif" alt="Alt text: &quot;Illustrative poster featuring a stylized muscular arm wielding a gavel labeled &#x27;Article I&#x27; and another arm wielding a similar gavel, both extending from the central image of the U.S. Capitol building. The background is divided into two sections, with the left showing a star and a plane flying over a map labeled &#x27;Greenland&#x27;, and the right depicting a dark throne with a crown, a tank, and pirate ships over a map labeled &#x27;Venezuela&#x27;. The overall theme suggests geopolitical themes or influences.&quot;" style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
 </figure>
 
 

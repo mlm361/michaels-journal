@@ -11,7 +11,7 @@ tags = [ "review", "movies",]
 
 
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
-<img src="https://media.mitchelltribe.xyz/gallery/posts/tmdb_de9ec758327c.jpg.avif" alt="Movie poster for &quot;The Tank&quot; featuring five soldiers in military uniforms sitting and standing on a large tank with a prominent gun barrel. The background shows a smoky, fiery battlefield, and the title &quot;THE TANK&quot; is displayed in large, bold letters at the top." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
+<img src="https://media.mitchelltribe.xyz/gallery/posts/tmdb_de9ec758327c.avif" alt="Movie poster for &quot;The Tank&quot; featuring five soldiers in military uniforms sitting and standing on a large tank with a prominent gun barrel. The background shows a smoky, fiery battlefield, and the title &quot;THE TANK&quot; is displayed in large, bold letters at the top." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
 </figure>
 
 

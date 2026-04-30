@@ -9,7 +9,7 @@ tags = ["entertainment", "tv", "startrek"]
 
 +++
 
-<img src="https://media.mitchelltribe.xyz/gallery/posts/star_trek_constant_exploration.png.avif" alt="Futuristic starship gliding past a distant planet with nebula clouds in the background, symbolizing Star Trek's enduring journey and its vision of an attainable future" width="600" />
+<img src="https://media.mitchelltribe.xyz/gallery/posts/star_trek_constant_exploration.avif" alt="Futuristic starship gliding past a distant planet with nebula clouds in the background, symbolizing Star Trek's enduring journey and its vision of an attainable future" width="600" />
 
 I was just watching an old episode of *Star Trek: Deep Space Nine*. I’ve always been into Star Trek, every series except *Star Trek: The Next Generation*. I’m not sure why, but I never fully got into that one. The others: *The Original Series*, *Deep Space Nine*, *Voyager*, *Enterprise*, and all the movies (except the *Next Generation* ones), I loved and eagerly awaited. Whether it was a new film release or the next week’s episode, I was always excited. I never watched *Star Trek: The Animated Series* either, even though I own it on DVD.
 

@@ -11,7 +11,7 @@ tags = [ "review", "movies",]
 
 
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
-<img src="https://media.mitchelltribe.xyz/gallery/posts/tmdb_6da3996e49ad.jpg.avif" alt="Alt text: A man in a suit holding a handgun with a serious expression, set against a dark, smoky background with flames at the bottom. The text &quot;CHIEF OF STATION&quot; is displayed prominently at the top." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
+<img src="https://media.mitchelltribe.xyz/gallery/posts/tmdb_6da3996e49ad.avif" alt="Alt text: A man in a suit holding a handgun with a serious expression, set against a dark, smoky background with flames at the bottom. The text &quot;CHIEF OF STATION&quot; is displayed prominently at the top." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
 </figure>
 
 

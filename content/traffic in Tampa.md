@@ -13,7 +13,7 @@ tags = ["TampaTraffic", "CommuterLife", "FloridaLiving"]
 
 
 
-<img src="https://media.mitchelltribe.xyz/gallery/posts/i75-fowler-crash-.jpg.avif" alt="Traffic camera view of I-75 Southbound near Fowler Avenue in Tampa at night, showing heavy congestion in the right lanes with long lines of red brake lights." width="600" />
+<img src="https://media.mitchelltribe.xyz/gallery/posts/i75-fowler-crash-.avif" alt="Traffic camera view of I-75 Southbound near Fowler Avenue in Tampa at night, showing heavy congestion in the right lanes with long lines of red brake lights." width="600" />
 
 
 

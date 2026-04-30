@@ -8,7 +8,7 @@ tags = [ "review", "movies",]
 
 ⚠️ **SPOILER WARNING:** FULL SPOILERS
 
-<img src="https://media.mitchelltribe.xyz/gallery/posts/tmdb_102cc9c05fe1.jpg.avif" alt="Promotional poster for a Superman movie featuring the superhero in a vibrant blue and red suit, confidently standing with his arms crossed, against a brightly lit, colorful background. The logo of DC Studios and the title &quot;SUPERMAN&quot; are prominently displayed." width="600">
+<img src="https://media.mitchelltribe.xyz/gallery/posts/tmdb_102cc9c05fe1.avif" alt="Promotional poster for a Superman movie featuring the superhero in a vibrant blue and red suit, confidently standing with his arms crossed, against a brightly lit, colorful background. The logo of DC Studios and the title &quot;SUPERMAN&quot; are prominently displayed." width="600">
 
 
 

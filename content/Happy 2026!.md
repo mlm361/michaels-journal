@@ -9,7 +9,7 @@ tags = [ "personal",]
 
 
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
-<img src="https://media.mitchelltribe.xyz/gallery/posts/dalle_temp_c5a41d54263a.png.avif" alt="A serene watercolor illustration of a cozy workspace by a window, featuring a laptop displaying code, an open book, a steaming mug, and a potted plant, all bathed in warm sunlight streaming through the window. The artwork combines realistic elements with abstract watercolor splashes." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
+<img src="https://media.mitchelltribe.xyz/gallery/posts/dalle_temp_c5a41d54263a.avif" alt="A serene watercolor illustration of a cozy workspace by a window, featuring a laptop displaying code, an open book, a steaming mug, and a potted plant, all bathed in warm sunlight streaming through the window. The artwork combines realistic elements with abstract watercolor splashes." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
 </figure>
 
 

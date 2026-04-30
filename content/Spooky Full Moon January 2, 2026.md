@@ -9,7 +9,7 @@ tags = [ "photos", "landscape",]
 
 
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
-<img src="https://media.mitchelltribe.xyz/gallery/posts/a1e616407c3f.jpg.avif" alt="A moody night sky with a bright moon partially obscured by thick, textured clouds, with silhouettes of tree tops visible at the bottom." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
+<img src="https://media.mitchelltribe.xyz/gallery/posts/a1e616407c3f.avif" alt="A moody night sky with a bright moon partially obscured by thick, textured clouds, with silhouettes of tree tops visible at the bottom." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
 </figure>
 
 

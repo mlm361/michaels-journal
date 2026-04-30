@@ -9,7 +9,7 @@ tags = [ "personal", "productivity",]
 
 
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
-<img src="https://media.mitchelltribe.xyz/gallery/posts/dalle_temp_3903fa70293c.png.avif" alt="A cluttered desk filled with numerous stacks of DVDs and CDs, some scattered and some in cases, alongside two black game controllers and a white coffee mug. In the center of the desk is a black computer tower with a digital display showing the number &quot;3.&quot; Behind the desk is a large monitor displaying lines of code or text, and a bookshelf filled with more DVDs or books. A desk lamp on the left side casts warm light over the scene, creating a cozy atmosphere." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
+<img src="https://media.mitchelltribe.xyz/gallery/posts/dalle_temp_3903fa70293c.avif" alt="A cluttered desk filled with numerous stacks of DVDs and CDs, some scattered and some in cases, alongside two black game controllers and a white coffee mug. In the center of the desk is a black computer tower with a digital display showing the number &quot;3.&quot; Behind the desk is a large monitor displaying lines of code or text, and a bookshelf filled with more DVDs or books. A desk lamp on the left side casts warm light over the scene, creating a cozy atmosphere." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
 </figure>
 
 

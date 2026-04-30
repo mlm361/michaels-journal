@@ -11,7 +11,7 @@ In recent months, I've been building a social media aggregation platform using t
 Developed in Python using AI coding assistants (Claude and ChatGPT 5.2 High Reasoning) to accelerate development, I designed the platform structure and verified the implementation through testing. The screenshot shows the current interface. Some posts appear duplicated because I follow the same people across multiple platforms.
 <!--more-->
 
-<img src="https://media.mitchelltribe.xyz/gallery/posts/33938ba58abe.png.avif" alt="A screenshot of a social media dashboard interface titled &quot;Personal Events Poster&quot; showing a post from &quot;The Starship Entity ✨ 2025&quot; about NASA&#x27;s Moon Mission Plume-Surface Interaction Tests. The post includes a link to a NASA article and a thumbnail of a video featuring a spacecraft engine test setup. Below this post are comments from other users discussing unrelated topics." width="600">
+<img src="https://media.mitchelltribe.xyz/gallery/posts/33938ba58abe.avif" alt="A screenshot of a social media dashboard interface titled &quot;Personal Events Poster&quot; showing a post from &quot;The Starship Entity ✨ 2025&quot; about NASA&#x27;s Moon Mission Plume-Surface Interaction Tests. The post includes a link to a NASA article and a thumbnail of a video featuring a spacecraft engine test setup. Below this post are comments from other users discussing unrelated topics." width="600">
 
 
 

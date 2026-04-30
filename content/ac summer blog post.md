@@ -9,7 +9,7 @@ lang = "en-us"
 
 +++
 
-<img src="https://media.mitchelltribe.xyz/gallery/posts/florida-ac-comfort-man-reading-recliner-flat-vector.png.avif" alt=" Illustration of a man in a recliner reading a tablet; sunlit palm trees outside a large window, mini-split A/C on the wall, and an iced tea on a side table." width="600" />
+<img src="https://media.mitchelltribe.xyz/gallery/posts/florida-ac-comfort-man-reading-recliner-flat-vector.avif" alt=" Illustration of a man in a recliner reading a tablet; sunlit palm trees outside a large window, mini-split A/C on the wall, and an iced tea on a side table." width="600" />
 
 Lately, especially in the heart of summer, I’ve been thinking about air conditioning and the inventions I’m most grateful for that have matured over my lifetime. I don’t think I could have lived in Florida back in the day without air conditioning. You really notice it when it’s gone. Last year, after Hurricane Milton, we lost power for four days. I couldn’t sleep, not only because the A/C was off but also because my CPAP had no power. That got me thinking about the top five inventions I’m grateful for:
 

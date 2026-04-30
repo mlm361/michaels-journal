@@ -11,7 +11,7 @@ tags = [ "review", "streaming", "tv",]
 
 
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
-<img src="https://media.mitchelltribe.xyz/gallery/posts/tmdb_e79096142df1.jpg.avif" alt="Alt text: Promotional poster for the video game &quot;Fallout&quot; featuring three characters and a dog walking towards the viewer on a dusty road with a large, weathered &quot;Welcome to New Vegas&quot; sign in the background under a dusky sky. The word &quot;Fallout&quot; is prominently displayed at the top in bold yellow letters with a lightning bolt through the &quot;o&quot;." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
+<img src="https://media.mitchelltribe.xyz/gallery/posts/tmdb_e79096142df1.avif" alt="Alt text: Promotional poster for the video game &quot;Fallout&quot; featuring three characters and a dog walking towards the viewer on a dusty road with a large, weathered &quot;Welcome to New Vegas&quot; sign in the background under a dusky sky. The word &quot;Fallout&quot; is prominently displayed at the top in bold yellow letters with a lightning bolt through the &quot;o&quot;." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
 </figure>
 
 

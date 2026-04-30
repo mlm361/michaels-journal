@@ -8,7 +8,7 @@ tags = [ "review", "movies", "streaming",]
 
 ⚠️ **SPOILER WARNING:** MILD SPOILERS
 
-<img src="https://media.mitchelltribe.xyz/gallery/posts/tmdb_7842e168445b.jpg.avif" alt="Movie poster for &quot;The Fantastic Four: First Steps&quot; featuring the four main characters in dynamic action poses. Mr. Fantastic is stretching his arm forward, the Invisible Woman appears ready to use her powers, the Human Torch is engulfed in flames and flying, and the Thing is shown in a powerful, rocky form. The background includes a cityscape and the iconic Fantastic Four logo." width="600">
+<img src="https://media.mitchelltribe.xyz/gallery/posts/tmdb_7842e168445b.avif" alt="Movie poster for &quot;The Fantastic Four: First Steps&quot; featuring the four main characters in dynamic action poses. Mr. Fantastic is stretching his arm forward, the Invisible Woman appears ready to use her powers, the Human Torch is engulfed in flames and flying, and the Thing is shown in a powerful, rocky form. The background includes a cityscape and the iconic Fantastic Four logo." width="600">
 
 
 

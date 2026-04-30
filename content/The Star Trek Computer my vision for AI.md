@@ -12,7 +12,7 @@ tags = ["Star Trek", "AI", "Tools", "Technology"]
 +++
 
 <figure class="captioned">
-  <img src="https://media.mitchelltribe.xyz/gallery/posts/starship-bridge_robot-orchestra_08.png.avif"
+  <img src="https://media.mitchelltribe.xyz/gallery/posts/starship-bridge_robot-orchestra_08.avif"
        alt="A human conductor stands on a podium, baton raised, directing a futuristic orchestra of humanoid robots with glowing blue accents. The robots sit in traditional orchestral formation with violins, cellos, and other instruments. Through the large curved observation window behind them, the saucer section and nacelles of a Federation starship resembling the USS Enterprise are visible against the backdrop of deep space. The walls of the starship interior feature subtle LCARS-style glowing panels."
        width="600" />
   <figcaption>
