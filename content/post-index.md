@@ -7,4 +7,5 @@ render = true
 in_search_index = false
 [extra]
 no_kudos = true
+skip_feed = true
 +++

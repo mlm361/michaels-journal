@@ -4,6 +4,7 @@ date = 2025-01-01
 template = "page.html"
 [extra]
 no_kudos = true
+skip_feed = true
 +++
 
 <div id="stats-page" style="max-width:900px;">

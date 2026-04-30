@@ -29,7 +29,12 @@
 
     {% set_global _card_img = "" %}
     {% if page.extra.image %}
-      {% set_global _card_img = config.base_url ~ page.extra.image %}
+      {% set _card_image_value = page.extra.image | trim %}
+      {% if _card_image_value | split(pat='://') | length > 1 %}
+        {% set_global _card_img = _card_image_value %}
+      {% else %}
+        {% set_global _card_img = config.base_url ~ _card_image_value %}
+      {% endif %}
     {% else %}
       {% set _img_parts = page.content | split(pat='<img') %}
       {% if _img_parts | length > 1 %}
@@ -126,12 +131,20 @@
   .post-card-img-wrap {
     flex: 0 0 160px;
     order: -1;
+    width: 160px;
+    height: 120px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: rgba(128,128,128,0.07);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .post-card-img {
     width: 160px;
     height: 120px;
-    object-fit: cover;
-    border-radius: 8px;
+    object-fit: contain;
+    object-position: center;
     display: block;
   }
 
