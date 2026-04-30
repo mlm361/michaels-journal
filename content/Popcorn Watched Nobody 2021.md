@@ -2,7 +2,9 @@
 title = "🍿 Watched Nobody (2021)"
 date = "2026-04-26T02:01:57+00:00"
 draft = false
-tags = [ "review", "movies",]
+
+[taxonomies]
+tags = ["review", "movies"]
 +++
 
 ⚠️ **SPOILER WARNING:** MILD SPOILERS

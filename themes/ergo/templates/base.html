@@ -40,6 +40,9 @@
         <script>
           (function() {
             var t = localStorage.getItem('ergo-theme') || 'default';
+            document.documentElement.dataset.theme = t;
+            document.documentElement.classList.toggle('theme-dark', t === 'dark');
+            document.documentElement.classList.toggle('theme-default', t !== 'dark');
             document.write('<link id="themeCSS" rel="stylesheet" href="/' + t + '.css">');
           })();
         </script>

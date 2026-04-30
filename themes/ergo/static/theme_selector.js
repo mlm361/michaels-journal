@@ -5,6 +5,13 @@ function applyTheme(theme) {
   if (link) link.href = '/' + theme + '.css';
   localStorage.setItem(THEME_KEY, theme);
 
+  var root = document.documentElement;
+  if (root) {
+    root.dataset.theme = theme;
+    root.classList.toggle('theme-dark', theme === 'dark');
+    root.classList.toggle('theme-default', theme !== 'dark');
+  }
+
   var isDark = theme === 'dark';
   var icon  = document.getElementById('theme-icon');
   var label = document.getElementById('theme-label');

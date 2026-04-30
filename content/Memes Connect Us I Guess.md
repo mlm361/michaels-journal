@@ -2,7 +2,9 @@
 title = "Memes Connect Us, I Guess"
 date = "2026-04-21T22:26:20+00:00"
 draft = false
-tags = [ "entertainment", "music",]
+
+[taxonomies]
+tags = ["entertainment", "music"]
 +++
 
 I usually watch BGT (Britain's Got Talent) clips on YouTube because the British often have really interesting acts. One I liked was the Glantaf Boys Choir from Wales. They were excellent, and it made me wonder why we don't have this kind of all-male boy choir here. We do have choruses and choirs, but they are almost always mixed. There's nothing wrong with that, but it's a different cultural tradition and it's special to see and hear an all-male choir perform.

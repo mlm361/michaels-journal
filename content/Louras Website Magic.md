@@ -2,7 +2,9 @@
 title = "Loura's Website Magic"
 date = "2026-04-23T08:08:48+00:00"
 draft = false
-tags = [ "opinion", "web-development",]
+
+[taxonomies]
+tags = ["opinion", "web-development"]
 +++
 
 If you ever want to see a master craftswoman at website design and theming, then you must stop over at [Hey Loura!](https://heyloura.com/2026/04/21/this-weekend-i-reached-for.html) She is also in my BlogRoll. Her latest creation is spectacular and pirate-themed. She keeps outdoing herself each time she updates.
