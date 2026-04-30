@@ -28,6 +28,8 @@
     {% endif %}
 
     {% set_global _card_img = "" %}
+    {% set_global _card_fit = page.extra.card_fit | default(value="cover") %}
+    {% set_global _card_position = page.extra.card_position | default(value="center center") %}
     {% if page.extra.image %}
       {% set _card_image_value = page.extra.image | trim %}
       {% if _card_image_value | split(pat='://') | length > 1 %}
@@ -61,7 +63,7 @@
       <div class="post-card-main">
         {% if _card_img %}
         <a href="{{ page.permalink }}" class="post-card-img-wrap">
-          <img src="{{ _card_img }}" alt="{{ page.title }}" class="post-card-img" loading="lazy">
+          <img src="{{ _card_img }}" alt="{{ page.title }}" class="post-card-img" loading="lazy" style="object-fit: {{ _card_fit }}; object-position: {{ _card_position }};">
         </a>
         {% endif %}
         <div class="post-card-text">
@@ -143,8 +145,8 @@
   .post-card-img {
     width: 160px;
     height: 120px;
-    object-fit: contain;
-    object-position: center;
+    object-fit: cover;
+    object-position: center center;
     display: block;
   }
 

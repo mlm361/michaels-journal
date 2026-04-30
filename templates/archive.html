@@ -19,6 +19,7 @@
       {% set_global cur_month = "" %}
 
       {% for page in root.pages %}
+        {% if page.extra.skip_feed %}{% continue %}{% endif %}
         {% set y = page.date | date(format="%Y") %}
         {% set m = page.date | date(format="%B %Y") %}
 

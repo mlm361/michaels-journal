@@ -2,6 +2,8 @@
 title = "📺 Watched The Morning Show (2019)"
 date = "2025-12-19T00:05:11+00:00"
 draft = false
+[extra]
+card_fit = "contain"
 [taxonomies]
 tags = [ "review", "tv", "streaming",]
 +++
