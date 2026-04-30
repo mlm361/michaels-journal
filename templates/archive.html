@@ -18,10 +18,10 @@
       {% set_global cur_year = "" %}
       {% set_global cur_month = "" %}
 
-      {% for page in root.pages %}
-        {% if page.extra.skip_feed %}{% continue %}{% endif %}
-        {% set y = page.date | date(format="%Y") %}
-        {% set m = page.date | date(format="%B %Y") %}
+      {% for entry in root.pages %}
+        {% if entry.extra.skip_feed is defined and entry.extra.skip_feed %}{% continue %}{% endif %}
+        {% set y = entry.date | date(format="%Y") %}
+        {% set m = entry.date | date(format="%B %Y") %}
 
         {% if y != cur_year %}
           {% if cur_year != "" %}</ul></section>{% endif %}
@@ -39,8 +39,8 @@
         {% endif %}
 
         <li class="archive-entry">
-          <time>{{ page.date | date(format="%b %d") }}</time>
-          <a href="{{ page.permalink }}">{{ page.title }}</a>
+          <time>{{ entry.date | date(format="%b %d") }}</time>
+          <a href="{{ entry.permalink }}">{{ entry.title }}</a>
         </li>
 
       {% endfor %}

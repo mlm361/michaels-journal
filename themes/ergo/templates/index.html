@@ -17,7 +17,7 @@
 <section class="post_list">
   {% set_global current_year = "" %}
   {% for page in paginator.pages %}
-    {% if page.extra.skip_feed %}{% continue %}{% endif %}
+    {% if page.extra.skip_feed is defined and page.extra.skip_feed %}{% continue %}{% endif %}
 
     {% set year = page.date | date(format="%Y") %}
     {% if year != current_year %}
