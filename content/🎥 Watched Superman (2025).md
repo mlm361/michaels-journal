@@ -2,6 +2,8 @@
 title = "🎥 Watched Superman (2025)"
 date = "2025-12-14T12:03:30+00:00"
 draft = false
+[extra]
+card_fit = "contain"
 [taxonomies]
 tags = [ "review", "movies",]
 +++

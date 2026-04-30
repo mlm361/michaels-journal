@@ -2,6 +2,8 @@
 title = "🍿 Watched The Tank (2025) on Prime Video"
 date = "2026-01-22T14:41:58+00:00"
 draft = false
+[extra]
+card_fit = "contain"
 [taxonomies]
 tags = [ "review", "movies",]
 +++
