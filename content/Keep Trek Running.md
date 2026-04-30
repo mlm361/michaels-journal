@@ -4,6 +4,8 @@ title = "Keep Trek Running"
 description = "Why Star Trek should always have a series on the air and how its vision of accessible AI technology offers a more achievable future than      Star Wars."
 date = "2025-07-16T20:09:07-04:00"
 draft = false
+[extra]
+card_fit = "contain"
 [taxonomies]
 tags = ["entertainment", "tv", "startrek"]
 
@@ -24,4 +26,3 @@ Take Star Wars, for example. It’s supposed to be highly advanced, yet some asp
  
 
 #StarTrek #TV #SciFi #entertainment
-

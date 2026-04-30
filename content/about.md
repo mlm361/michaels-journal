@@ -15,7 +15,7 @@ skip_feed = true
 
 ## 
 
-I'm Michael Mitchell, a <strong id="age-display">...</strong>-year-old Christian who loves technology, living in Florida with proud Polish heritage.
+Hello, I'm Michael Mitchell 👋🏻, a <span id="age-display">...</span>-year-old Christian who loves technology, living in Florida with proud Polish heritage.
 
 I spent 18 years working in state and local government before retiring. I now work as a Pharmacy Technician and Purchasing Agent. I studied IT in college for two years, a path I had to put on hold but never lost interest in. My love for technology has remained strong, and I still enjoy learning, exploring, and finding practical ways to use it in everyday life.
 
