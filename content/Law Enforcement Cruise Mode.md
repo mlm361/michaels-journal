@@ -7,7 +7,7 @@ draft = false
 author = "Michael"
 lang = "en-us"
 [extra]
-image = "/uploads/police-cruise-mode-confused-driver-illustration.png"
+image = "https://media.mitchelltribe.xyz/gallery/posts/police-cruise-mode-confused-driver-illustration.png.avif"
 image_alt = "Driver confused as a police car follows with steady red/blue lights"
 [taxonomies]
 tags = ["Florida", "traffic-law", "police-lights"]
@@ -16,7 +16,7 @@ tags = ["Florida", "traffic-law", "police-lights"]
 
 
 
-<img src="/uploads/police-cruise-mode-confused-driver-illustration.png" alt=" Illustration of a driver looking confused as a police car follows with steady red and blue lights." width="600" />
+<img src="https://media.mitchelltribe.xyz/gallery/posts/police-cruise-mode-confused-driver-illustration.png.avif" alt=" Illustration of a driver looking confused as a police car follows with steady red and blue lights." width="600" />
 
 
 

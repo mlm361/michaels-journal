@@ -13,7 +13,7 @@ tags = ["HOCM", "Camzyos", "HeartHealth"]
 
 
 
-<img src="/uploads/heart-condition-checkup-ink-illustration.png" alt="Black-and-white hand-drawn illustration of a doctor’s office, showing a doctor with a stethoscope seated at a desk, attentively listening to a male patient. The office includes a computer, medical supplies, bookshelves, and an anatomical heart chart on the wall, all rendered in detailed pen-and-ink linework with subtle cross-hatching." width="600" />
+<img src="https://media.mitchelltribe.xyz/gallery/posts/heart-condition-checkup-ink-illustration.png.avif" alt="Black-and-white hand-drawn illustration of a doctor’s office, showing a doctor with a stethoscope seated at a desk, attentively listening to a male patient. The office includes a computer, medical supplies, bookshelves, and an anatomical heart chart on the wall, all rendered in detailed pen-and-ink linework with subtle cross-hatching." width="600" />
 
 
 

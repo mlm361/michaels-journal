@@ -8,7 +8,7 @@ tags = [ "hardware", "tech-gadgets", "technology",]
 
 This weekend was quite productive for me! I managed to put together the Pironman5 Max and install a 16GB Raspberry Pi 5, and I also moved my 1TB NVMe drive from my old 8GB Pironman5, which served my homelab and home server for a year. I've owned the Pironman5 Max since June, but my ongoing health issues had left me too drained to assemble it until now. Thankfully, my new medication, Camzyos, has really helped me regain some energy.
 
-<img src="/uploads/74314c0b1284.jpg" alt="A black, vertical standing computer case with a glossy finish and the word &quot;PIRONMAN&quot; embossed on the front, placed on a textured gray surface. The case features visible ports and a power button on the front panel." width="600">
+<img src="https://media.mitchelltribe.xyz/gallery/posts/74314c0b1284.jpg.avif" alt="A black, vertical standing computer case with a glossy finish and the word &quot;PIRONMAN&quot; embossed on the front, placed on a textured gray surface. The case features visible ports and a power button on the front panel." width="600">
 
 
 

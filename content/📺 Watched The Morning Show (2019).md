@@ -8,7 +8,7 @@ tags = [ "review", "tv", "streaming",]
 
 ⚠️ **SPOILER WARNING:** MINOR SPOILERS
 
-<img src="/uploads/tmdb_fb9f93f40a65.jpg" alt="Promotional poster for &quot;The Morning Show&quot; featuring two women in black outfits standing back-to-back with a cityscape background and the show&#x27;s title in bold yellow letters at the bottom." width="600">
+<img src="https://media.mitchelltribe.xyz/gallery/posts/tmdb_fb9f93f40a65.jpg.avif" alt="Promotional poster for &quot;The Morning Show&quot; featuring two women in black outfits standing back-to-back with a cityscape background and the show&#x27;s title in bold yellow letters at the bottom." width="600">
 
 
 

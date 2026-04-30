@@ -13,7 +13,7 @@ lang = "en-us"
 
 
 <figure class="captioned">
-  <img src="/uploads/electronics_researcher_working_on_circuit_board.png"
+  <img src="https://media.mitchelltribe.xyz/gallery/posts/electronics_researcher_working_on_circuit_board.png.avif"
        alt="A middle-aged man with a beard and glasses is deeply focused while working on an electronic circuit board in a high-tech lab environment. The view is framed as if seen through a circular lens, highlighting the intricate details of the circuitry and the thoughtful expression of the man. The background features futuristic digital displays and diagrams, enhancing the scene's innovative and technical atmosphere."
        width="600" />
   <figcaption>
