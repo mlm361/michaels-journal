@@ -4,7 +4,7 @@ date = "2025-09-23T20:00:00-04:00"
 draft = false
 
 [extra]
-skip_feed = true
+exclude_from_feed = true
 +++
 
 <p><strong>From Disney+/Hulu:</strong></p>
