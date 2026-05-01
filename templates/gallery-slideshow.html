@@ -1,283 +1,218 @@
 {% extends "base.html" %}
 
-{% block head %}
-  {{ super() }}
-  <meta name="theme-color" content="#000000">
-{% endblock head %}
-
 {% block content %}
 {%- set photos = page.extra.photos -%}
-{%- set alts     = page.extra.alts | default(value=[]) -%}
+{%- set alts = page.extra.alts | default(value=[]) -%}
 {%- set captions = page.extra.captions | default(value=[]) -%}
-{%- set music_url = page.extra.music_url | default(value="") -%}
-{%- set slide_ms  = page.extra.slide_duration_ms | default(value=5000) -%}
+{%- set slide_ms = page.extra.slide_duration_ms | default(value=5000) -%}
 
-<div class="ss-root" data-slide-ms="{{ slide_ms }}">
-  <p class="ss-back"><a href="{{ get_url(path='gallery') }}">&larr; Gallery</a></p>
-  <h1 class="ss-title">{{ page.title }}</h1>
-  <p class="ss-date">{{ page.date | date(format="%B %d, %Y") }}</p>
+<div class="carousel" id="carousel" data-slide-ms="{{ slide_ms }}">
+  <p class="carousel__back"><a href="{{ get_url(path='gallery') }}">&larr; Gallery</a></p>
+  <h1 class="carousel__title">{{ page.title }}</h1>
+  <p class="carousel__date">{{ page.date | date(format="%B %d, %Y") }}</p>
 
-  <div class="ss-stage" id="ss-stage" tabindex="0" aria-roledescription="carousel" aria-label="{{ page.title }} slideshow">
-    {% for slug in photos %}
-    {% set i = loop.index0 %}
-    {% set alt_text = alts[i] | default(value="Photo") %}
-    {% set caption  = captions[i] | default(value="") %}
-    <figure class="ss-slide{% if loop.first %} is-active{% endif %}" data-index="{{ i }}">
-      <div class="ss-bg" style="background-image:url('{{ page.extra.r2_base }}/thumbs/{{ slug }}.avif');" aria-hidden="true"></div>
-      <img
-        class="ss-photo"
-        src="{{ page.extra.r2_base }}/{{ slug }}.avif"
-        alt="{{ alt_text }}"
-        loading="{% if loop.first %}eager{% else %}lazy{% endif %}"
-        {% if loop.first %}fetchpriority="high"{% endif %}
-      >
-      {% if caption %}<figcaption class="ss-caption">{{ caption }}</figcaption>{% endif %}
-    </figure>
-    {% endfor %}
-
-    <div class="ss-controls" role="toolbar" aria-label="Slideshow controls">
-      <button class="ss-btn" id="ss-prev"  type="button" aria-label="Previous slide">&#10094;</button>
-      <button class="ss-btn" id="ss-play"  type="button" aria-label="Pause" aria-pressed="true">&#10074;&#10074;</button>
-      <button class="ss-btn" id="ss-next"  type="button" aria-label="Next slide">&#10095;</button>
-      <span class="ss-spacer"></span>
-      {% if music_url %}<button class="ss-btn" id="ss-mute" type="button" aria-label="Mute music" aria-pressed="false">&#128266;</button>{% endif %}
-      <button class="ss-btn" id="ss-fullscreen" type="button" aria-label="Toggle fullscreen">&#9974;</button>
-      <span class="ss-counter" id="ss-counter">1 / {{ photos | length }}</span>
-    </div>
-
-    <div class="ss-progress" aria-hidden="true"><div class="ss-progress-bar" id="ss-progress"></div></div>
+  <div class="carousel__viewer">
+    <img class="carousel__image"
+         id="carousel-img"
+         src="{{ page.extra.r2_base }}/{{ photos[0] }}.avif"
+         alt="{{ alts[0] | default(value='Photo') }}"
+         fetchpriority="high">
   </div>
 
-  {% if music_url %}<audio id="ss-audio" src="{{ music_url }}" loop preload="auto"></audio>{% endif %}
+  <p class="carousel__caption" id="carousel-caption" aria-live="polite">{{ captions[0] | default(value='') }}</p>
+
+  <div class="carousel__controls">
+    <button class="carousel__btn" id="carousel-prev" type="button">&larr; Previous</button>
+    <button class="carousel__btn carousel__btn--primary" id="carousel-playpause" type="button" aria-pressed="true">Pause Slideshow</button>
+    <button class="carousel__btn" id="carousel-next" type="button">Next &rarr;</button>
+    <span class="carousel__counter" id="carousel-counter">1 / {{ photos | length }}</span>
+  </div>
+
+  <ul class="carousel__photos" id="carousel-photos" hidden aria-hidden="true">
+    {% for slug in photos %}
+    {% set i = loop.index0 %}
+    <li data-src="{{ page.extra.r2_base }}/{{ slug }}.avif"
+        data-alt="{{ alts[i] | default(value='Photo') }}"
+        data-caption="{{ captions[i] | default(value='') }}"></li>
+    {% endfor %}
+  </ul>
 </div>
 
 <style>
-  .ss-root { max-width: 1200px; margin: 0 auto; padding: calc(56px + 1rem) 1rem 1.5rem; }
-  .ss-back { margin: 0 0 .35rem; font-size: .9rem; }
-  .ss-back a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
-  .ss-title { margin: 0 0 .15rem; }
-  .ss-date  { font-size: .88rem; opacity: .55; margin: 0 0 1rem; }
+  .carousel { max-width: 1100px; margin: 0 auto; padding: calc(56px + 1rem) 1rem 2rem; }
+  .carousel__back { margin: 0 0 .35rem; font-size: .9rem; }
+  .carousel__back a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+  .carousel__title { margin: 0 0 .15rem; }
+  .carousel__date { font-size: .88rem; opacity: .55; margin: 0 0 1.25rem; }
 
-  .ss-stage {
-    position: relative;
-    background: #111;
-    border-radius: 6px;
-    aspect-ratio: 3/2;
-    overflow: hidden;
-    outline: none;
-    user-select: none;
+  .carousel__viewer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    margin: 0 auto 1rem;
   }
-  .ss-stage:focus-visible { box-shadow: 0 0 0 3px #4ea0ff; }
-
-  .ss-slide {
-    position: absolute; inset: 0; margin: 0;
-    display: flex; align-items: center; justify-content: center;
-    opacity: 0; transition: opacity .6s ease;
-    pointer-events: none;
-  }
-  .ss-slide.is-active { opacity: 1; pointer-events: auto; z-index: 1; }
-  .ss-bg {
-    position: absolute; inset: -8%;
-    background-size: cover; background-position: center;
-    filter: blur(28px) brightness(.55) saturate(1.05);
-    transform: scale(1.08);
-    z-index: 0;
-  }
-  .ss-photo {
-    position: relative;
-    width: 100%; height: 100%;
+  .carousel__photos { display: none; }
+  .carousel__image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 78vh;
+    width: auto;
+    height: auto;
     object-fit: contain;
-    z-index: 1;
+    border-radius: 6px;
+    box-shadow: 0 6px 24px rgba(0,0,0,.18);
   }
-  .ss-caption {
-    position: absolute; left: 0; right: 0; bottom: 0;
-    padding: .9rem 1rem 1.6rem;
-    background: linear-gradient(to top, rgba(0,0,0,.78), rgba(0,0,0,0));
-    color: #fff;
-    font-size: .95rem;
+
+  .carousel__caption {
     text-align: center;
-    line-height: 1.35;
-  }
-
-  .ss-controls {
-    position: absolute; left: 0; right: 0; bottom: 0;
-    display: flex; align-items: center; gap: .35rem;
-    padding: .5rem .75rem;
-    z-index: 3;
-    background: linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,0));
-    opacity: 0; transition: opacity .25s;
-  }
-  .ss-stage:hover .ss-controls,
-  .ss-stage:focus-within .ss-controls,
-  .ss-stage.is-paused .ss-controls { opacity: 1; }
-
-  .ss-btn {
-    background: rgba(0,0,0,.55);
-    color: #fff;
-    border: 1px solid rgba(255,255,255,.2);
-    border-radius: 4px;
-    padding: .35rem .55rem;
+    font-style: italic;
+    margin: 0 0 1.25rem;
     font-size: 1rem;
-    line-height: 1;
-    cursor: pointer;
-    min-width: 2.2rem;
+    line-height: 1.4;
+    min-height: 1.5em;
   }
-  .ss-btn:hover { background: rgba(0,0,0,.78); }
-  .ss-btn:focus-visible { outline: 2px solid #4ea0ff; outline-offset: 2px; }
+  .carousel__caption:empty::before { content: "\00a0"; }
 
-  .ss-spacer { flex: 1; }
-  .ss-counter {
-    color: #fff; font-size: .82rem; opacity: .8;
-    margin-left: .25rem;
+  .carousel__controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: .65rem;
+    padding: .25rem 0 .5rem;
+  }
+  .carousel__btn {
+    font: inherit;
+    color: inherit;
+    background: transparent;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    padding: .45rem 1rem;
+    cursor: pointer;
+    font-size: .9rem;
+    line-height: 1;
+    transition: background .2s, color .2s;
+  }
+  .carousel__btn:hover { background: currentColor; color: #fff; }
+  .carousel__btn:hover { background: #282; color: #fff; border-color: #282; }
+  .carousel__btn--primary { font-weight: 600; }
+  .carousel__btn:focus-visible { outline: 2px solid #4ea0ff; outline-offset: 2px; }
+  .carousel__counter {
+    margin-left: .5rem;
+    font-size: .85rem;
+    opacity: .6;
     font-variant-numeric: tabular-nums;
   }
 
-  .ss-progress {
-    position: absolute; left: 0; right: 0; top: 0;
-    height: 3px; background: rgba(255,255,255,.12);
-    z-index: 2;
-  }
-  .ss-progress-bar {
-    height: 100%; width: 0%;
-    background: rgba(255,255,255,.85);
-    transition: width .12s linear;
-  }
-
-  /* Fullscreen styling */
-  .ss-stage:fullscreen {
-    aspect-ratio: auto;
-    width: 100vw; height: 100vh;
-    border-radius: 0;
-  }
-
   @media (max-width: 600px) {
-    .ss-stage { aspect-ratio: 4/3; }
-    .ss-caption { font-size: .85rem; padding: .7rem .75rem 1.4rem; }
-    .ss-bg { filter: blur(20px) brightness(.55) saturate(1.05); }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .ss-slide { transition: none; }
-    .ss-progress-bar { transition: none; }
+    .carousel__image { max-height: 65vh; }
+    .carousel__btn { padding: .4rem .75rem; font-size: .85rem; }
+    .carousel__counter { width: 100%; text-align: center; margin-left: 0; }
   }
 </style>
 
 <script>
 (function () {
-  var root = document.querySelector('.ss-root');
+  var root = document.getElementById('carousel');
   if (!root) return;
-  var stage    = root.querySelector('#ss-stage');
-  var slides   = Array.from(root.querySelectorAll('.ss-slide'));
-  var btnPrev  = root.querySelector('#ss-prev');
-  var btnNext  = root.querySelector('#ss-next');
-  var btnPlay  = root.querySelector('#ss-play');
-  var btnMute  = root.querySelector('#ss-mute');
-  var btnFull  = root.querySelector('#ss-fullscreen');
-  var counter  = root.querySelector('#ss-counter');
-  var bar      = root.querySelector('#ss-progress');
-  var audio    = root.querySelector('#ss-audio');
 
-  var slideMs  = parseInt(root.getAttribute('data-slide-ms'), 10) || 5000;
-  var idx      = 0;
-  var playing  = true;
-  var rafId    = null;
-  var startTs  = null;
+  var items = Array.from(document.querySelectorAll('#carousel-photos li'));
+  if (items.length === 0) return;
+  var data = items.map(function (li) {
+    return {
+      src: li.dataset.src,
+      alt: li.dataset.alt || '',
+      caption: li.dataset.caption || ''
+    };
+  });
+
+  var img      = document.getElementById('carousel-img');
+  var caption  = document.getElementById('carousel-caption');
+  var counter  = document.getElementById('carousel-counter');
+  var btnPrev  = document.getElementById('carousel-prev');
+  var btnNext  = document.getElementById('carousel-next');
+  var btnPlay  = document.getElementById('carousel-playpause');
+
+  img.addEventListener('error', function () {
+    console.error('Carousel image failed to load:', img.src);
+  });
+
+  var slideMs    = parseInt(root.getAttribute('data-slide-ms'), 10) || 5000;
+  var idx        = 0;
+  var isPlaying  = true;
+  var slideTimer = null;
 
   function show(n) {
-    idx = (n + slides.length) % slides.length;
-    slides.forEach(function (s, i) { s.classList.toggle('is-active', i === idx); });
-    counter.textContent = (idx + 1) + ' / ' + slides.length;
-    startTs = null;  // reset progress
+    idx = (n + data.length) % data.length;
+    var item = data[idx];
+    img.src = item.src;
+    img.alt = item.alt || '';
+    caption.textContent = item.caption || '';
+    counter.textContent = (idx + 1) + ' / ' + data.length;
+    restartTimer();
   }
 
-  function tick(ts) {
-    if (!playing) return;
-    if (startTs === null) startTs = ts;
-    var elapsed = ts - startTs;
-    var pct = Math.min(100, (elapsed / slideMs) * 100);
-    bar.style.width = pct + '%';
-    if (elapsed >= slideMs) {
-      show(idx + 1);
-    }
-    rafId = requestAnimationFrame(tick);
+  function next() { show(idx + 1); }
+  function prev() { show(idx - 1); }
+
+  function restartTimer() {
+    if (slideTimer) { clearTimeout(slideTimer); slideTimer = null; }
+    if (isPlaying) slideTimer = setTimeout(next, slideMs);
   }
 
   function play() {
-    playing = true;
-    stage.classList.remove('is-paused');
+    isPlaying = true;
+    btnPlay.textContent = 'Pause Slideshow';
     btnPlay.setAttribute('aria-pressed', 'true');
-    btnPlay.setAttribute('aria-label', 'Pause');
-    btnPlay.innerHTML = '&#10074;&#10074;';
-    if (audio && !audio.muted) { audio.play().catch(function () {}); }
-    if (rafId === null) rafId = requestAnimationFrame(tick);
+    restartTimer();
   }
   function pause() {
-    playing = false;
-    stage.classList.add('is-paused');
+    isPlaying = false;
+    btnPlay.textContent = 'Play Slideshow';
     btnPlay.setAttribute('aria-pressed', 'false');
-    btnPlay.setAttribute('aria-label', 'Play');
-    btnPlay.innerHTML = '&#9654;';
-    if (audio) { audio.pause(); }
-    if (rafId !== null) { cancelAnimationFrame(rafId); rafId = null; }
+    if (slideTimer) { clearTimeout(slideTimer); slideTimer = null; }
   }
 
-  btnPrev.addEventListener('click', function () { show(idx - 1); });
-  btnNext.addEventListener('click', function () { show(idx + 1); });
-  btnPlay.addEventListener('click', function () { playing ? pause() : play(); });
-  btnFull.addEventListener('click', function () {
-    if (document.fullscreenElement) { document.exitFullscreen(); }
-    else { stage.requestFullscreen && stage.requestFullscreen(); }
-  });
-  if (btnMute && audio) {
-    audio.volume = 0.5;
-    audio.muted = true;
-    btnMute.addEventListener('click', function () {
-      audio.muted = !audio.muted;
-      btnMute.setAttribute('aria-pressed', audio.muted ? 'false' : 'true');
-      btnMute.innerHTML = audio.muted ? '&#128263;' : '&#128266;';
-      if (!audio.muted && playing) { audio.play().catch(function () {}); }
-    });
-  }
+  btnPlay.addEventListener('click', function () { isPlaying ? pause() : play(); });
+  btnPrev.addEventListener('click', prev);
+  btnNext.addEventListener('click', next);
 
-  // Keyboard
-  stage.addEventListener('keydown', function (e) {
-    if (e.key === 'ArrowLeft')  { e.preventDefault(); show(idx - 1); }
-    else if (e.key === 'ArrowRight') { e.preventDefault(); show(idx + 1); }
-    else if (e.key === ' ')          { e.preventDefault(); playing ? pause() : play(); }
-    else if (e.key === 'f' || e.key === 'F') { e.preventDefault(); btnFull.click(); }
+  document.addEventListener('keydown', function (e) {
+    if (e.target.matches('input, textarea, select')) return;
+    if (e.key === 'ArrowRight') { e.preventDefault(); next(); }
+    else if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
+    else if (e.key === ' ') { e.preventDefault(); isPlaying ? pause() : play(); }
   });
 
-  // Touch swipe
+  // Touch swipe on the image area
   var sx = null, sy = null;
-  stage.addEventListener('touchstart', function (e) {
+  var viewer = root.querySelector('.carousel__viewer');
+  viewer.addEventListener('touchstart', function (e) {
     if (e.touches.length !== 1) return;
     sx = e.touches[0].clientX; sy = e.touches[0].clientY;
   }, { passive: true });
-  stage.addEventListener('touchend', function (e) {
+  viewer.addEventListener('touchend', function (e) {
     if (sx === null) return;
     var t = e.changedTouches[0];
     var dx = t.clientX - sx, dy = t.clientY - sy;
     if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
-      show(idx + (dx < 0 ? 1 : -1));
+      dx < 0 ? next() : prev();
     }
     sx = sy = null;
   }, { passive: true });
 
-  // Click image to advance
-  slides.forEach(function (s) {
-    s.addEventListener('click', function () { show(idx + 1); });
-  });
-
-  // Pause when tab hidden
+  // Pause when the tab is hidden so we don't pile up timers
   document.addEventListener('visibilitychange', function () {
-    if (document.hidden && playing) { pause(); }
+    if (document.hidden) {
+      if (slideTimer) { clearTimeout(slideTimer); slideTimer = null; }
+    } else if (isPlaying) {
+      restartTimer();
+    }
   });
-
-  // Honor reduced-motion: instant transitions, but slideshow still advances
-  // (transition: none is set in CSS).
 
   show(0);
-  play();
 })();
 </script>
 {% endblock content %}
