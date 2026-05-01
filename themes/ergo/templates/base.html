@@ -77,6 +77,12 @@
         {% block content %} {% endblock content %}
         {% block pagination %} {% endblock pagination %}
 
+        <button class="scroll-to-top" id="scrollToTop" type="button" aria-label="Scroll to top" aria-hidden="true" tabindex="-1">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 5l-7 7 1.4 1.4L11 8.8V20h2V8.8l4.6 4.6L19 12z"></path>
+          </svg>
+        </button>
+
         <footer class="site-footer">
 
             <p class="footer-line">© 2001–<span id="currentYear"></span> Michael Mitchell</p>
@@ -255,6 +261,25 @@
           }
           _updateUptime();
           setInterval(_updateUptime, 1000);
+
+          (function () {
+            var button = document.getElementById("scrollToTop");
+            if (!button) return;
+
+            var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+            function syncButtonVisibility() {
+              var visible = window.scrollY > 420;
+              button.classList.toggle("is-visible", visible);
+              button.setAttribute("aria-hidden", visible ? "false" : "true");
+              button.tabIndex = visible ? 0 : -1;
+            }
+
+            button.addEventListener("click", function () {
+              window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+            });
+            window.addEventListener("scroll", syncButtonVisibility, { passive: true });
+            syncButtonVisibility();
+          })();
         </script>
     </body>
 </html>
