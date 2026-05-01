@@ -40,8 +40,8 @@
   <div class="video-grid">
     {% for slug in page.extra.videos %}
     <div class="video-wrap">
-      <video controls preload="none" loading="lazy" class="gallery-video">
-        <source src="{{ page.extra.r2_base }}/videos/{{ slug }}.mp4" type="video/mp4">
+      <video controls preload="metadata" playsinline class="gallery-video">
+        <source src="{{ page.extra.r2_base }}/videos/{{ slug }}.mp4#t=0.5" type="video/mp4">
       </video>
     </div>
     {% endfor %}

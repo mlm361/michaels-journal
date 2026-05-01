@@ -1,0 +1,272 @@
+{% extends "base.html" %}
+
+{% block head %}
+  {{ super() }}
+  <meta name="theme-color" content="#000000">
+{% endblock head %}
+
+{% block content %}
+{%- set photos = page.extra.photos -%}
+{%- set alts     = page.extra.alts | default(value=[]) -%}
+{%- set captions = page.extra.captions | default(value=[]) -%}
+{%- set music_url = page.extra.music_url | default(value="") -%}
+{%- set slide_ms  = page.extra.slide_duration_ms | default(value=5000) -%}
+
+<div class="ss-root" data-slide-ms="{{ slide_ms }}">
+  <p class="ss-back"><a href="{{ get_url(path='gallery') }}">&larr; Gallery</a></p>
+  <h1 class="ss-title">{{ page.title }}</h1>
+  <p class="ss-date">{{ page.date | date(format="%B %d, %Y") }}</p>
+
+  <div class="ss-stage" id="ss-stage" tabindex="0" aria-roledescription="carousel" aria-label="{{ page.title }} slideshow">
+    {% for slug in photos %}
+    {% set i = loop.index0 %}
+    {% set alt_text = alts[i] | default(value="Photo") %}
+    {% set caption  = captions[i] | default(value="") %}
+    <figure class="ss-slide{% if loop.first %} is-active{% endif %}" data-index="{{ i }}">
+      <img
+        src="{{ page.extra.r2_base }}/{{ slug }}.avif"
+        alt="{{ alt_text }}"
+        loading="{% if loop.first %}eager{% else %}lazy{% endif %}"
+        {% if loop.first %}fetchpriority="high"{% endif %}
+      >
+      {% if caption %}<figcaption class="ss-caption">{{ caption }}</figcaption>{% endif %}
+    </figure>
+    {% endfor %}
+
+    <div class="ss-controls" role="toolbar" aria-label="Slideshow controls">
+      <button class="ss-btn" id="ss-prev"  type="button" aria-label="Previous slide">&#10094;</button>
+      <button class="ss-btn" id="ss-play"  type="button" aria-label="Pause" aria-pressed="true">&#10074;&#10074;</button>
+      <button class="ss-btn" id="ss-next"  type="button" aria-label="Next slide">&#10095;</button>
+      <span class="ss-spacer"></span>
+      {% if music_url %}<button class="ss-btn" id="ss-mute" type="button" aria-label="Mute music" aria-pressed="false">&#128266;</button>{% endif %}
+      <button class="ss-btn" id="ss-fullscreen" type="button" aria-label="Toggle fullscreen">&#9974;</button>
+      <span class="ss-counter" id="ss-counter">1 / {{ photos | length }}</span>
+    </div>
+
+    <div class="ss-progress" aria-hidden="true"><div class="ss-progress-bar" id="ss-progress"></div></div>
+  </div>
+
+  {% if music_url %}<audio id="ss-audio" src="{{ music_url }}" loop preload="auto"></audio>{% endif %}
+</div>
+
+<style>
+  .ss-root { max-width: 1200px; margin: 0 auto; padding: calc(56px + 1rem) 1rem 1.5rem; }
+  .ss-back { margin: 0 0 .35rem; font-size: .9rem; }
+  .ss-back a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+  .ss-title { margin: 0 0 .15rem; }
+  .ss-date  { font-size: .88rem; opacity: .55; margin: 0 0 1rem; }
+
+  .ss-stage {
+    position: relative;
+    background: #000;
+    border-radius: 6px;
+    aspect-ratio: 16/10;
+    overflow: hidden;
+    outline: none;
+    user-select: none;
+  }
+  .ss-stage:focus-visible { box-shadow: 0 0 0 3px #4ea0ff; }
+
+  .ss-slide {
+    position: absolute; inset: 0; margin: 0;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; transition: opacity .6s ease;
+    pointer-events: none;
+  }
+  .ss-slide.is-active { opacity: 1; pointer-events: auto; z-index: 1; }
+  .ss-slide img {
+    max-width: 100%; max-height: 100%;
+    width: auto; height: auto;
+    object-fit: contain;
+  }
+  .ss-caption {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    padding: .9rem 1rem 1.6rem;
+    background: linear-gradient(to top, rgba(0,0,0,.78), rgba(0,0,0,0));
+    color: #fff;
+    font-size: .95rem;
+    text-align: center;
+    line-height: 1.35;
+  }
+
+  .ss-controls {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    display: flex; align-items: center; gap: .35rem;
+    padding: .5rem .75rem;
+    z-index: 3;
+    background: linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,0));
+    opacity: 0; transition: opacity .25s;
+  }
+  .ss-stage:hover .ss-controls,
+  .ss-stage:focus-within .ss-controls,
+  .ss-stage.is-paused .ss-controls { opacity: 1; }
+
+  .ss-btn {
+    background: rgba(0,0,0,.55);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 4px;
+    padding: .35rem .55rem;
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+    min-width: 2.2rem;
+  }
+  .ss-btn:hover { background: rgba(0,0,0,.78); }
+  .ss-btn:focus-visible { outline: 2px solid #4ea0ff; outline-offset: 2px; }
+
+  .ss-spacer { flex: 1; }
+  .ss-counter {
+    color: #fff; font-size: .82rem; opacity: .8;
+    margin-left: .25rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .ss-progress {
+    position: absolute; left: 0; right: 0; top: 0;
+    height: 3px; background: rgba(255,255,255,.12);
+    z-index: 2;
+  }
+  .ss-progress-bar {
+    height: 100%; width: 0%;
+    background: rgba(255,255,255,.85);
+    transition: width .12s linear;
+  }
+
+  /* Fullscreen styling */
+  .ss-stage:fullscreen {
+    aspect-ratio: auto;
+    width: 100vw; height: 100vh;
+    border-radius: 0;
+  }
+
+  @media (max-width: 600px) {
+    .ss-stage { aspect-ratio: 4/3; }
+    .ss-caption { font-size: .85rem; padding: .7rem .75rem 1.4rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ss-slide { transition: none; }
+    .ss-progress-bar { transition: none; }
+  }
+</style>
+
+<script>
+(function () {
+  var root = document.querySelector('.ss-root');
+  if (!root) return;
+  var stage    = root.querySelector('#ss-stage');
+  var slides   = Array.from(root.querySelectorAll('.ss-slide'));
+  var btnPrev  = root.querySelector('#ss-prev');
+  var btnNext  = root.querySelector('#ss-next');
+  var btnPlay  = root.querySelector('#ss-play');
+  var btnMute  = root.querySelector('#ss-mute');
+  var btnFull  = root.querySelector('#ss-fullscreen');
+  var counter  = root.querySelector('#ss-counter');
+  var bar      = root.querySelector('#ss-progress');
+  var audio    = root.querySelector('#ss-audio');
+
+  var slideMs  = parseInt(root.getAttribute('data-slide-ms'), 10) || 5000;
+  var idx      = 0;
+  var playing  = true;
+  var rafId    = null;
+  var startTs  = null;
+
+  function show(n) {
+    idx = (n + slides.length) % slides.length;
+    slides.forEach(function (s, i) { s.classList.toggle('is-active', i === idx); });
+    counter.textContent = (idx + 1) + ' / ' + slides.length;
+    startTs = null;  // reset progress
+  }
+
+  function tick(ts) {
+    if (!playing) return;
+    if (startTs === null) startTs = ts;
+    var elapsed = ts - startTs;
+    var pct = Math.min(100, (elapsed / slideMs) * 100);
+    bar.style.width = pct + '%';
+    if (elapsed >= slideMs) {
+      show(idx + 1);
+    }
+    rafId = requestAnimationFrame(tick);
+  }
+
+  function play() {
+    playing = true;
+    stage.classList.remove('is-paused');
+    btnPlay.setAttribute('aria-pressed', 'true');
+    btnPlay.setAttribute('aria-label', 'Pause');
+    btnPlay.innerHTML = '&#10074;&#10074;';
+    if (audio && !audio.muted) { audio.play().catch(function () {}); }
+    if (rafId === null) rafId = requestAnimationFrame(tick);
+  }
+  function pause() {
+    playing = false;
+    stage.classList.add('is-paused');
+    btnPlay.setAttribute('aria-pressed', 'false');
+    btnPlay.setAttribute('aria-label', 'Play');
+    btnPlay.innerHTML = '&#9654;';
+    if (audio) { audio.pause(); }
+    if (rafId !== null) { cancelAnimationFrame(rafId); rafId = null; }
+  }
+
+  btnPrev.addEventListener('click', function () { show(idx - 1); });
+  btnNext.addEventListener('click', function () { show(idx + 1); });
+  btnPlay.addEventListener('click', function () { playing ? pause() : play(); });
+  btnFull.addEventListener('click', function () {
+    if (document.fullscreenElement) { document.exitFullscreen(); }
+    else { stage.requestFullscreen && stage.requestFullscreen(); }
+  });
+  if (btnMute && audio) {
+    audio.volume = 0.5;
+    audio.muted = true;
+    btnMute.addEventListener('click', function () {
+      audio.muted = !audio.muted;
+      btnMute.setAttribute('aria-pressed', audio.muted ? 'false' : 'true');
+      btnMute.innerHTML = audio.muted ? '&#128263;' : '&#128266;';
+      if (!audio.muted && playing) { audio.play().catch(function () {}); }
+    });
+  }
+
+  // Keyboard
+  stage.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft')  { e.preventDefault(); show(idx - 1); }
+    else if (e.key === 'ArrowRight') { e.preventDefault(); show(idx + 1); }
+    else if (e.key === ' ')          { e.preventDefault(); playing ? pause() : play(); }
+    else if (e.key === 'f' || e.key === 'F') { e.preventDefault(); btnFull.click(); }
+  });
+
+  // Touch swipe
+  var sx = null, sy = null;
+  stage.addEventListener('touchstart', function (e) {
+    if (e.touches.length !== 1) return;
+    sx = e.touches[0].clientX; sy = e.touches[0].clientY;
+  }, { passive: true });
+  stage.addEventListener('touchend', function (e) {
+    if (sx === null) return;
+    var t = e.changedTouches[0];
+    var dx = t.clientX - sx, dy = t.clientY - sy;
+    if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
+      show(idx + (dx < 0 ? 1 : -1));
+    }
+    sx = sy = null;
+  }, { passive: true });
+
+  // Click image to advance
+  slides.forEach(function (s) {
+    s.addEventListener('click', function () { show(idx + 1); });
+  });
+
+  // Pause when tab hidden
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden && playing) { pause(); }
+  });
+
+  // Honor reduced-motion: instant transitions, but slideshow still advances
+  // (transition: none is set in CSS).
+
+  show(0);
+  play();
+})();
+</script>
+{% endblock content %}
