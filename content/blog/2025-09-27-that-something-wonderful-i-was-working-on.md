@@ -7,7 +7,7 @@ draft = false
 skip_feed = true
 +++
 
-![A man sits at a desk in a dimly lit room, working on a computer with three monitors displaying various web pages. The room has a warm ambiance with a lamp on the desk and a view of a cityscape through the window at night. The painting style is reminiscent of Edward Hopper, emphasizing solitude and the glow of screens in a dark room.](https://i.snap.as/Vk0ZQQVd.png)
+![A man sits at a desk in a dimly lit room, working on a computer with three monitors displaying various web pages. The room has a warm ambiance with a lamp on the desk and a view of a cityscape through the window at night. The painting style is reminiscent of Edward Hopper, emphasizing solitude and the glow of screens in a dark room.](https://media.mitchelltribe.xyz/gallery/imports/vk0zqqvd.avif)
 
 <small>Late-night coding with multiple blogs open, in a Hopper-inspired scene of focus and isolation.</small>
 
@@ -25,16 +25,16 @@ Since I'm not a software developer, I use AI to help write code. I took QBasic a
 
 Here's where the project stands:
 The Manual Poster handles social media and is nearly complete. You can see the interface for creating posts and selecting which platforms to publish to.﻿
-![Screenshot of a "Manual Post Creator" interface for creating and scheduling posts across multiple platforms. The interface includes fields for entering a message, selecting social media platforms, and scheduling the post. It also features AI writing tools for proofreading, adding emojis, and suggesting hashtags. The design is clean with a light color scheme and clearly labeled sections.](https://i.snap.as/xSAUOdAw.png)
+![Screenshot of a "Manual Post Creator" interface for creating and scheduling posts across multiple platforms. The interface includes fields for entering a message, selecting social media platforms, and scheduling the post. It also features AI writing tools for proofreading, adding emojis, and suggesting hashtags. The design is clean with a light color scheme and clearly labeled sections.](https://media.mitchelltribe.xyz/gallery/imports/xsauodaw.avif)
 
 <small>Manual Post interface for creating and scheduling posts across platforms.</small>
 
 The Blog Poster is still in alpha. The dashboard shows system status and recent posts, while the creation interface handles titles, content, tags, and publishing options across multiple blog platforms.
-![Screenshot of a Blog Poster Dashboard interface showing various sections including Service Status, Platform Status, AI Services, Scheduled Posts, Database Health, and Actions. The dashboard displays status updates, system health, and recent blog posts with options to manage and create new content.](https://i.snap.as/bY6YkwDY.png)
+![Screenshot of a Blog Poster Dashboard interface showing various sections including Service Status, Platform Status, AI Services, Scheduled Posts, Database Health, and Actions. The dashboard displays status updates, system health, and recent blog posts with options to manage and create new content.](https://media.mitchelltribe.xyz/gallery/imports/by6ykwdy.avif)
 
 <small>Dashboard view showing service status, database health, and recent posts.</small>
 
-![A screenshot of a user interface for creating a new blog post, featuring fields for title, template selection, media upload, markdown file import, content entry in markdown format, tags, status, and publishing options. The interface includes buttons for additional editing features like proofreading and preview.](https://i.snap.as/MjeAUVEL.png)
+![A screenshot of a user interface for creating a new blog post, featuring fields for title, template selection, media upload, markdown file import, content entry in markdown format, tags, status, and publishing options. The interface includes buttons for additional editing features like proofreading and preview.](https://media.mitchelltribe.xyz/gallery/imports/mjeauvel.avif)
 
 <small>Create New Post screen with fields for title, content, tags, and publishing options.</small>
 
