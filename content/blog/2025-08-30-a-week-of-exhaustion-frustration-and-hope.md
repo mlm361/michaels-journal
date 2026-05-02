@@ -23,11 +23,3 @@ My week has been hectic with work and being off Camzyos for over a week now.“W
 I am also cutting back on my use of hashtags in social media posts. Lately I have gotten trolls and some nasty responses. I do not mind opposite or contrary views, but the tone was uncalled for. Hashtags used to be a good way to find people talking about the same things. Unfortunately, hashtag hijacking has become common, and I do not want to feed that beast.
 
 As the week closed, I was glad to spend time pondering more relaxing things and holding on to hope that the Supreme Court will keep intact two rulings that struck down parts of Trump’s tariffs. These tariffs have been the largest tax increase in my lifetime and have driven prices higher while keeping inflation stubborn. If the Appeals Court and Trade Court decisions are upheld, the choice will fall to Congress. Either they bail Trump out by raising taxes, or they do nothing. I doubt they want to admit the tariffs were harmful and amounted to tax increases. Inflationary pressure could finally ease, with the side benefit of giving Trump a well-deserved kick in the pants.
-
-<p style="font-weight: bold; font-size: 0.95em; font-family: Georgia, serif; color: #0c5c35; line-height: 1.8;">
-  <button class="tinylytics_kudos"></button>
-  💬 <a href="https://remark.as/p/michaelmitchell.blog/a-week-of-exhaustion-frustration-and-hope">Discuss...</a>
-  <a href="mailto:michaelm2@michaelm.blog" style="color:#0c5c35;text-decoration:none">✉️ Email</a>
-  🦣 <a href="https://writing.exchange/@michaelm2" rel="me" style="color: #0c5c35; text-decoration: none;">Reply on Mastodon</a>
-</p>
-<!--emailsub-->

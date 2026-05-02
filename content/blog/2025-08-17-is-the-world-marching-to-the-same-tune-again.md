@@ -40,11 +40,3 @@ Both World Wars to date were started in and over Eastern Europe land grabs (whil
 <span id="user-content-fn-5"></span>5. Budapest Memorandum text and status (security assurances, not a Senate-ratified defense treaty): [https://www.securitycouncilreport.org/atf/cf/{65BFCF9B-6D27-4E9C-8CD3-CF6E4FF96FF9}/s_1994_1399.pdf](https://www.securitycouncilreport.org/atf/cf/%7B65BFCF9B-6D27-4E9C-8CD3-CF6E4FF96FF9%7D/s_1994_1399.pdf) ; <https://treaties.un.org/Pages/showDetails.aspx?objid=0800000280401fbb> [↩](#user-content-fnref-5)
 
 <span id="user-content-fn-6"></span>6. NATO pages noting no deployment of NATO combat troops to Ukraine; UK House of Commons Library briefing: <https://www.nato.int/cps/en/natohq/topics_192648.htm> ; <https://commonslibrary.parliament.uk/research-briefings/cbp-9477/> [↩](#user-content-fnref-6)
-
-<p style="font-weight: bold; font-size: 0.95em; font-family: Georgia, serif; color: #0c5c35; line-height: 1.8;">
-  <button class="tinylytics_kudos"></button>
-  💬 <a href="https://remark.as/p/michaelmitchell.blog/is-the-world-marching-to-the-same-tune-again">Discuss...</a>
-  <a href="mailto:michaelm2@michaelm.blog" style="color:#0c5c35;text-decoration:none">✉️ Email</a>
-  🦣 <a href="https://writing.exchange/@michaelm2" rel="me" style="color: #0c5c35; text-decoration: none;">Reply on Mastodon</a>
-</p>
-<!--emailsub-->

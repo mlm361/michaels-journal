@@ -32,11 +32,3 @@ Continues to be a solid contender and, for me, the best of the Star Trek series 
 This one was okay. I didn’t expect it to be renewed. I watched the whole season; it had moments where it could have been brilliant, but overall it was just okay. I mostly had it on in the background, though a couple of episodes were really good. 🎬
 
 #tv #ParamountPlus #PrimeVideo #Entertainment #Reviews
-
-<p style="font-weight: bold; font-size: 0.95em; font-family: Georgia, serif; color: #0c5c35; line-height: 1.8;">
-  <button class="tinylytics_kudos"></button>
-  💬 <a href="https://remark.as/p/michaelmitchell.blog/this-tv-weeks-watchlist-cxmb">Discuss...</a>
-  <a href="mailto:michaelm2@michaelm.blog" style="color:#0c5c35;text-decoration:none">✉️ Email</a>
-  🦣 <a href="https://writing.exchange/@michaelm2" rel="me" style="color: #0c5c35; text-decoration: none;">Reply on Mastodon</a>
-</p>
-<!--emailsub-->
