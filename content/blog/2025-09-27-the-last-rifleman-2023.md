@@ -2,6 +2,8 @@
 title = "The Last Rifleman, 2023 - ★★"
 date = "2025-09-27T19:30:00-04:00"
 draft = false
+
+[taxonomies]
 tags = [ "movies", "streaming",]
 
 [extra]
