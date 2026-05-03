@@ -2,6 +2,20 @@
 
 {% block content %}
 {% set root = get_section(path="_index.md") %}
+{# Notes section is subordinate; merge its pages into the archive so
+   short/untitled posts are reachable here too. The notes section
+   carries skip_feed=true on its _index.md but individual notes
+   shouldn't inherit that for the archive view — gate per-page only. #}
+{% set notes_pages = [] %}
+{% set notes_section = false %}
+{% if get_section(path="notes/_index.md", required=false) %}
+  {% set notes_section = get_section(path="notes/_index.md") %}
+  {% set notes_pages = notes_section.pages %}
+{% endif %}
+
+{# Merge and sort by date descending. Zola gives us section.pages
+   already sorted; concat then re-sort to keep one stable order. #}
+{% set merged = root.pages | concat(with=notes_pages) %}
 
 <section class="post_container">
   <article>
@@ -18,7 +32,7 @@
       {% set_global cur_year = "" %}
       {% set_global cur_month = "" %}
 
-      {% for entry in root.pages %}
+      {% for entry in merged | sort(attribute="date") | reverse %}
         {% if entry.extra.skip_feed is defined and entry.extra.skip_feed %}{% continue %}{% endif %}
         {% set y = entry.date | date(format="%Y") %}
         {% set m = entry.date | date(format="%B %Y") %}
@@ -40,7 +54,16 @@
 
         <li class="archive-entry">
           <time>{{ entry.date | date(format="%b %d") }}</time>
-          <a href="{{ entry.permalink }}">{{ entry.title }}</a>
+          {# Notes have no title — fall back to a short body excerpt
+             so the row isn't a bare link. #}
+          {% set is_note = entry.path is starting_with("/notes/") %}
+          {% set link_text = entry.title %}
+          {% if not link_text %}
+            {% set link_text = entry.summary | default(value=entry.content) | striptags | trim | truncate(length=80, end="…") %}
+            {% if not link_text %}{% set link_text = "(note)" %}{% endif %}
+          {% endif %}
+          <a href="{{ entry.permalink }}">{{ link_text }}</a>
+          {% if is_note %}<span class="archive-note-tag">note</span>{% endif %}
         </li>
 
       {% endfor %}
@@ -129,5 +152,15 @@ function jumpToYear(y) {
   transition: opacity 0.2s;
 }
 .archive-entry a:hover { opacity: 0.6; }
+.archive-note-tag {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: rgba(74, 144, 226, 0.15);
+  color: rgba(74, 144, 226, 1);
+  margin-left: 0.4rem;
+}
 </style>
 {% endblock content %}
