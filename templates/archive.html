@@ -3,19 +3,14 @@
 {% block content %}
 {% set root = get_section(path="_index.md") %}
 {# Notes section is subordinate; merge its pages into the archive so
-   short/untitled posts are reachable here too. The notes section
-   carries skip_feed=true on its _index.md but individual notes
-   shouldn't inherit that for the archive view — gate per-page only. #}
-{% set notes_pages = [] %}
-{% set notes_section = false %}
-{% if get_section(path="notes/_index.md", required=false) %}
-  {% set notes_section = get_section(path="notes/_index.md") %}
-  {% set notes_pages = notes_section.pages %}
-{% endif %}
+   short/untitled posts are reachable here too. The section's
+   _index.md carries skip_feed=true but the per-page filter below
+   only applies that flag if the *individual page* sets it. #}
+{% set notes_section = get_section(path="notes/_index.md") %}
 
 {# Merge and sort by date descending. Zola gives us section.pages
    already sorted; concat then re-sort to keep one stable order. #}
-{% set merged = root.pages | concat(with=notes_pages) %}
+{% set merged = root.pages | concat(with=notes_section.pages) %}
 
 <section class="post_container">
   <article>
