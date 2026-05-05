@@ -13,7 +13,7 @@ skip_feed = true
 document.addEventListener('DOMContentLoaded', async () => {
   const onThisDay = document.getElementById('on-this-day');
 
-  const JSON_FEED_URL    = '/feed.json';
+  const POST_INDEX_URL   = '/post-index.json';
   const SITE_TZ          = 'America/New_York';
   const SHOW_TZ_NOTE     = true;
   const TZ_NOTE_TEXT     = "Dates are matched in Michael's local time (America/New_York).";
@@ -100,21 +100,20 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     let items;
     try {
-      const r = await fetch(JSON_FEED_URL, { credentials: 'same-origin' });
-      if (!r.ok) throw new Error('JSON feed not available');
-      const data = await r.json();
-      items = data.items || [];
+      const r = await fetch(POST_INDEX_URL, { credentials: 'same-origin' });
+      if (!r.ok) throw new Error('Post index not available');
+      items = await r.json();
     } catch (e) {
       displayNoPostsMessage();
-      console.error('On This Day: failed to load JSON feed', e);
+      console.error('On This Day: failed to load post index', e);
       return;
     }
 
     if (!items.length) { displayNoPostsMessage(); return; }
 
     const candidates = items.filter(item => {
-      if (!item.date_published) return false;
-      const d = new Date(item.date_published);
+      if (!item.date) return false;
+      const d = new Date(item.date + 'T12:00:00');
       if (isNaN(d)) return false;
       const parts = tzParts(d);
       return parts.yyyy !== currentYear && parts.mm === mm && parts.dd === dd;
@@ -127,13 +126,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     for (const batch of batches) {
       const results = await Promise.allSettled(
-        batch.map(item => fetchPostHTML(item.url || item.id))
+        batch.map(item => fetchPostHTML(item.url))
       );
       for (let i = 0; i < results.length; i++) {
         const r = results[i];
         if (r.status !== 'fulfilled' || !r.value) continue;
         const post    = r.value;
-        const dateObj = post.dateObj || new Date(batch[i].date_published);
+        const dateObj = post.dateObj || new Date(batch[i].date + 'T12:00:00');
         const displayDate = new Intl.DateTimeFormat('en-US', {
           timeZone: SITE_TZ,
           year: 'numeric', month: '2-digit', day: '2-digit'
