@@ -9,7 +9,7 @@ source_url = "https://mitchelltribe.com/2025/09/13/planet-moneys-toilet-talk/"
 +++
 
 <figure>
-  <img src="/api/uploads/77d59377fb70.png" alt="Illustration of a pay toilet with a coin-operated door and a sign reading &quot;PAY TOILET 10c&quot; next to a detailed interior view.">
+  <img src="https://media.mitchelltribe.xyz/gallery/imports/77d59377fb70.avif" alt="Illustration of a pay toilet with a coin-operated door and a sign reading &quot;PAY TOILET 10c&quot; next to a detailed interior view.">
   <figcaption>From pay toilets to high-tech pods—two eras of public convenience.</figcaption>
 </figure>
 
