@@ -7,13 +7,13 @@ draft = false
 tags = [ "Genealogy", "Poland", "WorldWarII",]
 
 [extra]
-image = "https://i.snap.as/HD43q9So.png"
+image = "/uploads/3657c8a3d675.png"
 +++
 
 
 
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
-<img src="https://i.snap.as/HD43q9So.png" alt="A vintage collection of documents on a wooden surface, including a Polish passport (&quot;Paszport Rzeczpospolita Polska&quot;) with a gold eagle emblem, several aged letters with handwritten text, and a paper labeled &quot;Immigration Service Ellis Island Immigrant Inspection of 1892-1998.&quot; The items evoke a historical theme related to immigration and travel." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
+<img src="https://media.mitchelltribe.xyz/gallery/posts/3657c8a3d675.avif" alt="A vintage collection of documents on a wooden surface, including a Polish passport (&quot;Paszport Rzeczpospolita Polska&quot;) with a gold eagle emblem, several aged letters with handwritten text, and a paper labeled &quot;Immigration Service Ellis Island Immigrant Inspection of 1892-1998.&quot; The items evoke a historical theme related to immigration and travel." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
 <figcaption style="font-size: 0.95em; color: #666; margin-top: 0.5em; text-align: center;">Echoes of a family’s journey across time and borders.</figcaption>
 </figure>
 
@@ -54,7 +54,7 @@ My mother told me that my grandparents were married three times: twice in  Germa
 
 
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
-<img src="https://i.snap.as/OflGrLXa.jpg" alt="A vintage portrait of a smiling bride in her wedding attire. She wears a white gown with a high collar and a delicate cross necklace. Her hair is styled in elegant curls topped with a floral headpiece and a flowing veil. She holds a large bouquet of white flowers, adding a classic touch to her joyful expression." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
+<img src="https://media.mitchelltribe.xyz/gallery/posts/89ff3fdf0be5.avif" alt="A vintage portrait of a smiling bride in her wedding attire. She wears a white gown with a high collar and a delicate cross necklace. Her hair is styled in elegant curls topped with a floral headpiece and a flowing veil. She holds a large bouquet of white flowers, adding a classic touch to her joyful expression." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
 <figcaption style="font-size: 0.95em; color: #666; margin-top: 0.5em; text-align: center;">Luisa Tekiel in her wedding Dress circa 1947</figcaption>
 </figure>
 
@@ -68,7 +68,7 @@ I do know she came through Ellis Island—but with no reliable records, there’
 
 
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
-<img src="https://i.snap.as/meAohtjT.jpg" alt="A vintage black and white photo of a smiling woman in a fur coat and a man in military uniform, both on the deck of a ship. The man is partially obscured by the woman who is seated in the foreground. Behind them, part of a naval anti-aircraft gun is visible, suggesting a wartime setting. The ocean and a hazy sky form the backdrop, enhancing the historical feel of the image." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
+<img src="https://media.mitchelltribe.xyz/gallery/posts/3cf7d618a4bc.avif" alt="A vintage black and white photo of a smiling woman in a fur coat and a man in military uniform, both on the deck of a ship. The man is partially obscured by the woman who is seated in the foreground. Behind them, part of a naval anti-aircraft gun is visible, suggesting a wartime setting. The ocean and a hazy sky form the backdrop, enhancing the historical feel of the image." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
 <figcaption style="font-size: 0.95em; color: #666; margin-top: 0.5em; text-align: center;">Louise Tekiel aboard the ship to America.</figcaption>
 </figure>
 
@@ -86,7 +86,7 @@ On my maternal grandfather’s  side, she knows a little more—but not much. Th
 ﻿
 
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
-<img src="https://i.snap.as/7vAXgx3D.jpg" alt="A vintage colorized portrait of a young couple; the woman is wearing a dark blouse and a necklace, resting her head on the shoulder of a man who is dressed in a military uniform with a beret and decorated with multiple ribbons on his chest. Both are looking directly at the camera, conveying a serene and affectionate demeanor." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
+<img src="https://media.mitchelltribe.xyz/gallery/posts/5ae17abc5c83.avif" alt="A vintage colorized portrait of a young couple; the woman is wearing a dark blouse and a necklace, resting her head on the shoulder of a man who is dressed in a military uniform with a beret and decorated with multiple ribbons on his chest. Both are looking directly at the camera, conveying a serene and affectionate demeanor." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
 <figcaption style="font-size: 0.95em; color: #666; margin-top: 0.5em; text-align: center;">Louise and Joe Kinser, early in their life together.</figcaption>
 </figure>
 
