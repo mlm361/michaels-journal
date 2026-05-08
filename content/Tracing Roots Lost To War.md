@@ -7,7 +7,7 @@ draft = false
 tags = [ "Genealogy", "Poland", "WorldWarII",]
 
 [extra]
-image = "/uploads/3657c8a3d675.png"
+image = "https://media.mitchelltribe.xyz/gallery/posts/3657c8a3d675.avif"
 +++
 
 
