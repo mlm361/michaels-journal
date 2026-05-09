@@ -9,6 +9,9 @@
 </nav>
 
 <section class="post_container">
+  <style>
+    .mf2-hidden { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  </style>
   <article class="h-entry">
     {% block post %}
       <h1 class="article_title p-name"><a class="u-url u-uid" href="{{page.permalink}}" id="article_link">{{ page.title }}</a></h1>
@@ -66,7 +69,6 @@
         <a class="reply-by-email" href="mailto:michael@michaelmitchell.email?subject=Re: {{ page.title | urlencode }}">✍️ Reply by email</a>
       </div>
       <style>
-        .mf2-hidden { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
         .kudos-wrap { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
         a.reply-by-email { font-size: 0.85rem; text-decoration: none; opacity: 0.6; font-weight: 500; border: 1px solid currentColor; border-radius: 999px; padding: 0.3rem 0.85rem; }
         a.reply-by-email:hover { opacity: 1; }
@@ -74,7 +76,7 @@
       {% endif %}
 
 
-      {% if config.extra.webmention_provider == "webmentions_io" %}
+      {% if config.extra.webmention_provider == "webmentions_io" and not page.extra.no_kudos %}
       <div class="webmentions" id="webmentions-wrap" style="display:none;">
         <h3 class="webmentions-heading">💬 Webmentions</h3>
         <div id="webmentions-list"></div>
