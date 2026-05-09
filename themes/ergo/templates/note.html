@@ -9,15 +9,21 @@
 </nav>
 
 <section class="post_container">
-  <article class="single-note">
+  <article class="single-note h-entry">
+    <a class="u-url u-uid mf2-hidden" href="{{ page.permalink }}">{{ page.permalink }}</a>
+    <span class="p-name mf2-hidden">Note from Michael Mitchell on {{ page.date | date(format="%B %-d, %Y") }}</span>
+    <div class="p-author h-card mf2-hidden">
+      <a class="p-name u-url" href="{{ config.base_url }}">Michael Mitchell</a>
+      <img class="u-photo" src="{{ config.base_url }}/img/{{ config.extra.profile }}" alt="">
+    </div>
     <div class="note-meta">
       <a href="{{ get_url(path='notes/') }}" class="note-back-link">← All notes</a>
-      <time datetime="{{ page.date | date(format='%+') }}">
+      <time class="dt-published" datetime="{{ page.date | date(format='%+') }}">
         {{ page.date | date(format="%B %-d, %Y · %-I:%M %p") }}
       </time>
     </div>
 
-    <div class="note-body">
+    <div class="note-body e-content">
       {{ page.content | safe }}
     </div>
 
@@ -31,6 +37,7 @@
 </section>
 
 <style>
+  .mf2-hidden { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
   .single-note { max-width: 680px; margin: 0 auto; padding: 2rem 0; }
   .single-note .note-meta { display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; opacity: 0.6; margin-bottom: 1.2rem; }
   .note-back-link { color: inherit; text-decoration: none; }

@@ -9,9 +9,14 @@
 </nav>
 
 <section class="post_container">
-  <article>
+  <article class="h-entry">
     {% block post %}
-      <h1 class="article_title"><a href="{{page.permalink}}" id="article_link">{{ page.title }}</a></h1>
+      <h1 class="article_title p-name"><a class="u-url u-uid" href="{{page.permalink}}" id="article_link">{{ page.title }}</a></h1>
+      <div class="p-author h-card mf2-hidden">
+        <a class="p-name u-url" href="{{ config.base_url }}">Michael Mitchell</a>
+        <img class="u-photo" src="{{ config.base_url }}/img/{{ config.extra.profile }}" alt="">
+      </div>
+      <time class="dt-published mf2-hidden" datetime="{{ page.date | date(format='%+') }}">{{ page.date | date(format='%+') }}</time>
       {{ macros::frontmatter(classes="frontmatter_page", date=page.date, word_count=page.word_count, read_time=page.reading_time) }}
       {% if page.taxonomies.tags %}
       <div class="post-tags">
@@ -51,7 +56,9 @@
       </style>
       {% endif %}
 
-      {{ page.content | safe }}
+      <div class="e-content">
+        {{ page.content | safe }}
+      </div>
 
       {% if not page.extra.no_kudos %}
       <div class="kudos-wrap">
@@ -59,6 +66,7 @@
         <a class="reply-by-email" href="mailto:michael@michaelmitchell.email?subject=Re: {{ page.title | urlencode }}">✍️ Reply by email</a>
       </div>
       <style>
+        .mf2-hidden { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
         .kudos-wrap { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
         a.reply-by-email { font-size: 0.85rem; text-decoration: none; opacity: 0.6; font-weight: 500; border: 1px solid currentColor; border-radius: 999px; padding: 0.3rem 0.85rem; }
         a.reply-by-email:hover { opacity: 1; }
