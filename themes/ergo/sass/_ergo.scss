@@ -606,7 +606,7 @@ article .post-actions button.post-action,
   background: transparent;
   color: inherit !important;
   font-family: inherit;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
   line-height: 1;
   text-decoration: none !important;
@@ -624,6 +624,14 @@ article .post-actions .post-action-icon,
   justify-content: center;
   width: 1em;
   line-height: 1;
+}
+
+article .post-actions .post-action-icon img,
+.post-actions .post-action-icon img {
+  display: block;
+  width: 1em;
+  height: 1em;
+  object-fit: contain;
 }
 
 article .post-actions .post-action:hover,

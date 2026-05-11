@@ -37,7 +37,7 @@
     background: transparent;
     color: inherit !important;
     font: inherit;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 600;
     line-height: 1;
     text-decoration: none !important;
@@ -53,6 +53,13 @@
     justify-content: center;
     width: 1em;
     line-height: 1;
+  }
+
+  article .post-actions .post-action-icon img {
+    display: block;
+    width: 1em;
+    height: 1em;
+    object-fit: contain;
   }
 
   article .post-actions .post-action:hover,
@@ -76,25 +83,25 @@
     <a class="post-action post-action-posse"
        href="{{ posse.mastodon }}"
        rel="syndication noopener noreferrer"
-       target="_blank"><span class="post-action-icon" aria-hidden="true">🐘</span>Mastodon</a>
+       target="_blank"><span class="post-action-icon" aria-hidden="true"><img src="https://cdn.simpleicons.org/mastodon/6364FF.svg" alt=""></span>Mastodon</a>
     {% endif %}
     {% if posse.bluesky %}
     <a class="post-action post-action-posse"
        href="{{ posse.bluesky }}"
        rel="syndication noopener noreferrer"
-       target="_blank"><span class="post-action-icon" aria-hidden="true">🦋</span>Bluesky</a>
+       target="_blank"><span class="post-action-icon" aria-hidden="true"><img src="https://cdn.simpleicons.org/bluesky/0061F2.svg" alt=""></span>Bluesky</a>
     {% endif %}
     {% if posse.sharkey %}
     <a class="post-action post-action-posse"
        href="{{ posse.sharkey }}"
        rel="syndication noopener noreferrer"
-       target="_blank"><span class="post-action-icon" aria-hidden="true">🦈</span>Sharkey</a>
+       target="_blank"><span class="post-action-icon" aria-hidden="true"><img src="/img/sharkey-icon.png" alt=""></span>Sharkey</a>
     {% endif %}
     {% if posse.nostr %}
     <a class="post-action post-action-posse"
        href="{{ posse.nostr }}"
        rel="syndication noopener noreferrer"
-       target="_blank"><span class="post-action-icon" aria-hidden="true">⚡</span>Nostr</a>
+       target="_blank"><span class="post-action-icon" aria-hidden="true"><img src="/img/nostr-icon.gif" alt=""></span>Nostr</a>
     {% endif %}
   {% endif %}
 
