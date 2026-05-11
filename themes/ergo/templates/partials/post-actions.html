@@ -13,10 +13,8 @@
 #}
 {% if not page.extra.no_kudos %}
 <div class="post-actions">
-  <a class="post-action post-action-email"
-     href="mailto:michael@michaelmitchell.email?subject={{ email_subject | urlencode }}">
-    <span aria-hidden="true">✉️</span> Email
-  </a>
+  <a class="post-action reply-by-email"
+     href="mailto:michael@michaelmitchell.email?subject={{ email_subject | urlencode }}">✍️ Reply by email</a>
 
   {% set posse = page.extra.posse | default(value=false) %}
   {% if posse %}

@@ -571,6 +571,10 @@ nav.pagination {
 }
 
 // ── Post actions row (reactions, POSSE, kudos) ───────────────────────────────
+// Shared pill styling. Modeled after the original `a.reply-by-email`: subtle
+// currentColor border, faded by default, full opacity on hover. POSSE links
+// and the Tinylytics kudos button inherit the same look so the row reads as
+// one visually-coherent strip.
 
 .post-actions {
   display: flex;
@@ -580,48 +584,43 @@ nav.pagination {
   margin: 2rem 0 1rem;
 }
 
-.post-action {
+%post-action-base {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  min-height: 2rem;
   padding: 0.3rem 0.85rem;
-  border: 1px solid $accent;
-  background: transparent;
-  color: $accent;
+  border: 1px solid currentColor;
   border-radius: 999px;
+  background: transparent;
+  color: inherit;
   font-family: inherit;
   font-size: 0.85rem;
+  font-weight: 500;
   line-height: 1;
   text-decoration: none;
+  opacity: 0.6;
   cursor: pointer;
-  transition: background 0.15s, color 0.15s, opacity 0.15s;
+  transition: opacity 0.15s;
 
   &:hover {
-    background: $accent;
-    color: $background;
+    opacity: 1;
     text-decoration: none;
   }
 }
 
-// Tinylytics is loaded in custom mode (`?kudos=custom`) so the button only
-// receives the count text. We add a heart glyph via ::before so the icon
-// matches the pill row visually and survives Tinylytics' DOM rewrites.
-button.tinylytics_kudos {
-  font-family: inherit;
-  font-size: 0.85rem;
+a.post-action,
+button.post-action {
+  @extend %post-action-base;
+}
 
-  &::before {
-    content: "\2665"; // ♥
-    font-size: 0.95rem;
-    line-height: 1;
-    margin-right: 0.05rem;
-  }
+// Tinylytics renders heart emoji + count inside the button (configured via
+// ?kudos=❤️ on the embed URL). We just need to give the button pill shape;
+// font/color come from the shared rule above.
+button.tinylytics_kudos {
+  @extend %post-action-base;
 
   &.did_select {
-    background: $accent;
-    color: $background;
-    opacity: 0.65;
+    opacity: 0.4;
     cursor: default;
   }
 }
