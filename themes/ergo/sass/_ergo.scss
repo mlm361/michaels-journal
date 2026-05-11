@@ -604,10 +604,19 @@ nav.pagination {
   }
 }
 
-// Tinylytics fills the button text/emoji at runtime; we only constrain shape.
+// Tinylytics is loaded in custom mode (`?kudos=custom`) so the button only
+// receives the count text. We add a heart glyph via ::before so the icon
+// matches the pill row visually and survives Tinylytics' DOM rewrites.
 button.tinylytics_kudos {
   font-family: inherit;
   font-size: 0.85rem;
+
+  &::before {
+    content: "\2665"; // ♥
+    font-size: 0.95rem;
+    line-height: 1;
+    margin-right: 0.05rem;
+  }
 
   &.did_select {
     background: $accent;
