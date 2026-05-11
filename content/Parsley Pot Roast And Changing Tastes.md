@@ -8,6 +8,12 @@ tags = [ "cooking", "food",]
 
 [extra]
 image = "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:bp52rrlz2pjiugflzokle3ec/bafkreig6v2yyw3jntlnqrhbmdfyzo5apz67vgnco4vblpava2x4lbnxmny"
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/116545685489687426"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mlgtajqnd72s"
+sharkey = "https://mitchelltribe.rodeo/notes/am27sn4u881v0008"
+nostr = "https://verify.mitchelltribe.com/note.html#1a75dec7c2074cbaa6df74ef8a29afbbb47dabbcc663f7c102515e5020720a72"
 +++
 
 

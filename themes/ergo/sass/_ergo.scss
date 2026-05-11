@@ -571,10 +571,11 @@ nav.pagination {
 }
 
 // ── Post actions row (reactions, POSSE, kudos) ───────────────────────────────
-// Shared pill styling. Modeled after the original `a.reply-by-email`: subtle
-// currentColor border, faded by default, full opacity on hover. POSSE links
-// and the Tinylytics kudos button inherit the same look so the row reads as
-// one visually-coherent strip.
+// Shared pill styling for the action row at the end of every post.
+// Selectors target every element type inside .post-actions so we beat
+// the generic `article a` underline/color rules across both light and
+// dark themes regardless of which classes a child element happens to
+// carry. No @extend (it compiled inconsistently between themes).
 
 .post-actions {
   display: flex;
@@ -584,7 +585,8 @@ nav.pagination {
   margin: 2rem 0 1rem;
 }
 
-%post-action-base {
+.post-actions a,
+.post-actions button {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
@@ -598,39 +600,31 @@ nav.pagination {
   font-weight: 500;
   line-height: 1;
   text-decoration: none;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 0;
   opacity: 0.6;
   cursor: pointer;
   transition: opacity 0.15s;
-
-  &:hover {
-    opacity: 1;
-    text-decoration: none;
-  }
 }
 
-a.post-action,
-button.post-action {
-  @extend %post-action-base;
+.post-actions a:hover,
+.post-actions button:hover {
+  opacity: 1;
+  color: inherit;
+  text-decoration: none;
 }
 
-// Tinylytics renders heart emoji + count inside the button (configured via
-// ?kudos=❤️ on the embed URL). We just need to give the button pill shape;
-// font/color come from the shared rule above.
-button.tinylytics_kudos {
-  @extend %post-action-base;
-
-  &.did_select {
-    opacity: 0.4;
-    cursor: default;
-  }
+.post-actions button.tinylytics_kudos.did_select {
+  opacity: 0.4;
+  cursor: default;
 }
 
 // ── Remark42 embed ───────────────────────────────────────────────────────────
+// Plain margin above the embed — no top border line — so the action row
+// and the comment widget are separated by white space only.
 
 .remark42-embed {
-  margin: 2.5rem 0 1rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(128, 128, 128, 0.15);
+  margin: 3rem 0 1rem;
 }
 
 // Fixed scroll affordance for long posts and archive pages.
