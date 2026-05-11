@@ -12,6 +12,50 @@
   visible emoji is controlled by Tinylytics dashboard settings (per-site).
 #}
 {% if not page.extra.no_kudos %}
+<style>
+  article .post-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 2rem 0 1.35rem;
+  }
+
+  article .post-actions .post-action,
+  article .post-actions a.post-action:link,
+  article .post-actions a.post-action:visited,
+  article .post-actions button.post-action {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-height: 2rem;
+    padding: 0.35rem 0.85rem;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    background: transparent;
+    color: inherit !important;
+    font: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1;
+    text-decoration: none !important;
+    text-decoration-color: transparent !important;
+    text-decoration-thickness: 0 !important;
+    opacity: 0.72;
+    cursor: pointer;
+  }
+
+  article .post-actions .post-action:hover,
+  article .post-actions .post-action:focus-visible {
+    opacity: 1;
+    text-decoration: none !important;
+  }
+
+  article .post-actions .post-action:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+  }
+</style>
 <div class="post-actions">
   <a class="post-action reply-by-email"
      href="mailto:michael@michaelmitchell.email?subject={{ email_subject | urlencode }}">✍️ Reply by email</a>

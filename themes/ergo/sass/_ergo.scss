@@ -577,43 +577,60 @@ nav.pagination {
 // dark themes regardless of which classes a child element happens to
 // carry. No @extend (it compiled inconsistently between themes).
 
+article .post-actions,
 .post-actions {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin: 2rem 0 1rem;
+  margin: 2rem 0 1.35rem;
 }
 
-.post-actions a,
-.post-actions button {
+article .post-actions .post-action,
+article .post-actions a.post-action:link,
+article .post-actions a.post-action:visited,
+article .post-actions button.post-action,
+.post-actions .post-action,
+.post-actions a.post-action,
+.post-actions button.post-action {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.35rem;
-  padding: 0.3rem 0.85rem;
+  min-height: 2rem;
+  padding: 0.35rem 0.85rem;
   border: 1px solid currentColor;
   border-radius: 999px;
   background: transparent;
-  color: inherit;
+  color: inherit !important;
   font-family: inherit;
   font-size: 0.85rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1;
-  text-decoration: none;
-  text-decoration-color: transparent;
-  text-decoration-thickness: 0;
-  opacity: 0.6;
+  text-decoration: none !important;
+  text-decoration-color: transparent !important;
+  text-decoration-thickness: 0 !important;
+  opacity: 0.72;
   cursor: pointer;
   transition: opacity 0.15s;
 }
 
-.post-actions a:hover,
-.post-actions button:hover {
+article .post-actions .post-action:hover,
+article .post-actions .post-action:focus-visible,
+.post-actions .post-action:hover,
+.post-actions .post-action:focus-visible {
   opacity: 1;
-  color: inherit;
-  text-decoration: none;
+  color: inherit !important;
+  text-decoration: none !important;
 }
 
+article .post-actions .post-action:focus-visible,
+.post-actions .post-action:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+article .post-actions button.tinylytics_kudos.did_select,
 .post-actions button.tinylytics_kudos.did_select {
   opacity: 0.4;
   cursor: default;
