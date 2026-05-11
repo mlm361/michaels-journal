@@ -1,0 +1,53 @@
+{#
+  Reaction + POSSE row.
+
+  Caller must pass `email_subject` (already-built subject line, will be urlencoded here).
+
+  Frontmatter inputs on each post:
+    extra.no_kudos      hides the row entirely.
+    extra.posse.mastodon / .bluesky / .sharkey / .nostr  syndicated copy URLs;
+                        each button renders only when the URL is non-empty.
+
+  The kudos button keeps Tinylytics' class so existing counts persist; the
+  visible emoji is controlled by Tinylytics dashboard settings (per-site).
+#}
+{% if not page.extra.no_kudos %}
+<div class="post-actions">
+  <a class="post-action post-action-email"
+     href="mailto:michael@michaelmitchell.email?subject={{ email_subject | urlencode }}">
+    <span aria-hidden="true">✉️</span> Email
+  </a>
+
+  {% set posse = page.extra.posse | default(value=false) %}
+  {% if posse %}
+    {% if posse.mastodon %}
+    <a class="post-action post-action-posse"
+       href="{{ posse.mastodon }}"
+       rel="syndication noopener noreferrer"
+       target="_blank">Mastodon</a>
+    {% endif %}
+    {% if posse.bluesky %}
+    <a class="post-action post-action-posse"
+       href="{{ posse.bluesky }}"
+       rel="syndication noopener noreferrer"
+       target="_blank">Bluesky</a>
+    {% endif %}
+    {% if posse.sharkey %}
+    <a class="post-action post-action-posse"
+       href="{{ posse.sharkey }}"
+       rel="syndication noopener noreferrer"
+       target="_blank">Sharkey</a>
+    {% endif %}
+    {% if posse.nostr %}
+    <a class="post-action post-action-posse"
+       href="{{ posse.nostr }}"
+       rel="syndication noopener noreferrer"
+       target="_blank">Nostr</a>
+    {% endif %}
+  {% endif %}
+
+  <button class="post-action post-action-kudos tinylytics_kudos"
+          type="button"
+          aria-label="Kudos"></button>
+</div>
+{% endif %}

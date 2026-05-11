@@ -570,28 +570,44 @@ nav.pagination {
   }
 }
 
-// ── Tinylytics Kudos ─────────────────────────────────────────────────────────
+// ── Post actions row (reactions, POSSE, kudos) ───────────────────────────────
 
-.kudos-wrap {
+.post-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   margin: 2rem 0 1rem;
-  text-align: left;
 }
 
-button.tinylytics_kudos {
-  background: transparent;
+.post-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 2rem;
+  padding: 0.3rem 0.85rem;
   border: 1px solid $accent;
+  background: transparent;
   color: $accent;
-  padding: 0.4rem 1.2rem;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 0.9rem;
+  border-radius: 999px;
   font-family: inherit;
-  transition: background 0.15s, color 0.15s;
+  font-size: 0.85rem;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, opacity 0.15s;
 
   &:hover {
     background: $accent;
     color: $background;
+    text-decoration: none;
   }
+}
+
+// Tinylytics fills the button text/emoji at runtime; we only constrain shape.
+button.tinylytics_kudos {
+  font-family: inherit;
+  font-size: 0.85rem;
 
   &.did_select {
     background: $accent;
@@ -599,6 +615,14 @@ button.tinylytics_kudos {
     opacity: 0.65;
     cursor: default;
   }
+}
+
+// ── Remark42 embed ───────────────────────────────────────────────────────────
+
+.remark42-embed {
+  margin: 2.5rem 0 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(128, 128, 128, 0.15);
 }
 
 // Fixed scroll affordance for long posts and archive pages.

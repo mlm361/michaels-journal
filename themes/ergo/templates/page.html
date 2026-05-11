@@ -68,16 +68,11 @@
         {{ page.content | safe }}
       </div>
 
-      {% if not page.extra.no_kudos %}
-      <div class="kudos-wrap">
-        <button class="tinylytics_kudos"></button>
-        <a class="reply-by-email" href="mailto:michael@michaelmitchell.email?subject=Re: {{ page.title | urlencode }}">✍️ Reply by email</a>
-      </div>
-      <style>
-        .kudos-wrap { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
-        a.reply-by-email { font-size: 0.85rem; text-decoration: none; opacity: 0.6; font-weight: 500; border: 1px solid currentColor; border-radius: 999px; padding: 0.3rem 0.85rem; }
-        a.reply-by-email:hover { opacity: 1; }
-      </style>
+      {% set email_subject = "Re: " ~ page.title %}
+      {% include "partials/post-actions.html" %}
+
+      {% if not is_utility_page %}
+      {% include "partials/comments.html" %}
       {% endif %}
 
 

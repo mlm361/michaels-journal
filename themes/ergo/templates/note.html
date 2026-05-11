@@ -27,12 +27,11 @@
       {{ page.content | safe }}
     </div>
 
-    {% if not page.extra.no_kudos %}
-    <div class="kudos-wrap">
-      <button class="tinylytics_kudos"></button>
-      <a class="reply-by-email" href="mailto:michael@michaelmitchell.email?subject=Re: Note from {{ page.date | date(format='%Y-%m-%d') }}">✍️ Reply by email</a>
-    </div>
-    {% endif %}
+    {% set formatted_date = page.date | date(format='%Y-%m-%d') %}
+    {% set email_subject = "Re: Note from " ~ formatted_date %}
+    {% include "partials/post-actions.html" %}
+
+    {% include "partials/comments.html" %}
   </article>
 </section>
 
@@ -44,8 +43,6 @@
   .note-back-link:hover { text-decoration: underline; }
   .single-note .note-body { font-size: 1.02rem; line-height: 1.65; }
   .single-note .note-body img { max-width: 100%; height: auto; border-radius: 6px; }
-  .kudos-wrap { display: flex; align-items: center; gap: 1rem; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(128,128,128,0.15); flex-wrap: wrap; }
-  a.reply-by-email { font-size: 0.85rem; text-decoration: none; opacity: 0.6; font-weight: 500; border: 1px solid currentColor; border-radius: 999px; padding: 0.3rem 0.85rem; }
-  a.reply-by-email:hover { opacity: 1; }
+  .single-note .post-actions { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(128,128,128,0.15); }
 </style>
 {% endblock content %}
