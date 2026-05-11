@@ -596,7 +596,9 @@ article .post-actions button.post-action,
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
   gap: 0.35rem;
+  height: 2rem;
   min-height: 2rem;
   padding: 0.35rem 0.85rem;
   border: 1px solid currentColor;
@@ -613,6 +615,15 @@ article .post-actions button.post-action,
   opacity: 0.72;
   cursor: pointer;
   transition: opacity 0.15s;
+}
+
+article .post-actions .post-action-icon,
+.post-actions .post-action-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  line-height: 1;
 }
 
 article .post-actions .post-action:hover,

@@ -28,6 +28,8 @@
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
+    height: 2rem;
     min-height: 2rem;
     padding: 0.35rem 0.85rem;
     border: 1px solid currentColor;
@@ -43,6 +45,14 @@
     text-decoration-thickness: 0 !important;
     opacity: 0.72;
     cursor: pointer;
+  }
+
+  article .post-actions .post-action-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1em;
+    line-height: 1;
   }
 
   article .post-actions .post-action:hover,
@@ -66,25 +76,25 @@
     <a class="post-action post-action-posse"
        href="{{ posse.mastodon }}"
        rel="syndication noopener noreferrer"
-       target="_blank">Mastodon</a>
+       target="_blank"><span class="post-action-icon" aria-hidden="true">🐘</span>Mastodon</a>
     {% endif %}
     {% if posse.bluesky %}
     <a class="post-action post-action-posse"
        href="{{ posse.bluesky }}"
        rel="syndication noopener noreferrer"
-       target="_blank">Bluesky</a>
+       target="_blank"><span class="post-action-icon" aria-hidden="true">🦋</span>Bluesky</a>
     {% endif %}
     {% if posse.sharkey %}
     <a class="post-action post-action-posse"
        href="{{ posse.sharkey }}"
        rel="syndication noopener noreferrer"
-       target="_blank">Sharkey</a>
+       target="_blank"><span class="post-action-icon" aria-hidden="true">🦈</span>Sharkey</a>
     {% endif %}
     {% if posse.nostr %}
     <a class="post-action post-action-posse"
        href="{{ posse.nostr }}"
        rel="syndication noopener noreferrer"
-       target="_blank">Nostr</a>
+       target="_blank"><span class="post-action-icon" aria-hidden="true">⚡</span>Nostr</a>
     {% endif %}
   {% endif %}
 
