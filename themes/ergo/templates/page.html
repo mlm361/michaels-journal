@@ -71,10 +71,6 @@
       {% set email_subject = "Re: " ~ page.title %}
       {% include "partials/post-actions.html" %}
 
-      {% if not is_utility_page %}
-      {% include "partials/comments.html" %}
-      {% endif %}
-
 
       {% if config.extra.webmention_provider == "webmentions_io" and not is_utility_page %}
       <div class="webmentions" id="webmentions-wrap" style="display:none;">

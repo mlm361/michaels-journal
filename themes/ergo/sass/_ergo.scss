@@ -655,14 +655,6 @@ article .post-actions button.tinylytics_kudos.did_select,
   cursor: default;
 }
 
-// ── Remark42 embed ───────────────────────────────────────────────────────────
-// Plain margin above the embed — no top border line — so the action row
-// and the comment widget are separated by white space only.
-
-.remark42-embed {
-  margin: 3rem 0 1rem;
-}
-
 // Fixed scroll affordance for long posts and archive pages.
 .scroll-to-top {
   position: fixed;
