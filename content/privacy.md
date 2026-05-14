@@ -70,4 +70,4 @@ I may update this Privacy Policy from time to time. Changes will be posted on th
 
 ## 6. Contact
 
-If you have any questions about this Privacy Policy, please contact me at **michael@michaelmitchell.email**.
+If you have any questions about this Privacy Policy, please contact me at **[michael@michaelmitchell.email](mailto:michael@michaelmitchell.email)**.
