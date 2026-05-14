@@ -11,7 +11,7 @@ tags = [ "blogging", "opinion",]
 mastodon = "https://mitchelltribe.social/@michael/116206384969388572"
 bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mgq23uro7o2y"
 sharkey = "https://mitchelltribe.rodeo/notes/ajoj6nfprrls000s"
-nostr = "https://njump.me/0dad93225ede5f656ba92b29ca9dd141ed6159264cf08665272c951edee3e16b"
+nostr = "https://jumble.social/nevent1qqsqmtvnyf0duhm9dw5jk2w2nhg5rmtptynyeuyxv5nje9g7mm37z6cpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflckd69dx"
 
 +++
 > **[https://elgan.com/why-you-should-love-blogs-now-more-than-ever](https://elgan.com/why-you-should-love-blogs-now-more-than-ever)**

@@ -11,7 +11,7 @@ tags = [ "opinion", "politics",]
 mastodon = "https://mitchelltribe.social/@michael/116166984208234129"
 bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mg6k6ia2g32k"
 sharkey = "https://mitchelltribe.rodeo/notes/ajel8ofv024w000u"
-nostr = "https://njump.me/4ce909bcdf093a01da39aab6b1d004eaf05d279b50a55a38d9c9154c0b0156d0"
+nostr = "https://jumble.social/nevent1qqsye6gfhn0sjwspmgu64d436qzw4uzay7d4pf268rvuj92vpvq4d5qpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcdwha49"
 
 +++
 > ⚠️ **Warning:** Political Rant

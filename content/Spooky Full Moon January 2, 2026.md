@@ -11,7 +11,7 @@ tags = [ "photos", "landscape",]
 mastodon = "https://mitchelltribe.social/@michael/115832918929946507"
 bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mbk6t5jo3e2q"
 sharkey = "https://mitchelltribe.rodeo/notes/ah2ad20l3cnr0002"
-nostr = "https://njump.me/7529360b19b53651f2781c8c6cebc4d6afc074024a7a1a94c118bffa232533d6"
+nostr = "https://jumble.social/nevent1qqs822fkpvvm2dj37fuperrva0zddt7qwspy57s6jnq330l6yvjn84spr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflc8yv97z"
 
 +++
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">

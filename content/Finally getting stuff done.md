@@ -11,7 +11,7 @@ tags = [ "hardware", "tech-gadgets", "technology",]
 mastodon = "https://mitchelltribe.social/@michael/115760742229477021"
 bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mak54wl6hp2u"
 sharkey = "https://mitchelltribe.rodeo/notes/agk2nq3p5bvh0006"
-nostr = "https://njump.me/de71b4ad8df71ce18a82d05da81aa5b0f6f5f0eb0328586a79a9fe7703d8230d"
+nostr = "https://jumble.social/nevent1qqsduud54kxlw88p32pdqhdgr2jmpah47r4sx2zcdfu6nlnhq0vzxrgpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflc9u9q5h"
 
 +++
 This weekend was quite productive for me! I managed to put together the Pironman5 Max and install a 16GB Raspberry Pi 5, and I also moved my 1TB NVMe drive from my old 8GB Pironman5, which served my homelab and home server for a year. I've owned the Pironman5 Max since June, but my ongoing health issues had left me too drained to assemble it until now. Thankfully, my new medication, Camzyos, has really helped me regain some energy.

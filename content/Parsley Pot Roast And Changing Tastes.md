@@ -13,7 +13,7 @@ image = "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:bp52rrlz2pjiugflz
 mastodon = "https://mitchelltribe.social/@michael/116545685489687426"
 bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mlgtajqnd72s"
 sharkey = "https://mitchelltribe.rodeo/notes/am27sn4u881v0008"
-nostr = "https://verify.mitchelltribe.com/note.html#1a75dec7c2074cbaa6df74ef8a29afbbb47dabbcc663f7c102515e5020720a72"
+nostr = "https://jumble.social/nevent1qqsp5aw7clpqwn965m0hfmu29xhmhdra4w7vvclhcyp9zhjsypeq5uspr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcqagzgx"
 
 +++
 

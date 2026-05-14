@@ -11,7 +11,7 @@ tags = [ "movies", "opinion", "review",]
 mastodon = "https://mitchelltribe.social/@michael/116353508021199751"
 bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mireto7wme22"
 sharkey = "https://mitchelltribe.rodeo/notes/akpnr2hev7ed000b"
-nostr = "https://verify.mitchelltribe.com/note.html#bb21fbce696139a34f9719a20ca44090d843f4db596869a101a66166c5a0f834"
+nostr = "https://jumble.social/nevent1qqstkg0mee5kzwdrf7t3ngsv53qfpkzr7nd4j6rf5yq6vctxcks0sdqpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcnuvr5e"
 
 +++
 ⚠️ **SPOILER WARNING:** FULL SPOILERS

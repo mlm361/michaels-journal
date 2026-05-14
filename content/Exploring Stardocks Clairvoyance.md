@@ -11,7 +11,7 @@ tags = [ "technology", "ai", "innovation",]
 mastodon = "https://mitchelltribe.social/@michael/116229776741913209"
 bluesky = "https://bsky.app/profile/michael.pds.mitchelltribe.com/post/3mh2gjez7c22p"
 sharkey = "https://mitchelltribe.rodeo/notes/ajufp0igl5jz0003"
-nostr = "https://njump.me/2b9f852c08a7e6544ffbb16f49d6723e1ea1a675c4633f44824a6b2687e66f5c"
+nostr = "https://jumble.social/nevent1qqszh8u99sy20ej5flamzm6f6eeru84p5e6ugcelgjpy56exslnx7hqpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcsm4l8x"
 
 +++
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">

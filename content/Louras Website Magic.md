@@ -12,7 +12,7 @@ tags = ["opinion", "web-development"]
 mastodon = "https://mitchelltribe.social/@michael/116453941644743853"
 bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mk5y3k7k6k2j"
 sharkey = "https://mitchelltribe.rodeo/notes/alf05riu673v00ik"
-nostr = "https://verify.mitchelltribe.com/note.html#0e04d64f8acc403ebb5471bbacd0e8a3591d974f9e93c9d100aa06bf40955107"
+nostr = "https://jumble.social/nevent1qqsqupxkf79vcsp7hd28rwav6r52xkgaja8eay7f6yq25p4lgz24zpcpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflc0pr24r"
 
 +++
 If you ever want to see a master craftswoman at website design and theming, then you must stop over at [Hey Loura!](https://heyloura.com/2026/04/21/this-weekend-i-reached-for.html) She is also in my BlogRoll. Her latest creation is spectacular and pirate-themed. She keeps outdoing herself each time she updates.

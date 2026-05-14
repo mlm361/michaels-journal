@@ -11,7 +11,7 @@ tags = [ "personal",]
 mastodon = "https://mitchelltribe.social/@michael/115814540270362587"
 bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mbbznmujrm2d"
 sharkey = "https://mitchelltribe.rodeo/notes/agxnebw0pnjh001w"
-nostr = "https://njump.me/081be8378058ec20daafbe44df7ad5f4363b589e501b90d4963d2de834e8251f"
+nostr = "https://jumble.social/nevent1qqsqsxlgx7q93mpqm2hmu3xl0t2lgd3mtz09qxus6jtr6t0gxn5z28cpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcytlvzq"
 
 +++
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">

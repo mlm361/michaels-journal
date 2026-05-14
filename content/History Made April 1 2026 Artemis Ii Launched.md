@@ -11,7 +11,7 @@ tags = [ "news", "photos", "history",]
 mastodon = "https://mitchelltribe.social/@michael/116332569762941598"
 bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mii3c25kra2f"
 sharkey = "https://mitchelltribe.rodeo/notes/akkdj9bn94ay001g"
-nostr = "https://verify.mitchelltribe.com/note.html#0a073ed724b8b07cd19db4f2a9daeeee6e7da94f95595a27db93ea364240e3dd"
+nostr = "https://jumble.social/nevent1qqsq5pe76ujt3vru6xwmfu4fmthwumna498e2k26ylde863kgfqw8hgpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcya7m02"
 
 +++
 History was made today. The kind of history that will be written about and studied for years to come, and I was able to capture it from my backyard. Artemis II successfully launched with a crew of four and is heading to the Moon. Not as great, magnificent, or universe changing as what we will celebrate this Sunday with Easter and the resurrection of Jesus Christ, not even close. But still amazing.

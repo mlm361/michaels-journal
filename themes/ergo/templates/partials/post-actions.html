@@ -122,6 +122,9 @@
       {% endif %}
       {% if posse.nostr %}
       {% set nostr_href = posse.nostr
+        | replace(from="https://njump.me/nevent1", to="https://jumble.social/nevent1")
+        | replace(from="https://njump.me/note1", to="https://jumble.social/note1")
+        | replace(from="https://njump.me/naddr1", to="https://jumble.social/naddr1")
         | replace(from="https://njump.me/", to="https://jumble.social/notes/")
         | replace(from="https://verify.mitchelltribe.com/note.html#", to="https://jumble.social/notes/")
       %}

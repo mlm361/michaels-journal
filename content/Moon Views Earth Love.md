@@ -13,7 +13,7 @@ card_fit = "contain"
 mastodon = "https://mitchelltribe.social/@michael/116367002598550634"
 bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mixemao2nf22"
 sharkey = "https://mitchelltribe.rodeo/notes/aktaspjtjrto0003"
-nostr = "https://verify.mitchelltribe.com/note.html#c8a1905e1140d5992beda35cd2a9684f83cc2d7008aea781906a540e56855c20"
+nostr = "https://jumble.social/nevent1qqsv3gvstcg5p4ve90k6xhxj495ylq7v94cq3t48sxgx54qw26z4cgqpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcghnyat"
 
 +++
 I have been watching the **Artemis II** mission off and on. I saw these pictures on the NASA website, and here are a few that I really like. They definitely got me thinking.

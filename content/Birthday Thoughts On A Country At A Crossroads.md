@@ -11,7 +11,7 @@ tags = [ "personal", "politics", "current-events",]
 mastodon = "https://mitchelltribe.social/@michael/116358362393909336"
 bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mitmz4ve2u2b"
 sharkey = "https://mitchelltribe.rodeo/notes/akqvup15dzp70007"
-nostr = "https://verify.mitchelltribe.com/note.html#d9dac6a1a49bac0e2365c3751c95f5b07932d28ef42c9252bb5155effd3eb76c"
+nostr = "https://jumble.social/nevent1qqsdnkkx5xjfhtqwydjuxagujh6mq7fj6280gtyj22a4z400l5ltwmqpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcccpf97"
 
 +++
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">

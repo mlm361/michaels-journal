@@ -11,7 +11,7 @@ tags = [ "photos", "landscape", "nature",]
 mastodon = "https://mitchelltribe.social/@michael/115805591256725316"
 bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mb62hwa5kn2f"
 sharkey = "https://mitchelltribe.rodeo/notes/agve3jocpnjh001d"
-nostr = "https://njump.me/8229585cb3b14b5322bec231e098faef78dc477a220db4007ebf22ce7a997f05"
+nostr = "https://jumble.social/nevent1qqsgy22ctjemzj6ny2lvyv0qnraw77xugaazyrd5qplt7gkw02vh7pgpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcv0vn2q"
 
 +++
 Today was a peculiar yet fulfilling day. It started with a dense fog but cleared up nicely. I managed to capture the sun through my telescope for the first time, and I also spotted the moon in broad daylight, though the telescope had some trouble pinpointing it. I hope you find the images as delightful as I did. They were taken with my Zwo Seestar S30, except for the fog picture, which I captured with the Samsung Galaxy S24 Ultra.

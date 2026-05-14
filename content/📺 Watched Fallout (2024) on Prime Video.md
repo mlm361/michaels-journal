@@ -10,7 +10,7 @@ tags = [ "review", "streaming", "tv",]
 [extra.posse]
 mastodon = "https://mitchelltribe.social/@michael/116037402050920260"
 sharkey = "https://mitchelltribe.rodeo/notes/aihw104jjemt000b"
-nostr = "https://njump.me/7e50bc08e69a98a3ba31afa52764cef61f6bb2bc0951ed84a4292e39eab9e19b"
+nostr = "https://jumble.social/nevent1qqs8u59uprnf4x9rhgc6lff8vn80v8mtk27qj50dsjjzjt3ea2u7rxcpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflceqtc06"
 
 +++
 ⚠️ **SPOILER WARNING:** MAJOR SPOILERS

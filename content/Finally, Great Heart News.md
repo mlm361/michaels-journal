@@ -11,7 +11,7 @@ tags = [ "health", "news", "personal",]
 mastodon = "https://mitchelltribe.social/@michael/115868704385753367"
 bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mc23eltzcy2q"
 sharkey = "https://mitchelltribe.rodeo/notes/ahbbgmbopggb0003"
-nostr = "https://njump.me/df7fb03923e5a2b57911d500653049fd79e92a2861a44a3e48d7a7914cbb6a79"
+nostr = "https://jumble.social/nevent1qqsd7las8y37tg440yga2qr9xpyl670f9g5xrfz28eyd0fu3fjak57gpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflclspnde"
 
 +++
 Great news today at my follow-up with my hypertrophic cardiomyopathy specialist. Camzyos is really starting to work. My most recent echo earlier this week was excellent, and so was the heart cath I had in late December.
