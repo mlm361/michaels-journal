@@ -1,0 +1,240 @@
+{% if config.extra.webmention_provider == "webmentions_io" %}
+<section class="webmentions" id="webmentions-wrap" aria-labelledby="webmentions-heading">
+  <h3 class="webmentions-heading" id="webmentions-heading">Webmentions</h3>
+  <div id="webmentions-list" class="webmentions-list" aria-live="polite">
+    <p class="webmentions-empty">No webmentions yet. Be the first to respond.</p>
+  </div>
+
+  <form class="webmention-form"
+        action="{{ config.extra.webmention_endpoint }}"
+        method="post"
+        target="_blank">
+    <p class="webmention-help">
+      These are <a href="https://indieweb.org/Webmention" target="_blank" rel="noopener">webmentions</a>
+      via the <a href="https://indieweb.org/" target="_blank" rel="noopener">IndieWeb</a>
+      and <a href="https://webmention.io/" target="_blank" rel="noopener">webmention.io</a>.
+      Mention this post from your site:
+    </p>
+    <input type="hidden" name="target" value="{{ page.permalink }}">
+    <label class="webmention-label" for="webmention-source">URL</label>
+    <div class="webmention-submit-row">
+      <input id="webmention-source"
+             class="webmention-source"
+             type="url"
+             name="source"
+             placeholder="https://example.com/my-reply"
+             autocomplete="url"
+             required>
+      <button class="webmention-submit" type="submit">Send Webmention</button>
+    </div>
+  </form>
+</section>
+
+<style>
+  .webmentions {
+    margin: 2.5rem 0 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(128,128,128,0.15);
+  }
+
+  .webmentions-heading {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .webmentions-list {
+    margin-bottom: 1.5rem;
+  }
+
+  .webmentions-empty {
+    margin: 0;
+    padding: 1rem 1.25rem;
+    border-left: 3px solid rgba(128,128,128,0.18);
+    background: rgba(128,128,128,0.04);
+    font-style: italic;
+    opacity: 0.75;
+  }
+
+  .wm-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 1.25rem;
+    align-items: flex-start;
+    padding: 0.75rem 1rem;
+    background: rgba(128,128,128,0.05);
+    border-radius: 8px;
+  }
+
+  .wm-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    border: 2px solid rgba(128,128,128,0.15);
+  }
+
+  .wm-avatar-placeholder {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: rgba(128,128,128,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+  }
+
+  .wm-body {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    padding-top: 2px;
+  }
+
+  .wm-author {
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .wm-author:hover {
+    text-decoration: underline;
+  }
+
+  .wm-label {
+    opacity: 0.65;
+  }
+
+  .wm-content {
+    margin: 0.4rem 0 0;
+    opacity: 0.8;
+    font-style: italic;
+  }
+
+  .webmention-form {
+    padding: 1.25rem;
+    border-radius: 8px;
+    background: rgba(128,128,128,0.05);
+  }
+
+  .webmention-help {
+    margin: 0 0 1rem;
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  .webmention-label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    opacity: 0.75;
+  }
+
+  .webmention-submit-row {
+    display: flex;
+    gap: 0.65rem;
+  }
+
+  .webmention-source {
+    flex: 1;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 0.7rem 0.85rem;
+    border: 1px solid rgba(128,128,128,0.28);
+    border-radius: 6px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+  }
+
+  .webmention-submit {
+    flex-shrink: 0;
+    padding: 0.7rem 1rem;
+    border: 1px solid currentColor;
+    border-radius: 6px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .webmention-source:focus-visible,
+  .webmention-submit:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+  }
+
+  .webmention-submit:hover {
+    opacity: 0.72;
+  }
+
+  @media (max-width: 640px) {
+    .webmention-submit-row {
+      display: block;
+    }
+
+    .webmention-source,
+    .webmention-submit {
+      width: 100%;
+    }
+
+    .webmention-submit {
+      margin-top: 0.65rem;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    var target = encodeURIComponent("{{ page.permalink }}");
+    var list = document.getElementById("webmentions-list");
+    if (!list) return;
+
+    function escapeHtml(value) {
+      return String(value || "").replace(/[&<>"']/g, function (char) {
+        return {
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&#39;"
+        }[char];
+      });
+    }
+
+    function safeUrl(value) {
+      var url = String(value || "");
+      return /^https?:\/\//i.test(url) ? url : "#";
+    }
+
+    fetch("https://webmention.io/api/mentions.jf2?target=" + target + "&per-page=50")
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        var items = data.children || [];
+        if (!items.length) return;
+        var labels = {
+          "like-of": "liked this",
+          "repost-of": "reposted this",
+          "in-reply-to": "replied",
+          "mention-of": "mentioned this"
+        };
+        list.innerHTML = items.map(function (m) {
+          var author = (m.author && m.author.name) ? m.author.name : "Someone";
+          var authorText = escapeHtml(author);
+          var photo = (m.author && m.author.photo)
+            ? "<img src='" + escapeHtml(safeUrl(m.author.photo)) + "' alt='" + authorText + "' class='wm-avatar'>"
+            : "<div class='wm-avatar-placeholder' aria-hidden='true'>?</div>";
+          var type = m["wm-property"] || "mention-of";
+          var label = labels[type] || "mentioned this";
+          var content = (m.content && m.content.text)
+            ? "<p class='wm-content'>" + escapeHtml(m.content.text.slice(0, 250)) + "</p>"
+            : "";
+          return "<div class='wm-item'>" + photo + "<div class='wm-body'><a href='" + escapeHtml(safeUrl(m.url)) + "' class='wm-author' target='_blank' rel='noopener'>" + authorText + "</a> <span class='wm-label'>" + escapeHtml(label) + "</span>" + content + "</div></div>";
+        }).join("");
+      })
+      .catch(function () {});
+  })();
+</script>
+{% endif %}

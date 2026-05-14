@@ -13,12 +13,29 @@
 #}
 {% if not page.extra.no_kudos %}
 <style>
+  article .post-response {
+    margin: 2rem 0 1.35rem;
+  }
+
+  article .post-response-heading {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0 0.35rem;
+  }
+
+  article .post-response-copy {
+    margin: 0 0 0.85rem;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    opacity: 0.76;
+  }
+
   article .post-actions {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin: 2rem 0 1.35rem;
+    margin: 0;
   }
 
   article .post-actions .post-action,
@@ -73,40 +90,49 @@
     outline-offset: 3px;
   }
 </style>
-<div class="post-actions">
-  <a class="post-action reply-by-email"
-     href="mailto:michael@michaelmitchell.email?subject={{ email_subject | urlencode }}">✍️ Reply by email</a>
+<div class="post-response">
+  <h3 class="post-response-heading">Respond to this post</h3>
+  <p class="post-response-copy">Reply by email, respond on a social copy, or send a webmention from your own site below.</p>
 
-  {% set posse = page.extra.posse | default(value=false) %}
-  {% if posse %}
-    {% if posse.mastodon %}
-    <a class="post-action post-action-posse"
-       href="{{ posse.mastodon }}"
-       rel="syndication noopener noreferrer"
-       target="_blank"><span class="post-action-icon" aria-hidden="true"><img src="https://cdn.simpleicons.org/mastodon/6364FF.svg" alt=""></span>Mastodon</a>
-    {% endif %}
-    {% if posse.bluesky %}
-    <a class="post-action post-action-posse"
-       href="{{ posse.bluesky }}"
-       rel="syndication noopener noreferrer"
-       target="_blank"><span class="post-action-icon" aria-hidden="true"><img src="https://cdn.simpleicons.org/bluesky/0061F2.svg" alt=""></span>Bluesky</a>
-    {% endif %}
-    {% if posse.sharkey %}
-    <a class="post-action post-action-posse"
-       href="{{ posse.sharkey }}"
-       rel="syndication noopener noreferrer"
-       target="_blank"><span class="post-action-icon" aria-hidden="true"><img src="/img/sharkey-icon.png" alt=""></span>Sharkey</a>
-    {% endif %}
-    {% if posse.nostr %}
-    <a class="post-action post-action-posse"
-       href="{{ posse.nostr }}"
-       rel="syndication noopener noreferrer"
-       target="_blank"><span class="post-action-icon" aria-hidden="true"><img src="/img/nostr-icon.gif" alt=""></span>Nostr</a>
-    {% endif %}
-  {% endif %}
+  <div class="post-actions">
+    <a class="post-action reply-by-email"
+       href="mailto:michael@michaelmitchell.email?subject={{ email_subject | urlencode }}">✍️ Reply by email</a>
 
-  <button class="post-action post-action-kudos tinylytics_kudos"
-          type="button"
-          aria-label="Kudos"></button>
+    {% set posse = page.extra.posse | default(value=false) %}
+    {% if posse %}
+      {% if posse.mastodon %}
+      <a class="post-action post-action-posse"
+         href="{{ posse.mastodon }}"
+         rel="syndication noopener noreferrer"
+         target="_blank"><span class="post-action-icon" aria-hidden="true"><img src="https://cdn.simpleicons.org/mastodon/6364FF.svg" alt=""></span>Mastodon</a>
+      {% endif %}
+      {% if posse.bluesky %}
+      <a class="post-action post-action-posse"
+         href="{{ posse.bluesky }}"
+         rel="syndication noopener noreferrer"
+         target="_blank"><span class="post-action-icon" aria-hidden="true"><img src="https://cdn.simpleicons.org/bluesky/0061F2.svg" alt=""></span>Bluesky</a>
+      {% endif %}
+      {% if posse.sharkey %}
+      <a class="post-action post-action-posse"
+         href="{{ posse.sharkey }}"
+         rel="syndication noopener noreferrer"
+         target="_blank"><span class="post-action-icon" aria-hidden="true"><img src="/img/sharkey-icon.png" alt=""></span>Sharkey</a>
+      {% endif %}
+      {% if posse.nostr %}
+      {% set nostr_href = posse.nostr
+        | replace(from="https://njump.me/", to="https://jumble.social/notes/")
+        | replace(from="https://verify.mitchelltribe.com/note.html#", to="https://jumble.social/notes/")
+      %}
+      <a class="post-action post-action-posse"
+         href="{{ nostr_href }}"
+         rel="syndication noopener noreferrer"
+         target="_blank"><span class="post-action-icon" aria-hidden="true"><img src="/img/nostr-icon.gif" alt=""></span>Nostr</a>
+      {% endif %}
+    {% endif %}
+
+    <button class="post-action post-action-kudos tinylytics_kudos"
+            type="button"
+            aria-label="Kudos"></button>
+  </div>
 </div>
 {% endif %}
