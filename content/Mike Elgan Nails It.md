@@ -4,8 +4,15 @@ date = "2026-03-10T14:51:55+00:00"
 draft = false
 [taxonomies]
 tags = [ "blogging", "opinion",]
-+++
 
+[extra]
+posse = [
+  { platform = "blogger", url = "https://www.michaelponders.com/2026/03/mike-elgan-nails-it.html" },
+  { platform = "microblog", url = "https://mitchelltribe.com/2026/03/10/mike-elgan-nails-it/" },
+  { platform = "scribbles", url = "https://michaelmusings.com/post/mike-elgan-nails-it" },
+  { platform = "writeas", url = "https://write.as/michaelmitchell/mike-elgan-nails-it" },
+]
++++
 > **[https://elgan.com/why-you-should-love-blogs-now-more-than-ever](https://elgan.com/why-you-should-love-blogs-now-more-than-ever)**
 >
 > Why you should love blogs now more than ever

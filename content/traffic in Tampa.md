@@ -1,5 +1,4 @@
 +++
-
 title = "I Didn’t Need a Report to Know Tampa Traffic Is Bad"
 description = "I already knew Tampa traffic was awful — but I didn’t realize we ranked this high nationally. Here’s what commuting here is really like."
 date = "2025-08-05T22:57:47-04:00"
@@ -9,10 +8,12 @@ lang = "en-us"
 [taxonomies]
 tags = ["TampaTraffic", "CommuterLife", "FloridaLiving"]
 
+[extra]
+posse = [
+  { platform = "blogger", url = "http://www.michaelponders.com/2025/08/i-didnt-need-report-to-know-tampa.html" },
+  { platform = "microblog", url = "https://mitchelltribe.com/2025/08/05/i-didnt-need-a-report/" },
+]
 +++
-
-
-
 <img src="https://media.mitchelltribe.xyz/gallery/posts/i75-fowler-crash-.avif" alt="Traffic camera view of I-75 Southbound near Fowler Avenue in Tampa at night, showing heavy congestion in the right lanes with long lines of red brake lights." width="600" />
 
 

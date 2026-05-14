@@ -3,11 +3,16 @@ title = "🎬 Watched The Fantastic 4: First Steps (2025) on Disney+"
 date = "2025-12-28T13:57:30+00:00"
 draft = false
 [extra]
+posse = [
+  { platform = "blogger", url = "https://www.michaelponders.com/2025/12/watched-fantastic-4-first-steps-2025-on.html" },
+  { platform = "microblog", url = "https://mitchelltribe.com/2025/12/26/watched-the-fantastic-first-steps/" },
+  { platform = "scribbles", url = "https://michaelmusings.com/post/watched-the-fantastic-4-first-steps-2025-on-disney" },
+  { platform = "writeas", url = "https://write.as/michaelmitchell/watched-the-fantastic-4-first-steps-2025-on-disney" },
+]
 card_fit = "contain"
 [taxonomies]
 tags = [ "review", "movies", "streaming",]
 +++
-
 ⚠️ **SPOILER WARNING:** MILD SPOILERS
 
 <img src="https://media.mitchelltribe.xyz/gallery/posts/tmdb_7842e168445b.avif" alt="Movie poster for &quot;The Fantastic Four: First Steps&quot; featuring the four main characters in dynamic action poses. Mr. Fantastic is stretching his arm forward, the Invisible Woman appears ready to use her powers, the Human Torch is engulfed in flames and flying, and the Thing is shown in a powerful, rocky form. The background includes a cityscape and the iconic Fantastic Four logo." width="600">

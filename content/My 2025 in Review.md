@@ -4,10 +4,15 @@ date = "2026-01-01T23:29:30+00:00"
 draft = false
 [taxonomies]
 tags = [ "personal",]
+
+[extra]
+posse = [
+  { platform = "blogger", url = "https://www.michaelponders.com/2025/12/my-2025-in-review.html" },
+  { platform = "microblog", url = "https://mitchelltribe.com/2025/12/31/my-in-review/" },
+  { platform = "scribbles", url = "https://michaelmusings.com/post/my-2025-in-review" },
+  { platform = "writeas", url = "https://write.as/michaelmitchell/my-2025-in-review" },
+]
 +++
-
-
-
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
 <img src="https://media.mitchelltribe.xyz/gallery/posts/dalle_temp_abeea3651599.avif" alt="Illustration of a focused middle-aged man with glasses and a beard, sitting at a desk in a cozy, sunlit room filled with books. He is sketching or writing in a notebook, surrounded by art supplies and books. Ethereal, futuristic diagrams and clocks float around him, suggesting a blend of creativity and concepts of time. Rays of sunlight stream through a window, casting warm light and creating a serene, inspirational atmosphere." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
 </figure>

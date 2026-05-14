@@ -4,10 +4,13 @@ date = "2025-08-08T11:30:00-04:00"
 draft = false
 
 [extra]
+posse = [
+  { platform = "blogger", url = "http://www.michaelponders.com/2025/08/my-battle-with-subscription-fatigue-mid.html" },
+  { platform = "microblog", url = "https://mitchelltribe.com/2025/08/08/my-battle-with-subscription-fatigue/" },
+]
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/08/08/my-battle-with-subscription-fatigue/"
 +++
-
 <figure class="attachment attachment--preview flex-col justify-center attachment--png">
 <img alt=" A detailed black and white pencil drawing of a man wearing glasses, sitting at a table with a desktop computer and a glass of iced tea in a Tervis tumbler, thoughtfully reviewing a long receipt. His expression is a mix of slight overwhelm and quiet satisfaction, reflecting the challenge and relief of trimming expenses." class="lightbox__image strip-metadata lightbox__image" decoding="async" loading="lazy" src="https://media.mitchelltribe.xyz/gallery/imports/pencil-receipt-glasses-ice-tea.avif" srcset="https://scribbles.page/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBN1JIQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--54d7e01ffcdceda2e3a5aca2d997fb1e7df0176d/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJQUVHa0NBQXc2Q25OaGRtVnlld2M2Q25OMGNtbHdWRG9NY1hWaGJHbDBlV2xrIiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--a18847b6c1cccf2736612f487841b9c550593dc1/pencil-receipt-glasses-ice-tea.png 2x"/>
 <figcaption class="attachment__caption text-center">

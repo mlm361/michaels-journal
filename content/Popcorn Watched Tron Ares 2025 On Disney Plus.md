@@ -3,11 +3,16 @@ title = "🍿 Watched TRON: Ares (2025) on Disney+"
 date = "2026-01-20T18:26:14+00:00"
 draft = false
 [extra]
+posse = [
+  { platform = "blogger", url = "https://www.michaelponders.com/2026/01/watched-tron-ares-2025-on-disney.html" },
+  { platform = "microblog", url = "https://mitchelltribe.com/2026/01/18/watched-tron-ares-on-disney/" },
+  { platform = "scribbles", url = "https://michaelmusings.com/post/watched-tron-ares-2025-on-disney" },
+  { platform = "writeas", url = "https://write.as/michaelmitchell/watched-tron-ares-2025-on-disney" },
+]
 card_fit = "contain"
 [taxonomies]
 tags = [ "review", "movies",]
 +++
-
 ⚠️ **SPOILER WARNING:** FULL SPOILERS
 
 

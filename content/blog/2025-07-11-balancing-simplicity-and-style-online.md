@@ -4,12 +4,14 @@ date = "2025-07-11T15:53:16+00:00"
 draft = false
 
 [extra]
+posse = [
+  { platform = "blogger", url = "http://www.michaelponders.com/2025/07/balancing-simplicity-and-style-online.html" },
+  { platform = "microblog", url = "https://mitchelltribe.com/2025/07/11/balancing-simplicity-and-style-online/" },
+  { platform = "writeas", url = "https://write.as/michaelmitchell/balancing-simplicity-and-style-online" },
+]
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/07/11/balancing-simplicity-and-style-online/"
 +++
-
-
-
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
 <img src="https://media.mitchelltribe.xyz/gallery/imports/xr3nvaeq.avif" alt="A stylized digital illustration of a man sitting at a desk, typing on a laptop. A soft green glow emanates from the screen, projecting a holographic website interface onto the wall in front of him. The atmosphere is calm and modern, evoking a sense of focused creativity and digital craftsmanship." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
 </figure>

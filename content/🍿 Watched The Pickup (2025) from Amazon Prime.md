@@ -3,11 +3,16 @@ title = "🍿 Watched The Pickup (2025) from Amazon Prime"
 date = "2026-01-04T17:45:42+00:00"
 draft = false
 [extra]
+posse = [
+  { platform = "blogger", url = "https://www.michaelponders.com/2026/01/watched-pickup-2025-from-amazon-prime.html" },
+  { platform = "microblog", url = "https://mitchelltribe.com/2026/01/04/watched-the-pickup-from-amazon/" },
+  { platform = "scribbles", url = "https://michaelmusings.com/post/watched-the-pickup-2025-from-amazon-prime" },
+  { platform = "writeas", url = "https://write.as/michaelmitchell/watched-the-pickup-2025-from-amazon-prime" },
+]
 card_fit = "contain"
 [taxonomies]
 tags = [ "review", "movies", "streaming",]
 +++
-
 ⚠️ **SPOILER WARNING:** MILD SPOILERS
 
 

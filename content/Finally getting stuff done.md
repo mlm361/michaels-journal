@@ -4,8 +4,15 @@ date = "2025-12-21T20:58:59+00:00"
 draft = false
 [taxonomies]
 tags = [ "hardware", "tech-gadgets", "technology",]
-+++
 
+[extra]
+posse = [
+  { platform = "blogger", url = "https://www.michaelponders.com/2025/12/finally-getting-stuff-done.html" },
+  { platform = "microblog", url = "https://mitchelltribe.com/2025/12/21/finally-getting-stuff-done/" },
+  { platform = "scribbles", url = "https://michaelmusings.com/post/finally-getting-stuff-done" },
+  { platform = "writeas", url = "https://write.as/michaelmitchell/finally-getting-stuff-done" },
+]
++++
 This weekend was quite productive for me! I managed to put together the Pironman5 Max and install a 16GB Raspberry Pi 5, and I also moved my 1TB NVMe drive from my old 8GB Pironman5, which served my homelab and home server for a year. I've owned the Pironman5 Max since June, but my ongoing health issues had left me too drained to assemble it until now. Thankfully, my new medication, Camzyos, has really helped me regain some energy.
 
 <img src="https://media.mitchelltribe.xyz/gallery/posts/74314c0b1284.avif" alt="A black, vertical standing computer case with a glossy finish and the word &quot;PIRONMAN&quot; embossed on the front, placed on a textured gray surface. The case features visible ports and a power button on the front panel." width="600">

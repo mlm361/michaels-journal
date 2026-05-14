@@ -3,11 +3,16 @@ title = "📺 Watched Fallout (2024) on Prime Video"
 date = "2026-02-08T17:37:09+00:00"
 draft = false
 [extra]
+posse = [
+  { platform = "blogger", url = "https://www.michaelponders.com/2026/02/watched-fallout-2024-on-prime-video.html" },
+  { platform = "microblog", url = "https://mitchelltribe.com/2026/02/08/watched-fallout-on-prime-video/" },
+  { platform = "scribbles", url = "https://michaelmusings.com/post/watched-fallout-2024-on-prime-video" },
+  { platform = "writeas", url = "https://write.as/michaelmitchell/watched-fallout-2024-on-prime-video" },
+]
 card_fit = "contain"
 [taxonomies]
 tags = [ "review", "streaming", "tv",]
 +++
-
 ⚠️ **SPOILER WARNING:** MAJOR SPOILERS
 
 

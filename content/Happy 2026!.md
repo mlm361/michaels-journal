@@ -4,10 +4,15 @@ date = "2026-01-01T11:03:20+00:00"
 draft = false
 [taxonomies]
 tags = [ "personal",]
+
+[extra]
+posse = [
+  { platform = "blogger", url = "https://www.michaelponders.com/2026/01/happy-2026.html" },
+  { platform = "microblog", url = "https://mitchelltribe.com/2026/01/01/happy/" },
+  { platform = "scribbles", url = "https://michaelmusings.com/post/happy-2026" },
+  { platform = "writeas", url = "https://write.as/michaelmitchell/happy-2026" },
+]
 +++
-
-
-
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
 <img src="https://media.mitchelltribe.xyz/gallery/posts/dalle_temp_c5a41d54263a.avif" alt="A serene watercolor illustration of a cozy workspace by a window, featuring a laptop displaying code, an open book, a steaming mug, and a potted plant, all bathed in warm sunlight streaming through the window. The artwork combines realistic elements with abstract watercolor splashes." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
 </figure>

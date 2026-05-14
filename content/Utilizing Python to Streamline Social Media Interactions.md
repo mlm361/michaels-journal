@@ -4,8 +4,15 @@ date = "2025-12-14T19:50:25+00:00"
 draft = false
 [taxonomies]
 tags = [ "personal", "programming", "ai",]
-+++
 
+[extra]
+posse = [
+  { platform = "blogger", url = "https://www.michaelponders.com/2025/12/utilizing-python-to-streamline-social.html" },
+  { platform = "microblog", url = "https://mitchelltribe.com/2025/12/14/utilizing-python-to-streamline-social/" },
+  { platform = "scribbles", url = "https://michaelmusings.com/post/utilizing-python-to-streamline-social-media-interactions" },
+  { platform = "writeas", url = "https://write.as/michaelmitchell/utilizing-python-to-streamline-social-media-interactions" },
+]
++++
 In recent months, I've been building a social media aggregation platform using the Windsurf AI IDE. The platform displays a multimedia timeline that pulls content from Mastodon, Bluesky, Sharkey, Nostr, and Micro.blog. The goal was to centralize my social media interactions in one location instead of checking multiple sites.
 
 Developed in Python using AI coding assistants (Claude and ChatGPT 5.2 High Reasoning) to accelerate development, I designed the platform structure and verified the implementation through testing. The screenshot shows the current interface. Some posts appear duplicated because I follow the same people across multiple platforms.

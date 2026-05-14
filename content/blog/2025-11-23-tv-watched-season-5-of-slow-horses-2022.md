@@ -4,10 +4,14 @@ date = "2025-11-23T04:09:36+00:00"
 draft = false
 
 [extra]
+posse = [
+  { platform = "blogger", url = "https://www.michaelponders.com/2025/11/watched-season-5-of-slow-horses-2022.html" },
+  { platform = "microblog", url = "https://mitchelltribe.com/2025/11/22/watched-season-of-slow-horses/" },
+  { platform = "writeas", url = "https://write.as/michaelmitchell/watched-season-5-of-slow-horses-2022" },
+]
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/11/22/watched-season-of-slow-horses/"
 +++
-
 ⚠️ **SPOILER WARNING:** MILD SPOILERS
 
 

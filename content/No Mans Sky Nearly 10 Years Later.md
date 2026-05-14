@@ -4,11 +4,11 @@ date = "2025-06-06T00:55:05+00:00"
 draft = false
 
 [extra]
+posse = [
+  { platform = "writeas", url = "https://write.as/michaelmitchell/no-mans-sky-nearly-10-years-later" },
+]
 image = "https://media.mitchelltribe.xyz/gallery/posts/GlHQ5vO_-_Copy.avif"
 +++
-
-
-
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
 <img src="https://media.mitchelltribe.xyz/gallery/posts/GlHQ5vO_-_Copy.avif" alt="No Man&#x27;s Sky Promotional image. Colorful alien landscape featuring a red and pink grass field, exotic plants, and various alien creatures including dinosaurs and flying animals. A humanoid figure stands near a spacecraft while several rockets and ships ascend into the sky. A large geometric monolith floats in the sky with a glowing center, and a giant ringed planet is visible in the background" style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
 </figure>

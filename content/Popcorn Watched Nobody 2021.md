@@ -3,11 +3,16 @@ title = "🍿 Watched Nobody (2021)"
 date = "2026-04-26T02:01:57+00:00"
 draft = false
 [extra]
+posse = [
+  { platform = "blogger", url = "https://www.michaelponders.com/2026/04/watched-nobody-2021.html" },
+  { platform = "microblog", url = "https://mitchelltribe.com/2026/04/26/watched-nobody/" },
+  { platform = "scribbles", url = "https://michaelmusings.com/post/watched-nobody-2021" },
+  { platform = "writeas", url = "https://write.as/michaelmitchell/watched-nobody-2021" },
+]
 card_fit = "contain"
 [taxonomies]
 tags = ["review", "movies"]
 +++
-
 ⚠️ **SPOILER WARNING:** MILD SPOILERS
 
 

@@ -4,8 +4,15 @@ date = "2026-04-01T21:42:12+00:00"
 draft = false
 [taxonomies]
 tags = [ "news", "photos", "history",]
-+++
 
+[extra]
+posse = [
+  { platform = "blogger", url = "https://www.michaelponders.com/2026/04/history-made-april-1-2026-artemis-ii.html" },
+  { platform = "microblog", url = "https://mitchelltribe.com/2026/04/01/history-made-april-artemis-ii/" },
+  { platform = "scribbles", url = "https://michaelmusings.com/post/history-made-april-1-2026-artemis-ii-launched" },
+  { platform = "writeas", url = "https://write.as/michaelmitchell/history-made-april-1-2026-artemis-ii-launched" },
+]
++++
 History was made today. The kind of history that will be written about and studied for years to come, and I was able to capture it from my backyard. Artemis II successfully launched with a crew of four and is heading to the Moon. Not as great, magnificent, or universe changing as what we will celebrate this Sunday with Easter and the resurrection of Jesus Christ, not even close. But still amazing.
 
 Here is what I get to see from my house on the other side of the coast of Florida. Not as amazing as being there, but still awesome.

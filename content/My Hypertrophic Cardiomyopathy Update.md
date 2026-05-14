@@ -1,5 +1,4 @@
 +++
-
 title = "My Hypertrophic Cardiomyopathy Update"
 description = "An update on my treatment with Camzyos, recent ECHOs, cardiac MRI results, and next steps in managing hypertrophic cardiomyopathy."
 date = "2025-09-27T16:09:37-04:00"
@@ -9,8 +8,12 @@ lang = "en-us"
 [taxonomies]
 tags = ["health", "cardiology", "HCM", "personal"]
 
+[extra]
+posse = [
+  { platform = "blogger", url = "http://www.michaelponders.com/2025/09/my-hypertrophic-cardiomyopathy-update.html" },
+  { platform = "microblog", url = "https://mitchelltribe.com/2025/09/27/my-hypertrophic-cardiomyopathy-update/" },
+]
 +++
-
 I went to the doctors on Friday, hopefully for the last of the required three ECHOs I need while on my medication called [Camzyos](https://www.camzyos.com/) (you may have seen the commercials on TV for it). I have been on 5mg since June for my Hypertrophic Cardiomyopathy, and I am oversimplifying here, but the results have been mixed.
 
 On the positive side, it has helped significantly. My numbers have definitely improved, not only on my LVOT obstruction (how much oxygenated blood gets out of my heart) but also on my ejection fraction. My shortness of breath during exertion or regular activities is completely gone.

@@ -7,11 +7,12 @@ draft = false
 tags = [ "Genealogy", "Poland", "WorldWarII",]
 
 [extra]
+posse = [
+  { platform = "blogger", url = "http://www.michaelponders.com/2025/06/tracing-roots-lost-to-war.html" },
+  { platform = "writeas", url = "https://write.as/michaelmitchell/tracing-roots-lost-to-war" },
+]
 image = "https://media.mitchelltribe.xyz/gallery/posts/3657c8a3d675.avif"
 +++
-
-
-
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
 <img src="https://media.mitchelltribe.xyz/gallery/posts/3657c8a3d675.avif" alt="A vintage collection of documents on a wooden surface, including a Polish passport (&quot;Paszport Rzeczpospolita Polska&quot;) with a gold eagle emblem, several aged letters with handwritten text, and a paper labeled &quot;Immigration Service Ellis Island Immigrant Inspection of 1892-1998.&quot; The items evoke a historical theme related to immigration and travel." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
 <figcaption style="font-size: 0.95em; color: #666; margin-top: 0.5em; text-align: center;">Echoes of a family’s journey across time and borders.</figcaption>

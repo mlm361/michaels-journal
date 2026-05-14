@@ -4,11 +4,13 @@ date = "2025-09-27T05:17:28+00:00"
 draft = false
 
 [extra]
+posse = [
+  { platform = "blogger", url = "http://www.michaelponders.com/2025/09/that-something-wonderful-i-was-working.html" },
+  { platform = "microblog", url = "https://mitchelltribe.com/2025/09/26/that-something-wonderful-i-was/" },
+  { platform = "writeas", url = "https://write.as/michaelmitchell/that-something-wonderful-i-was-working-on" },
+]
 exclude_from_feed = true
 +++
-
-
-
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
 <img src="https://media.mitchelltribe.xyz/gallery/imports/vk0zqqvd.avif" alt="A man sits at a desk in a dimly lit room, working on a computer with three monitors displaying various web pages. The room has a warm ambiance with a lamp on the desk and a view of a cityscape through the window at night. The painting style is reminiscent of Edward Hopper, emphasizing solitude and the glow of screens in a dark room." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
 <figcaption style="font-size: 0.95em; color: #666; margin-top: 0.5em; text-align: center;">Late-night coding with multiple blogs open, in a Hopper-inspired scene of focus and isolation.</figcaption>

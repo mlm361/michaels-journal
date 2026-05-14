@@ -4,10 +4,14 @@ date = "2025-09-13T23:18:34+00:00"
 draft = false
 
 [extra]
+posse = [
+  { platform = "blogger", url = "http://www.michaelponders.com/2025/09/planet-moneys-toilet-talk.html" },
+  { platform = "microblog", url = "https://mitchelltribe.com/2025/09/13/planet-moneys-toilet-talk/" },
+  { platform = "writeas", url = "https://write.as/michaelmitchell/planet-moneys-toilet-talk" },
+]
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/09/13/planet-moneys-toilet-talk/"
 +++
-
 <figure>
   <img src="https://media.mitchelltribe.xyz/gallery/imports/77d59377fb70.avif" alt="Illustration of a pay toilet with a coin-operated door and a sign reading &quot;PAY TOILET 10c&quot; next to a detailed interior view.">
   <figcaption>From pay toilets to high-tech pods—two eras of public convenience.</figcaption>

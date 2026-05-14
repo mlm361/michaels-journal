@@ -4,8 +4,15 @@ date = "2026-01-09T22:35:14+00:00"
 draft = false
 [taxonomies]
 tags = [ "health", "news", "personal",]
-+++
 
+[extra]
+posse = [
+  { platform = "blogger", url = "https://www.michaelponders.com/2026/01/finally-great-heart-news.html" },
+  { platform = "microblog", url = "https://mitchelltribe.com/2026/01/09/finally-great-heart-news/" },
+  { platform = "scribbles", url = "https://michaelmusings.com/post/finally-great-heart-news" },
+  { platform = "writeas", url = "https://write.as/michaelmitchell/finally-great-heart-news" },
+]
++++
 Great news today at my follow-up with my hypertrophic cardiomyopathy specialist. Camzyos is really starting to work. My most recent echo earlier this week was excellent, and so was the heart cath I had in late December.
 
 In fact, the heart cath showed that Camzyos is working well enough that I do not need to rush into an alcohol ablation or a septal myectomy. If I ever do need an intervention in the future, my doctor said I would be a good candidate for septal alcohol ablation.

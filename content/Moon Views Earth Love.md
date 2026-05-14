@@ -7,9 +7,14 @@ draft = false
 tags = [ "current-events", "inspiration", "opinion",]
 
 [extra]
+posse = [
+  { platform = "blogger", url = "https://www.michaelponders.com/2026/04/moon-views-earth-love.html" },
+  { platform = "microblog", url = "https://mitchelltribe.com/2026/04/07/moon-views-earth-love/" },
+  { platform = "scribbles", url = "https://michaelmusings.com/post/moon-views-earth-love" },
+  { platform = "writeas", url = "https://write.as/michaelmitchell/moon-views-earth-love" },
+]
 card_fit = "contain"
 +++
-
 I have been watching the **Artemis II** mission off and on. I saw these pictures on the NASA website, and here are a few that I really like. They definitely got me thinking.
 
 I have always been fascinated by space and the Heavens. I would like to go to space, but not like we do today. If I went, I would want it to be on a **Star Trek** type shuttle or ship. Our spacecraft, much like our planes, are little more than thin tin cans.

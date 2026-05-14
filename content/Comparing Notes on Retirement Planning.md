@@ -4,8 +4,14 @@ date = "2025-11-29T23:01:50+00:00"
 draft = false
 [taxonomies]
 tags = [ "personal", "travel", "retirement",]
-+++
 
+[extra]
+posse = [
+  { platform = "blogger", url = "https://www.michaelponders.com/2025/11/comparing-notes-on-retirement-planning.html" },
+  { platform = "microblog", url = "https://mitchelltribe.com/2025/11/29/comparing-notes-on-retirement-planning/" },
+  { platform = "writeas", url = "https://write.as/michaelmitchell/comparing-notes-on-retirement-planning" },
+]
++++
 <img src="https://media.mitchelltribe.xyz/gallery/posts/5e55fdca985f.avif" alt="A breathtaking coastal landscape featuring turquoise waters, layered sedimentary rock formations, and lush greenery. The scene includes a series of small, unique rock islets close to the shore and a prominent cliff topped with dense vegetation overlooking the sea. A solitary sailboat drifts near the horizon under a partly cloudy sky." width="600">
 
 

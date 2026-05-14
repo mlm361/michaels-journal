@@ -4,10 +4,13 @@ date = "2025-09-06T14:00:00-04:00"
 draft = false
 
 [extra]
+posse = [
+  { platform = "blogger", url = "http://www.michaelponders.com/2025/09/10-years-of-world-of-warships.html" },
+  { platform = "microblog", url = "https://mitchelltribe.com/2025/09/06/years-of-world-of-warships/" },
+]
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/09/06/years-of-world-of-warships/"
 +++
-
 <figure class="attachment attachment--preview flex-col justify-center attachment--jpg">
 <img alt="World of Warships profile badge with a silver-blue ship and dock cranes, showing “Registration date: 02.07.2015” and “Profile privacy: Private." class="lightbox__image strip-metadata lightbox__image" decoding="async" loading="lazy" src="https://media.mitchelltribe.xyz/gallery/imports/wows20start20date.avif" srcset="https://scribbles.page/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMlpRQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f040636ed79cb271a1f4ccd44afa777992b3941f/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJQUVHa0NBQXc2Q25OaGRtVnlld2M2Q25OMGNtbHdWRG9NY1hWaGJHbDBlV2xrIiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--95bb9764b8481bddaaffec4af57d9e494bae5163/WoWs%20start%20date.jpg 2x"/>
 <figcaption class="attachment__caption text-center">

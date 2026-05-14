@@ -3,11 +3,16 @@ title = "🎥 Watched Superman (2025)"
 date = "2025-12-14T12:03:30+00:00"
 draft = false
 [extra]
+posse = [
+  { platform = "blogger", url = "https://www.michaelponders.com/2025/12/watched-superman-2025_02007470074.html" },
+  { platform = "microblog", url = "https://mitchelltribe.com/2025/12/14/watched-superman/" },
+  { platform = "scribbles", url = "https://michaelmusings.com/post/watched-superman-2025" },
+  { platform = "writeas", url = "https://write.as/michaelmitchell/watched-superman-2025" },
+]
 card_fit = "contain"
 [taxonomies]
 tags = [ "review", "movies",]
 +++
-
 ⚠️ **SPOILER WARNING:** FULL SPOILERS
 
 <img src="https://media.mitchelltribe.xyz/gallery/posts/tmdb_102cc9c05fe1.avif" alt="Promotional poster for a Superman movie featuring the superhero in a vibrant blue and red suit, confidently standing with his arms crossed, against a brightly lit, colorful background. The logo of DC Studios and the title &quot;SUPERMAN&quot; are prominently displayed." width="600">

@@ -4,12 +4,14 @@ date = "2025-11-10T02:55:30+00:00"
 draft = false
 
 [extra]
+posse = [
+  { platform = "blogger", url = "https://www.michaelponders.com/2025/11/the-path-forward-hcom-update.html" },
+  { platform = "microblog", url = "https://mitchelltribe.com/2025/11/10/the-path-forward-a-hcom/" },
+  { platform = "writeas", url = "https://write.as/michaelmitchell/the-path-forward-a-hcom-update" },
+]
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/11/10/the-path-forward-a-hcom/"
 +++
-
-
-
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
 <img src="https://media.mitchelltribe.xyz/gallery/imports/20251109_215350_4d726567cdd9.avif" alt="Detailed pen-and-ink illustration showing a patient consulting with a cardiologist in a medical office. The patient, a middle-aged man with glasses, sits at a wooden desk, looking thoughtful. Across from him, the doctor wears glasses, a tie, and a stethoscope, leaning forward while writing on a notepad. On the desk lie medical charts and a tablet showing a heart image. Behind them is a wall poster labeled “Septal Myectomy” and “Alcohol Septal Ablation,” a bookshelf, and a window with blinds filtering soft light." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
 </figure>

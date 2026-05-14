@@ -3,11 +3,16 @@ title = "🍿 Watched Chief of Station (2024)"
 date = "2026-03-22T00:26:45+00:00"
 draft = false
 [extra]
+posse = [
+  { platform = "blogger", url = "https://www.michaelponders.com/2026/03/watched-chief-of-station-2024.html" },
+  { platform = "microblog", url = "https://mitchelltribe.com/2026/03/22/watched-chief-of-station/" },
+  { platform = "scribbles", url = "https://michaelmusings.com/post/watched-chief-of-station-2024" },
+  { platform = "writeas", url = "https://write.as/michaelmitchell/watched-chief-of-station-2024" },
+]
 card_fit = "contain"
 [taxonomies]
 tags = [ "review", "movies",]
 +++
-
 ⚠️ **SPOILER WARNING:** MAJOR SPOILERS
 
 

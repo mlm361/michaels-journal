@@ -4,10 +4,14 @@ date = "2025-11-21T17:38:15+00:00"
 draft = false
 
 [extra]
+posse = [
+  { platform = "blogger", url = "https://www.michaelponders.com/2025/11/watched-season-3-of-foundation-2021_0798818943.html" },
+  { platform = "microblog", url = "https://mitchelltribe.com/2025/11/21/watched-season-of-foundation/" },
+  { platform = "writeas", url = "https://write.as/michaelmitchell/watched-season-3-of-foundation-2021" },
+]
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/11/21/watched-season-of-foundation/"
 +++
-
 ⚠️ **SPOILER WARNING:** MILD SPOILERS
 
 

@@ -4,12 +4,14 @@ date = "2025-07-04T04:16:05+00:00"
 draft = false
 
 [extra]
+posse = [
+  { platform = "blogger", url = "http://www.michaelponders.com/2025/07/happy-249th-birthday-to-united-states.html" },
+  { platform = "microblog", url = "https://mitchelltribe.com/2025/07/04/001705/" },
+  { platform = "writeas", url = "https://write.as/michaelmitchell/happy-249th-birthday-to-the-united-states-of-america" },
+]
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/07/04/001705/"
 +++
-
-
-
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
 <img src="https://media.mitchelltribe.xyz/gallery/imports/5kwnq7x8.avif" alt=" A cinematic oil painting of a 1776 Independence Day parade in a colonial village. Continental soldiers in blue and red march down a dusty road, led by a large Betsy Ross flag. Civilians on both sides cheer and wave flags, with women and children in period clothing celebrating. The warm tones and painterly texture give the scene a nostalgic, historic feel." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
 </figure>

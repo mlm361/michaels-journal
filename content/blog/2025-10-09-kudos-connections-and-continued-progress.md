@@ -4,10 +4,14 @@ date = "2025-10-09T01:46:15+00:00"
 draft = false
 
 [extra]
+posse = [
+  { platform = "blogger", url = "http://www.michaelponders.com/2025/10/kudos-connections-and-continued-progress.html" },
+  { platform = "microblog", url = "https://mitchelltribe.com/2025/10/08/kudos-connections-and-continued-progress/" },
+  { platform = "writeas", url = "https://write.as/michaelmitchell/kudos-connections-and-continued-progress" },
+]
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/10/08/kudos-connections-and-continued-progress/"
 +++
-
 I’ve made more progress on my blog poster program. I’m doing a few minor changes and adding new features before moving on to another service/platform. The images haven’t changed since my last post, so there are no new ones this time.
 
 I added a Kudos button to my Write.as custom domain, michaelmitchell.blog. It’s powered by Tinylytics. I’ll probably be adding more features soon and doing some digital gardening along the way.

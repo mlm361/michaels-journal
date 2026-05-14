@@ -4,8 +4,15 @@ date = "2025-12-30T14:31:07+00:00"
 draft = false
 [taxonomies]
 tags = [ "photos", "landscape", "nature",]
-+++
 
+[extra]
+posse = [
+  { platform = "blogger", url = "https://www.michaelponders.com/2025/12/a-day-of-celestial-discoveries-and.html" },
+  { platform = "microblog", url = "https://mitchelltribe.com/2025/12/29/a-day-of-celestial-discoveries/" },
+  { platform = "scribbles", url = "https://michaelmusings.com/post/a-day-of-celestial-discoveries-and-misty-mornings" },
+  { platform = "writeas", url = "https://write.as/michaelmitchell/a-day-of-celestial-discoveries-and-misty-mornings" },
+]
++++
 Today was a peculiar yet fulfilling day. It started with a dense fog but cleared up nicely. I managed to capture the sun through my telescope for the first time, and I also spotted the moon in broad daylight, though the telescope had some trouble pinpointing it. I hope you find the images as delightful as I did. They were taken with my Zwo Seestar S30, except for the fog picture, which I captured with the Samsung Galaxy S24 Ultra.
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;"><img src="https://media.mitchelltribe.xyz/gallery/posts/55108e7f537c.avif" alt="A blurry photograph taken from inside a car at night, showing a view of a road with traffic lights and faint outlines of trees in foggy or misty conditions. The dashboard of the car is visible in the foreground." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;"><figcaption style="font-size: 0.9em; color: #666; text-align: center; margin-top: 0.5em; font-style: italic;">A blurry photograph taken from inside a car at night, showing a view of a road with traffic lights and faint outlines of trees in foggy or misty conditions. The dashboard of the car is visible in the foreground.</figcaption></figure>
 

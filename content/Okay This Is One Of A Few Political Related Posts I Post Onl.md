@@ -4,9 +4,15 @@ date = "2026-03-02T22:26:59+00:00"
 draft = false
 [taxonomies]
 tags = [ "opinion", "politics",]
+
+[extra]
+posse = [
+  { platform = "blogger", url = "https://www.michaelponders.com/2026/03/okay-this-is-one-of-few-political.html" },
+  { platform = "microblog", url = "https://mitchelltribe.com/2026/03/02/okay-this-is-one-of/" },
+  { platform = "scribbles", url = "https://michaelmusings.com/post/okay-this-is-one-of-a-few-political-related-posts-i-post-onl" },
+  { platform = "writeas", url = "https://write.as/michaelmitchell/okay-this-is-one-of-a-few-political-related-posts-i-post-onl" },
+]
 +++
-
-
 > ⚠️ **Warning:** Political Rant
 
 

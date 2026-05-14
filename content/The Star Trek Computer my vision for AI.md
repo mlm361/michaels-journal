@@ -1,5 +1,4 @@
 +++
-
 title = "The Star Trek Computer: My Vision for AI"
 description = "My vision: the Star Trek computer model where humans conduct and AI provides the orchestra."
 date = "2025-10-02T07:35:00-04:00"
@@ -9,8 +8,12 @@ lang = "en-us"
 [taxonomies]
 tags = ["Star Trek", "AI", "Tools", "Technology"]
 
+[extra]
+posse = [
+  { platform = "blogger", url = "http://www.michaelponders.com/2025/10/the-star-trek-computer-my-vision-for-ai.html" },
+  { platform = "microblog", url = "https://mitchelltribe.com/2025/10/02/the-star-trek-computer-my/" },
+]
 +++
-
 <figure class="captioned">
   <img src="https://media.mitchelltribe.xyz/gallery/posts/starship-bridge_robot-orchestra_08.avif"
        alt="A human conductor stands on a podium, baton raised, directing a futuristic orchestra of humanoid robots with glowing blue accents. The robots sit in traditional orchestral formation with violins, cellos, and other instruments. Through the large curved observation window behind them, the saucer section and nacelles of a Federation starship resembling the USS Enterprise are visible against the backdrop of deep space. The walls of the starship interior feature subtle LCARS-style glowing panels."
