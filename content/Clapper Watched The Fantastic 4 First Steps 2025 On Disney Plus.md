@@ -3,15 +3,16 @@ title = "🎬 Watched The Fantastic 4: First Steps (2025) on Disney+"
 date = "2025-12-28T13:57:30+00:00"
 draft = false
 [extra]
-posse = [
-  { platform = "blogger", url = "https://www.michaelponders.com/2025/12/watched-fantastic-4-first-steps-2025-on.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2025/12/26/watched-the-fantastic-first-steps/" },
-  { platform = "scribbles", url = "https://michaelmusings.com/post/watched-the-fantastic-4-first-steps-2025-on-disney" },
-  { platform = "writeas", url = "https://write.as/michaelmitchell/watched-the-fantastic-4-first-steps-2025-on-disney" },
-]
 card_fit = "contain"
 [taxonomies]
 tags = [ "review", "movies", "streaming",]
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/115789586695178659"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mawwzv5fdp2s"
+sharkey = "https://mitchelltribe.rodeo/notes/agrcp9sspnjh0001"
+nostr = "https://njump.me/ea3efddaa7360947a90eead22edb17639c1cce00086979b7a106ad2c0b88776d"
+
 +++
 ⚠️ **SPOILER WARNING:** MILD SPOILERS
 

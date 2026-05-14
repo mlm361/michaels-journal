@@ -4,11 +4,8 @@ date = "2025-08-11T23:00:00-04:00"
 draft = false
 
 [extra]
-posse = [
-  { platform = "blogger", url = "http://www.michaelponders.com/2025/08/what-jack-batys-blogging-anniversary.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2025/08/11/what-jack-batys-blogging-anniversary/" },
-]
 exclude_from_feed = true
+
 +++
 <p><img src="https://media.mitchelltribe.xyz/gallery/imports/25-years-of-blogging-retro-desk-still-life.avif" alt="Auto-generated description: A vintage keyboard sits alongside a spiral notebook, pen, and an instant photo on a dimly lit wooden desk."></p>
 <p>I was reading Jack Baty’s blog the other day via RSS and saw his post, <a href="https://baty.net/posts/2025/08/25-years-of-blogging/">“25 years of blogging”</a>. That was three years before I started on Blogger, in the pre-Google days. I had a website before blogging: an about page, photo galleries, a guestbook, and a reading page, hosted by my ISP (GTE) around 1998. I really loved Microsoft FrontPage. I would change the theme and galleries and update the book page at least once a month, but it wasn’t a blog.</p>

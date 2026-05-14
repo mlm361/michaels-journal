@@ -3,15 +3,16 @@ title = "🍿Watched Civil War (2024)"
 date = "2026-04-05T14:27:12+00:00"
 draft = false
 [extra]
-posse = [
-  { platform = "blogger", url = "https://www.michaelponders.com/2026/04/watched-civil-war-2024.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2026/04/05/watched-civil-war/" },
-  { platform = "scribbles", url = "https://michaelmusings.com/post/watched-civil-war-2024" },
-  { platform = "writeas", url = "https://write.as/michaelmitchell/watched-civil-war-2024" },
-]
 card_fit = "contain"
 [taxonomies]
 tags = [ "movies", "opinion", "review",]
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/116353508021199751"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mireto7wme22"
+sharkey = "https://mitchelltribe.rodeo/notes/akpnr2hev7ed000b"
+nostr = "https://verify.mitchelltribe.com/note.html#bb21fbce696139a34f9719a20ca44090d843f4db596869a101a66166c5a0f834"
+
 +++
 ⚠️ **SPOILER WARNING:** FULL SPOILERS
 

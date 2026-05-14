@@ -3,15 +3,16 @@ title = "🍿 Watched Nobody (2021)"
 date = "2026-04-26T02:01:57+00:00"
 draft = false
 [extra]
-posse = [
-  { platform = "blogger", url = "https://www.michaelponders.com/2026/04/watched-nobody-2021.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2026/04/26/watched-nobody/" },
-  { platform = "scribbles", url = "https://michaelmusings.com/post/watched-nobody-2021" },
-  { platform = "writeas", url = "https://write.as/michaelmitchell/watched-nobody-2021" },
-]
 card_fit = "contain"
 [taxonomies]
 tags = ["review", "movies"]
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/116469486711579057"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mkeuynfwx323"
+sharkey = "https://mitchelltribe.rodeo/notes/alixdro7673v04ce"
+nostr = "https://verify.mitchelltribe.com/note.html#55abb6efa76a80d13a93fec76331451025ec5fbbfb3e7cccdb2d7408750c3115"
+
 +++
 ⚠️ **SPOILER WARNING:** MILD SPOILERS
 

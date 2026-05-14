@@ -4,12 +4,9 @@ date = "2025-07-03T08:30:00-04:00"
 draft = false
 
 [extra]
-posse = [
-  { platform = "blogger", url = "http://www.michaelponders.com/2025/07/what-am-i-even-blogging-about.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2025/07/03/what-am-i-even-blogging/" },
-]
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/07/03/what-am-i-even-blogging/"
+
 +++
 <figure class="attachment attachment--preview flex-col justify-center attachment--png">
       <img class="lightbox__image strip-metadata lightbox__image" srcset="https://scribbles.page/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBM283QVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--0ed0cce5b5e0a46348d7dbc2bd2ae349ce81c8b8/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJQUVHa0NBQXc2Q25OaGRtVnlld2M2Q25OMGNtbHdWRG9NY1hWaGJHbDBlV2xrIiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--a18847b6c1cccf2736612f487841b9c550593dc1/feature%20image%20for%20blog%20post%20What%20Am%20I%20blogging%20about.png 2x" loading="lazy" alt="Hand-drawn black-and-white pencil illustration of a thoughtful man sitting at a desk with a laptop and books. He looks puzzled, resting his chin on his hand, with a speech bubble above his head that reads, “What am I even blogging about?” The drawing features detailed line work and subtle cross-hatching for shading." src="https://media.mitchelltribe.xyz/gallery/imports/feature20image20for20blog20post20what20am20i20blogging20about.avif" decoding="async" />

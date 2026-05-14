@@ -7,12 +7,13 @@ draft = false
 tags = ["entertainment", "music"]
 
 [extra]
-posse = [
-  { platform = "blogger", url = "https://www.michaelponders.com/2026/04/memes-connect-us-i-guess.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2026/04/21/memes-connect-us-i-guess/" },
-  { platform = "scribbles", url = "https://michaelmusings.com/post/memes-connect-us-i-guess" },
-  { platform = "writeas", url = "https://write.as/michaelmitchell/memes-connect-us-i-guess" },
-]
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/116445988973953762"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mk2h3anu4n2e"
+sharkey = "https://mitchelltribe.rodeo/notes/alczwurd673v00as"
+nostr = "https://verify.mitchelltribe.com/note.html#4fa63b52a8d85d74c720fe60121cc5a7b532376e128c2ce1ad132e8021b888bf"
+
 +++
 I usually watch BGT (Britain's Got Talent) clips on YouTube because the British often have really interesting acts. One I liked was the Glantaf Boys Choir from Wales. They were excellent, and it made me wonder why we don't have this kind of all-male boy choir here. We do have choruses and choirs, but they are almost always mixed. There's nothing wrong with that, but it's a different cultural tradition and it's special to see and hear an all-male choir perform.
 

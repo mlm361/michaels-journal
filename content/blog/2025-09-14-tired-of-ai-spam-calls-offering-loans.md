@@ -4,13 +4,9 @@ date = "2025-09-14T05:46:23+00:00"
 draft = false
 
 [extra]
-posse = [
-  { platform = "blogger", url = "http://www.michaelponders.com/2025/09/tired-of-ai-spam-calls-offering-loans.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2025/09/14/tired-of-ai-spam-calls/" },
-  { platform = "writeas", url = "https://write.as/michaelmitchell/tired-of-ai-spam-calls-offering-loans" },
-]
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/09/14/tired-of-ai-spam-calls/"
+
 +++
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
 <img src="https://media.mitchelltribe.xyz/gallery/imports/zsigafts.avif" alt="A futuristic image depicting the concept of AI voice cloning and robocall scams. The central focus is a smartphone displaying a scam alert for a pre-approved loan, with options to decline or accept the call. In the background, a neon-lit, robotic head symbolizes advanced technology, accompanied by glowing text that reads &quot;AI Voice Cloning&quot; and &quot;Robocall Scams.&quot; Additional neon signs include symbols and texts like a dollar sign, warning signs, and phrases such as &quot;Daily Calls.&quot; The overall mood is dark and cyberpunk, emphasizing the theme of technological threats in modern communication." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">

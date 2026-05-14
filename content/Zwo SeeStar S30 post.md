@@ -8,10 +8,7 @@ tags = ["astronomy", "photography", "telescopes", "moon"]
  
 
 [extra]
-posse = [
-  { platform = "blogger", url = "http://www.michaelponders.com/2025/07/capturing-moon-with-my-seestar-s30.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2025/07/06/capturing-the-moon-with-my/" },
-]
+
 +++
 I’ve always wanted a telescope. Something I could use to take photos and videos of the night sky with my phone or camera. I recently came across a YouTube video about the Zwo Seestar S50, but since this is my first telescope, I decided to start with the more beginner-friendly **S30** and bought it for my birthday.
 

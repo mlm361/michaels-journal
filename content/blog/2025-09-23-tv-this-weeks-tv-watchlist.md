@@ -4,10 +4,8 @@ date = "2025-09-23T20:00:00-04:00"
 draft = false
 
 [extra]
-posse = [
-  { platform = "microblog", url = "https://mitchelltribe.com/2025/09/23/this-weeks-tv-watchlist/" },
-]
 exclude_from_feed = true
+
 +++
 <p><strong>From Disney+/Hulu:</strong></p>
 <p>🎬 <strong>Alien: Earth</strong> – Season 1, Episodes 1-7

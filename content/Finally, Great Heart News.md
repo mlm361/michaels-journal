@@ -6,12 +6,13 @@ draft = false
 tags = [ "health", "news", "personal",]
 
 [extra]
-posse = [
-  { platform = "blogger", url = "https://www.michaelponders.com/2026/01/finally-great-heart-news.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2026/01/09/finally-great-heart-news/" },
-  { platform = "scribbles", url = "https://michaelmusings.com/post/finally-great-heart-news" },
-  { platform = "writeas", url = "https://write.as/michaelmitchell/finally-great-heart-news" },
-]
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/115868704385753367"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mc23eltzcy2q"
+sharkey = "https://mitchelltribe.rodeo/notes/ahbbgmbopggb0003"
+nostr = "https://njump.me/df7fb03923e5a2b57911d500653049fd79e92a2861a44a3e48d7a7914cbb6a79"
+
 +++
 Great news today at my follow-up with my hypertrophic cardiomyopathy specialist. Camzyos is really starting to work. My most recent echo earlier this week was excellent, and so was the heart cath I had in late December.
 

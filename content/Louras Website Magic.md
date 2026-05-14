@@ -7,12 +7,13 @@ draft = false
 tags = ["opinion", "web-development"]
 
 [extra]
-posse = [
-  { platform = "blogger", url = "https://www.michaelponders.com/2026/04/louras-website-magic.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2026/04/23/louras-website-magic/" },
-  { platform = "scribbles", url = "https://michaelmusings.com/post/loura-s-website-magic" },
-  { platform = "writeas", url = "https://write.as/michaelmitchell/louras-website-magic" },
-]
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/116453941644743853"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mk5y3k7k6k2j"
+sharkey = "https://mitchelltribe.rodeo/notes/alf05riu673v00ik"
+nostr = "https://verify.mitchelltribe.com/note.html#0e04d64f8acc403ebb5471bbacd0e8a3591d974f9e93c9d100aa06bf40955107"
+
 +++
 If you ever want to see a master craftswoman at website design and theming, then you must stop over at [Hey Loura!](https://heyloura.com/2026/04/21/this-weekend-i-reached-for.html) She is also in my BlogRoll. Her latest creation is spectacular and pirate-themed. She keeps outdoing herself each time she updates.
 

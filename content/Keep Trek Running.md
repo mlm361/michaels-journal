@@ -4,13 +4,10 @@ description = "Why Star Trek should always have a series on the air and how its 
 date = "2025-07-16T20:09:07-04:00"
 draft = false
 [extra]
-posse = [
-  { platform = "blogger", url = "http://www.michaelponders.com/2025/07/keep-trek-running.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2025/07/16/keep-trek-running/" },
-]
 card_fit = "contain"
 [taxonomies]
 tags = ["entertainment", "tv", "startrek"]
+
 +++
 <img src="https://media.mitchelltribe.xyz/gallery/posts/star_trek_constant_exploration.avif" alt="Futuristic starship gliding past a distant planet with nebula clouds in the background, symbolizing Star Trek's enduring journey and its vision of an attainable future" width="600" />
 

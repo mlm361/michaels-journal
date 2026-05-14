@@ -6,12 +6,7 @@ draft = false
 tags = [ "review", "opinion",]
 
 [extra]
-posse = [
-  { platform = "blogger", url = "https://www.michaelponders.com/2026/03/my-blogging-platform-odyssey_0358506186.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2026/03/08/211834/" },
-  { platform = "scribbles", url = "https://michaelmusings.com/post/my-blogging-platform-odyssey-1" },
-  { platform = "writeas", url = "https://write.as/michaelmitchell/my-blogging-platform-odyssey-b8j3" },
-]
+
 +++
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
 <img src="https://media.mitchelltribe.xyz/gallery/posts/dalle_temp_d62d72a5b90f.avif" alt="A digital painting of a person walking down a sunlit path through a vibrant, colorful valley filled with flowers and trees. The trees have large, floating app icons instead of leaves, including icons resembling Twitter and other social media or tech platforms. The scene is bathed in warm, golden light with a dreamy, painterly texture, and butterflies flutter in the sky near the glowing sun." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">

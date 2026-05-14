@@ -4,13 +4,9 @@ date = "2025-11-16T23:18:56+00:00"
 draft = false
 
 [extra]
-posse = [
-  { platform = "blogger", url = "https://www.michaelponders.com/2025/11/watched-silo-2023-on-appletv.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2025/11/16/watched-silo-on-appletv/" },
-  { platform = "writeas", url = "https://write.as/michaelmitchell/watched-silo-2023-on-appletv" },
-]
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/11/16/watched-silo-on-appletv/"
+
 +++
 ⚠️ **SPOILER WARNING:** NO SPOILERS
 

@@ -9,10 +9,7 @@ lang = "en-us"
 tags = ["HOCM", "Camzyos", "HeartHealth"]
 
 [extra]
-posse = [
-  { platform = "blogger", url = "http://www.michaelponders.com/2025/07/living-with-hocm-mid-year-update.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2025/07/20/living-with-hocm-a-midyear/" },
-]
+
 +++
 <img src="https://media.mitchelltribe.xyz/gallery/posts/heart-condition-checkup-ink-illustration.avif" alt="Black-and-white hand-drawn illustration of a doctor’s office, showing a doctor with a stethoscope seated at a desk, attentively listening to a male patient. The office includes a computer, medical supplies, bookshelves, and an anatomical heart chart on the wall, all rendered in detailed pen-and-ink linework with subtle cross-hatching." width="600" />
 

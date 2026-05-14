@@ -4,12 +4,8 @@ date = "2025-08-17T23:31:38+00:00"
 draft = false
 
 [extra]
-posse = [
-  { platform = "blogger", url = "http://www.michaelponders.com/2025/08/is-world-marching-to-same-tune-again.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2025/08/17/is-the-world-marching-to/" },
-  { platform = "writeas", url = "https://write.as/michaelmitchell/is-the-world-marching-to-the-same-tune-again" },
-]
 exclude_from_feed = true
+
 +++
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
 <img src="https://media.mitchelltribe.xyz/gallery/imports/t2wnt5cd.avif" alt="A bright home office desk with vintage newspapers about 1930s European crises, a modern smartphone with breaking news, and a peaceful yard visible through the window, suggesting personal reflection on repeating history." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">

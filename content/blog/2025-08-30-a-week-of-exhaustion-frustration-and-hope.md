@@ -4,12 +4,8 @@ date = "2025-08-30T23:40:44+00:00"
 draft = false
 
 [extra]
-posse = [
-  { platform = "blogger", url = "http://www.michaelponders.com/2025/08/a-week-of-exhaustion-frustration-and.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2025/08/30/a-week-of-exhaustion-frustration/" },
-  { platform = "writeas", url = "https://write.as/michaelmitchell/a-week-of-exhaustion-frustration-and-hope" },
-]
 exclude_from_feed = true
+
 +++
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
 <img src="https://media.mitchelltribe.xyz/gallery/imports/111dpxos.avif" alt="A man in a maroon polo and khaki shorts sits on a wooden park bench at sunset, reading a newspaper. A tumbler of iced tea, a smartphone, and two e-readers rest on the bench; a curving paved path and green trees glow in warm light" style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">

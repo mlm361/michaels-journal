@@ -3,15 +3,10 @@ title = "🎥 Watched Superman (2025)"
 date = "2025-12-14T12:03:30+00:00"
 draft = false
 [extra]
-posse = [
-  { platform = "blogger", url = "https://www.michaelponders.com/2025/12/watched-superman-2025_02007470074.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2025/12/14/watched-superman/" },
-  { platform = "scribbles", url = "https://michaelmusings.com/post/watched-superman-2025" },
-  { platform = "writeas", url = "https://write.as/michaelmitchell/watched-superman-2025" },
-]
 card_fit = "contain"
 [taxonomies]
 tags = [ "review", "movies",]
+
 +++
 ⚠️ **SPOILER WARNING:** FULL SPOILERS
 

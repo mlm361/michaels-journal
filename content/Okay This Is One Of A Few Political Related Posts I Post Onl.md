@@ -6,12 +6,13 @@ draft = false
 tags = [ "opinion", "politics",]
 
 [extra]
-posse = [
-  { platform = "blogger", url = "https://www.michaelponders.com/2026/03/okay-this-is-one-of-few-political.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2026/03/02/okay-this-is-one-of/" },
-  { platform = "scribbles", url = "https://michaelmusings.com/post/okay-this-is-one-of-a-few-political-related-posts-i-post-onl" },
-  { platform = "writeas", url = "https://write.as/michaelmitchell/okay-this-is-one-of-a-few-political-related-posts-i-post-onl" },
-]
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/116166984208234129"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mg6k6ia2g32k"
+sharkey = "https://mitchelltribe.rodeo/notes/ajel8ofv024w000u"
+nostr = "https://njump.me/4ce909bcdf093a01da39aab6b1d004eaf05d279b50a55a38d9c9154c0b0156d0"
+
 +++
 > ⚠️ **Warning:** Political Rant
 

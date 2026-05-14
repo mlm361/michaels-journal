@@ -3,15 +3,10 @@ title = "📺 Watched The Morning Show (2019)"
 date = "2025-12-19T00:05:11+00:00"
 draft = false
 [extra]
-posse = [
-  { platform = "blogger", url = "https://www.michaelponders.com/2025/12/watched-morning-show-2019.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2025/12/18/watched-the-morning-show/" },
-  { platform = "scribbles", url = "https://michaelmusings.com/post/watched-the-morning-show-2019" },
-  { platform = "writeas", url = "https://write.as/michaelmitchell/watched-the-morning-show-2019" },
-]
 card_fit = "contain"
 [taxonomies]
 tags = [ "review", "tv", "streaming",]
+
 +++
 ⚠️ **SPOILER WARNING:** MINOR SPOILERS
 

@@ -6,12 +6,13 @@ draft = false
 tags = [ "personal", "politics", "current-events",]
 
 [extra]
-posse = [
-  { platform = "blogger", url = "https://www.michaelponders.com/2026/04/birthday-thoughts-on-country-at.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2026/04/06/birthday-thoughts-on-a-country/" },
-  { platform = "scribbles", url = "https://michaelmusings.com/post/birthday-thoughts-on-a-country-at-a-crossroads" },
-  { platform = "writeas", url = "https://write.as/michaelmitchell/birthday-thoughts-on-a-country-at-a-crossroads" },
-]
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/116358362393909336"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mitmz4ve2u2b"
+sharkey = "https://mitchelltribe.rodeo/notes/akqvup15dzp70007"
+nostr = "https://verify.mitchelltribe.com/note.html#d9dac6a1a49bac0e2365c3751c95f5b07932d28ef42c9252bb5155effd3eb76c"
+
 +++
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
 <img src="https://media.mitchelltribe.xyz/gallery/posts/ai_gen_temp_76fc10a9e310.avif" alt="A pastoral scene at sunset with a dirt road splitting into two paths in the center, symbolizing a crossroads. On the left side, near a cozy cottage with smoke rising from the chimney, there are stacks of gold coins, a large gold dollar sign, an oil barrel labeled &quot;OIL,&quot; a red gas pump, and a blackboard with a green upward-trending graph, representing economic and industrial interests. In the background, a factory with smokestacks emits smoke into the sky. On the right side, near another similar cottage with an American flag flying, there is a wooden ballot box labeled &quot;VOTE,&quot; a megaphone, political campaign signs, an American flag, and an old television showing a suited man speaking, symbolizing democracy, voting, and political engagement. The sky is filled with warm golden clouds, and the entire scene is framed by trees and colorful flowers. At the top, the text reads &quot;Birthday Thoughts on a Country at a Crossroads&quot; in elegant script." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">

@@ -4,11 +4,9 @@ date = "2025-09-10T22:58:00-04:00"
 draft = false
 
 [extra]
-posse = [
-  { platform = "microblog", url = "https://mitchelltribe.com/2025/09/10/is-this-the-wakeup-call/" },
-]
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/09/10/is-this-the-wakeup-call/"
+
 +++
 <p>The assassination of Charlie Kirk today is a tragic reminder that political violence is never the solution. It only creates deeper divides and encourages an “us versus them” mentality that is actively harming our society. The proper place to resolve political differences is at the ballot box and through civil debate.</p>
 <p>This destructive rhetoric and division is not new. It has been encouraged for years and has been festering over time. The current environment reinforces a dangerous dynamic that threatens our democratic institutions. I have said this before, and I will say it again: politics is just one aspect of life, but its current state is consuming our nation. Politicians on both sides have not helped by trying to one-up the other party in order to stay in power, and it is a disservice to the public they serve.</p>

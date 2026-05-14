@@ -3,15 +3,16 @@ title = "🍿 Watched Chief of Station (2024)"
 date = "2026-03-22T00:26:45+00:00"
 draft = false
 [extra]
-posse = [
-  { platform = "blogger", url = "https://www.michaelponders.com/2026/03/watched-chief-of-station-2024.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2026/03/22/watched-chief-of-station/" },
-  { platform = "scribbles", url = "https://michaelmusings.com/post/watched-chief-of-station-2024" },
-  { platform = "writeas", url = "https://write.as/michaelmitchell/watched-chief-of-station-2024" },
-]
 card_fit = "contain"
 [taxonomies]
 tags = [ "review", "movies",]
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/116270930983460345"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mhmpdx2hfr2o"
+sharkey = "https://mitchelltribe.rodeo/notes/ak4tkcrxufgb0004"
+nostr = "https://verify.mitchelltribe.com/note.html#ba6c0456d0b75fc560f6e2526bbafd9a60f9328b586e4daf1aeed441dd917498"
+
 +++
 ⚠️ **SPOILER WARNING:** MAJOR SPOILERS
 

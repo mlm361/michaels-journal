@@ -6,12 +6,13 @@ draft = false
 tags = [ "technology", "ai", "innovation",]
 
 [extra]
-posse = [
-  { platform = "blogger", url = "https://www.michaelponders.com/2026/03/exploring-stardocks-clairvoyance.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2026/03/14/exploring-stardocks-clairvoyance/" },
-  { platform = "scribbles", url = "https://michaelmusings.com/post/exploring-stardock-s-clairvoyance" },
-  { platform = "writeas", url = "https://write.as/michaelmitchell/exploring-stardocks-clairvoyance" },
-]
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/116229776741913209"
+bluesky = "https://bsky.app/profile/michael.pds.mitchelltribe.com/post/3mh2gjez7c22p"
+sharkey = "https://mitchelltribe.rodeo/notes/ajufp0igl5jz0003"
+nostr = "https://njump.me/2b9f852c08a7e6544ffbb16f49d6723e1ea1a675c4633f44824a6b2687e66f5c"
+
 +++
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
 <img src="https://media.mitchelltribe.xyz/gallery/posts/ai_gen_temp_1ab263269230.avif" alt="A black-and-white illustration titled &quot;Exploring Stardock&#x27;s Clairvoyance&quot; shows a man smiling and adjusting a slider labeled &quot;SETTINGS&quot; on a large transparent screen filled with graphs, charts, binary code, and a neural network diagram with the word &quot;ANALYZING&quot; underneath. The man is standing at a desk with a coffee cup on a side table nearby. In the background, there is a cozy room setting with an armchair, a side table with a potted plant, and a floor lamp." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">

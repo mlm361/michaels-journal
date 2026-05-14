@@ -4,12 +4,9 @@ date = "2025-08-31T20:08:00-04:00"
 draft = false
 
 [extra]
-posse = [
-  { platform = "blogger", url = "http://www.michaelponders.com/2025/09/to-feature-image-or-not.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2025/08/31/to-feature-image-or-not/" },
-]
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/08/31/to-feature-image-or-not/"
+
 +++
 <figure class="attachment attachment--preview flex-col justify-center attachment--png">
 <img alt="A laptop and several blank cover cards on a desk, symbolizing choosing a blog’s feature image." class="lightbox__image strip-metadata lightbox__image" decoding="async" loading="lazy" src="https://media.mitchelltribe.xyz/gallery/imports/feature-image-choices-desk-1500x900.avif" srcset="https://scribbles.page/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeXRPQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--98be0905d5b55e266e9c11140e05889282d20960/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJQUVHa0NBQXc2Q25OaGRtVnlld2M2Q25OMGNtbHdWRG9NY1hWaGJHbDBlV2xrIiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--a18847b6c1cccf2736612f487841b9c550593dc1/feature-image-choices-desk-1500x900.png 2x"/>

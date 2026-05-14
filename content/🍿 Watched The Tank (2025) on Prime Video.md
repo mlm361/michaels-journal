@@ -3,15 +3,15 @@ title = "🍿 Watched The Tank (2025) on Prime Video"
 date = "2026-01-22T14:41:58+00:00"
 draft = false
 [extra]
-posse = [
-  { platform = "blogger", url = "https://www.michaelponders.com/2026/01/watched-tank-2025-on-prime-video.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2026/01/19/watched-the-tank-on-prime/" },
-  { platform = "scribbles", url = "https://michaelmusings.com/post/watched-the-tank-2025-on-prime-video" },
-  { platform = "writeas", url = "https://write.as/michaelmitchell/watched-the-tank-2025-on-prime-video" },
-]
 card_fit = "contain"
 [taxonomies]
 tags = [ "review", "movies",]
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/115923792651646500"
+sharkey = "https://mitchelltribe.rodeo/notes/ahp7x6lxac26000x"
+nostr = "https://njump.me/567bafa88684f1c53b2e58509d0b05d8c39be0863aad0061246519caf798a997"
+
 +++
 ⚠️ **SPOILER WARNING:** FULL SPOILERS
 

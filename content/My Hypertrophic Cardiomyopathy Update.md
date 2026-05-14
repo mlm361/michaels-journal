@@ -9,10 +9,7 @@ lang = "en-us"
 tags = ["health", "cardiology", "HCM", "personal"]
 
 [extra]
-posse = [
-  { platform = "blogger", url = "http://www.michaelponders.com/2025/09/my-hypertrophic-cardiomyopathy-update.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2025/09/27/my-hypertrophic-cardiomyopathy-update/" },
-]
+
 +++
 I went to the doctors on Friday, hopefully for the last of the required three ECHOs I need while on my medication called [Camzyos](https://www.camzyos.com/) (you may have seen the commercials on TV for it). I have been on 5mg since June for my Hypertrophic Cardiomyopathy, and I am oversimplifying here, but the results have been mixed.
 

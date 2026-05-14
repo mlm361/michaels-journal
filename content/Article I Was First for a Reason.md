@@ -6,12 +6,7 @@ draft = false
 tags = [ "opinion", "politics",]
 
 [extra]
-posse = [
-  { platform = "blogger", url = "https://www.michaelponders.com/2026/01/article-i-was-first-for-reason.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2026/01/15/article-i-was-first-for/" },
-  { platform = "scribbles", url = "https://michaelmusings.com/post/article-i-was-first-for-a-reason" },
-  { platform = "writeas", url = "https://write.as/michaelmitchell/article-i-was-first-for-a-reason" },
-]
+
 +++
 ***This is your Content Warning: this is going to be a Political Rant***
 

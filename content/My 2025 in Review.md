@@ -6,12 +6,13 @@ draft = false
 tags = [ "personal",]
 
 [extra]
-posse = [
-  { platform = "blogger", url = "https://www.michaelponders.com/2025/12/my-2025-in-review.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2025/12/31/my-in-review/" },
-  { platform = "scribbles", url = "https://michaelmusings.com/post/my-2025-in-review" },
-  { platform = "writeas", url = "https://write.as/michaelmitchell/my-2025-in-review" },
-]
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/115814540270362587"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mbbznmujrm2d"
+sharkey = "https://mitchelltribe.rodeo/notes/agxnebw0pnjh001w"
+nostr = "https://njump.me/081be8378058ec20daafbe44df7ad5f4363b589e501b90d4963d2de834e8251f"
+
 +++
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
 <img src="https://media.mitchelltribe.xyz/gallery/posts/dalle_temp_abeea3651599.avif" alt="Illustration of a focused middle-aged man with glasses and a beard, sitting at a desk in a cozy, sunlit room filled with books. He is sketching or writing in a notebook, surrounded by art supplies and books. Ethereal, futuristic diagrams and clocks float around him, suggesting a blend of creativity and concepts of time. Rays of sunlight stream through a window, casting warm light and creating a serene, inspirational atmosphere." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">

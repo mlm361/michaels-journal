@@ -6,12 +6,13 @@ draft = false
 tags = [ "photos", "landscape",]
 
 [extra]
-posse = [
-  { platform = "blogger", url = "https://www.michaelponders.com/2026/01/spooky-full-moon-january-2-2026.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2026/01/03/spooky-full-moon-january/" },
-  { platform = "scribbles", url = "https://michaelmusings.com/post/spooky-full-moon-january-2-2026" },
-  { platform = "writeas", url = "https://write.as/michaelmitchell/spooky-full-moon-january-2-2026" },
-]
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/115832918929946507"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mbk6t5jo3e2q"
+sharkey = "https://mitchelltribe.rodeo/notes/ah2ad20l3cnr0002"
+nostr = "https://njump.me/7529360b19b53651f2781c8c6cebc4d6afc074024a7a1a94c118bffa232533d6"
+
 +++
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
 <img src="https://media.mitchelltribe.xyz/gallery/posts/a1e616407c3f.avif" alt="A moody night sky with a bright moon partially obscured by thick, textured clouds, with silhouettes of tree tops visible at the bottom." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">

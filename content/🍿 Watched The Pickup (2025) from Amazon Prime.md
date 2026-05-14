@@ -3,15 +3,16 @@ title = "🍿 Watched The Pickup (2025) from Amazon Prime"
 date = "2026-01-04T17:45:42+00:00"
 draft = false
 [extra]
-posse = [
-  { platform = "blogger", url = "https://www.michaelponders.com/2026/01/watched-pickup-2025-from-amazon-prime.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2026/01/04/watched-the-pickup-from-amazon/" },
-  { platform = "scribbles", url = "https://michaelmusings.com/post/watched-the-pickup-2025-from-amazon-prime" },
-  { platform = "writeas", url = "https://write.as/michaelmitchell/watched-the-pickup-2025-from-amazon-prime" },
-]
 card_fit = "contain"
 [taxonomies]
 tags = [ "review", "movies", "streaming",]
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/115839240555583152"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mbmynucvjo2s"
+sharkey = "https://mitchelltribe.rodeo/notes/ah3vsilb3cnr000h"
+nostr = "https://njump.me/c4489e45053fa049ba9035c4d15285f934d369813eca80317b42da511bc4879c"
+
 +++
 ⚠️ **SPOILER WARNING:** MILD SPOILERS
 

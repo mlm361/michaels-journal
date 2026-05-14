@@ -9,10 +9,7 @@ lang = "en-us"
 tags = ["Star Trek", "AI", "Tools", "Technology"]
 
 [extra]
-posse = [
-  { platform = "blogger", url = "http://www.michaelponders.com/2025/10/the-star-trek-computer-my-vision-for-ai.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2025/10/02/the-star-trek-computer-my/" },
-]
+
 +++
 <figure class="captioned">
   <img src="https://media.mitchelltribe.xyz/gallery/posts/starship-bridge_robot-orchestra_08.avif"

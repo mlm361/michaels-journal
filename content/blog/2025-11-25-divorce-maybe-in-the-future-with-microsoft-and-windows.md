@@ -4,13 +4,9 @@ date = "2025-11-25T22:42:02+00:00"
 draft = false
 
 [extra]
-posse = [
-  { platform = "blogger", url = "https://www.michaelponders.com/2025/11/divorce-maybe-in-future-with-microsoft.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2025/11/25/divorce-maybe-in-the-future/" },
-  { platform = "writeas", url = "https://write.as/michaelmitchell/divorce-maybe-in-the-future-with-microsoft-and-windows" },
-]
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/11/25/divorce-maybe-in-the-future/"
+
 +++
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
 <img src="https://media.mitchelltribe.xyz/gallery/imports/dalle_temp_384109d23770.avif" alt="Illustration of a person standing in a stylized landscape with mountains, roads, and various technology icons connected by lines, symbolizing a network. The scene includes elements like clouds, sun, and small houses, depicting a blend of nature and digital technology." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">

@@ -4,12 +4,9 @@ date = "2025-07-21T21:00:00-04:00"
 draft = false
 
 [extra]
-posse = [
-  { platform = "blogger", url = "http://www.michaelponders.com/2025/07/old-tech-new-posts-my-most-productive.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2025/07/21/old-tech-new-posts-my/" },
-]
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/07/21/old-tech-new-posts-my/"
+
 +++
 <figure class="attachment attachment--preview flex-col justify-center attachment--png">
 <img alt="A nostalgic painting of a cozy beachside workspace featuring a vintage CRT monitor displaying the Blogger login screen. The scene includes a classic beige keyboard and mouse, a notebook with handwritten text, a fountain pen, a glass of iced tea, and a vase with dried flowers. Outside the window, two palm trees stand by a serene ocean under a sunny blue sky." class="lightbox__image strip-metadata lightbox__image" decoding="async" loading="lazy" src="https://media.mitchelltribe.xyz/gallery/imports/a20nostalgic20workspace.avif" srcset="https://scribbles.page/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK0pDQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e9157dde3f7f14c6ab61994ac368fb9d8e74a509/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJQUVHa0NBQXc2Q25OaGRtVnlld2M2Q25OMGNtbHdWRG9NY1hWaGJHbDBlV2xrIiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--a18847b6c1cccf2736612f487841b9c550593dc1/A%20nostalgic%20workspace.png 2x"/>

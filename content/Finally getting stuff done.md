@@ -6,12 +6,13 @@ draft = false
 tags = [ "hardware", "tech-gadgets", "technology",]
 
 [extra]
-posse = [
-  { platform = "blogger", url = "https://www.michaelponders.com/2025/12/finally-getting-stuff-done.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2025/12/21/finally-getting-stuff-done/" },
-  { platform = "scribbles", url = "https://michaelmusings.com/post/finally-getting-stuff-done" },
-  { platform = "writeas", url = "https://write.as/michaelmitchell/finally-getting-stuff-done" },
-]
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/115760742229477021"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mak54wl6hp2u"
+sharkey = "https://mitchelltribe.rodeo/notes/agk2nq3p5bvh0006"
+nostr = "https://njump.me/de71b4ad8df71ce18a82d05da81aa5b0f6f5f0eb0328586a79a9fe7703d8230d"
+
 +++
 This weekend was quite productive for me! I managed to put together the Pironman5 Max and install a 16GB Raspberry Pi 5, and I also moved my 1TB NVMe drive from my old 8GB Pironman5, which served my homelab and home server for a year. I've owned the Pironman5 Max since June, but my ongoing health issues had left me too drained to assemble it until now. Thankfully, my new medication, Camzyos, has really helped me regain some energy.
 

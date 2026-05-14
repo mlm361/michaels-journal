@@ -4,13 +4,9 @@ date = "2025-10-14T02:24:15+00:00"
 draft = false
 
 [extra]
-posse = [
-  { platform = "blogger", url = "http://www.michaelponders.com/2025/10/trivial-trials-and-tribulations_15.html" },
-  { platform = "microblog", url = "https://mitchelltribe.com/2025/10/13/trivial-trials-and-tribulations/" },
-  { platform = "writeas", url = "https://write.as/michaelmitchell/trivial-trials-and-tribulations" },
-]
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/10/13/trivial-trials-and-tribulations/"
+
 +++
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
 <img src="https://media.mitchelltribe.xyz/gallery/imports/20251013_222347_1ba67acaf472.avif" alt="A black and white illustration depicting a middle-aged man with glasses, sitting thoughtfully at a chessboard that spans the width of the image. The chessboard cleverly represents two sides: one filled with chess pieces, and the other cluttered with medical and insurance-related items like pill bottles, insurance forms, and money. The man appears contemplative, resting his chin on his hand, symbolizing a strategic or critical decision-making scenario, possibly about healthcare or financial issues. The background is a simple gradient, focusing attention on the central elements." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
