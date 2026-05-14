@@ -11,7 +11,7 @@ skip_feed = true
 
 *Last Updated: July 5, 2025*
 
-This Privacy Policy describes how I (the owner of this blog) use and protect any information collected when you visit **Michael's Journal** (hosted at `michaels-journal.pages.dev`). This is a personal blog where I share my opinions, reviews, and thoughts on a variety of subjects; these opinions are mine alone and are subject to change.
+This Privacy Policy describes how I (the owner of this blog) use and protect any information collected when you visit **Michael's Journal** (hosted at `michaelreflects.com or as originally on michaels-journal.pages.dev`). This is a personal blog where I share my opinions, reviews, and thoughts on a variety of subjects; these opinions are mine alone and are subject to change.
 
 By continuing to use this site, you consent to the practices described in this Privacy Policy.
 
