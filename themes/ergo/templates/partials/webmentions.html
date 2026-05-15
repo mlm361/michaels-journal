@@ -1,30 +1,12 @@
 {% if config.extra.webmention_provider == "webmentions_io" %}
 <section class="webmentions" id="webmentions-wrap" aria-labelledby="webmentions-heading">
-  <h3 class="webmentions-heading" id="webmentions-heading">Responses</h3>
-  <form class="webmention-form"
-        action="{{ config.extra.webmention_endpoint }}"
-        method="post"
-        target="_blank">
-    <p class="webmention-help">
-      You can respond with a <a href="https://indieweb.org/Webmention" target="_blank" rel="noopener">webmention</a>.
-      Publish a reply on your own site, then paste its URL here.
-    </p>
-    <input type="hidden" name="target" value="{{ page.permalink }}">
-    <label class="webmention-label" for="webmention-source">URL</label>
-    <div class="webmention-submit-row">
-      <input id="webmention-source"
-             class="webmention-source"
-             type="url"
-             name="source"
-             placeholder="https://example.com/my-reply"
-             autocomplete="url"
-             required>
-      <button class="webmention-submit" type="submit">Ping!</button>
-    </div>
-  </form>
+  <h3 class="webmentions-heading" id="webmentions-heading">Webmentions</h3>
+  <p class="webmentions-intro">
+    Reply from your own site with a <a href="https://indieweb.org/Webmention" target="_blank" rel="noopener">webmention</a>; they are always welcome.
+  </p>
 
   <div id="webmentions-list" class="webmentions-list" aria-live="polite">
-    <p class="webmentions-empty">No responses yet. Be the first to respond.</p>
+    <p class="webmentions-empty">No webmentions yet. Be the first!</p>
   </div>
 </section>
 
@@ -45,6 +27,13 @@
 
   .webmentions-list {
     margin-top: 1.25rem;
+  }
+
+  .webmentions-intro {
+    margin: 0 0 0.9rem;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    opacity: 0.78;
   }
 
   .webmentions-empty {
@@ -99,85 +88,6 @@
     font-style: italic;
   }
 
-  .webmention-form {
-    margin-bottom: 1.25rem;
-  }
-
-  .webmention-help {
-    margin: 0 0 0.7rem;
-    font-size: 0.92rem;
-    line-height: 1.55;
-  }
-
-  .webmention-label {
-    display: block;
-    margin-bottom: 0.35rem;
-    font-size: 0.82rem;
-    font-weight: 600;
-    opacity: 0.75;
-  }
-
-  .webmention-submit-row {
-    display: flex;
-    gap: 0;
-    max-width: 36rem;
-  }
-
-  .webmention-source {
-    flex: 1;
-    min-width: 0;
-    box-sizing: border-box;
-    padding: 0.55rem 0.7rem;
-    border: 1px solid rgba(128,128,128,0.28);
-    border-right: 0;
-    border-radius: 6px 0 0 6px;
-    background: transparent;
-    color: inherit;
-    font: inherit;
-  }
-
-  .webmention-submit {
-    flex-shrink: 0;
-    padding: 0.55rem 0.95rem;
-    border: 1px solid currentColor;
-    border-radius: 0 6px 6px 0;
-    background: transparent;
-    color: inherit;
-    font: inherit;
-    font-weight: 700;
-    cursor: pointer;
-  }
-
-  .webmention-source:focus-visible,
-  .webmention-submit:focus-visible {
-    outline: 2px solid currentColor;
-    outline-offset: 3px;
-  }
-
-  .webmention-submit:hover {
-    opacity: 0.72;
-  }
-
-  @media (max-width: 640px) {
-    .webmention-submit-row {
-      display: block;
-    }
-
-    .webmention-source,
-    .webmention-submit {
-      width: 100%;
-    }
-
-    .webmention-source {
-      border-right: 1px solid rgba(128,128,128,0.28);
-      border-radius: 6px;
-    }
-
-    .webmention-submit {
-      margin-top: 0.65rem;
-      border-radius: 6px;
-    }
-  }
 </style>
 
 <script>
@@ -255,7 +165,7 @@
       .then(function (data) {
         var items = data.children || [];
         var heading = document.getElementById("webmentions-heading");
-        if (heading && items.length) heading.textContent = "Responses (" + items.length + ")";
+        if (heading && items.length) heading.textContent = "Webmentions (" + items.length + ")";
         if (!items.length) return;
         var replies = [];
         var likes = [];
