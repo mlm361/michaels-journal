@@ -22,6 +22,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   function sanitize(html) {
     const tmp = document.createElement('div');
     tmp.innerHTML = html;
+    tmp.querySelectorAll(
+      '.p-author,.mf2-hidden,.frontmatter_page,.post-response,.webmentions,.article_title,.note-meta'
+    ).forEach(el => el.remove());
     tmp.querySelectorAll('script,style,iframe,object,embed,form,input,button')
        .forEach(el => el.remove());
     tmp.querySelectorAll('*').forEach(el => {
@@ -64,32 +67,44 @@ document.addEventListener('DOMContentLoaded', async () => {
     return out;
   }
 
-  async function fetchPostHTML(url) {
+  async function fetchPostHTML(item) {
     try {
-      const r = await fetch(url, { credentials: 'same-origin' });
+      const r = await fetch(item.url, { credentials: 'same-origin' });
       if (!r.ok) return null;
       const doc = new DOMParser().parseFromString(await r.text(), 'text/html');
 
       const timeEl = doc.querySelector('time.dt-published[datetime], time[datetime]');
       const dt     = timeEl ? timeEl.getAttribute('datetime') : null;
       const dateObj = dt ? new Date(dt) : null;
+      const titleEl = doc.querySelector('.article_title a, h1 a, h1, .p-name');
+      const title = (item.title || (titleEl ? titleEl.textContent : '') || 'Untitled').trim();
 
-      // Ergo theme: content lives inside section.post_container article
+      // Pull only the authored post body. Copying the whole article drags in
+      // hidden microformats author markup, response controls, and metadata;
+      // once pasted into this utility page, that "hidden" avatar is not hidden.
       const selectors = [
-        'section.post_container article',
         'article .e-content',
         '.h-entry .e-content',
+        '.note-body.e-content',
         '.post-content',
-        'article',
-        '.h-entry'
       ];
       let content = '';
       for (const sel of selectors) {
         const el = doc.querySelector(sel);
         if (el) { content = el.innerHTML; break; }
       }
+      if (!content) {
+        const fallback = doc.querySelector('article');
+        if (fallback) {
+          const clone = fallback.cloneNode(true);
+          clone.querySelectorAll(
+            '.p-author,.mf2-hidden,.frontmatter_page,.post-response,.webmentions,.article_title,.note-meta'
+          ).forEach(el => el.remove());
+          content = clone.innerHTML;
+        }
+      }
 
-      return { url, dateObj, content };
+      return { url: item.url, title, dateObj, content };
     } catch {
       return null;
     }
@@ -126,7 +141,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     for (const batch of batches) {
       const results = await Promise.allSettled(
-        batch.map(item => fetchPostHTML(item.url))
+        batch.map(item => fetchPostHTML(item))
       );
       for (let i = 0; i < results.length; i++) {
         const r = results[i];
@@ -137,7 +152,14 @@ document.addEventListener('DOMContentLoaded', async () => {
           timeZone: SITE_TZ,
           year: 'numeric', month: '2-digit', day: '2-digit'
         }).format(dateObj);
-        posts.push({ url: post.url, dateObj, content: post.content, displayDate });
+        const cleanContent = sanitize(post.content || '');
+        posts.push({
+          url: post.url,
+          title: post.title,
+          dateObj,
+          content: cleanContent,
+          displayDate
+        });
       }
     }
 
@@ -157,9 +179,10 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (seen.has(p.url)) continue;
       seen.add(p.url);
       onThisDay.insertAdjacentHTML('beforeend', `
-        <article style="border-bottom:1px solid #ccc;padding:15px;margin-bottom:15px;">
-          <h3><a href="${p.url}">${p.displayDate}</a></h3>
-          <div>${sanitize(p.content)}</div>
+        <article class="otd-entry">
+          <a class="otd-date" href="${p.url}">${p.displayDate}</a>
+          <h3 class="otd-title"><a href="${p.url}">${p.title}</a></h3>
+          <div class="otd-content">${p.content}</div>
         </article>
       `);
     }
@@ -168,3 +191,29 @@ document.addEventListener('DOMContentLoaded', async () => {
   try { await run(); } catch { displayNoPostsMessage(); }
 });
 </script>
+
+<style>
+  #on-this-day .otd-entry {
+    border-bottom: 1px solid rgba(128,128,128,0.25);
+    padding: 1rem 0 1.35rem;
+    margin-bottom: 1.35rem;
+  }
+  #on-this-day .otd-date {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+  #on-this-day .otd-title {
+    margin: 0 0 0.75rem;
+    line-height: 1.2;
+  }
+  #on-this-day .otd-content img,
+  #on-this-day .otd-content video {
+    max-width: 100%;
+    height: auto;
+  }
+  #on-this-day .otd-content figure {
+    margin: 1rem 0;
+  }
+</style>
