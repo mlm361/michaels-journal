@@ -48,16 +48,19 @@
         {% endif %}
 
         <li class="archive-entry">
-          <time>{{ entry.date | date(format="%b %d") }}</time>
-          {# Notes have no title — fall back to a short body excerpt
-             so the row isn't a bare link. #}
           {% set is_note = entry.path is starting_with("/notes/") %}
-          {% set link_text = entry.title %}
-          {% if not link_text %}
-            {% set link_text = entry.summary | default(value=entry.content) | striptags | trim | truncate(length=80, end="…") %}
-            {% if not link_text %}{% set link_text = "(note)" %}{% endif %}
+          {% set raw_title = entry.title | default(value="") | trim %}
+          {% set is_placeholder_title = not raw_title or raw_title == "Untitled" or raw_title == "(No title)" %}
+          {% if is_placeholder_title %}
+            {% set link_text = entry.summary | default(value=entry.content) | striptags | trim | truncate(length=120, end="…") %}
+            {% if not link_text %}{% set link_text = entry.date | date(format="%B %d, %Y") %}{% endif %}
+          {% else %}
+            {% set link_text = raw_title %}
           {% endif %}
-          <a href="{{ entry.permalink }}">{{ link_text }}</a>
+          <a class="archive-date-link" href="{{ entry.permalink }}">
+            <time>{{ entry.date | date(format="%b %d") }}</time>
+          </a>
+          <a class="{% if is_placeholder_title %}archive-excerpt-link{% endif %}" href="{{ entry.permalink }}">{{ link_text }}</a>
           {% if is_note %}<span class="archive-note-tag">note</span>{% endif %}
         </li>
 
@@ -141,12 +144,18 @@ function jumpToYear(y) {
   white-space: nowrap;
   min-width: 4rem;
 }
+.archive-date-link {
+  min-width: 4rem;
+}
 .archive-entry a {
   text-decoration: none;
   color: inherit;
   transition: opacity 0.2s;
 }
 .archive-entry a:hover { opacity: 0.6; }
+.archive-excerpt-link {
+  color: rgba(36, 94, 62, 0.95);
+}
 .archive-note-tag {
   font-size: 0.65rem;
   text-transform: uppercase;

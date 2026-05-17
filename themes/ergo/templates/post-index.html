@@ -1,1 +1,24 @@
-[{% set section = get_section(path="_index.md") %}{% set notes_section = get_section(path="notes/_index.md") %}{% set pages = section.pages | concat(with=notes_section.pages) %}{% set_global sep = "" %}{% for page in pages %}{% set is_utility = page.extra | get(key="no_kudos", default=false) %}{% if page.date and not is_utility %}{{ sep }}{"url":{{ page.permalink | json_encode | safe }},"title":{{ page.title | json_encode | safe }},"date":"{{ page.date | date(format="%Y-%m-%d") }}","words":{{ page.word_count }},"images":{{ page.content | split(pat="<img") | length }}}{% set_global sep = "," %}{% endif %}{% endfor %}]
+[
+{% set section = get_section(path="_index.md") %}
+{% set notes_section = get_section(path="notes/_index.md") %}
+{% set pages = section.pages | concat(with=notes_section.pages) %}
+{% set_global sep = "" %}
+{% for page in pages %}
+  {% set is_utility = page.extra | get(key="no_kudos", default=false) %}
+  {% if page.date and not is_utility %}
+    {% set raw_title = page.title | default(value="") | trim %}
+    {% set is_placeholder_title = not raw_title or raw_title == "Untitled" or raw_title == "(No title)" %}
+    {% set excerpt = page.summary | default(value=page.content) | striptags | trim | truncate(length=140, end="…") %}
+    {{ sep }}{
+      "url": {{ page.permalink | json_encode | safe }},
+      "title": {% if is_placeholder_title %}""{% else %}{{ raw_title | json_encode | safe }}{% endif %},
+      "excerpt": {{ excerpt | json_encode | safe }},
+      "date": "{{ page.date | date(format="%Y-%m-%d") }}",
+      "words": {{ page.word_count }},
+      "images": {{ page.content | split(pat="<img") | length }},
+      "is_note": {% if page.path is starting_with("/notes/") %}true{% else %}false{% endif %}
+    }
+    {% set_global sep = "," %}
+  {% endif %}
+{% endfor %}
+]

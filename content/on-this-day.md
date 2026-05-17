@@ -37,6 +37,31 @@ document.addEventListener('DOMContentLoaded', async () => {
     return tmp.innerHTML;
   }
 
+  function escapeHTML(text) {
+    const tmp = document.createElement('div');
+    tmp.textContent = text || '';
+    return tmp.innerHTML;
+  }
+
+  function isPlaceholderTitle(title) {
+    const t = (title || '').trim().toLowerCase();
+    return !t || t === 'untitled' || t === '(no title)' || t === '(untitled)';
+  }
+
+  function textFromHTML(html) {
+    const tmp = document.createElement('div');
+    tmp.innerHTML = html || '';
+    return (tmp.textContent || '').replace(/\s+/g, ' ').trim();
+  }
+
+  function excerptFromHTML(html, fallback) {
+    const text = textFromHTML(html) || (fallback || '').replace(/\s+/g, ' ').trim();
+    if (!text) return 'View note';
+    const sentence = text.match(/^.{24,}?[.!?](?:\s|$)/);
+    const picked = sentence ? sentence[0].trim() : text;
+    return picked.length > 140 ? picked.slice(0, 137).replace(/\s+\S*$/, '') + '...' : picked;
+  }
+
   function tzParts(date) {
     const p = new Intl.DateTimeFormat('en-US', {
       timeZone: SITE_TZ,
@@ -77,7 +102,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       const dt     = timeEl ? timeEl.getAttribute('datetime') : null;
       const dateObj = dt ? new Date(dt) : null;
       const titleEl = doc.querySelector('.article_title a, h1 a, h1, .p-name');
-      const title = (item.title || (titleEl ? titleEl.textContent : '') || 'Untitled').trim();
+      const rawTitle = (item.title || (titleEl ? titleEl.textContent : '') || '').trim();
+      const title = isPlaceholderTitle(rawTitle) ? '' : rawTitle;
 
       // Pull only the authored post body. Copying the whole article drags in
       // hidden microformats author markup, response controls, and metadata;
@@ -104,7 +130,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
       }
 
-      return { url: item.url, title, dateObj, content };
+      return {
+        url: item.url,
+        title,
+        dateObj,
+        content,
+        indexExcerpt: item.excerpt || '',
+        isNote: !!item.is_note
+      };
     } catch {
       return null;
     }
@@ -156,6 +189,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         posts.push({
           url: post.url,
           title: post.title,
+          excerpt: excerptFromHTML(cleanContent, post.indexExcerpt),
+          isNote: post.isNote,
           dateObj,
           content: cleanContent,
           displayDate
@@ -178,10 +213,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     for (const p of posts) {
       if (seen.has(p.url)) continue;
       seen.add(p.url);
+      const heading = p.title
+        ? `<h3 class="otd-title"><a href="${p.url}">${escapeHTML(p.title)}</a></h3>`
+        : `<a class="otd-note-title" href="${p.url}">${escapeHTML(p.excerpt)}</a>`;
       onThisDay.insertAdjacentHTML('beforeend', `
-        <article class="otd-entry">
+        <article class="otd-entry${p.isNote ? ' otd-note' : ''}">
           <a class="otd-date" href="${p.url}">${p.displayDate}</a>
-          <h3 class="otd-title"><a href="${p.url}">${p.title}</a></h3>
+          ${heading}
           <div class="otd-content">${p.content}</div>
         </article>
       `);
@@ -207,6 +245,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   #on-this-day .otd-title {
     margin: 0 0 0.75rem;
     line-height: 1.2;
+  }
+  #on-this-day .otd-note-title {
+    display: block;
+    margin: 0 0 0.75rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: rgba(36, 94, 62, 0.95);
   }
   #on-this-day .otd-content img,
   #on-this-day .otd-content video {
