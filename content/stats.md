@@ -46,7 +46,7 @@ skip_feed = true
     </label>
     <div id="year-summary" class="muted-line"></div>
   </div>
-  <div id="monthly-grid" class="month-grid" style="display:none;"></div>
+  <div id="monthly-grid" class="stats-grid" style="display:none;"></div>
 
   <h3 class="stats-section-head">Top Entries</h3>
   <div id="top-posts" class="top-grid" style="display:none;"></div>
@@ -445,12 +445,10 @@ skip_feed = true
       for (let i = 0; i < 12; i++) {
         const mo = String(i + 1).padStart(2, '0');
         const d = (byYM[y] || {})[mo] || {entries:0, posts:0, notes:0, words:0};
-        const card = document.createElement('div');
-        card.className = 'mo-card';
-        card.innerHTML = `<div class="mo-label">${MO_NAMES[i]} ${escapeHTML(y)}</div>
-          <div class="mo-count">${d.entries}</div>
-          <div class="mo-sub">${d.posts} posts · ${d.notes} notes${d.words ? ' · ' + d.words.toLocaleString() + ' w' : ''}</div>`;
-        moGrid.appendChild(card);
+        const sub = d.entries
+          ? `${d.posts} posts · ${d.notes} notes${d.words ? ' · ' + d.words.toLocaleString() + ' w' : ''}`
+          : 'No entries';
+        moGrid.appendChild(tile(`${MO_NAMES[i]} ${y}`, String(d.entries), sub));
       }
     }
 
