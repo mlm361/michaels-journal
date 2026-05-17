@@ -1,13 +1,13 @@
 +++
 title = "AI Isn't Black and White"
-date = "2026-05-08T02:50:31+00:00"
+date = "2026-05-17T19:00:32+00:00"
 draft = false
 
 [taxonomies]
 tags = [ "ai", "opinion", "technology",]
 
 [extra]
-image = "/uploads/ai_gen_temp_d882b05b59c8.png"
+image = "https://media.mitchelltribe.xyz/gallery/posts/ai_gen_temp_d882b05b59c8.avif"
 
 [extra.posse]
 mastodon = "https://mitchelltribe.social/@michael/116592399956942587"
