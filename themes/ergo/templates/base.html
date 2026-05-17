@@ -262,5 +262,25 @@
             syncButtonVisibility();
           })();
         </script>
+        <script>
+          (function () {
+            var avatars = [
+              '/img/avatar.png',
+              '/img/avatar-1.jpg', '/img/avatar-2.jpg', '/img/avatar-3.jpg', '/img/avatar-4.jpg',
+              '/img/avatar-5.png', '/img/avatar-6.png', '/img/avatar-7.png', '/img/avatar-8.png',
+              '/img/avatar-9.png', '/img/avatar-10.png', '/img/avatar-11.png'
+            ];
+            var now = new Date();
+            var startOfYear = Date.UTC(now.getUTCFullYear(), 0, 0);
+            var dayOfYear = Math.floor((Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()) - startOfYear) / 86400000);
+            var key = now.getUTCFullYear() * 1000 + dayOfYear;
+            var pick = avatars[key % avatars.length];
+            document.querySelectorAll('.user_logo a, .mini_logo a').forEach(function (a) {
+              a.style.backgroundImage = 'url(' + pick + ')';
+            });
+            var aboutImg = document.querySelector('.about-avatar img');
+            if (aboutImg) aboutImg.src = pick;
+          })();
+        </script>
     </body>
 </html>
