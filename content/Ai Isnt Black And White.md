@@ -8,6 +8,12 @@ tags = [ "ai", "opinion", "technology",]
 
 [extra]
 image = "/uploads/ai_gen_temp_d882b05b59c8.png"
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/116592399956942587"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mm3hp5whsj2z"
+sharkey = "https://mitchelltribe.rodeo/notes/amdy0f1m2w0y00fg"
+nostr = "https://jumble.social/nevent1qqs2dewq2tgtm8kp9q0fn3e4j4gdakue44t4uegrktlp8hhckf7tzuqpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflccnl6x4"
 +++
 
 
