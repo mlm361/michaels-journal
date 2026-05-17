@@ -21,7 +21,7 @@
         <meta property="og:description" content="{% if page.description %}{{ page.description }}{% elif page.summary %}{{ page.summary | striptags | truncate(length=160) }}{% else %}{{ config.description }}{% endif %}">
         {% if page.extra.image %}
         {% set _meta_image_value = page.extra.image | trim %}
-        {% if _meta_image_value | split(pat= ://) | length > 1 %}
+        {% if _meta_image_value | split(pat='://') | length > 1 %}
         {% set_global _meta_image = _meta_image_value %}
         {% else %}
         {% set_global _meta_image = config.base_url ~ _meta_image_value %}
