@@ -20,13 +20,19 @@
         <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ config.title }}{% endif %}">
         <meta property="og:description" content="{% if page.description %}{{ page.description }}{% elif page.summary %}{{ page.summary | striptags | truncate(length=160) }}{% else %}{{ config.description }}{% endif %}">
         {% if page.extra.image %}
-        <meta property="og:image" content="{{ config.base_url }}{{ page.extra.image }}">
+        {% set _meta_image_value = page.extra.image | trim %}
+        {% if _meta_image_value | split(pat= ://) | length > 1 %}
+        {% set_global _meta_image = _meta_image_value %}
+        {% else %}
+        {% set_global _meta_image = config.base_url ~ _meta_image_value %}
+        {% endif %}
+        <meta property="og:image" content="{{ _meta_image }}">
         {% endif %}
         <meta name="twitter:card" content="{% if page.extra.image %}summary_large_image{% else %}summary{% endif %}">
         <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ config.title }}{% endif %}">
         <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% elif page.summary %}{{ page.summary | striptags | truncate(length=160) }}{% else %}{{ config.description }}{% endif %}">
         {% if page.extra.image %}
-        <meta name="twitter:image" content="{{ config.base_url }}{{ page.extra.image }}">
+        <meta name="twitter:image" content="{{ _meta_image }}">
         {% endif %}
 
         <!-- Enable responsiveness on mobile devices-->
