@@ -2,6 +2,7 @@
 title = "AI Isn't Black and White"
 date = "2026-05-17T19:00:32+00:00"
 draft = false
+description = "People of all ages and backgrounds come together outdoors, connecting ideas and technology to illuminate the diverse and collaborative nature of AI innovation. Okay, this will probably sound controversial, but that's not my intent. I'm..."
 
 [taxonomies]
 tags = [ "ai", "opinion", "technology",]
@@ -16,13 +17,15 @@ sharkey = "https://mitchelltribe.rodeo/notes/amdy0f1m2w0y00fg"
 nostr = "https://jumble.social/nevent1qqs2dewq2tgtm8kp9q0fn3e4j4gdakue44t4uegrktlp8hhckf7tzuqpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflccnl6x4"
 +++
 
+<p class="p-summary mf2-hidden" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">People of all ages and backgrounds come together outdoors, connecting ideas and technology to illuminate the diverse and collaborative nature of AI innovation. Okay, this will probably sound controversial, but that&#x27;s not my intent. I&#x27;m...</p>
+
 
 
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
 <img src="https://media.mitchelltribe.xyz/gallery/posts/ai_gen_temp_d882b05b59c8.avif" alt="A colorful illustration of seven diverse people outdoors in a lush green meadow near a calm lake with mountains and trees in the background under a bright blue sky with scattered white clouds. The group includes an elderly man with gray hair wearing a flat cap, beige vest, and white shirt, crouching and holding a tablet; a young boy in an orange shirt and blue shorts sitting cross-legged with a laptop; a girl in a green shirt and blue shorts kneeling beside him, also using a laptop; a standing young man in a white shirt and blue pants pointing upward while holding a tablet; a standing woman with dark skin, wearing an orange shirt, blue jeans, and a yellow headscarf, pointing upward with a tablet in her other hand; a young girl with blonde hair wearing headphones, a pink jacket, blue pants, and red sneakers sitting on the grass with a tablet; and a man in a suit and glasses crouching with a tablet. Above them, glowing interconnected dots form the shape of a large light bulb in the sky, " style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
 </figure>
 
-<!-- img:1 -->
+
 
 <figcaption>People of all ages and backgrounds come together outdoors, connecting ideas and technology to illuminate the diverse and collaborative nature of AI innovation.</figcaption>
 
