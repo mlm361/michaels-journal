@@ -57,8 +57,8 @@
         </noscript>
 
         <!-- fonts -->
-        <link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,500,500i,600,700,800,900|Raleway" as="style">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,500,500i,600,700,800,900|Raleway">
+        <link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,500,500i,600,700,800,900%7CRaleway" as="style">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,500,500i,600,700,800,900%7CRaleway">
         {% endblock head %}
 
         {% block rss %}
@@ -75,65 +75,6 @@
         {% endif %}
 
         <link rel="me" href="mailto:michael@michaelmitchell.email">
-    </head>
-
-    <body onload="main();">
-        {% include "menu.html" %}
-
-        {% block content %} {% endblock content %}
-        {% block pagination %} {% endblock pagination %}
-
-        <button class="scroll-to-top" id="scrollToTop" type="button" aria-label="Scroll to top" aria-hidden="true" tabindex="-1">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M12 5l-7 7 1.4 1.4L11 8.8V20h2V8.8l4.6 4.6L19 12z"></path>
-          </svg>
-        </button>
-
-        <footer class="site-footer">
-
-            <p class="footer-line">© 2001–<span id="currentYear"></span> Michael Mitchell</p>
-
-            <p class="footer-social-heading">Social Links</p>
-            <div id="social_links">
-              <a rel="me" href="https://mitchelltribe.social/@michael">
-                <img src="https://cdn.simpleicons.org/mastodon/6364FF.svg" alt="Mastodon" />Mastodon
-              </a>
-              <a rel="me" href="https://mitchelltribe.rodeo/@michael">
-                <img src="/img/sharkey-icon.png" alt="Sharkey" />Sharkey
-              </a>
-              <a rel="me" href="https://pixelfed.social/mlm361">
-                <img src="https://cdn.simpleicons.org/pixelfed/000000.svg" alt="Pixelfed" class="footer-icon-invert" />Pixelfed
-              </a>
-              <a rel="me" href="https://bsky.app/profile/mitchelltribe.com">
-                <img src="https://cdn.simpleicons.org/bluesky/0061F2.svg" alt="Bluesky" />Bluesky
-              </a>
-              <a rel="me" href="https://iris.to/npub19af39pdnr0cpg0ntakhdprfz8fkhkdn4t0f383gj0zw8hy4wf8lqh0nfur">
-                <img src="/img/nostr-icon.gif" alt="Nostr" />Nostr
-              </a>
-              <a href="mailto:michael@michaelmitchell.email">
-                <img src="/img/email-icon.png" alt="Email" />Email Me
-              </a>
-              <a href="{{ get_url(path='atom.xml', trailing_slash=false) }}">
-                <img src="https://cdn.simpleicons.org/rss/FFA500.svg" alt="RSS" />RSS
-              </a>
-            </div>
-
-            <hr class="footer-rule" />
-
-            <p class="footer-line" id="blog-uptime"></p>
-            <p class="footer-line">Visits: <span class="tinylytics_hits"></span> &middot; Uptime: <span class="tinylytics_uptime"></span></p>
-            <p class="footer-line"><a href="/privacy" class="footer-link">Privacy Policy</a></p>
-
-            <div class="footer-cc">
-              <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">
-                <img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License" />
-              </a>
-              <p class="footer-cc-text">This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener" class="footer-cc-link">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
-            </div>
-
-            <p class="footer-line footer-powered">Built with ❤️ using <a href="https://www.getzola.org" target="_blank" rel="noopener" class="footer-link">Zola</a></p>
-
-        </footer>
 
         <style>
           .site-footer {
@@ -213,6 +154,67 @@
             text-underline-offset: 2px;
           }
         </style>
+
+        {% block head_extra %}{% endblock head_extra %}
+    </head>
+
+    <body onload="main();">
+        {% include "menu.html" %}
+
+        {% block content %} {% endblock content %}
+        {% block pagination %} {% endblock pagination %}
+
+        <button class="scroll-to-top" id="scrollToTop" type="button" aria-label="Scroll to top" aria-hidden="true" tabindex="-1">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 5l-7 7 1.4 1.4L11 8.8V20h2V8.8l4.6 4.6L19 12z"></path>
+          </svg>
+        </button>
+
+        <footer class="site-footer">
+
+            <p class="footer-line">© 2001–<span id="currentYear"></span> Michael Mitchell</p>
+
+            <p class="footer-social-heading">Social Links</p>
+            <div id="social_links">
+              <a rel="me" href="https://mitchelltribe.social/@michael">
+                <img src="https://cdn.simpleicons.org/mastodon/6364FF.svg" alt="Mastodon" />Mastodon
+              </a>
+              <a rel="me" href="https://mitchelltribe.rodeo/@michael">
+                <img src="/img/sharkey-icon.png" alt="Sharkey" />Sharkey
+              </a>
+              <a rel="me" href="https://pixelfed.social/mlm361">
+                <img src="https://cdn.simpleicons.org/pixelfed/000000.svg" alt="Pixelfed" class="footer-icon-invert" />Pixelfed
+              </a>
+              <a rel="me" href="https://bsky.app/profile/mitchelltribe.com">
+                <img src="https://cdn.simpleicons.org/bluesky/0061F2.svg" alt="Bluesky" />Bluesky
+              </a>
+              <a rel="me" href="https://iris.to/npub19af39pdnr0cpg0ntakhdprfz8fkhkdn4t0f383gj0zw8hy4wf8lqh0nfur">
+                <img src="/img/nostr-icon.gif" alt="Nostr" />Nostr
+              </a>
+              <a href="mailto:michael@michaelmitchell.email">
+                <img src="/img/email-icon.png" alt="Email" />Email Me
+              </a>
+              <a href="{{ get_url(path='atom.xml', trailing_slash=false) }}">
+                <img src="https://cdn.simpleicons.org/rss/FFA500.svg" alt="RSS" />RSS
+              </a>
+            </div>
+
+            <hr class="footer-rule" />
+
+            <p class="footer-line" id="blog-uptime"></p>
+            <p class="footer-line">Visits: <span class="tinylytics_hits"></span> &middot; Uptime: <span class="tinylytics_uptime"></span></p>
+            <p class="footer-line"><a href="/privacy" class="footer-link">Privacy Policy</a></p>
+
+            <div class="footer-cc">
+              <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+                <img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License" />
+              </a>
+              <p class="footer-cc-text">This work is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="footer-cc-link">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+            </div>
+
+            <p class="footer-line footer-powered">Built with ❤️ using <a href="https://www.getzola.org" target="_blank" rel="noopener" class="footer-link">Zola</a></p>
+
+        </footer>
 
         <!-- Tinylytics + Kudos (heart emoji + count) -->
         <script src="https://tinylytics.app/embed/h2Q2CzgAf-te_SJUBWQ1.js?hits&kudos=❤️&uptime" defer></script>
