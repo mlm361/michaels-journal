@@ -60,10 +60,8 @@
     <li>
         <time class="article_time" datetime="{{date}}">{{ date | date(format="%B %d, %Y") }}</time>
     </li>
-    <span class="dotDivider"></span>
-    <li> {{word_count}} words </li>
-    <span class="dotDivider" ></span>
-    <li> {{read_time}} min </li>
+    <li>{{word_count}} words</li>
+    <li>{{read_time}} min</li>
 </ul>
 {% endmacro frontmatter %}
 

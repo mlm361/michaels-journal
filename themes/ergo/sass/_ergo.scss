@@ -255,8 +255,13 @@ tr {
     > li {
         display: inline;
     }
-    > span {
-        display: inline;
+    > li:not(:first-child)::before {
+        content: '\00B7';
+        padding-right: .3em;
+        padding-left: .3em;
+        font-size: 16px;
+        font-weight: 400;
+        white-space: nowrap;
     }
     display: block;
     opacity: 0.3;
