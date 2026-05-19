@@ -1,0 +1,21 @@
+# Cloudflare Pages security headers
+# https://developers.cloudflare.com/pages/configuration/headers/
+#
+# Notes (2026-05-19):
+# - HSTS: 6-month max-age, NO preload, NO includeSubDomains yet.
+#   Per Sally's review: preload is hard to roll back (browser-baked list),
+#   and includeSubDomains can break any *.michaelreflects.com subdomain
+#   that isn't HTTPS-only. Revisit both after 6+ months of stable HSTS.
+# - X-Frame-Options: DENY (no one needs to embed this in a frame).
+# - Permissions-Policy: deny features the site never uses, including the
+#   privacy-hostile FLoC interest-cohort.
+# - CSP intentionally omitted from this pass — will be added in
+#   Content-Security-Policy-Report-Only mode in a follow-up commit
+#   once we've mapped every third-party script (Font Awesome kit,
+#   Tinylytics, GLightbox, Webmention.io, YouTube/Vimeo embeds,
+#   Cloudflare email obfuscation injection, theme-toggle inline scripts).
+
+/*
+  Strict-Transport-Security: max-age=15552000
+  X-Frame-Options: DENY
+  Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), interest-cohort=()
