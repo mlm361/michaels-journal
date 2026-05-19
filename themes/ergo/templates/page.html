@@ -1,11 +1,10 @@
 {% extends "base.html" %}
 {% import "macros.html" as macros %}
-{% set is_utility_page = page.extra.no_kudos | default(value=false) %}
 
 {% block head_extra %}
 {% if page.extra.extra_css %}
   {% for href in page.extra.extra_css %}
-  <link rel="stylesheet" href="{{ href }}">
+  <link rel="stylesheet" href="{{ href | safe }}">
   {% endfor %}
 {% endif %}
 {% if not page.extra.no_kudos | default(value=false) %}
@@ -29,6 +28,7 @@
 {% endblock head_extra %}
 
 {% block content %}
+{% set is_utility_page = page.extra.no_kudos | default(value=false) %}
 <nav id="overlord" class="overlord" >
   {% set base_url = get_url(path="/", lang=lang) %}
   {{ macros::mini_logo(classes="", title=config.title, siteurl=base_url, logourl=config.extra.profile) }}
