@@ -11,6 +11,6 @@ skip_feed = true
 
 <div style="border-radius:8px; overflow:hidden; margin:20px 0;">
 <iframe src="https://dancing-otter-830b64.netlify.app/index.html"
-        style="width:100%; height:750px; border:none; display:block;"
-        frameborder="0"></iframe>
+        title="Twitter archive"
+        style="width:100%; height:750px; border:none; display:block;"></iframe>
 </div>
