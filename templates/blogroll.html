@@ -1,6 +1,84 @@
 {% extends "base.html" %}
 {% import "macros.html" as macros %}
 
+{% block head_extra %}
+<style>
+  .blogroll-category { margin-bottom: 1.75rem; }
+  .blogroll-cat-heading {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    opacity: 0.45;
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid rgba(128,128,128,0.15);
+  }
+  .blogroll-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.35rem 2rem;
+  }
+  @media (max-width: 600px) {
+    .blogroll-grid { grid-template-columns: 1fr; }
+  }
+  .blogroll-item {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.15rem 0;
+  }
+  a.blogroll-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  a.blogroll-name:hover { text-decoration: underline; }
+  a.blogroll-rss {
+    color: #FFA500;
+    font-size: 0.7rem;
+    flex-shrink: 0;
+    text-decoration: none;
+    opacity: 0.85;
+  }
+  a.blogroll-rss:hover { opacity: 1; }
+  .other-blog-item {
+    gap: 0.45rem;
+  }
+  a.other-blog-name {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+  }
+  .other-blog-icon {
+    width: 1rem;
+    height: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .other-blog-icon img {
+    display: block;
+    max-width: 1rem;
+    max-height: 1rem;
+  }
+  .other-blog-icon-ring img {
+    border-radius: 50%;
+    padding: 2px;
+    background: #fff;
+    box-shadow: 0 0 0 1px #006400 inset, 0 1px 3px rgba(0,0,0,.12);
+  }
+  .other-blog-item .blogroll-rss {
+    font-size: 0.7rem;
+  }
+  .other-blog-domain {
+    font-size: 0.78rem;
+    opacity: 0.62;
+  }
+</style>
+{% endblock head_extra %}
+
 {% block content %}
 <nav id="overlord" class="overlord">
   {% set base_url = get_url(path="/", lang=lang) %}

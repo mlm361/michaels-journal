@@ -5,50 +5,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
 {% endblock head %}
 
-{% block content %}
-<div class="container">
-  <p class="album-back"><a href="{{ get_url(path='gallery') }}">&larr; Gallery</a></p>
-  <h1>{{ page.title }}</h1>
-  <p class="album-date">{{ page.date | date(format="%B %d, %Y") }}</p>
-
-  <div class="photo-grid">
-    {% for slug in page.extra.photos %}
-    {% set i = loop.index0 %}
-    {% set alt_text = page.extra.alts[i] | default(value="Photo") %}
-    {% set caption  = page.extra.captions[i] | default(value="") %}
-    <div class="photo-item">
-      <a
-        href="{{ page.extra.r2_base }}/{{ slug }}.avif"
-        class="glightbox photo-cell"
-        data-gallery="album"
-        data-type="image"
-        data-description="{{ caption }}"
-      >
-        <img
-          src="{{ page.extra.r2_base }}/thumbs/{{ slug }}.avif"
-          alt="{{ alt_text }}"
-          loading="lazy"
-        >
-      </a>
-      {% if caption %}<p class="photo-caption">{{ caption }}</p>{% endif %}
-    </div>
-    {% endfor %}
-  </div>
-
-  {% if page.extra.videos | length > 0 %}
-  <h2 class="video-heading">Videos</h2>
-  <div class="video-grid">
-    {% for slug in page.extra.videos %}
-    <div class="video-wrap">
-      <video controls preload="metadata" playsinline class="gallery-video">
-        <source src="{{ page.extra.r2_base }}/videos/{{ slug }}.mp4#t=0.5" type="video/mp4">
-      </video>
-    </div>
-    {% endfor %}
-  </div>
-  {% endif %}
-</div>
-
+{% block head_extra %}
 <style>
   .container { max-width: 1100px; margin: 0 auto; padding: calc(56px + 1.5rem) 1rem 1.5rem; }
   .album-back { margin-bottom: .5rem; font-size: .9rem; }
@@ -101,6 +58,51 @@
     background: #000;
   }
 </style>
+{% endblock head_extra %}
+
+{% block content %}
+<div class="container">
+  <p class="album-back"><a href="{{ get_url(path='gallery') }}">&larr; Gallery</a></p>
+  <h1>{{ page.title }}</h1>
+  <p class="album-date">{{ page.date | date(format="%B %d, %Y") }}</p>
+
+  <div class="photo-grid">
+    {% for slug in page.extra.photos %}
+    {% set i = loop.index0 %}
+    {% set alt_text = page.extra.alts[i] | default(value="Photo") %}
+    {% set caption  = page.extra.captions[i] | default(value="") %}
+    <div class="photo-item">
+      <a
+        href="{{ page.extra.r2_base }}/{{ slug }}.avif"
+        class="glightbox photo-cell"
+        data-gallery="album"
+        data-type="image"
+        data-description="{{ caption }}"
+      >
+        <img
+          src="{{ page.extra.r2_base }}/thumbs/{{ slug }}.avif"
+          alt="{{ alt_text }}"
+          loading="lazy"
+        >
+      </a>
+      {% if caption %}<p class="photo-caption">{{ caption }}</p>{% endif %}
+    </div>
+    {% endfor %}
+  </div>
+
+  {% if page.extra.videos | length > 0 %}
+  <h2 class="video-heading">Videos</h2>
+  <div class="video-grid">
+    {% for slug in page.extra.videos %}
+    <div class="video-wrap">
+      <video controls preload="metadata" playsinline class="gallery-video">
+        <source src="{{ page.extra.r2_base }}/videos/{{ slug }}.mp4#t=0.5" type="video/mp4">
+      </video>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 <script>

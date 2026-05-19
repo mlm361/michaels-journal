@@ -1,43 +1,6 @@
 {% extends "base.html" %}
 
-{% block content %}
-{%- set photos = page.extra.photos -%}
-{%- set alts = page.extra.alts | default(value=[]) -%}
-{%- set captions = page.extra.captions | default(value=[]) -%}
-{%- set slide_ms = page.extra.slide_duration_ms | default(value=5000) -%}
-
-<div class="carousel" id="carousel" data-slide-ms="{{ slide_ms }}">
-  <p class="carousel__back"><a href="{{ get_url(path='gallery') }}">&larr; Gallery</a></p>
-  <h1 class="carousel__title">{{ page.title }}</h1>
-  <p class="carousel__date">{{ page.date | date(format="%B %d, %Y") }}</p>
-
-  <div class="carousel__viewer">
-    <img class="carousel__image"
-         id="carousel-img"
-         src="{{ page.extra.r2_base }}/{{ photos[0] }}.avif"
-         alt="{{ alts[0] | default(value='Photo') }}"
-         fetchpriority="high">
-  </div>
-
-  <p class="carousel__caption" id="carousel-caption" aria-live="polite">{{ captions[0] | default(value='') }}</p>
-
-  <div class="carousel__controls">
-    <button class="carousel__btn" id="carousel-prev" type="button">&larr; Previous</button>
-    <button class="carousel__btn carousel__btn--primary" id="carousel-playpause" type="button" aria-pressed="true">Pause Slideshow</button>
-    <button class="carousel__btn" id="carousel-next" type="button">Next &rarr;</button>
-    <span class="carousel__counter" id="carousel-counter">1 / {{ photos | length }}</span>
-  </div>
-
-  <ul class="carousel__photos" id="carousel-photos" hidden aria-hidden="true">
-    {% for slug in photos %}
-    {% set i = loop.index0 %}
-    <li data-src="{{ page.extra.r2_base }}/{{ slug }}.avif"
-        data-alt="{{ alts[i] | default(value='Photo') }}"
-        data-caption="{{ captions[i] | default(value='') }}"></li>
-    {% endfor %}
-  </ul>
-</div>
-
+{% block head_extra %}
 <style>
   .carousel { max-width: 1100px; margin: 0 auto; padding: calc(56px + 1rem) 1rem 2rem; }
   .carousel__back { margin: 0 0 .35rem; font-size: .9rem; }
@@ -112,6 +75,45 @@
     .carousel__counter { width: 100%; text-align: center; margin-left: 0; }
   }
 </style>
+{% endblock head_extra %}
+
+{% block content %}
+{%- set photos = page.extra.photos -%}
+{%- set alts = page.extra.alts | default(value=[]) -%}
+{%- set captions = page.extra.captions | default(value=[]) -%}
+{%- set slide_ms = page.extra.slide_duration_ms | default(value=5000) -%}
+
+<div class="carousel" id="carousel" data-slide-ms="{{ slide_ms }}">
+  <p class="carousel__back"><a href="{{ get_url(path='gallery') }}">&larr; Gallery</a></p>
+  <h1 class="carousel__title">{{ page.title }}</h1>
+  <p class="carousel__date">{{ page.date | date(format="%B %d, %Y") }}</p>
+
+  <div class="carousel__viewer">
+    <img class="carousel__image"
+         id="carousel-img"
+         src="{{ page.extra.r2_base }}/{{ photos[0] }}.avif"
+         alt="{{ alts[0] | default(value='Photo') }}"
+         fetchpriority="high">
+  </div>
+
+  <p class="carousel__caption" id="carousel-caption" aria-live="polite">{{ captions[0] | default(value='') }}</p>
+
+  <div class="carousel__controls">
+    <button class="carousel__btn" id="carousel-prev" type="button">&larr; Previous</button>
+    <button class="carousel__btn carousel__btn--primary" id="carousel-playpause" type="button" aria-pressed="true">Pause Slideshow</button>
+    <button class="carousel__btn" id="carousel-next" type="button">Next &rarr;</button>
+    <span class="carousel__counter" id="carousel-counter">1 / {{ photos | length }}</span>
+  </div>
+
+  <ul class="carousel__photos" id="carousel-photos" hidden aria-hidden="true">
+    {% for slug in photos %}
+    {% set i = loop.index0 %}
+    <li data-src="{{ page.extra.r2_base }}/{{ slug }}.avif"
+        data-alt="{{ alts[i] | default(value='Photo') }}"
+        data-caption="{{ captions[i] | default(value='') }}"></li>
+    {% endfor %}
+  </ul>
+</div>
 
 <script>
 (function () {

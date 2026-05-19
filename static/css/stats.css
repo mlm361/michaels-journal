@@ -1,0 +1,33 @@
+.stats-page { max-width: 980px; }
+.stats-section-head { font-size:.8rem; font-weight:700; text-transform:uppercase; letter-spacing:.07em; opacity:.45; margin:1.5rem 0 .6rem; }
+.chart-wrap { position:relative; height:330px; margin:0 0 .5rem; }
+.stats-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(175px,1fr)); gap:.85rem; margin:0 0 1.5rem; }
+.top-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1rem; margin:0 0 1.75rem; }
+.stat-panel { border:1px solid rgba(128,128,128,.2); border-radius:12px; padding:1.1rem 1.4rem; margin:0 0 1.25rem; }
+.sl-wrap  { margin:.5rem 0 1.25rem; }
+.sl-card  { border:1px solid rgba(128,128,128,.2); border-radius:12px; background:rgba(128,128,128,.04); padding:14px 16px; display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+.sl-icon  { font-size:22px; }
+.sl-title { font-weight:700; font-size:.95rem; }
+.sl-phase { color:#555; font-size:.85rem; }
+.sl-bar   { height:8px; background:rgba(128,128,128,.15); border-radius:8px; overflow:hidden; width:200px; margin-left:auto; }
+.sl-fill  { height:100%; background:#4a90e2; border-radius:8px; transition:width .25s; width:0%; }
+.stat-tile     { border:1px solid rgba(128,128,128,.2); border-radius:12px; padding:1rem 1.1rem; }
+.stat-tile .tl { font-size:.85rem; color:#666; margin-bottom:.3rem; }
+.stat-tile .tv { font-size:1.55rem; font-weight:700; line-height:1.2; }
+.stat-tile .ts { font-size:.82rem; color:#666; margin-top:.25rem; }
+.stat-tile a   { color:inherit; }
+.mo-card       { border:1px solid rgba(128,128,128,.15); border-radius:10px; padding:.75rem; }
+.mo-label      { font-weight:700; font-size:.8rem; margin-bottom:.2rem; }
+.mo-count      { font-size:1.45rem; font-weight:700; line-height:1.2; }
+.mo-sub        { font-size:.78rem; color:#666; margin-top:.15rem; }
+.picker-wrap   { margin:0 0 .5rem; }
+.picker-wrap label { font-size:.9rem; }
+.picker-wrap select { margin-left:6px; padding:4px 8px; border-radius:6px; }
+.muted-line, .stats-foot { color:#888; font-size:.84rem; }
+.stats-foot { margin-top:1rem; }
+.entry-list { margin:0; padding-left:1.3rem; line-height:1.75; font-size:.88rem; }
+.entry-list span { color:#666; }
+@media(max-width:600px){
+  .sl-bar{width:120px;margin-left:0;margin-top:8px}
+  .chart-wrap{height:300px}
+}

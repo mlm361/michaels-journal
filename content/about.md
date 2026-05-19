@@ -5,6 +5,7 @@ template = "page.html"
 [extra]
 no_kudos = true
 skip_feed = true
+extra_css = ["/css/about.css"]
 +++
 
 <div class="about-wrap">
@@ -48,21 +49,3 @@ When I'm not working on my homelab, tinkering with my Plex server, or exploring 
   if (el) el.textContent = age;
 })();
 </script>
-
-<style>
-.about-wrap { max-width: 600px; }
-.about-avatar {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 4px solid currentColor;
-  margin: 0 0 1.5rem;
-}
-.about-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-</style>

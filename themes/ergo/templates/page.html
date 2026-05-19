@@ -1,8 +1,34 @@
 {% extends "base.html" %}
 {% import "macros.html" as macros %}
+{% set is_utility_page = page.extra.no_kudos | default(value=false) %}
+
+{% block head_extra %}
+{% if page.extra.extra_css %}
+  {% for href in page.extra.extra_css %}
+  <link rel="stylesheet" href="{{ href }}">
+  {% endfor %}
+{% endif %}
+{% if not page.extra.no_kudos | default(value=false) %}
+<style>
+  .mf2-hidden { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+</style>
+{% endif %}
+{% if page.extra.toc and page.toc %}
+<style>
+  .toc { background: rgba(128,128,128,0.06); border-left: 3px solid rgba(128,128,128,0.25); border-radius: 6px; padding: 1rem 1.25rem; margin: 1.5rem 0; }
+  .toc-heading { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.6; margin-bottom: 0.6rem; }
+  .toc-list, .toc-sublist { margin: 0; padding-left: 1.2rem; }
+  .toc-list { list-style: decimal; }
+  .toc-sublist { list-style: lower-alpha; margin-top: 0.2rem; }
+  .toc-item { margin: 0.25rem 0; }
+  a.toc-link { font-size: 0.88rem; text-decoration: none; opacity: 0.75; }
+  a.toc-link:hover { opacity: 1; text-decoration: underline; }
+  a.toc-sub { font-size: 0.82rem; }
+</style>
+{% endif %}
+{% endblock head_extra %}
 
 {% block content %}
-{% set is_utility_page = page.extra.no_kudos | default(value=false) %}
 <nav id="overlord" class="overlord" >
   {% set base_url = get_url(path="/", lang=lang) %}
   {{ macros::mini_logo(classes="", title=config.title, siteurl=base_url, logourl=config.extra.profile) }}
@@ -10,11 +36,6 @@
 </nav>
 
 <section class="post_container">
-  {% if not is_utility_page %}
-  <style>
-    .mf2-hidden { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
-  </style>
-  {% endif %}
   <article{% if not is_utility_page %} class="h-entry"{% endif %}>
     {% block post %}
       <h1 class="article_title{% if not is_utility_page %} p-name{% endif %}"><a{% if not is_utility_page %} class="u-url u-uid"{% endif %} href="{{page.permalink}}" id="article_link">{{ page.title }}</a></h1>
@@ -51,17 +72,6 @@
           {% endfor %}
         </ol>
       </nav>
-      <style>
-        .toc { background: rgba(128,128,128,0.06); border-left: 3px solid rgba(128,128,128,0.25); border-radius: 6px; padding: 1rem 1.25rem; margin: 1.5rem 0; }
-        .toc-heading { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.6; margin-bottom: 0.6rem; }
-        .toc-list, .toc-sublist { margin: 0; padding-left: 1.2rem; }
-        .toc-list { list-style: decimal; }
-        .toc-sublist { list-style: lower-alpha; margin-top: 0.2rem; }
-        .toc-item { margin: 0.25rem 0; }
-        a.toc-link { font-size: 0.88rem; text-decoration: none; opacity: 0.75; }
-        a.toc-link:hover { opacity: 1; text-decoration: underline; }
-        a.toc-sub { font-size: 0.82rem; }
-      </style>
       {% endif %}
 
       <div class="e-content">

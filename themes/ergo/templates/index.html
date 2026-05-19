@@ -1,91 +1,7 @@
 {% extends "base.html" %}
 {% import "macros.html" as macros %}
 
-{% block content %}
-<nav>{% include "languages.html" %}</nav>
-<header class="header">
-  {% block header %}
-  {% set base_url = get_url(path="/", lang=lang) %}
-  <figure class="user_logo">
-      <a href="{{ base_url }}" style="background-image: url('{{ get_url(path='img/' ~ config.extra.profile) }}')"></a>
-  </figure>
-  <h2 class="site_title">{{config.title}}</h2>
-  <div>{{ config.description | as_str | markdown(inline=true) | safe }}</div>
-  {% endblock header %}
-</header>
-
-<section class="post_list">
-  {% set_global current_year = "" %}
-  {% for page in paginator.pages %}
-    {% if page.extra.skip_feed is defined and page.extra.skip_feed %}{% continue %}{% endif %}
-
-    {% set year = page.date | date(format="%Y") %}
-    {% if year != current_year %}
-    <div class="year-divider">
-      <span class="year-label">{{ year }}</span>
-    </div>
-    {% set_global current_year = year %}
-    {% endif %}
-
-    {% set_global _card_img = "" %}
-    {% set_global _card_fit = page.extra.card_fit | default(value="cover") %}
-    {% set_global _card_position = page.extra.card_position | default(value="center center") %}
-    {% if page.extra.image %}
-      {% set _card_image_value = page.extra.image | trim %}
-      {% if _card_image_value | split(pat='://') | length > 1 %}
-        {% set_global _card_img = _card_image_value %}
-      {% else %}
-        {% set_global _card_img = config.base_url ~ _card_image_value %}
-      {% endif %}
-    {% else %}
-      {% set _img_parts = page.content | split(pat='<img') %}
-      {% if _img_parts | length > 1 %}
-        {% set _src_parts = _img_parts[1] | split(pat='src="') %}
-        {% if _src_parts | length > 1 %}
-          {% set _raw = _src_parts[1] | split(pat='"') | first %}
-          {% if _raw | length > 5 %}
-            {% set_global _card_img = _raw %}
-          {% endif %}
-        {% endif %}
-      {% endif %}
-      {% if not _card_img %}
-        {% set _yt_parts = page.content | split(pat='youtube.com/embed/') %}
-        {% if _yt_parts | length > 1 %}
-          {% set _yt_id = _yt_parts[1] | split(pat='"') | first | split(pat='?') | first %}
-          {% if _yt_id | length > 3 %}
-            {% set_global _card_img = "https://img.youtube.com/vi/" ~ _yt_id ~ "/mqdefault.jpg" %}
-          {% endif %}
-        {% endif %}
-      {% endif %}
-    {% endif %}
-
-    <article class="post-card">
-      <div class="post-card-main">
-        {% if _card_img %}
-        <a href="{{ page.permalink }}" class="post-card-img-wrap">
-          <img src="{{ _card_img }}" alt="{{ page.title }}" class="post-card-img" loading="lazy" style="object-fit: {{ _card_fit }}; object-position: {{ _card_position }};">
-        </a>
-        {% endif %}
-        <div class="post-card-text">
-          <h2 class="post-card-title">
-            <a href="{{ page.permalink }}">{{ page.title }}</a>
-          </h2>
-          <p class="post-card-excerpt">{{ page.description | default(value=page.content | striptags | truncate(length=180)) | safe }}</p>
-        </div>
-      </div>
-      <footer class="post-card-footer">
-        <span class="post-card-date">{{ page.date | date(format="%B %-d, %Y") }}</span>
-        {% if page.taxonomies.tags %}
-        {% for tag in page.taxonomies.tags | slice(end=3) %}
-        <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}" class="post-tag">#{{ tag }}</a>
-        {% endfor %}
-        {% endif %}
-        <a class="post-card-read-more" href="{{ page.permalink }}">Continue Reading →</a>
-      </footer>
-    </article>
-  {% endfor %}
-</section>
-
+{% block head_extra %}
 <style>
   .year-divider {
     display: flex;
@@ -213,6 +129,92 @@
     .post-card-img { width: 100%; height: 170px; }
   }
 </style>
+{% endblock head_extra %}
+
+{% block content %}
+<nav>{% include "languages.html" %}</nav>
+<header class="header">
+  {% block header %}
+  {% set base_url = get_url(path="/", lang=lang) %}
+  <figure class="user_logo">
+      <a href="{{ base_url }}" style="background-image: url('{{ get_url(path='img/' ~ config.extra.profile) }}')"></a>
+  </figure>
+  <h2 class="site_title">{{config.title}}</h2>
+  <div>{{ config.description | as_str | markdown(inline=true) | safe }}</div>
+  {% endblock header %}
+</header>
+
+<section class="post_list">
+  {% set_global current_year = "" %}
+  {% for page in paginator.pages %}
+    {% if page.extra.skip_feed is defined and page.extra.skip_feed %}{% continue %}{% endif %}
+
+    {% set year = page.date | date(format="%Y") %}
+    {% if year != current_year %}
+    <div class="year-divider">
+      <span class="year-label">{{ year }}</span>
+    </div>
+    {% set_global current_year = year %}
+    {% endif %}
+
+    {% set_global _card_img = "" %}
+    {% set_global _card_fit = page.extra.card_fit | default(value="cover") %}
+    {% set_global _card_position = page.extra.card_position | default(value="center center") %}
+    {% if page.extra.image %}
+      {% set _card_image_value = page.extra.image | trim %}
+      {% if _card_image_value | split(pat='://') | length > 1 %}
+        {% set_global _card_img = _card_image_value %}
+      {% else %}
+        {% set_global _card_img = config.base_url ~ _card_image_value %}
+      {% endif %}
+    {% else %}
+      {% set _img_parts = page.content | split(pat='<img') %}
+      {% if _img_parts | length > 1 %}
+        {% set _src_parts = _img_parts[1] | split(pat='src="') %}
+        {% if _src_parts | length > 1 %}
+          {% set _raw = _src_parts[1] | split(pat='"') | first %}
+          {% if _raw | length > 5 %}
+            {% set_global _card_img = _raw %}
+          {% endif %}
+        {% endif %}
+      {% endif %}
+      {% if not _card_img %}
+        {% set _yt_parts = page.content | split(pat='youtube.com/embed/') %}
+        {% if _yt_parts | length > 1 %}
+          {% set _yt_id = _yt_parts[1] | split(pat='"') | first | split(pat='?') | first %}
+          {% if _yt_id | length > 3 %}
+            {% set_global _card_img = "https://img.youtube.com/vi/" ~ _yt_id ~ "/mqdefault.jpg" %}
+          {% endif %}
+        {% endif %}
+      {% endif %}
+    {% endif %}
+
+    <article class="post-card">
+      <div class="post-card-main">
+        {% if _card_img %}
+        <a href="{{ page.permalink }}" class="post-card-img-wrap">
+          <img src="{{ _card_img }}" alt="{{ page.title }}" class="post-card-img" loading="lazy" style="object-fit: {{ _card_fit }}; object-position: {{ _card_position }};">
+        </a>
+        {% endif %}
+        <div class="post-card-text">
+          <h2 class="post-card-title">
+            <a href="{{ page.permalink }}">{{ page.title }}</a>
+          </h2>
+          <p class="post-card-excerpt">{{ page.description | default(value=page.content | striptags | truncate(length=180)) | safe }}</p>
+        </div>
+      </div>
+      <footer class="post-card-footer">
+        <span class="post-card-date">{{ page.date | date(format="%B %-d, %Y") }}</span>
+        {% if page.taxonomies.tags %}
+        {% for tag in page.taxonomies.tags | slice(end=3) %}
+        <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}" class="post-tag">#{{ tag }}</a>
+        {% endfor %}
+        {% endif %}
+        <a class="post-card-read-more" href="{{ page.permalink }}">Continue Reading →</a>
+      </footer>
+    </article>
+  {% endfor %}
+</section>
 {% endblock content %}
 
 

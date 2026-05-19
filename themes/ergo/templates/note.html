@@ -1,6 +1,19 @@
 {% extends "base.html" %}
 {% import "macros.html" as macros %}
 
+{% block head_extra %}
+<style>
+  .mf2-hidden { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .single-note { max-width: 680px; margin: 0 auto; padding: 2rem 0; }
+  .single-note .note-meta { display: flex; justify-content: space-between; align-items: center; font-size: 0.86rem; font-weight: 700; margin-bottom: 1.2rem; }
+  .note-back-link { color: inherit; text-decoration: none; }
+  .note-back-link:hover { text-decoration: underline; }
+  .single-note .note-body { font-size: 1.02rem; line-height: 1.65; }
+  .single-note .note-body img { max-width: 100%; height: auto; border-radius: 6px; }
+  .single-note .post-response { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(128,128,128,0.15); }
+</style>
+{% endblock head_extra %}
+
 {% block content %}
 <nav id="overlord" class="overlord">
   {% set base_url = get_url(path="/", lang=lang) %}
@@ -33,15 +46,4 @@
     {% include "partials/webmentions.html" %}
   </article>
 </section>
-
-<style>
-  .mf2-hidden { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
-  .single-note { max-width: 680px; margin: 0 auto; padding: 2rem 0; }
-  .single-note .note-meta { display: flex; justify-content: space-between; align-items: center; font-size: 0.86rem; font-weight: 700; margin-bottom: 1.2rem; }
-  .note-back-link { color: inherit; text-decoration: none; }
-  .note-back-link:hover { text-decoration: underline; }
-  .single-note .note-body { font-size: 1.02rem; line-height: 1.65; }
-  .single-note .note-body img { max-width: 100%; height: auto; border-radius: 6px; }
-  .single-note .post-response { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(128,128,128,0.15); }
-</style>
 {% endblock content %}

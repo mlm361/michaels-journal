@@ -1,5 +1,52 @@
 {% extends "base.html" %}
 
+{% block head_extra %}
+<style>
+.search-wrap { max-width: 600px; }
+.search-input {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 1px solid rgba(128,128,128,0.35);
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+.search-input:focus { border-color: currentColor; }
+.search-status {
+  font-size: 0.82rem;
+  opacity: 0.5;
+  margin: 0.5rem 0 1rem;
+}
+.search-results {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.search-result {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(128,128,128,0.15);
+}
+.search-result a {
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s;
+}
+.search-result a:hover { opacity: 0.6; }
+.search-result p {
+  font-size: 0.85rem;
+  opacity: 0.6;
+  margin: 0.2rem 0 0;
+}
+</style>
+{% endblock head_extra %}
+
 {% block content %}
 <section class="post_container">
   <article>
@@ -68,49 +115,4 @@
   });
 })();
 </script>
-
-<style>
-.search-wrap { max-width: 600px; }
-.search-input {
-  width: 100%;
-  padding: 0.6rem 1rem;
-  font-size: 1rem;
-  font-family: inherit;
-  border: 1px solid rgba(128,128,128,0.35);
-  border-radius: 8px;
-  background: transparent;
-  color: inherit;
-  outline: none;
-  box-sizing: border-box;
-  transition: border-color 0.2s;
-}
-.search-input:focus { border-color: currentColor; }
-.search-status {
-  font-size: 0.82rem;
-  opacity: 0.5;
-  margin: 0.5rem 0 1rem;
-}
-.search-results {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.search-result {
-  padding: 0.75rem 0;
-  border-bottom: 1px solid rgba(128,128,128,0.15);
-}
-.search-result a {
-  font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none;
-  color: inherit;
-  transition: opacity 0.2s;
-}
-.search-result a:hover { opacity: 0.6; }
-.search-result p {
-  font-size: 0.85rem;
-  opacity: 0.6;
-  margin: 0.2rem 0 0;
-}
-</style>
 {% endblock content %}

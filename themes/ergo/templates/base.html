@@ -153,6 +153,116 @@
             text-decoration: underline;
             text-underline-offset: 2px;
           }
+
+          /* webmentions partial (loaded conditionally on post pages) */
+          .webmentions {
+            margin: 2.5rem 0 1rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(128,128,128,0.15);
+          }
+          .webmentions-heading {
+            font-size: 1rem;
+            font-weight: 700;
+            margin: 0 0 1rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 1px solid rgba(128,128,128,0.15);
+          }
+          .webmentions-list { margin-top: 1.25rem; }
+          .webmentions-intro {
+            margin: 0 0 0.9rem;
+            font-size: 0.92rem;
+            line-height: 1.55;
+            opacity: 0.78;
+          }
+          .webmentions-empty { margin: 0; font-style: italic; opacity: 0.72; }
+          .wm-responses { list-style: none; margin: 0; padding: 0; }
+          .wm-response {
+            display: grid;
+            grid-template-columns: 1.2rem 1fr;
+            gap: 0.55rem;
+            margin: 0.75rem 0;
+            align-items: baseline;
+            font-size: 0.9rem;
+            line-height: 1.55;
+          }
+          .wm-response-icon { text-align: center; opacity: 0.82; }
+          .wm-response-text { min-width: 0; }
+          .wm-author, .wm-name-link { font-weight: 700; text-decoration: none; }
+          .wm-author:hover, .wm-name-link:hover { text-decoration: underline; }
+          .wm-label { opacity: 0.65; }
+          .wm-content { margin: 0.4rem 0 0; opacity: 0.8; font-style: italic; }
+
+          /* post-actions partial (loaded on non-utility post pages) */
+          article .post-response {
+            margin: 2.4rem 0 1.35rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(128,128,128,0.18);
+          }
+          article .post-response-heading {
+            font-size: 1rem;
+            font-weight: 700;
+            margin: 0 0 0.35rem;
+          }
+          article .post-response-copy {
+            margin: 0 0 0.85rem;
+            font-size: 0.9rem;
+            line-height: 1.55;
+            opacity: 0.76;
+          }
+          article .post-actions {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 0;
+          }
+          article .post-actions .post-action,
+          article .post-actions a.post-action:link,
+          article .post-actions a.post-action:visited,
+          article .post-actions button.post-action {
+            display: inline-flex !important;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            height: 2rem;
+            min-height: 2rem;
+            padding: 0.35rem 0.85rem;
+            border: 1px solid currentColor;
+            border-radius: 999px;
+            background: transparent;
+            color: inherit !important;
+            font: inherit;
+            font-size: 0.8rem;
+            font-weight: 600;
+            line-height: 1;
+            text-decoration: none !important;
+            text-decoration-color: transparent !important;
+            text-decoration-thickness: 0 !important;
+            opacity: 0.72;
+            cursor: pointer;
+          }
+          article .post-actions .post-action-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 1em;
+            line-height: 1;
+          }
+          article .post-actions .post-action-icon img {
+            display: block;
+            width: 1em;
+            height: 1em;
+            object-fit: contain;
+          }
+          article .post-actions .post-action:hover,
+          article .post-actions .post-action:focus-visible {
+            opacity: 1;
+            text-decoration: none !important;
+          }
+          article .post-actions .post-action:focus-visible {
+            outline: 2px solid currentColor;
+            outline-offset: 3px;
+          }
         </style>
 
         {% block head_extra %}{% endblock head_extra %}

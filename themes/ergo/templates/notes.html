@@ -1,6 +1,21 @@
 {% extends "base.html" %}
 {% import "macros.html" as macros %}
 
+{% block head_extra %}
+<style>
+  .notes_list { max-width: 720px; margin: 0 auto; }
+  .note-item { padding: 1.25rem 0; border-bottom: 1px solid rgba(128,128,128,0.15); }
+  .note-item:last-child { border-bottom: none; }
+  .note-meta { font-size: 0.86rem; font-weight: 700; margin-bottom: 0.45rem; }
+  .note-permalink { color: rgba(36, 94, 62, 0.95); text-decoration: none; }
+  .note-permalink:hover { text-decoration: underline; opacity: 0.85; }
+  .note-body { font-size: 0.98rem; line-height: 1.55; }
+  .note-body p:first-child { margin-top: 0; }
+  .note-body p:last-child { margin-bottom: 0; }
+  .note-body img { max-width: 100%; height: auto; border-radius: 6px; }
+</style>
+{% endblock head_extra %}
+
 {% block content %}
 <nav id="overlord" class="overlord">
   {% set base_url = get_url(path="/", lang=lang) %}
@@ -41,17 +56,4 @@
     </article>
   {% endfor %}
 </section>
-
-<style>
-  .notes_list { max-width: 720px; margin: 0 auto; }
-  .note-item { padding: 1.25rem 0; border-bottom: 1px solid rgba(128,128,128,0.15); }
-  .note-item:last-child { border-bottom: none; }
-  .note-meta { font-size: 0.86rem; font-weight: 700; margin-bottom: 0.45rem; }
-  .note-permalink { color: rgba(36, 94, 62, 0.95); text-decoration: none; }
-  .note-permalink:hover { text-decoration: underline; opacity: 0.85; }
-  .note-body { font-size: 0.98rem; line-height: 1.55; }
-  .note-body p:first-child { margin-top: 0; }
-  .note-body p:last-child { margin-bottom: 0; }
-  .note-body img { max-width: 100%; height: auto; border-radius: 6px; }
-</style>
 {% endblock content %}
