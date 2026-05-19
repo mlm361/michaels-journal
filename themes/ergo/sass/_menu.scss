@@ -90,7 +90,7 @@
 
   &:hover {
     background: $accent;
-    border-color: $accent;
+    border-color: darken($accent, 6%);
     color: $background;
   }
 
