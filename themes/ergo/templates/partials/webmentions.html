@@ -12,7 +12,7 @@
 
 <script>
   (function () {
-    var target = encodeURIComponent("{{ page.permalink }}");
+    var target = encodeURIComponent({{ page.permalink | json_encode | safe }});
     var list = document.getElementById("webmentions-list");
     if (!list) return;
 
