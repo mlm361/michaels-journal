@@ -1,0 +1,7 @@
+# Bridgy Fed enhanced web-site handles.
+# These redirects let Bridgy Fed answer WebFinger and Bluesky DID lookups
+# for michaelreflects.com while the canonical site and Webmention.io stay here.
+/.well-known/host-meta* https://fed.brid.gy/.well-known/host-meta:splat 302
+/.well-known/webfinger* https://fed.brid.gy/.well-known/webfinger:splat 302
+/.well-known/atproto-did https://fed.brid.gy/.well-known/atproto-did?protocol=web&id=michaelreflects.com 302
+/.well-known/site.standard.publication https://fed.brid.gy/.well-known/site.standard.publication?protocol=web&domain=michaelreflects.com 302

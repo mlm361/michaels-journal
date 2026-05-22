@@ -1,0 +1,168 @@
+/* Privacy Policy page only */
+body.privacy-policy-page {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    radial-gradient(ellipse at -8% 26%, rgba(90, 168, 207, 0.18), transparent 30rem),
+    radial-gradient(ellipse at 108% 29%, rgba(90, 168, 207, 0.17), transparent 31rem),
+    radial-gradient(ellipse at -7% 73%, rgba(90, 168, 207, 0.12), transparent 34rem),
+    radial-gradient(ellipse at 107% 74%, rgba(90, 168, 207, 0.12), transparent 34rem),
+    linear-gradient(180deg, #ffffff 0%, #fbfdff 48%, #ffffff 100%);
+}
+
+body.privacy-policy-page .top-nav,
+body.privacy-policy-page .post_container,
+body.privacy-policy-page .site-footer {
+  position: relative;
+  z-index: 2;
+}
+
+body.privacy-policy-page #overlord {
+  z-index: 2;
+}
+
+body.privacy-policy-page #scrollToTop {
+  z-index: 20;
+}
+
+body.privacy-policy-page::before,
+body.privacy-policy-page::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-repeat: no-repeat;
+}
+
+body.privacy-policy-page::before {
+  opacity: 0.9;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='92' height='92' viewBox='0 0 92 92'%3E%3Cg fill='%235aa8cf' opacity='.46'%3E%3Ccircle cx='8' cy='8' r='2.1'/%3E%3Ccircle cx='28' cy='8' r='2.1'/%3E%3Ccircle cx='48' cy='8' r='2.1'/%3E%3Ccircle cx='68' cy='8' r='2.1'/%3E%3Ccircle cx='88' cy='8' r='2.1'/%3E%3Ccircle cx='8' cy='28' r='2.1'/%3E%3Ccircle cx='28' cy='28' r='2.1'/%3E%3Ccircle cx='48' cy='28' r='2.1'/%3E%3Ccircle cx='68' cy='28' r='2.1'/%3E%3Ccircle cx='88' cy='28' r='2.1'/%3E%3Ccircle cx='8' cy='48' r='2.1'/%3E%3Ccircle cx='28' cy='48' r='2.1'/%3E%3Ccircle cx='48' cy='48' r='2.1'/%3E%3Ccircle cx='68' cy='48' r='2.1'/%3E%3Ccircle cx='88' cy='48' r='2.1'/%3E%3Ccircle cx='8' cy='68' r='2.1'/%3E%3Ccircle cx='28' cy='68' r='2.1'/%3E%3Ccircle cx='48' cy='68' r='2.1'/%3E%3Ccircle cx='68' cy='68' r='2.1'/%3E%3Ccircle cx='88' cy='68' r='2.1'/%3E%3Ccircle cx='8' cy='88' r='2.1'/%3E%3Ccircle cx='28' cy='88' r='2.1'/%3E%3Ccircle cx='48' cy='88' r='2.1'/%3E%3Ccircle cx='68' cy='88' r='2.1'/%3E%3Ccircle cx='88' cy='88' r='2.1'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='92' height='92' viewBox='0 0 92 92'%3E%3Cg fill='%235aa8cf' opacity='.40'%3E%3Ccircle cx='8' cy='8' r='2.1'/%3E%3Ccircle cx='28' cy='8' r='2.1'/%3E%3Ccircle cx='48' cy='8' r='2.1'/%3E%3Ccircle cx='68' cy='8' r='2.1'/%3E%3Ccircle cx='88' cy='8' r='2.1'/%3E%3Ccircle cx='8' cy='28' r='2.1'/%3E%3Ccircle cx='28' cy='28' r='2.1'/%3E%3Ccircle cx='48' cy='28' r='2.1'/%3E%3Ccircle cx='68' cy='28' r='2.1'/%3E%3Ccircle cx='88' cy='28' r='2.1'/%3E%3Ccircle cx='8' cy='48' r='2.1'/%3E%3Ccircle cx='28' cy='48' r='2.1'/%3E%3Ccircle cx='48' cy='48' r='2.1'/%3E%3Ccircle cx='68' cy='48' r='2.1'/%3E%3Ccircle cx='88' cy='48' r='2.1'/%3E%3Ccircle cx='8' cy='68' r='2.1'/%3E%3Ccircle cx='28' cy='68' r='2.1'/%3E%3Ccircle cx='48' cy='68' r='2.1'/%3E%3Ccircle cx='68' cy='68' r='2.1'/%3E%3Ccircle cx='88' cy='68' r='2.1'/%3E%3Ccircle cx='8' cy='88' r='2.1'/%3E%3Ccircle cx='28' cy='88' r='2.1'/%3E%3Ccircle cx='48' cy='88' r='2.1'/%3E%3Ccircle cx='68' cy='88' r='2.1'/%3E%3Ccircle cx='88' cy='88' r='2.1'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='92' height='92' viewBox='0 0 92 92'%3E%3Cg fill='%235aa8cf' opacity='.34'%3E%3Ccircle cx='8' cy='8' r='2.1'/%3E%3Ccircle cx='28' cy='8' r='2.1'/%3E%3Ccircle cx='48' cy='8' r='2.1'/%3E%3Ccircle cx='68' cy='8' r='2.1'/%3E%3Ccircle cx='88' cy='8' r='2.1'/%3E%3Ccircle cx='8' cy='28' r='2.1'/%3E%3Ccircle cx='28' cy='28' r='2.1'/%3E%3Ccircle cx='48' cy='28' r='2.1'/%3E%3Ccircle cx='68' cy='28' r='2.1'/%3E%3Ccircle cx='88' cy='28' r='2.1'/%3E%3Ccircle cx='8' cy='48' r='2.1'/%3E%3Ccircle cx='28' cy='48' r='2.1'/%3E%3Ccircle cx='48' cy='48' r='2.1'/%3E%3Ccircle cx='68' cy='48' r='2.1'/%3E%3Ccircle cx='88' cy='48' r='2.1'/%3E%3Ccircle cx='8' cy='68' r='2.1'/%3E%3Ccircle cx='28' cy='68' r='2.1'/%3E%3Ccircle cx='48' cy='68' r='2.1'/%3E%3Ccircle cx='68' cy='68' r='2.1'/%3E%3Ccircle cx='88' cy='68' r='2.1'/%3E%3Ccircle cx='8' cy='88' r='2.1'/%3E%3Ccircle cx='28' cy='88' r='2.1'/%3E%3Ccircle cx='48' cy='88' r='2.1'/%3E%3Ccircle cx='68' cy='88' r='2.1'/%3E%3Ccircle cx='88' cy='88' r='2.1'/%3E%3C/g%3E%3C/svg%3E"),
+    radial-gradient(circle at 0% 24%, transparent 0 10.5rem, rgba(90, 168, 207, 0.17) 10.62rem 10.82rem, transparent 10.95rem),
+    radial-gradient(circle at 0% 69%, transparent 0 11.7rem, rgba(90, 168, 207, 0.20) 11.82rem 12.02rem, transparent 12.15rem),
+    radial-gradient(circle at 100% 68%, transparent 0 11rem, rgba(90, 168, 207, 0.21) 11.12rem 11.32rem, transparent 11.45rem),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='102' height='116' viewBox='0 0 102 116'%3E%3Cg fill='none' stroke='%235aa8cf' stroke-width='5' stroke-linecap='round' stroke-linejoin='round' opacity='.46'%3E%3Cpath d='M51 8 88 23v26c0 26-14 46-37 58C28 95 14 75 14 49V23L51 8Z'/%3E%3Cpath d='M51 34v30'/%3E%3Cpath d='M41 54h20'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='76' height='102' viewBox='0 0 76 102'%3E%3Cg fill='none' stroke='%235aa8cf' stroke-width='5' stroke-linecap='round' stroke-linejoin='round' opacity='.48'%3E%3Crect x='14' y='40' width='48' height='44' rx='7'/%3E%3Cpath d='M25 40V26a13 13 0 0 1 26 0v14'/%3E%3Cpath d='M38 58v11'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='78' height='128' viewBox='0 0 78 128'%3E%3Cg fill='none' stroke='%235aa8cf' stroke-width='5' stroke-linecap='round' stroke-linejoin='round' opacity='.50'%3E%3Ccircle cx='39' cy='27' r='19'/%3E%3Cpath d='M39 46v66'/%3E%3Cpath d='M39 76h19'/%3E%3Cpath d='M39 94h13'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='92' height='92' viewBox='0 0 92 92'%3E%3Cg fill='none' stroke='%235aa8cf' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' opacity='.42'%3E%3Ccircle cx='46' cy='46' r='24'/%3E%3Cpath d='M46 11v13M46 68v13M11 46h13M68 46h13'/%3E%3C/g%3E%3C/svg%3E");
+  background-size:
+    92px 92px,
+    92px 92px,
+    92px 92px,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    102px 116px,
+    76px 102px,
+    78px 128px,
+    92px 92px;
+  background-position:
+    9% 15%,
+    82% 25%,
+    84% 80%,
+    0 0,
+    0 0,
+    0 0,
+    89% 12%,
+    12% 32%,
+    92% 51%,
+    86% 42%;
+}
+
+body.privacy-policy-page::after {
+  opacity: 0.42;
+  background-image:
+    linear-gradient(90deg, rgba(90, 168, 207, 0.08) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(90, 168, 207, 0.07) 1px, transparent 1px),
+    radial-gradient(ellipse at center, rgba(90, 168, 207, 0.11), transparent 18rem),
+    radial-gradient(ellipse at center, rgba(90, 168, 207, 0.10), transparent 18rem),
+    radial-gradient(circle at center, rgba(90, 168, 207, 0.20) 0 0.45rem, transparent 0.5rem),
+    radial-gradient(circle at center, transparent 0 2.05rem, rgba(90, 168, 207, 0.28) 2.08rem 2.2rem, transparent 2.25rem);
+  background-size:
+    18rem 18rem,
+    18rem 18rem,
+    24rem 44rem,
+    24rem 44rem,
+    7rem 7rem,
+    13rem 13rem;
+  background-position:
+    left 3rem top 12rem,
+    right 4rem top 22rem,
+    left top 24rem,
+    right top 23rem,
+    87% 42%,
+    -5rem 69%;
+}
+
+body.privacy-policy-page .e-content > img:first-child {
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 18px 38px rgba(7, 50, 71, 0.10);
+}
+
+body.privacy-policy-page article hr {
+  border: 0;
+  border-top: 1px solid rgba(7, 50, 71, 0.16);
+}
+
+body.privacy-policy-page article h2 {
+  color: #071d2b;
+}
+
+html.theme-dark body.privacy-policy-page,
+html[data-theme="dark"] body.privacy-policy-page {
+  background:
+    radial-gradient(ellipse at -8% 24%, rgba(88, 135, 157, 0.16), transparent 30rem),
+    radial-gradient(ellipse at 108% 29%, rgba(88, 135, 157, 0.14), transparent 31rem),
+    radial-gradient(ellipse at -10% 72%, rgba(88, 135, 157, 0.10), transparent 33rem),
+    radial-gradient(ellipse at 110% 78%, rgba(88, 135, 157, 0.10), transparent 33rem),
+    linear-gradient(180deg, #0d141a 0%, #101820 50%, #0d141a 100%);
+}
+
+html.theme-dark body.privacy-policy-page::before,
+html[data-theme="dark"] body.privacy-policy-page::before {
+  opacity: 0.38;
+}
+
+html.theme-dark body.privacy-policy-page::after,
+html[data-theme="dark"] body.privacy-policy-page::after {
+  opacity: 0.30;
+}
+
+html.theme-dark body.privacy-policy-page .e-content > img:first-child,
+html[data-theme="dark"] body.privacy-policy-page .e-content > img:first-child {
+  box-shadow:
+    0 20px 46px rgba(0, 0, 0, 0.44),
+    0 0 34px rgba(255, 174, 34, 0.11);
+}
+
+html.theme-dark body.privacy-policy-page article h2,
+html[data-theme="dark"] body.privacy-policy-page article h2 {
+  color: inherit;
+}
+
+@media (max-width: 900px) {
+  body.privacy-policy-page::before {
+    opacity: 0.25;
+    background-position:
+      6% 12%,
+      92% 28%,
+      88% 78%,
+      0 0,
+      0 0,
+      0 0,
+      92% 12%,
+      5% 34%,
+      96% 55%,
+      88% 40%;
+  }
+
+  body.privacy-policy-page::after {
+    display: none;
+  }
+}

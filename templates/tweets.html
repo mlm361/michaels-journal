@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% import "macros.html" as macros %}
+
+{% block head_extra %}
+{% if page.extra.extra_css %}
+  {% for href in page.extra.extra_css %}
+  <link rel="stylesheet" href="{{ href | safe }}">
+  {% endfor %}
+{% endif %}
+<script src="/js/tweets.js" defer></script>
+{% endblock head_extra %}
+
+{% block content %}
+<nav id="overlord" class="overlord">
+  {% set base_url = get_url(path="/", lang=lang) %}
+  {{ macros::mini_logo(classes="", title=config.title, siteurl=base_url, logourl=config.extra.profile) }}
+  {% include "languages.html" %}
+</nav>
+
+<section class="post_container">
+  <article>
+    <h1 class="article_title">
+      <a href="{{ page.permalink }}" id="article_link">{{ page.title }}</a>
+    </h1>
+    {{ macros::frontmatter(classes="frontmatter_page", date=page.date, word_count=page.word_count, read_time=page.reading_time) }}
+
+    <div class="e-content tweets-intro">
+      {{ page.content | safe }}
+    </div>
+
+    <div class="tweets-archive-page">
+      <header class="tweets-hero" aria-label="Twitter Archive">
+        <svg class="tweets-hero-bird" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z"/>
+        </svg>
+        <h2 class="tweets-hero-title">Twitter Archive</h2>
+        <svg class="tweets-fail-whale" viewBox="0 0 220 110" aria-hidden="true" focusable="false">
+          <path class="tweets-fail-whale-body" d="M42 58c16-26 55-39 94-30 32 7 50 26 52 47 12-3 21-10 28-20 1 18-8 32-25 43-18 12-43 15-73 11-44-6-76-23-76-51z"/>
+          <path class="tweets-fail-whale-belly" d="M57 62c20 21 55 31 101 29-18 10-51 12-82 3-18-5-31-15-19-32z"/>
+          <path class="tweets-fail-whale-tail" d="M39 60C23 52 14 39 11 24c14 4 25 12 33 24 6-14 17-25 32-33-1 18-10 34-25 47z"/>
+          <path class="tweets-fail-whale-flipper" d="M121 83c-8 11-21 16-38 15 11-11 24-17 38-15z"/>
+          <circle class="tweets-fail-whale-eye" cx="162" cy="55" r="3"/>
+          <path class="tweets-fail-whale-bird" d="M77 14c8-7 17-7 25 0-8-3-16-3-25 0z"/>
+          <path class="tweets-fail-whale-bird" d="M113 10c8-7 17-7 25 0-8-3-16-3-25 0z"/>
+          <path class="tweets-fail-whale-bird" d="M149 17c7-6 15-6 22 0-7-3-14-3-22 0z"/>
+        </svg>
+      </header>
+
+      <div class="tweets-controls" role="group" aria-label="Filter tweets">
+        <div class="tweets-filter-row">
+          <label class="tweets-select-wrap">
+            <span class="sr-only">Filter by year</span>
+            <select id="filter-year" class="tweets-select" aria-label="Filter by year">
+              <option value="">All Years</option>
+            </select>
+          </label>
+          <label class="tweets-select-wrap">
+            <span class="sr-only">Filter by month</span>
+            <select id="filter-month" class="tweets-select" aria-label="Filter by month">
+              <option value="">All Months</option>
+              <option value="1">January</option><option value="2">February</option>
+              <option value="3">March</option><option value="4">April</option>
+              <option value="5">May</option><option value="6">June</option>
+              <option value="7">July</option><option value="8">August</option>
+              <option value="9">September</option><option value="10">October</option>
+              <option value="11">November</option><option value="12">December</option>
+            </select>
+          </label>
+          <button type="button" id="filter-clear-dates" class="tweets-btn-clear">Clear Dates</button>
+        </div>
+
+        <div class="tweets-search-wrap">
+          <svg class="tweets-search-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+          </svg>
+          <input
+            type="search"
+            id="filter-search"
+            class="tweets-search-input"
+            placeholder="Search tweets..."
+            aria-label="Search tweets"
+            autocomplete="off"
+          >
+        </div>
+
+        <div class="tweets-pills" role="tablist" aria-label="Tweet type filter">
+          <button type="button" class="tweets-pill is-active" role="tab" aria-selected="true" data-type="all">All Tweets</button>
+          <button type="button" class="tweets-pill" role="tab" aria-selected="false" data-type="retweets">Retweets</button>
+          <button type="button" class="tweets-pill" role="tab" aria-selected="false" data-type="replies">Replies</button>
+          <button type="button" class="tweets-pill" role="tab" aria-selected="false" data-type="media">With Media</button>
+          <button type="button" class="tweets-pill" role="tab" aria-selected="false" data-type="links">With Links</button>
+        </div>
+      </div>
+
+      <p class="tweets-count" aria-live="polite">
+        <span id="tweets-loading">Loading tweets...</span>
+        <span id="tweets-count-text" hidden>Showing <strong id="tweets-shown">0</strong> of <strong id="tweets-total">0</strong> tweets</span>
+      </p>
+
+      <div id="tweets-list" class="tweets-list" role="feed" aria-busy="true" aria-label="Tweet archive"></div>
+
+      <div class="tweets-load-more-wrap">
+        <button type="button" id="tweets-load-more" class="tweets-load-more" hidden>Load more tweets</button>
+      </div>
+    </div>
+  </article>
+</section>
+{% endblock content %}

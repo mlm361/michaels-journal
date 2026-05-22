@@ -1,6 +1,6 @@
 +++
 title = "Notes"
-description = "Short, untitled posts — micro-thoughts and status updates."
+description = ""
 sort_by = "date"
 template = "notes.html"
 page_template = "note.html"
@@ -19,5 +19,4 @@ skip_feed = true
   past a few hundred.
 -->
 
-
-A timeline of short, untitled posts.
+A timeline of notes.

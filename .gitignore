@@ -1,5 +1,6 @@
 *.log
 public/
+.wrangler/
 docs/tinylytics-webmentions.md
 deploy.ps1
 publish.bat

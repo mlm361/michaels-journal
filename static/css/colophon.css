@@ -1,0 +1,356 @@
+/* Colophon page only */
+body.colophon-theme-page {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    radial-gradient(ellipse at -9% 24%, rgba(42, 120, 72, 0.08), transparent 30rem),
+    radial-gradient(ellipse at 109% 28%, rgba(42, 120, 72, 0.075), transparent 31rem),
+    linear-gradient(180deg, #ffffff 0%, #fcfdfb 48%, #ffffff 100%);
+}
+
+body.colophon-theme-page .top-nav,
+body.colophon-theme-page .post_container,
+body.colophon-theme-page .site-footer {
+  position: relative;
+  z-index: 2;
+}
+
+body.colophon-theme-page #overlord {
+  z-index: 2;
+}
+
+body.colophon-theme-page #scrollToTop {
+  z-index: 20;
+}
+
+body.colophon-theme-page::before,
+body.colophon-theme-page::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-repeat: no-repeat;
+}
+
+body.colophon-theme-page::before {
+  opacity: 0.72;
+  background-image:
+    linear-gradient(rgba(42, 120, 72, 0.075) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(42, 120, 72, 0.07) 1px, transparent 1px),
+    linear-gradient(rgba(42, 120, 72, 0.065) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(42, 120, 72, 0.06) 1px, transparent 1px),
+    radial-gradient(ellipse at center, rgba(42, 120, 72, 0.06), transparent 17rem),
+    radial-gradient(ellipse at center, rgba(42, 120, 72, 0.055), transparent 17rem);
+  background-size:
+    2.15rem 2.15rem,
+    2.15rem 2.15rem,
+    2.15rem 2.15rem,
+    2.15rem 2.15rem,
+    24rem 100%,
+    24rem 100%;
+  background-position:
+    left 2.4rem top 5rem,
+    left 2.4rem top 5rem,
+    right 2.4rem top 5rem,
+    right 2.4rem top 5rem,
+    left top,
+    right top;
+}
+
+body.colophon-theme-page::after {
+  opacity: 0.64;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='84' viewBox='0 0 84 84'%3E%3Cg fill='none' stroke='%232a7848' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' opacity='.42'%3E%3Cpath d='M18 62 60 20l8 8-42 42-14 4 4-14Z'/%3E%3Cpath d='m54 26 8 8'/%3E%3Cpath d='M13 75h58'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='104' viewBox='0 0 88 104'%3E%3Cg fill='none' stroke='%232a7848' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' opacity='.42'%3E%3Cpath d='M18 8h36l16 16v72H18Z'/%3E%3Cpath d='M54 8v18h16'/%3E%3Cpath d='m30 59 10-12 10 12 10-12'/%3E%3Cpath d='M31 73h26'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='96' viewBox='0 0 84 96'%3E%3Cg fill='none' stroke='%232a7848' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' opacity='.42'%3E%3Ccircle cx='42' cy='16' r='8'/%3E%3Ccircle cx='21' cy='66' r='8'/%3E%3Ccircle cx='63' cy='66' r='8'/%3E%3Cpath d='M42 24v20M42 44H21v14M42 44h21v14'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='92' height='70' viewBox='0 0 92 70'%3E%3Cg fill='none' stroke='%232a7848' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' opacity='.42'%3E%3Cpath d='M25 52h42a15 15 0 0 0 0-30 22 22 0 0 0-42-5 18 18 0 0 0 0 35Z'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='86' height='86' viewBox='0 0 86 86'%3E%3Cg fill='none' stroke='%232a7848' stroke-width='3' stroke-linecap='round' opacity='.40'%3E%3Cpath d='M18 18a50 50 0 0 1 50 50'/%3E%3Cpath d='M18 36a32 32 0 0 1 32 32'/%3E%3Ccircle cx='22' cy='64' r='5' fill='%232a7848' opacity='.30'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='86' height='76' viewBox='0 0 86 76'%3E%3Cg fill='none' stroke='%232a7848' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' opacity='.42'%3E%3Cpath d='M20 25h46l-5 37H25Z'/%3E%3Cpath d='M29 25V14h28v11'/%3E%3Cpath d='M31 40h24'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='88' viewBox='0 0 88 88'%3E%3Cg fill='none' stroke='%232a7848' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' opacity='.40'%3E%3Ccircle cx='44' cy='44' r='13'/%3E%3Cpath d='M44 10v12M44 66v12M10 44h12M66 44h12M20 20l9 9M59 59l9 9M68 20l-9 9M29 59l-9 9'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='94' height='76' viewBox='0 0 94 76'%3E%3Cg fill='none' stroke='%232a7848' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' opacity='.42'%3E%3Crect x='13' y='16' width='68' height='46' rx='5'/%3E%3Cpath d='m29 31 10 8-10 8'/%3E%3Cpath d='M48 48h17'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='88' viewBox='0 0 88 88'%3E%3Cg fill='none' stroke='%232a7848' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' opacity='.42'%3E%3Crect x='18' y='18' width='52' height='52' rx='4'/%3E%3Cpath d='m29 45 10 10 21-24'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='86' height='96' viewBox='0 0 86 96'%3E%3Cg fill='none' stroke='%232a7848' stroke-width='2.5' stroke-linecap='round' stroke-dasharray='7 9' opacity='.34'%3E%3Cpath d='M44 2c-24 24 20 35-8 60-16 15-14 26 3 32'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='86' height='96' viewBox='0 0 86 96'%3E%3Cg fill='none' stroke='%232a7848' stroke-width='2.5' stroke-linecap='round' stroke-dasharray='7 9' opacity='.34'%3E%3Cpath d='M43 2c22 21-14 33 10 55 18 17 12 30-8 37'/%3E%3C/g%3E%3C/svg%3E");
+  background-size:
+    84px 84px,
+    88px 104px,
+    84px 96px,
+    92px 70px,
+    86px 86px,
+    86px 76px,
+    88px 88px,
+    94px 76px,
+    88px 88px,
+    86px 96px,
+    86px 96px;
+  background-position:
+    8% 14%,
+    8% 29%,
+    9% 43%,
+    8% 55%,
+    90% 39%,
+    8% 73%,
+    8% 88%,
+    90% 26%,
+    90% 14%,
+    8% 36%,
+    90% 58%;
+}
+
+.colophon-page {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.colophon-page h2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 2.4rem;
+  color: #173f25;
+}
+
+.colophon-page h2::before {
+  content: "";
+  width: 0.9rem;
+  height: 0.9rem;
+  flex: 0 0 auto;
+  border: 2px solid rgba(42, 120, 72, 0.72);
+  border-radius: 999px 999px 999px 0;
+  transform: rotate(-35deg);
+}
+
+.colophon-page h2::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  min-width: 2rem;
+  margin-left: 0.25rem;
+  background: linear-gradient(90deg, rgba(42, 120, 72, 0.28), transparent);
+}
+
+.colophon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0 2rem;
+}
+
+.colophon-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(42, 120, 72, 0.22);
+  border-radius: 16px;
+  padding: 1.25rem 1.2rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(252, 255, 250, 0.86)),
+    radial-gradient(circle at 92% 8%, rgba(42, 120, 72, 0.08), transparent 7rem);
+  box-shadow: 0 14px 28px rgba(24, 58, 34, 0.08);
+}
+
+.colophon-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: linear-gradient(90deg, #1f7a3c, rgba(42, 120, 72, 0.32));
+}
+
+.colophon-card h3 {
+  margin-top: 0.3rem;
+  margin-bottom: 0.65rem;
+  color: #163d24;
+}
+
+.colophon-card h3::before {
+  display: block;
+  margin-bottom: 0.7rem;
+  color: #1f7a3c;
+  font-size: 1.5rem;
+  line-height: 1;
+  opacity: 0.88;
+}
+
+.colophon-card:nth-child(1) h3::before {
+  content: ">_";
+}
+
+.colophon-card:nth-child(2) h3::before {
+  content: "☁";
+}
+
+.colophon-card:nth-child(3) h3::before {
+  content: "✎";
+}
+
+.colophon-card:nth-child(4) h3::before {
+  content: "⌁";
+}
+
+.colophon-card:nth-child(5) h3::before {
+  content: "♡";
+}
+
+.colophon-card ul {
+  margin-bottom: 0;
+}
+
+.colophon-card-signoff {
+  margin: 0;
+  text-align: center;
+  font-size: 0.95rem;
+  opacity: 0.82;
+}
+
+.badge-wall {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1rem 0 1.6rem;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: stretch;
+  min-height: 2.45rem;
+  border: 1px solid rgba(42, 120, 72, 0.26);
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 8px 18px rgba(24, 58, 34, 0.08);
+  transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+}
+
+.status-badge span,
+.status-badge strong {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.68rem;
+  line-height: 1;
+}
+
+.status-badge span {
+  color: #f8fff8;
+  background: #2f6f43;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.status-badge strong {
+  color: #13361f;
+  background: #f7fff7;
+  font-size: 0.82rem;
+}
+
+.status-badge.status-w3c span {
+  background: #1f5f36;
+}
+
+.status-badge.status-w3c strong {
+  background: #f4fff6;
+}
+
+.status-badge.status-check strong {
+  background: #f8fff8;
+}
+
+.status-badge:hover,
+.status-badge:focus {
+  border-color: rgba(42, 120, 72, 0.46);
+  box-shadow: 0 12px 24px rgba(24, 58, 34, 0.12);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.colophon-signoff {
+  margin: 2.5rem 0 0;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.72;
+}
+
+html.theme-dark body.colophon-theme-page,
+html[data-theme="dark"] body.colophon-theme-page {
+  background:
+    radial-gradient(ellipse at -9% 24%, rgba(88, 137, 104, 0.24), transparent 30rem),
+    radial-gradient(ellipse at 109% 28%, rgba(88, 137, 104, 0.22), transparent 31rem),
+    radial-gradient(ellipse at 50% 95%, rgba(88, 137, 104, 0.10), transparent 34rem),
+    linear-gradient(180deg, #0b130d 0%, #101911 48%, #0b130d 100%);
+}
+
+html.theme-dark body.colophon-theme-page::before,
+html[data-theme="dark"] body.colophon-theme-page::before {
+  opacity: 0.50;
+}
+
+html.theme-dark body.colophon-theme-page::after,
+html[data-theme="dark"] body.colophon-theme-page::after {
+  opacity: 0.46;
+}
+
+html.theme-dark .colophon-page h2,
+html.theme-dark .colophon-card h3,
+html[data-theme="dark"] .colophon-page h2,
+html[data-theme="dark"] .colophon-card h3 {
+  color: inherit;
+}
+
+html.theme-dark .colophon-card,
+html[data-theme="dark"] .colophon-card {
+  border-color: rgba(126, 168, 138, 0.44);
+  background:
+    linear-gradient(180deg, rgba(18, 30, 21, 0.98), rgba(13, 24, 16, 0.94)),
+    radial-gradient(circle at 92% 8%, rgba(126, 168, 138, 0.18), transparent 7rem);
+  box-shadow:
+    0 18px 34px rgba(0, 0, 0, 0.38),
+    inset 0 1px 0 rgba(178, 218, 188, 0.08);
+}
+
+html.theme-dark .status-badge,
+html[data-theme="dark"] .status-badge {
+  border-color: rgba(126, 168, 138, 0.42);
+  background: rgba(16, 28, 19, 0.96);
+}
+
+@media (max-width: 900px) {
+  body.colophon-theme-page::before {
+    opacity: 0.24;
+    background-position:
+      left 1rem top 5rem,
+      left 1rem top 5rem,
+      right 1rem top 5rem,
+      right 1rem top 5rem,
+      left top,
+      right top;
+  }
+
+  body.colophon-theme-page::after {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .colophon-page h2 {
+    display: block;
+  }
+
+  .colophon-page h2::before,
+  .colophon-page h2::after {
+    display: none;
+  }
+
+  .status-badge {
+    width: 100%;
+  }
+
+  .status-badge span,
+  .status-badge strong {
+    flex: 1;
+    justify-content: center;
+  }
+}

@@ -38,7 +38,17 @@
 <section class="post_container">
   <article{% if not is_utility_page %} class="h-entry"{% endif %}>
     {% block post %}
-      <h1 class="article_title{% if not is_utility_page %} p-name{% endif %}"><a{% if not is_utility_page %} class="u-url u-uid"{% endif %} href="{{page.permalink}}" id="article_link">{{ page.title }}</a></h1>
+      {% set raw_title = page.title | default(value="") | trim %}
+      {% set is_untitled = not raw_title or raw_title == "Untitled" or raw_title == "(No title)" or raw_title == "(Untitled)" %}
+      <h1 class="article_title{% if not is_utility_page %} p-name{% endif %}">
+        <a{% if not is_utility_page %} class="u-url u-uid"{% endif %} href="{{page.permalink}}" id="article_link">
+          {% if is_untitled and not is_utility_page %}
+            <span aria-hidden="true">✦</span> <span class="mf2-hidden">Untitled post from </span>{{ page.date | date(format="%B %-d, %Y") }}
+          {% else %}
+            {{ raw_title }}
+          {% endif %}
+        </a>
+      </h1>
       {% if not is_utility_page %}
       <div class="p-author h-card mf2-hidden">
         <a class="p-name u-url" href="{{ config.base_url }}">Michael Mitchell</a>
@@ -78,7 +88,11 @@
         {{ page.content | safe }}
       </div>
 
-      {% set email_subject = "Re: " ~ page.title %}
+      {% if is_untitled and not is_utility_page %}
+        {% set email_subject = "Re: Untitled post from " ~ page.date | date(format='%Y-%m-%d') %}
+      {% else %}
+        {% set email_subject = "Re: " ~ raw_title %}
+      {% endif %}
       {% include "partials/post-actions.html" %}
 
 

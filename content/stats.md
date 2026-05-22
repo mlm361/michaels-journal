@@ -95,7 +95,7 @@ extra_css = ["/css/stats.css"]
 
   function entryLabel(entry) {
     if (entry.title) return entry.title;
-    return entry.excerpt || (entry.isNote ? 'View note' : 'View entry');
+    return entry.isNote ? (entry.excerpt || 'View note') : '✦ ' + (entry.excerpt || 'Untitled post');
   }
 
   function tile(label, value, sub, href) {
@@ -214,7 +214,8 @@ extra_css = ["/css/stats.css"]
         date,
         words: Number(doc.words || 0),
         images: Math.max(0, Number(doc.images || 1) - 1),
-        isNote: !!doc.is_note
+        isNote: doc.is_note === undefined ? url.indexOf('/notes/') !== -1 : !!doc.is_note,
+        isUntitled: doc.is_untitled === undefined ? !(doc.title || '').trim() : !!doc.is_untitled
       };
     }).filter(entry => {
       if (!entry.date || isNaN(entry.date)) return false;

@@ -105,10 +105,13 @@
     results.forEach(function(r) {
       var doc = store[r.ref];
       if (!doc) return;
+      var title = doc.title || '';
+      var isUntitled = !title || title === 'Untitled' || title === '(No title)' || title === '(Untitled)';
+      var label = isUntitled ? '✦ ' + (doc.description || 'Untitled post') : title;
       var li = document.createElement('li');
       li.className = 'search-result';
       li.innerHTML =
-        '<a href="' + doc.url + '">' + (doc.title || 'Untitled') + '</a>' +
+        '<a href="' + doc.url + '">' + label + '</a>' +
         (doc.description ? '<p>' + doc.description + '</p>' : '');
       list.appendChild(li);
     });

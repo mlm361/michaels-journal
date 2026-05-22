@@ -5,6 +5,8 @@ template = "page.html"
 [extra]
 no_kudos = true
 skip_feed = true
+body_class = "privacy-policy-page"
+extra_css = ["/css/privacy-policy.css?v=20260522-privacy-dark-1"]
 +++
 
 <img src="/img/privacy-policy.png" alt="Privacy Policy" style="max-width:100%;height:auto;border-radius:8px;margin-bottom:1.5rem;">
@@ -34,13 +36,29 @@ I use this data solely to understand traffic patterns and improve content. I do 
 
 This site is hosted on [Cloudflare Pages](https://pages.cloudflare.com). As part of normal CDN and hosting operations, Cloudflare may collect server-side data such as IP addresses, request logs, and performance metrics. This is standard infrastructure logging handled entirely by Cloudflare — I do not have access to or control over this data. For details, see [Cloudflare's Privacy Policy](https://www.cloudflare.com/privacypolicy/).
 
+### Webmentions and IndieWeb features
+
+This site uses [webmention.io](https://webmention.io/) to receive and display webmentions. When a post page loads webmentions, the page may request mention data from webmention.io for that post's URL. This lets replies, likes, reposts, and other IndieWeb responses appear on the site.
+
+### Fonts, icons, and page features
+
+Some pages load small third-party assets or scripts for presentation and site features:
+
+- [Google Fonts](https://fonts.google.com/) provides the Montserrat and Raleway fonts used by the site.
+- [Font Awesome](https://fontawesome.com/) provides some icons.
+- [Simple Icons](https://simpleicons.org/) provides several social and service icons.
+- [jsDelivr](https://www.jsdelivr.com/) is used on specific pages for JavaScript/CSS libraries such as Chart.js and GLightbox.
+- [Creative Commons](https://creativecommons.org/) provides the license badge image shown in the footer.
+
+These services are used for display and site functionality. I do not use them for advertising, behavioral profiling, or selling visitor data.
+
 ---
 
 ## 2. Data I Do Not Collect
 
 - I do not use Google Analytics or any other advertising-based analytics.
 - I do not run ads.
-- I do not operate any comment system that collects personal data.
+- I do not operate an account-based comment system.
 - I do not collect email addresses, names, or any form of registration data.
 
 ---

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% import "macros.html" as macros %}
+
+{% block head_extra %}
+{% if page.extra.extra_css %}
+  {% for href in page.extra.extra_css %}
+  <link rel="stylesheet" href="{{ href | safe }}">
+  {% endfor %}
+{% endif %}
+<script src="/js/tweets-on-this-day.js" defer></script>
+{% endblock head_extra %}
+
+{% block content %}
+<nav id="overlord" class="overlord">
+  {% set base_url = get_url(path="/", lang=lang) %}
+  {{ macros::mini_logo(classes="", title=config.title, siteurl=base_url, logourl=config.extra.profile) }}
+  {% include "languages.html" %}
+</nav>
+
+<div class="tweets-on-this-day-page">
+  <section class="post_container tweets-otd-container">
+    <article>
+      <h1 class="article_title">
+        <a href="{{ page.permalink }}" id="article_link">{{ page.title }}</a>
+      </h1>
+      {{ macros::frontmatter(classes="frontmatter_page", date=page.date, word_count=page.word_count, read_time=page.reading_time) }}
+
+      <div class="e-content tweets-otd-intro">
+        {{ page.content | safe }}
+      </div>
+
+      <nav class="tweets-otd-page-nav" aria-label="Twitter archive On This Day navigation">
+        <a href="/on-this-day/" class="tweets-otd-nav-link tweets-otd-nav-link-back">Back to On This Day</a>
+        <a href="/tweets/" class="tweets-otd-nav-link">Twitter Archive</a>
+      </nav>
+
+      <section class="tweets-otd-hero" aria-labelledby="tweets-otd-heading">
+        <div class="tweets-otd-stamp" aria-hidden="true">Archive<br>Record</div>
+        <svg class="tweets-otd-bird" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M23.64 4.94c-.84.37-1.73.62-2.68.73.96-.58 1.7-1.49 2.05-2.58-.9.53-1.9.92-2.96 1.13-.85-.9-2.06-1.47-3.4-1.47-2.57 0-4.66 2.09-4.66 4.66 0 .36.04.72.12 1.06-3.87-.2-7.3-2.05-9.6-4.87-.4.69-.63 1.49-.63 2.34 0 1.62.82 3.04 2.07 3.88-.76-.03-1.48-.23-2.11-.58v.06c0 2.26 1.61 4.14 3.74 4.57-.39.11-.8.16-1.23.16-.3 0-.59-.03-.88-.08.59 1.85 2.31 3.2 4.35 3.23-1.6 1.25-3.6 2-5.79 2-.38 0-.75-.02-1.11-.07 2.06 1.32 4.51 2.09 7.14 2.09 8.57 0 13.26-7.1 13.26-13.25 0-.2 0-.4-.01-.6.91-.66 1.7-1.48 2.32-2.41z"/>
+        </svg>
+        <div>
+          <p class="tweets-otd-kicker">Twitter Archive</p>
+          <h2 id="tweets-otd-heading">On This Day</h2>
+          <p id="tweets-otd-date-label">Checking the archive...</p>
+        </div>
+      </section>
+
+      <div id="tweets-on-this-day" class="tweets-otd-results" aria-live="polite">
+        <p class="tweets-otd-loading">Loading tweets from past years...</p>
+      </div>
+    </article>
+  </section>
+</div>
+{% endblock content %}

@@ -8,6 +8,8 @@ skip_feed = true
 extra_css = ["/css/on-this-day.css"]
 +++
 
+<p class="otd-subpage-link"><a href="/on-this-day/tweets/"><svg class="otd-twitter-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M23.64 4.94c-.84.37-1.73.62-2.68.73.96-.58 1.7-1.49 2.05-2.58-.9.53-1.9.92-2.96 1.13-.85-.9-2.06-1.47-3.4-1.47-2.57 0-4.66 2.09-4.66 4.66 0 .36.04.72.12 1.06-3.87-.2-7.3-2.05-9.6-4.87-.4.69-.63 1.49-.63 2.34 0 1.62.82 3.04 2.07 3.88-.76-.03-1.48-.23-2.11-.58v.06c0 2.26 1.61 4.14 3.74 4.57-.39.11-.8.16-1.23.16-.3 0-.59-.03-.88-.08.59 1.85 2.31 3.2 4.35 3.23-1.6 1.25-3.6 2-5.79 2-.38 0-.75-.02-1.11-.07 2.06 1.32 4.51 2.09 7.14 2.09 8.57 0 13.26-7.1 13.26-13.25 0-.2 0-.4-.01-.6.91-.66 1.7-1.48 2.32-2.41z"/></svg><span>View Tweets On This Day</span></a></p>
+
 <div id="on-this-day">Loading...</div>
 
 <script>
@@ -137,7 +139,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         dateObj,
         content,
         indexExcerpt: item.excerpt || '',
-        isNote: !!item.is_note
+        isNote: item.is_note === undefined ? String(item.url || '').includes('/notes/') : !!item.is_note,
+        isUntitled: item.is_untitled === undefined ? !title : !!item.is_untitled
       };
     } catch {
       return null;
@@ -192,6 +195,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           title: post.title,
           excerpt: excerptFromHTML(cleanContent, post.indexExcerpt),
           isNote: post.isNote,
+          isUntitled: post.isUntitled,
           dateObj,
           content: cleanContent,
           displayDate
@@ -216,7 +220,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       seen.add(p.url);
       const heading = p.title
         ? `<h3 class="otd-title"><a href="${p.url}">${escapeHTML(p.title)}</a></h3>`
-        : `<a class="otd-note-title" href="${p.url}">${escapeHTML(p.excerpt)}</a>`;
+        : p.isNote
+          ? `<a class="otd-note-title" href="${p.url}">${escapeHTML(p.excerpt)}</a>`
+          : `<h3 class="otd-title otd-untitled-title"><a href="${p.url}"><span aria-hidden="true">✦</span><span class="sr-only">Untitled post: </span> ${escapeHTML(p.excerpt)}</a></h3>`;
       onThisDay.insertAdjacentHTML('beforeend', `
         <article class="otd-entry${p.isNote ? ' otd-note' : ''}">
           <a class="otd-date" href="${p.url}">${p.displayDate}</a>

@@ -1,9 +1,10 @@
 {% extends "base.html" %}
+{% import "macros.html" as macros %}
 
 {% block head_extra %}
 <style>
 .archive-filter {
-  margin-bottom: 2rem;
+  margin-bottom: 0.75rem;
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -75,6 +76,33 @@
   color: rgba(74, 144, 226, 1);
   margin-left: 0.4rem;
 }
+.archive-untitled-marker {
+  color: #c7a300;
+  font-weight: 800;
+  margin-right: 0.25rem;
+}
+.archive-key {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0 0 2rem;
+  font-size: 0.84rem;
+  opacity: 0.72;
+}
+.archive-key .archive-untitled-marker {
+  margin-right: 0;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 </style>
 {% endblock head_extra %}
 
@@ -90,6 +118,12 @@
    already sorted; concat then re-sort to keep one stable order. #}
 {% set merged = root.pages | concat(with=notes_section.pages) %}
 
+<nav id="overlord" class="overlord">
+  {% set base_url = get_url(path="/", lang=lang) %}
+  {{ macros::mini_logo(classes="", title=config.title, siteurl=base_url, logourl=config.extra.profile) }}
+  {% include "languages.html" %}
+</nav>
+
 <section class="post_container">
   <article>
     <h1 class="article_title">📁 Archive</h1>
@@ -100,6 +134,7 @@
         <option value="">— All years —</option>
       </select>
     </div>
+    <p class="archive-key"><span class="archive-untitled-marker" aria-hidden="true">✦</span><span>Untitled post</span></p>
 
     <div id="archive-list">
       {% set_global cur_year = "" %}
@@ -126,7 +161,7 @@
         {% endif %}
 
         <li class="archive-entry">
-          {% set is_note = entry.path is starting_with("/notes/") %}
+          {% set is_note = (entry.extra.post_type is defined and entry.extra.post_type == "note") or (entry.extra.zola_content_type is defined and entry.extra.zola_content_type == "note") or (entry.extra.is_note is defined and entry.extra.is_note) %}
           {% set raw_title = entry.title | default(value="") | trim %}
           {% set is_placeholder_title = not raw_title or raw_title == "Untitled" or raw_title == "(No title)" %}
           {% if is_placeholder_title %}
@@ -138,7 +173,9 @@
           <a class="archive-date-link" href="{{ entry.permalink }}">
             <time datetime="{{ entry.date | date(format='%Y-%m-%d') }}">{{ entry.date | date(format="%b %d") }}</time>
           </a>
-          <a class="{% if is_placeholder_title %}archive-excerpt-link{% endif %}" href="{{ entry.permalink }}">{{ link_text }}</a>
+          <a class="{% if is_placeholder_title %}archive-excerpt-link{% endif %}" href="{{ entry.permalink }}">
+            {% if is_placeholder_title and not is_note %}<span class="archive-untitled-marker" aria-hidden="true">✦</span><span class="sr-only">Untitled post: </span>{% endif %}{{ link_text }}
+          </a>
           {% if is_note %}<span class="archive-note-tag">note</span>{% endif %}
         </li>
 

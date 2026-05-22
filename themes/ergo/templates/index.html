@@ -27,6 +27,18 @@
     margin-right: auto;
   }
 
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
   .post-card {
     background: rgba(128,128,128,0.05);
     border: 1px solid rgba(128,128,128,0.11);
@@ -76,6 +88,11 @@
   }
   .post-card-title a { text-decoration: none; }
   .post-card-title a:hover { text-decoration: underline; }
+  .untitled-marker {
+    color: #c7a300;
+    font-weight: 800;
+    margin-right: 0.35rem;
+  }
 
   .post-card-excerpt {
     font-size: 0.9rem;
@@ -128,6 +145,66 @@
     .post-card-img-wrap { flex: none; width: 100%; order: 0; }
     .post-card-img { width: 100%; height: 170px; }
   }
+
+  .pager {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    margin: 2.5rem auto 0;
+  }
+  .pager-button,
+  .pager-current {
+    min-width: 2.45rem;
+    min-height: 2.45rem;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.08);
+    color: inherit;
+    text-decoration: none;
+    font-weight: 800;
+  }
+  html.theme-dark .pager-button,
+  html.theme-dark .pager-current,
+  html[data-theme="dark"] .pager-button,
+  html[data-theme="dark"] .pager-current {
+    background: rgba(255, 255, 255, 0.08);
+  }
+  .pager-button:hover {
+    text-decoration: none;
+    background: rgba(34, 139, 34, 0.16);
+  }
+  .pager-button-disabled {
+    opacity: 0.32;
+    cursor: default;
+  }
+  .pager-current {
+    min-width: 4.9rem;
+    padding: 0 0.5rem;
+    color: #228b22;
+    gap: 0;
+  }
+  .pager-input {
+    width: 1.85rem;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    font-weight: 900;
+    text-align: center;
+    outline: none;
+  }
+  .pager-input:focus {
+    text-decoration: underline;
+    text-underline-offset: 0.2rem;
+  }
+  .pager-total {
+    font-weight: 900;
+  }
 </style>
 {% endblock head_extra %}
 
@@ -148,6 +225,8 @@
   {% set_global current_year = "" %}
   {% for page in paginator.pages %}
     {% if page.extra.skip_feed is defined and page.extra.skip_feed %}{% continue %}{% endif %}
+    {% set raw_title = page.title | default(value="") | trim %}
+    {% set is_untitled = not raw_title or raw_title == "Untitled" or raw_title == "(No title)" or raw_title == "(Untitled)" %}
 
     {% set year = page.date | date(format="%Y") %}
     {% if year != current_year %}
@@ -193,12 +272,18 @@
       <div class="post-card-main">
         {% if _card_img %}
         <a href="{{ page.permalink }}" class="post-card-img-wrap">
-          <img src="{{ _card_img }}" alt="{{ page.title }}" class="post-card-img" loading="lazy" style="object-fit: {{ _card_fit }}; object-position: {{ _card_position }};">
+          <img src="{{ _card_img }}" alt="{% if is_untitled %}Untitled post from {{ page.date | date(format='%B %-d, %Y') }}{% else %}{{ raw_title }}{% endif %}" class="post-card-img" loading="lazy" style="object-fit: {{ _card_fit }}; object-position: {{ _card_position }};">
         </a>
         {% endif %}
         <div class="post-card-text">
           <h2 class="post-card-title">
-            <a href="{{ page.permalink }}">{{ page.title }}</a>
+            <a href="{{ page.permalink }}">
+              {% if is_untitled %}
+                <span class="untitled-marker" aria-hidden="true">✦</span><span class="sr-only">Untitled post from </span>{{ page.date | date(format="%B %-d, %Y") }}
+              {% else %}
+                {{ raw_title }}
+              {% endif %}
+            </a>
           </h2>
           <p class="post-card-excerpt">{{ page.description | default(value=page.content | striptags | truncate(length=180)) | safe }}</p>
         </div>
@@ -210,7 +295,7 @@
         <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}" class="post-tag">#{{ tag }}</a>
         {% endfor %}
         {% endif %}
-        <a class="post-card-read-more" href="{{ page.permalink }}">Continue Reading →</a>
+        <a class="post-card-read-more" href="{{ page.permalink }}">{% if is_untitled %}View Entry{% else %}Continue Reading →{% endif %}</a>
       </footer>
     </article>
   {% endfor %}
@@ -219,12 +304,5 @@
 
 
 {% block pagination %}
-<nav class="pagination">
-    {% if paginator.previous %}
-    <span class="prev"><a rel="prev" href="{{paginator.previous}}" class="button medium font_faint">← prev</a></span>
-    {% endif %}
-    {% if paginator.next %}
-    <span class="next"><a rel="next" href="{{paginator.next}}" class="button medium font_faint">next →</a></span>
-    {% endif %}
-</nav>
+{% include "partials/pagination.html" %}
 {% endblock pagination %}
