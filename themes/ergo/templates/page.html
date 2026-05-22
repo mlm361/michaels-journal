@@ -89,7 +89,8 @@
       </div>
 
       {% if is_untitled and not is_utility_page %}
-        {% set email_subject = "Re: Untitled post from " ~ page.date | date(format='%Y-%m-%d') %}
+        {% set email_date = page.date | date(format='%Y-%m-%d') %}
+        {% set email_subject = "Re: Untitled post from " ~ email_date %}
       {% else %}
         {% set email_subject = "Re: " ~ raw_title %}
       {% endif %}

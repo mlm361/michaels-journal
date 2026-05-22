@@ -320,21 +320,6 @@ body:has(.tweets-on-this-day-page) > .site-footer {
   }
 }
 
-/* Let the global mobile menu behave like it does on normal pages. */
-@media (max-width: 700px) {
-  body:has(.tweets-on-this-day-page) .top-nav {
-    z-index: 2000;
-  }
-
-  body:has(.tweets-on-this-day-page) .top-nav-links {
-    z-index: 2001;
-    background: #ffffff;
-    opacity: 1;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-  }
-}
-
 html.theme-dark body:has(.tweets-on-this-day-page),
 html[data-theme="dark"] body:has(.tweets-on-this-day-page) {
   background:
@@ -389,13 +374,6 @@ html[data-theme="dark"] .tweets-otd-nav-link {
   background: rgba(26, 24, 20, 0.78);
   border-color: rgba(111, 174, 170, 0.28);
   color: #9fd3cd;
-}
-
-@media (max-width: 700px) {
-  html.theme-dark body:has(.tweets-on-this-day-page) .top-nav-links,
-  html[data-theme="dark"] body:has(.tweets-on-this-day-page) .top-nav-links {
-    background: #282a36;
-  }
 }
 
 body:has(.tweets-on-this-day-page) #scrollToTop.scroll-to-top {

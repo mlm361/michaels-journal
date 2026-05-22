@@ -451,21 +451,6 @@ body:has(.tweets-archive-page) > .site-footer {
   }
 }
 
-/* Let the global mobile menu behave like it does on normal pages. */
-@media (max-width: 700px) {
-  body:has(.tweets-archive-page) .top-nav {
-    z-index: 2000;
-  }
-
-  body:has(.tweets-archive-page) .top-nav-links {
-    z-index: 2001;
-    background: #ffffff;
-    opacity: 1;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-  }
-}
-
 /* ============================================================
    Dark mode (html.theme-dark / html[data-theme="dark"])
    ============================================================ */
@@ -522,11 +507,4 @@ html[data-theme="dark"] .tweet-card-stats,
 html.theme-dark .tweets-empty,
 html[data-theme="dark"] .tweets-empty {
   color: rgba(230, 238, 245, 0.7);
-}
-
-@media (max-width: 700px) {
-  html.theme-dark body:has(.tweets-archive-page) .top-nav-links,
-  html[data-theme="dark"] body:has(.tweets-archive-page) .top-nav-links {
-    background: #282a36;
-  }
 }
