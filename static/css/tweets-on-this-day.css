@@ -30,7 +30,6 @@ body:has(.tweets-on-this-day-page)::after {
   opacity: 0.88;
 }
 
-body:has(.tweets-on-this-day-page) > .top-nav,
 body:has(.tweets-on-this-day-page) > .tweets-on-this-day-page,
 body:has(.tweets-on-this-day-page) > .site-footer {
   position: relative;

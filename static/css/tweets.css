@@ -26,7 +26,6 @@ body:has(.tweets-archive-page)::before {
   background-size: min(1600px, 100vw) auto;
   opacity: 1;
 }
-body:has(.tweets-archive-page) > .top-nav,
 body:has(.tweets-archive-page) > .post_container,
 body:has(.tweets-archive-page) > .site-footer {
   position: relative;
