@@ -188,6 +188,13 @@ tr {
     left: 0;
     right: 0;
     z-index: 90;
+    pointer-events: none;
+}
+
+.overlord figure,
+.overlord h5,
+.overlord #languageSelector {
+    pointer-events: auto;
 }
 
 @media (max-width: 700px) {
