@@ -1,11 +1,11 @@
 /* ============================================================
    Twitter Archive page — michaelreflects.com
-   Scoped under .tweets-archive-page (plus body:has() for bg).
+   Scoped under .tweets-archive-page (plus body.tweets-page-body for bg).
    No global selectors. No theme overrides outside this page.
    ============================================================ */
 
 /* Soft sky-tinted background. Center reading column stays light. */
-body:has(.tweets-archive-page) {
+body.tweets-page-body {
   position: relative;
   background:
     linear-gradient(90deg, rgba(188, 232, 255, 0.92) 0, rgba(224, 246, 255, 0.62) 16rem, rgba(255, 255, 255, 0.05) 33rem, rgba(255, 255, 255, 0.0) 47%),
@@ -14,7 +14,7 @@ body:has(.tweets-archive-page) {
   background-attachment: fixed;
 }
 
-body:has(.tweets-archive-page)::before {
+body.tweets-page-body::before {
   content: "";
   position: fixed;
   inset: 0;
@@ -26,8 +26,8 @@ body:has(.tweets-archive-page)::before {
   background-size: min(1600px, 100vw) auto;
   opacity: 1;
 }
-body:has(.tweets-archive-page) > .post_container,
-body:has(.tweets-archive-page) > .site-footer {
+body.tweets-page-body > .post_container,
+body.tweets-page-body > .site-footer {
   position: relative;
   z-index: 1;
 }
@@ -412,12 +412,12 @@ body:has(.tweets-archive-page) > .site-footer {
    ============================================================ */
 /* Below ~750px the side rail would compete with the content column. Hide it. */
 @media (max-width: 750px) {
-  body:has(.tweets-archive-page) {
+  body.tweets-page-body {
     background:
       radial-gradient(circle at 20% 8%, rgba(29, 155, 240, 0.09), transparent 16rem),
       #ffffff;
   }
-  body:has(.tweets-archive-page)::before {
+  body.tweets-page-body::before {
     display: none;
   }
 }
@@ -454,8 +454,8 @@ body:has(.tweets-archive-page) > .site-footer {
 /* ============================================================
    Dark mode (html.theme-dark / html[data-theme="dark"])
    ============================================================ */
-html.theme-dark body:has(.tweets-archive-page),
-html[data-theme="dark"] body:has(.tweets-archive-page) {
+html.theme-dark body.tweets-page-body,
+html[data-theme="dark"] body.tweets-page-body {
   background:
     linear-gradient(90deg, rgba(29, 155, 240, 0.18) 0, rgba(29, 155, 240, 0.10) 18rem, rgba(11, 22, 32, 0.0) 45%),
     linear-gradient(270deg, rgba(29, 155, 240, 0.14) 0, rgba(29, 155, 240, 0.08) 18rem, rgba(11, 22, 32, 0.0) 45%),
@@ -468,8 +468,8 @@ html[data-theme="dark"] .tweets-controls {
   border-color: rgba(29, 155, 240, 0.18);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
-html.theme-dark body:has(.tweets-archive-page)::before,
-html[data-theme="dark"] body:has(.tweets-archive-page)::before {
+html.theme-dark body.tweets-page-body::before,
+html[data-theme="dark"] body.tweets-page-body::before {
   opacity: 0.35;
 }
 html.theme-dark .tweets-select,

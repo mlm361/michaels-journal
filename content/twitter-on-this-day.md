@@ -8,6 +8,7 @@ path = "on-this-day/tweets"
 no_kudos = true
 skip_feed = true
 extra_css = ["/css/tweets-on-this-day.css?v=20260522-dark-2"]
+body_class = "tweets-otd-page-body"
 +++
 
 Tweets from this date in years past, pulled from my preserved Twitter archive.

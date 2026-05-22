@@ -1,13 +1,13 @@
 /* Twitter On This Day page. Scoped to this utility page only. */
 
-body:has(.tweets-on-this-day-page) {
+body.tweets-otd-page-body {
   background:
     radial-gradient(circle at 15% 12%, rgba(64, 132, 126, 0.10), transparent 18rem),
     radial-gradient(circle at 86% 20%, rgba(178, 87, 62, 0.08), transparent 18rem),
     linear-gradient(180deg, rgba(248, 244, 231, 0.95), rgba(253, 251, 244, 0.96));
 }
 
-body:has(.tweets-on-this-day-page)::before {
+body.tweets-otd-page-body::before {
   content: "";
   position: fixed;
   inset: 0;
@@ -20,7 +20,7 @@ body:has(.tweets-on-this-day-page)::before {
   opacity: 0.92;
 }
 
-body:has(.tweets-on-this-day-page)::after {
+body.tweets-otd-page-body::after {
   content: "";
   position: fixed;
   inset: 0;
@@ -30,8 +30,8 @@ body:has(.tweets-on-this-day-page)::after {
   opacity: 0.88;
 }
 
-body:has(.tweets-on-this-day-page) > .tweets-on-this-day-page,
-body:has(.tweets-on-this-day-page) > .site-footer {
+body.tweets-otd-page-body > .tweets-on-this-day-page,
+body.tweets-otd-page-body > .site-footer {
   position: relative;
   z-index: 1;
 }
@@ -301,8 +301,8 @@ body:has(.tweets-on-this-day-page) > .site-footer {
 }
 
 @media (max-width: 760px) {
-  body:has(.tweets-on-this-day-page)::before,
-  body:has(.tweets-on-this-day-page)::after {
+  body.tweets-otd-page-body::before,
+  body.tweets-otd-page-body::after {
     opacity: 0.22;
   }
 
@@ -320,22 +320,22 @@ body:has(.tweets-on-this-day-page) > .site-footer {
   }
 }
 
-html.theme-dark body:has(.tweets-on-this-day-page),
-html[data-theme="dark"] body:has(.tweets-on-this-day-page) {
+html.theme-dark body.tweets-otd-page-body,
+html[data-theme="dark"] body.tweets-otd-page-body {
   background:
     radial-gradient(circle at 15% 12%, rgba(94, 126, 119, 0.24), transparent 18rem),
     radial-gradient(circle at 86% 20%, rgba(139, 105, 86, 0.16), transparent 18rem),
     linear-gradient(180deg, #0e1310, #171410);
 }
 
-html.theme-dark body:has(.tweets-on-this-day-page)::before,
-html[data-theme="dark"] body:has(.tweets-on-this-day-page)::before {
+html.theme-dark body.tweets-otd-page-body::before,
+html[data-theme="dark"] body.tweets-otd-page-body::before {
   filter: sepia(0.22) saturate(0.70) brightness(0.48);
   opacity: 0.54;
 }
 
-html.theme-dark body:has(.tweets-on-this-day-page)::after,
-html[data-theme="dark"] body:has(.tweets-on-this-day-page)::after {
+html.theme-dark body.tweets-otd-page-body::after,
+html[data-theme="dark"] body.tweets-otd-page-body::after {
   background: radial-gradient(ellipse at 50% 45%, rgba(18, 20, 16, 0.38), rgba(18, 20, 16, 0.18) 42%, transparent 72%);
   opacity: 0.82;
 }
@@ -376,13 +376,13 @@ html[data-theme="dark"] .tweets-otd-nav-link {
   color: #9fd3cd;
 }
 
-body:has(.tweets-on-this-day-page) #scrollToTop.scroll-to-top {
+body.tweets-otd-page-body #scrollToTop.scroll-to-top {
   left: auto !important;
   right: max(1rem, env(safe-area-inset-right)) !important;
 }
 
 @media (max-width: 560px) {
-  body:has(.tweets-on-this-day-page) #scrollToTop.scroll-to-top {
+  body.tweets-otd-page-body #scrollToTop.scroll-to-top {
     left: auto !important;
     right: 0.85rem !important;
   }
