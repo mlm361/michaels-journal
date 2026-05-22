@@ -130,7 +130,7 @@
 
     <div class="archive-filter">
       <label for="year-select">Jump to year:</label>
-      <select id="year-select" onchange="jumpToYear(this.value)">
+      <select id="year-select">
         <option value="">— All years —</option>
       </select>
     </div>
@@ -187,23 +187,31 @@
 
 <script>
 (function() {
-  var years = [];
-  document.querySelectorAll('.archive-year').forEach(function(el) {
-    years.push(el.id.replace('year-', ''));
-  });
-  var sel = document.getElementById('year-select');
-  years.forEach(function(y) {
-    var opt = document.createElement('option');
-    opt.value = y;
-    opt.textContent = y;
-    sel.appendChild(opt);
-  });
+  function init() {
+    var sel = document.getElementById('year-select');
+    if (!sel) return;
+    var sections = document.querySelectorAll('.archive-year');
+    if (sections.length === 0) return;
+    for (var i = 0; i < sections.length; i++) {
+      var y = sections[i].id.replace('year-', '');
+      if (!y) continue;
+      var opt = document.createElement('option');
+      opt.value = y;
+      opt.textContent = y;
+      sel.appendChild(opt);
+    }
+    sel.addEventListener('change', function() {
+      var y = this.value;
+      if (!y) return;
+      var el = document.getElementById('year-' + y);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 })();
-
-function jumpToYear(y) {
-  if (!y) return;
-  var el = document.getElementById('year-' + y);
-  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
 </script>
 {% endblock content %}
