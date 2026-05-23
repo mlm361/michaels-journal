@@ -6,6 +6,12 @@ description = "> **Why Gen X is the real loser generation** > Don’t cry for mi
 
 [taxonomies]
 tags = [ "family", "opinion", "retirement",]
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/116626255237385318"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mmkisstthn2j"
+sharkey = "https://mitchelltribe.rodeo/notes/ammhkpp20eb800qu"
+nostr = "https://jumble.social/nevent1qqs8czammveruh6uwvl5klm8qepm595xv3y3vla5gt8973a0pqru84spr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflc47zpne"
 +++
 
 <p class="p-summary mf2-hidden" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">&gt; **Why Gen X is the real loser generation** &gt; Don’t cry for millennials or Gen Z. Save your pity for those in their 50s &gt; &gt; Why Gen X is the real loser generation...</p>
