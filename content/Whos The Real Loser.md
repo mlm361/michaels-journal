@@ -1,0 +1,49 @@
++++
+title = "Who's the Real Loser?"
+date = "2026-05-23T18:30:00+00:00"
+draft = false
+description = "> **Why Gen X is the real loser generation** > Don’t cry for millennials or Gen Z. Save your pity for those in their 50s > > Why Gen X is the real loser generation..."
+
+[taxonomies]
+tags = [ "family", "opinion", "retirement",]
++++
+
+<p class="p-summary mf2-hidden" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">&gt; **Why Gen X is the real loser generation** &gt; Don’t cry for millennials or Gen Z. Save your pity for those in their 50s &gt; &gt; Why Gen X is the real loser generation...</p>
+
+> **[Why Gen X is the real loser generation](https://www.economist.com/finance-and-economics/2025/05/08/why-gen-x-is-the-real-loser-generation?utm_source=flipboard&utm_medium=activitypub)**
+> Don’t cry for millennials or Gen Z. Save your pity for those in their 50s
+>
+> Why Gen X is the real loser generation https://www.economist.com/finance-and-economics/2025/05/08/why-gen-x-is-the-real-loser-generation?utm_source=flipboard&utm_medium=activitypub Posted into Daily Reads @daily-reads-TheEconomist
+>
+> — **The Economist** (@TheEconomist@flipboard.com) on mastodon ([source](https://flipboard.com/@theeconomist/daily-reads-7c67adfnz/-/a-Lzin3-hWSTeYCwYYoTZGSQ%3Aa%3A3199507-%2F0))
+
+{% callout(type="tip") %}
+A nonpaywall archive link that works to the [whole article](https://archive.ph/CZqdN).
+{% end %}
+
+I am a Gen Xer, and I do not consider myself part of a loser generation.
+
+I do think my generation came up during a time when the family was under assault from companies, the economy, and a culture that made it harder and harder for one parent to stay home. I know my mother and father resisted that pressure for as long as they could.
+<!--more-->
+
+My mother was a stay-at-home mother for most of my childhood, and I am grateful for that. I also get to spend time with her now in her 70s, and I appreciate every bit of that time. My father worked and was the primary breadwinner for our household.
+
+But after I graduated, my parents took on two more mouths to feed. My aunt on my mom’s side died young, and her two kids, my cousins, were being raised by my maternal grandmother. When my grandmother died, my parents took over raising them. That, along with other factors, eventually led to my mom entering the workforce.
+
+So no, I do not think of Gen X as a loser generation.
+
+We saw the birth of some amazing things, and we helped bring some great inventions into the world that today’s generations benefit from. I guess every generation can claim that in some way, but we were there for the rise of the personal computer, mobile phones, the internet, and so much more.
+
+The things I do think Gen X lost out on were more serious. We saw the rise of latchkey kids. We saw families stretched thinner. And now, many of us are facing a retirement system that is much less secure than the one our parents expected.
+
+We will probably have to work longer. We have less retirement security because corporate pensions largely disappeared and were replaced by 401(k) plans that many employers under-fund. The responsibility shifted from companies to workers, and a lot of people were not prepared for that. Social Security in a death spiraled only expected to pay full benefits until 2033 right when I will be drawing on it. 
+
+The article argues that Gen X has had slower income growth than other generations at similar ages, and I believe that. Even now, I am making the most money I have ever made, yet it still does not feel like enough. My spending is not up. In fact, it is down. But the cost of everything keeps climbing, and it feels like we are always trying to catch up.
+
+So while I do not think my generation, or my siblings’ generation, are losers, I do think we have been more disadvantaged than people realize.
+
+Gen X is not the loser generation.
+
+We are a disadvantaged generation that has not been given the respect it deserves.
+
+And there is a big difference.
