@@ -1,17 +1,11 @@
 +++
 title = "Who's the Real Loser?"
-date = "2026-05-23T18:30:00+00:00"
+date = "2026-05-23T18:30:27+00:00"
 draft = false
 description = "> **Why Gen X is the real loser generation** > Don’t cry for millennials or Gen Z. Save your pity for those in their 50s > > Why Gen X is the real loser generation..."
 
 [taxonomies]
 tags = [ "family", "opinion", "retirement",]
-
-[extra.posse]
-mastodon = "https://mitchelltribe.social/@michael/116626255237385318"
-bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mmkisstthn2j"
-sharkey = "https://mitchelltribe.rodeo/notes/ammhkpp20eb800qu"
-nostr = "https://jumble.social/nevent1qqs8czammveruh6uwvl5klm8qepm595xv3y3vla5gt8973a0pqru84spr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflc47zpne"
 +++
 
 <p class="p-summary mf2-hidden" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">&gt; **Why Gen X is the real loser generation** &gt; Don’t cry for millennials or Gen Z. Save your pity for those in their 50s &gt; &gt; Why Gen X is the real loser generation...</p>
@@ -23,9 +17,10 @@ nostr = "https://jumble.social/nevent1qqs8czammveruh6uwvl5klm8qepm595xv3y3vla5gt
 >
 > — **The Economist** (@TheEconomist@flipboard.com) on mastodon ([source](https://flipboard.com/@theeconomist/daily-reads-7c67adfnz/-/a-Lzin3-hWSTeYCwYYoTZGSQ%3Aa%3A3199507-%2F0))
 
-{% callout(type="tip") %}
-A nonpaywall archive link that works to the [whole article](https://archive.ph/CZqdN).
-{% end %}
+<div style="border-left:4px solid #4CAF50;background:#E8F5E9;border-radius:4px;padding:12px 16px;margin:1.5em 0;">
+  <div style="font-weight:700;margin-bottom:6px;">💡 Tip</div>
+  <p>A nonpaywall archive link that works to the <a href="https://archive.ph/CZqdN">whole article</a>.</p>
+</div>
 
 I am a Gen Xer, and I do not consider myself part of a loser generation.
 
