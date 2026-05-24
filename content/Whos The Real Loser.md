@@ -19,7 +19,7 @@ nostr = "https://jumble.social/nevent1qqs9jm7td8z5y9j04q6e952at5xeq47620jvy7g60y
 > **[Why Gen X is the real loser generation](https://www.economist.com/finance-and-economics/2025/05/08/why-gen-x-is-the-real-loser-generation?utm_source=flipboard&utm_medium=activitypub)**
 > Don’t cry for millennials or Gen Z. Save your pity for those in their 50s
 >
-> Why Gen X is the real loser generation https://www.economist.com/finance-and-economics/2025/05/08/why-gen-x-is-the-real-loser-generation?utm_source=flipboard&utm_medium=activitypub Posted into Daily Reads @daily-reads-TheEconomist
+> Why Gen X is the real loser generation [https://www.economist.com/finance-and-economics/2025/05/08/why-gen-x-is-the-real-loser-generation?utm_source=flipboard&utm_medium=activitypub](https://www.economist.com/finance-and-economics/2025/05/08/why-gen-x-is-the-real-loser-generation?utm_source=flipboard&utm_medium=activitypub) Posted into Daily Reads @daily-reads-TheEconomist
 >
 > — **The Economist** (@TheEconomist@flipboard.com) on mastodon ([source](https://flipboard.com/@theeconomist/daily-reads-7c67adfnz/-/a-Lzin3-hWSTeYCwYYoTZGSQ%3Aa%3A3199507-%2F0))
 
