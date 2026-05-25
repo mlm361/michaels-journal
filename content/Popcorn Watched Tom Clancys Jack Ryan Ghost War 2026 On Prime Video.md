@@ -10,6 +10,12 @@ tags = [ "movies", "review",]
 [extra]
 image = "https://media.mitchelltribe.xyz/gallery/posts/tmdb_82eb480c6e11.avif"
 card_fit = "contain"
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/116636413323166733"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mmoz6435mz23"
+sharkey = "https://mitchelltribe.rodeo/notes/amp1uxk40eb800uh"
+nostr = "https://jumble.social/nevent1qqsgh3dtvjeslgx8pux9l5cdwj0mdy82f7pmky8nlem6slgy2tjs69qpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflctmqsyd"
 +++
 
 <p class="p-summary mf2-hidden" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">⚠️ **SPOILER WARNING:** MILD SPOILERS **My Rating:** ⭐⭐⭐½ (3.5/5 stars) I agree with the other reviews. I loved the whole cast. John Krasinski does a fantastic job as the lead, and he works well as a replacement for Harrison Ford in this...</p>
