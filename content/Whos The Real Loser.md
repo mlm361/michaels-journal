@@ -2,27 +2,21 @@
 title = "Who's the Real Loser?"
 date = "2026-05-23T18:30:27+00:00"
 draft = false
-description = "> **Why Gen X is the real loser generation** > Don’t cry for millennials or Gen Z. Save your pity for those in their 50s > > — @daily-reads-TheEconomist on mastodon via Daily Reads 💡 Tip A nonpaywall archive link that works to the whole..."
+description = "> **Why Gen X is the real loser generation** > Don’t cry for millennials or Gen Z. Save your pity for those in their 50s > > — @daily-reads-TheEconomist on mastodon via Daily Reads I am a Gen Xer, and I do not consider myself part of a..."
 
 [taxonomies]
-tags = [ "family", "opinion", "retirement",]
+tags = [ "opinion", "retirement", "family",]
 
 [extra]
-image = "https://media.mitchelltribe.xyz/gallery/posts/social-card-a9b5af55b2243111ac07.avif"
-
-[extra.posse]
-mastodon = "https://mitchelltribe.social/@michael/116626255237385318"
-bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mmklsco6242o"
-sharkey = "https://mitchelltribe.rodeo/notes/ammjhe370eb800qz"
-nostr = "https://jumble.social/nevent1qqs9jm7td8z5y9j04q6e952at5xeq47620jvy7g60ypuud6ezh97f0gpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcvsjf87"
+image = "https://media.mitchelltribe.xyz/gallery/posts/social-card-fe6e0eedc5a5508b3e1d.avif"
 +++
 
-<p class="p-summary mf2-hidden" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">&gt; **Why Gen X is the real loser generation** &gt; Don’t cry for millennials or Gen Z. Save your pity for those in their 50s &gt; &gt; — @daily-reads-TheEconomist on mastodon via Daily Reads 💡 Tip A nonpaywall archive link that works to the whole...</p>
+<p class="p-summary mf2-hidden" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">&gt; **Why Gen X is the real loser generation** &gt; Don’t cry for millennials or Gen Z. Save your pity for those in their 50s &gt; &gt; — @daily-reads-TheEconomist on mastodon via Daily Reads I am a Gen Xer, and I do not consider myself part of a...</p>
 
 
 
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
-<img src="https://media.mitchelltribe.xyz/gallery/posts/social-card-a9b5af55b2243111ac07.avif" alt="Why Gen X is the real loser generation" style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
+<img src="https://media.mitchelltribe.xyz/gallery/posts/social-card-fe6e0eedc5a5508b3e1d.avif" alt="Why Gen X is the real loser generation" style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
 </figure>
 
 
@@ -31,11 +25,6 @@ nostr = "https://jumble.social/nevent1qqs9jm7td8z5y9j04q6e952at5xeq47620jvy7g60y
 > Don’t cry for millennials or Gen Z. Save your pity for those in their 50s
 >
 > — @daily-reads-TheEconomist on mastodon via Daily Reads
-
-<div style="border-left:4px solid #4CAF50;background:#E8F5E9;border-radius:4px;padding:12px 16px;margin:1.5em 0;">
-  <div style="font-weight:700;margin-bottom:6px;">💡 Tip</div>
-  <p>A nonpaywall archive link that works to the <a href="https://archive.ph/CZqdN">whole article</a>.</p>
-</div>
 
 I am a Gen Xer, and I do not consider myself part of a loser generation.
 
