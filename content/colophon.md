@@ -76,7 +76,7 @@ The design is intentionally quiet. I want the writing and images to do most of t
 
 The layout stays simple: a readable column, light and dark themes, and semantic HTML. The goal is not to impress anyone with tricks. It is to make the site comfortable to read and easy to maintain, and it takes inspiration from Jim Mitchell's mnml for Micro.blog.
 
-The only three pages that differ from the rest of the site are my Twitter Archive page, my Tweets On This Day page, and my Privacy page. All are intentionally designed.
+The only four pages that differ from the rest of the site are my Twitter Archive page, my Tweets On This Day page, and my Privacy page. All are intentionally designed.
 
 Body text is set in Montserrat, and the post metadata line uses Raleway. I picked them because they work well together and, after a while, stopped seeing any reason to keep fussing with it.
 
@@ -84,7 +84,7 @@ Two details I am especially fond of are the rotating avatar in the corner and th
 
 ## Privacy
 
-There are no ads, no tracking pixels, and no social sharing widgets. I prefer a site that feels like a place to read, not a place to be measured. But there are plenty of interaction points, like a water cooler for civil, polite dialogue. 
+There are no ads, and no tracking pixels. I prefer a site that feels like a place to read, not a place to be measured. But there are plenty of interaction points, like a water cooler for civil, polite dialogue. 
 
 The only analytics I use are lightweight ones through Tinylytics. Cloudflare still sees request logs because it serves the site through its network, which is a normal part of using a CDN-backed hosting platform.
 
@@ -115,16 +115,18 @@ The validation links below point to live checks for HTML, CSS, feed output, and 
     <span>IndieWeb</span><strong>Ready</strong>
   </a>
 </div>
+
+
 ## Credits
 
 This site exists because of the work of other people whose tools made it possible.
 
-- Zola by Vincent Prouillet.
-- The Ergo theme by Andrew Plaza, which I have heavily customized.
-- webmention.io by Aaron Parecki.
-- Bridgy Fed by Ryan Barrett and Anuj Ahooja.
-- Cloudflare Pages for hosting and deployment.
-- The wider IndieWeb community for continuing to keep the small web alive.
-- AI, in the form of Claude Code and OpenAI's Codex, helps me maintain this site for full transparency, but does not publish any content that isn't made by me. They do theming, maintenance I may need, editing, and proofreading. But I can't stress this enough, they make no posts of their own. All posts are mine and mine alone. 
+* Zola by Vincent Prouillet.
+* The Ergo theme by Andrew Plaza, which I have heavily customized.
+* webmention.io by Aaron Parecki.
+* Bridgy Fed by Ryan Barrett and Anuj Ahooja.
+* Cloudflare Pages for hosting and deployment.
+* The wider IndieWeb community for continuing to keep the small web alive. Special mention goes to Manton Reece of Micro.blog and Vincent Ritter of Scribbles.page, whose IndieWeb principles helped guide the structure of this website.
+* AI, in the form of Claude Code and OpenAI's Codex, helps me maintain this site for full transparency, but it does not publish any content that is not made by me. These tools help with theming, maintenance, editing, and proofreading. But I cannot stress this enough: they make no posts of their own. All posts are mine and mine alone.
 
 </div>
