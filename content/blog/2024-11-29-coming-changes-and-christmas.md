@@ -8,7 +8,7 @@ exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2024/11/29/coming-changes-and-christmas/"
 +++
 
-<!-- /wp:paragraph --><div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdbl-it8IDVYxajh9esOYIBzx7Klea4p6agctIaazzpsLk1iiapChJBf3uzDfPgcLuU4W6runxlgjIcBFykStEYwlfcmODOJxfxR2de2sVdyUXyOGYLgi_vOt5oKDcHGnMOhQaDk8pz03GebHQgXIhi9tkFC8klIKfbLQ0qicgmwj7aqtnlitO/s300/pexels-photo-1656564-300x200.jpeg" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="320" data-original-height="200" data-original-width="300" src="https://media.mitchelltribe.xyz/gallery/imports/pexels-photo-1656564-300x200.avif"/></a></div>
+<!-- /wp:paragraph --><div class="separator" style="clear: both;"><a href="https://media.mitchelltribe.xyz/gallery/imports/6290db3ed8f26c90-pexels-photo-1656564-300x200.avif" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="320" data-original-height="200" data-original-width="300" src="https://media.mitchelltribe.xyz/gallery/imports/6290db3ed8f26c90-pexels-photo-1656564-300x200.avif"/></a></div>
 <!-- wp:paragraph -->
 <p>The 3 c's. I have my Christmas shopping done. I have all gifts bought and ready for the day. I had to decrease my spending this year, but hopefully everyone will understand. </p>
 <!-- /wp:paragraph -->

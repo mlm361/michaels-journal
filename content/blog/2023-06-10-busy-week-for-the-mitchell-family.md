@@ -10,7 +10,7 @@ source_url = "https://mlm361.micro.blog/2023/06/09/busy-week-for-the-mitchell/"
 
 <!-- Image 1 -->
 <div class="separator" style="clear: both; text-align: center;">
-  <img src="https://media.mitchelltribe.xyz/gallery/imports/pxl_20210131_170226727-scaled.avif" alt="" width="202" height="269" />
+  <img src="https://media.mitchelltribe.xyz/gallery/imports/834d9b1d25a8973c-pxl_20210131_170226727-scaled.avif" alt="" width="202" height="269" />
 </div>
 
 <!-- Paragraph 1 -->
@@ -21,19 +21,19 @@ source_url = "https://mlm361.micro.blog/2023/06/09/busy-week-for-the-mitchell/"
 
 <!-- Image 2 -->
 <div class="separator" style="clear: both; text-align: center;">
-  <img src="https://media.mitchelltribe.xyz/gallery/imports/mom_and_dad.avif" alt="Mom and Dad in 1990" width="285" height="204" />
+  <img src="https://media.mitchelltribe.xyz/gallery/imports/9407806977b99ff1-mom_and_dad.avif" alt="Mom and Dad in 1990" width="285" height="204" />
   <figcaption>Mom and Dad in 1990</figcaption>
 </div>
 
 <!-- Image 3 -->
 <div class="separator" style="clear: both; text-align: center;">
-  <img src="https://media.mitchelltribe.xyz/gallery/imports/img_1657.avif" alt="Landon last year at his High School Graduation" width="141" height="279" />
+  <img src="https://media.mitchelltribe.xyz/gallery/imports/2096a0f323b8dd52-img_1657.avif" alt="Landon last year at his High School Graduation" width="141" height="279" />
   <figcaption>Landon last year at his High School Graduation</figcaption>
 </div>
 
 <!-- Image 4 -->
 <div class="separator" style="clear: both; text-align: center;">
-  <img src="https://media.mitchelltribe.xyz/gallery/imports/grandma-opal-myrtle-mitchell.avif" alt="Grandma Mitchell unknown date" width="256" height="345" />
+  <img src="https://media.mitchelltribe.xyz/gallery/imports/551895a4b8f957e2-grandma-opal-myrtle-mitchell.avif" alt="Grandma Mitchell unknown date" width="256" height="345" />
   <figcaption>Grandma Mitchell unknown date</figcaption>
 </div>
 

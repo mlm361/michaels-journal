@@ -8,7 +8,7 @@ exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2023/12/28/microsoft-gaming-disappointment/"
 +++
 
-<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9YvE2S9liGig_r1MWU2mIrhiC_COKUU_vOf7-xNo6xG2Kda-DjXiZ2KVSrFafJ3T8YaaF3mIXbke76tJV9PYYrxCK01Tm0csY66m-r9C5oG4R97JcWoXUR1siX8YueM2GRokl1KGbU3LiOmXciy9q6KGsxMjB7fF3nnK9q6MfWEA8VyzIFXI3/s1880/xbox-xbox-one-microsoft-joystick-159369-1.jpeg" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="320" data-original-height="1253" data-original-width="1880" src="https://media.mitchelltribe.xyz/gallery/imports/xbox-xbox-one-microsoft-joystick-159369-1.avif"/></a></div>
+<div class="separator" style="clear: both;"><a href="https://media.mitchelltribe.xyz/gallery/imports/693ee73a24765959-xbox-xbox-one-microsoft-joystick-159369-1.avif" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="320" data-original-height="1253" data-original-width="1880" src="https://media.mitchelltribe.xyz/gallery/imports/693ee73a24765959-xbox-xbox-one-microsoft-joystick-159369-1.avif"/></a></div>
 <!-- wp:paragraph -->
 <p>I am disappointed with the direction Microsoft is taking with their gaming: A Review</p>
 <!-- /wp:paragraph -->

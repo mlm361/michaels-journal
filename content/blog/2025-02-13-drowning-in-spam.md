@@ -8,7 +8,7 @@ exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/02/13/drowning-in-spam/"
 +++
 
-<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhEbpSH6DLedHTrFc23kFKOa_uQg6Lz3Lj47ROke4VDP2XnvolZlHM71jpJP6JTKsdM0pNLHadaYNAkaDO9EnOnIUL94RsYvxT0HtnEauQN4BoKD23rbjbyAEIFI0oVQg7q1YcPpvVhxCNVJWMn9M2N9WYd5sMVPtmrnrD_KQxpHSGZlYMYsrnS/s1024/Dalle%20Spam%20image.jpg" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="320" data-original-height="1024" data-original-width="1024" src="https://media.mitchelltribe.xyz/gallery/imports/dalle-20spam-20image.avif"/></a></div>
+<div class="separator" style="clear: both;"><a href="https://media.mitchelltribe.xyz/gallery/imports/88340af189611178-dalle-spam-image.avif" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="320" data-original-height="1024" data-original-width="1024" src="https://media.mitchelltribe.xyz/gallery/imports/88340af189611178-dalle-spam-image.avif"/></a></div>
 <p>I've had a Hotmail account for nearly three decades, and for most of
 that time, I’ve also maintained a paid Exchange-hosted email tied to one
 of my domains. That Exchange service is set to expire in a couple of

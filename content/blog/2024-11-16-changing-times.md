@@ -8,7 +8,7 @@ exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2024/11/16/changing-times/"
 +++
 
-<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhcHvdYset4Pr2vmZORXKQNC5R6GY_Vg87NraxwTjEcGb3TqvueqDjMnyuIX7MM8cDc8WpNQhgN0NYnZETSmILt1T6Ojr34fTNZ_HSAA_U1S0b7Hl1nOTCy01wWRLSsl6VykNzTXWnKgnsjosgb6brsRv5aGKCYd2ZdbnNdBYtPrcis4VsT-s9h/s768/pexels-photo-4502492-768x512.jpeg" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="320" data-original-height="512" data-original-width="768" src="https://media.mitchelltribe.xyz/gallery/imports/pexels-photo-4502492-768x512.avif"/></a></div>
+<div class="separator" style="clear: both;"><a href="https://media.mitchelltribe.xyz/gallery/imports/a00cb67d1dcfaaa7-pexels-photo-4502492-768x512.avif" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="320" data-original-height="512" data-original-width="768" src="https://media.mitchelltribe.xyz/gallery/imports/a00cb67d1dcfaaa7-pexels-photo-4502492-768x512.avif"/></a></div>
 <!-- wp:paragraph -->
 <p>Times are indeed changing and so has my blog theme. I went with the newest from WordPress and it is clean. See you thought I was going to talk about the election. I will in the future....</p>
 <!-- /wp:paragraph -->

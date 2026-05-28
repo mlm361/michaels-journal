@@ -9,8 +9,8 @@ source_url = "https://mitchelltribe.com/2025/02/08/gadgets-data-and-doubt/"
 +++
 
 <div style="text-align: center;">
-  <a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhU5rgLl2OeEFMrCeQRPpuzF70SXQAagpmp6O8HPolnP-kZ5MplkkhHsSJ17dW7zWt14J7qCoeC7WgjXMSn4LocXFNfujKtbBgTUU0uJc0NJUMnZ7zrtWnE1gpF19f_uDEX9SiWqzp-DFaTW7-MLJ9bFNxXhyphenhyphenrk3neRnHGEqhR9PX8IvVmOKzwj/s2048/stitched_ring_watch.png">
-    <img src="https://media.mitchelltribe.xyz/gallery/imports/stitched_ring_watch.avif" width="300" height="300" alt="A silver ring is on the left, and a modern smartwatch with a minimalist design is on the right.">
+  <a href="https://media.mitchelltribe.xyz/gallery/imports/c08290e0f1627524-stitched_ring_watch.avif">
+    <img src="https://media.mitchelltribe.xyz/gallery/imports/c08290e0f1627524-stitched_ring_watch.avif" width="300" height="300" alt="A silver ring is on the left, and a modern smartwatch with a minimalist design is on the right.">
   </a>
 </div>
 
@@ -25,11 +25,11 @@ source_url = "https://mitchelltribe.com/2025/02/08/gadgets-data-and-doubt/"
 </ul>
 
 <div style="display: flex; justify-content: center; gap: 10px;">
-  <a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_nJH0ABGVaJT0inFHAmh7QayjN20-_TD15mYfkT1yT-WELhFtvPoI0UHLAtgxqpI21Q7brrHIQ22vd-X2J9ivBTKGXsotzBWfcR1ubUoqpF-bBuOPJLrXtRavWQNUY97GYPEI9VvMLMVFPcjmJUwEk4vuhRyFzl2NP7zA4pAKFIZUWCBnhw-2/s3120/Samsung%20Health1.jpg">
-    <img src="https://media.mitchelltribe.xyz/gallery/imports/samsung-20health1.avif" width="276" height="300" alt="A sleep tracking app displays a sleep score of 94, with detailed metrics on sleep time, physical recovery, restfulness, mental recovery, and sleep cycles.">
+  <a href="https://media.mitchelltribe.xyz/gallery/imports/70daa060416148ef-samsung-health1.avif">
+    <img src="https://media.mitchelltribe.xyz/gallery/imports/70daa060416148ef-samsung-health1.avif" width="276" height="300" alt="A sleep tracking app displays a sleep score of 94, with detailed metrics on sleep time, physical recovery, restfulness, mental recovery, and sleep cycles.">
   </a>
-  <a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9ZqK6A5o9Z_f4oiWwMNWwM5zp87zpWSDdQYVMguM8rl-I_iaZaNXRDVTX_IN2UqAEKcV0hqZebT6tl5m04fc-hcy2U5cUp-AA6GQCnmOaiL7mchAdXCez3hj9fQw6kHf6P2u9sviXiNjbIREal_esS6wSv0QVVVSGaAd_NBz1V0f8BsDg0WUN/s3120/Samsung%20Health%202.jpg">
-    <img src="https://media.mitchelltribe.xyz/gallery/imports/samsung-20health-202.avif" width="276" height="300" alt="A sleep tracking graph shows different sleep stages, including awake, REM, light, and deep sleep, with total durations for each stage.">
+  <a href="https://media.mitchelltribe.xyz/gallery/imports/a8d091b119645a93-samsung-health-2.avif">
+    <img src="https://media.mitchelltribe.xyz/gallery/imports/a8d091b119645a93-samsung-health-2.avif" width="276" height="300" alt="A sleep tracking graph shows different sleep stages, including awake, REM, light, and deep sleep, with total durations for each stage.">
   </a>
 </div>
 
@@ -38,11 +38,11 @@ source_url = "https://mitchelltribe.com/2025/02/08/gadgets-data-and-doubt/"
 </ul>
 
 <div style="display: flex; justify-content: center; gap: 10px;">
-  <a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgAwAFpfXh6GWe-4aLGQK7ieM8Q7ez2wwTryuXeSkFzf-8cdIKlmKmAP5V5VjE4C5SynjHTQVZUCYyIW8AjVrwNH7EwSbLA1UsVOwQfy2GXstPxtEo3i40jOn3qPS_R3521t2wy_5S9Ab2iCzUj1UZMKEcJSPBaJK_35wPR6FPjtyMfz2HU5cri/s3120/Oura%201.jpg">
-    <img src="https://media.mitchelltribe.xyz/gallery/imports/oura-201.avif" width="276" height="300" alt="Oura Ring sleep tracking metrics.">
+  <a href="https://media.mitchelltribe.xyz/gallery/imports/9708b54efb4e3a26-oura-1.avif">
+    <img src="https://media.mitchelltribe.xyz/gallery/imports/9708b54efb4e3a26-oura-1.avif" width="276" height="300" alt="Oura Ring sleep tracking metrics.">
   </a>
-  <a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgesTaaYuceneew5RWcfS9LjGUCKbgxFLRI0XaSkHVoAKHeCAebm1fFgRYtEQl7nWnCtYhXe6FN3kP5FRc4g3Oq549H96OPJndy9r2fIgox0RmdsDdNw5X18H5qEydStgWCZrHZ-DlSmNIByHnpioLNxl7xwwT10Eswt9lm4oo5HwsyaRtMI5G_/s3120/Oura%202.jpg">
-    <img src="https://media.mitchelltribe.xyz/gallery/imports/oura-202.avif" width="276" height="300" alt="Oura Ring sleep tracking graph.">
+  <a href="https://media.mitchelltribe.xyz/gallery/imports/fc6256a94373d500-oura-2.avif">
+    <img src="https://media.mitchelltribe.xyz/gallery/imports/fc6256a94373d500-oura-2.avif" width="276" height="300" alt="Oura Ring sleep tracking graph.">
   </a>
 </div>
 

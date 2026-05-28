@@ -11,8 +11,8 @@ source_url = "https://mlm361.micro.blog/2024/11/17/pihole-on-duty/"
 <div style="display: flex; align-items: flex-start; margin: 1em 0;">
   <!-- Image Section -->
   <div style="flex: 0 0 auto; margin-right: 1em; text-align: center;">
-    <a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMtdrBFXnXqpVLZvP1cjTKf-FJPkL_wPVErAsXA2QIPBcsIpWcOQAGc_dd6iTWUUnRFlVs_duqM4hNxfk84Zs1PVyJp5jXD8LmWrEcVuCUBv6-MhyphenhyphenJqxS0b1XdwLDn95TGq816zk_1m4n3hyCzdNXdOc9OAx5pYrCwaDhi82jxh29ZjX05ThIA/s1024/20241117_164641-768x1024.jpg">
-      <img alt="BeeStation, CGU and Raspberry Pi 5 in the Prionman 5" src="https://media.mitchelltribe.xyz/gallery/imports/20241117_164641-768x1024.avif" style="max-width: 100%; height: auto; border: 0;" />
+    <a href="https://media.mitchelltribe.xyz/gallery/imports/b45d89b2ddeab45a-20241117_164641-768x1024.avif">
+      <img alt="BeeStation, CGU and Raspberry Pi 5 in the Prionman 5" src="https://media.mitchelltribe.xyz/gallery/imports/b45d89b2ddeab45a-20241117_164641-768x1024.avif" style="max-width: 100%; height: auto; border: 0;" />
     </a>
     <p style="font-size: 0.8em; color: #777; margin-top: 0.5em;">BeeStation, CGU and Raspberry Pi 5 in the Prionman 5</p>
   </div>

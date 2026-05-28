@@ -8,7 +8,7 @@ exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2024/09/22/navigating-health-challenges-weight-loss/"
 +++
 
-<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjGPFAWSpp8tvsUzKN0R35Yrqh8WOQ05ahv0y6SDbHjzqjv2es7ogScmvLaYsrNIxbuqLltKXbyY2GL5xzz9OAQjFqKlgsFzYdGJD3vKtR6KVCVs3MvX043-3RWKCdNKsmB3RYOM3IeOFuplHzynBG1PmDc7_AdF2YJV4XZ_MKH-0J81j60gNQc/s4000/20240826_115834.jpg" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" height="320" data-original-height="4000" data-original-width="3000" src="https://media.mitchelltribe.xyz/gallery/imports/20240826_115834.avif"/></a></div>
+<div class="separator" style="clear: both;"><a href="https://media.mitchelltribe.xyz/gallery/imports/4f005dd8380b57e0-20240826_115834.avif" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" height="320" data-original-height="4000" data-original-width="3000" src="https://media.mitchelltribe.xyz/gallery/imports/4f005dd8380b57e0-20240826_115834.avif"/></a></div>
 <!-- wp:paragraph -->
 <p>Hello everyone. It has been a while since I posted an update and thought I would cover the end of August 2024 and September 2024. Health-wise, I have actually not been great. I started Mounjaro to help with some weight loss and diabetic control (even though my A1C is not too bad: 6.1 as of my last one). The Mounjaro has caused a lot of gastrointestinal issues for me and they have not stopped or lessened. Actually, with the increase of dose (currently on the 7.25mg) it has gotten worse. I have lost some weight, approximately 16 pounds, but I don't know if the side effects are worth it. Due to my obstructive Hypertrophic Cardiomyopathy and asthma, I can't exercise like someone without these conditions. I am hoping to hold out and finish the six doses I have left (possibly going to every other week) to help lessen the side effects. I would rather lose some weight, allow my stomach to contract, and hopefully keep off the weight with the smaller stomach. </p>
 <!-- /wp:paragraph -->
@@ -18,39 +18,39 @@ source_url = "https://mlm361.micro.blog/2024/09/22/navigating-health-challenges-
 <!-- /wp:paragraph -->
 <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
   <figure style="width: calc(33% - 10px); text-align: center;">
-    <img src="https://media.mitchelltribe.xyz/gallery/imports/2024-08-26-magic-kingdom-park-adventureland-1-1024x683.avif" alt="Adventureland 1" style="max-width: 100%; height: auto;">
+    <img src="https://media.mitchelltribe.xyz/gallery/imports/d5e8f00831a04095-2024-08-26-magic-kingdom-park-adventureland-1-1024x683.avif" alt="Adventureland 1" style="max-width: 100%; height: auto;">
     <figcaption>My Dad in the background, my niece (Alexus), my Mom with her bird friend, and me.</figcaption>
   </figure>
   <figure style="width: calc(33% - 10px); text-align: center;">
-    <img src="https://media.mitchelltribe.xyz/gallery/imports/2024-08-26-magic-kingdom-park-adventureland_3-1024x683.avif" alt="Adventureland 2" style="max-width: 100%; height: auto;">
+    <img src="https://media.mitchelltribe.xyz/gallery/imports/5582acf5e19c6d65-2024-08-26-magic-kingdom-park-adventureland_3-1024x683.avif" alt="Adventureland 2" style="max-width: 100%; height: auto;">
     <figcaption>Another picture of us in Adventureland.</figcaption>
   </figure>
   <figure style="width: calc(33% - 10px); text-align: center;">
-    <img src="https://media.mitchelltribe.xyz/gallery/imports/2024-08-26-magic-kingdom-park-haunted-mansion-683x1024.avif" alt="Haunted Mansion 1" style="max-width: 100%; height: auto;">
+    <img src="https://media.mitchelltribe.xyz/gallery/imports/ae6023ab5252f58c-2024-08-26-magic-kingdom-park-haunted-mansion-683x1024.avif" alt="Haunted Mansion 1" style="max-width: 100%; height: auto;">
     <figcaption>My Mom and me stopped in the Haunted Mansion.</figcaption>
   </figure>
   <figure style="width: calc(33% - 10px); text-align: center;">
-    <img src="https://media.mitchelltribe.xyz/gallery/imports/2024-08-26-magic-kingdom-park-haunted-mansion_2-683x1024.avif" alt="Haunted Mansion 2" style="max-width: 100%; height: auto;">
+    <img src="https://media.mitchelltribe.xyz/gallery/imports/29cef73dfda956e7-2024-08-26-magic-kingdom-park-haunted-mansion_2-683x1024.avif" alt="Haunted Mansion 2" style="max-width: 100%; height: auto;">
     <figcaption>Us again with a hitchhiker.</figcaption>
   </figure>
   <figure style="width: calc(33% - 10px); text-align: center;">
-    <img src="https://media.mitchelltribe.xyz/gallery/imports/2024-08-26-magic-kingdom-park-pirates-of-the-caribbean-1024x683.avif" alt="Pirates of the Caribbean" style="max-width: 100%; height: auto;">
+    <img src="https://media.mitchelltribe.xyz/gallery/imports/fdc82c90c2ed6d1a-2024-08-26-magic-kingdom-park-pirates-of-the-caribbean-1024x.avif" alt="Pirates of the Caribbean" style="max-width: 100%; height: auto;">
     <figcaption>Us on the Pirates of the Caribbean.</figcaption>
   </figure>
   <figure style="width: calc(33% - 10px); text-align: center;">
-    <img src="https://media.mitchelltribe.xyz/gallery/imports/2024-08-26-magic-kingdom-park-tron-lightcycle-run-1024x683.avif" alt="Tron 1" style="max-width: 100%; height: auto;">
+    <img src="https://media.mitchelltribe.xyz/gallery/imports/c9b4fc39fc1c5a77-2024-08-26-magic-kingdom-park-tron-lightcycle-run-1024x683.avif" alt="Tron 1" style="max-width: 100%; height: auto;">
     <figcaption>My Mom and me on Tron.</figcaption>
   </figure>
   <figure style="width: calc(33% - 10px); text-align: center;">
-    <img src="https://media.mitchelltribe.xyz/gallery/imports/2024-08-26-magic-kingdom-park-tron-lightcycle-run_2-1024x682.avif" alt="Tron 2" style="max-width: 100%; height: auto;">
+    <img src="https://media.mitchelltribe.xyz/gallery/imports/c9b4fc39fc1c5a77-2024-08-26-magic-kingdom-park-tron-lightcycle-run-1024x683.avif" alt="Tron 2" style="max-width: 100%; height: auto;">
     <figcaption>Another view of us on Tron.</figcaption>
   </figure>
   <figure style="width: calc(33% - 10px); text-align: center;">
-    <img src="https://media.mitchelltribe.xyz/gallery/imports/2024-08-27-epcot-france-at-epcot_2-1024x683.avif" alt="Epcot France 1" style="max-width: 100%; height: auto;">
+    <img src="https://media.mitchelltribe.xyz/gallery/imports/47c15d76506f8721-2024-08-27-epcot-france-at-epcot_2-1024x683.avif" alt="Epcot France 1" style="max-width: 100%; height: auto;">
     <figcaption>My Dad, Mom, and me in EPCOT in France.</figcaption>
   </figure>
   <figure style="width: calc(33% - 10px); text-align: center;">
-    <img src="https://media.mitchelltribe.xyz/gallery/imports/2024-08-27-epcot-france-at-epcot_4-683x1024.avif" alt="Epcot France 2" style="max-width: 100%; height: auto;">
+    <img src="https://media.mitchelltribe.xyz/gallery/imports/6678806769d61ea1-2024-08-27-epcot-france-at-epcot_4-683x1024.avif" alt="Epcot France 2" style="max-width: 100%; height: auto;">
     <figcaption>Another picture of us in France in EPCOT.</figcaption>
   </figure>
 </div>
