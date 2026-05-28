@@ -237,6 +237,7 @@
     {% endif %}
 
     {% set_global _card_img = "" %}
+    {% set_global _card_video = "" %}
     {% set_global _card_fit = page.extra.card_fit | default(value="cover") %}
     {% set_global _card_position = page.extra.card_position | default(value="center center") %}
     {% if page.extra.image %}
@@ -247,6 +248,18 @@
         {% set_global _card_img = config.base_url ~ _card_image_value %}
       {% endif %}
     {% else %}
+      {# Animated posts render their GIF as an AV1 <video>, so grab the clip first. #}
+      {% set _vid_parts = page.content | split(pat='<source') %}
+      {% if _vid_parts | length > 1 %}
+        {% set _vsrc_parts = _vid_parts[1] | split(pat='src="') %}
+        {% if _vsrc_parts | length > 1 %}
+          {% set _vraw = _vsrc_parts[1] | split(pat='"') | first %}
+          {% if _vraw | length > 5 %}
+            {% set_global _card_video = _vraw %}
+          {% endif %}
+        {% endif %}
+      {% endif %}
+      {% if not _card_video %}
       {% set _img_parts = page.content | split(pat='<img') %}
       {% if _img_parts | length > 1 %}
         {% set _src_parts = _img_parts[1] | split(pat='src="') %}
@@ -266,11 +279,18 @@
           {% endif %}
         {% endif %}
       {% endif %}
+      {% endif %}
     {% endif %}
 
     <article class="post-card">
       <div class="post-card-main">
-        {% if _card_img %}
+        {% if _card_video %}
+        <a href="{{ page.permalink }}" class="post-card-img-wrap">
+          <video class="post-card-img" autoplay loop muted playsinline preload="metadata" style="object-fit: {{ _card_fit }}; object-position: {{ _card_position }};">
+            <source src="{{ _card_video }}" type="video/mp4">
+          </video>
+        </a>
+        {% elif _card_img %}
         <a href="{{ page.permalink }}" class="post-card-img-wrap">
           <img src="{{ _card_img }}" alt="{% if is_untitled %}Untitled post from {{ page.date | date(format='%B %-d, %Y') }}{% else %}{{ raw_title }}{% endif %}" class="post-card-img" loading="lazy" style="object-fit: {{ _card_fit }}; object-position: {{ _card_position }};">
         </a>
