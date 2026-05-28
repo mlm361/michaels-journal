@@ -10,4 +10,4 @@ source_url = "https://mlm361.micro.blog/2019/09/01/hurricane-dorian/"
 
 Praying for all the people in the path of Dorian. Cat 5 Hurricane.<br />
 <div class="separator" style="clear: both; text-align: center;">
-<video autoplay loop muted playsinline preload="metadata" style="max-width:100%;height:auto;"><source src="https://media.mitchelltribe.xyz/gallery/imports/cbaf8bb343890eb1-hurrican-dorian-09012019.av1.mp4" type="video/mp4"></video></div>
+<video autoplay loop muted playsinline preload="metadata" style="max-width:100%;height:auto;"><source src="https://media.mitchelltribe.xyz/gallery/imports/cbaf8bb343890eb1-hurrican-dorian-09012019-av1.mp4" type="video/mp4"></video></div>
