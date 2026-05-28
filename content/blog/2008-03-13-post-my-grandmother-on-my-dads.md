@@ -1,0 +1,23 @@
++++
+date = "2008-03-13T23:27:00-04:00"
+draft = false
+
+[extra]
+exclude_from_feed = true
+source_url = "https://mlm361.micro.blog/2008/03/13/my-grandmother-on-my-dads/"
++++
+
+<div class="separator" style="clear: both; text-align: center;">
+  <a href="https://media.mitchelltribe.xyz/gallery/imports/585e9c0f0d0df3d0-grandma-opal-myrtle-mitchell-781202.avif">
+    <img alt="Grandmother Opal Myrtle Mitchell" border="0" height="320" src="https://media.mitchelltribe.xyz/gallery/imports/585e9c0f0d0df3d0-grandma-opal-myrtle-mitchell-781202.avif" width="238"/>
+  </a>
+</div>
+
+<br>
+<p>My Grandmother on my dad's side died on Sunday, March 9, 2008. She was my last surviving grandparent. The viewing is tomorrow, March 14, 2008 at 6PM for non-family and 5PM for family at the Garden of Memories in Tampa. The graveside funeral is Saturday, March 15, 2008 at 10AM with a wake at my parents' house following the service. Below is the obituary:</p>
+
+<br>
+
+<em><strong>Opal M. Mitchell<br />
+June 08, 1913 - March 09, 2008<br />
+MITCHELL, Opal M., 94, of Lakeland and Tampa, passed away on March 9, 2008. She was preceded in death by her husband, Harry L. Mitchell and a daughter, Alva Josephine Blair. She is survived by her daughters, Shirley Pipkins and Sandra Kelley; a son Steven; 20 grandchildren; 25 great grandchildren and numerous great-great grandchildren and a sister-in-law Louise Davis. Mrs. Mitchell was a Baptist by faith. Friends may visit at the Garden of Memories Funeral Home, Tampa, on Friday, March 14, 2008 from 6 to 8 PM. A graveside service will be held on Saturday at 10 AM at Myrtle Hill Memorial Park. Should friends desire, memorial contributions may be made in her memory to Good Shepherd Hospice, 105 Arneson Ave. Auburndale, FL 33823. Words of comfort may be expressed at <a href="http://www.gardenofmemoriestampa.com/" target="_blank">http://www.gardenofmemoriestampa.com</a></strong></em>

@@ -1,0 +1,11 @@
++++
+date = "2006-02-13T09:50:00-05:00"
+draft = false
+title = "A Picture Share!"
+
+[extra]
+exclude_from_feed = true
+source_url = "https://mlm361.micro.blog/2006/02/13/095000/"
++++
+
+<div class="separator" style="clear: both;"><a href="https://media.mitchelltribe.xyz/gallery/imports/e408eef47887de0d-unnamed-image-1-722108.avif" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" height="320" data-original-height="400" data-original-width="300" src="https://media.mitchelltribe.xyz/gallery/imports/e408eef47887de0d-unnamed-image-1-722108.avif"/></a></div><br>Just enter Georgia on I-95.</p>
