@@ -165,7 +165,7 @@
 
     const body = document.createElement('div');
     body.className = 'tweet-card-body';
-    body.innerHTML = linkify(t.text, t.urls);
+    body.innerHTML = linkify(stripMediaShortlinks(t.text, t.media), t.urls);
     card.appendChild(body);
 
     if (t.media.length > 0) {
@@ -279,6 +279,16 @@
 
   function isTwitterUrl(url) {
     return /^https?:\/\/(www\.|mobile\.)?(twitter\.com|x\.com|t\.co)(\/|$)/i.test(url || '');
+  }
+
+  // The bare t.co link Twitter appends for attached photos/videos is dead
+  // clutter now that the media is rendered inline, so drop it from the text.
+  function stripMediaShortlinks(text, media) {
+    let out = text || '';
+    for (const m of media || []) {
+      if (m && m.url) out = out.split(m.url).join('');
+    }
+    return out.replace(/[ \t]+\n/g, '\n').replace(/\s+$/, '');
   }
 
   function linkify(text, urlEntities) {

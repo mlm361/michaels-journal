@@ -127,6 +127,16 @@
     return /^https?:\/\/(www\.|mobile\.)?(twitter\.com|x\.com|t\.co)(\/|$)/i.test(url || '');
   }
 
+  // The bare t.co link Twitter appends for attached photos/videos is dead
+  // clutter now that the media is rendered inline, so drop it from the text.
+  function stripMediaShortlinks(text, media) {
+    let out = text || '';
+    for (const m of media || []) {
+      if (m && m.url) out = out.split(m.url).join('');
+    }
+    return out.replace(/[ \t]+\n/g, '\n').replace(/\s+$/, '');
+  }
+
   function linkify(text, urlEntities) {
     let html = escapeHtml(text);
     // Mentions and hashtags only resolve to Twitter/X, which no longer hosts
@@ -189,7 +199,7 @@
       typeIcon(tweet),
       '<time datetime="' + tweet.date.toISOString() + '">' + escapeHtml(dateDisplay(tweet.date)) + '</time>',
       '</header>',
-      '<div class="tweets-otd-body">' + linkify(tweet.text, tweet.urls) + '</div>',
+      '<div class="tweets-otd-body">' + linkify(stripMediaShortlinks(tweet.text, tweet.media), tweet.urls) + '</div>',
       mediaHtml(tweet),
       statsHtml(tweet),
       tweet.source ? '<div class="tweets-otd-summary">via ' + escapeHtml(tweet.source) + '</div>' : '',
