@@ -87,6 +87,12 @@
   font-weight: 800;
   margin-right: 0.25rem;
 }
+.archive-note-marker {
+  margin-right: 0.3rem;
+}
+.archive-key .archive-note-marker {
+  margin-right: 0;
+}
 .archive-key {
   display: flex;
   align-items: center;
@@ -140,7 +146,7 @@
         <option value="">— All years —</option>
       </select>
     </div>
-    <p class="archive-key"><span class="archive-untitled-marker" aria-hidden="true">✦</span><span>Untitled post</span></p>
+    <p class="archive-key"><span class="archive-untitled-marker" aria-hidden="true">✦</span><span>Untitled post</span><span class="archive-note-marker" aria-hidden="true">📝</span><span>Note</span></p>
 
     <div id="archive-list">
       {% set_global cur_year = "" %}
@@ -167,7 +173,7 @@
         {% endif %}
 
         <li class="archive-entry">
-          {% set is_note = (entry.extra.post_type is defined and entry.extra.post_type == "note") or (entry.extra.zola_content_type is defined and entry.extra.zola_content_type == "note") or (entry.extra.is_note is defined and entry.extra.is_note) %}
+          {% set is_note = (entry.extra.post_type is defined and entry.extra.post_type == "note") or (entry.extra.zola_content_type is defined and entry.extra.zola_content_type == "note") or (entry.extra.is_note is defined and entry.extra.is_note) or ("/notes/" in entry.permalink) %}
           {% set raw_title = entry.title | default(value="") | trim %}
           {% set is_placeholder_title = not raw_title or raw_title == "Untitled" or raw_title == "(No title)" %}
           {% if is_placeholder_title %}
@@ -180,7 +186,7 @@
             <time datetime="{{ entry.date | date(format='%Y-%m-%d') }}">{{ entry.date | date(format="%b %d") }}</time>
           </a>
           <a class="{% if is_placeholder_title %}archive-excerpt-link{% endif %}" href="{{ entry.permalink }}">
-            {% if is_placeholder_title and not is_note %}<span class="archive-untitled-marker" aria-hidden="true">✦</span><span class="sr-only">Untitled post: </span>{% endif %}{{ link_text }}
+            {% if is_note %}<span class="archive-note-marker" aria-hidden="true">📝</span><span class="sr-only">Note: </span>{% elif is_placeholder_title %}<span class="archive-untitled-marker" aria-hidden="true">✦</span><span class="sr-only">Untitled post: </span>{% endif %}{{ link_text }}
           </a>
           {% if is_note %}<span class="archive-note-tag">note</span>{% endif %}
         </li>
