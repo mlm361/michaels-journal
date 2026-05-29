@@ -260,6 +260,13 @@
         {% endif %}
       {% endif %}
       {% if not _card_video %}
+      {# real <video poster="..."> -> use the poster still as the card thumbnail #}
+      {% set _vp_parts = page.content | split(pat='poster="') %}
+      {% if _vp_parts | length > 1 %}
+        {% set _praw = _vp_parts[1] | split(pat='"') | first %}
+        {% if _praw | length > 5 %}{% set_global _card_img = _praw %}{% endif %}
+      {% endif %}
+      {% if not _card_img %}
       {% set _img_parts = page.content | split(pat='<img') %}
       {% if _img_parts | length > 1 %}
         {% set _src_parts = _img_parts[1] | split(pat='src="') %}
@@ -269,6 +276,7 @@
             {% set_global _card_img = _raw %}
           {% endif %}
         {% endif %}
+      {% endif %}
       {% endif %}
       {% if not _card_img %}
         {% set _yt_parts = page.content | split(pat='youtube.com/embed/') %}
