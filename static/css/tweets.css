@@ -332,8 +332,8 @@ body.tweets-page-body > .site-footer {
 .tweet-card-media video {
   width: 100%;
   height: auto;
-  max-height: 340px;
-  object-fit: cover;
+  max-height: 80vh;
+  object-fit: contain;
   border-radius: 8px;
   display: block;
   background: rgba(29, 155, 240, 0.06);

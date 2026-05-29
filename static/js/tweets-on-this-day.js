@@ -123,19 +123,24 @@
     return parts[parts.length - 1] || '';
   }
 
+  function isTwitterUrl(url) {
+    return /^https?:\/\/(www\.|mobile\.)?(twitter\.com|x\.com|t\.co)(\/|$)/i.test(url || '');
+  }
+
   function linkify(text, urlEntities) {
     let html = escapeHtml(text);
-    html = html.replace(/(^|[\s(])@(\w{1,15})/g, function (_m, lead, name) {
-      return lead + '<a href="https://twitter.com/' + name + '" rel="noopener noreferrer" target="_blank">@' + name + '</a>';
-    });
-    html = html.replace(/(^|[\s(])#(\w+)/g, function (_m, lead, tag) {
-      return lead + '<a href="https://twitter.com/hashtag/' + encodeURIComponent(tag) + '" rel="noopener noreferrer" target="_blank">#' + tag + '</a>';
-    });
+    // Mentions and hashtags only resolve to Twitter/X, which no longer hosts
+    // this account, so render them as plain text rather than dead links.
+    html = html.replace(/(^|[\s(])@(\w{1,15})/g, '$1@$2');
+    html = html.replace(/(^|[\s(])#(\w+)/g, '$1#$2');
     for (const u of urlEntities || []) {
       if (!u.url) continue;
       const display = escapeHtml(u.display_url || u.expanded_url || u.url);
-      const target = escapeHtml(u.expanded_url || u.url);
-      html = html.split(escapeHtml(u.url)).join('<a href="' + target + '" rel="noopener noreferrer" target="_blank">' + display + '</a>');
+      const target = u.expanded_url || u.url;
+      const replacement = isTwitterUrl(target)
+        ? display
+        : '<a href="' + escapeHtml(target) + '" rel="noopener noreferrer" target="_blank">' + display + '</a>';
+      html = html.split(escapeHtml(u.url)).join(replacement);
     }
     return html.replace(/\n/g, '<br>');
   }
@@ -178,12 +183,11 @@
   }
 
   function cardHtml(tweet) {
-    const url = 'https://twitter.com/' + HANDLE + '/status/' + tweet.id;
     return [
       '<article class="tweets-otd-card">',
       '<header class="tweets-otd-card-header">',
       typeIcon(tweet),
-      '<a href="' + url + '" rel="noopener noreferrer" target="_blank"><time datetime="' + tweet.date.toISOString() + '">' + escapeHtml(dateDisplay(tweet.date)) + '</time></a>',
+      '<time datetime="' + tweet.date.toISOString() + '">' + escapeHtml(dateDisplay(tweet.date)) + '</time>',
       '</header>',
       '<div class="tweets-otd-body">' + linkify(tweet.text, tweet.urls) + '</div>',
       mediaHtml(tweet),

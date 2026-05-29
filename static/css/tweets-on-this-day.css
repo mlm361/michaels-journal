@@ -227,14 +227,13 @@ body.tweets-otd-page-body > .site-footer {
   fill: currentColor;
 }
 
-.tweets-otd-card-header a {
+.tweets-otd-card-header time {
   margin-left: auto;
   color: #4f9c98;
   text-decoration: none;
   font-weight: 700;
 }
 
-.tweets-otd-card-header a:hover,
 .tweets-otd-body a:hover {
   text-decoration: underline;
 }
@@ -262,8 +261,8 @@ body.tweets-otd-page-body > .site-footer {
 .tweets-otd-media video {
   width: 100%;
   height: auto;
-  max-height: 320px;
-  object-fit: cover;
+  max-height: 80vh;
+  object-fit: contain;
   border-radius: 6px;
   background: rgba(64, 132, 126, 0.08);
 }

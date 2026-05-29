@@ -155,15 +155,10 @@
 
     const timeWrap = document.createElement('span');
     timeWrap.className = 'tweet-card-time';
-    const timeLink = document.createElement('a');
-    timeLink.href = 'https://twitter.com/' + HANDLE + '/status/' + t.id;
-    timeLink.rel = 'noopener noreferrer';
-    timeLink.target = '_blank';
     const time = document.createElement('time');
     time.dateTime = t.date.toISOString();
     time.textContent = formatDate(t.date);
-    timeLink.appendChild(time);
-    timeWrap.appendChild(timeLink);
+    timeWrap.appendChild(time);
     header.appendChild(timeWrap);
 
     card.appendChild(header);
@@ -282,21 +277,26 @@
     return parts[parts.length - 1] || '';
   }
 
+  function isTwitterUrl(url) {
+    return /^https?:\/\/(www\.|mobile\.)?(twitter\.com|x\.com|t\.co)(\/|$)/i.test(url || '');
+  }
+
   function linkify(text, urlEntities) {
     let html = escapeHtml(text);
-    html = html.replace(/(^|[\s(])@(\w{1,15})/g, function (_m, lead, name) {
-      return lead + '<a class="mention" href="https://twitter.com/' + name + '" rel="noopener noreferrer" target="_blank">@' + name + '</a>';
-    });
-    html = html.replace(/(^|[\s(])#(\w+)/g, function (_m, lead, tag) {
-      return lead + '<a class="hashtag" href="https://twitter.com/hashtag/' + encodeURIComponent(tag) + '" rel="noopener noreferrer" target="_blank">#' + tag + '</a>';
-    });
+    // Mentions and hashtags only resolve to Twitter/X, which no longer hosts
+    // this account, so render them as plain text rather than dead links.
+    html = html.replace(/(^|[\s(])@(\w{1,15})/g, '$1<span class="mention">@$2</span>');
+    html = html.replace(/(^|[\s(])#(\w+)/g, '$1<span class="hashtag">#$2</span>');
     if (Array.isArray(urlEntities)) {
       for (const u of urlEntities) {
         if (!u.url) continue;
         const escapedShort = escapeHtml(u.url);
         const display = escapeHtml(u.display_url || u.expanded_url || u.url);
-        const target = escapeHtml(u.expanded_url || u.url);
-        html = html.split(escapedShort).join('<a class="link" href="' + target + '" rel="noopener noreferrer" target="_blank">' + display + '</a>');
+        const target = u.expanded_url || u.url;
+        const replacement = isTwitterUrl(target)
+          ? '<span class="link">' + display + '</span>'
+          : '<a class="link" href="' + escapeHtml(target) + '" rel="noopener noreferrer" target="_blank">' + display + '</a>';
+        html = html.split(escapedShort).join(replacement);
       }
     }
     html = html.replace(/\n/g, '<br>');
