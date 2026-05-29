@@ -10,7 +10,7 @@ source_url = "https://mitchelltribe.com/2025/02/08/gadgets-data-and-doubt/"
 
 <div style="text-align: center;">
   <a href="https://media.mitchelltribe.xyz/gallery/imports/c08290e0f1627524-stitched_ring_watch.avif">
-    <img src="https://media.mitchelltribe.xyz/gallery/imports/c08290e0f1627524-stitched_ring_watch.avif" width="300" height="300" alt="A silver ring is on the left, and a modern smartwatch with a minimalist design is on the right.">
+    <img src="https://media.mitchelltribe.xyz/gallery/imports/c08290e0f1627524-stitched_ring_watch.avif" width="300" alt="A silver ring is on the left, and a modern smartwatch with a minimalist design is on the right." style="height:auto;max-width:100%;">
   </a>
 </div>
 
@@ -26,10 +26,10 @@ source_url = "https://mitchelltribe.com/2025/02/08/gadgets-data-and-doubt/"
 
 <div style="display: flex; justify-content: center; gap: 10px;">
   <a href="https://media.mitchelltribe.xyz/gallery/imports/70daa060416148ef-samsung-health1.avif">
-    <img src="https://media.mitchelltribe.xyz/gallery/imports/70daa060416148ef-samsung-health1.avif" width="276" height="300" alt="A sleep tracking app displays a sleep score of 94, with detailed metrics on sleep time, physical recovery, restfulness, mental recovery, and sleep cycles.">
+    <img src="https://media.mitchelltribe.xyz/gallery/imports/70daa060416148ef-samsung-health1.avif" width="276" alt="A sleep tracking app displays a sleep score of 94, with detailed metrics on sleep time, physical recovery, restfulness, mental recovery, and sleep cycles." style="height:auto;max-width:100%;">
   </a>
   <a href="https://media.mitchelltribe.xyz/gallery/imports/a8d091b119645a93-samsung-health-2.avif">
-    <img src="https://media.mitchelltribe.xyz/gallery/imports/a8d091b119645a93-samsung-health-2.avif" width="276" height="300" alt="A sleep tracking graph shows different sleep stages, including awake, REM, light, and deep sleep, with total durations for each stage.">
+    <img src="https://media.mitchelltribe.xyz/gallery/imports/a8d091b119645a93-samsung-health-2.avif" width="276" alt="A sleep tracking graph shows different sleep stages, including awake, REM, light, and deep sleep, with total durations for each stage." style="height:auto;max-width:100%;">
   </a>
 </div>
 
@@ -39,10 +39,10 @@ source_url = "https://mitchelltribe.com/2025/02/08/gadgets-data-and-doubt/"
 
 <div style="display: flex; justify-content: center; gap: 10px;">
   <a href="https://media.mitchelltribe.xyz/gallery/imports/9708b54efb4e3a26-oura-1.avif">
-    <img src="https://media.mitchelltribe.xyz/gallery/imports/9708b54efb4e3a26-oura-1.avif" width="276" height="300" alt="Oura Ring sleep tracking metrics.">
+    <img src="https://media.mitchelltribe.xyz/gallery/imports/9708b54efb4e3a26-oura-1.avif" width="276" alt="Oura Ring sleep tracking metrics." style="height:auto;max-width:100%;">
   </a>
   <a href="https://media.mitchelltribe.xyz/gallery/imports/fc6256a94373d500-oura-2.avif">
-    <img src="https://media.mitchelltribe.xyz/gallery/imports/fc6256a94373d500-oura-2.avif" width="276" height="300" alt="Oura Ring sleep tracking graph.">
+    <img src="https://media.mitchelltribe.xyz/gallery/imports/fc6256a94373d500-oura-2.avif" width="276" alt="Oura Ring sleep tracking graph." style="height:auto;max-width:100%;">
   </a>
 </div>
 
