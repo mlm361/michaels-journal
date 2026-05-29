@@ -400,5 +400,38 @@
             if (aboutImg) aboutImg.src = pick;
           })();
         </script>
+        <style>
+          .e-content img { cursor: zoom-in; }
+          .mr-lightbox { position: fixed; inset: 0; background: rgba(0,0,0,0.88); display: none; align-items: center; justify-content: center; z-index: 9999; padding: 2vh 2vw; }
+          .mr-lightbox.is-open { display: flex; }
+          .mr-lightbox img { max-width: 92vw; max-height: 86vh; object-fit: contain; border-radius: 6px; box-shadow: 0 6px 40px rgba(0,0,0,0.5); }
+          .mr-lightbox-close { position: fixed; top: 12px; right: 18px; font-size: 2.4rem; line-height: 1; color: #fff; background: none; border: 0; cursor: pointer; padding: 0.1rem 0.6rem; border-radius: 8px; }
+          .mr-lightbox-close:hover { background: rgba(255,255,255,0.15); }
+        </style>
+        <script>
+          (function () {
+            var content = document.querySelector('.e-content');
+            if (!content) return;
+            var IMG_RE = /\.(jpe?g|png|gif|avif|webp)(\?|$)/i;
+            var ov = document.createElement('div');
+            ov.className = 'mr-lightbox';
+            ov.setAttribute('aria-hidden', 'true');
+            ov.innerHTML = '<button class="mr-lightbox-close" aria-label="Close">&times;</button><img alt="">';
+            document.body.appendChild(ov);
+            var ovImg = ov.querySelector('img');
+            function open(src) { ovImg.src = src; ov.classList.add('is-open'); ov.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; }
+            function close() { ov.classList.remove('is-open'); ov.setAttribute('aria-hidden', 'true'); ovImg.src = ''; document.body.style.overflow = ''; }
+            content.addEventListener('click', function (e) {
+              var a = e.target.closest ? e.target.closest('a') : null;
+              var img = e.target.closest ? e.target.closest('img') : null;
+              var src = null;
+              if (a && IMG_RE.test(a.getAttribute('href') || '')) { src = a.href; }
+              else if (img) { var pa = img.closest('a'); src = (pa && IMG_RE.test(pa.getAttribute('href') || '')) ? pa.href : (img.currentSrc || img.src); }
+              if (src) { e.preventDefault(); open(src); }
+            });
+            ov.addEventListener('click', function (e) { if (e.target === ov || e.target.classList.contains('mr-lightbox-close')) close(); });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && ov.classList.contains('is-open')) close(); });
+          })();
+        </script>
     </body>
 </html>
