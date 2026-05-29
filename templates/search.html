@@ -107,12 +107,14 @@
       if (!doc) return;
       var title = doc.title || '';
       var isUntitled = !title || title === 'Untitled' || title === '(No title)' || title === '(Untitled)';
-      var label = isUntitled ? '✦ ' + (doc.description || 'Untitled post') : title;
+      var snippet = (doc.body || '').replace(/\s+/g, ' ').trim().slice(0, 140);
+      var label = isUntitled ? '✦ ' + (snippet || 'Untitled post') : title;
+      var href = doc.id || r.ref;
       var li = document.createElement('li');
       li.className = 'search-result';
       li.innerHTML =
-        '<a href="' + doc.url + '">' + label + '</a>' +
-        (doc.description ? '<p>' + doc.description + '</p>' : '');
+        '<a href="' + href + '">' + label + '</a>' +
+        (snippet ? '<p>' + snippet + '…</p>' : '');
       list.appendChild(li);
     });
   });
