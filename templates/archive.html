@@ -38,8 +38,8 @@
 }
 .archive-count {
   font-size: 0.6em;
-  font-weight: 400;
-  opacity: 0.55;
+  font-weight: 600;
+  opacity: 1;
   letter-spacing: 0;
 }
 .archive-month-list {
@@ -186,9 +186,9 @@
             <time datetime="{{ entry.date | date(format='%Y-%m-%d') }}">{{ entry.date | date(format="%b %d") }}</time>
           </a>
           <a class="{% if is_placeholder_title %}archive-excerpt-link{% endif %}" href="{{ entry.permalink }}">
-            {% if is_note %}<span class="archive-note-marker" aria-hidden="true">📝</span><span class="sr-only">Note: </span>{% elif is_placeholder_title %}<span class="archive-untitled-marker" aria-hidden="true">✦</span><span class="sr-only">Untitled post: </span>{% endif %}{{ link_text }}
+            {% if is_placeholder_title %}<span class="archive-untitled-marker" aria-hidden="true">✦</span><span class="sr-only">Untitled post: </span>{% elif is_note %}<span class="archive-note-marker" aria-hidden="true">📝</span><span class="sr-only">Note: </span>{% endif %}{{ link_text }}
           </a>
-          {% if is_note %}<span class="archive-note-tag">note</span>{% endif %}
+          {% if is_note and not is_placeholder_title %}<span class="archive-note-tag">note</span>{% endif %}
         </li>
 
       {% endfor %}
@@ -223,7 +223,8 @@
       if (!y) continue;
       var opt = document.createElement('option');
       opt.value = y;
-      opt.textContent = y;
+      var yc = sections[i].querySelectorAll('.archive-entry').length;
+      opt.textContent = y + ' (' + yc + ')';
       sel.appendChild(opt);
     }
     sel.addEventListener('change', function() {
