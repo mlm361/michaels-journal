@@ -238,6 +238,8 @@
 
     {% set_global _card_img = "" %}
     {% set_global _card_video = "" %}
+    {% set_global _card_videoframe = "" %}
+    {% set_global _card_poster = "" %}
     {% set_global _card_fit = page.extra.card_fit | default(value="cover") %}
     {% set_global _card_position = page.extra.card_position | default(value="center center") %}
     {% if page.extra.image %}
@@ -248,37 +250,44 @@
         {% set_global _card_img = config.base_url ~ _card_image_value %}
       {% endif %}
     {% else %}
-      {# Animated posts render their GIF as an AV1 <video>, so grab the clip first. #}
+      {# 1. Animated GIF -> AV1 clip (uses <source>): play it in the card. #}
       {% set _vid_parts = page.content | split(pat='<source') %}
       {% if _vid_parts | length > 1 %}
         {% set _vsrc_parts = _vid_parts[1] | split(pat='src="') %}
         {% if _vsrc_parts | length > 1 %}
           {% set _vraw = _vsrc_parts[1] | split(pat='"') | first %}
-          {% if _vraw | length > 5 %}
-            {% set_global _card_video = _vraw %}
-          {% endif %}
+          {% if _vraw | length > 5 %}{% set_global _card_video = _vraw %}{% endif %}
         {% endif %}
       {% endif %}
+      {# 2. Real <video src="...mp4">: static first-frame card (poster used if present, else preload=metadata shows frame 1 automatically). #}
       {% if not _card_video %}
-      {# real <video poster="..."> -> use the poster still as the card thumbnail #}
-      {% set _vp_parts = page.content | split(pat='poster="') %}
-      {% if _vp_parts | length > 1 %}
-        {% set _praw = _vp_parts[1] | split(pat='"') | first %}
-        {% if _praw | length > 5 %}{% set_global _card_img = _praw %}{% endif %}
-      {% endif %}
-      {% if not _card_img %}
-      {% set _img_parts = page.content | split(pat='<img') %}
-      {% if _img_parts | length > 1 %}
-        {% set _src_parts = _img_parts[1] | split(pat='src="') %}
-        {% if _src_parts | length > 1 %}
-          {% set _raw = _src_parts[1] | split(pat='"') | first %}
-          {% if _raw | length > 5 %}
-            {% set_global _card_img = _raw %}
+        {% set _vparts = page.content | split(pat='<video') %}
+        {% if _vparts | length > 1 %}
+          {% set _vs = _vparts[1] | split(pat='src="') %}
+          {% if _vs | length > 1 %}
+            {% set _vurl = _vs[1] | split(pat='"') | first %}
+            {% if _vurl | length > 5 %}{% set_global _card_videoframe = _vurl %}{% endif %}
+          {% endif %}
+          {% set _vpp = _vparts[1] | split(pat='poster="') %}
+          {% if _vpp | length > 1 %}
+            {% set _pp = _vpp[1] | split(pat='"') | first %}
+            {% if _pp | length > 5 %}{% set_global _card_poster = _pp %}{% endif %}
           {% endif %}
         {% endif %}
       {% endif %}
+      {# 3. First content image. #}
+      {% if not _card_video and not _card_videoframe %}
+        {% set _img_parts = page.content | split(pat='<img') %}
+        {% if _img_parts | length > 1 %}
+          {% set _src_parts = _img_parts[1] | split(pat='src="') %}
+          {% if _src_parts | length > 1 %}
+            {% set _raw = _src_parts[1] | split(pat='"') | first %}
+            {% if _raw | length > 5 %}{% set_global _card_img = _raw %}{% endif %}
+          {% endif %}
+        {% endif %}
       {% endif %}
-      {% if not _card_img %}
+      {# 4. YouTube embed thumbnail. #}
+      {% if not _card_video and not _card_videoframe and not _card_img %}
         {% set _yt_parts = page.content | split(pat='youtube.com/embed/') %}
         {% if _yt_parts | length > 1 %}
           {% set _yt_id = _yt_parts[1] | split(pat='"') | first | split(pat='?') | first %}
@@ -286,7 +295,6 @@
             {% set_global _card_img = "https://img.youtube.com/vi/" ~ _yt_id ~ "/mqdefault.jpg" %}
           {% endif %}
         {% endif %}
-      {% endif %}
       {% endif %}
     {% endif %}
 
@@ -296,6 +304,12 @@
         <a href="{{ page.permalink }}" class="post-card-img-wrap">
           <video class="post-card-img" autoplay loop muted playsinline preload="metadata" style="object-fit: {{ _card_fit }}; object-position: {{ _card_position }};">
             <source src="{{ _card_video }}" type="video/mp4">
+          </video>
+        </a>
+        {% elif _card_videoframe %}
+        <a href="{{ page.permalink }}" class="post-card-img-wrap">
+          <video class="post-card-img" muted playsinline preload="metadata"{% if _card_poster %} poster="{{ _card_poster }}"{% endif %} style="object-fit: {{ _card_fit }}; object-position: {{ _card_position }};">
+            <source src="{{ _card_videoframe }}" type="video/mp4">
           </video>
         </a>
         {% elif _card_img %}
