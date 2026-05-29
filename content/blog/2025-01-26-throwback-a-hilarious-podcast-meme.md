@@ -10,7 +10,7 @@ source_url = "https://mlm361.micro.blog/2025/01/26/throwback-a-hilarious-podcast
 
     This meme first appeared on Twitter a few years ago, and it had me laughing non-stop.
 </p>
-<object class="BLOG_video_class" contentid="b66f9911cbf7db3b" width="320" height="266" id="BLOG_video-b66f9911cbf7db3b" aria-label="Upload video" style="border: none; display: block; margin: 10px auto;"></object>
+<video src="https://media.mitchelltribe.xyz/gallery/imports/b6a37acdf91de892-jonathan-odgen-create-meme-video-av1.mp4" controls preload="metadata" style="max-width:100%;height:auto;"></video>
 <p style="color: #000000; text-align: left;">
     If you’ve ever listened to podcasts, you’ll appreciate the humor—it’s just too good to keep buried in the archives.
 </p>
