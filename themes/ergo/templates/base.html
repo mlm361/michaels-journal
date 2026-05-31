@@ -83,9 +83,9 @@
            keys are the at-URIs of the corresponding AT Protocol records. #}
         {% set sstd = load_data(path="data/standard_site.json", required=false) %}
         {% if sstd and sstd.publication %}
-        <link rel="site.standard.publication" href="{{ sstd.publication }}">
+        <link rel="site.standard.publication" href="{{ sstd.publication | safe }}">
         {% if sstd.documents and sstd.documents is containing(current_path) %}
-        <link rel="site.standard.document" href="{{ sstd.documents[current_path] }}">
+        <link rel="site.standard.document" href="{{ sstd.documents[current_path] | safe }}">
         {% endif %}
         {% endif %}
 
