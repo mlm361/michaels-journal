@@ -1,0 +1,49 @@
+name: Refresh standard.site map
+
+# Refreshes data/standard_site.json from Bridgy Fed's PDS once an hour
+# (and on manual demand). When the file changes, commits and pushes so
+# Cloudflare Pages rebuilds with the new map — that's how newly-bridged
+# posts pick up their <link rel="site.standard.document"> tag in
+# themes/ergo/templates/base.html.
+#
+# No secrets used. The fetcher hits public PDS endpoints; the commit
+# uses the default GITHUB_TOKEN with contents: write.
+
+on:
+  schedule:
+    - cron: '0 * * * *'   # hourly, on the hour
+  workflow_dispatch:        # manual button in the Actions tab for share-now urgency
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-standard-site
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Fetch standard.site records
+        run: python tools/fetch_standard_site.py
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- data/standard_site.json; then
+            echo "no changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/standard_site.json
+          git commit -m "Refresh standard.site map"
+          git push
