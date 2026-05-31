@@ -77,6 +77,18 @@
         <link rel="me" href="mailto:michael@michaelmitchell.email">
         <link rel="me" href="https://web.brid.gy/michaelreflects.com">
 
+        {# standard.site link tags — let Bluesky render enhanced cards for
+           michaelreflects.com posts. Map is built hourly by the
+           refresh-standard-site GitHub Action from Bridgy Fed's PDS;
+           keys are the at-URIs of the corresponding AT Protocol records. #}
+        {% set sstd = load_data(path="data/standard_site.json", required=false) %}
+        {% if sstd and sstd.publication %}
+        <link rel="site.standard.publication" href="{{ sstd.publication }}">
+        {% if sstd.documents and sstd.documents is containing(current_path) %}
+        <link rel="site.standard.document" href="{{ sstd.documents[current_path] }}">
+        {% endif %}
+        {% endif %}
+
         <style>
           .site-footer {
             margin-top: 4rem;
