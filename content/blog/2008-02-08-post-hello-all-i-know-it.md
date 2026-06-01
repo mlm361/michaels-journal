@@ -1,0 +1,10 @@
++++
+date = "2008-02-08T11:28:00-05:00"
+draft = false
+
+[extra]
+exclude_from_feed = true
+source_url = "https://mlm361.micro.blog/2008/02/08/hello-all-i-know-it/"
++++
+
+Hello all! I know it has been sometime since I updated you all on my blog. I am starting to enjoy my retirement. I think it grows proportionally to the fact I am finally starting to feel much better from my sinus surgery. <br />I had lunch with my good friends Linda and Heinz Asmuss the other day and we had a great time. Heinz and I worked at FHP together until he retired. <br />As far as my continuing plans going forward. I should be starting my Pharmacy Technician school in August. I have been trying to get just a small time no big deal part time job. However, with the economy the way it is. Not much luck. I may have to dig a little deeper into my retirement then I wanted. But, I have set a limit to which I will go no further. Plus if everything works out right in the end or close to it I will be able to regain what I take and then some. <br />Hopefully, I will be updating my website this weekend. Probably after Church on Sunday. I will let you all know.Hello all! I know it has been sometime since I updated you all on my blog. I am starting to enjoy my retirement. I think it grows proportionally to the fact I am finally starting to feel much better from my sinus surgery. <br />I had lunch with my good friends Linda and Heinz Asmuss the other day and we had a great time. Heinz and I worked at FHP together until he retired. <br />As far as my continuing plans going forward. I should be starting my Pharmacy Technician school in August. I have been trying to get just a small time no big deal part time job. However, with the economy the way it is. Not much luck. I may have to dig a little deeper into my retirement then I wanted. But, I have set a limit to which I will go no further. Plus if everything works out right in the end or close to it I will be able to regain what I take and then some. <br />Hopefully, I will be updating my website this weekend. Probably after Church on Sunday. I will let you all know.
