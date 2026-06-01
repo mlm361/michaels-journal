@@ -1,0 +1,11 @@
++++
+date = "2010-08-22T08:09:00-04:00"
+draft = false
+title = "Sorry I haven’t blogged in a log time."
+
+[extra]
+exclude_from_feed = true
+source_url = "https://mlm361.micro.blog/2010/08/22/sorry-i-havent-blogged-in/"
++++
+
+<p>Sorry I haven’t blogged in a log time. Been kind of busy with work. Never did I think retiring from one job and starting a new one in a new field would be so exhausting. Well, I am finally learning Microsoft Expressions Web. So, I am slowly and surely getting my old website back up into a new design and feel. It is still a work in progress and would like to know what you think of it. So, please stop by and take a look and let me know how it is going (<a href="https://mlm361.micro.blog">https://mlm361.micro.blog</a>).</p>  <p>Now about Facebook. I am thinking of quitting it. Nobody really contacts me on there. And all my old friends don’t seem interested in contacting me. So, it is just a thought. </p>  <p>As far as work is going I am on nights again. However, I have a schedule I really like. I work Monday night through Friday night and have Saturday and Sunday night off. My hours are pretty good too. In fact, they just changed last week and I really like the new hours 10PM-6:30 AM. I sleep pretty good, except when there is noise around the house. Well that’s about it for now. Hope everyone is doing great and would love to hear from everyone. Take care.</p>  <p>   <br />Quote of the Day:    <br />If you really want to do something, you will find a way. If you don't, you will find an excuse.    <br />--Anonymous    <br /></p>  <table border="1"><tbody>     <tr>       <td><b><a href="http://www.biblegateway.com/passage/?search=Romans+8%3A32&amp;version=NIV">Romans 8:32</a></b>“He who did not spare his own Son, but gave him up for us all—how will he not also, along with him, graciously give us all things?”          <br />          <br />Brought to you by <a href="http://www.biblegateway.com">BibleGateway.com</a>. Copyright (C) . All Rights Reserved.</td>     </tr>   </tbody></table><div class="wlWriterHeaderFooter" style="margin:0px; padding:0px 0px 0px 0px;"><br /><br /><script type="text/javascript"><br /></script><br /><script type="text/javascript" src="http://tweetmeme.com/i/scripts/button.js"></script></div>  
