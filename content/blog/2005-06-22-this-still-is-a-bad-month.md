@@ -1,0 +1,11 @@
++++
+date = "2005-06-22T00:02:00-04:00"
+draft = false
+title = "This still is a bad month!!!"
+
+[extra]
+exclude_from_feed = true
+source_url = "https://mlm361.micro.blog/2005/06/21/this-still-is-a-bad/"
++++
+
+I can not wait for this month to be over. I am sick and tired of all this bad news. Today, I wait all day for the Verizon worker to get to the house to install mine and my dad's new Fiber connection. We are supposed to get 2 separate connections. Well, the guy shows up at 4:30 PM and acts like he doesn't want to really install the fiber because it is going to take him at least to 7:00 to 8:00 PM. Second of all he tells me that he is going to only install 1 line. I tell him no he has a work order to install 2 separate lines. He tells me that this is impossible. They only dropped one line from the box to the house. So the house can only have 1 data line. I tell him nope that was not explained to us and we were getting two separate lines. So, I tell him to forget it. I call Verizon and they give me some lame excuse. So, I told them to cancel the order. They have me so mad right now. I am contemplating dropping them all together and just use my Sprint Cell phone all the time and getting cable for my internet access. This would save me alot of money.<br />Second thing that ticked me off today. I need to get a ultrasound of my liver so I call a couple of places. The first lady was extremely rude. I call another they were helpful, but ultimately I got sent to a voicemail. So, I leave a message and as of yet have not received a telephone call back. So, I am going to try Friday and if I don't get anyone. I am calling my doctor and tell his office to set it up.<br />Is everybody as tired of incompetency as me? I know that people do not know everything. If the don't know, just say it. If the don't know, but will check with somebody do it. When I am at work, I tell people straight out, Sir or ma'am, I don't know. But, I will check for you or you might check with so and so or even, I am sorry this is not going to help you, but I don't know and I don't want to give you any bad information.
