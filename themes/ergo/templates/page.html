@@ -94,6 +94,7 @@
       {% else %}
         {% set email_subject = "Re: " ~ raw_title %}
       {% endif %}
+      {% include "partials/post-share.html" %}
       {% include "partials/post-actions.html" %}
 
 

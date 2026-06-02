@@ -42,6 +42,7 @@
 
     {% set formatted_date = page.date | date(format='%Y-%m-%d') %}
     {% set email_subject = "Re: Note from " ~ formatted_date %}
+    {% include "partials/post-share.html" %}
     {% include "partials/post-actions.html" %}
     {% include "partials/webmentions.html" %}
   </article>
