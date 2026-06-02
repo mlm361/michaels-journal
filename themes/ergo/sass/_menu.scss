@@ -106,12 +106,12 @@
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 24px;
-  height: 18px;
+  width: 44px;
+  height: 44px;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0;
+  padding: 13px 10px;
   margin-left: auto;
   flex-shrink: 0;
 
@@ -129,7 +129,7 @@
   &.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1200px) {
   .top-nav-hamburger { display: flex; }
   .top-nav-brand { flex: 1; }
 
