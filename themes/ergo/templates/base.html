@@ -38,6 +38,40 @@
         <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% elif page.summary %}{{ page.summary | striptags | truncate(length=160) }}{% else %}{{ config.description }}{% endif %}">
         <meta name="twitter:image" content="{{ _meta_image }}">
 
+        {# JSON-LD BlogPosting for article pages. Mirrors page.html's
+           is_utility_page gate (skip About/Privacy/Archive). page.date is
+           emitted as RFC 3339 via %+. _meta_image was computed in the OG
+           block above. #}
+        {% set _is_utility = page.extra.no_kudos | default(value=false) %}
+        {% if page.title and not _is_utility and page.date %}
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": {{ page.title | json_encode | safe }},
+          "description": {% if page.description %}{{ page.description | json_encode | safe }}{% elif page.summary %}{{ page.summary | striptags | truncate(length=160) | json_encode | safe }}{% else %}{{ config.description | json_encode | safe }}{% endif %},
+          "image": {{ _meta_image | json_encode | safe }},
+          "datePublished": "{{ page.date | date(format='%+') }}",
+          "dateModified": "{{ page.updated | default(value=page.date) | date(format='%+') }}",
+          "url": {{ page.permalink | json_encode | safe }},
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": {{ page.permalink | json_encode | safe }}
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Michael Mitchell",
+            "url": {{ config.base_url | json_encode | safe }}
+          },
+          "publisher": {
+            "@type": "Person",
+            "name": "Michael Mitchell",
+            "url": {{ config.base_url | json_encode | safe }}
+          }
+        }
+        </script>
+        {% endif %}
+
         <!-- Enable responsiveness on mobile devices-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" >
 
