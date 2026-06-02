@@ -129,7 +129,7 @@
   &.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1200px), (hover: none) and (pointer: coarse) {
   .top-nav-hamburger { display: flex; }
   .top-nav-brand { flex: 1; }
 

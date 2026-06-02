@@ -197,7 +197,7 @@ tr {
     pointer-events: auto;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1200px), (hover: none) and (pointer: coarse) {
     .overlord { display: none; }
 }
 
