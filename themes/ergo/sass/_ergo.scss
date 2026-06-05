@@ -630,18 +630,15 @@ article .post-actions button.post-action,
 }
 
 // The native OS "Share" button (navigator.share) is a mobile convenience.
-// Keep it hidden by default and reveal it only on narrow touch viewports.
-// Pointer/hover alone is not enough: touch-capable desktops and hybrid devices
-// can report a coarse primary pointer and leak this button onto desktop.
+// Keep it hidden by default; JS reveals it only when the current browser
+// exposes the Web Share API in the compact share-row layout.
 article .post-actions button.post-action.post-action-share-native,
 .post-actions button.post-action.post-action-share-native {
   display: none !important;
 }
-@media (max-width: 760px) and (hover: none) and (pointer: coarse) {
-  article .post-actions button.post-action.post-action-share-native,
-  .post-actions button.post-action.post-action-share-native {
-    display: inline-flex !important;
-  }
+article .post-actions button.post-action.post-action-share-native.is-available,
+.post-actions button.post-action.post-action-share-native.is-available {
+  display: inline-flex !important;
 }
 
 article .post-actions .post-action-icon,
