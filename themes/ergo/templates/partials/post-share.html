@@ -37,7 +37,6 @@
 
     <button class="post-action post-action-share-native"
             type="button"
-            hidden
             data-share-url="{{ share_url }}"
             data-share-title="{{ share_title }}">
       📤 Share
@@ -61,15 +60,12 @@
       });
     }
 
-    // Native OS share sheet — only expose it where it actually works (touch /
-    // mobile). Firefox desktop exposes navigator.share but it frequently
-    // no-ops, which previously left a visible-but-dead "Share" button. Desktop
-    // is fully covered by Copy link / Bluesky / Email.
+    // Native OS share sheet. Visibility is handled entirely by CSS (touch
+    // devices only — see .post-action-share-native), because Firefox desktop
+    // exposes a non-functional navigator.share. JS only wires the click
+    // handler; it never controls whether the button is shown.
     var nativeBtn = document.querySelector('.post-action-share-native');
-    var supportsShare = typeof navigator.share === 'function';
-    var coarsePointer = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
-    if (nativeBtn && supportsShare && coarsePointer) {
-      nativeBtn.hidden = false;
+    if (nativeBtn && typeof navigator.share === 'function') {
       nativeBtn.addEventListener('click', function () {
         navigator.share({
           title: nativeBtn.dataset.shareTitle,

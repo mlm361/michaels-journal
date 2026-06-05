@@ -629,14 +629,23 @@ article .post-actions button.post-action,
   transition: opacity 0.15s;
 }
 
-// The high-specificity .post-action display rule above (0,2,2) overrides the
-// browser's [hidden] { display:none } (0,1,0), which left the JS-controlled
-// native "Share" button visible-but-dead on desktop. Restore [hidden] so the
-// button can actually stay hidden until JS un-hides it on supported (touch)
-// devices.
-article .post-actions .post-action[hidden],
-.post-actions .post-action[hidden] {
+// The native OS "Share" button (navigator.share) only works on real touch
+// devices; Firefox desktop exposes a non-functional navigator.share. Control
+// its visibility with PURE CSS (not the JS-toggled [hidden] attribute, which
+// the high-specificity .post-action display rule above defeated and which JS
+// could un-hide on a desktop that reports a coarse pointer). Hidden by default
+// everywhere; revealed only where the primary input is touch (no hover +
+// coarse pointer) — a mouse desktop always reports hover: hover, so it never
+// shows there.
+article .post-actions .post-action-share-native,
+.post-actions .post-action-share-native {
   display: none !important;
+}
+@media (hover: none) and (pointer: coarse) {
+  article .post-actions .post-action-share-native,
+  .post-actions .post-action-share-native {
+    display: inline-flex !important;
+  }
 }
 
 article .post-actions .post-action-icon,
