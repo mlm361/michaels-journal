@@ -629,6 +629,16 @@ article .post-actions button.post-action,
   transition: opacity 0.15s;
 }
 
+// The high-specificity .post-action display rule above (0,2,2) overrides the
+// browser's [hidden] { display:none } (0,1,0), which left the JS-controlled
+// native "Share" button visible-but-dead on desktop. Restore [hidden] so the
+// button can actually stay hidden until JS un-hides it on supported (touch)
+// devices.
+article .post-actions .post-action[hidden],
+.post-actions .post-action[hidden] {
+  display: none !important;
+}
+
 article .post-actions .post-action-icon,
 .post-actions .post-action-icon {
   display: inline-flex;
