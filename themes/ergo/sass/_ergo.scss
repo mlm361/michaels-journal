@@ -633,13 +633,13 @@ article .post-actions button.post-action,
 // Keep it hidden by default and reveal it only on narrow touch viewports.
 // Pointer/hover alone is not enough: touch-capable desktops and hybrid devices
 // can report a coarse primary pointer and leak this button onto desktop.
-article .post-actions .post-action-share-native,
-.post-actions .post-action-share-native {
+article .post-actions button.post-action.post-action-share-native,
+.post-actions button.post-action.post-action-share-native {
   display: none !important;
 }
 @media (max-width: 760px) and (hover: none) and (pointer: coarse) {
-  article .post-actions .post-action-share-native,
-  .post-actions .post-action-share-native {
+  article .post-actions button.post-action.post-action-share-native,
+  .post-actions button.post-action.post-action-share-native {
     display: inline-flex !important;
   }
 }
