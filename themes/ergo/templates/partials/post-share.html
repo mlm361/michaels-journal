@@ -60,10 +60,9 @@
       });
     }
 
-    // Native OS share sheet. Visibility is handled entirely by CSS (touch
-    // devices only — see .post-action-share-native), because Firefox desktop
-    // exposes a non-functional navigator.share. JS only wires the click
-    // handler; it never controls whether the button is shown.
+    // Native OS share sheet. Visibility is handled entirely by CSS (narrow
+    // touch viewports only — see .post-action-share-native). JS only wires the
+    // click handler; it never controls whether the button is shown.
     var nativeBtn = document.querySelector('.post-action-share-native');
     if (nativeBtn && typeof navigator.share === 'function') {
       nativeBtn.addEventListener('click', function () {

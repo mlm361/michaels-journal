@@ -629,19 +629,15 @@ article .post-actions button.post-action,
   transition: opacity 0.15s;
 }
 
-// The native OS "Share" button (navigator.share) only works on real touch
-// devices; Firefox desktop exposes a non-functional navigator.share. Control
-// its visibility with PURE CSS (not the JS-toggled [hidden] attribute, which
-// the high-specificity .post-action display rule above defeated and which JS
-// could un-hide on a desktop that reports a coarse pointer). Hidden by default
-// everywhere; revealed only where the primary input is touch (no hover +
-// coarse pointer) — a mouse desktop always reports hover: hover, so it never
-// shows there.
+// The native OS "Share" button (navigator.share) is a mobile convenience.
+// Keep it hidden by default and reveal it only on narrow touch viewports.
+// Pointer/hover alone is not enough: touch-capable desktops and hybrid devices
+// can report a coarse primary pointer and leak this button onto desktop.
 article .post-actions .post-action-share-native,
 .post-actions .post-action-share-native {
   display: none !important;
 }
-@media (hover: none) and (pointer: coarse) {
+@media (max-width: 760px) and (hover: none) and (pointer: coarse) {
   article .post-actions .post-action-share-native,
   .post-actions .post-action-share-native {
     display: inline-flex !important;
