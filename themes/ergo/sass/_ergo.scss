@@ -646,6 +646,13 @@ article .post-actions .post-action-icon img,
   object-fit: contain;
 }
 
+article .post-actions .post-action-icon svg,
+.post-actions .post-action-icon svg {
+  display: block;
+  width: 1em;
+  height: 1em;
+}
+
 article .post-actions .post-action:hover,
 article .post-actions .post-action:focus-visible,
 .post-actions .post-action:hover,
