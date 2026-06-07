@@ -6,6 +6,12 @@ description = "> **Star Trek: Outposts Unknown - Official Announcement Trailer -
 
 [extra]
 image = "https://media.mitchelltribe.xyz/gallery/posts/social-card-cd90f60c6c5594f3aa5b.avif"
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/116711198127734526"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mnq7wdd6dv2a"
+sharkey = "https://mitchelltribe.rodeo/notes/an7x980ywutn00k7"
+nostr = "https://jumble.social/nevent1qqs927plzulkxl2dpepwf4ej4vsv4g0hd4rhda4au0vja8e62akkxgcpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcj07z4f"
 +++
 
 <p class="p-summary mf2-hidden" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">&gt; **Star Trek: Outposts Unknown - Official Announcement Trailer - IGN** &gt; To boldly go… and build in Star Trek: Outposts Unknown. Check out the Star Trek: Outposts Unknown announcement trailer for this upcoming narrative-driven outpost...</p>
