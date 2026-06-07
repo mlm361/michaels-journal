@@ -1,17 +1,14 @@
 +++
 title = "Star Trek: Outposts Unknown PC Game"
-date = "2026-06-07T22:27:28+00:00"
-draft = true
+date = "2026-06-07T18:32:29+00:00"
+draft = false
 description = "> **Star Trek: Outposts Unknown - Official Announcement Trailer - IGN** > To boldly go… and build in Star Trek: Outposts Unknown. Check out the Star Trek: Outposts Unknown announcement trailer for this upcoming narrative-driven outpost..."
 
-[extra]
-image = "https://media.mitchelltribe.xyz/gallery/posts/social-card-cd90f60c6c5594f3aa5b.avif"
+[taxonomies]
+tags = [ "opinion", "gaming", "Star Trek",]
 
-[extra.posse]
-mastodon = "https://mitchelltribe.social/@michael/116711198127734526"
-bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mnq7wdd6dv2a"
-sharkey = "https://mitchelltribe.rodeo/notes/an7x980ywutn00k7"
-nostr = "https://jumble.social/nevent1qqs927plzulkxl2dpepwf4ej4vsv4g0hd4rhda4au0vja8e62akkxgcpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcj07z4f"
+[extra]
+image = "https://media.mitchelltribe.xyz/gallery/posts/social-card-83d91082c8294ec7e1e4.avif"
 +++
 
 <p class="p-summary mf2-hidden" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">&gt; **Star Trek: Outposts Unknown - Official Announcement Trailer - IGN** &gt; To boldly go… and build in Star Trek: Outposts Unknown. Check out the Star Trek: Outposts Unknown announcement trailer for this upcoming narrative-driven outpost...</p>
@@ -19,7 +16,7 @@ nostr = "https://jumble.social/nevent1qqs927plzulkxl2dpepwf4ej4vsv4g0hd4rhda4au0
 
 
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
-<img src="https://media.mitchelltribe.xyz/gallery/posts/social-card-cd90f60c6c5594f3aa5b.avif" alt="Star Trek: Outposts Unknown - Official Announcement Trailer - IGN" style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
+<img src="https://media.mitchelltribe.xyz/gallery/posts/social-card-83d91082c8294ec7e1e4.avif" alt="Star Trek: Outposts Unknown - Official Announcement Trailer - IGN" style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
 </figure>
 
 
