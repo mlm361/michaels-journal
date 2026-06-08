@@ -9,6 +9,12 @@ tags = [ "opinion", "gaming", "Star Trek",]
 
 [extra]
 image = "https://media.mitchelltribe.xyz/gallery/posts/social-card-83d91082c8294ec7e1e4.avif"
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/116711198127734526"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mnqfqle2l62v"
+sharkey = "https://mitchelltribe.rodeo/notes/an7x980ywutn00k7"
+nostr = "https://jumble.social/nevent1qqsdt26urja2dk8cs8l6lryppcw5mls3z4xazahh8f6k0e0ahj746tcpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflc2n4m8r"
 +++
 
 <p class="p-summary mf2-hidden" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">&gt; **Star Trek: Outposts Unknown - Official Announcement Trailer - IGN** &gt; To boldly go… and build in Star Trek: Outposts Unknown. Check out the Star Trek: Outposts Unknown announcement trailer for this upcoming narrative-driven outpost...</p>
