@@ -9,6 +9,12 @@ tags = [ "opinion", "retirement", "family",]
 
 [extra]
 image = "https://media.mitchelltribe.xyz/gallery/posts/social-card-fe6e0eedc5a5508b3e1d.avif"
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/116626255237385318"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mmpto5t6hy2p"
+sharkey = "https://mitchelltribe.rodeo/notes/ammjhe370eb800qz"
+nostr = "https://jumble.social/nevent1qqs09g6ucy8dcczxvq7fqyavp2988aew3074c0kx5f9veys5jyr0x9spr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcl7l0tn"
 +++
 
 <p class="p-summary mf2-hidden" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">&gt; **Why Gen X is the real loser generation** &gt; Don’t cry for millennials or Gen Z. Save your pity for those in their 50s &gt; &gt; — @daily-reads-TheEconomist on mastodon via Daily Reads I am a Gen Xer, and I do not consider myself part of a...</p>
