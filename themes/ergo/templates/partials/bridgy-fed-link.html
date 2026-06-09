@@ -1,0 +1,7 @@
+{# Hidden Bridgy Fed trigger link. Bridgy requires the source post to link to
+   https://fed.brid.gy/ before it will accept a webmention for that post. With
+   this link present inside the post h-entry, Blog Poster can send Bridgy a
+   webmention on publish (target https://fed.brid.gy/) so new posts bridge to
+   the fediverse and Bluesky in seconds instead of waiting for Bridgy's passive
+   Atom-feed poll. Scoped to real posts only; never on utility pages. #}
+<a class="u-bridgy-fed" href="https://fed.brid.gy/" hidden="from-humans"></a>

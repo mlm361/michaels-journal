@@ -103,6 +103,8 @@
       {% endif %}
 
       {% endblock post %}
+
+  {% if not is_utility_page %}{% include "partials/bridgy-fed-link.html" %}{% endif %}
   </article>
 </section>
 
