@@ -104,7 +104,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       const timeEl = doc.querySelector('time.dt-published[datetime], time[datetime]');
       const dt     = timeEl ? timeEl.getAttribute('datetime') : null;
       const dateObj = dt ? new Date(dt) : null;
-      const titleEl = doc.querySelector('.article_title a, h1 a, h1, .p-name');
+      const titleEl = Array.from(doc.querySelectorAll('.article_title a, h1 a, h1, .p-name'))
+        .find(el => !el.classList.contains('mf2-hidden') && !el.closest('.mf2-hidden'));
       const rawTitle = (item.title || (titleEl ? titleEl.textContent : '') || '').trim();
       const title = isPlaceholderTitle(rawTitle) ? '' : rawTitle;
 
