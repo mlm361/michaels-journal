@@ -4,7 +4,6 @@
 /.well-known/host-meta* https://fed.brid.gy/.well-known/host-meta:splat 302
 /.well-known/webfinger* https://fed.brid.gy/.well-known/webfinger:splat 302
 /.well-known/atproto-did https://fed.brid.gy/.well-known/atproto-did?protocol=web&id=michaelreflects.com 302
-/.well-known/site.standard.publication https://fed.brid.gy/.well-known/site.standard.publication?protocol=web&domain=michaelreflects.com 302
 
 # Titleless post note-section repair redirects (2026-06-11)
 /notes/note-07a73c9c3/ /blog/post-i-came-across-this-hilarious-1171/ 301
