@@ -334,7 +334,7 @@
         <span class="post-card-date">{{ page.date | date(format="%B %-d, %Y") }}</span>
         {% if page.taxonomies.tags %}
         {% for tag in page.taxonomies.tags | slice(end=3) %}
-        <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}" class="post-tag">#{{ tag }}</a>
+        <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}" class="post-tag p-category">#{{ tag }}</a>
         {% endfor %}
         {% endif %}
         <a class="post-card-read-more" href="{{ page.permalink }}">{% if is_untitled %}View Entry{% else %}Continue Reading →{% endif %}</a>

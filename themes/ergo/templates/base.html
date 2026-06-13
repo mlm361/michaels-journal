@@ -127,6 +127,11 @@
         {% endif %}
 
         <style>
+          /* Hidden microformat metadata (e.g. the representative h-card
+             u-url): rendered for parsers but off-screen. Defined globally
+             here so it applies to the homepage footer h-card too, not just
+             the post pages that declare it inline. */
+          .mf2-hidden { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
           .site-footer {
             margin-top: 4rem;
             padding: 2.5rem 1.25rem 2rem;
@@ -336,9 +341,10 @@
           </svg>
         </button>
 
-        <footer class="site-footer">
+        <footer class="site-footer h-card">
 
-            <p class="footer-line">© 2001–<span id="currentYear"></span> Michael Mitchell</p>
+            <p class="footer-line">© 2001–<span id="currentYear"></span> <span class="p-name">Michael Mitchell</span></p>
+            <a class="u-url u-uid mf2-hidden" rel="me" href="{{ config.base_url | safe }}/">Michael Mitchell</a>
 
             <p class="footer-social-heading">Social Links</p>
             <div id="social_links">
