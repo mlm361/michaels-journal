@@ -7,6 +7,11 @@ description = "This was hilarious https://www.youtube.com/watch?v=__bvWU_mzEY"
 [taxonomies]
 tags = [ "entertainment",]
 
+[extra]
+post_type = "note"
+zola_content_type = "note"
+is_note = true
+
 [extra.sticky_note]
 enabled = true
 active = true
