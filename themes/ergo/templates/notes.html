@@ -149,7 +149,7 @@
       </div>
     </article>
   {% endfor %}
-  {% if not has_notes %}
+  {% if not has_notes and not has_pinned_notes %}
     <article class="note-item">
       <div class="note-body">
         <p>No notes yet.</p>
