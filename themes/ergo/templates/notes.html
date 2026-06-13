@@ -13,6 +13,61 @@
   .note-body p:first-child { margin-top: 0; }
   .note-body p:last-child { margin-bottom: 0; }
   .note-body img { max-width: 100%; height: auto; border-radius: 6px; }
+  .sticky-notes { margin: 0 0 2rem; }
+  .sticky-notes-heading {
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(36, 94, 62, 0.85);
+    margin: 0 0 0.8rem;
+  }
+  .sticky-note {
+    position: relative;
+    margin: 0 0 1.25rem;
+    padding: 1.35rem 1.3rem 1.2rem;
+    background: #fff3a8;
+    color: #1f2418;
+    border: 1px solid rgba(143, 121, 34, 0.35);
+    border-radius: 3px 10px 6px 10px;
+    box-shadow: 0 16px 28px rgba(70, 58, 19, 0.16), 0 2px 3px rgba(70, 58, 19, 0.12);
+    transform: rotate(-0.35deg);
+  }
+  .sticky-note:nth-of-type(even) { transform: rotate(0.28deg); }
+  .sticky-note::before {
+    content: "";
+    position: absolute;
+    top: -0.55rem;
+    left: 50%;
+    width: 1rem;
+    height: 1rem;
+    margin-left: -0.5rem;
+    background: #229b57;
+    border-radius: 50%;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255,255,255,0.35);
+  }
+  .sticky-note::after {
+    content: "";
+    position: absolute;
+    top: 0.1rem;
+    left: 50%;
+    width: 1px;
+    height: 1.15rem;
+    background: rgba(36, 94, 62, 0.45);
+    transform: rotate(8deg);
+  }
+  .sticky-note .note-meta { margin-bottom: 0.7rem; }
+  .sticky-note .note-permalink { color: #006f2e; }
+  html.theme-dark .sticky-notes-heading { color: rgba(247, 207, 96, 0.9); }
+  html.theme-dark .sticky-note {
+    background: #4e4426;
+    color: #f7f0da;
+    border-color: rgba(246, 209, 104, 0.28);
+    box-shadow: 0 16px 28px rgba(0,0,0,0.32), 0 2px 3px rgba(0,0,0,0.26);
+  }
+  html.theme-dark .sticky-note::before { background: #c94343; }
+  html.theme-dark .sticky-note::after { background: rgba(255, 190, 190, 0.5); }
+  html.theme-dark .sticky-note .note-permalink { color: #f1ce64; }
 </style>
 {% endblock head_extra %}
 
@@ -32,11 +87,46 @@
 
 <section class="post_list notes_list">
   {% set pages = section.pages %}
+  {% set_global has_pinned_notes = false %}
+  {% for page in pages %}
+    {% set explicit_note = (page.extra.post_type is defined and page.extra.post_type == "note") or (page.extra.zola_content_type is defined and page.extra.zola_content_type == "note") or (page.extra.is_note is defined and page.extra.is_note) %}
+    {% if not explicit_note %}{% continue %}{% endif %}
+    {% set sticky_note = page.extra.sticky_note | default(value=false) %}
+    {% set sticky_enabled = sticky_note and sticky_note.enabled | default(value=false) %}
+    {% set sticky_active = sticky_note and sticky_note.active | default(value=false) %}
+    {% if sticky_enabled and sticky_active %}
+      {% if not has_pinned_notes %}
+      <div class="sticky-notes" aria-label="Pinned notes">
+        <h3 class="sticky-notes-heading">Pinned notes</h3>
+      {% set_global has_pinned_notes = true %}
+      {% endif %}
+        <article class="note-item sticky-note h-entry">
+          <a class="u-url u-uid" href="{{ page.permalink }}"></a>
+          <div class="note-meta">
+            <a href="{{ page.permalink }}" class="note-permalink">
+              <time class="dt-published" datetime="{{ page.date | date(format='%+') }}">
+                {{ page.date | date(format="%b %-d, %Y · %-I:%M %p") }}
+              </time>
+            </a>
+          </div>
+          <div class="note-body e-content">
+            {{ page.content | safe }}
+          </div>
+        </article>
+    {% endif %}
+  {% endfor %}
+  {% if has_pinned_notes %}
+      </div>
+  {% endif %}
+
   {% set_global current_year = "" %}
   {% set_global has_notes = false %}
   {% for page in pages %}
     {% set explicit_note = (page.extra.post_type is defined and page.extra.post_type == "note") or (page.extra.zola_content_type is defined and page.extra.zola_content_type == "note") or (page.extra.is_note is defined and page.extra.is_note) %}
     {% if not explicit_note %}{% continue %}{% endif %}
+    {% set sticky_note = page.extra.sticky_note | default(value=false) %}
+    {% set sticky_enabled = sticky_note and sticky_note.enabled | default(value=false) %}
+    {% if sticky_enabled %}{% continue %}{% endif %}
     {% set_global has_notes = true %}
     {% set year = page.date | date(format="%Y") %}
     {% if year != current_year %}
