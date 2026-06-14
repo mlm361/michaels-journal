@@ -13,60 +13,88 @@
   .note-body p:first-child { margin-top: 0; }
   .note-body p:last-child { margin-bottom: 0; }
   .note-body img { max-width: 100%; height: auto; border-radius: 6px; }
-  .sticky-notes { margin: 0 0 2rem; }
+  .sticky-notes { max-width: 640px; margin: 0 auto 2.35rem; }
   .sticky-notes-heading {
     font-size: 0.78rem;
     font-weight: 800;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: rgba(36, 94, 62, 0.85);
-    margin: 0 0 0.8rem;
+    margin: 0 0 0.9rem;
   }
   .sticky-note {
     position: relative;
-    margin: 0 0 1.25rem;
-    padding: 1.35rem 1.3rem 1.2rem;
-    background: #fff3a8;
+    margin: 0 auto 1.55rem;
+    padding: 1.7rem 1.55rem 1.65rem;
+    background: linear-gradient(145deg, #fff7a8 0%, #fff0a0 68%, #f7dd70 100%);
     color: #1f2418;
-    border: 1px solid rgba(143, 121, 34, 0.35);
-    border-radius: 3px 10px 6px 10px;
-    box-shadow: 0 16px 28px rgba(70, 58, 19, 0.16), 0 2px 3px rgba(70, 58, 19, 0.12);
-    transform: rotate(-0.35deg);
+    border: 1px solid rgba(143, 121, 34, 0.3);
+    border-radius: 5px 8px 4px 7px;
+    box-shadow: 0 18px 34px rgba(70, 58, 19, 0.18), 0 3px 5px rgba(70, 58, 19, 0.12);
+    transform: rotate(-1.8deg);
   }
-  .sticky-note:nth-of-type(even) { transform: rotate(0.28deg); }
+  .sticky-note:nth-of-type(even) { transform: rotate(1.15deg); }
   .sticky-note::before {
     content: "";
     position: absolute;
-    top: -0.55rem;
+    top: -0.7rem;
     left: 50%;
-    width: 1rem;
-    height: 1rem;
-    margin-left: -0.5rem;
-    background: #229b57;
+    width: 1.08rem;
+    height: 1.08rem;
+    margin-left: -0.54rem;
+    background: radial-gradient(circle at 35% 30%, #54d37f 0 18%, #249b56 48%, #137b3c 100%);
     border-radius: 50%;
-    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255,255,255,0.35);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(9, 88, 41, 0.25), inset 0 1px 0 rgba(255,255,255,0.42);
+    z-index: 2;
   }
   .sticky-note::after {
     content: "";
     position: absolute;
-    top: 0.1rem;
+    top: -0.05rem;
     left: 50%;
     width: 1px;
-    height: 1.15rem;
-    background: rgba(36, 94, 62, 0.45);
+    height: 1.38rem;
+    background: rgba(36, 94, 62, 0.5);
     transform: rotate(8deg);
+    transform-origin: top;
   }
-  .sticky-note .note-meta { margin-bottom: 0.7rem; }
+  .sticky-note .note-meta { margin-bottom: 0.85rem; }
   .sticky-note .note-permalink { color: #006f2e; }
+  .sticky-note .note-body { position: relative; }
+  .sticky-note .note-body::after {
+    content: "";
+    position: absolute;
+    right: -1.55rem;
+    bottom: -1.65rem;
+    width: 5rem;
+    height: 5rem;
+    background: linear-gradient(135deg, rgba(255,255,255,0.68) 0%, rgba(255,248,183,0.94) 46%, rgba(218,184,58,0.22) 47%, rgba(145,118,34,0.18) 100%);
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+    opacity: 0.82;
+    pointer-events: none;
+  }
+  .sticky-note .youtube {
+    width: min(360px, 100%);
+    aspect-ratio: 9 / 16;
+    margin: 1.1rem auto 0;
+    background: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 18px rgba(40, 34, 16, 0.18);
+  }
+  .sticky-note .youtube > iframe { width: 100%; height: 100%; display: block; }
   html.theme-dark .sticky-notes-heading { color: rgba(247, 207, 96, 0.9); }
   html.theme-dark .sticky-note {
-    background: #4e4426;
+    background: linear-gradient(145deg, #5a4d28 0%, #4d4326 70%, #3d341d 100%);
     color: #f7f0da;
     border-color: rgba(246, 209, 104, 0.28);
     box-shadow: 0 16px 28px rgba(0,0,0,0.32), 0 2px 3px rgba(0,0,0,0.26);
   }
-  html.theme-dark .sticky-note::before { background: #c94343; }
-  html.theme-dark .sticky-note::after { background: rgba(255, 190, 190, 0.5); }
+  html.theme-dark .sticky-note::before { background: radial-gradient(circle at 35% 30%, #5dd488 0 18%, #249b56 48%, #137b3c 100%); }
+  html.theme-dark .sticky-note::after { background: rgba(130, 220, 160, 0.48); }
+  html.theme-dark .sticky-note .note-body::after {
+    background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(89,75,38,0.92) 46%, rgba(17,13,6,0.25) 47%, rgba(0,0,0,0.28) 100%);
+  }
   html.theme-dark .sticky-note .note-permalink { color: #f1ce64; }
 </style>
 {% endblock head_extra %}
