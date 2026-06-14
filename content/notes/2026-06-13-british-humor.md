@@ -15,6 +15,7 @@ is_note = true
 [extra.sticky_note]
 enabled = true
 active = true
+expires_at = "2026-07-30T23:59:59"
 +++
 
 <p class="p-summary mf2-hidden" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">This was hilarious https://www.youtube.com/watch?v=__bvWU_mzEY</p>
