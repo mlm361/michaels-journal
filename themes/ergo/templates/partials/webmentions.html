@@ -1,4 +1,79 @@
 {% if config.extra.webmention_provider == "webmentions_io" %}
+<style>
+  .webmentions { margin-top: 2.5rem; }
+  .webmentions-heading {
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(36, 94, 62, 0.85);
+    margin: 0 0 0.7rem;
+  }
+  .webmentions-intro { font-size: 0.9rem; color: rgba(0, 0, 0, 0.58); margin: 0 0 1.3rem; }
+  .wm-facepile { margin: 0 0 1.6rem; }
+  .wm-facepile-label {
+    font-size: 0.95rem;
+    color: rgba(0, 0, 0, 0.7);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-bottom: 0.55rem;
+  }
+  .wm-facepile-icon { color: #c0584f; }
+  .wm-faces { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .wm-face {
+    width: 2.15rem;
+    height: 2.15rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #1d2733;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  .wm-face img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .wm-face-initial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #f2f2f2;
+  }
+  .wm-replies-heading { font-size: 0.95rem; font-weight: 700; color: rgba(0, 0, 0, 0.55); margin: 0 0 0.85rem; }
+  .wm-card {
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    border-radius: 12px;
+    padding: 1rem 1.15rem;
+    margin: 0 0 0.95rem;
+  }
+  .wm-card-head { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.6rem; }
+  .wm-card-avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #1d2733;
+    flex-shrink: 0;
+  }
+  .wm-card-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .wm-card-avatar .wm-face-initial { font-size: 1rem; }
+  .wm-card-meta { display: flex; flex-direction: column; line-height: 1.3; min-width: 0; }
+  .wm-card-name { font-weight: 700; color: rgba(0, 0, 0, 0.85); text-decoration: none; }
+  .wm-card-name:hover { text-decoration: underline; }
+  .wm-card-date { font-size: 0.84rem; color: rgba(0, 0, 0, 0.45); }
+  .wm-card-content { font-size: 0.96rem; line-height: 1.55; color: rgba(0, 0, 0, 0.82); margin: 0; overflow-wrap: anywhere; }
+  html.theme-dark .webmentions-heading { color: rgba(247, 207, 96, 0.9); }
+  html.theme-dark .webmentions-intro,
+  html.theme-dark .wm-facepile-label,
+  html.theme-dark .wm-replies-heading { color: rgba(255, 255, 255, 0.62); }
+  html.theme-dark .wm-card { border-color: rgba(255, 255, 255, 0.13); }
+  html.theme-dark .wm-card-name { color: rgba(255, 255, 255, 0.9); }
+  html.theme-dark .wm-card-content { color: rgba(255, 255, 255, 0.8); }
+  html.theme-dark .wm-card-date { color: rgba(255, 255, 255, 0.42); }
+</style>
 <section class="webmentions" id="webmentions-wrap" aria-labelledby="webmentions-heading">
   <h3 class="webmentions-heading" id="webmentions-heading">Webmentions</h3>
   <p class="webmentions-intro">
@@ -18,27 +93,30 @@
 
     function escapeHtml(value) {
       return String(value || "").replace(/[&<>"']/g, function (char) {
-        return {
-          "&": "&amp;",
-          "<": "&lt;",
-          ">": "&gt;",
-          '"': "&quot;",
-          "'": "&#39;"
-        }[char];
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char];
       });
     }
 
     function safeUrl(value) {
       var url = String(value || "");
-      return /^https?:\/\//i.test(url) ? url : "#";
+      return /^https?:\/\//i.test(url) ? url : "";
     }
 
     function authorName(mention) {
       return (mention.author && mention.author.name) ? mention.author.name : "Someone";
     }
 
+    function authorUrl(mention) {
+      return safeUrl((mention.author && mention.author.url) || mention.url);
+    }
+
     function authorPhoto(mention) {
-      return mention.author && mention.author.photo ? safeUrl(mention.author.photo) : "";
+      return (mention.author && mention.author.photo) ? safeUrl(mention.author.photo) : "";
+    }
+
+    function initialFor(mention) {
+      var name = authorName(mention).replace(/[^\w]/g, "").trim();
+      return name ? name.charAt(0).toUpperCase() : "?";
     }
 
     function formatDate(value) {
@@ -52,62 +130,73 @@
       return count === 1 ? singular : (pluralValue || singular + "s");
     }
 
-    function nameLink(mention) {
-      var name = authorName(mention);
-      var href = safeUrl((mention.author && mention.author.url) || mention.url);
-      return "<a class='wm-name-link' href='" + escapeHtml(href) + "' target='_blank' rel='noopener'>" + escapeHtml(name) + "</a>";
+    // Circular avatar (photo if present, else an initial). `cls` selects the
+    // face size class. Wrapped in the author link when a URL is available.
+    function avatar(mention, cls) {
+      var photo = authorPhoto(mention);
+      var name = escapeHtml(authorName(mention));
+      var inner = photo
+        ? "<img src='" + escapeHtml(photo) + "' alt='" + name + "' loading='lazy'>"
+        : "<span class='wm-face-initial' aria-hidden='true'>" + escapeHtml(initialFor(mention)) + "</span>";
+      var href = authorUrl(mention);
+      if (href) {
+        return "<a class='" + cls + "' href='" + escapeHtml(href) + "' target='_blank' rel='noopener' title='" + name + "'>" + inner + "</a>";
+      }
+      return "<span class='" + cls + "' title='" + name + "'>" + inner + "</span>";
     }
 
-    function nameList(items) {
-      return items.map(nameLink).join(", ");
-    }
-
-    function renderReply(mention) {
-      var author = authorName(mention);
-      var authorText = escapeHtml(author);
-      var type = mention["wm-property"] || "mention-of";
-      var label = type === "in-reply-to" ? "replied" : "mentioned this";
-      var content = (mention.content && mention.content.text)
-        ? "<p class='wm-content'>" + escapeHtml(mention.content.text.slice(0, 300)) + "</p>"
-        : "";
-      var published = formatDate(mention.published);
-      var dateText = published ? " " + escapeHtml(published) : "";
-      return "<li class='wm-response wm-response-reply'><span class='wm-response-icon' aria-hidden='true'>▰</span><div class='wm-response-text'><a href='" + escapeHtml(safeUrl((mention.author && mention.author.url) || mention.url)) + "' class='wm-author' target='_blank' rel='noopener'>" + authorText + "</a> <span class='wm-label'>" + escapeHtml(label) + dateText + ":</span>" + content + "</div></li>";
-    }
-
-    function renderReactionRow(icon, items, verb) {
+    function renderFacepile(icon, items, verb) {
       if (!items.length) return "";
-      return "<li class='wm-response wm-response-reaction'><span class='wm-response-icon' aria-hidden='true'>" + escapeHtml(icon) + "</span><div class='wm-response-text'><strong>" + items.length + " " + escapeHtml(plural(items.length, "person", "people")) + " " + escapeHtml(verb) + " this:</strong> " + nameList(items) + "</div></li>";
+      var faces = items.map(function (m) { return avatar(m, "wm-face"); }).join("");
+      var label = items.length + " " + escapeHtml(plural(items.length, verb));
+      return "<div class='wm-facepile'>"
+        + "<div class='wm-facepile-label'><span class='wm-facepile-icon' aria-hidden='true'>" + escapeHtml(icon) + "</span> " + label + "</div>"
+        + "<div class='wm-faces'>" + faces + "</div></div>";
     }
 
-    fetch("https://webmention.io/api/mentions.jf2?target=" + target + "&per-page=50")
+    function renderReplyCard(mention) {
+      var href = authorUrl(mention);
+      var name = escapeHtml(authorName(mention));
+      var nameEl = href
+        ? "<a class='wm-card-name' href='" + escapeHtml(href) + "' target='_blank' rel='noopener'>" + name + "</a>"
+        : "<span class='wm-card-name'>" + name + "</span>";
+      var date = formatDate(mention.published);
+      var dateEl = date ? "<span class='wm-card-date'>" + escapeHtml(date) + "</span>" : "";
+      var raw = (mention.content && mention.content.text) ? mention.content.text : "";
+      var text = raw.length > 500 ? raw.slice(0, 500).trim() + "…" : raw;
+      var contentEl = text ? "<p class='wm-card-content'>" + escapeHtml(text) + "</p>" : "";
+      return "<article class='wm-card'>"
+        + "<div class='wm-card-head'>" + avatar(mention, "wm-card-avatar")
+        + "<div class='wm-card-meta'>" + nameEl + dateEl + "</div></div>"
+        + contentEl + "</article>";
+    }
+
+    fetch("https://webmention.io/api/mentions.jf2?target=" + target + "&per-page=100")
       .then(function (r) { return r.json(); })
       .then(function (data) {
         var items = data.children || [];
         var heading = document.getElementById("webmentions-heading");
         if (heading && items.length) heading.textContent = "Webmentions (" + items.length + ")";
         if (!items.length) return;
-        var replies = [];
-        var likes = [];
-        var reposts = [];
-        var bookmarks = [];
+
+        var replies = [], likes = [], reposts = [];
         items.forEach(function (mention) {
           var type = mention["wm-property"] || "mention-of";
           if (type === "like-of") likes.push(mention);
           else if (type === "repost-of") reposts.push(mention);
-          else if (type === "bookmark-of") bookmarks.push(mention);
+          else if (type === "in-reply-to" || type === "mention-of") replies.push(mention);
           else replies.push(mention);
         });
-        replies.sort(function (a, b) {
-          return new Date(a.published || 0) - new Date(b.published || 0);
-        });
+        replies.sort(function (a, b) { return new Date(a.published || 0) - new Date(b.published || 0); });
 
         var html = "";
-        html += renderReactionRow("♥", likes, "liked");
-        html += renderReactionRow("↻", reposts, "reposted");
-        html += renderReactionRow("▮", bookmarks, "bookmarked");
-        html += replies.map(renderReply).join("");
-        list.innerHTML = html ? "<ul class='wm-responses'>" + html + "</ul>" : list.innerHTML;
+        html += renderFacepile("♥", likes, "like");
+        html += renderFacepile("↻", reposts, "repost");
+        if (replies.length) {
+          html += "<h4 class='wm-replies-heading'>" + replies.length + " " + (replies.length === 1 ? "Reply" : "Replies") + "</h4>";
+          html += replies.map(renderReplyCard).join("");
+        }
+        if (html) list.innerHTML = html;
       })
       .catch(function () {});
   })();
