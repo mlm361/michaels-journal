@@ -1,22 +1,22 @@
 {
-  "type": "feed",
   "canonical_url": "https://mitchelltribe.com/2026/06/12/usf-turns/",
-  "source_post_id": 1225,
-  "generated_at": "2026-06-20T16:00:38.724931+00:00",
-  "like_count": 1,
-  "reply_count": 0,
   "children": [
     {
-      "wm-property": "like-of",
-      "platform": "bluesky",
-      "wm-target": "https://mitchelltribe.com/2026/06/12/usf-turns/",
-      "url": "https://bsky.app/profile/matiere-lab.bsky.social",
-      "published": "2026-06-15T14:11:54.139Z",
       "author": {
         "name": "シツカンさん◤質感の移植_日本伝統素材| 質感LoRA研究工房",
         "photo": "https://cdn.bsky.app/img/avatar/plain/did:plc:jtb3pcccd34plxtezveq3wfd/bafkreibf2x3wpz74hhkdbup6ye7m5yai5vphj47xheeqeqwu6y2x6f4mem",
         "url": "https://bsky.app/profile/matiere-lab.bsky.social"
-      }
+      },
+      "platform": "bluesky",
+      "published": "2026-06-15T14:11:54.139Z",
+      "url": "https://bsky.app/profile/matiere-lab.bsky.social",
+      "wm-property": "like-of",
+      "wm-target": "https://mitchelltribe.com/2026/06/12/usf-turns/"
     }
-  ]
+  ],
+  "generated_at": "2026-06-20T20:18:45.850634+00:00",
+  "like_count": 1,
+  "reply_count": 0,
+  "source_post_id": 1225,
+  "type": "feed"
 }

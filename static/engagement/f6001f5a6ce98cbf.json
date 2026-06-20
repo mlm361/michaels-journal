@@ -1,9 +1,9 @@
 {
-  "type": "feed",
   "canonical_url": "https://mitchelltribe.com/2025/12/21/finally-getting-stuff-done/",
-  "source_post_id": 1132,
-  "generated_at": "2026-06-20T15:59:50.792613+00:00",
+  "children": [],
+  "generated_at": "2026-06-20T20:17:49.890483+00:00",
   "like_count": 0,
   "reply_count": 0,
-  "children": []
+  "source_post_id": 1132,
+  "type": "feed"
 }

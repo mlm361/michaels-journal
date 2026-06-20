@@ -1,9 +1,9 @@
 {
-  "type": "feed",
   "canonical_url": "https://mitchelltribe.com/2026/04/05/watched-civil-war/",
-  "source_post_id": 1160,
-  "generated_at": "2026-06-20T16:00:12.471742+00:00",
+  "children": [],
+  "generated_at": "2026-06-20T20:18:26.004553+00:00",
   "like_count": 0,
   "reply_count": 0,
-  "children": []
+  "source_post_id": 1160,
+  "type": "feed"
 }
