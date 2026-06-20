@@ -1,0 +1,32 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": {{ config.title | json_encode | safe }},
+  "home_page_url": {{ config.base_url | json_encode | safe }},
+  "feed_url": {{ feed_url | json_encode | safe }},
+  {%- if config.description %}
+  "description": {{ config.description | json_encode | safe }},
+  {%- endif %}
+  "authors": [{ "name": "Michael Mitchell", "url": {{ config.base_url | json_encode | safe }} }],
+  "items": [
+    {%- set_global first = true -%}
+    {%- for page in pages -%}
+    {%- if not page.extra.skip_feed and not page.extra.exclude_from_feed -%}
+    {%- if not first %},{% endif -%}
+    {%- set_global first = false %}
+    {
+      "id": {{ page.permalink | json_encode | safe }},
+      "url": {{ page.permalink | json_encode | safe }},
+      "title": {{ page.title | default(value="(Untitled)") | json_encode | safe }},
+      "content_html": {{ page.content | json_encode | safe }},
+      "date_published": {{ page.date | date(format="%+") | json_encode | safe }}
+      {%- if page.updated %},
+      "date_modified": {{ page.updated | date(format="%+") | json_encode | safe }}
+      {%- endif %}
+      {%- if page.taxonomies.tags %},
+      "tags": {{ page.taxonomies.tags | json_encode | safe }}
+      {%- endif %}
+    }
+    {%- endif -%}
+    {%- endfor %}
+  ]
+}

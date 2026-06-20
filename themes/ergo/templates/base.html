@@ -103,6 +103,9 @@
         <link rel="alternate" type="{{ macros::feed_mimetype(feed_filename=config.feed_filenames[0]) }}"
               title="{{ config.title }} RSS"
               href="{{ get_url(path=config.feed_filenames[0], trailing_slash=false) }}">
+        <link rel="alternate" type="application/feed+json"
+              title="{{ config.title }} JSON Feed"
+              href="{{ get_url(path='feed.json', trailing_slash=false) }}">
         {% endif %}
         {% endblock rss %}
 
@@ -324,6 +327,56 @@
             outline: 2px solid currentColor;
             outline-offset: 3px;
           }
+          /* Branded Bluesky share button (filled blue + white butterfly) */
+          article .post-actions a.post-action-share-bluesky,
+          article .post-actions a.post-action-share-bluesky:link,
+          article .post-actions a.post-action-share-bluesky:visited {
+            background: #0085ff !important;
+            border-color: #0085ff !important;
+            color: #fff !important;
+            opacity: 1 !important;
+          }
+          article .post-actions a.post-action-share-bluesky:hover,
+          article .post-actions a.post-action-share-bluesky:focus-visible {
+            filter: brightness(1.08);
+          }
+        </style>
+
+        <style>
+          /* IndieWeb collapsible cards — Share + Listening on post pages */
+          .iw-post-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 0.85rem; align-items: start; margin: 2.4rem 0 1.35rem; }
+          .iw-card { --accent: #888; border: 1px solid rgba(128,128,128,0.18); border-left: 4px solid var(--accent); border-radius: 12px; background: rgba(128,128,128,0.035); overflow: hidden; }
+          html.theme-dark .iw-card { background: rgba(255,255,255,0.025); }
+          .iw-card__head { display: flex; align-items: center; gap: 0.7rem; padding: 0.9rem 1.05rem; cursor: pointer; list-style: none; user-select: none; }
+          .iw-card__head::-webkit-details-marker { display: none; }
+          .iw-card__head:hover { background: rgba(128,128,128,0.05); }
+          .iw-card__icon { width: 1.5rem; text-align: center; color: var(--accent); font-size: 1.05rem; flex-shrink: 0; }
+          .iw-card__title { font-weight: 700; font-size: 1rem; flex: 1; }
+          .iw-card__chev { opacity: 0.45; font-size: 0.8rem; transition: transform 0.18s ease; }
+          .iw-card[open] .iw-card__chev { transform: rotate(180deg); }
+          .iw-card__body { padding: 0.25rem 1.15rem 1.15rem; font-size: 0.92rem; line-height: 1.55; }
+          /* Share buttons */
+          .iw-share-row { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+          .iw-share-btn { box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; height: 2rem; padding: 0 0.95rem; border: 1px solid currentColor; border-radius: 999px; background: transparent; color: inherit; font: inherit; font-size: 0.8rem; font-weight: 600; line-height: 1; text-decoration: none; opacity: 0.75; cursor: pointer; }
+          .iw-share-btn:hover { opacity: 1; text-decoration: none; }
+          .iw-share-bsky { box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; height: 2rem; padding: 0 0.95rem; border-radius: 999px; border: 1px solid #0085ff; background: #0085ff; color: #fff; font: inherit; font-size: 0.8rem; font-weight: 600; line-height: 1; text-decoration: none; transition: filter 0.12s ease; }
+          .iw-share-bsky:hover { filter: brightness(1.08); text-decoration: none; }
+          .iw-share-bsky img { width: 0.95rem; height: 0.95rem; display: block; }
+          .iw-share-native { display: none; }
+          /* Listening */
+          .iw-listens { display: flex; flex-direction: column; gap: 0.55rem; }
+          .iw-listens-msg { margin: 0.2rem 0; opacity: 0.6; font-size: 0.88rem; }
+          .iw-listen { display: flex; align-items: center; gap: 0.7rem; }
+          .iw-cover-wrap { position: relative; width: 46px; height: 46px; border-radius: 6px; overflow: hidden; flex-shrink: 0; background: rgba(168,85,247,0.14); }
+          .iw-cover-ph { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: #a855f7; opacity: 0.7; }
+          .iw-cover { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+          .iw-listen-meta { min-width: 0; flex: 1; }
+          .iw-track { font-weight: 600; font-size: 0.9rem; line-height: 1.25; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+          .iw-artist { font-size: 0.82rem; opacity: 0.66; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+          .iw-when { font-size: 0.74rem; opacity: 0.5; margin-top: 0.05rem; }
+          .iw-now-tag { color: #a855f7; font-weight: 700; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em; }
+          .iw-listens-foot { margin: 0.8rem 0 0; font-size: 0.78rem; opacity: 0.6; }
+          .iw-listens-foot a { color: inherit; }
         </style>
 
         {% block head_extra %}{% endblock head_extra %}

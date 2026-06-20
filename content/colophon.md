@@ -45,14 +45,14 @@ The site is made from a few small pieces working together.
 
 <section class="colophon-card">
   <h3>Writing and Publishing</h3>
-  <p>Posts begin in Blog Poster, a publishing tool I built for myself. It handles drafts, scheduling, image cleanup, alt text, and deciding where a post should go.</p>
+  <p>Posts begin in Blog Poster, a publishing tool I built for myself. It handles drafts, scheduling, image cleanup, AI-assisted feature image creation, alt text, and deciding where a post should go.</p>
   <p>Most of the time, Blog Poster can publish to all of my platforms at once. That means this site is part of a broader publishing flow, not a separate manual process.</p>
   <p>When a post is ready for this site, Blog Poster exports it to the repository as Markdown and commits it. From there, GitHub and Cloudflare Pages handle the rest of the build and deployment flow.</p>
 </section>
 
 <section class="colophon-card">
   <h3>POSSE and Syndication</h3>
-  <p>Blog Poster also handles POSSE, Publish (on your) Own Site, Syndicate Elsewhere, for Mastodon, Bluesky, Sharkey, Pixelfed, and Nostr. It records the syndicated URLs so posts on this site can point back to their copies elsewhere, while this site remains the canonical version.</p>
+  <p>Blog Poster, my custom-built personal publishing app, also handles POSSE, Publish (on your) Own Site, Syndicate Elsewhere, for Mastodon, Bluesky, Sharkey, Pixelfed, and Nostr. It records the syndicated URLs so posts on this site can point back to their copies elsewhere, while this site remains the canonical version.</p>
 </section>
 
 <section class="colophon-card">
@@ -64,7 +64,7 @@ The site is made from a few small pieces working together.
 
 ## IndieWeb
 
-The site leans into IndieWeb ideas. Posts include h-entry style markup, the Atom feed lives at /atom.xml, and replies and likes can come in through webmention.io.
+The site leans into IndieWeb ideas. Posts include h-entry style markup, the Atom feed lives at /atom.xml, the JSON Feed lives at /feed.json, and replies and likes can come in through webmention.io.
 
 Webmention.io is a hosted service for receiving webmentions, which makes it useful for static personal sites that want IndieWeb interactions without building all of that infrastructure from scratch.
 
@@ -76,7 +76,7 @@ The design is intentionally quiet. I want the writing and images to do most of t
 
 The layout stays simple: a readable column, light and dark themes, and semantic HTML. The goal is not to impress anyone with tricks. It is to make the site comfortable to read and easy to maintain, and it takes inspiration from Jim Mitchell's mnml for Micro.blog.
 
-The only four pages that differ from the rest of the site are my Twitter Archive page, my Tweets On This Day page, and my Privacy page. All are intentionally designed.
+A few pages differ from the rest of the site, including my Twitter Archive page, my Tweets On This Day page, and my Privacy page. All are intentionally designed.
 
 Body text is set in Montserrat, and the post metadata line uses Raleway. I picked them because they work well together and, after a while, stopped seeing any reason to keep fussing with it.
 
@@ -127,6 +127,6 @@ This site exists because of the work of other people whose tools made it possibl
 * Bridgy Fed by Ryan Barrett and Anuj Ahooja.
 * Cloudflare Pages for hosting and deployment.
 * The wider IndieWeb community for continuing to keep the small web alive. Special mention goes to Manton Reece of Micro.blog and Vincent Ritter of Scribbles.page, whose IndieWeb principles helped guide the structure of this website.
-* AI, in the form of Claude Code and OpenAI's Codex, helps me maintain this site for full transparency, but it does not publish any content that is not made by me. These tools help with theming, maintenance, editing, and proofreading. But I cannot stress this enough: they make no posts of their own. All posts are mine and mine alone.
+* AI, including ChatGPT, Claude, Codex, and other cloud or local AI models, helps me maintain this site for full transparency, but it does not publish any content that is not made by me. These tools help with theming, maintenance, editing, proofreading, alt text, and feature image creation. But I cannot stress this enough: they make no posts of their own. All posts are mine and mine alone.
 
 </div>

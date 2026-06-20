@@ -1,94 +1,105 @@
 {#
-  Privacy-respecting "Share this post" row.
-
-  No third-party tracking pixels. Copy-link uses navigator.clipboard, email is
-  a plain mailto: link, Bluesky is a plain intent URL
-  (https://bsky.app/intent/compose), and the native OS share sheet
-  (navigator.share) is exposed only when the current browser supports it in
-  the compact/mobile share row.
-
-  Frontmatter:
-    extra.no_kudos      hides the row entirely (mirrors post-actions).
+  Post-page "Share" + "Listening" as collapsible cards.
+  Card styles live in base.html head (.iw-card / .iw-share-* / .iw-listens).
+  extra.no_kudos hides the whole block (mirrors post-actions).
 #}
 {% if not page.extra.no_kudos %}
 {% set share_title = page.title | default(value=config.title) %}
 {% set share_url = page.permalink | default(value=config.base_url) %}
 {% set bluesky_text = share_title ~ " " ~ share_url %}
-<div class="post-response post-share">
-  <h3 class="post-response-heading">Share this post</h3>
-  <div class="post-actions">
-    <button class="post-action post-action-share-copy"
-            type="button"
-            data-share-url="{{ share_url }}">
-      🔗 Copy link
-    </button>
+<div class="iw-post-cards">
 
-    <a class="post-action post-action-share-target post-action-share-bluesky"
-       href="https://bsky.app/intent/compose?text={{ bluesky_text | urlencode }}"
-       rel="noopener noreferrer"
-       target="_blank">
-      <span class="post-action-icon" aria-hidden="true"><img src="https://cdn.simpleicons.org/bluesky/0061F2.svg" alt=""></span>
-      Share on Bluesky
-    </a>
+  <details class="iw-card post-share" style="--accent:#3b82f6">
+    <summary class="iw-card__head">
+      <span class="iw-card__icon"><i class="fas fa-share-nodes"></i></span>
+      <span class="iw-card__title">Share</span>
+      <span class="iw-card__chev"><i class="fas fa-chevron-down"></i></span>
+    </summary>
+    <div class="iw-card__body">
+      <div class="iw-share-row">
+        <button class="iw-share-btn iw-copy-link" type="button" data-share-url="{{ share_url }}"><i class="fas fa-link"></i> Copy link</button>
+        <a class="iw-share-btn" href="mailto:?subject={{ share_title | urlencode }}&amp;body={{ bluesky_text | urlencode }}"><i class="fas fa-envelope"></i> Email</a>
+        <a class="iw-share-bsky"
+           href="https://bsky.app/intent/compose?text={{ bluesky_text | urlencode }}"
+           target="_blank" rel="noopener noreferrer">
+          <img src="https://cdn.simpleicons.org/bluesky/ffffff" alt=""> Share on Bluesky
+        </a>
+        <button class="iw-share-btn iw-share-native" type="button" data-share-url="{{ share_url }}" data-share-title="{{ share_title }}"><i class="fas fa-arrow-up-from-bracket"></i> Share</button>
+      </div>
+    </div>
+  </details>
 
-    <a class="post-action post-action-share-target post-action-share-email"
-       href="mailto:?subject={{ share_title | urlencode }}&amp;body={{ bluesky_text | urlencode }}">
-      ✉️ Email
-    </a>
+  <details class="iw-card" style="--accent:#a855f7">
+    <summary class="iw-card__head">
+      <span class="iw-card__icon"><i class="fas fa-music"></i></span>
+      <span class="iw-card__title">Listening</span>
+      <span class="iw-card__chev"><i class="fas fa-chevron-down"></i></span>
+    </summary>
+    <div class="iw-card__body">
+      <div class="iw-listens" id="iw-post-listens"><p class="iw-listens-msg">Loading recent listens…</p></div>
+      <p class="iw-listens-foot"><a href="https://listenbrainz.org/user/MLM361/" target="_blank" rel="noopener">Scrobbled via ListenBrainz</a></p>
+    </div>
+  </details>
 
-    <button class="post-action post-action-share-native"
-            type="button"
-            data-share-url="{{ share_url }}"
-            data-share-title="{{ share_title }}">
-      📤 Share
-    </button>
-  </div>
 </div>
 <script>
   (function () {
-    var copyBtn = document.querySelector('.post-action-share-copy');
+    // Copy link
+    var copyBtn = document.querySelector('.iw-post-cards .iw-copy-link');
     if (copyBtn && navigator.clipboard && navigator.clipboard.writeText) {
       copyBtn.addEventListener('click', function () {
         navigator.clipboard.writeText(copyBtn.dataset.shareUrl).then(function () {
-          var original = copyBtn.textContent;
-          copyBtn.textContent = '✓ Copied!';
-          setTimeout(function () { copyBtn.textContent = original; }, 2000);
+          var o = copyBtn.textContent; copyBtn.textContent = '✓ Copied!';
+          setTimeout(function () { copyBtn.textContent = o; }, 2000);
         }).catch(function () {});
       });
     } else if (copyBtn) {
-      copyBtn.addEventListener('click', function () {
-        window.prompt('Copy this link:', copyBtn.dataset.shareUrl);
+      copyBtn.addEventListener('click', function () { window.prompt('Copy this link:', copyBtn.dataset.shareUrl); });
+    }
+    // Native OS share — only when supported
+    var nativeBtn = document.querySelector('.iw-post-cards .iw-share-native');
+    if (nativeBtn && typeof navigator.share === 'function') {
+      nativeBtn.style.display = 'inline-flex';
+      nativeBtn.addEventListener('click', function () {
+        navigator.share({ title: nativeBtn.dataset.shareTitle, url: nativeBtn.dataset.shareUrl }).catch(function () {});
       });
     }
 
-    // Native OS share sheet. CSS hides by default; JS reveals this only when
-    // Web Share exists and the share row is in its compact/mobile layout.
-    var nativeBtn = document.querySelector('.post-action-share-native');
-    if (nativeBtn && typeof navigator.share === 'function') {
-      var compactShareRow = window.matchMedia('(max-width: 760px)');
-      function canUseNativeShare() {
-        var shareData = {
-          title: nativeBtn.dataset.shareTitle,
-          url: nativeBtn.dataset.shareUrl
-        };
-        return !navigator.canShare || navigator.canShare(shareData);
-      }
-      function syncNativeShareVisibility() {
-        nativeBtn.classList.toggle('is-available', compactShareRow.matches && canUseNativeShare());
-      }
-      syncNativeShareVisibility();
-      if (compactShareRow.addEventListener) {
-        compactShareRow.addEventListener('change', syncNativeShareVisibility);
-      } else if (compactShareRow.addListener) {
-        compactShareRow.addListener(syncNativeShareVisibility);
-      }
-      nativeBtn.addEventListener('click', function () {
-        navigator.share({
-          title: nativeBtn.dataset.shareTitle,
-          url: nativeBtn.dataset.shareUrl
-        }).catch(function () {});
-      });
+    // Listening (ListenBrainz)
+    var USER = 'MLM361';
+    var box = document.getElementById('iw-post-listens');
+    if (!box) return;
+    function rel(ts){
+      if (!ts) return '';
+      var diff = Math.floor(Date.now() / 1000) - ts;
+      if (diff < 60) return 'just now';
+      var m = Math.floor(diff / 60); if (m < 60) return m + 'm ago';
+      var h = Math.floor(m / 60); if (h < 24) return h + 'h ago';
+      var d = Math.floor(h / 24); if (d < 7) return d + 'd ago';
+      var w = Math.floor(d / 7); if (w < 5) return w + 'w ago';
+      return new Date(ts * 1000).toLocaleDateString();
     }
+    function esc(s){ var e = document.createElement('div'); e.textContent = (s == null ? '' : String(s)); return e.innerHTML; }
+    function clean(s){ return (s || '').replace(/^null:\s*/i, '').trim(); }
+    function cover(mm){ return (mm && mm.caa_release_mbid && mm.caa_id) ? 'https://coverartarchive.org/release/' + mm.caa_release_mbid + '/' + mm.caa_id + '-250.jpg' : null; }
+    function row(listen, isNow){
+      var t = listen.track_metadata || {}, mm = t.mbid_mapping || {}, src = cover(mm);
+      var img = src ? '<img class="iw-cover" src="' + esc(src) + '" alt="" loading="lazy" onerror="this.remove()">' : '';
+      var when = isNow ? '<span class="iw-now-tag">▶ Now playing</span>' : '<span class="iw-when">' + esc(rel(listen.listened_at)) + '</span>';
+      return '<div class="iw-listen"><span class="iw-cover-wrap"><span class="iw-cover-ph"><i class="fas fa-music"></i></span>' + img + '</span>'
+        + '<span class="iw-listen-meta"><div class="iw-track">' + esc(clean(t.track_name)) + '</div><div class="iw-artist">' + esc(t.artist_name || '') + '</div>' + when + '</span></div>';
+    }
+    function listensOf(j){ return (j && j.payload && j.payload.listens) ? j.payload.listens : []; }
+    function getJson(u){ return fetch(u).then(function (r){ return r.ok ? r.json() : null; }).catch(function (){ return null; }); }
+    Promise.all([
+      getJson('https://api.listenbrainz.org/1/user/' + USER + '/playing-now'),
+      getJson('https://api.listenbrainz.org/1/user/' + USER + '/listens?count=5')
+    ]).then(function (res){
+      var html = '';
+      var pn = listensOf(res[0]); if (pn.length) html += row(pn[0], true);
+      listensOf(res[1]).forEach(function (l){ html += row(l, false); });
+      box.innerHTML = html || '<p class="iw-listens-msg">No recent listens.</p>';
+    }).catch(function (){ box.innerHTML = '<p class="iw-listens-msg">Couldn\'t load listens right now.</p>'; });
   })();
 </script>
 {% endif %}
