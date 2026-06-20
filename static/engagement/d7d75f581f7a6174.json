@@ -1,0 +1,22 @@
+{
+  "type": "feed",
+  "canonical_url": "https://mitchelltribe.com/2026/03/22/watched-chief-of-station/",
+  "source_post_id": 1157,
+  "generated_at": "2026-06-20T15:59:33.366590+00:00",
+  "like_count": 1,
+  "reply_count": 0,
+  "children": [
+    {
+      "wm-property": "like-of",
+      "platform": "bluesky",
+      "wm-target": "https://mitchelltribe.com/2026/03/22/watched-chief-of-station/",
+      "url": "https://bsky.app/profile/collostinga.bsky.social",
+      "published": "2026-03-25T23:26:24.122Z",
+      "author": {
+        "name": "meme fella",
+        "photo": "https://cdn.bsky.app/img/avatar/plain/did:plc:kn47dplekttckc2bnpuwzqb3/bafkreiblwdhuhsfsqd4iuoduv5b6metj3orc7zoby6cvwy2shlgdfnpxuu",
+        "url": "https://bsky.app/profile/collostinga.bsky.social"
+      }
+    }
+  ]
+}

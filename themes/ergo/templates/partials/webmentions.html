@@ -88,6 +88,10 @@
 <script>
   (function () {
     var target = encodeURIComponent({{ page.permalink | json_encode | safe }});
+    // Syndication URLs for this post (Bluesky/Mastodon/Sharkey/Nostr). The
+    // self-hosted engagement index is keyed by these, so they resolve this
+    // post's likes/replies gathered from the native platforms.
+    var posseUrls = {% if page.extra.posse %}{{ page.extra.posse | json_encode | safe }}{% else %}{}{% endif %};
     var list = document.getElementById("webmentions-list");
     if (!list) return;
 
@@ -130,6 +134,12 @@
       return count === 1 ? singular : (pluralValue || singular + "s");
     }
 
+    function stripHtml(html) {
+      var d = document.createElement("div");
+      d.innerHTML = String(html || "");
+      return (d.textContent || d.innerText || "").trim();
+    }
+
     // Circular avatar (photo if present, else an initial). `cls` selects the
     // face size class. Wrapped in the author link when a URL is available.
     function avatar(mention, cls) {
@@ -162,7 +172,8 @@
         : "<span class='wm-card-name'>" + name + "</span>";
       var date = formatDate(mention.published);
       var dateEl = date ? "<span class='wm-card-date'>" + escapeHtml(date) + "</span>" : "";
-      var raw = (mention.content && mention.content.text) ? mention.content.text : "";
+      var c = mention.content || {};
+      var raw = c.text ? c.text : (c.html ? stripHtml(c.html) : "");
       var text = raw.length > 500 ? raw.slice(0, 500).trim() + "…" : raw;
       var contentEl = text ? "<p class='wm-card-content'>" + escapeHtml(text) + "</p>" : "";
       return "<article class='wm-card'>"
@@ -171,34 +182,78 @@
         + contentEl + "</article>";
     }
 
-    fetch("https://webmention.io/api/mentions.jf2?target=" + target + "&per-page=100")
+    // Collapse the same like/repost (by author) or reply (by url) when it
+    // arrives from BOTH webmention.io and the self-hosted engagement feed.
+    function dedupeChildren(items) {
+      var seen = {}, out = [];
+      items.forEach(function (m) {
+        var prop = m["wm-property"] || "mention-of";
+        var a = m.author || {};
+        var key;
+        if (prop === "like-of" || prop === "repost-of") {
+          key = prop + "|" + ((a.url || a.name || "").toLowerCase());
+        } else if (m.url) {
+          key = "reply|" + m.url;
+        } else { out.push(m); return; }
+        if (seen[key]) return;
+        seen[key] = 1;
+        out.push(m);
+      });
+      return out;
+    }
+
+    function renderAll(items) {
+      items = dedupeChildren(items);
+      var heading = document.getElementById("webmentions-heading");
+      if (heading && items.length) heading.textContent = "Webmentions (" + items.length + ")";
+      if (!items.length) return;
+
+      var replies = [], likes = [], reposts = [];
+      items.forEach(function (mention) {
+        var type = mention["wm-property"] || "mention-of";
+        if (type === "like-of") likes.push(mention);
+        else if (type === "repost-of") reposts.push(mention);
+        else if (type === "in-reply-to" || type === "mention-of") replies.push(mention);
+        else replies.push(mention);
+      });
+      replies.sort(function (a, b) { return new Date(a.published || 0) - new Date(b.published || 0); });
+
+      var html = "";
+      html += renderFacepile("♥", likes, "like");
+      html += renderFacepile("↻", reposts, "repost");
+      if (replies.length) {
+        html += "<h4 class='wm-replies-heading'>" + replies.length + " " + (replies.length === 1 ? "Reply" : "Replies") + "</h4>";
+        html += replies.map(renderReplyCard).join("");
+      }
+      if (html) list.innerHTML = html;
+    }
+
+    // Source 1: true inbound webmentions (webmention.io).
+    var wmFetch = fetch("https://webmention.io/api/mentions.jf2?target=" + target + "&per-page=100")
       .then(function (r) { return r.json(); })
-      .then(function (data) {
-        var items = data.children || [];
-        var heading = document.getElementById("webmentions-heading");
-        if (heading && items.length) heading.textContent = "Webmentions (" + items.length + ")";
-        if (!items.length) return;
+      .then(function (d) { return d.children || []; })
+      .catch(function () { return []; });
 
-        var replies = [], likes = [], reposts = [];
-        items.forEach(function (mention) {
-          var type = mention["wm-property"] || "mention-of";
-          if (type === "like-of") likes.push(mention);
-          else if (type === "repost-of") reposts.push(mention);
-          else if (type === "in-reply-to" || type === "mention-of") replies.push(mention);
-          else replies.push(mention);
-        });
-        replies.sort(function (a, b) { return new Date(a.published || 0) - new Date(b.published || 0); });
-
-        var html = "";
-        html += renderFacepile("♥", likes, "like");
-        html += renderFacepile("↻", reposts, "repost");
-        if (replies.length) {
-          html += "<h4 class='wm-replies-heading'>" + replies.length + " " + (replies.length === 1 ? "Reply" : "Replies") + "</h4>";
-          html += replies.map(renderReplyCard).join("");
+    // Source 2: self-hosted native-platform engagement, resolved from this
+    // post's syndication URLs via the committed engagement index.
+    var engFetch = fetch("/engagement/index.json")
+      .then(function (r) { return r.json(); })
+      .then(function (index) {
+        var urls = Object.keys(posseUrls || {}).map(function (k) { return posseUrls[k]; });
+        var slug = null;
+        for (var i = 0; i < urls.length; i++) {
+          if (index[urls[i]]) { slug = index[urls[i]]; break; }
         }
-        if (html) list.innerHTML = html;
+        if (!slug) return [];
+        return fetch("/engagement/" + slug + ".json")
+          .then(function (r) { return r.json(); })
+          .then(function (d) { return d.children || []; });
       })
-      .catch(function () {});
+      .catch(function () { return []; });
+
+    Promise.all([wmFetch, engFetch]).then(function (res) {
+      renderAll(res[0].concat(res[1]));
+    });
   })();
 </script>
 {% endif %}

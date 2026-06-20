@@ -1,0 +1,34 @@
+{
+  "type": "feed",
+  "canonical_url": "https://mitchelltribe.com/2026/01/03/spooky-full-moon-january/",
+  "source_post_id": 1139,
+  "generated_at": "2026-06-20T15:59:58.085738+00:00",
+  "like_count": 2,
+  "reply_count": 0,
+  "children": [
+    {
+      "wm-property": "like-of",
+      "platform": "bluesky",
+      "wm-target": "https://mitchelltribe.com/2026/01/03/spooky-full-moon-january/",
+      "url": "https://bsky.app/profile/go4know.com",
+      "published": "2026-01-07T18:52:44.297Z",
+      "author": {
+        "name": "Go4Know",
+        "photo": "https://cdn.bsky.app/img/avatar/plain/did:plc:ydqzin7kctnatbefaxcp6f7s/bafkreifge7ltji5svfns2duunvcszuwxeucdlwz7d2rdzobj4cbcruhqua",
+        "url": "https://bsky.app/profile/go4know.com"
+      }
+    },
+    {
+      "wm-property": "like-of",
+      "platform": "bluesky",
+      "wm-target": "https://mitchelltribe.com/2026/01/03/spooky-full-moon-january/",
+      "url": "https://bsky.app/profile/trentinozzy.bsky.social",
+      "published": "2026-01-03T20:00:03.651Z",
+      "author": {
+        "name": "Trentin Ozzy | Neuroscience",
+        "photo": "https://cdn.bsky.app/img/avatar/plain/did:plc:r5o2yzjcemhjf72vyzieqz2x/bafkreigk3eux2qjhl5pkdqnw2catsmxrai2bc3b62rkek2alekxpwqkvgi",
+        "url": "https://bsky.app/profile/trentinozzy.bsky.social"
+      }
+    }
+  ]
+}

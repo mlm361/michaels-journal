@@ -1,0 +1,49 @@
+{
+  "type": "feed",
+  "canonical_url": "https://mitchelltribe.com/2026/06/07/star-trek-outposts-unknown-pc/",
+  "source_post_id": 1228,
+  "generated_at": "2026-06-20T16:00:00.392352+00:00",
+  "like_count": 2,
+  "reply_count": 1,
+  "children": [
+    {
+      "wm-property": "like-of",
+      "platform": "bluesky",
+      "wm-target": "https://mitchelltribe.com/2026/06/07/star-trek-outposts-unknown-pc/",
+      "url": "https://bsky.app/profile/stoutposts.bsky.social",
+      "published": "2026-06-08T10:19:28.437Z",
+      "author": {
+        "name": "Star Trek: Outposts Unknown",
+        "photo": "https://cdn.bsky.app/img/avatar/plain/did:plc:oacup636yferhxysjhig4odp/bafkreifavclmbbl5cbetndibwb64jebbitmgpgcoucfsqyoim5mglga5le",
+        "url": "https://bsky.app/profile/stoutposts.bsky.social"
+      }
+    },
+    {
+      "wm-property": "like-of",
+      "platform": "bluesky",
+      "wm-target": "https://mitchelltribe.com/2026/06/07/star-trek-outposts-unknown-pc/",
+      "url": "https://bsky.app/profile/legulm.bsky.social",
+      "published": "2026-06-08T02:08:04.713Z",
+      "author": {
+        "name": "Guillaume Pierre",
+        "photo": "https://cdn.bsky.app/img/avatar/plain/did:plc:fx4yf7pmkldzla34woev3krs/bafkreicxstwanbd7mlhcvqkz6nsasrfwhrblu2pztdby24svqp3rjag4x4",
+        "url": "https://bsky.app/profile/legulm.bsky.social"
+      }
+    },
+    {
+      "wm-property": "in-reply-to",
+      "platform": "bluesky",
+      "wm-target": "https://mitchelltribe.com/2026/06/07/star-trek-outposts-unknown-pc/",
+      "url": "https://bsky.app/profile/stoutposts.bsky.social/post/3mnrhgjg3h22p",
+      "published": "2026-06-08T10:19:36.773Z",
+      "content": {
+        "html": "Time to lead your crew! 🖖"
+      },
+      "author": {
+        "name": "Star Trek: Outposts Unknown",
+        "photo": "https://cdn.bsky.app/img/avatar/plain/did:plc:oacup636yferhxysjhig4odp/bafkreifavclmbbl5cbetndibwb64jebbitmgpgcoucfsqyoim5mglga5le",
+        "url": "https://bsky.app/profile/stoutposts.bsky.social"
+      }
+    }
+  ]
+}
