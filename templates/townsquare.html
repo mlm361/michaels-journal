@@ -48,6 +48,11 @@
     serverOrigin: "{{ config.extra.townsquare.origin | safe }}",
     socketPath: "{{ config.extra.townsquare.socket_path | default(value='/live') | safe }}",
     {% if config.extra.townsquare.site_key %}siteKey: "{{ config.extra.townsquare.site_key | safe }}",{% endif %}
+    connections: [
+      { side: "left",  label: "Cauê Napier", url: "https://cauenapier.com/" },
+      { side: "right", label: "Kev Quirk",   url: "https://kevquirk.com/" },
+      { side: "left",  label: "Forking Mad", url: "https://forkingmad.com/" }
+    ],
     theme: "host"
   });
 </script>
