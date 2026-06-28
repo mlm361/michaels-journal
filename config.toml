@@ -98,11 +98,11 @@ color = "#FF5722"
 [extra.font_awesome]
 kit = "6ab1c683ab"
 
-# TownSquare realtime presence widget (self-hosted). Mounted site-wide in the footer.
-# site_key is only needed when ONE server hosts several registered sites; this is a
-# single-site self-host, so it stays blank (per the TownSquare self-hosting docs).
+# TownSquare realtime presence widget (self-hosted). Mounted site-wide in the footer
+# and as a full /townsquare/ page. site_key = the registered site on the instance;
+# with it set, the scene (benches/trees/birds) is managed live from /admin.
 [extra.townsquare]
 enabled = true
 origin = "https://townsquare.michaelreflects.com"
 socket_path = "/live"
-site_key = ""
+site_key = "site_wm6pfc0ogNcPkDau"
