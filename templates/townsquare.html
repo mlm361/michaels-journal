@@ -44,6 +44,7 @@
     serverOrigin: "{{ config.extra.townsquare.origin | safe }}",
     socketPath: "{{ config.extra.townsquare.socket_path | default(value='/live') | safe }}",
     {% if config.extra.townsquare.site_key %}siteKey: "{{ config.extra.townsquare.site_key | safe }}",{% endif %}
+    scene: { benches: 2, benchXs: [0.25, 0.7], trees: 2, treeXs: [0.12, 0.88], lamps: 2, lampXs: [0.4, 0.6], birds: 4 },
     theme: "host"
   });
 </script>
