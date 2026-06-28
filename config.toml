@@ -98,8 +98,11 @@ color = "#FF5722"
 [extra.font_awesome]
 kit = "6ab1c683ab"
 
-# TownSquare realtime presence widget (self-hosted). Mounted only on /townsquare/.
+# TownSquare realtime presence widget (self-hosted). Mounted site-wide in the footer.
+# site_key is only needed when ONE server hosts several registered sites; this is a
+# single-site self-host, so it stays blank (per the TownSquare self-hosting docs).
 [extra.townsquare]
 enabled = true
 origin = "https://townsquare.michaelreflects.com"
 socket_path = "/live"
+site_key = ""
