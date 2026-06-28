@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% import "macros.html" as macros %}
+
+{% block head_extra %}
+<style>
+  .townsquare-intro { opacity: 0.72; font-size: 0.95rem; margin: 0 0 1.5rem; line-height: 1.6; }
+  #townsquare-root {
+    min-height: 60vh;
+    border: 1px solid rgba(128,128,128,0.18);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .townsquare-closed { opacity: 0.6; font-style: italic; }
+</style>
+{% endblock head_extra %}
+
+{% block content %}
+<nav id="overlord" class="overlord">
+  {% set base_url = get_url(path="/", lang=lang) %}
+  {{ macros::mini_logo(classes="", title=config.title, siteurl=base_url, logourl=config.extra.profile) }}
+</nav>
+
+<section class="post_container">
+  <article>
+    <h1 class="article_title">🏛️ Town Square</h1>
+    <div class="townsquare-intro">{{ page.content | safe }}</div>
+
+    {% if config.extra.townsquare.enabled %}
+    <link rel="stylesheet" href="{{ config.extra.townsquare.origin | safe }}/widget.css" />
+    <div id="townsquare-root"></div>
+    <script type="module">
+      import { mountTownSquare } from "{{ config.extra.townsquare.origin | safe }}/townsquare.mjs";
+      mountTownSquare(document.getElementById("townsquare-root"), {
+        serverOrigin: "{{ config.extra.townsquare.origin | safe }}",
+        socketPath: "{{ config.extra.townsquare.socket_path | default(value='/live') | safe }}",
+      });
+    </script>
+    {% else %}
+    <p class="townsquare-closed">The town square is closed at the moment.</p>
+    {% endif %}
+  </article>
+</section>
+{% endblock content %}

@@ -97,3 +97,9 @@ color = "#FF5722"
 
 [extra.font_awesome]
 kit = "6ab1c683ab"
+
+# TownSquare realtime presence widget (self-hosted). Mounted only on /townsquare/.
+[extra.townsquare]
+enabled = true
+origin = "https://townsquare.michaelreflects.com"
+socket_path = "/live"
