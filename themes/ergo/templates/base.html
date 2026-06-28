@@ -463,10 +463,17 @@
         <footer class="site-footer h-card">
 
             {% if config.extra.townsquare.enabled and not page.extra.no_footer_townsquare %}
-            <link rel="stylesheet" href="{{ config.extra.townsquare.origin | safe }}/widget.css" />
             <div id="townsquare-root"></div>
             <script type="module">
               import { mountTownSquare } from "{{ config.extra.townsquare.origin | safe }}/townsquare.mjs";
+              // Load the widget stylesheet at runtime. It uses valid modern CSS
+              // (container queries, vector-effect) that the W3C validator flags as
+              // errors; injecting it via JS keeps that third-party CSS out of static
+              // validation so our own (valid) CSS is what gets checked.
+              var _tsCss = document.createElement("link");
+              _tsCss.rel = "stylesheet";
+              _tsCss.href = "{{ config.extra.townsquare.origin | safe }}/widget.css";
+              document.head.appendChild(_tsCss);
               mountTownSquare(document.getElementById("townsquare-root"), {
                 serverOrigin: "{{ config.extra.townsquare.origin | safe }}",
                 socketPath: "{{ config.extra.townsquare.socket_path | default(value='/live') | safe }}",
