@@ -56,6 +56,12 @@ The site is made from a few small pieces working together.
 </section>
 
 <section class="colophon-card">
+  <h3>Town Square</h3>
+  <p>At the bottom of every post, and on its own <a href="/townsquare/">Town Square</a> page, there is a small live park where anyone visiting at the same time shows up as a little figure. You can wander around, sit on a bench, and chat. It is a playful bit of real-time presence on an otherwise quiet static site.</p>
+  <p>It runs on TownSquare, an open-source presence widget that I self-host, so the realtime part stays under my own control. If it ever goes offline, the rest of the site is unaffected and the element simply hides itself.</p>
+</section>
+
+<section class="colophon-card">
   <h3>Built With</h3>
   <p class="colophon-card-signoff">Built with ❤️ using <a href="https://www.getzola.org/">Zola</a></p>
 </section>
@@ -125,6 +131,7 @@ This site exists because of the work of other people whose tools made it possibl
 * The Ergo theme by Andrew Plaza, which I have heavily customized.
 * webmention.io by Aaron Parecki.
 * Bridgy Fed by Ryan Barrett and Anuj Ahooja.
+* TownSquare by Cauê Napier, the open-source live-presence widget that powers the town square.
 * Cloudflare Pages for hosting and deployment.
 * The wider IndieWeb community for continuing to keep the small web alive. Special mention goes to Manton Reece of Micro.blog and Vincent Ritter of Scribbles.page, whose IndieWeb principles helped guide the structure of this website.
 * AI, including ChatGPT, Claude, Codex, and other cloud or local AI models, helps me maintain this site for full transparency, but it does not publish any content that is not made by me. These tools help with theming, maintenance, editing, proofreading, alt text, and feature image creation. But I cannot stress this enough: they make no posts of their own. All posts are mine and mine alone.

@@ -22,7 +22,8 @@
     border-bottom: 1px solid rgba(128,128,128,0.18);
     overflow: hidden;
   }
-  .townsquare-closed { text-align: center; opacity: 0.6; font-style: italic; margin: 3rem 0; }
+  .townsquare-closed,
+  .townsquare-offline { text-align: center; opacity: 0.6; font-style: italic; margin: 3rem 0; }
 </style>
 {% endblock head_extra %}
 
@@ -40,6 +41,7 @@
 {% if config.extra.townsquare.enabled %}
 <link rel="stylesheet" href="{{ config.extra.townsquare.origin | safe }}/widget.css" />
 <div id="townsquare-root"></div>
+<p class="townsquare-offline" hidden>The town square is offline right now. Check back soon.</p>
 <script type="module">
   import { mountTownSquare } from "{{ config.extra.townsquare.origin | safe }}/townsquare.mjs";
   mountTownSquare(document.getElementById("townsquare-root"), {

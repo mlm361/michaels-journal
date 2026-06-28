@@ -476,6 +476,26 @@
             </script>
             {% endif %}
 
+            {% if config.extra.townsquare.enabled %}
+            {# Graceful degradation: if the self-hosted TownSquare can't be reached
+               (UM690/instance down), the widget never mounts. After a grace period,
+               collapse the empty box and reveal any offline note. The rest of the
+               site is on Cloudflare Pages and is unaffected. #}
+            <script>
+              (function () {
+                var root = document.getElementById('townsquare-root');
+                if (!root) return;
+                window.setTimeout(function () {
+                  if (root.childElementCount === 0) {
+                    root.style.display = 'none';
+                    var msg = document.querySelector('.townsquare-offline');
+                    if (msg) msg.hidden = false;
+                  }
+                }, 8000);
+              })();
+            </script>
+            {% endif %}
+
             <p class="footer-line">© 2001–<span id="currentYear"></span> <span class="p-name">Michael Mitchell</span></p>
             <a class="u-url u-uid mf2-hidden" rel="me" href="{{ config.base_url | safe }}/">Michael Mitchell</a>
 
