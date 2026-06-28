@@ -379,6 +379,28 @@
           .iw-listens-foot a { color: inherit; }
         </style>
 
+        {# TownSquare park palette — overrides the default beige/grey scene so the
+           square reads as a green park. Applies to both the footer and full-page
+           squares. The attribute selector matches the widget's own specificity. #}
+        <style>
+          #townsquare-root,
+          #townsquare-root[data-townsquare-theme] {
+            --scene: #d8ebc6;
+            --scene-edge: #c6e0b0;
+            --ground: rgba(72, 120, 56, 0.32);
+            --tree-canopy: #4f9d4f;
+            --tree-trunk: #7a5230;
+          }
+          html.theme-dark #townsquare-root,
+          html.theme-dark #townsquare-root[data-townsquare-theme] {
+            --scene: #1e2a1c;
+            --scene-edge: #283526;
+            --ground: rgba(150, 200, 140, 0.20);
+            --tree-canopy: #3f7d3f;
+            --tree-trunk: #5b4026;
+          }
+        </style>
+
         {% block head_extra %}{% endblock head_extra %}
     </head>
 
