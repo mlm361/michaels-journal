@@ -443,6 +443,12 @@
           #townsquare-root#townsquare-root .townsquare__ground {
             background: var(--ground);
           }
+          /* Show the jump (up arrow) + high-five (hands) action buttons on desktop
+             too. The widget hides them on fine pointers by default (touch-only),
+             but we want them clickable everywhere, not just via the J/H keys. */
+          #townsquare-root#townsquare-root .townsquare__actions {
+            display: flex !important;
+          }
         </style>
 
         {% block head_extra %}{% endblock head_extra %}
