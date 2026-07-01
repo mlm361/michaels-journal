@@ -446,18 +446,14 @@
           /* Show the jump (up arrow) + high-five (hands) action buttons on desktop
              too. The widget hides them on fine pointers by default (touch-only),
              but we want them clickable everywhere, not just via the J/H keys. */
-          #townsquare-root#townsquare-root .townsquare__actions {
-            display: flex !important;
-          }
-          /* Mobile un-squash: on touch the widget shows a bottom bar (chat input
-             + rename pencil). The floating jump/high-five buttons default to the
-             widget's bottom-right, which lands on top of that bar and crowds it
-             on a narrow phone (input + pencil + 2 buttons all on one line). Lift
-             them above the toolbar reserve so they float over the scene's
-             bottom-right instead, leaving the input bar uncramped. */
-          @media (pointer: coarse) {
+          /* Show the jump / high-five action buttons on DESKTOP (fine pointers)
+             only. The widget hides them there by default (mouse uses the J/H
+             keys); touch renders its own controls. Scoping to fine pointers keeps
+             them off the small mobile scene, where forcing them on just piled an
+             extra floating button onto an already-cramped park. */
+          @media (pointer: fine) {
             #townsquare-root#townsquare-root .townsquare__actions {
-              bottom: calc(var(--ts-toolbar-reserve, 80px) + 12px);
+              display: flex !important;
             }
           }
         </style>
