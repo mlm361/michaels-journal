@@ -449,6 +449,17 @@
           #townsquare-root#townsquare-root .townsquare__actions {
             display: flex !important;
           }
+          /* Mobile un-squash: on touch the widget shows a bottom bar (chat input
+             + rename pencil). The floating jump/high-five buttons default to the
+             widget's bottom-right, which lands on top of that bar and crowds it
+             on a narrow phone (input + pencil + 2 buttons all on one line). Lift
+             them above the toolbar reserve so they float over the scene's
+             bottom-right instead, leaving the input bar uncramped. */
+          @media (pointer: coarse) {
+            #townsquare-root#townsquare-root .townsquare__actions {
+              bottom: calc(var(--ts-toolbar-reserve, 80px) + 12px);
+            }
+          }
         </style>
 
         {% block head_extra %}{% endblock head_extra %}
