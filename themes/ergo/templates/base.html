@@ -456,6 +456,21 @@
               display: flex !important;
             }
           }
+          /* Mobile fit: the widget draws scene props at fixed px positioned by
+             % of stage width, so a narrow phone column packs them into
+             collision. Lay the FOOTER scene out at a fixed desktop-like width
+             and scale the whole widget down to fit — props keep their spacing
+             and just render smaller. The scale factor is computed in JS (CSS
+             can't divide viewport width by a px logical width). Scoped to
+             .ts-scale so the dedicated /townsquare/ page is unaffected. */
+          .ts-scale { width: 100%; overflow: hidden; }
+          @media (max-width: 640px) {
+            .ts-scale #townsquare-root#townsquare-root {
+              width: 640px;
+              transform-origin: top left;
+              will-change: transform;
+            }
+          }
         </style>
 
         {% block head_extra %}{% endblock head_extra %}
@@ -476,7 +491,9 @@
         <footer class="site-footer h-card">
 
             {% if config.extra.townsquare.enabled and not page.extra.no_footer_townsquare %}
-            <div id="townsquare-root"></div>
+            <div class="ts-scale">
+              <div id="townsquare-root"></div>
+            </div>
             <script type="module">
               import { mountTownSquare } from "{{ config.extra.townsquare.origin | safe }}/townsquare.mjs";
               // Load the widget stylesheet at runtime. It uses valid modern CSS
@@ -498,6 +515,37 @@
                 ],
                 theme: "host"
               });
+            </script>
+            <script>
+              // Fit the footer TownSquare on phones: lay it out at a fixed
+              // desktop-like width (so scene props don't collide) and scale the
+              // whole widget down to the available width. Only kicks in <=640px.
+              (function () {
+                var LOGICAL_WIDTH = 640;
+                var wrap = document.querySelector('.ts-scale');
+                var root = wrap && wrap.querySelector('#townsquare-root');
+                if (!wrap || !root) return;
+                function fit() {
+                  if (window.innerWidth > 640) {
+                    root.style.transform = '';
+                    wrap.style.height = '';
+                    return;
+                  }
+                  var avail = wrap.clientWidth || window.innerWidth;
+                  var scale = avail / LOGICAL_WIDTH;
+                  root.style.transform = 'scale(' + scale + ')';
+                  // offsetHeight is the unscaled layout height; reserve the
+                  // scaled height so there is no empty gap below the widget.
+                  wrap.style.height = (root.offsetHeight * scale) + 'px';
+                }
+                window.addEventListener('resize', fit);
+                window.addEventListener('orientationchange', fit);
+                // The widget mounts asynchronously and changes height as it
+                // renders, so refit on resize + whenever its size changes.
+                if (window.ResizeObserver) { new ResizeObserver(fit).observe(root); }
+                fit();
+                [200, 600, 1500, 3000].forEach(function (t) { window.setTimeout(fit, t); });
+              })();
             </script>
             {% endif %}
 
