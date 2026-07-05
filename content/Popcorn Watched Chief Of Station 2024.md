@@ -2,17 +2,18 @@
 title = "🍿 Watched Chief of Station (2024)"
 date = "2026-03-22T00:26:45+00:00"
 draft = false
+
 [extra]
 card_fit = "contain"
+
 [taxonomies]
 tags = [ "review", "movies",]
 
 [extra.posse]
 mastodon = "https://mitchelltribe.social/@michael/116270930983460345"
-bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mhmpdx2hfr2o"
-sharkey = "https://mitchelltribe.rodeo/notes/ak4tkcrxufgb0004"
-nostr = "https://jumble.social/nevent1qqst5mqy2mgtwh79vrmwy5ntht7e5c8ex294smjd4udwa4zpmkghfxqpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflclejck7"
-
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mpvvvlzdjm25"
+sharkey = "https://mitchelltribe.rodeo/notes/aobityzis6mo00lc"
+nostr = "https://jumble.social/nevent1qqsd0jdc0x92a9jp8he9tz9rdak62yjux7r3em29exew2379s2zykqspr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflccnh8qr"
 +++
 ⚠️ **SPOILER WARNING:** MAJOR SPOILERS
 
