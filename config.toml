@@ -26,11 +26,12 @@ profile = "avatar.png"
 color_themes = ["default", "dark"]
 country_flags = false
 
-# Webmention receiving endpoint.
-# To cut over to webmention.io: set provider = "webmentions_io" and update
-# endpoint to your webmention.io URL (e.g. https://webmention.io/michaels-journal.pages.dev/webmention)
+# Webmention receiving endpoint — self-hosted edge (Cloudflare Worker ->
+# tunnel -> RSS Processor receiver -> Web Activity Hub inbox), live 2026-07-05.
+# webmention_provider stays "webmentions_io" so the display partial keeps
+# showing historical mentions fetched from webmention.io.
 webmention_provider = "webmentions_io"
-webmention_endpoint  = "https://webmention.io/michaelreflects.com/webmention"
+webmention_endpoint  = "https://michaelreflects.com/webmention"
 
 [[extra.socials]]
 icon = "envelope"
