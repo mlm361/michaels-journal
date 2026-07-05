@@ -10,6 +10,12 @@ tags = [ "movies", "review",]
 [extra]
 image = "https://media.mitchelltribe.xyz/gallery/posts/tmdb_c95d5ed8d4aa.avif"
 card_fit = "contain"
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/116865784482043683"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mpuupzd6al2b"
+sharkey = "https://mitchelltribe.rodeo/notes/aoaxmhhis6mo00km"
+nostr = "https://jumble.social/nevent1qqsprzxe6lfggvnh0hnzcqz3ped57ws872nz4r849as59m28n2v725qpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflc4323vz"
 +++
 
 <p class="p-summary mf2-hidden" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">⚠️ **SPOILER WARNING:** FULL SPOILERS **My Rating:** ⭐⭐⭐½ (3.5/5 stars) --- Okay, first thing: overall, it wasn&#x27;t a bad movie. The pacing drags at the beginning, and several scenes could have been explained more clearly or cut shorter...</p>
