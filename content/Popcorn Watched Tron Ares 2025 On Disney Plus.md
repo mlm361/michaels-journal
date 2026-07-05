@@ -9,8 +9,7 @@ tags = [ "review", "movies",]
 
 [extra.posse]
 mastodon = "https://mitchelltribe.social/@michael/115919827789895078"
-sharkey = "https://mitchelltribe.rodeo/notes/aho7wh52ac26000v"
-nostr = "https://jumble.social/nevent1qqsg7gl6287p4fs8xdu0ujecngdmtwa5sw0glg7e02gpdvj7u82ummgpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflc64e8ge"
+nostr = "https://verify.mitchelltribe.com/note.html#e553a5b019a2bc773523ebc1c0b841c9467b4d9f489035d47df36f4876ceee89"
 
 +++
 ⚠️ **SPOILER WARNING:** FULL SPOILERS

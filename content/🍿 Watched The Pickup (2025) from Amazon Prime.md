@@ -12,7 +12,6 @@ tags = [ "review", "movies", "streaming",]
 [extra.posse]
 mastodon = "https://mitchelltribe.social/@michael/115839240555583152"
 bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mbmynucvjo2s"
-sharkey = "https://mitchelltribe.rodeo/notes/aobirtohs6mo00l4"
 nostr = "https://jumble.social/nevent1qqsvrakv2kzvyj59jjd0u5jujnl9zttuep74w6ej4pcl9vjj6ewvs3cpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcxnxu39"
 +++
 ⚠️ **SPOILER WARNING:** MILD SPOILERS
