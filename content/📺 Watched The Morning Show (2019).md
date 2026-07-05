@@ -2,11 +2,18 @@
 title = "📺 Watched The Morning Show (2019)"
 date = "2025-12-19T00:05:11+00:00"
 draft = false
+
 [extra]
 card_fit = "contain"
+
 [taxonomies]
 tags = [ "review", "tv", "streaming",]
 
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/116868109478475720"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mpvvrdxfhi2e"
+sharkey = "https://mitchelltribe.rodeo/notes/aobiqvlcs6mo00l0"
+nostr = "https://jumble.social/nevent1qqs2n3jnl6gt4yp70hudxephnppffhy3hfuca308guvdsfkmnnxpa8spr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflc4x87th"
 +++
 ⚠️ **SPOILER WARNING:** MINOR SPOILERS
 
