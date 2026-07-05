@@ -2,17 +2,18 @@
 title = "🍿 Watched The Pickup (2025) from Amazon Prime"
 date = "2026-01-04T17:45:42+00:00"
 draft = false
+
 [extra]
 card_fit = "contain"
+
 [taxonomies]
 tags = [ "review", "movies", "streaming",]
 
 [extra.posse]
 mastodon = "https://mitchelltribe.social/@michael/115839240555583152"
 bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mbmynucvjo2s"
-sharkey = "https://mitchelltribe.rodeo/notes/ah3vsilb3cnr000h"
-nostr = "https://jumble.social/nevent1qqsvgjy7g5znlgzfh2grt3x322zljdxndxqnaj5qx9a59kj3r0zg08qpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflc3mzsvr"
-
+sharkey = "https://mitchelltribe.rodeo/notes/aobirtohs6mo00l4"
+nostr = "https://jumble.social/nevent1qqsvrakv2kzvyj59jjd0u5jujnl9zttuep74w6ej4pcl9vjj6ewvs3cpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcxnxu39"
 +++
 ⚠️ **SPOILER WARNING:** MILD SPOILERS
 
