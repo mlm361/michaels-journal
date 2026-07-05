@@ -2,17 +2,18 @@
 title = "🍿Watched Civil War (2024)"
 date = "2026-04-05T14:27:12+00:00"
 draft = false
+
 [extra]
 card_fit = "contain"
+
 [taxonomies]
 tags = [ "movies", "opinion", "review",]
 
 [extra.posse]
 mastodon = "https://mitchelltribe.social/@michael/116353508021199751"
-bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mireto7wme22"
-sharkey = "https://mitchelltribe.rodeo/notes/akpnr2hev7ed000b"
-nostr = "https://jumble.social/nevent1qqstkg0mee5kzwdrf7t3ngsv53qfpkzr7nd4j6rf5yq6vctxcks0sdqpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcnuvr5e"
-
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mpvvwhypxy2e"
+sharkey = "https://mitchelltribe.rodeo/notes/aobiull4s6mo00le"
+nostr = "https://jumble.social/nevent1qqs8kylj3jetgxwmsum4kqjxlpkpypdg8ayywf7j4gcca0tlv4w797gpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflc4mshtn"
 +++
 ⚠️ **SPOILER WARNING:** FULL SPOILERS
 
