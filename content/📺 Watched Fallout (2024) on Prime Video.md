@@ -2,16 +2,17 @@
 title = "📺 Watched Fallout (2024) on Prime Video"
 date = "2026-02-08T17:37:09+00:00"
 draft = false
+
 [extra]
 card_fit = "contain"
+
 [taxonomies]
 tags = [ "review", "streaming", "tv",]
 
 [extra.posse]
 mastodon = "https://mitchelltribe.social/@michael/116037402050920260"
-sharkey = "https://mitchelltribe.rodeo/notes/aihw104jjemt000b"
-nostr = "https://jumble.social/nevent1qqs8u59uprnf4x9rhgc6lff8vn80v8mtk27qj50dsjjzjt3ea2u7rxcpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflceqtc06"
-
+sharkey = "https://mitchelltribe.rodeo/notes/aobitfiqs6mo00la"
+nostr = "https://jumble.social/nevent1qqstrhnu9lflykf9ehjqgffu97rt8qep9ta4z0m6z3hzafe7gql4sfqpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcrx29ul"
 +++
 ⚠️ **SPOILER WARNING:** MAJOR SPOILERS
 
