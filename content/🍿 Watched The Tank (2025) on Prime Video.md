@@ -2,16 +2,17 @@
 title = "🍿 Watched The Tank (2025) on Prime Video"
 date = "2026-01-22T14:41:58+00:00"
 draft = false
+
 [extra]
 card_fit = "contain"
+
 [taxonomies]
 tags = [ "review", "movies",]
 
 [extra.posse]
 mastodon = "https://mitchelltribe.social/@michael/115923792651646500"
-sharkey = "https://mitchelltribe.rodeo/notes/ahp7x6lxac26000x"
-nostr = "https://jumble.social/nevent1qqs9v7a04zrgfuw98vh9s5yapvza3sumuzrr4tgqvyjx2xw277v2n9cpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflccp9ut3"
-
+sharkey = "https://mitchelltribe.rodeo/notes/aobisvw8s6mo00l8"
+nostr = "https://jumble.social/nevent1qqs2v3yjnddqndrq7dec4hm3ytz5d6g95vvf7fmzfktdw9fhjveyz7gpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcge4pqk"
 +++
 ⚠️ **SPOILER WARNING:** FULL SPOILERS
 
