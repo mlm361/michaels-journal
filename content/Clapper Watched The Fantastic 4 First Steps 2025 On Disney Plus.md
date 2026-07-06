@@ -10,7 +10,6 @@ tags = [ "review", "movies", "streaming",]
 [extra.posse]
 mastodon = "https://mitchelltribe.social/@michael/115789586695178659"
 bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mawwzv5fdp2s"
-nostr = "https://verify.mitchelltribe.com/note.html#a1b2792a6ea9bd2ed87135ff11762c7b6d2ee0d607dacec430255cfdc43b2072"
 
 +++
 ⚠️ **SPOILER WARNING:** MILD SPOILERS

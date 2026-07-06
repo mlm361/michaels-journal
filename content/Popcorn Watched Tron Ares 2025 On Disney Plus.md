@@ -9,7 +9,6 @@ tags = [ "review", "movies",]
 
 [extra.posse]
 mastodon = "https://mitchelltribe.social/@michael/115919827789895078"
-nostr = "https://verify.mitchelltribe.com/note.html#e553a5b019a2bc773523ebc1c0b841c9467b4d9f489035d47df36f4876ceee89"
 
 +++
 ⚠️ **SPOILER WARNING:** FULL SPOILERS

@@ -9,8 +9,6 @@ card_fit = "contain"
 [taxonomies]
 tags = [ "review", "tv", "streaming",]
 
-[extra.posse]
-nostr = "https://jumble.social/nevent1qqs2n3jnl6gt4yp70hudxephnppffhy3hfuca308guvdsfkmnnxpa8spr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflc4x87th"
 +++
 ⚠️ **SPOILER WARNING:** MINOR SPOILERS
 

@@ -11,7 +11,6 @@ tags = [ "review", "movies",]
 
 [extra.posse]
 mastodon = "https://mitchelltribe.social/@michael/116469486711579057"
-nostr = "https://jumble.social/nevent1qqsgt5dc7hmg335s93688l07fhemw93jurewww9tdplal2mzh7eeazgpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcz7k3xs"
 +++
 ⚠️ **SPOILER WARNING:** MILD SPOILERS
 
