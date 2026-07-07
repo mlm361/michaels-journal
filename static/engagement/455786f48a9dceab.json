@@ -1,21 +1,8 @@
 {
   "canonical_url": "https://mitchelltribe.com/2026/01/18/watched-tron-ares-on-disney/",
-  "children": [
-    {
-      "author": {
-        "name": "Gavin B",
-        "photo": "https://mitchelltribe.social/avatars/original/missing.png",
-        "url": "https://pixelfed.social/Ghostflaneur"
-      },
-      "platform": "mastodon",
-      "published": null,
-      "url": "https://pixelfed.social/Ghostflaneur",
-      "wm-property": "like-of",
-      "wm-target": "https://mitchelltribe.com/2026/01/18/watched-tron-ares-on-disney/"
-    }
-  ],
-  "generated_at": "2026-07-05T15:50:04.693692+00:00",
-  "like_count": 1,
+  "children": [],
+  "generated_at": "2026-07-07T02:27:12.237939+00:00",
+  "like_count": 0,
   "reply_count": 0,
   "source_post_id": 1143,
   "type": "feed",
