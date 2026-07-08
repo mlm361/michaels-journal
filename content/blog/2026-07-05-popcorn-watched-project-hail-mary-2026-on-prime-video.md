@@ -3,7 +3,8 @@ title = "🍿 Watched Project Hail Mary (2026) on Prime Video"
 date = "2026-07-05T01:45:44-04:00"
 draft = false
 description = "⚠️ **SPOILER WARNING:** FULL SPOILERS **My Rating:** ⭐⭐⭐½ (3.5/5 stars) --- Okay, first thing: overall, it wasn't a bad movie. The pacing drags at the beginning, and several scenes could have been explained more clearly or cut shorter..."
-slug = "watched-project-hail-mary-2026-on-prime-video"
+slug = "popcorn-watched-project-hail-mary-2026-on-prime-video"
+aliases = ["/blog/watched-project-hail-mary-2026-on-prime-video/"]
 
 [taxonomies]
 tags = [ "review", "movies",]
