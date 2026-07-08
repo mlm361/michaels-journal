@@ -1,0 +1,39 @@
+name: Verify standard.site tags
+
+# Confirms every document in data/standard_site.json actually resolves to a live
+# michaelreflects.com page carrying the matching <link rel="site.standard.document">
+# and <link rel="site.standard.publication"> tags. Catches the silent failure where
+# a post's slug drifts off the URL Bridgy Fed bridged, so the page stops emitting
+# the verification tag and standard.site readers (pckt/docs.surf/Leaflet) can no
+# longer verify the doc.
+#
+# Runs at :30 — half an hour after refresh-standard-site.yml (:00) commits the map,
+# so Cloudflare Pages has redeployed before we check the live pages. A failure turns
+# the run red (GitHub emails on failed scheduled workflows). Read-only, no secrets.
+
+on:
+  schedule:
+    - cron: '30 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-standard-site
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Verify live pages expose their standard.site tags
+        run: python tools/verify_standard_site.py
