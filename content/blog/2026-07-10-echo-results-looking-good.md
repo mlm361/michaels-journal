@@ -10,6 +10,12 @@ tags = [ "faith", "health", "personal",]
 
 [extra]
 image = "https://media.mitchelltribe.xyz/images/2026/07/542d65e5_d1f0b697f149.avif"
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/116899436571398080"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mqdsxaahct24"
+sharkey = "https://mitchelltribe.rodeo/notes/aojfcdisz658025i"
+nostr = "https://jumble.social/nevent1qqsg0cddhf5qc28gy004qhmumwat08eh82206wwjd6jgaeqm5urxe6gpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflczu8n4s"
 +++
 
 <p class="p-summary mf2-hidden" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">I wanted to share a long-overdue health update about what has happened this year and why I can finally talk about it. I recently had my second Camzyos cardiology echo and doctor’s visit of the year. I normally go every six months, and...</p>
