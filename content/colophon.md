@@ -1,6 +1,6 @@
 +++
 title = "Colophon"
-date = 2026-05-19
+date = 2026-07-13
 template = "page.html"
 [extra]
 no_kudos = true
@@ -70,9 +70,13 @@ The site is made from a few small pieces working together.
 
 ## IndieWeb
 
-The site leans into IndieWeb ideas. Posts include h-entry style markup, the Atom feed lives at /atom.xml, the JSON Feed lives at /feed.json, and replies and likes can come in through webmention.io.
+The site leans into IndieWeb ideas. Posts include h-entry style markup, the Atom feed lives at /atom.xml, and the JSON Feed lives at /feed.json.
 
-Webmention.io is a hosted service for receiving webmentions, which makes it useful for static personal sites that want IndieWeb interactions without building all of that infrastructure from scratch.
+Webmentions are now received by an endpoint I host myself. When someone links to a post and sends a webmention, it lands on my own server and flows into my personal inbox app, so replies and likes reach me without a third-party service in the middle. webmention.io, the hosted service that handled this job for years, still serves the older mentions that live there, and both sources appear together under each post.
+
+Reactions to the syndicated copies of my posts on Mastodon, Bluesky, Sharkey, and Nostr are gathered by my own engagement sync and mirrored back onto each post here, so the conversation around a post stays visible on the canonical page.
+
+There is also a Gemini capsule at gemini://gemini.michaelreflects.com for readers who prefer the quietest corner of the small web.
 
 In the future, I might implement a webring. 
 
@@ -129,9 +133,11 @@ This site exists because of the work of other people whose tools made it possibl
 
 * Zola by Vincent Prouillet.
 * The Ergo theme by Andrew Plaza, which I have heavily customized.
-* webmention.io by Aaron Parecki.
+* webmention.io by Aaron Parecki, which received this site's webmentions for years and still serves the older ones.
 * Bridgy Fed by Ryan Barrett and Anuj Ahooja.
 * TownSquare by Cauê Napier, the open-source live-presence widget that powers the town square.
+* Tinylytics by Vincent Ritter, which powers the lightweight analytics, the kudos hearts, and the footer counters.
+* Simple Icons, whose logo set appears on the share buttons under each post.
 * Cloudflare Pages for hosting and deployment.
 * The wider IndieWeb community for continuing to keep the small web alive. Special mention goes to Manton Reece of Micro.blog and Vincent Ritter of Scribbles.page, whose IndieWeb principles helped guide the structure of this website.
 * AI, including ChatGPT, Claude, Codex, and other cloud or local AI models, helps me maintain this site for full transparency, but it does not publish any content that is not made by me. These tools help with theming, maintenance, editing, proofreading, alt text, and feature image creation. But I cannot stress this enough: they make no posts of their own. All posts are mine and mine alone.
