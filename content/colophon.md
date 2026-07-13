@@ -141,6 +141,8 @@ This site exists because of the work of other people whose tools made it possibl
 * TownSquare by Cauê Napier, the open-source live-presence widget that powers the town square.
 * Tinylytics by Vincent Ritter, which powers the lightweight analytics, the kudos hearts, and the footer counters.
 * Simple Icons, whose logo set appears on the share buttons under each post.
+* Dave Winer, whose work on RSS gave the web its feeds and made a site like this one worth following, and Sam Ruby, Mark Nottingham, and Robert Sayre, whose work with the IETF community produced the Atom format this site publishes.
+* JSON Feed by Brent Simmons and Manton Reece, the other feed this site publishes.
 * Cloudflare Pages for hosting and deployment.
 * The wider IndieWeb community for continuing to keep the small web alive. Special mention goes to Manton Reece of Micro.blog and Vincent Ritter of Scribbles.page, whose IndieWeb principles helped guide the structure of this website.
 * AI, including ChatGPT, Claude, Codex, and other cloud or local AI models, helps me maintain this site for full transparency, but it does not publish any content that is not made by me. These tools help with theming, maintenance, editing, proofreading, alt text, and feature image creation. But I cannot stress this enough: they make no posts of their own. All posts are mine and mine alone.
