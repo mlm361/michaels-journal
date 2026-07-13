@@ -106,7 +106,7 @@ I would rather the validators be bored than have the site break in small, avoida
 
 A recent cleanup fixed a number of long-standing HTML and CSS issues, including missing attributes, duplicate values, outdated embed markup, and other small errors that are easy to live with until you finally stop ignoring them.
 
-The validation links below point to live checks for HTML, CSS, feed output, and security observations. They are there partly for transparency and partly because I like being standardized and conforming to established standards.
+The validation links below point to live checks for HTML, CSS, feed output, security observations, and the standard.site records that connect posts here to the AT Protocol. They are there partly for transparency and partly because I like being standardized and conforming to established standards.
 
 <div class="badge-wall" aria-label="Site validation and standards badges">
   <a class="status-badge status-w3c" href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmichaelreflects.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en">
@@ -123,6 +123,9 @@ The validation links below point to live checks for HTML, CSS, feed output, and 
   </a>
   <a class="status-badge status-check" href="https://indiewebify.me/">
     <span>IndieWeb</span><strong>Ready</strong>
+  </a>
+  <a class="status-badge status-check" href="https://site-validator.fly.dev/">
+    <span>Standard.site</span><strong>Validated</strong>
   </a>
 </div>
 
