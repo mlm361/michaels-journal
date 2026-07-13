@@ -3,6 +3,8 @@ date = "2004-05-28T13:15:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 108
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2004/05/28/my-sister-had-another-baby/"
 +++

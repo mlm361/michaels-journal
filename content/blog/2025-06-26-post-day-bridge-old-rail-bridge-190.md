@@ -4,6 +4,8 @@ date = "2025-06-26T07:30:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 10
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/06/26/day-bridge-old-rail-bridge/"
 +++

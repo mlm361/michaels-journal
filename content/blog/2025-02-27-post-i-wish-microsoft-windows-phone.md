@@ -3,6 +3,8 @@ date = "2025-02-27T10:22:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 36
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/02/20/i-wish-microsoft-windows-phone/"
 +++

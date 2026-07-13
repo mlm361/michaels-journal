@@ -3,6 +3,8 @@ date = "2002-10-03T18:10:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 23
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2002/10/03/almost-completely-recovered-for-my/"
 +++

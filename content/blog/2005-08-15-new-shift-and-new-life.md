@@ -4,6 +4,8 @@ draft = false
 title = "New Shift and New Life"
 
 [extra]
+stats_word_count = 40
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2005/08/15/new-shift-and-new-life/"
 +++

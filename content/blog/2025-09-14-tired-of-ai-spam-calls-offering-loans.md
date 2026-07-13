@@ -4,6 +4,8 @@ date = "2025-09-14T05:46:23+00:00"
 draft = false
 
 [extra]
+stats_word_count = 260
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/09/14/tired-of-ai-spam-calls/"
 

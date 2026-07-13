@@ -8,6 +8,8 @@ tags = ["opinion", "web-development"]
 
 [extra]
 
+stats_word_count = 98
+stats_reading_time = 1
 [extra.posse]
 mastodon = "https://mitchelltribe.social/@michael/116453941644743853"
 bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mk5y3k7k6k2j"

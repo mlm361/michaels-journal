@@ -3,6 +3,8 @@ date = "2003-04-09T15:27:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 27
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2003/04/09/just-got-some-bad-news/"
 +++

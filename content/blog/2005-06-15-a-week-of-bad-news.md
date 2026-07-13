@@ -4,6 +4,8 @@ draft = false
 title = "A week of Bad News!"
 
 [extra]
+stats_word_count = 471
+stats_reading_time = 3
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2005/06/15/a-week-of-bad-news/"
 +++

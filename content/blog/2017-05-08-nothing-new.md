@@ -4,6 +4,8 @@ draft = false
 title = "Nothing new"
 
 [extra]
+stats_word_count = 8
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2017/05/08/nothing-new/"
 +++

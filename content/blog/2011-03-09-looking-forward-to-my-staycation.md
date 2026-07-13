@@ -4,6 +4,8 @@ draft = false
 title = "Looking forward to my staycation"
 
 [extra]
+stats_word_count = 119
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2011/03/09/looking-forward-to-my-staycation/"
 +++

@@ -7,6 +7,8 @@ draft = false
 tags = [ "Genealogy", "Poland", "WorldWarII",]
 
 [extra]
+stats_word_count = 846
+stats_reading_time = 5
 image = "https://media.mitchelltribe.xyz/gallery/posts/3657c8a3d675.avif"
 
 +++

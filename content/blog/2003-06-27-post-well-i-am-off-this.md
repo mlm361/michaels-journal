@@ -3,6 +3,8 @@ date = "2003-06-27T19:36:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 257
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2003/06/27/well-i-am-off-this/"
 +++

@@ -4,6 +4,8 @@ draft = false
 title = "Finally an update"
 
 [extra]
+stats_word_count = 171
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2015/04/30/finally-an-update/"
 +++

@@ -4,6 +4,8 @@ draft = false
 title = "School going good"
 
 [extra]
+stats_word_count = 42
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2009/01/14/school-going-good/"
 +++

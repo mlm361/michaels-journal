@@ -4,6 +4,8 @@ draft = false
 title = "You can vote however you like!"
 
 [extra]
+stats_word_count = 7
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2008/11/02/you-can-vote-however-you/"
 +++

@@ -3,6 +3,8 @@ date = "2003-04-02T19:54:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 105
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2003/04/02/henry-had-another-check-up/"
 +++

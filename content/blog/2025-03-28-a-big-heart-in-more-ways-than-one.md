@@ -4,6 +4,8 @@ draft = false
 title = "A Big Heart in More Ways Than One"
 
 [extra]
+stats_word_count = 136
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/03/28/a-big-heart-in-more/"
 +++

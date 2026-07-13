@@ -4,6 +4,8 @@ draft = false
 title = "My Quest for the Perfect Chair"
 
 [extra]
+stats_word_count = 228
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/02/28/my-quest-for-the-perfect/"
 +++

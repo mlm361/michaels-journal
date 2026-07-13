@@ -3,6 +3,8 @@ date = "2001-12-19T17:04:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 75
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2001/12/19/well-my-web-site-will/"
 +++

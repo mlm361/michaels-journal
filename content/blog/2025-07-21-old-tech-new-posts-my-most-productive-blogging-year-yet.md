@@ -4,6 +4,8 @@ date = "2025-07-21T21:00:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 586
+stats_reading_time = 3
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/07/21/old-tech-new-posts-my/"
 

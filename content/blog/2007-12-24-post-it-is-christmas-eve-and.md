@@ -3,6 +3,8 @@ date = "2007-12-24T19:43:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 47
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2007/12/24/it-is-christmas-eve-and/"
 +++

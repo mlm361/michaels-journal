@@ -3,6 +3,8 @@ date = "2025-04-27T01:03:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 60
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/04/27/this-weeks-watchlist-from-disney/"
 +++

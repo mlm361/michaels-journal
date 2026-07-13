@@ -4,6 +4,8 @@ draft = false
 title = "The Table, the Betrayal, and the Prayer"
 
 [extra]
+stats_word_count = 672
+stats_reading_time = 4
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/04/12/the-table-the-betrayal-and/"
 +++

@@ -4,6 +4,8 @@ draft = false
 title = "The Oppressed"
 
 [extra]
+stats_word_count = 185
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2005/01/04/the-oppressed/"
 +++

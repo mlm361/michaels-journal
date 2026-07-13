@@ -4,6 +4,8 @@ date = "2025-11-23T04:09:36+00:00"
 draft = false
 
 [extra]
+stats_word_count = 125
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/11/22/watched-season-of-slow-horses/"
 

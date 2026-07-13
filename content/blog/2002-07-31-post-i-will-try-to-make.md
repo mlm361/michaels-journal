@@ -3,6 +3,8 @@ date = "2002-07-31T09:05:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 77
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2002/07/31/i-will-try-to-make/"
 +++

@@ -3,6 +3,8 @@ date = "2005-02-15T21:48:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 5
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2005/02/15/working-overtime-nothing-else-new/"
 +++

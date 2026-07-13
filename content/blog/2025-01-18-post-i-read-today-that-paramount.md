@@ -3,6 +3,8 @@ date = "2025-01-18T23:04:12+00:00"
 draft = false
 
 [extra]
+stats_word_count = 37
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2025/01/18/i-read-today-that-paramount/"
 +++

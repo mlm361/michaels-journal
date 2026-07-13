@@ -4,6 +4,8 @@ draft = false
 title = "Another day at school and me being sick too"
 
 [extra]
+stats_word_count = 74
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2009/01/20/another-day-at-school-and/"
 +++

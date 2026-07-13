@@ -4,6 +4,8 @@ draft = false
 title = "Mufasa: The Lion King, 2024 - ★★½ (contains spoilers)"
 
 [extra]
+stats_word_count = 34
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/04/26/202337/"
 +++

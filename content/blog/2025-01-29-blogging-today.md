@@ -4,6 +4,8 @@ draft = false
 title = "Blogging Today"
 
 [extra]
+stats_word_count = 386
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/01/29/201721/"
 +++

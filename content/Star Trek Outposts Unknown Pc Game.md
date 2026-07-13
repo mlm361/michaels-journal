@@ -8,6 +8,8 @@ description = "> **Star Trek: Outposts Unknown - Official Announcement Trailer -
 tags = [ "opinion", "gaming", "Star Trek",]
 
 [extra]
+stats_word_count = 230
+stats_reading_time = 2
 image = "https://media.mitchelltribe.xyz/gallery/posts/social-card-83d91082c8294ec7e1e4.avif"
 
 [extra.posse]

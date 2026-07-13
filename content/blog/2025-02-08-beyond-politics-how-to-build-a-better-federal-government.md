@@ -4,6 +4,8 @@ draft = false
 title = "Beyond Politics: How to Build a Better Federal Government"
 
 [extra]
+stats_word_count = 2017
+stats_reading_time = 11
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/02/08/beyond-politics-how-to-build/"
 +++

@@ -4,6 +4,8 @@ draft = false
 title = "Website and Blog Page Updated!"
 
 [extra]
+stats_word_count = 87
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2010/10/26/website-and-blog-page-updated/"
 +++

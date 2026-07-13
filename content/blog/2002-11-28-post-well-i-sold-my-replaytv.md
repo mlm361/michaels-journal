@@ -3,6 +3,8 @@ date = "2002-11-28T19:51:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 41
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2002/11/28/well-i-sold-my-replaytv/"
 +++

@@ -4,6 +4,8 @@ draft = false
 title = "Weathermen"
 
 [extra]
+stats_word_count = 26
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2019/09/01/weathermen/"
 +++

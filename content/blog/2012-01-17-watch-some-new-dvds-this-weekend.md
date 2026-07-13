@@ -4,6 +4,8 @@ draft = false
 title = "Watch some new DVD’s this weekend"
 
 [extra]
+stats_word_count = 11
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2012/01/17/watch-some-new-dvds-this/"
 +++

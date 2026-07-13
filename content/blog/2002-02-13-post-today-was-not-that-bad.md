@@ -3,6 +3,8 @@ date = "2002-02-13T16:50:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 21
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2002/02/13/today-was-not-that-bad/"
 +++

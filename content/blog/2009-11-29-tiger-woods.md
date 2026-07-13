@@ -4,6 +4,8 @@ draft = false
 title = "Tiger Woods"
 
 [extra]
+stats_word_count = 83
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2009/11/29/tiger-woods/"
 +++

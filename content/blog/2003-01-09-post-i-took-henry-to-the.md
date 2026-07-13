@@ -3,6 +3,8 @@ date = "2003-01-09T11:43:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 78
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2003/01/09/i-took-henry-to-the/"
 +++

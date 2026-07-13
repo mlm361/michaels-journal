@@ -10,6 +10,8 @@ tags = ["Star Trek", "AI", "Tools", "Technology"]
 
 [extra]
 
+stats_word_count = 548
+stats_reading_time = 3
 +++
 <figure class="captioned">
   <img src="https://media.mitchelltribe.xyz/gallery/posts/starship-bridge_robot-orchestra_08.avif"

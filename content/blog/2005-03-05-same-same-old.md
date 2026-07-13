@@ -4,6 +4,8 @@ draft = false
 title = "Same Same Old"
 
 [extra]
+stats_word_count = 55
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2005/03/05/same-same-old/"
 +++

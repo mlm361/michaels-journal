@@ -4,6 +4,8 @@ draft = false
 title = "Still working on the new website"
 
 [extra]
+stats_word_count = 138
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2010/02/03/still-working-on-the-new/"
 +++

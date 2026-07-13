@@ -3,6 +3,8 @@ date = "2004-04-27T13:05:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 104
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2004/04/27/it-has-been-a-long/"
 +++

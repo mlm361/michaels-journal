@@ -4,6 +4,8 @@ draft = false
 title = "Me on a beautiful Saturday"
 
 [extra]
+stats_word_count = 2
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2016/05/14/me-on-a-beautiful-saturday/"
 +++

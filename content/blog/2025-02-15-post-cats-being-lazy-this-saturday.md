@@ -3,6 +3,8 @@ date = "2025-02-15T22:02:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 30
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/02/15/cats-being-lazy-this-saturday/"
 +++

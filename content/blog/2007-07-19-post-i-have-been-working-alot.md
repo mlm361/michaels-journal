@@ -3,6 +3,8 @@ date = "2007-07-19T01:43:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 143
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2007/07/19/i-have-been-working-alot/"
 +++

@@ -10,6 +10,8 @@ aliases = ["/blog/watched-project-hail-mary-2026-on-prime-video/"]
 tags = [ "review", "movies",]
 
 [extra]
+stats_word_count = 151
+stats_reading_time = 1
 image = "https://media.mitchelltribe.xyz/gallery/posts/tmdb_c95d5ed8d4aa.avif"
 card_fit = "contain"
 

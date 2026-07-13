@@ -4,6 +4,8 @@ date = "2025-05-06T02:35:07+00:00"
 draft = false
 
 [extra]
+stats_word_count = 72
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/05/05/tv-watchlist-for-today/"
 +++

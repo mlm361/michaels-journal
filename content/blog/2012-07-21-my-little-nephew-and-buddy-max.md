@@ -4,6 +4,8 @@ draft = false
 title = "My little Nephew and buddy Max"
 
 [extra]
+stats_word_count = 59
+stats_reading_time = 1
 exclude_from_feed = true
 +++
 

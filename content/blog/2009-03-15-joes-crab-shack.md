@@ -4,6 +4,8 @@ draft = false
 title = "Joes Crab Shack"
 
 [extra]
+stats_word_count = 64
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2009/03/15/joes-crab-shack/"
 +++

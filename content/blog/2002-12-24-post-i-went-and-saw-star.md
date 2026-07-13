@@ -3,6 +3,8 @@ date = "2002-12-24T09:17:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 33
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2002/12/24/i-went-and-saw-star/"
 +++

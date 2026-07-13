@@ -3,6 +3,8 @@ date = "2007-03-10T13:42:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 79
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2007/03/10/took-henry-to-the-regular/"
 +++

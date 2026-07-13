@@ -7,6 +7,8 @@ tags = [ "technology", "ai", "innovation",]
 
 [extra]
 
+stats_word_count = 1009
+stats_reading_time = 6
 [extra.posse]
 mastodon = "https://mitchelltribe.social/@michael/116229776741913209"
 bluesky = "https://bsky.app/profile/michael.pds.mitchelltribe.com/post/3mh2gjez7c22p"

@@ -4,6 +4,8 @@ draft = false
 title = "Nothing new here!"
 
 [extra]
+stats_word_count = 26
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2005/02/10/nothing-new-here/"
 +++

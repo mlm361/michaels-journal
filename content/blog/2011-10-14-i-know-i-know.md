@@ -4,6 +4,8 @@ draft = false
 title = "I know, I know"
 
 [extra]
+stats_word_count = 140
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2011/10/14/i-know-i-know/"
 +++

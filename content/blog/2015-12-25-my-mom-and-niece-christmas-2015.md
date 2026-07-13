@@ -4,6 +4,8 @@ draft = false
 title = "My Mom and Niece Christmas 2015"
 
 [extra]
+stats_word_count = 6
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2015/12/25/my-mom-and-niece-alexus/"
 +++

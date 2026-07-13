@@ -4,6 +4,8 @@ draft = false
 title = "The season is coming"
 
 [extra]
+stats_word_count = 154
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2006/11/03/the-season-is-coming/"
 +++

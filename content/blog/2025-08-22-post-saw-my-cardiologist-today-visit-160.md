@@ -4,6 +4,8 @@ date = "2025-08-22T18:00:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 41
+stats_reading_time = 1
 exclude_from_feed = true
 
 +++

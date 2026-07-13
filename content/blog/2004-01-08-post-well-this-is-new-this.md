@@ -3,6 +3,8 @@ date = "2004-01-08T19:56:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 95
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2004/01/08/well-this-is-new-this/"
 +++

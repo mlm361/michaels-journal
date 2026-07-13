@@ -4,6 +4,8 @@ draft = false
 title = "One of the prettier rainbows I have seen. God's remainder of no more floods like the one in Noah's time."
 
 [extra]
+stats_word_count = 2
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2017/07/21/one-of-the-prettier-rainbows/"
 +++

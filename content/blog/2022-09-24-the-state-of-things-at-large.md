@@ -4,6 +4,8 @@ draft = false
 title = "The State of Things at Large"
 
 [extra]
+stats_word_count = 251
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2022/09/24/the-state-of-things-at/"
 +++

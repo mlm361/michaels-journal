@@ -3,6 +3,8 @@ date = "2007-11-22T13:47:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 44
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2007/11/22/happy-thanksgiving-to-everyone-i/"
 +++

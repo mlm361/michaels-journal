@@ -3,6 +3,8 @@ date = "2008-05-31T17:52:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 222
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2008/05/31/i-know-it-has-been/"
 +++

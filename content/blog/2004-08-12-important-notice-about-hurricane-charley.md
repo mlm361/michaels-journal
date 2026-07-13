@@ -4,6 +4,8 @@ draft = false
 title = "Important Notice about Hurricane Charley"
 
 [extra]
+stats_word_count = 185
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2004/08/12/important-notice-about-hurricane-charley/"
 +++

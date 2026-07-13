@@ -4,6 +4,8 @@ draft = false
 title = "Hurricane Irma"
 
 [extra]
+stats_word_count = 234
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2017/09/10/hurricane-irma/"
 +++

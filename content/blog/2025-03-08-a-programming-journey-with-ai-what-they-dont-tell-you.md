@@ -4,6 +4,8 @@ draft = false
 title = "A Programming Journey with AI: What They Don't Tell You"
 
 [extra]
+stats_word_count = 948
+stats_reading_time = 5
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/03/08/a-programming-journey-with-ai/"
 +++

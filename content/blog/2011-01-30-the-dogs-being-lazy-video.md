@@ -4,6 +4,8 @@ draft = false
 title = "The dogs being lazy video"
 
 [extra]
+stats_word_count = 21
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2011/01/30/the-dogs-being-lazy-video/"
 +++

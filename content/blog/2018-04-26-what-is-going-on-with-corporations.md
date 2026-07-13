@@ -4,6 +4,8 @@ draft = false
 title = "What is going on with Corporations"
 
 [extra]
+stats_word_count = 150
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2018/04/26/what-is-going-on-with/"
 +++

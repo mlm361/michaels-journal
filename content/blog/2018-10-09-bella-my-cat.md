@@ -4,6 +4,8 @@ draft = false
 title = "Bella, my cat"
 
 [extra]
+stats_word_count = 227
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2018/10/09/bella-my-cat/"
 +++

@@ -4,6 +4,8 @@ draft = false
 title = "Why are we thinking about pulling out of Afghanistan"
 
 [extra]
+stats_word_count = 141
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2009/09/23/why-are-we-thinking-about/"
 +++

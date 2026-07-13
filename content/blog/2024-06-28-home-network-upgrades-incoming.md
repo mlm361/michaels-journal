@@ -4,6 +4,8 @@ draft = false
 title = "Home Network upgrades incoming"
 
 [extra]
+stats_word_count = 150
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2024/06/28/home-network-upgrades-incoming/"
 +++

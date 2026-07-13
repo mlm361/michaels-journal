@@ -4,6 +4,8 @@ draft = false
 title = "This Acapella Group is Good!"
 
 [extra]
+stats_word_count = 83
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2010/12/03/this-acapella-group-is-good/"
 +++

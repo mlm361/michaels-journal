@@ -4,6 +4,8 @@ draft = false
 title = "Google Pixel Tablet"
 
 [extra]
+stats_word_count = 101
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2023/05/11/google-pixel-tablet/"
 +++

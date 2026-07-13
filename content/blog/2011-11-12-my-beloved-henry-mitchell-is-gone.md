@@ -4,6 +4,8 @@ draft = false
 title = "My Beloved Henry Mitchell is Gone!"
 
 [extra]
+stats_word_count = 104
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2011/11/12/my-beloved-henry-mitchell-is/"
 +++

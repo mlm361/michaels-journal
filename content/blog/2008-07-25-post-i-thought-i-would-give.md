@@ -3,6 +3,8 @@ date = "2008-07-25T18:43:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 55
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2008/07/25/i-thought-i-would-give/"
 +++

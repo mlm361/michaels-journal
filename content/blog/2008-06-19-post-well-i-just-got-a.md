@@ -3,6 +3,8 @@ date = "2008-06-19T16:45:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 70
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2008/06/19/well-i-just-got-a/"
 +++

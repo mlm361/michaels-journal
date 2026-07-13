@@ -4,6 +4,8 @@ draft = false
 title = "First Tropical Storm/Hurricane of the year"
 
 [extra]
+stats_word_count = 51
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2021/07/06/first-tropical-stormhurricane-of-the/"
 +++

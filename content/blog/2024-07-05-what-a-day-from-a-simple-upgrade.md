@@ -4,6 +4,8 @@ draft = false
 title = "What a day from a simple upgrade"
 
 [extra]
+stats_word_count = 235
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2024/07/05/what-a-day-from-a/"
 +++

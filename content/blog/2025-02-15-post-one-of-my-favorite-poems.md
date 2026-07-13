@@ -3,6 +3,8 @@ date = "2025-02-15T21:17:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 14
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/02/15/one-of-my-favorite-poems/"
 +++

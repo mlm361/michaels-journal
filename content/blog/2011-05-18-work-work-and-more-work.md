@@ -4,6 +4,8 @@ draft = false
 title = "Work, Work and more work"
 
 [extra]
+stats_word_count = 152
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2011/05/18/work-work-and-more-work/"
 +++

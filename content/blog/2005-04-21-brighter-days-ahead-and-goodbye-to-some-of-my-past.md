@@ -4,6 +4,8 @@ draft = false
 title = "Brighter days ahead and goodbye to some of my past"
 
 [extra]
+stats_word_count = 154
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2005/04/21/brighter-days-ahead-and-goodbye/"
 +++

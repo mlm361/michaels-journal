@@ -4,6 +4,8 @@ draft = false
 title = "Everytime"
 
 [extra]
+stats_word_count = 86
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2023/07/05/everytime/"
 +++

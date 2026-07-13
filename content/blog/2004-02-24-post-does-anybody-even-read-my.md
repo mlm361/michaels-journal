@@ -3,6 +3,8 @@ date = "2004-02-24T20:40:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 58
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2004/02/24/does-anybody-even-read-my/"
 +++

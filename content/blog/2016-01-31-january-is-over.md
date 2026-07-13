@@ -4,6 +4,8 @@ draft = false
 title = "January is over"
 
 [extra]
+stats_word_count = 151
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2016/01/31/january-is-over/"
 +++

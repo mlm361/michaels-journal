@@ -4,6 +4,8 @@ draft = false
 title = "Yearly Physical"
 
 [extra]
+stats_word_count = 80
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2005/06/02/yearly-physical/"
 +++

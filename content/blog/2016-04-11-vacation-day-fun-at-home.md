@@ -4,6 +4,8 @@ draft = false
 title = "Vacation day fun at home💭"
 
 [extra]
+stats_word_count = 2
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2016/04/11/vacation-day-fun-at-home/"
 +++

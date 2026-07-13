@@ -4,6 +4,8 @@ draft = false
 title = "What’s been happening?"
 
 [extra]
+stats_word_count = 238
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2011/09/05/whats-been-happening/"
 +++

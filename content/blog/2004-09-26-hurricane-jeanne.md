@@ -4,6 +4,8 @@ draft = false
 title = "Hurricane Jeanne"
 
 [extra]
+stats_word_count = 116
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2004/09/26/hurricane-jeanne/"
 +++

@@ -3,6 +3,8 @@ date = "2004-02-18T21:34:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 203
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2004/02/18/i-am-off-tonight-and/"
 +++

@@ -4,6 +4,8 @@ draft = false
 title = "DSLreports.com apparently gone offline"
 
 [extra]
+stats_word_count = 164
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2025/01/20/dslreportscom-apparently-gone-offline/"
 +++

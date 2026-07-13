@@ -4,6 +4,8 @@ draft = false
 title = "Having a hard time"
 
 [extra]
+stats_word_count = 32
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2009/05/03/having-a-hard-time/"
 +++

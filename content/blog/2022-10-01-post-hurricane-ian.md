@@ -4,6 +4,8 @@ draft = false
 title = "Post Hurricane Ian"
 
 [extra]
+stats_word_count = 108
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2022/10/01/post-hurricane-ian/"
 +++

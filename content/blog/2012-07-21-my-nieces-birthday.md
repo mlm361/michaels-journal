@@ -4,6 +4,8 @@ draft = false
 title = "My Niece’s Birthday"
 
 [extra]
+stats_word_count = 68
+stats_reading_time = 1
 exclude_from_feed = true
 +++
 

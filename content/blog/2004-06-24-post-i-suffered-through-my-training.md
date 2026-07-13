@@ -3,6 +3,8 @@ date = "2004-06-24T20:27:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 61
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2004/06/24/i-suffered-through-my-training/"
 +++

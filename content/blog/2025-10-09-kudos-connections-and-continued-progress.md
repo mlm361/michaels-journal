@@ -4,6 +4,8 @@ date = "2025-10-09T01:46:15+00:00"
 draft = false
 
 [extra]
+stats_word_count = 153
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/10/08/kudos-connections-and-continued-progress/"
 

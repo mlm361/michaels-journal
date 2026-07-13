@@ -4,6 +4,8 @@ draft = false
 title = "Merry Christmas 2014"
 
 [extra]
+stats_word_count = 65
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2014/12/25/merry-christmas/"
 +++

@@ -4,6 +4,8 @@ draft = false
 title = "Easter: Celebrating the Resurrection of Jesus Christ"
 
 [extra]
+stats_word_count = 577
+stats_reading_time = 3
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2023/04/09/easter-celebrating-the-resurrection-of/"
 +++

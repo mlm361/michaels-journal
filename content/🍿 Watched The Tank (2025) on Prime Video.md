@@ -4,6 +4,8 @@ date = "2026-01-22T14:41:58+00:00"
 draft = false
 
 [extra]
+stats_word_count = 89
+stats_reading_time = 1
 card_fit = "contain"
 
 [taxonomies]

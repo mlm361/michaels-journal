@@ -7,6 +7,8 @@ tags = [ "hardware", "tech-gadgets", "technology",]
 
 [extra]
 
+stats_word_count = 151
+stats_reading_time = 1
 [extra.posse]
 mastodon = "https://mitchelltribe.social/@michael/115760742229477021"
 bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mak54wl6hp2u"

@@ -4,6 +4,8 @@ draft = false
 title = "I remember this day!"
 
 [extra]
+stats_word_count = 71
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2012/03/09/i-remember-this-day/"
 +++

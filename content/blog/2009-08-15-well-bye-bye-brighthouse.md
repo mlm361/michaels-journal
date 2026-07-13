@@ -4,6 +4,8 @@ draft = false
 title = "Well bye bye Brighthouse"
 
 [extra]
+stats_word_count = 95
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2009/08/15/well-bye-bye-brighthouse/"
 +++

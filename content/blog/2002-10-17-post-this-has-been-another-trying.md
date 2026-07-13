@@ -3,6 +3,8 @@ date = "2002-10-17T17:54:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 45
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2002/10/17/this-has-been-another-trying/"
 +++

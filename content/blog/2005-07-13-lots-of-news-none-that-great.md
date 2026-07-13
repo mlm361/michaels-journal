@@ -4,6 +4,8 @@ draft = false
 title = "Lots of News! None that great!"
 
 [extra]
+stats_word_count = 118
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2005/07/13/lots-of-news-none-that/"
 +++

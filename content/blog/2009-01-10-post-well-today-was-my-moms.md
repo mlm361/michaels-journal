@@ -3,6 +3,8 @@ date = "2009-01-10T21:42:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 72
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2009/01/10/well-today-was-my-moms/"
 +++

@@ -3,6 +3,8 @@ date = "2003-09-04T19:49:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 450
+stats_reading_time = 3
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2003/09/04/henry-eye-vet-update-i/"
 +++

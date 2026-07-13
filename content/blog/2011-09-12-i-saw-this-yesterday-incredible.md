@@ -4,6 +4,8 @@ draft = false
 title = "I saw this yesterday Incredible!"
 
 [extra]
+stats_word_count = 22
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2011/09/12/i-saw-this-yesterday-incredible/"
 +++

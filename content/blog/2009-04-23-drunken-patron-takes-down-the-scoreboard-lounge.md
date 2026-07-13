@@ -4,6 +4,8 @@ draft = false
 title = "Drunken  Patron takes down the Scoreboard Lounge"
 
 [extra]
+stats_word_count = 27
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2009/04/23/drunken-patron-takes-down-the/"
 +++

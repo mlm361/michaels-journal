@@ -4,6 +4,8 @@ draft = false
 title = "Shortages Shortages and more shortages"
 
 [extra]
+stats_word_count = 286
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2021/10/31/shortages-shortages-and-more-shortages/"
 +++

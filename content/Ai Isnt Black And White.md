@@ -8,6 +8,8 @@ description = "Okay, this will probably sound controversial, but that's not my i
 tags = [ "ai", "opinion", "technology",]
 
 [extra]
+stats_word_count = 687
+stats_reading_time = 4
 image = "https://media.mitchelltribe.xyz/gallery/posts/ai_gen_temp_d882b05b59c8.avif"
 
 [extra.posse]

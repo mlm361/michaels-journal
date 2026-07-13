@@ -7,6 +7,8 @@ tags = [ "photos", "landscape",]
 
 [extra]
 
+stats_word_count = 55
+stats_reading_time = 1
 [extra.posse]
 mastodon = "https://mitchelltribe.social/@michael/115832918929946507"
 bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mbk6t5jo3e2q"

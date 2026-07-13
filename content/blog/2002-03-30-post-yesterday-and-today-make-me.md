@@ -3,6 +3,8 @@ date = "2002-03-30T18:06:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 66
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2002/03/30/yesterday-and-today-make-me/"
 +++

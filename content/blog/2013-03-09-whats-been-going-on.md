@@ -4,6 +4,8 @@ draft = false
 title = "What’s been going on!"
 
 [extra]
+stats_word_count = 213
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2013/03/10/whats-been-going-on/"
 +++

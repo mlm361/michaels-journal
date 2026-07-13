@@ -4,6 +4,8 @@ draft = false
 title = "The Tomb is Empty"
 
 [extra]
+stats_word_count = 655
+stats_reading_time = 4
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/04/17/the-tomb-is-empty/"
 +++

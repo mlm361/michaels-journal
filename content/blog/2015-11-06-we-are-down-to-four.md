@@ -4,6 +4,8 @@ draft = false
 title = "We are down to Four"
 
 [extra]
+stats_word_count = 150
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2015/11/06/we-are-down-to-four/"
 +++

@@ -3,6 +3,8 @@ date = "2002-11-04T19:00:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 46
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2002/11/04/got-my-test-results-from/"
 +++

@@ -4,6 +4,8 @@ draft = false
 title = "Dec 2, 2011 fast approaching"
 
 [extra]
+stats_word_count = 124
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2011/10/24/dec-fast-approaching/"
 +++

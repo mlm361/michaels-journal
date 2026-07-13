@@ -4,6 +4,8 @@ date = "2025-08-08T11:30:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 811
+stats_reading_time = 5
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/08/08/my-battle-with-subscription-fatigue/"
 

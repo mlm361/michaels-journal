@@ -4,6 +4,8 @@ draft = false
 title = "Returned from Tennessee"
 
 [extra]
+stats_word_count = 139
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2006/02/19/returned-from-tennessee/"
 +++

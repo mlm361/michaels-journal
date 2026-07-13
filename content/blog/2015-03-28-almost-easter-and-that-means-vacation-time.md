@@ -4,6 +4,8 @@ draft = false
 title = "Almost Easter and that means vacation time"
 
 [extra]
+stats_word_count = 247
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2015/03/28/almost-easter-and-that-means/"
 +++

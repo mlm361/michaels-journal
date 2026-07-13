@@ -4,6 +4,8 @@ draft = false
 title = "Tennessee Property"
 
 [extra]
+stats_word_count = 71
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2009/03/15/tennessee-property/"
 +++

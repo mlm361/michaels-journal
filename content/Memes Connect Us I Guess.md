@@ -8,6 +8,8 @@ tags = ["entertainment", "music"]
 
 [extra]
 
+stats_word_count = 188
+stats_reading_time = 1
 [extra.posse]
 mastodon = "https://mitchelltribe.social/@michael/116445988973953762"
 bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mk2h3anu4n2e"

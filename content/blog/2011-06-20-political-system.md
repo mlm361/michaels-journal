@@ -4,6 +4,8 @@ draft = false
 title = "Political System"
 
 [extra]
+stats_word_count = 72
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2011/06/20/political-system/"
 +++

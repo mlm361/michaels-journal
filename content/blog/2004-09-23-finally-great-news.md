@@ -4,6 +4,8 @@ draft = false
 title = "Finally Great News!"
 
 [extra]
+stats_word_count = 74
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2004/09/23/finally-great-news/"
 +++

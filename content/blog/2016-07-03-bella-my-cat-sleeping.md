@@ -4,6 +4,8 @@ draft = false
 title = "Bella my cat, sleeping."
 
 [extra]
+stats_word_count = 2
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2016/07/02/bella-my-cat-sleeping/"
 +++

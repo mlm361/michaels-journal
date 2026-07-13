@@ -3,6 +3,8 @@ date = "2002-05-28T07:21:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 55
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2002/05/28/well-everyone-i-am-off/"
 +++

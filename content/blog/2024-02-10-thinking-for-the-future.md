@@ -4,6 +4,8 @@ draft = false
 title = "Thinking for the future"
 
 [extra]
+stats_word_count = 333
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2024/02/10/thinking-for-the-future/"
 +++

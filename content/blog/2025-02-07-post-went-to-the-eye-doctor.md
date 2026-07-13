@@ -3,6 +3,8 @@ date = "2025-02-07T00:19:33+00:00"
 draft = false
 
 [extra]
+stats_word_count = 50
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/02/06/went-to-the-eye-doctor/"
 +++

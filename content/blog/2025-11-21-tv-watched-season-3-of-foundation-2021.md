@@ -4,6 +4,8 @@ date = "2025-11-21T17:38:15+00:00"
 draft = false
 
 [extra]
+stats_word_count = 137
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/11/21/watched-season-of-foundation/"
 

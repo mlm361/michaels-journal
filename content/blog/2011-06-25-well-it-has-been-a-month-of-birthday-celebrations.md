@@ -4,6 +4,8 @@ draft = false
 title = "Well it has been a month of Birthday Celebrations"
 
 [extra]
+stats_word_count = 81
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2011/06/25/well-it-has-been-a/"
 +++

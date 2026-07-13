@@ -4,6 +4,8 @@ draft = false
 title = "Good Week? Maybe?"
 
 [extra]
+stats_word_count = 143
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2009/02/06/good-week-maybe/"
 +++

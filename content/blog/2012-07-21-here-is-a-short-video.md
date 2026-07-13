@@ -4,6 +4,8 @@ draft = false
 title = "Here is a short video"
 
 [extra]
+stats_word_count = 57
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2012/07/21/here-is-a-short-video/"
 +++

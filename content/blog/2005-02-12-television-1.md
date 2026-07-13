@@ -4,6 +4,8 @@ draft = false
 title = "Television"
 
 [extra]
+stats_word_count = 30
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2005/02/12/television/"
 +++

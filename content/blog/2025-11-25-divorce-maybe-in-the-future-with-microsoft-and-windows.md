@@ -4,6 +4,8 @@ date = "2025-11-25T22:42:02+00:00"
 draft = false
 
 [extra]
+stats_word_count = 702
+stats_reading_time = 4
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/11/25/divorce-maybe-in-the-future/"
 

@@ -4,6 +4,8 @@ date = "2025-09-10T22:58:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 418
+stats_reading_time = 3
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/09/10/is-this-the-wakeup-call/"
 

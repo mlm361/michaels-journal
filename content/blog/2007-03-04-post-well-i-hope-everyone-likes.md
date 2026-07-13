@@ -3,6 +3,8 @@ date = "2007-03-04T18:43:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 211
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2007/03/04/well-i-hope-everyone-likes/"
 +++

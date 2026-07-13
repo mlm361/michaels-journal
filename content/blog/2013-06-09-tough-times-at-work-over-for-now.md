@@ -4,6 +4,8 @@ draft = false
 title = "Tough Times at work over for now"
 
 [extra]
+stats_word_count = 193
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2013/06/09/tough-times-at-work-over/"
 +++

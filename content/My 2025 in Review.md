@@ -7,6 +7,8 @@ tags = [ "personal",]
 
 [extra]
 
+stats_word_count = 771
+stats_reading_time = 4
 [extra.posse]
 mastodon = "https://mitchelltribe.social/@michael/115814540270362587"
 bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mbbznmujrm2d"

@@ -4,6 +4,8 @@ draft = false
 title = "Gadgets, Data, and Doubt"
 
 [extra]
+stats_word_count = 227
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/02/08/gadgets-data-and-doubt/"
 +++

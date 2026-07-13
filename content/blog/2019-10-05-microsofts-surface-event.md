@@ -4,6 +4,8 @@ draft = false
 title = "Microsoft's Surface Event"
 
 [extra]
+stats_word_count = 177
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2019/10/05/microsofts-surface-event/"
 +++

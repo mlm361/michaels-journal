@@ -4,6 +4,8 @@ draft = false
 title = "Just watched a movie"
 
 [extra]
+stats_word_count = 96
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2012/07/17/just-watched-a-movie/"
 +++

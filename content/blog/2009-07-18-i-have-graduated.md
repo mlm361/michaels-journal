@@ -4,6 +4,8 @@ draft = false
 title = "I have Graduated"
 
 [extra]
+stats_word_count = 20
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2009/07/18/i-have-graduated/"
 +++

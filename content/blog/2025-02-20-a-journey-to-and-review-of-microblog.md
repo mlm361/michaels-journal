@@ -4,6 +4,8 @@ draft = false
 title = "A Journey to and Review of Micro.blog"
 
 [extra]
+stats_word_count = 1397
+stats_reading_time = 7
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/02/20/a-journey-to-and-review/"
 +++

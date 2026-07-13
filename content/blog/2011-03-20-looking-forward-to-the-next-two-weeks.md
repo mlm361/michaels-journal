@@ -4,6 +4,8 @@ draft = false
 title = "Looking forward to the next two weeks"
 
 [extra]
+stats_word_count = 141
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2011/03/20/looking-forward-to-the-next/"
 +++

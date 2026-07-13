@@ -3,6 +3,8 @@ date = "2002-09-26T16:05:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 18
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2002/09/26/surgery-went-well-i-am/"
 +++

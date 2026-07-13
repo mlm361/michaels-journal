@@ -4,6 +4,8 @@ date = "2025-06-06T00:55:05+00:00"
 draft = false
 
 [extra]
+stats_word_count = 575
+stats_reading_time = 3
 image = "https://media.mitchelltribe.xyz/gallery/posts/GlHQ5vO_-_Copy.avif"
 
 +++

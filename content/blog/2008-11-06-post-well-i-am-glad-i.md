@@ -3,6 +3,8 @@ date = "2008-11-06T15:20:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 122
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2008/11/06/well-i-am-glad-i/"
 +++

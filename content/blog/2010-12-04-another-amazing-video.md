@@ -4,6 +4,8 @@ draft = false
 title = "Another amazing Video"
 
 [extra]
+stats_word_count = 86
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2010/12/04/another-amazing-video/"
 +++

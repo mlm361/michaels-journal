@@ -3,6 +3,8 @@ title = "🎬 Watched The Fantastic 4: First Steps (2025) on Disney+"
 date = "2025-12-28T13:57:30+00:00"
 draft = false
 [extra]
+stats_word_count = 105
+stats_reading_time = 1
 card_fit = "contain"
 [taxonomies]
 tags = [ "review", "movies", "streaming",]

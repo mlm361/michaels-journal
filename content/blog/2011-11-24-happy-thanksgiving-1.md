@@ -4,6 +4,8 @@ draft = false
 title = "Happy Thanksgiving!"
 
 [extra]
+stats_word_count = 203
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2011/11/24/happy-thanksgiving/"
 +++

@@ -3,6 +3,8 @@ date = "2004-09-20T00:23:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 89
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2004/09/19/well-as-i-type-this/"
 +++

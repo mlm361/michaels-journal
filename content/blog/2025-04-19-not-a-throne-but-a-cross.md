@@ -4,6 +4,8 @@ draft = false
 title = "Not a Throne, but a Cross"
 
 [extra]
+stats_word_count = 1156
+stats_reading_time = 6
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/04/19/not-a-throne-but-a/"
 +++

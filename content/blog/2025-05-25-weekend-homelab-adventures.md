@@ -4,6 +4,8 @@ date = "2025-05-25T01:30:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 342
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/05/25/weekend-homelab-adventures/"
 +++

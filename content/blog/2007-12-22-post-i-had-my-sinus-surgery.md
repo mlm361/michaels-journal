@@ -3,6 +3,8 @@ date = "2007-12-22T16:12:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 121
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2007/12/22/i-had-my-sinus-surgery/"
 +++

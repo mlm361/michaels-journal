@@ -7,6 +7,8 @@ draft = false
 tags = [ "current-events", "inspiration", "opinion",]
 
 [extra]
+stats_word_count = 416
+stats_reading_time = 3
 card_fit = "contain"
 
 [extra.posse]

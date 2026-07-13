@@ -3,6 +3,8 @@ date = "2001-08-13T18:19:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 47
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2001/08/13/i-am-thinking-about-switching/"
 +++

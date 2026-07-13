@@ -4,6 +4,8 @@ draft = false
 title = "The Lord Blesses"
 
 [extra]
+stats_word_count = 41
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2010/07/27/the-lord-blesses/"
 +++

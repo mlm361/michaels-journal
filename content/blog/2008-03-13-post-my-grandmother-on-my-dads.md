@@ -3,6 +3,8 @@ date = "2008-03-13T23:27:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 208
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2008/03/13/my-grandmother-on-my-dads/"
 +++

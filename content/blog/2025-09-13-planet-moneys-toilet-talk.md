@@ -4,6 +4,8 @@ date = "2025-09-13T23:18:34+00:00"
 draft = false
 
 [extra]
+stats_word_count = 368
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/09/13/planet-moneys-toilet-talk/"
 

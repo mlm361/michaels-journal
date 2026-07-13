@@ -4,6 +4,8 @@ draft = false
 title = "Website Updated for December 2010"
 
 [extra]
+stats_word_count = 107
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2010/12/05/website-updated-for-december/"
 +++

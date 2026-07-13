@@ -3,6 +3,8 @@ date = "2002-04-01T18:13:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 48
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2002/04/01/just-to-let-everyone-now/"
 +++

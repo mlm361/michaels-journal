@@ -4,6 +4,8 @@ draft = false
 title = "Not much up!"
 
 [extra]
+stats_word_count = 189
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2015/09/11/not-much-up/"
 +++

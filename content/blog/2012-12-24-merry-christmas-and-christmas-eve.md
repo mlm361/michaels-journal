@@ -4,6 +4,8 @@ draft = false
 title = "Merry Christmas and Christmas Eve"
 
 [extra]
+stats_word_count = 158
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2012/12/24/merry-christmas-and-christmas-eve/"
 +++

@@ -4,6 +4,8 @@ draft = false
 title = "Need to do better"
 
 [extra]
+stats_word_count = 333
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2023/10/07/need-to-do-better/"
 +++

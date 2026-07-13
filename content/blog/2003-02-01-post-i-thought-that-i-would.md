@@ -3,6 +3,8 @@ date = "2003-02-01T12:24:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 149
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2003/02/01/i-thought-that-i-would/"
 +++

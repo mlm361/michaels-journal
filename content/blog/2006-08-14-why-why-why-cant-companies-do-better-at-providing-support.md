@@ -4,6 +4,8 @@ draft = false
 title = "Why Why Why can't companies do better at providing support!"
 
 [extra]
+stats_word_count = 231
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2006/08/14/why-why-why-cant-companies/"
 +++

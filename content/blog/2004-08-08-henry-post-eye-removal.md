@@ -4,6 +4,8 @@ draft = false
 title = "Henry Post Eye Removal"
 
 [extra]
+stats_word_count = 81
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2004/08/08/henry-post-eye-removal/"
 +++

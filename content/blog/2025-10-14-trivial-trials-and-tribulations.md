@@ -4,6 +4,8 @@ date = "2025-10-14T02:24:15+00:00"
 draft = false
 
 [extra]
+stats_word_count = 580
+stats_reading_time = 3
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/10/13/trivial-trials-and-tribulations/"
 

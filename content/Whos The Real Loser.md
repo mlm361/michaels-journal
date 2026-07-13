@@ -8,6 +8,8 @@ description = "> **Why Gen X is the real loser generation** > Don’t cry for mi
 tags = [ "opinion", "retirement", "family",]
 
 [extra]
+stats_word_count = 592
+stats_reading_time = 3
 image = "https://media.mitchelltribe.xyz/gallery/posts/social-card-fe6e0eedc5a5508b3e1d.avif"
 
 [extra.posse]

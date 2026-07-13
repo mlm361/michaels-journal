@@ -4,6 +4,8 @@ draft = false
 title = "The Chosen"
 
 [extra]
+stats_word_count = 67
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2023/08/06/the-chosen/"
 +++

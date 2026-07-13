@@ -56,7 +56,9 @@
       </div>
       <time class="dt-published mf2-hidden" datetime="{{ page.date | date(format='%+') }}">{{ page.date | date(format='%+') }}</time>
       {% endif %}
-      {{ macros::frontmatter(classes="frontmatter_page", date=page.date, word_count=page.word_count, read_time=page.reading_time) }}
+      {% set display_word_count = page.extra | get(key="stats_word_count", default=page.word_count) %}
+      {% set display_read_time = page.extra | get(key="stats_reading_time", default=page.reading_time) %}
+      {{ macros::frontmatter(classes="frontmatter_page", date=page.date, word_count=display_word_count, read_time=display_read_time) }}
       {% if page.taxonomies.tags %}
       <div class="post-tags">
         {% for tag in page.taxonomies.tags | slice(end=3) %}

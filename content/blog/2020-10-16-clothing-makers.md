@@ -4,6 +4,8 @@ draft = false
 title = "Clothing Makers"
 
 [extra]
+stats_word_count = 33
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2020/10/16/clothing-makers/"
 +++

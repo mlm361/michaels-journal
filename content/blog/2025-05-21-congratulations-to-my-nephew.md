@@ -4,6 +4,8 @@ date = "2025-05-21T18:55:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 94
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/05/21/congratulations-to-my-nephew/"
 +++

@@ -4,6 +4,8 @@ draft = false
 title = "Cyroablation for my A-Fib"
 
 [extra]
+stats_word_count = 125
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2016/11/25/cyroablation-for-my-afib/"
 +++

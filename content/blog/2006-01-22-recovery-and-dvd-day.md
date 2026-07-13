@@ -4,6 +4,8 @@ draft = false
 title = "Recovery and DVD day!"
 
 [extra]
+stats_word_count = 107
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2006/01/22/recovery-and-dvd-day/"
 +++

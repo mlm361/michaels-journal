@@ -3,6 +3,8 @@ date = "2003-08-24T19:23:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 34
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2003/08/24/update-on-henry-the-new/"
 +++

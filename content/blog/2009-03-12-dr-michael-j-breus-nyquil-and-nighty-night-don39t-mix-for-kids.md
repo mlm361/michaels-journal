@@ -4,6 +4,8 @@ draft = false
 title = "Dr. Michael J. Breus: NyQuil and Nighty-Night Don&#39;t Mix for Kids"
 
 [extra]
+stats_word_count = 24
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2009/03/12/dr-michael-j-breus-nyquil/"
 +++

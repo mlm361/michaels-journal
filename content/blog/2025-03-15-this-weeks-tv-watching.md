@@ -4,6 +4,8 @@ draft = false
 title = "This Weeks TV Watching"
 
 [extra]
+stats_word_count = 60
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/03/15/this-weeks-tv-watching/"
 +++

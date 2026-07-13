@@ -4,6 +4,8 @@ date = "2025-06-27T09:00:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 28
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/06/27/day-collective-my-first-raised/"
 +++

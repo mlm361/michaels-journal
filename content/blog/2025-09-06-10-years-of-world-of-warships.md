@@ -4,6 +4,8 @@ date = "2025-09-06T14:00:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 164
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/09/06/years-of-world-of-warships/"
 

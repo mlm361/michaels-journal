@@ -4,6 +4,8 @@ draft = false
 title = "End of an Era"
 
 [extra]
+stats_word_count = 191
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2011/07/08/end-of-an-era/"
 +++

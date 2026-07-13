@@ -4,6 +4,8 @@ date = "2025-05-23T20:00:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 344
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/05/23/publish-an-app/"
 +++

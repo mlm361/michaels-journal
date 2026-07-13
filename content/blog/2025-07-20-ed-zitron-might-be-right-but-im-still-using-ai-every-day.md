@@ -4,6 +4,8 @@ date = "2025-07-20T20:30:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 646
+stats_reading_time = 4
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/07/20/ed-zitron-might-be-right/"
 

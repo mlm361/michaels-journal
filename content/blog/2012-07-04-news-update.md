@@ -4,6 +4,8 @@ draft = false
 title = "News Update!"
 
 [extra]
+stats_word_count = 242
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2012/07/04/news-update/"
 +++

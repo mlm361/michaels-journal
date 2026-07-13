@@ -4,6 +4,8 @@ draft = false
 title = "Outside Mission Space"
 
 [extra]
+stats_word_count = 19
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2005/05/28/outside-mission-space/"
 +++

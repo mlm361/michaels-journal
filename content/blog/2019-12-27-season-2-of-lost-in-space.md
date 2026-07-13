@@ -4,6 +4,8 @@ draft = false
 title = "Season 2 of Lost in Space"
 
 [extra]
+stats_word_count = 47
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2019/12/27/season-of-lost-in-space/"
 +++

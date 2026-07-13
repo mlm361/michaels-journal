@@ -4,6 +4,8 @@ draft = false
 title = "Trying to update website"
 
 [extra]
+stats_word_count = 52
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2009/08/05/trying-to-update-website/"
 +++

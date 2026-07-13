@@ -4,6 +4,8 @@ draft = false
 title = "Technology can be challenging"
 
 [extra]
+stats_word_count = 193
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/01/17/technology-can-be-challenging/"
 +++

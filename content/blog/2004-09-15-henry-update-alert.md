@@ -4,6 +4,8 @@ draft = false
 title = "Henry Update Alert!"
 
 [extra]
+stats_word_count = 95
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2004/09/15/henry-update-alert/"
 +++

@@ -7,6 +7,8 @@ tags = [ "opinion", "politics",]
 
 [extra]
 
+stats_word_count = 717
+stats_reading_time = 4
 +++
 ***This is your Content Warning: this is going to be a Political Rant***
 

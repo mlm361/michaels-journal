@@ -4,6 +4,8 @@ draft = false
 title = "Enjoying Time Off"
 
 [extra]
+stats_word_count = 28
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2020/05/22/enjoying-time-off/"
 +++

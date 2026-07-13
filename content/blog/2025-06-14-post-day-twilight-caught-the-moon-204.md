@@ -4,6 +4,8 @@ date = "2025-06-14T05:30:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 27
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/06/14/day-twilight-caught-the-moon/"
 +++

@@ -4,6 +4,8 @@ draft = false
 title = "Powerful message and movie"
 
 [extra]
+stats_word_count = 64
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2012/02/06/powerful-message-and-movie/"
 +++

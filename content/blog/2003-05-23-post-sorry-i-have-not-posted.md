@@ -3,6 +3,8 @@ date = "2003-05-23T21:29:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 60
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2003/05/23/sorry-i-have-not-posted/"
 +++

@@ -3,6 +3,8 @@ date = "2025-01-28T20:57:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 18
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2025/01/28/currently-reading-who-is-jesus/"
 +++

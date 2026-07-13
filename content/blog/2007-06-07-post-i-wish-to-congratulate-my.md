@@ -3,6 +3,8 @@ date = "2007-06-07T09:15:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 46
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2007/06/07/i-wish-to-congratulate-my/"
 +++

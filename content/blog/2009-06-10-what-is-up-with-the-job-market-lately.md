@@ -4,6 +4,8 @@ draft = false
 title = "What is up with the job market lately"
 
 [extra]
+stats_word_count = 55
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2009/06/10/what-is-up-with-the/"
 +++

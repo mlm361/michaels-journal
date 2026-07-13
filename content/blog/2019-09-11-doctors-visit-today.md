@@ -4,6 +4,8 @@ draft = false
 title = "Doctor's Visit today"
 
 [extra]
+stats_word_count = 56
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2019/09/11/doctors-visit-today/"
 +++

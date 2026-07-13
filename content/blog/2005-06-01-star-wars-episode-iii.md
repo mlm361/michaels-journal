@@ -4,6 +4,8 @@ draft = false
 title = "Star Wars Episode III"
 
 [extra]
+stats_word_count = 66
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2005/06/01/star-wars-episode-iii/"
 +++

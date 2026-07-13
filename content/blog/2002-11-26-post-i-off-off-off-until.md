@@ -3,6 +3,8 @@ date = "2002-11-26T00:01:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 143
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2002/11/26/i-off-off-off-until/"
 +++

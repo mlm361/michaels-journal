@@ -4,6 +4,8 @@ draft = false
 title = "Neighbors"
 
 [extra]
+stats_word_count = 261
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2010/03/30/neighbors/"
 +++

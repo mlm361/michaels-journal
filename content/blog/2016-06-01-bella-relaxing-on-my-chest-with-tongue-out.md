@@ -4,6 +4,8 @@ draft = false
 title = "Bella relaxing on my chest with tongue out."
 
 [extra]
+stats_word_count = 2
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2016/06/01/bella-relaxing-on-my-chest/"
 +++

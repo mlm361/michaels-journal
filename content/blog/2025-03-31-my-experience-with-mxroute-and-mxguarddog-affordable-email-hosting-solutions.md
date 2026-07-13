@@ -4,6 +4,8 @@ draft = false
 title = "My Experience with MXRoute and MXGuardDog: Affordable Email Hosting Solutions"
 
 [extra]
+stats_word_count = 375
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/03/31/my-experience-with-mxroute-and/"
 +++

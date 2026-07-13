@@ -3,6 +3,8 @@ date = "2018-12-14T03:10:00+00:00"
 draft = false
 
 [extra]
+stats_word_count = 64
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2018/12/13/one-of-the-few-last/"
 +++

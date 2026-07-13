@@ -6,6 +6,8 @@ draft = false
 tags = [ "comedy", "entertainment", "tv",]
 
 [extra]
+stats_word_count = 34
+stats_reading_time = 1
 card_fit = "contain"
 
 [extra.posse]

@@ -3,6 +3,8 @@ date = "2025-03-21T12:22:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 26
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/03/21/why-is-a-civilian-tech/"
 +++

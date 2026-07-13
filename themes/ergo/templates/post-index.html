@@ -10,12 +10,14 @@
     {% set is_placeholder_title = not raw_title or raw_title == "Untitled" or raw_title == "(No title)" %}
     {% set is_note = (page.extra.post_type is defined and page.extra.post_type == "note") or (page.extra.zola_content_type is defined and page.extra.zola_content_type == "note") or (page.extra.is_note is defined and page.extra.is_note) %}
     {% set excerpt = page.summary | default(value=page.content) | striptags | trim | truncate(length=140, end="…") %}
+    {% set rendered_word_count = page.content | striptags | wordcount %}
+    {% set stats_word_count = page.extra | get(key="stats_word_count", default=rendered_word_count) %}
     {{ sep }}{
       "url": {{ page.permalink | json_encode | safe }},
       "title": {% if is_placeholder_title %}""{% else %}{{ raw_title | json_encode | safe }}{% endif %},
       "excerpt": {{ excerpt | json_encode | safe }},
       "date": "{{ page.date | date(format="%Y-%m-%d") }}",
-      "words": {{ page.word_count }},
+      "words": {{ stats_word_count }},
       "images": {{ page.content | split(pat="<img") | length }},
       "is_untitled": {% if is_placeholder_title %}true{% else %}false{% endif %},
       "is_note": {% if is_note %}true{% else %}false{% endif %}

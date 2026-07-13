@@ -3,6 +3,8 @@ date = "2025-02-16T20:57:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 35
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/02/16/todays-watchlist-night-agent-season/"
 +++

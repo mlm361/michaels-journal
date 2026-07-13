@@ -4,6 +4,8 @@ draft = false
 title = "Happy New Year of 2016"
 
 [extra]
+stats_word_count = 23
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2016/01/01/happy-new-year-of/"
 +++

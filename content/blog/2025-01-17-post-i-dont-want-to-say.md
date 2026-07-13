@@ -3,6 +3,8 @@ date = "2025-01-17T17:34:29+00:00"
 draft = false
 
 [extra]
+stats_word_count = 52
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2025/01/17/i-dont-want-to-say/"
 +++

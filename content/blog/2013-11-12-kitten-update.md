@@ -4,6 +4,8 @@ draft = false
 title = "Kitten update"
 
 [extra]
+stats_word_count = 131
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2013/11/12/kitten-update/"
 +++

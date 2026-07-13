@@ -4,6 +4,8 @@ draft = false
 title = "A recent day at Disney's Epcot"
 
 [extra]
+stats_word_count = 13
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2005/05/28/a-recent-day-at-disneys/"
 +++

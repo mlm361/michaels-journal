@@ -4,6 +4,8 @@ draft = false
 title = "Healthcare Should Be Universal"
 
 [extra]
+stats_word_count = 967
+stats_reading_time = 5
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/03/30/healthcare-should-be-universal/"
 +++

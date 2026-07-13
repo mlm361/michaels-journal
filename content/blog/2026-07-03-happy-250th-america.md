@@ -8,6 +8,8 @@ description = "Happy 250th birthday, United States of America! What a strange mo
 tags = [ "USA", "current-events", "history",]
 
 [extra]
+stats_word_count = 275
+stats_reading_time = 2
 image = "https://media.mitchelltribe.xyz/images/2026/07/bccac461_e85281d3be46.avif"
 
 [extra.posse]

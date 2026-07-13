@@ -4,6 +4,8 @@ draft = false
 title = "Self Hosting"
 
 [extra]
+stats_word_count = 245
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/01/31/195648/"
 +++

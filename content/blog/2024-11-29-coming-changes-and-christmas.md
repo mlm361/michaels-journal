@@ -4,6 +4,8 @@ draft = false
 title = "Coming Changes and Christmas"
 
 [extra]
+stats_word_count = 240
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2024/11/29/coming-changes-and-christmas/"
 +++

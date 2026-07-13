@@ -4,6 +4,8 @@ draft = false
 title = "New Adventure tomorrow"
 
 [extra]
+stats_word_count = 140
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2012/10/18/new-adventure-tomorrow/"
 +++

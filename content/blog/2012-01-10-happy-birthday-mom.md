@@ -4,6 +4,8 @@ draft = false
 title = "Happy Birthday Mom!"
 
 [extra]
+stats_word_count = 8
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2012/01/10/happy-birthday-mom/"
 +++

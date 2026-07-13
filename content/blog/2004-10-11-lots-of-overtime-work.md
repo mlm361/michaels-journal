@@ -4,6 +4,8 @@ draft = false
 title = "Lots of Overtime Work"
 
 [extra]
+stats_word_count = 63
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2004/10/11/lots-of-overtime-work/"
 +++

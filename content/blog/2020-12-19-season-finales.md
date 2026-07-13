@@ -4,6 +4,8 @@ draft = false
 title = "Season Finale's"
 
 [extra]
+stats_word_count = 309
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2020/12/19/season-finales/"
 +++

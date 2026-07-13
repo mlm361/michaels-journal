@@ -7,6 +7,8 @@ tags = [ "photography", "photos", "landscape",]
 
 [extra]
 
+stats_word_count = 16
+stats_reading_time = 1
 +++
 <img src="https://media.mitchelltribe.xyz/gallery/posts/844f082861f7.avif" alt="A vibrant sunrise sky in fiery shades of orange and red, with silhouettes of bare, twisted tree branches overhanging a dark roof." width="600">
 

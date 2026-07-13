@@ -4,6 +4,8 @@ draft = false
 title = "Our New Year's 2018 dinner."
 
 [extra]
+stats_word_count = 2
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2018/01/01/our-new-years-dinner/"
 +++

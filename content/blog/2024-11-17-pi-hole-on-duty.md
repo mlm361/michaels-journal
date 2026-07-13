@@ -4,6 +4,8 @@ draft = false
 title = "Pi-Hole on Duty"
 
 [extra]
+stats_word_count = 150
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2024/11/17/pihole-on-duty/"
 +++

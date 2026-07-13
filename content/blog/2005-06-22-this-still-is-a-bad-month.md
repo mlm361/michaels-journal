@@ -4,6 +4,8 @@ draft = false
 title = "This still is a bad month!!!"
 
 [extra]
+stats_word_count = 398
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2005/06/21/this-still-is-a-bad/"
 +++

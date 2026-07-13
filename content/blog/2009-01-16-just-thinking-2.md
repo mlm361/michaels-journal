@@ -4,6 +4,8 @@ draft = false
 title = "Just thinking"
 
 [extra]
+stats_word_count = 76
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2009/01/16/just-thinking/"
 +++

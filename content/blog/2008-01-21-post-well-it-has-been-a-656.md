@@ -3,6 +3,8 @@ date = "2008-01-21T10:26:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 251
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2008/01/21/well-it-has-been-a/"
 +++

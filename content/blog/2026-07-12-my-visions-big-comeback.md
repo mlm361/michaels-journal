@@ -6,6 +6,8 @@ description = "I just shared good news about my heart journey, and now I can fin
 slug = "my-visions-big-comeback"
 
 [extra]
+stats_word_count = 679
+stats_reading_time = 4
 image = "https://media.mitchelltribe.xyz/images/2026/07/f8d7f396_578558e6992b.avif"
 
 [extra.posse]

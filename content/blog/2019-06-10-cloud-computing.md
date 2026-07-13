@@ -4,6 +4,8 @@ draft = false
 title = "Cloud Computing"
 
 [extra]
+stats_word_count = 321
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2019/06/10/cloud-computing/"
 +++

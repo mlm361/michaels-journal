@@ -3,6 +3,8 @@ date = "2025-02-03T21:41:53+00:00"
 draft = false
 
 [extra]
+stats_word_count = 51
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/02/03/years-ago-i-was-diagnosed/"
 +++

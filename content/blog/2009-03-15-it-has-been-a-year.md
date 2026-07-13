@@ -4,6 +4,8 @@ draft = false
 title = "It has been a year"
 
 [extra]
+stats_word_count = 50
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2009/03/15/it-has-been-a-year/"
 +++

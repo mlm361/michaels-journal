@@ -4,6 +4,8 @@ draft = false
 title = "Heart of Champions, 2021 - ★★★★"
 
 [extra]
+stats_word_count = 22
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/03/02/014126/"
 +++

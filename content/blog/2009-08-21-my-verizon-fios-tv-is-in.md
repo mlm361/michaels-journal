@@ -4,6 +4,8 @@ draft = false
 title = "My Verizon Fios TV is in"
 
 [extra]
+stats_word_count = 158
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2009/08/21/my-verizon-fios-tv-is/"
 +++

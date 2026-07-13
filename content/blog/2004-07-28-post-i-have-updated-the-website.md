@@ -3,6 +3,8 @@ date = "2004-07-28T18:41:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 33
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2004/07/28/i-have-updated-the-website/"
 +++

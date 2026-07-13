@@ -4,6 +4,8 @@ draft = false
 title = "The burn marches on!"
 
 [extra]
+stats_word_count = 42
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2004/06/27/the-burn-marches-on/"
 +++

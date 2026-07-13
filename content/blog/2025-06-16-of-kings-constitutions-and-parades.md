@@ -4,6 +4,8 @@ date = "2025-06-16T01:01:45+00:00"
 draft = false
 
 [extra]
+stats_word_count = 773
+stats_reading_time = 4
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/06/15/of-kings-constitutions-and-parades/"
 +++

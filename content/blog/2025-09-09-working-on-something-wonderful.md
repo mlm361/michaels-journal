@@ -4,6 +4,8 @@ date = "2025-09-09T01:14:37+00:00"
 draft = false
 
 [extra]
+stats_word_count = 40
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/09/08/working-on-something-wonderful/"
 

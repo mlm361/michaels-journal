@@ -4,6 +4,8 @@ draft = false
 title = "Walt Disney World here I come!"
 
 [extra]
+stats_word_count = 24
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2005/09/12/walt-disney-world-here-i/"
 +++

@@ -4,6 +4,8 @@ draft = false
 title = "Just Released from St. Joseph’s Hospital"
 
 [extra]
+stats_word_count = 220
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2015/09/24/just-released-from-st-josephs/"
 +++

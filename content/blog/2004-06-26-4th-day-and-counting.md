@@ -4,6 +4,8 @@ draft = false
 title = "4th day and Counting"
 
 [extra]
+stats_word_count = 69
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2004/06/26/th-day-and-counting/"
 +++

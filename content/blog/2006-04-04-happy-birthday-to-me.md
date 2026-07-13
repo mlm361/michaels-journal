@@ -4,6 +4,8 @@ draft = false
 title = "Happy Birthday to Me!!!"
 
 [extra]
+stats_word_count = 72
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2006/04/04/happy-birthday-to-me/"
 +++

@@ -4,6 +4,8 @@ draft = false
 title = "Fianlly a chance"
 
 [extra]
+stats_word_count = 141
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2005/08/01/fianlly-a-chance/"
 +++

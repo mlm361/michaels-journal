@@ -3,6 +3,8 @@ date = "2002-12-27T14:25:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 46
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2002/12/27/i-hope-everyones-christmas-was/"
 +++

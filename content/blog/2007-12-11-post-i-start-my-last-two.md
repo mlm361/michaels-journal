@@ -3,6 +3,8 @@ date = "2007-12-11T15:40:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 102
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2007/12/11/i-start-my-last-two/"
 +++

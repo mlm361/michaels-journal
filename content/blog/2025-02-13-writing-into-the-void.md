@@ -4,6 +4,8 @@ draft = false
 title = "Writing Into the Void"
 
 [extra]
+stats_word_count = 82
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/02/12/writing-into-the-void/"
 +++

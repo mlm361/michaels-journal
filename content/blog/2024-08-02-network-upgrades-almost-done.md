@@ -4,6 +4,8 @@ draft = false
 title = "Network upgrades almost done"
 
 [extra]
+stats_word_count = 101
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2024/08/02/network-upgrades-almost-done/"
 +++

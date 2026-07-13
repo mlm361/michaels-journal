@@ -10,6 +10,8 @@ tags = ["TampaTraffic", "CommuterLife", "FloridaLiving"]
 
 [extra]
 
+stats_word_count = 582
+stats_reading_time = 3
 +++
 <img src="https://media.mitchelltribe.xyz/gallery/posts/i75-fowler-crash-.avif" alt="Traffic camera view of I-75 Southbound near Fowler Avenue in Tampa at night, showing heavy congestion in the right lanes with long lines of red brake lights." width="600" />
 

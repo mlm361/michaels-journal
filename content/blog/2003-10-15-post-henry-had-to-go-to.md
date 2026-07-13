@@ -3,6 +3,8 @@ date = "2003-10-15T20:43:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 102
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2003/10/15/henry-had-to-go-to/"
 +++

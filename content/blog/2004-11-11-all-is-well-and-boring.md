@@ -4,6 +4,8 @@ draft = false
 title = "All is well and boring!"
 
 [extra]
+stats_word_count = 36
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2004/11/11/all-is-well-and-boring/"
 +++

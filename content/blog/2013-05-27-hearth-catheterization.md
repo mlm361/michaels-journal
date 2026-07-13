@@ -4,6 +4,8 @@ draft = false
 title = "Hearth Catheterization"
 
 [extra]
+stats_word_count = 145
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2013/05/27/hearth-catheterization/"
 +++

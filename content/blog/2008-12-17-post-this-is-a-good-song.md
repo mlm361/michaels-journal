@@ -3,6 +3,8 @@ date = "2008-12-17T17:48:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 22
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2008/12/17/this-is-a-good-song/"
 +++

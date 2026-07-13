@@ -4,6 +4,8 @@ draft = false
 title = "Read all about it! News! News! News!"
 
 [extra]
+stats_word_count = 252
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2012/05/04/read-all-about-it-news/"
 +++

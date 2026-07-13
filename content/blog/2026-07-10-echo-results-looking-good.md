@@ -9,6 +9,8 @@ slug = "echo-results-looking-good"
 tags = [ "faith", "health", "personal",]
 
 [extra]
+stats_word_count = 439
+stats_reading_time = 3
 image = "https://media.mitchelltribe.xyz/images/2026/07/542d65e5_d1f0b697f149.avif"
 
 [extra.posse]

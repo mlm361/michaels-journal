@@ -3,6 +3,8 @@ date = "2002-06-02T18:52:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 29
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2002/06/02/saw-attack-of-the-clones/"
 +++

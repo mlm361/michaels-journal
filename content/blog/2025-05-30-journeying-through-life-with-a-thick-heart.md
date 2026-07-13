@@ -4,6 +4,8 @@ date = "2025-05-30T19:26:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 215
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/05/30/journeying-through-life-with-a/"
 +++

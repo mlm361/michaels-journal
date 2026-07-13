@@ -4,6 +4,8 @@ draft = false
 title = "Trying to learn WordPress by trial and error"
 
 [extra]
+stats_word_count = 85
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2023/05/06/trying-to-learn-wordpress-by/"
 +++

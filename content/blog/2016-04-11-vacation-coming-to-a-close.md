@@ -4,6 +4,8 @@ draft = false
 title = "Vacation coming to a close"
 
 [extra]
+stats_word_count = 40
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2016/04/11/vacation-coming-to-a-close/"
 +++

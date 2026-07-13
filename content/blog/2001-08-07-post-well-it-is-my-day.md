@@ -3,6 +3,8 @@ date = "2001-08-07T14:28:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 15
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2001/08/07/well-it-is-my-day/"
 +++

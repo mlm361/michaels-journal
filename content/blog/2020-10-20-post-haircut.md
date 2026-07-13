@@ -4,6 +4,8 @@ draft = false
 title = "Post Haircut"
 
 [extra]
+stats_word_count = 48
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2020/10/20/post-haircut/"
 +++

@@ -3,6 +3,8 @@ date = "2002-08-21T21:02:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 74
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2002/08/21/well-money-money-and-more/"
 +++

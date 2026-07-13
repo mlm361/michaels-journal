@@ -4,6 +4,8 @@ draft = false
 title = "Microsoft gaming disappointment"
 
 [extra]
+stats_word_count = 402
+stats_reading_time = 3
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2023/12/28/microsoft-gaming-disappointment/"
 +++

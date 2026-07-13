@@ -4,6 +4,8 @@ draft = false
 title = "Throwback: A Hilarious Podcast Meme"
 
 [extra]
+stats_word_count = 75
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2025/01/26/throwback-a-hilarious-podcast-meme/"
 +++

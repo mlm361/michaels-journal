@@ -3,6 +3,8 @@ date = "2024-11-29T04:54:10+00:00"
 draft = false
 
 [extra]
+stats_word_count = 204
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2024/11/28/thanksgiving-is-almost-done-for/"
 +++

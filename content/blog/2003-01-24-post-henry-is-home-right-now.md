@@ -3,6 +3,8 @@ date = "2003-01-24T18:22:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 76
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2003/01/24/henry-is-home-right-now/"
 +++

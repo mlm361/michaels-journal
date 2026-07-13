@@ -4,6 +4,8 @@ date = "2025-05-04T14:03:39+00:00"
 draft = false
 
 [extra]
+stats_word_count = 301
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/05/04/star-wars-day/"
 +++

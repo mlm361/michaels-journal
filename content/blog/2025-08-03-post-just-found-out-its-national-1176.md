@@ -4,6 +4,8 @@ date = "2025-08-03T14:06:50+00:00"
 draft = false
 
 [extra]
+stats_word_count = 24
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/08/03/just-found-out-its-national/"
 +++

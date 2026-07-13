@@ -4,6 +4,8 @@ draft = false
 title = "2025 has been a difficult year so far, particularly for California with the..."
 
 [extra]
+stats_word_count = 49
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/01/09/has-been-a-difficult-year/"
 +++

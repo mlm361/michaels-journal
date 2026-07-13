@@ -4,6 +4,8 @@ date = "2025-06-12T05:30:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 14
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/06/12/mbjune-day-hidden-axels-idea/"
 +++

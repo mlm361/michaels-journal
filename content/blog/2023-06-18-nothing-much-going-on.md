@@ -4,6 +4,8 @@ draft = false
 title = "Nothing much going on"
 
 [extra]
+stats_word_count = 146
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2023/06/17/nothing-much-going-on/"
 +++

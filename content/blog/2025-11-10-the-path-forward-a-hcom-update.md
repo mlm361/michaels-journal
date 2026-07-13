@@ -4,6 +4,8 @@ date = "2025-11-10T02:55:30+00:00"
 draft = false
 
 [extra]
+stats_word_count = 1141
+stats_reading_time = 6
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/11/10/the-path-forward-a-hcom/"
 

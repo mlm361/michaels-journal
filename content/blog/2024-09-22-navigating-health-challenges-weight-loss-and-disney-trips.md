@@ -4,6 +4,8 @@ draft = false
 title = "Navigating Health Challenges: Weight Loss and Disney Trips"
 
 [extra]
+stats_word_count = 620
+stats_reading_time = 4
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2024/09/22/navigating-health-challenges-weight-loss/"
 +++

@@ -3,6 +3,8 @@ date = "2002-06-09T00:34:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 117
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2002/06/08/well-rented-from-blockbuster-have/"
 +++

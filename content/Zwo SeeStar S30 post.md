@@ -9,6 +9,8 @@ tags = ["astronomy", "photography", "telescopes", "moon"]
 
 [extra]
 
+stats_word_count = 224
+stats_reading_time = 2
 +++
 I’ve always wanted a telescope. Something I could use to take photos and videos of the night sky with my phone or camera. I recently came across a YouTube video about the Zwo Seestar S50, but since this is my first telescope, I decided to start with the more beginner-friendly **S30** and bought it for my birthday.
 

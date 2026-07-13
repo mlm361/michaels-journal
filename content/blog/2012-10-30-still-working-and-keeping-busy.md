@@ -4,6 +4,8 @@ draft = false
 title = "Still working and keeping busy"
 
 [extra]
+stats_word_count = 142
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2012/10/30/still-working-and-keeping-busy/"
 +++

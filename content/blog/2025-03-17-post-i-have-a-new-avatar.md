@@ -3,6 +3,8 @@ date = "2025-03-17T22:47:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 35
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/03/17/i-have-a-new-avatar/"
 +++

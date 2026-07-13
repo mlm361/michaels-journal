@@ -4,6 +4,8 @@ draft = false
 title = "Wondering what the New Year will bring"
 
 [extra]
+stats_word_count = 23
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2017/10/29/wondering-what-the-new-year/"
 +++

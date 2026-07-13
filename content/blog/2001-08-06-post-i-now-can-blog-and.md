@@ -3,6 +3,8 @@ date = "2001-08-06T18:35:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 34
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2001/08/06/i-now-can-blog-and/"
 +++

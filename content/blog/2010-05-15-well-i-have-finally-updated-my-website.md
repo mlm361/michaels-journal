@@ -4,6 +4,8 @@ draft = false
 title = "Well I have finally updated my website."
 
 [extra]
+stats_word_count = 168
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2010/05/15/well-i-have-finally-updated/"
 +++

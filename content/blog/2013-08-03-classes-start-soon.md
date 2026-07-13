@@ -4,6 +4,8 @@ draft = false
 title = "Classes start soon!"
 
 [extra]
+stats_word_count = 103
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2013/08/03/classes-start-soon/"
 +++

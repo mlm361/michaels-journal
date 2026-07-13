@@ -4,6 +4,8 @@ draft = false
 title = "Another day another study day."
 
 [extra]
+stats_word_count = 32
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2009/01/23/another-day-another-study-day/"
 +++

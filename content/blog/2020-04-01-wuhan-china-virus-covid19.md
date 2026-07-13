@@ -4,6 +4,8 @@ draft = false
 title = "Wuhan China Virus (COVID19)"
 
 [extra]
+stats_word_count = 205
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2020/04/01/wuhan-china-virus-covid/"
 +++

@@ -2,6 +2,11 @@
 title = "Blogging My Way: Typora + Git + Cloudflare + Micro.blog"
 date = 2025-07-05
 draft = false
+
+[extra]
+stats_word_count = 111
+stats_reading_time = 1
+
 +++
 
 This post serves two purposes. First, it marks the inaugural entry 🥳 on my new blogging system.

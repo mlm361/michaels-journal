@@ -4,6 +4,8 @@ draft = false
 title = "Christmas and the end of the year fast approaching"
 
 [extra]
+stats_word_count = 131
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2022/12/02/christmas-and-the-end-of/"
 +++

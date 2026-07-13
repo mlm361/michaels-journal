@@ -4,6 +4,8 @@ draft = false
 title = "My Birthday"
 
 [extra]
+stats_word_count = 61
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2024/04/04/my-birthday/"
 +++

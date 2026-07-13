@@ -4,6 +4,8 @@ draft = false
 title = "Howard Frankland Bridge 🌉"
 
 [extra]
+stats_word_count = 174
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/05/20/ive-been-meaning-to-blog/"
 +++

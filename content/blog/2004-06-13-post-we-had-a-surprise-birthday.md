@@ -3,6 +3,8 @@ date = "2004-06-13T10:14:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 54
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2004/06/13/we-had-a-surprise-birthday/"
 +++

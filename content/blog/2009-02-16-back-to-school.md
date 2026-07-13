@@ -4,6 +4,8 @@ draft = false
 title = "Back to School"
 
 [extra]
+stats_word_count = 24
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2009/02/16/back-to-school/"
 +++

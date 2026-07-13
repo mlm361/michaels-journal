@@ -4,6 +4,8 @@ draft = false
 title = "OK Google are you listening!"
 
 [extra]
+stats_word_count = 68
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2019/11/02/ok-google-are-you-listening/"
 +++

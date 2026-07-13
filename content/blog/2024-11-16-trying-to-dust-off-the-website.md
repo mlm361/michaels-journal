@@ -4,6 +4,8 @@ draft = false
 title = "Trying to dust off the website"
 
 [extra]
+stats_word_count = 130
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2024/11/16/trying-to-dust-off-the/"
 +++

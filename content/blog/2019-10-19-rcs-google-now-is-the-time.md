@@ -4,6 +4,8 @@ draft = false
 title = "RCS Google now is the time!"
 
 [extra]
+stats_word_count = 71
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2019/10/19/rcs-google-now-is-the/"
 +++

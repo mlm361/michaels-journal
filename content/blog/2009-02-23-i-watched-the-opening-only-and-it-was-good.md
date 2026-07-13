@@ -4,6 +4,8 @@ draft = false
 title = "I watched the opening only and it was good"
 
 [extra]
+stats_word_count = 30
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2009/02/23/i-watched-the-opening-only/"
 +++

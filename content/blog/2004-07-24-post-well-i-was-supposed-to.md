@@ -3,6 +3,8 @@ date = "2004-07-24T22:41:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 24
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2004/07/24/well-i-was-supposed-to/"
 +++

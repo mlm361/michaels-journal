@@ -4,6 +4,8 @@ draft = false
 title = "Americans are stressed beyond belief in my opinion"
 
 [extra]
+stats_word_count = 102
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2019/09/12/americans-are-stressed-beyond-belief/"
 +++

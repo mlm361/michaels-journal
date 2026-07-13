@@ -7,6 +7,8 @@ draft = false
 tags = [ "cooking", "food",]
 
 [extra]
+stats_word_count = 283
+stats_reading_time = 2
 image = "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:bp52rrlz2pjiugflzokle3ec/bafkreig6v2yyw3jntlnqrhbmdfyzo5apz67vgnco4vblpava2x4lbnxmny"
 
 [extra.posse]

@@ -4,6 +4,8 @@ draft = false
 title = "The day before!"
 
 [extra]
+stats_word_count = 113
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2006/04/03/the-day-before/"
 +++

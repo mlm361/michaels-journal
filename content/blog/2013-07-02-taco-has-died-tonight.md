@@ -4,6 +4,8 @@ draft = false
 title = "Taco has died tonight."
 
 [extra]
+stats_word_count = 120
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2013/07/02/taco-has-died-tonight/"
 +++

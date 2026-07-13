@@ -4,6 +4,8 @@ date = "2025-07-03T21:57:49+00:00"
 draft = false
 
 [extra]
+stats_word_count = 192
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/07/03/i-see-trumps-big-beautiful/"
 +++

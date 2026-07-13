@@ -4,6 +4,8 @@ draft = false
 title = "When AI Can't Tell Life from TV"
 
 [extra]
+stats_word_count = 353
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/04/07/when-ai-cant-tell-life/"
 +++

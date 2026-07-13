@@ -4,6 +4,8 @@ draft = false
 title = "Catching up on DVDs"
 
 [extra]
+stats_word_count = 15
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2009/05/23/catching-up-on-dvds/"
 +++

@@ -4,6 +4,8 @@ draft = false
 title = "Mitchelltribe.social Mastondon Server"
 
 [extra]
+stats_word_count = 193
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2022/12/27/mitchelltribesocial-mastondon-server/"
 +++

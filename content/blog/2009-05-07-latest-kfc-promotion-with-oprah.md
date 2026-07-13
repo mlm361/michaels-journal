@@ -4,6 +4,8 @@ draft = false
 title = "Latest KFC Promotion with Oprah"
 
 [extra]
+stats_word_count = 32
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2009/05/07/latest-kfc-promotion-with-oprah/"
 +++

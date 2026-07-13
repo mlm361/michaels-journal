@@ -4,6 +4,8 @@ draft = false
 title = "Somalia Pirates"
 
 [extra]
+stats_word_count = 34
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2009/04/08/somalia-pirates/"
 +++

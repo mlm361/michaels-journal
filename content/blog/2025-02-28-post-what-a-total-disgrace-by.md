@@ -3,6 +3,8 @@ date = "2025-02-28T14:18:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 68
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/02/28/what-a-total-disgrace-by/"
 +++

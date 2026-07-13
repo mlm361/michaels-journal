@@ -4,6 +4,8 @@ draft = false
 title = "Archie Bunker Changed—Some Never Will"
 
 [extra]
+stats_word_count = 564
+stats_reading_time = 3
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/02/22/archie-bunker-changedsome-never-will/"
 +++

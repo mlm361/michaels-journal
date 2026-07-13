@@ -4,6 +4,8 @@ draft = false
 title = "Changing Times"
 
 [extra]
+stats_word_count = 295
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2024/11/16/changing-times/"
 +++

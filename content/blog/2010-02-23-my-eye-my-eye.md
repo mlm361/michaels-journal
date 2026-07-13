@@ -4,6 +4,8 @@ draft = false
 title = "My Eye My Eye!"
 
 [extra]
+stats_word_count = 91
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2010/02/23/my-eye-my-eye/"
 +++

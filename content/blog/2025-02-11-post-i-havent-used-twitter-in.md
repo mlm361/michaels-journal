@@ -3,6 +3,8 @@ date = "2025-02-11T23:33:08+00:00"
 draft = false
 
 [extra]
+stats_word_count = 54
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/02/11/i-havent-used-twitter-in/"
 +++

@@ -4,6 +4,8 @@ draft = false
 title = "Mom at my dad's company pinic."
 
 [extra]
+stats_word_count = 2
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2017/10/07/mom-at-my-dads-company/"
 +++

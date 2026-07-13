@@ -8,6 +8,8 @@ description = "This was hilarious https://www.youtube.com/watch?v=__bvWU_mzEY"
 tags = [ "entertainment",]
 
 [extra]
+stats_word_count = 6
+stats_reading_time = 1
 post_type = "note"
 zola_content_type = "note"
 is_note = true

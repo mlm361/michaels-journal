@@ -4,6 +4,8 @@ draft = false
 title = "The Road to Retirement"
 
 [extra]
+stats_word_count = 308
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/02/06/the-road-to-retirement/"
 +++

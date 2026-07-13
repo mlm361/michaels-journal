@@ -3,6 +3,11 @@ title = "Remembering August 31, 2005"
 date = "2011-02-13T06:43:00-05:00"
 draft = false
 description = "This was my first trip and first look at my now owned property in Paris, Tennessee. The video is really about an 1 hour long. However, this is the first 13 minutes. This was also my first time using this video camera. I just learned how..."
+
+[extra]
+stats_word_count = 124
+stats_reading_time = 1
+
 +++
 
 <p class="p-summary mf2-hidden" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">This was my first trip and first look at my now owned property in Paris, Tennessee. The video is really about an 1 hour long. However, this is the first 13 minutes. This was also my first time using this video camera. I just learned how...</p>

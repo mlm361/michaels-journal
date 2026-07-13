@@ -4,6 +4,8 @@ draft = false
 title = "New TV Shows for 2014"
 
 [extra]
+stats_word_count = 157
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2014/09/28/new-tv-shows-for/"
 +++

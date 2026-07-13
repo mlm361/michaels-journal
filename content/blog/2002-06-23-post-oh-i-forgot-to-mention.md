@@ -3,6 +3,8 @@ date = "2002-06-23T21:31:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 82
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2002/06/23/oh-i-forgot-to-mention/"
 +++

@@ -4,6 +4,8 @@ date = "2025-06-19T12:30:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 439
+stats_reading_time = 3
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/06/19/my-aiassisted-workflow-for-sharing/"
 +++

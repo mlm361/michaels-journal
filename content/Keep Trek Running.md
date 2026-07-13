@@ -4,6 +4,8 @@ description = "Why Star Trek should always have a series on the air and how its 
 date = "2025-07-16T20:09:07-04:00"
 draft = false
 [extra]
+stats_word_count = 340
+stats_reading_time = 2
 card_fit = "contain"
 [taxonomies]
 tags = ["entertainment", "tv", "startrek"]

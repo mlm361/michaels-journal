@@ -3,6 +3,8 @@ date = "2001-08-29T23:46:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 21
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2001/08/29/well-another-work-week-down/"
 +++

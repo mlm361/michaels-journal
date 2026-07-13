@@ -4,6 +4,8 @@ draft = false
 title = "My official weight"
 
 [extra]
+stats_word_count = 123
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2010/03/30/my-official-weight/"
 +++

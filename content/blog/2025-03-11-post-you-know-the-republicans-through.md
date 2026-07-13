@@ -3,6 +3,8 @@ date = "2025-03-11T11:47:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 46
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/03/11/you-know-the-republicans-through/"
 +++

@@ -4,6 +4,8 @@ draft = false
 title = "Telephone Bills and the fee/tax scam"
 
 [extra]
+stats_word_count = 81
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2009/04/23/telephone-bills-and-the-feetax/"
 +++

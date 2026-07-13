@@ -4,6 +4,8 @@ date = "2025-07-04T04:16:05+00:00"
 draft = false
 
 [extra]
+stats_word_count = 361
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/07/04/001705/"
 

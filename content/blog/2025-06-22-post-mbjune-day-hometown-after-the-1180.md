@@ -4,6 +4,8 @@ date = "2025-06-22T14:55:45+00:00"
 draft = false
 
 [extra]
+stats_word_count = 39
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/06/22/mbjune-day-hometown-after-the/"
 +++

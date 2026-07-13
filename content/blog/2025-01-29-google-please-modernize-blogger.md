@@ -4,6 +4,8 @@ draft = false
 title = "Google, Please Modernize Blogger!"
 
 [extra]
+stats_word_count = 63
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/01/29/201721/"
 +++

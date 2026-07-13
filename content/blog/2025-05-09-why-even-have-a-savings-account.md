@@ -4,6 +4,8 @@ date = "2025-05-09T01:37:18+00:00"
 draft = false
 
 [extra]
+stats_word_count = 483
+stats_reading_time = 3
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/05/08/why-even-have-a-savings/"
 +++

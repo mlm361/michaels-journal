@@ -4,6 +4,8 @@ draft = false
 title = "Tennessee"
 
 [extra]
+stats_word_count = 83
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2005/08/15/tennessee/"
 +++

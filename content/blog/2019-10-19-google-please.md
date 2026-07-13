@@ -4,6 +4,8 @@ draft = false
 title = "Google Please!!!!"
 
 [extra]
+stats_word_count = 192
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2019/10/19/google-please/"
 +++

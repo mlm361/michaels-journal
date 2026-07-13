@@ -4,6 +4,8 @@ draft = false
 title = "Want to visit Corfu"
 
 [extra]
+stats_word_count = 46
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2019/08/12/want-to-visit-corfu/"
 +++

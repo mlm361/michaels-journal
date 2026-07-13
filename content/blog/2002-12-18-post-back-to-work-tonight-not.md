@@ -3,6 +3,8 @@ date = "2002-12-18T19:09:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 64
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2002/12/18/back-to-work-tonight-not/"
 +++

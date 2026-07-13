@@ -10,6 +10,8 @@ tags = ["health", "cardiology", "HCM", "personal"]
 
 [extra]
 
+stats_word_count = 510
+stats_reading_time = 3
 +++
 I went to the doctors on Friday, hopefully for the last of the required three ECHOs I need while on my medication called [Camzyos](https://www.camzyos.com/) (you may have seen the commercials on TV for it). I have been on 5mg since June for my Hypertrophic Cardiomyopathy, and I am oversimplifying here, but the results have been mixed.
 

@@ -3,6 +3,8 @@ date = "2004-01-31T17:19:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 80
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2004/01/31/this-stinks-i-just-got/"
 +++

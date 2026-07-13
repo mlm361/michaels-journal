@@ -4,6 +4,8 @@ draft = false
 title = "Hurricane Idalia"
 
 [extra]
+stats_word_count = 49
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2023/08/30/hurricane-idalia/"
 +++

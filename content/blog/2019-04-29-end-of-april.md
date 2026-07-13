@@ -4,6 +4,8 @@ draft = false
 title = "End of April"
 
 [extra]
+stats_word_count = 84
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2019/04/29/end-of-april/"
 +++

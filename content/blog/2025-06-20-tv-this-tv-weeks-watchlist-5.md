@@ -4,6 +4,8 @@ draft = false
 title = "📺 This TV Week’s Watchlist:"
 
 [extra]
+stats_word_count = 229
+stats_reading_time = 2
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/06/19/this-tv-weeks-watchlist/"
 +++

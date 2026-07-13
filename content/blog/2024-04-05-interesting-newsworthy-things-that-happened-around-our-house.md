@@ -4,6 +4,8 @@ draft = false
 title = "Interesting Newsworthy things that happened around our house"
 
 [extra]
+stats_word_count = 172
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2024/04/05/interesting-newsworthy-things-that-happened/"
 +++

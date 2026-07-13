@@ -3,6 +3,8 @@ date = "2004-01-07T11:21:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 131
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2004/01/07/i-went-to-the-doctor/"
 +++

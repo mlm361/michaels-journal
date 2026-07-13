@@ -3,6 +3,8 @@ date = "2004-06-16T16:00:00-04:00"
 draft = false
 
 [extra]
+stats_word_count = 42
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2004/06/16/well-nothing-new-to-report/"
 +++

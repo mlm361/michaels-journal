@@ -3,6 +3,8 @@ date = "2007-12-13T18:16:00-05:00"
 draft = false
 
 [extra]
+stats_word_count = 118
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2007/12/13/well-it-is-official-as/"
 +++

@@ -8,6 +8,8 @@ description = "⚠️ **SPOILER WARNING:** MILD SPOILERS **My Rating:** ⭐⭐�
 tags = [ "movies", "review",]
 
 [extra]
+stats_word_count = 143
+stats_reading_time = 1
 image = "https://media.mitchelltribe.xyz/gallery/posts/tmdb_82eb480c6e11.avif"
 card_fit = "contain"
 

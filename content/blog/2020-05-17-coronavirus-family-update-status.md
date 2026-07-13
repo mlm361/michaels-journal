@@ -4,6 +4,8 @@ draft = false
 title = "Coronavirus Family Update Status"
 
 [extra]
+stats_word_count = 125
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2020/05/17/coronavirus-family-update-status/"
 +++

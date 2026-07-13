@@ -7,6 +7,8 @@ tags = [ "personal", "programming", "ai",]
 
 [extra]
 
+stats_word_count = 153
+stats_reading_time = 1
 +++
 In recent months, I've been building a social media aggregation platform using the Windsurf AI IDE. The platform displays a multimedia timeline that pulls content from Mastodon, Bluesky, Sharkey, Nostr, and Micro.blog. The goal was to centralize my social media interactions in one location instead of checking multiple sites.
 

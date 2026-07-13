@@ -4,6 +4,8 @@ draft = false
 title = "A bad medical test today"
 
 [extra]
+stats_word_count = 119
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2024/08/08/a-bad-medical-test-today/"
 +++

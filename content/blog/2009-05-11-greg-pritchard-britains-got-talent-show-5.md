@@ -4,6 +4,8 @@ draft = false
 title = "Greg Pritchard - Britain's Got Talent - Show 5"
 
 [extra]
+stats_word_count = 6
+stats_reading_time = 1
 exclude_from_feed = true
 source_url = "https://mlm361.micro.blog/2009/05/11/greg-pritchard-britains-got-talent/"
 +++
