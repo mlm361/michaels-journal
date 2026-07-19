@@ -12,6 +12,12 @@ tags = [ "ai", "blogging", "opinion",]
 stats_word_count = 1402
 stats_reading_time = 8
 image = "https://media.mitchelltribe.xyz/images/2026/07/3dcea7fa_ai_gen_temp_66edf54e72dc.avif"
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/116948894650865554"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mqzrs7bm5p2w"
+sharkey = "https://mitchelltribe.rodeo/notes/aovwnlcvwtsw00if"
+nostr = "https://jumble.social/nevent1qqszx3yvyftue3ctsal7pzmf5pr5fkwadyc7has28vnt8rv9t8urttcpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcjwdter"
 +++
 
 <p class="p-summary mf2-hidden" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">I was browsing topics and titles on bubbles.town when I came across a post by Panagiotis Vryonis, AI-generated blog post images are not cool any more. It reminded me of another post I read a few months ago, On AI Images and Feature Images...</p>
