@@ -1,6 +1,6 @@
 +++
 title = "Responding to the AI Image Debate"
-date = "2026-07-19T04:48:18-04:00"
+date = "2026-07-19T18:01:47-04:00"
 draft = false
 description = "I was browsing topics and titles on bubbles.town when I came across a post by Panagiotis Vryonis, AI-generated blog post images are not cool any more. It reminded me of another post I read a few months ago, On AI Images and Feature Images..."
 slug = "responding-to-the-ai-image-debate"
@@ -95,7 +95,7 @@ Someone may be a talented writer while having little ability to draw, paint, tak
 
 I can tell you firsthand that the two do not always go together.
 
-I am generally pro-AI, although I would not call myself an AI apologist. I think AI has useful purposes, and I believe it makes certain things more accessible to people like me. i like this democratization. 
+I am generally pro-AI, although I would not call myself an AI apologist. I think AI has useful purposes, and I believe it makes certain things more accessible to people like me. I like this democratization. 
 
 I am also upfront about what I do and do not use AI for. That is all I can reasonably ask from another blogger. Tell me how you use it, particularly when it has played a major role in creating what I am reading.
 
