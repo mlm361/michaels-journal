@@ -101,8 +101,11 @@
         {% block rss %}
         {% if config.generate_feeds %}
         <link rel="alternate" type="{{ macros::feed_mimetype(feed_filename=config.feed_filenames[0]) }}"
-              title="{{ config.title }} RSS"
+              title="{{ config.title }} Atom Feed"
               href="{{ get_url(path=config.feed_filenames[0], trailing_slash=false) }}">
+        <link rel="alternate" type="application/rss+xml"
+              title="{{ config.title }} RSS 2.0 Feed"
+              href="{{ get_url(path='rss.xml', trailing_slash=false) }}">
         <link rel="alternate" type="application/feed+json"
               title="{{ config.title }} JSON Feed"
               href="{{ get_url(path='feed.json', trailing_slash=false) }}">

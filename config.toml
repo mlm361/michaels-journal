@@ -8,7 +8,7 @@ author = "Michael Mitchell"
 
 generate_feeds = true
 feed_limit = 20
-feed_filenames = ["atom.xml", "feed.json"]
+feed_filenames = ["atom.xml", "rss.xml", "feed.json"]
 
 compile_sass = true
 build_search_index = true
