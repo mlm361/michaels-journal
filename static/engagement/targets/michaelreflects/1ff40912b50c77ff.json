@@ -1,8 +1,21 @@
 {
   "canonical_url": "https://mitchelltribe.com/2026/07/23/i-just-wanted-to-say/",
-  "children": [],
-  "generated_at": "2026-07-24T02:42:38.061914+00:00",
-  "like_count": 0,
+  "children": [
+    {
+      "author": {
+        "name": "Gare",
+        "photo": "https://mitchelltribe.rodeo/proxy/avatar.webp?url=https%3A%2F%2Fmitchelltribe.rodeo%2Ffiles%2Ff5dd3485-dc0f-4684-a3cb-0152ac2a8cc5.jpg&avatar=1",
+        "url": "https://mitchelltribe.rodeo/@gare@mstdn.social"
+      },
+      "platform": "sharkey",
+      "published": "2026-07-24T15:49:32.910Z",
+      "url": "https://mitchelltribe.rodeo/@gare@mstdn.social",
+      "wm-property": "like-of",
+      "wm-target": "https://mitchelltribe.com/2026/07/23/i-just-wanted-to-say/"
+    }
+  ],
+  "generated_at": "2026-07-24T16:12:31.292816+00:00",
+  "like_count": 1,
   "reply_count": 0,
   "source_post_id": 1238,
   "type": "feed",
