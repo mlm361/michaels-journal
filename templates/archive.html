@@ -176,7 +176,10 @@
           {% set is_note = (entry.extra.post_type is defined and entry.extra.post_type == "note") or (entry.extra.zola_content_type is defined and entry.extra.zola_content_type == "note") or (entry.extra.is_note is defined and entry.extra.is_note) or ("/notes/" in entry.permalink) %}
           {% set raw_title = entry.title | default(value="") | trim %}
           {% set is_placeholder_title = not raw_title or raw_title == "Untitled" or raw_title == "(No title)" %}
-          {% if is_placeholder_title %}
+          {% set has_titleless_label = is_placeholder_title and entry.extra.titleless_label is defined and entry.extra.titleless_label %}
+          {% if has_titleless_label %}
+            {% set link_text = entry.extra.titleless_label ~ "…" %}
+          {% elif is_placeholder_title %}
             {% set link_text = entry.summary | default(value=entry.content) | striptags | trim | truncate(length=120, end="…") %}
             {% if not link_text %}{% set link_text = entry.date | date(format="%B %d, %Y") %}{% endif %}
           {% else %}
@@ -186,7 +189,7 @@
             <time datetime="{{ entry.date | date(format='%Y-%m-%d') }}">{{ entry.date | date(format="%b %d") }}</time>
           </a>
           <a class="{% if is_placeholder_title %}archive-excerpt-link{% endif %}" href="{{ entry.permalink }}">
-            {% if is_placeholder_title %}<span class="archive-untitled-marker" aria-hidden="true">✦</span><span class="sr-only">Untitled post: </span>{% elif is_note %}<span class="archive-note-marker" aria-hidden="true">📝</span><span class="sr-only">Note: </span>{% endif %}{{ link_text }}
+            {% if has_titleless_label %}<span class="sr-only">Untitled post: </span>{% elif is_placeholder_title %}<span class="archive-untitled-marker" aria-hidden="true">✦</span><span class="sr-only">Untitled post: </span>{% elif is_note %}<span class="archive-note-marker" aria-hidden="true">📝</span><span class="sr-only">Note: </span>{% endif %}{{ link_text }}
           </a>
           {% if is_note and not is_placeholder_title %}<span class="archive-note-tag">note</span>{% endif %}
         </li>
