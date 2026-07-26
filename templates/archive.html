@@ -177,10 +177,18 @@
           {% set raw_title = entry.title | default(value="") | trim %}
           {% set is_placeholder_title = not raw_title or raw_title == "Untitled" or raw_title == "(No title)" %}
           {% set has_titleless_label = is_placeholder_title and entry.extra.titleless_label is defined and entry.extra.titleless_label %}
+          {% set archive_description = entry.description | default(value="") | trim %}
           {% if has_titleless_label %}
             {% set link_text = entry.extra.titleless_label ~ "…" %}
           {% elif is_placeholder_title %}
-            {% set link_text = entry.summary | default(value=entry.content) | striptags | trim | truncate(length=120, end="…") %}
+            {# Blog Poster supplies a plain-text description. Prefer it over
+               rendered content, whose hidden p-summary may already contain
+               HTML entities that Tera would correctly escape a second time. #}
+            {% if archive_description %}
+              {% set link_text = archive_description | truncate(length=120, end="…") %}
+            {% else %}
+              {% set link_text = entry.summary | default(value=entry.content) | striptags | trim | truncate(length=120, end="…") %}
+            {% endif %}
             {% if not link_text %}{% set link_text = entry.date | date(format="%B %d, %Y") %}{% endif %}
           {% else %}
             {% set link_text = raw_title %}
