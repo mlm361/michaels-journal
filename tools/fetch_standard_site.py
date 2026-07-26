@@ -38,6 +38,7 @@ import argparse
 import json
 import os
 import sys
+import time
 import urllib.error
 import urllib.request
 from pathlib import Path
@@ -141,24 +142,63 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--dry-run", action="store_true",
                         help="Print the JSON without writing to disk.")
+    parser.add_argument(
+        "--expected-path",
+        help="Retry until this newly bridged document path appears.",
+    )
+    parser.add_argument(
+        "--attempts",
+        type=int,
+        default=1,
+        help="Maximum fetch attempts when --expected-path is set (default: 1).",
+    )
+    parser.add_argument(
+        "--retry-delay",
+        type=float,
+        default=15,
+        help="Seconds between expected-path attempts (default: 15).",
+    )
     args = parser.parse_args()
 
-    try:
-        pub_records = _fetch_collection(PUB_COLLECTION)
-        doc_records = _fetch_collection(DOC_COLLECTION)
-    except urllib.error.URLError as e:
-        print(f"FETCH FAILURE: {e}", file=sys.stderr)
-        print("kept previous good map (no write)", file=sys.stderr)
-        return 1
-    except Exception as e:
-        print(f"FETCH FAILURE: {e}", file=sys.stderr)
-        print("kept previous good map (no write)", file=sys.stderr)
-        return 1
+    expected_path = args.expected_path
+    if expected_path:
+        if not expected_path.startswith("/"):
+            expected_path = f"/{expected_path}"
+        if not expected_path.endswith("/"):
+            expected_path = f"{expected_path}/"
+    attempts = max(1, args.attempts if expected_path else 1)
 
-    try:
-        payload, summary = _build_map(pub_records, doc_records)
-    except Exception as e:
-        print(f"BUILD FAILURE: {e}", file=sys.stderr)
+    payload = None
+    summary = None
+    for attempt in range(1, attempts + 1):
+        try:
+            pub_records = _fetch_collection(PUB_COLLECTION)
+            doc_records = _fetch_collection(DOC_COLLECTION)
+            payload, summary = _build_map(pub_records, doc_records)
+        except urllib.error.URLError as e:
+            print(f"FETCH FAILURE: {e}", file=sys.stderr)
+            print("kept previous good map (no write)", file=sys.stderr)
+            return 1
+        except Exception as e:
+            print(f"FETCH/BUILD FAILURE: {e}", file=sys.stderr)
+            print("kept previous good map (no write)", file=sys.stderr)
+            return 1
+
+        if not expected_path or expected_path in payload["documents"]:
+            break
+        if attempt < attempts:
+            print(
+                f"waiting for {expected_path} in Bridgy PDS "
+                f"(attempt {attempt}/{attempts})",
+                file=sys.stderr,
+            )
+            time.sleep(max(0, args.retry_delay))
+
+    if expected_path and expected_path not in payload["documents"]:
+        print(
+            f"EXPECTED PATH NOT FOUND after {attempts} attempt(s): {expected_path}",
+            file=sys.stderr,
+        )
         print("kept previous good map (no write)", file=sys.stderr)
         return 1
 
