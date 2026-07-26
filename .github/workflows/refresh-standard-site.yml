@@ -12,6 +12,8 @@ name: Refresh standard.site map
 on:
   schedule:
     - cron: '0 * * * *'
+  repository_dispatch:
+    types: [standard-site-refresh]
   workflow_dispatch:
     inputs:
       expected_path:
@@ -40,7 +42,7 @@ jobs:
 
       - name: Fetch standard.site records
         env:
-          EXPECTED_PATH: ${{ inputs.expected_path }}
+          EXPECTED_PATH: ${{ github.event.client_payload.expected_path || inputs.expected_path }}
         run: |
           args=()
           if [[ -n "$EXPECTED_PATH" ]]; then
