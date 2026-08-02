@@ -1,13 +1,13 @@
 +++
-date = "2026-07-29T02:35:11-04:00"
+title = "Learning to Live Without My Glasses"
+date = "2026-08-02T02:24:31-04:00"
 draft = false
 description = "I saw the title of Antonio’s post the other day on bubbles.town, “I Couldn’t Live Without My Glasses”, and it intrigued me. > The first thing I do when I wake up isn’t checking my phone or making coffee. It’s putting on my glasses. This..."
-slug = "post-i-couldnt-live-without-my-glasses-1241"
+slug = "learning-to-live-without-my-glasses"
 
 [extra]
 stats_word_count = 540
 stats_reading_time = 3
-titleless_label = "I saw the title of"
 
 [extra.posse]
 mastodon = "https://mitchelltribe.social/@michael/117024481085259455"
