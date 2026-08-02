@@ -11,9 +11,9 @@ stats_reading_time = 3
 
 [extra.posse]
 mastodon = "https://mitchelltribe.social/@michael/117024481085259455"
-bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3ms3dwwi3222w"
-sharkey = "https://mitchelltribe.rodeo/notes/apezc0arkgbj00gc"
-nostr = "https://jumble.social/nevent1qqs0kl4wglwvx5f90qxgsxc0lkcuvrufknkz7fctlr3tc02cp998v8spr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcg59nr5"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3ms3gigeiqh2z"
+sharkey = "https://mitchelltribe.rodeo/notes/apf0ynd4kgbj00gv"
+nostr = "https://jumble.social/nevent1qqswfzf4w6mljujujumnpdr79pymyv3a6w4lff7h4z90nvhz605xthspr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcws4ye4"
 +++
 
 <p class="p-summary mf2-hidden" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">I saw the title of Antonio’s post the other day on bubbles.town, “I Couldn’t Live Without My Glasses”, and it intrigued me. &gt; The first thing I do when I wake up isn’t checking my phone or making coffee. It’s putting on my glasses. This...</p>
@@ -25,6 +25,7 @@ I saw the title of Antonio’s post the other day on bubbles.town, [“I Couldn�
 This was never me. I was the opposite. I could see my phone and other things up close, such as the alarm clock. Putting on my glasses was usually the second or third thing I did because I needed them to see at a distance.
 
 Before cataract surgery, I was nearsighted and also had astigmatism. I could see things up close without glasses, but I needed my glasses to see clearly at a distance and for almost everything else. What Antonio wrote still struck a chord with me because I could relate to nearly every word in his post.
+<!--more-->
 
 Cataract surgery completely changed that. My new intraocular lenses (IOLs) were set for distance, so I can now see far away without glasses. However, they cannot focus up close the way my natural lenses once could, which means I now need reading glasses for my phone, the clock, and anything else nearby. As for trying to read without them, forget it. My arms are not long enough.
 
