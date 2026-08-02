@@ -8,6 +8,12 @@ slug = "post-i-couldnt-live-without-my-glasses-1241"
 stats_word_count = 540
 stats_reading_time = 3
 titleless_label = "I saw the title of"
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/117024481085259455"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3ms3dwwi3222w"
+sharkey = "https://mitchelltribe.rodeo/notes/apezc0arkgbj00gc"
+nostr = "https://jumble.social/nevent1qqs0kl4wglwvx5f90qxgsxc0lkcuvrufknkz7fctlr3tc02cp998v8spr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcg59nr5"
 +++
 
 <p class="p-summary mf2-hidden" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">I saw the title of Antonio’s post the other day on bubbles.town, “I Couldn’t Live Without My Glasses”, and it intrigued me. &gt; The first thing I do when I wake up isn’t checking my phone or making coffee. It’s putting on my glasses. This...</p>
