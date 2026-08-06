@@ -6,7 +6,6 @@ description = "I saw the title of Antonio’s post the other day on bubbles.town
 slug = "learning-to-live-without-my-glasses"
 
 [extra]
-image = "https://media.mitchelltribe.xyz/gallery/posts/ai_gen_224a6cf1d941.avif"
 stats_word_count = 540
 stats_reading_time = 3
 
