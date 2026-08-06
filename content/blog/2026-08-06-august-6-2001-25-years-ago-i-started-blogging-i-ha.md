@@ -12,6 +12,12 @@ tags = [ "blogging", "personal",]
 stats_word_count = 231
 stats_reading_time = 2
 image = "https://media.mitchelltribe.xyz/images/2026/08/0d01037c_ai_gen_temp_c102b1aae4e9.avif"
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/117048394684099426"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3msfxrlqipc2r"
+sharkey = "https://mitchelltribe.rodeo/notes/apl0kyujfcqn001z"
+nostr = "https://jumble.social/nevent1qqsggv2pszex8gt0lqwq2c2jaesjfve3srhgwjsld2lqa2yqgx2h3pqpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflc4jkmgp"
 +++
 
 <data class="p-summary" value="August 6, 2001, 25 years ago. I started blogging. I had a website made by Microsoft FrontPage and hosted on GTE (now Verizon) in the homepages they offered back in those days for residential customers. In fact, your ISP provided..."></data>
