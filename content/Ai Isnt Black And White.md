@@ -19,7 +19,7 @@ sharkey = "https://mitchelltribe.rodeo/notes/amdy0f1m2w0y00fg"
 nostr = "https://jumble.social/nevent1qqs2dewq2tgtm8kp9q0fn3e4j4gdakue44t4uegrktlp8hhckf7tzuqpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflccnl6x4"
 +++
 
-<p class="p-summary mf2-hidden" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">Okay, this will probably sound controversial, but that&#x27;s not my intent. I&#x27;m just sharing my thoughts because AI is everywhere right now, especially on social media and in blog posts. These views range from fairly neutral: - Manton Reece -...</p>
+<data class="p-summary" value="Okay, this will probably sound controversial, but that&#x27;s not my intent. I&#x27;m just sharing my thoughts because AI is everywhere right now, especially on social media and in blog posts. These views range from fairly neutral: - Manton Reece -..."></data>
 
 
 

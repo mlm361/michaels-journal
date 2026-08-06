@@ -20,7 +20,7 @@ sharkey = "https://mitchelltribe.rodeo/notes/aou014qbwtsw00cj"
 nostr = "https://jumble.social/nevent1qqs8jwutucpxqxrfz43kszwdyu0xnc5kzm5vh7dzl2d4kc884zpnu6gpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcgrpshd"
 +++
 
-<p class="p-summary mf2-hidden" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">This is a year of anniversaries. Moody Bible Institute turns 140 and Moody Radio turns 100. I listen to Moody Radio almost daily. I think Moody Church and Moody Bible Institute are the premier Evangelical Christian sword in today&#x27;s world...</p>
+<data class="p-summary" value="This is a year of anniversaries. Moody Bible Institute turns 140 and Moody Radio turns 100. I listen to Moody Radio almost daily. I think Moody Church and Moody Bible Institute are the premier Evangelical Christian sword in today&#x27;s world..."></data>
 
 
 

@@ -2,21 +2,22 @@
 title = "Learning to Live Without My Glasses"
 date = "2026-08-02T02:24:31-04:00"
 draft = false
-description = "I saw the title of Antonio’s post the other day on bubbles.town, “I Couldn’t Live Without My Glasses”, and it intrigued me. > The first thing I do when I wake up isn’t checking my phone or making coffee. It’s putting on my glasses. This..."
+description = "I saw the title of Antonio’s post the other day on bubbles.town, “I Couldn’t Live Without My Glasses”, and it intrigued me. The first thing I do when I wake up isn’t checking my phone or making coffee. It’s putting on my glasses. This..."
 slug = "learning-to-live-without-my-glasses"
 
 [extra]
+image = "https://media.mitchelltribe.xyz/gallery/posts/ai_gen_224a6cf1d941.avif"
 stats_word_count = 540
 stats_reading_time = 3
 
 [extra.posse]
 mastodon = "https://mitchelltribe.social/@michael/117024481085259455"
-bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3ms3gigeiqh2z"
-sharkey = "https://mitchelltribe.rodeo/notes/apf0ynd4kgbj00gv"
-nostr = "https://jumble.social/nevent1qqswfzf4w6mljujujumnpdr79pymyv3a6w4lff7h4z90nvhz605xthspr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcws4ye4"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3ms3h77zrir2z"
+sharkey = "https://mitchelltribe.rodeo/notes/apf1f28xkgbj00gw"
+nostr = "https://verify.mitchelltribe.com/note.html#468b1c7433e07e365f4364655041b17d7679bb2723f2e9b241f7ca3ebbee4851"
 +++
 
-<p class="p-summary mf2-hidden" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">I saw the title of Antonio’s post the other day on bubbles.town, “I Couldn’t Live Without My Glasses”, and it intrigued me. &gt; The first thing I do when I wake up isn’t checking my phone or making coffee. It’s putting on my glasses. This...</p>
+<data class="p-summary" value="I saw the title of Antonio’s post the other day on bubbles.town, “I Couldn’t Live Without My Glasses”, and it intrigued me. The first thing I do when I wake up isn’t checking my phone or making coffee. It’s putting on my glasses. This..."></data>
 
 I saw the title of Antonio’s post the other day on bubbles.town, [“I Couldn’t Live Without My Glasses”](https://antoniosantos.io/i-couldnt-live-without-my-glasses/), and it intrigued me.
 

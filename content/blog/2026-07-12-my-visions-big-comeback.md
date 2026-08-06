@@ -17,7 +17,7 @@ sharkey = "https://mitchelltribe.rodeo/notes/aolrg8xztbz0000k"
 nostr = "https://jumble.social/nevent1qqswhkeyl533jm78u47fxjvgmq57juy4kfljdr4v78nra600jsrny6qpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcstsf7y"
 +++
 
-<p class="p-summary mf2-hidden" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">I just shared good news about my heart journey, and now I can finally share another medical milestone for 2026: my cataract surgeries are done and my vision is back. For the last couple of years, my sight kept slipping, no matter how many...</p>
+<data class="p-summary" value="I just shared good news about my heart journey, and now I can finally share another medical milestone for 2026: my cataract surgeries are done and my vision is back. For the last couple of years, my sight kept slipping, no matter how many..."></data>
 
 
 

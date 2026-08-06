@@ -19,7 +19,7 @@ sharkey = "https://mitchelltribe.rodeo/notes/ao9edt6ds6mo008y"
 nostr = "https://jumble.social/nevent1qqspmrws3w7ldzjq3leealt4yw8h5ny27l5xjmetgpjgu22r8366ukgpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcfsd0qj"
 +++
 
-<p class="p-summary mf2-hidden" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">Happy 250th birthday, United States of America! What a strange moment to mark a birthday, given everything going on in the world. Even so, I believe the U.S. has done enormous good and has served as a beacon for the world since at least...</p>
+<data class="p-summary" value="Happy 250th birthday, United States of America! What a strange moment to mark a birthday, given everything going on in the world. Even so, I believe the U.S. has done enormous good and has served as a beacon for the world since at least..."></data>
 
 
 

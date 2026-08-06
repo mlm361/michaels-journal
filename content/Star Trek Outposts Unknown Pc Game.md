@@ -2,7 +2,7 @@
 title = "Star Trek: Outposts Unknown PC Game"
 date = "2026-06-07T18:32:29+00:00"
 draft = false
-description = "> **Star Trek: Outposts Unknown - Official Announcement Trailer - IGN** > To boldly go… and build in Star Trek: Outposts Unknown. Check out the Star Trek: Outposts Unknown announcement trailer for this upcoming narrative-driven outpost..."
+description = "**Star Trek: Outposts Unknown - Official Announcement Trailer - IGN** To boldly go… and build in Star Trek: Outposts Unknown. Check out the Star Trek: Outposts Unknown announcement trailer for this upcoming narrative-driven outpost..."
 
 [taxonomies]
 tags = [ "opinion", "gaming", "Star Trek",]
@@ -19,7 +19,7 @@ sharkey = "https://mitchelltribe.rodeo/notes/an7x980ywutn00k7"
 nostr = "https://jumble.social/nevent1qqsdt26urja2dk8cs8l6lryppcw5mls3z4xazahh8f6k0e0ahj746tcpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflc2n4m8r"
 +++
 
-<p class="p-summary mf2-hidden" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">&gt; **Star Trek: Outposts Unknown - Official Announcement Trailer - IGN** &gt; To boldly go… and build in Star Trek: Outposts Unknown. Check out the Star Trek: Outposts Unknown announcement trailer for this upcoming narrative-driven outpost...</p>
+<data class="p-summary" value="**Star Trek: Outposts Unknown - Official Announcement Trailer - IGN** To boldly go… and build in Star Trek: Outposts Unknown. Check out the Star Trek: Outposts Unknown announcement trailer for this upcoming narrative-driven outpost..."></data>
 
 
 

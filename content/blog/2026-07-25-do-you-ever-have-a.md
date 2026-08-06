@@ -19,7 +19,7 @@ sharkey = "https://mitchelltribe.rodeo/notes/ap4qzdfvydsg0081"
 nostr = "https://jumble.social/nevent1qqsg44ga8xe0lgxjrgtjlngqr2s56fv6gjydrk0prtc2uvq3tar0xqgpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcz73vxp"
 +++
 
-<p class="p-summary mf2-hidden" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">Do you ever have a bunch of blog post ideas bouncing around in your head but no idea where to start, what would actually be interesting, or how to flesh them out? That&#x27;s been me lately. My vision is improving, but my eyes aren&#x27;t fully...</p>
+<data class="p-summary" value="Do you ever have a bunch of blog post ideas bouncing around in your head but no idea where to start, what would actually be interesting, or how to flesh them out? That&#x27;s been me lately. My vision is improving, but my eyes aren&#x27;t fully..."></data>
 
 Do you ever have a bunch of blog post ideas bouncing around in your head but no idea where to start, what would actually be interesting, or how to flesh them out? That's been me lately.
 
