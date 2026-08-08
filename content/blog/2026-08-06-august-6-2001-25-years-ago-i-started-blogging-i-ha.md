@@ -1,6 +1,6 @@
 +++
 title = "Happy Blogiversary to Me, 25 Years!"
-date = "2026-08-06T03:45:00-04:00"
+date = "2026-08-06T07:45:00-04:00"
 draft = false
 description = "August 6, 2001, 25 years ago. I started blogging. I had a website made by Microsoft FrontPage and hosted on GTE (now Verizon) in the homepages they offered back in those days for residential customers. In fact, your ISP provided..."
 slug = "august-6-2001-25-years-ago-i-started-blogging-i-ha"
