@@ -69,8 +69,8 @@
   <div class="photo-grid">
     {% for slug in page.extra.photos %}
     {% set i = loop.index0 %}
-    {% set alt_text = page.extra.alts[i] | default(value="Photo") %}
-    {% set caption  = page.extra.captions[i] | default(value="") %}
+    {% set alt_text = page.extra?.alts?[i] or "Photo" %}
+    {% set caption  = page.extra?.captions?[i] or "" %}
     <div class="photo-item">
       <a
         href="{{ page.extra.r2_base }}/{{ slug }}.avif"

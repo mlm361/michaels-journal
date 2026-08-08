@@ -20,7 +20,7 @@ source_url = "https://mlm361.micro.blog/2009/04/18/susan-boyle-on-cnn/"
     <div>
       <a href="
 
-{{ youtube(id="ZNf8MsxO5iY") }}
+{{ <youtube id="ZNf8MsxO5iY" /> }}
 
  target="_new" rel="noopener">
         <img src="https://media.mitchelltribe.xyz/gallery/imports/e6d2a242d8.avif" style="border-style: none" galleryimg="no" alt="Susan Boyle Interview">
@@ -37,7 +37,7 @@ source_url = "https://mlm361.micro.blog/2009/04/18/susan-boyle-on-cnn/"
     <div>
       <a href="
 
-{{ youtube(id="Hct99smOgM8") }}
+{{ <youtube id="Hct99smOgM8" /> }}
 
  target="_new" rel="noopener">
         <img src="https://media.mitchelltribe.xyz/gallery/imports/fa4d06d99a.avif" style="border-style: none" galleryimg="no" alt="Susan Boyle Second Part">

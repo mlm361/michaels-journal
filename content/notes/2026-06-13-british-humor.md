@@ -27,5 +27,4 @@ This was hilarious
 
 
 
-{{ youtube(id="__bvWU_mzEY") }}
-
+{{ <youtube id="__bvWU_mzEY" /> }}

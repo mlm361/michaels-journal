@@ -1,0 +1,106 @@
+{% component theme_selector(themes) %}
+<select id="theme_selector" size=1>
+    <option value="{{themes[0]}}" selected>{{themes[0]}}</option>
+    {% for theme in themes[1:] %}
+    <option value="{{theme}}">{{theme}}</option>
+    {% endfor %}
+</select>
+{% endcomponent theme_selector %}
+
+{% component mini_logo(classes, title, siteurl, logourl) %}
+<figure class="mini_logo {{ classes }}">
+    <a href="{{siteurl}}" style="background-image: url('/img/{{logourl}}')"></a>
+</figure>
+<h5>
+    <a href="{{siteurl}}">{{title}}</a>
+</h5>
+{% endcomponent mini_logo %}
+
+{% component social(display, icon, uri, icon_class, classes) %}
+<li {% if classes %}class="{{ classes }}"{% endif %}>
+    <a href="{{ uri }}" target="_blank">
+        {{ display }}
+        <i class="{{ icon_class }} fa-{{ icon }}"></i>
+    </a>
+</li>
+{% endcomponent social %}
+
+{% component social_common(classes, icon_class) %}
+{% set extra = config.extra %}
+{% for social_item in extra.socials %}
+{{ <social
+        display={social_item.display}
+        icon={social_item.icon}
+        uri={social_item.uri}
+        icon_class={social_item?.icon_class or icon_class}
+        classes={classes}
+/> }}
+{% endfor %}
+
+{% if config.generate_feeds %}
+{{ <social
+        display={(config.feed_filenames[0] or "atom.xml") | trim_end(pat=".xml")}
+        icon="rss"
+        uri={get_url(path=(config.feed_filenames[0] or "atom.xml"), lang=lang)}
+        icon_class="fas"
+        classes={classes}
+/> }}
+{% endif %}
+{% endcomponent social_common %}
+
+{% component social_list(classes, bsize) %}
+<ul class="social_list {{classes}}">
+    {{ <social_common classes={"button " ~ bsize ~ " font_faint"} icon_class="fab" /> }}
+</ul>
+{% endcomponent social_list %}
+
+{% component frontmatter(classes, date, word_count, read_time) %}
+<ul class="frontmatter {{classes}}" id="frontmatter">
+    <li>
+        <time class="article_time" datetime="{{date}}">{{ date | date(format="%B %d, %Y") }}</time>
+    </li>
+    <li>{{word_count}} words</li>
+    <li>{{read_time}} min</li>
+</ul>
+{% endcomponent frontmatter %}
+
+{% component country_flag(language) %}
+{% if language == "en" %}
+{% set language = "us" %}
+{% endif %}
+<img src="https://www.countryflags.io/{{language}}/flat/64.png"/>
+{% endcomponent country_flag %}
+
+{% component feed_mimetype(feed_filename) %}
+{%- if feed_filename == "rss.xml" -%}
+application/rss+xml
+{%- elif feed_filename == "atom.xml" -%}
+application/atom+xml
+{%- endif -%}
+{% endcomponent feed_mimetype %}
+
+{% component youtube(id: string, class: string = "", autoplay: bool = false) %}
+<div class="youtube {% if class %}{{class}}{% endif %}">
+    <iframe src="https://www.youtube.com/embed/{{id}}{% if autoplay %}?autoplay=1{% endif %}"
+    title="YouTube video"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+    style="border:0"></iframe>
+</div>
+{% endcomponent youtube %}
+
+{% component vimeo(id: string, class: string = "") %}
+<div class="vimeo {% if class %}{{class}}{% endif %}">
+    <iframe src="https://player.vimeo.com/video/{{id}}" title="Vimeo video" allowfullscreen style="border:0"></iframe>
+</div>
+{% endcomponent vimeo %}
+
+{% component quote(author: string = "") %}
+<blockquote>
+  {{body}}<br />
+  {% if author %}
+  -- {{ author }}
+  {% endif %}
+</blockquote>
+{% endcomponent quote %}

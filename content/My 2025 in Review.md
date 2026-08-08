@@ -36,15 +36,15 @@ I moved to Write.as and thought I would like it. I had been trying it out before
 
 2025 also brought many health-related issues. I have Obstructive Hypertrophic Cardiomyopathy (HCM for short). Here is a good video that explains it: 
 
-{{ youtube(id="oblQE0LNbf8") }}
+{{ <youtube id="oblQE0LNbf8" /> }}
 
  So I went on a medication called Camzyos (you have probably seen the TV commercials for it). It has worked as far as I am concerned, but my doctors tell me the obstruction is worse upon exertion. So I have two options now, both explained again by Tufts Medical videos pretty well. The first way has a 90 percent rate of success of relieving the problem 
 
-{{ youtube(id="bxX6jvdiHk8") }}
+{{ <youtube id="bxX6jvdiHk8" /> }}
 
  but is also the riskiest, takes a long time to recover from, and is very invasive. The other procedure has a 70 to 80 percent chance of eliminating or reducing the problem upon exertion and is less invasive, but has a higher risk of not working 
 
-{{ youtube(id="pZ4-mH7R-XE") }}
+{{ <youtube id="pZ4-mH7R-XE" /> }}
 
  My eyeglass prescription changed in March and was great, but nine months later it feels worse than before. I already need a new prescription, and the cataract in my right eye is interfering with my eyesight. Hoping that improves in 2026 too. So as you can see, this has been a most challenging year for my health. But it isn't all bad news. My type 2 diabetes has been under great control, and I have lost 35 pounds, going from 255 lbs to 220 lbs.
 

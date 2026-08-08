@@ -43,10 +43,9 @@ That's where I'm heading. I don't know if Microsoft will ever earn my loyalty ba
 
 [^1]: 
 
-{{ youtube(id="BuH0BiWeG3U") }}
+{{ <youtube id="BuH0BiWeG3U" /> }}
 
 
 [^2]: 
 
-{{ youtube(id="oTpA5jt1g60") }}
-
+{{ <youtube id="oTpA5jt1g60" /> }}

@@ -4,8 +4,8 @@
   extra.no_kudos hides the whole block (mirrors post-actions).
 #}
 {% if not page.extra.no_kudos %}
-{% set share_title = page.title | default(value=config.title) %}
-{% set share_url = page.permalink | default(value=config.base_url) %}
+{% set share_title = page.title or config.title %}
+{% set share_url = page.permalink or config.base_url %}
 {% set bluesky_text = share_title ~ " " ~ share_url %}
 <div class="iw-post-cards">
 

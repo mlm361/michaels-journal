@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% import "macros.html" as macros %}
 
 {% block head_extra %}
 <style>
@@ -226,7 +225,7 @@
       <a href="{{ base_url }}" style="background-image: url('{{ get_url(path='img/' ~ config.extra.profile) }}')"></a>
   </figure>
   <h2 class="site_title">{{config.title}}</h2>
-  <div>{{ config.description | as_str | markdown(inline=true) | safe }}</div>
+  <div>{{ config.description | str | markdown(inline=true) | safe }}</div>
   {% endblock header %}
 </header>
 
@@ -234,7 +233,7 @@
   {% set_global current_year = "" %}
   {% for page in paginator.pages %}
     {% if page.extra.skip_feed is defined and page.extra.skip_feed %}{% continue %}{% endif %}
-    {% set raw_title = page.title | default(value="") | trim %}
+    {% set raw_title = (page.title or "") | trim %}
     {% set is_untitled = not raw_title or raw_title == "Untitled" or raw_title == "(No title)" or raw_title == "(Untitled)" %}
     {% set has_titleless_label = is_untitled and page.extra.titleless_label is defined and page.extra.titleless_label %}
 
@@ -250,8 +249,8 @@
     {% set_global _card_video = "" %}
     {% set_global _card_videoframe = "" %}
     {% set_global _card_poster = "" %}
-    {% set_global _card_fit = page.extra.card_fit | default(value="cover") %}
-    {% set_global _card_position = page.extra.card_position | default(value="center center") %}
+    {% set_global _card_fit = page.extra?.card_fit or "cover" %}
+    {% set_global _card_position = page.extra?.card_position or "center center" %}
     {% if page.extra.image %}
       {% set _card_image_value = page.extra.image | trim %}
       {% if _card_image_value | split(pat='://') | length > 1 %}
@@ -339,14 +338,14 @@
               {% endif %}
             </a>
           </h2>
-          <p class="post-card-excerpt">{{ page.description | default(value=page.content | striptags | truncate(length=180)) | safe }}</p>
+          <p class="post-card-excerpt">{{ (page.description or (page.content | striptags | truncate(length=180))) | safe }}</p>
         </div>
       </div>
       <footer class="post-card-footer">
         <span class="post-card-date">{{ page.date | date(format="%B %-d, %Y") }}</span>
         {% if page.taxonomies.tags %}
-        {% for tag in page.taxonomies.tags | slice(end=3) %}
-        <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}" class="post-tag p-category">#{{ tag }}</a>
+        {% for tag in page.taxonomies.tags[:3] %}
+        <a href="{{ get_taxonomy_url(kind='tags', term=tag) }}" class="post-tag p-category">#{{ tag }}</a>
         {% endfor %}
         {% endif %}
         <a class="post-card-read-more" href="{{ page.permalink }}">{% if is_untitled %}View Entry{% else %}Continue Reading →{% endif %}</a>

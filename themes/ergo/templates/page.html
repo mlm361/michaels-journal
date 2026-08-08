@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% import "macros.html" as macros %}
 
 {% block head_extra %}
 {% if page.extra.extra_css %}
@@ -7,7 +6,7 @@
   <link rel="stylesheet" href="{{ href | safe }}">
   {% endfor %}
 {% endif %}
-{% if not page.extra.no_kudos | default(value=false) %}
+{% if not (page.extra?.no_kudos or false) %}
 <style>
   .mf2-hidden { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 </style>
@@ -28,17 +27,17 @@
 {% endblock head_extra %}
 
 {% block content %}
-{% set is_utility_page = page.extra.no_kudos | default(value=false) %}
+{% set is_utility_page = page.extra?.no_kudos or false %}
 <nav id="overlord" class="overlord" >
   {% set base_url = get_url(path="/", lang=lang) %}
-  {{ macros::mini_logo(classes="", title=config.title, siteurl=base_url, logourl=config.extra.profile) }}
+  {{ <mini_logo classes="" title={config.title} siteurl={base_url} logourl={config.extra.profile} /> }}
   {% include "languages.html" %}
 </nav>
 
 <section class="post_container">
   <article{% if not is_utility_page %} class="h-entry"{% endif %}>
     {% block post %}
-      {% set raw_title = page.title | default(value="") | trim %}
+      {% set raw_title = (page.title or "") | trim %}
       {% set is_untitled = not raw_title or raw_title == "Untitled" or raw_title == "(No title)" or raw_title == "(Untitled)" %}
       {% set has_titleless_label = is_untitled and page.extra.titleless_label is defined and page.extra.titleless_label %}
       <h1 class="article_title{% if not is_utility_page %} p-name{% endif %}{% if has_titleless_label and not is_utility_page %} mf2-hidden{% endif %}">
@@ -57,15 +56,15 @@
         <a class="p-name u-url" href="{{ config.base_url }}">Michael Mitchell</a>
         <img class="u-photo" src="{{ config.base_url }}/img/{{ config.extra.profile }}" alt="">
       </div>
-      <time class="dt-published mf2-hidden" datetime="{{ page.date | date(format='%+') }}">{{ page.date | date(format='%+') }}</time>
+      <time class="dt-published mf2-hidden" datetime="{{ page.date | date(format='%Y-%m-%dT%H:%M:%S%:z') }}">{{ page.date | date(format='%Y-%m-%dT%H:%M:%S%:z') }}</time>
       {% endif %}
       {% set display_word_count = page.extra | get(key="stats_word_count", default=page.word_count) %}
       {% set display_read_time = page.extra | get(key="stats_reading_time", default=page.reading_time) %}
-      {{ macros::frontmatter(classes="frontmatter_page", date=page.date, word_count=display_word_count, read_time=display_read_time) }}
+      {{ <frontmatter classes="frontmatter_page" date={page.date} word_count={display_word_count} read_time={display_read_time} /> }}
       {% if page.taxonomies.tags %}
       <div class="post-tags">
-        {% for tag in page.taxonomies.tags | slice(end=3) %}
-        <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}" class="post-tag p-category">#{{ tag }}</a>
+        {% for tag in page.taxonomies.tags[:3] %}
+        <a href="{{ get_taxonomy_url(kind='tags', term=tag) }}" class="post-tag p-category">#{{ tag }}</a>
         {% endfor %}
       </div>
       {% endif %}

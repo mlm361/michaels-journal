@@ -17,7 +17,7 @@ source_url = "https://mitchelltribe.com/2025/09/13/planet-moneys-toilet-talk/"
 
 This has been on my mind lately. I was listening to the Planet Money Podcast and caught an episode about [why it’s so hard to find a public toilet](https://www.npr.org/2025/05/02/1248664709/-public-good-why-it-is-hard-to-find-a-toilet).  It made me think of London. I’ve never been, but I watch a YouTube channel called [London City Walks](
 
-{{ youtube(id="-f8T5OxbaQY") }}
+{{ <youtube id="-f8T5OxbaQY" /> }}
 
  which often films around [Horse Guards Parade](https://www.royalparks.org.uk/visit/parks/st-jamess-park/horse-guards-parade). The host strolls through the area, narrates what he sees, and points out that this busy tourist spot barely has any public toilets, except a few in the Underground.
 

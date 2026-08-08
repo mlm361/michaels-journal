@@ -21,5 +21,4 @@ I came across this hilarious YouTube short from a British TV show. I think the B
 
 
 
-{{ youtube(id="x87TJoxvHso") }}
-
+{{ <youtube id="x87TJoxvHso" /> }}

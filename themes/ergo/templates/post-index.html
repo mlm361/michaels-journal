@@ -1,15 +1,15 @@
 [
 {% set section = get_section(path="_index.md") %}
 {% set notes_section = get_section(path="notes/_index.md") %}
-{% set pages = section.pages | concat(with=notes_section.pages) %}
+{% set pages = [...section.pages, ...notes_section.pages] %}
 {% set_global sep = "" %}
 {% for page in pages %}
   {% set is_utility = page.extra | get(key="no_kudos", default=false) %}
   {% if page.date and not is_utility %}
-    {% set raw_title = page.title | default(value="") | trim %}
+    {% set raw_title = (page.title or "") | trim %}
     {% set is_placeholder_title = not raw_title or raw_title == "Untitled" or raw_title == "(No title)" %}
     {% set is_note = (page.extra.post_type is defined and page.extra.post_type == "note") or (page.extra.zola_content_type is defined and page.extra.zola_content_type == "note") or (page.extra.is_note is defined and page.extra.is_note) %}
-    {% set excerpt = page.summary | default(value=page.content) | striptags | trim | truncate(length=140, end="…") %}
+    {% set excerpt = (page.summary or page.content) | striptags | trim | truncate(length=140, end="…") %}
     {% set rendered_word_count = page.content | striptags | wordcount %}
     {% set stats_word_count = page.extra | get(key="stats_word_count", default=rendered_word_count) %}
     {{ sep }}{

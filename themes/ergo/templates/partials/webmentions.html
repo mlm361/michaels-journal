@@ -91,7 +91,12 @@
     // Syndication URLs for this post (Bluesky/Mastodon/Sharkey/Nostr). The
     // self-hosted engagement index is keyed by these, so they resolve this
     // post's likes/replies gathered from the native platforms.
-    var posseUrls = {% if page.extra.posse %}{{ page.extra.posse | json_encode | safe }}{% else %}{}{% endif %};
+    var posseUrls = {% if page.extra?.posse %}{
+      "bluesky": {{ (page.extra.posse?.bluesky or "") | json_encode | safe }},
+      "mastodon": {{ (page.extra.posse?.mastodon or "") | json_encode | safe }},
+      "sharkey": {{ (page.extra.posse?.sharkey or "") | json_encode | safe }},
+      "nostr": {{ (page.extra.posse?.nostr or "") | json_encode | safe }}
+    }{% else %}{}{% endif %};
     var list = document.getElementById("webmentions-list");
     if (!list) return;
 

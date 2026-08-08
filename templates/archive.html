@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% import "macros.html" as macros %}
 
 {% block head_extra %}
 <style>
@@ -128,11 +127,11 @@
 
 {# Merge and sort by date descending. Zola gives us section.pages
    already sorted; concat then re-sort to keep one stable order. #}
-{% set merged = root.pages | concat(with=notes_section.pages) %}
+{% set merged = [...root.pages, ...notes_section.pages] %}
 
 <nav id="overlord" class="overlord">
   {% set base_url = get_url(path="/", lang=lang) %}
-  {{ macros::mini_logo(classes="", title=config.title, siteurl=base_url, logourl=config.extra.profile) }}
+  {{ <mini_logo classes="" title={config.title} siteurl={base_url} logourl={config.extra.profile} /> }}
   {% include "languages.html" %}
 </nav>
 
@@ -174,10 +173,10 @@
 
         <li class="archive-entry">
           {% set is_note = (entry.extra.post_type is defined and entry.extra.post_type == "note") or (entry.extra.zola_content_type is defined and entry.extra.zola_content_type == "note") or (entry.extra.is_note is defined and entry.extra.is_note) or ("/notes/" in entry.permalink) %}
-          {% set raw_title = entry.title | default(value="") | trim %}
+          {% set raw_title = (entry.title or "") | trim %}
           {% set is_placeholder_title = not raw_title or raw_title == "Untitled" or raw_title == "(No title)" %}
           {% set has_titleless_label = is_placeholder_title and entry.extra.titleless_label is defined and entry.extra.titleless_label %}
-          {% set archive_description = entry.description | default(value="") | trim %}
+          {% set archive_description = (entry.description or "") | trim %}
           {% if has_titleless_label %}
             {% set link_text = entry.extra.titleless_label ~ "…" %}
           {% elif is_placeholder_title %}
@@ -187,7 +186,7 @@
             {% if archive_description %}
               {% set link_text = archive_description | truncate(length=120, end="…") %}
             {% else %}
-              {% set link_text = entry.summary | default(value=entry.content) | striptags | trim | truncate(length=120, end="…") %}
+              {% set link_text = (entry.summary or entry.content) | striptags | trim | truncate(length=120, end="…") %}
             {% endif %}
             {% if not link_text %}{% set link_text = entry.date | date(format="%B %d, %Y") %}{% endif %}
           {% else %}

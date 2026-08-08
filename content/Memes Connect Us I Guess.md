@@ -24,7 +24,7 @@ What really caught my attention, though, was KSI. I had never heard of him until
 Here it is, watch the interaction. They get the joke right away, and the whole group visibly relaxes. 
 
 
-{{ youtube(id="cg-uGKMcOpE") }}
+{{ <youtube id="cg-uGKMcOpE" /> }}
 
  
 I like that a little internet meme can create that moment of connection.

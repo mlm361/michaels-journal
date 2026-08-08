@@ -10,19 +10,19 @@
   "items": [
     {%- set_global first = true -%}
     {%- for page in pages -%}
-    {%- if not page.extra.skip_feed and not page.extra.exclude_from_feed -%}
+    {%- if not (page.extra?.skip_feed or false) and not (page.extra?.exclude_from_feed or false) -%}
     {%- if not first %},{% endif -%}
     {%- set_global first = false %}
     {
       "id": {{ page.permalink | json_encode | safe }},
       "url": {{ page.permalink | json_encode | safe }},
-      "title": {{ page.title | default(value="(Untitled)") | json_encode | safe }},
+      "title": {{ (page.title or "(Untitled)") | json_encode | safe }},
       "content_html": {{ page.content | json_encode | safe }},
-      "date_published": {{ page.date | date(format="%+") | json_encode | safe }}
+      "date_published": {{ page.date | date(format="%Y-%m-%dT%H:%M:%S%:z") | json_encode | safe }}
       {%- if page.updated %},
-      "date_modified": {{ page.updated | date(format="%+") | json_encode | safe }}
+      "date_modified": {{ page.updated | date(format="%Y-%m-%dT%H:%M:%S%:z") | json_encode | safe }}
       {%- endif %}
-      {%- if page.taxonomies.tags %},
+      {%- if page.taxonomies?.tags %},
       "tags": {{ page.taxonomies.tags | json_encode | safe }}
       {%- endif %}
     }

@@ -20,7 +20,7 @@
     <a class="post-action reply-by-email"
        href="mailto:michael@michaelmitchell.email?subject={{ email_subject | urlencode }}">✍️ Reply by email</a>
 
-    {% set posse = page.extra.posse | default(value=false) %}
+    {% set posse = page.extra?.posse or false %}
     {% if posse %}
       {% if posse.mastodon %}
       <a class="post-action post-action-posse"

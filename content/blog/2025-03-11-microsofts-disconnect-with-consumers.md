@@ -12,7 +12,7 @@ source_url = "https://mitchelltribe.com/2025/03/10/microsofts-disconnect-with-co
 
 I totally agree with Leo's perspective in this [YouTube video](
 
-{{ youtube(id="Cgs7_2wtf1Q") }}
+{{ <youtube id="Cgs7_2wtf1Q" /> }}
 
  If I could easily move all my PC games to macOS or Linux, I'd jump ship in a heartbeat.
 

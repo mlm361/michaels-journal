@@ -86,7 +86,7 @@ with `yt(id="the_id_here")`
 
 ## Vimeo
 with `vm(id="id_here")`
-{{ vm(id="115189988") }}
+{{ <vimeo id="115189988" /> }}
 
 ## Links
 

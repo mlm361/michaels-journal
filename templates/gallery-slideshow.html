@@ -79,9 +79,9 @@
 
 {% block content %}
 {%- set photos = page.extra.photos -%}
-{%- set alts = page.extra.alts | default(value=[]) -%}
-{%- set captions = page.extra.captions | default(value=[]) -%}
-{%- set slide_ms = page.extra.slide_duration_ms | default(value=5000) -%}
+{%- set alts = page.extra?.alts or [] -%}
+{%- set captions = page.extra?.captions or [] -%}
+{%- set slide_ms = page.extra?.slide_duration_ms or 5000 -%}
 
 <div class="carousel" id="carousel" data-slide-ms="{{ slide_ms }}">
   <p class="carousel__back"><a href="{{ get_url(path='gallery') }}">&larr; Gallery</a></p>
@@ -92,11 +92,11 @@
     <img class="carousel__image"
          id="carousel-img"
          src="{{ page.extra.r2_base }}/{{ photos[0] }}.avif"
-         alt="{{ alts[0] | default(value='Photo') }}"
+         alt="{{ alts?[0] or 'Photo' }}"
          fetchpriority="high">
   </div>
 
-  <p class="carousel__caption" id="carousel-caption" aria-live="polite">{{ captions[0] | default(value='') }}</p>
+  <p class="carousel__caption" id="carousel-caption" aria-live="polite">{{ captions?[0] or '' }}</p>
 
   <div class="carousel__controls">
     <button class="carousel__btn" id="carousel-prev" type="button">&larr; Previous</button>
@@ -109,8 +109,8 @@
     {% for slug in photos %}
     {% set i = loop.index0 %}
     <li data-src="{{ page.extra.r2_base }}/{{ slug }}.avif"
-        data-alt="{{ alts[i] | default(value='Photo') }}"
-        data-caption="{{ captions[i] | default(value='') }}"></li>
+        data-alt="{{ alts?[i] or 'Photo' }}"
+        data-caption="{{ captions?[i] or '' }}"></li>
     {% endfor %}
   </ul>
 </div>

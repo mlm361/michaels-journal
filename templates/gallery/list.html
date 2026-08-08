@@ -64,7 +64,7 @@
         <p class="album-meta">
           {{ page.date | date(format="%B %Y") }}
           &middot; {{ page.extra.photos | length }} photos
-          {% set vids = page.extra.videos | default(value=[]) %}
+          {% set vids = page.extra?.videos or [] %}
           {% if vids | length > 0 %}
             &middot; {{ vids | length }} videos
           {% endif %}

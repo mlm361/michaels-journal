@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% import "macros.html" as macros %}
 
 {% block head_extra %}
 <style>
@@ -30,7 +29,7 @@
 {% block content %}
 <nav id="overlord" class="overlord">
   {% set base_url = get_url(path="/", lang=lang) %}
-  {{ macros::mini_logo(classes="", title=config.title, siteurl=base_url, logourl=config.extra.profile) }}
+  {{ <mini_logo classes="" title={config.title} siteurl={base_url} logourl={config.extra.profile} /> }}
 </nav>
 
 <div class="townsquare-head">
@@ -51,7 +50,7 @@
   document.head.appendChild(_tsCss);
   mountTownSquare(document.getElementById("townsquare-root"), {
     serverOrigin: "{{ config.extra.townsquare.origin | safe }}",
-    socketPath: "{{ config.extra.townsquare.socket_path | default(value='/live') | safe }}",
+    socketPath: "{{ (config.extra.townsquare?.socket_path or '/live') | safe }}",
     {% if config.extra.townsquare.site_key %}siteKey: "{{ config.extra.townsquare.site_key | safe }}",{% endif %}
     connections: [
       { side: "left",  label: "Cauê Napier", url: "https://cauenapier.com/" },

@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% import "macros.html" as macros %}
 
 {% block head_extra %}
 <style>
@@ -17,7 +16,7 @@
 {% block content %}
 <nav id="overlord" class="overlord">
   {% set base_url = get_url(path="/", lang=lang) %}
-  {{ macros::mini_logo(classes="", title=config.title, siteurl=base_url, logourl=config.extra.profile) }}
+  {{ <mini_logo classes="" title={config.title} siteurl={base_url} logourl={config.extra.profile} /> }}
   {% include "languages.html" %}
 </nav>
 
@@ -31,7 +30,7 @@
     </div>
     <div class="note-meta">
       <a href="{{ get_url(path='notes/') }}" class="note-back-link">← All notes</a>
-      <time class="dt-published" datetime="{{ page.date | date(format='%+') }}">
+      <time class="dt-published" datetime="{{ page.date | date(format='%Y-%m-%dT%H:%M:%S%:z') }}">
         {{ page.date | date(format="%B %-d, %Y · %-I:%M %p") }}
       </time>
     </div>
