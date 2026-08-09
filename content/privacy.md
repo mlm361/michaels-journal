@@ -48,6 +48,12 @@ Some pages load small third-party assets or scripts for presentation and site fe
 
 These services are used for display and site functionality. I do not use them for advertising, behavioral profiling, or selling visitor data.
 
+### Listening card
+
+On eligible post pages, the Listening card automatically requests my public playing-now status and five most recent listens from [ListenBrainz](https://listenbrainz.org/user/MLM361/), even if the card remains collapsed. The request contains my public ListenBrainz username, not a visitor account or visitor-supplied profile information. ListenBrainz nevertheless receives ordinary connection information such as your IP address, browser request metadata, the referring site or page allowed by your browser, and the time of the request.
+
+When a track includes the necessary MusicBrainz identifiers, your browser may also request its artwork from the [Cover Art Archive](https://coverartarchive.org/), a joint project of the Internet Archive and MusicBrainz. That service likewise receives the ordinary connection information needed to return the image. These requests display my public listening activity; they do not create a listening profile for you on this site.
+
 ### Bubbles.town
 
 Eligible post pages can show an optional vote count from [Bubbles.town](https://bubbles.town/), a community-ranked blog discovery service that reads this site's public Atom feed. The widget is loaded only when its reserved space near the response controls approaches the visible part of your browser; simply opening an article without reaching that area does not load it.

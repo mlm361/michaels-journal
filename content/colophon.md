@@ -67,6 +67,11 @@ The site is made from a few small pieces working together.
 </section>
 
 <section class="colophon-card">
+  <h3>Listening</h3>
+  <p>The Listening card on post pages shows what I am playing now and my five most recent listens from my public <a href="https://listenbrainz.org/user/MLM361/">ListenBrainz profile</a>. When ListenBrainz supplies MusicBrainz cover-art identifiers, the card retrieves artwork from the <a href="https://coverartarchive.org/">Cover Art Archive</a>, a joint project of the Internet Archive and MusicBrainz.</p>
+</section>
+
+<section class="colophon-card">
   <h3>Built With</h3>
   <p class="colophon-card-signoff">Built with ❤️ using <a href="https://www.getzola.org/">Zola</a></p>
 </section>
@@ -150,6 +155,8 @@ This site exists because of the work of other people whose tools made it possibl
 * Bubbles.town for community-ranked blog discovery and the optional per-post vote-count widget.
 * TownSquare by Cauê Napier, the open-source live-presence widget that powers the town square.
 * Tinylytics by Vincent Ritter, which powers the lightweight analytics, the kudos hearts, and the footer counters.
+* [ListenBrainz](https://listenbrainz.org/), which supplies the public playing-now and recent-listen data shown on post pages.
+* The [Cover Art Archive](https://coverartarchive.org/), a joint Internet Archive and MusicBrainz project, which supplies available artwork for the Listening card.
 * Simple Icons, whose logo set appears on the share buttons under each post.
 * Dave Winer, whose work on RSS gave the web its feeds and made a site like this one worth following, and Sam Ruby, Mark Nottingham, and Robert Sayre, whose work with the IETF community produced the Atom format this site publishes.
 * JSON Feed by Brent Simmons and Manton Reece, the other feed this site publishes.
