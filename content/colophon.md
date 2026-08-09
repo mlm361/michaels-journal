@@ -58,7 +58,7 @@ The site is made from a few small pieces working together.
 <section class="colophon-card">
   <h3>Town Square</h3>
   <p>At the bottom of most pages, and on its own <a href="/townsquare/">Town Square</a> page, there is a small live park where anyone visiting at the same time shows up as a little figure. You can wander around, sit on a bench, and chat. It is a playful bit of real-time presence on an otherwise quiet static site.</p>
-  <p>The TownSquare server and widget are self-hosted. Its live connection, operational statistics, moderation data, and private Telegram message notifications are described fully in the Privacy Policy. If TownSquare goes offline, the rest of the site is unaffected and the empty element hides itself.</p>
+  <p>The TownSquare server and widget are self-hosted. Its live connection, operational statistics, and moderation data are described fully in the Privacy Policy. If TownSquare goes offline, the rest of the site is unaffected and the empty element hides itself.</p>
 </section>
 
 <section class="colophon-card">
@@ -157,7 +157,6 @@ This site exists because of the work of other people whose tools made it possibl
 * Tinylytics by Vincent Ritter, which powers the lightweight analytics, the kudos hearts, and the footer counters.
 * [ListenBrainz](https://listenbrainz.org/), which supplies the public playing-now and recent-listen data shown on post pages.
 * The [Cover Art Archive](https://coverartarchive.org/), a joint Internet Archive and MusicBrainz project, which supplies available artwork for the Listening card.
-* Telegram, which delivers private TownSquare chat notifications to me.
 * Simple Icons, whose logo set appears on the share buttons under each post.
 * Dave Winer, whose work on RSS gave the web its feeds and made a site like this one worth following, and Sam Ruby, Mark Nottingham, and Robert Sayre, whose work with the IETF community produced the Atom format this site publishes.
 * JSON Feed by Brent Simmons and Manton Reece, the other feed this site publishes.

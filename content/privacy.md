@@ -72,7 +72,7 @@ The site publishes metadata links that associate public Journal articles with th
 
 ## 2. Features I Host Myself
 
-The Webmention receiver and TownSquare service run on infrastructure I operate. The disclosures below identify the external services they still contact and the information retained for operation, abuse prevention, and private notifications.
+The Webmention receiver and TownSquare service run on infrastructure I operate. The disclosures below identify the external services they still contact and the information retained for operation and abuse prevention.
 
 ### Webmentions and reactions
 
@@ -86,7 +86,7 @@ The [Town Square](/townsquare/) is a small live-presence widget I self-host. Whi
 
 - Your browser's local storage keeps a random browser ID, a server-issued browser secret, your optional display name and color, and message-board read state. These values support recognition and reconnection across visits; they are not an account and can be removed using your browser's site-data controls.
 - The connection sends those random identity values, your optional profile choices, the current page title and URL, focus and widget visibility, movement and presence state, and any chat text needed to provide the live experience.
-- Recent chat is held temporarily in server memory for live and reconnect display and is not written to the TownSquare data directory as a long-term transcript. Accepted chat messages are also sent to my private Telegram chat for notification together with the site, time, numeric visitor ID, and random browser ID; Telegram then retains that private copy according to my account settings and its own policies.
+- Recent chat is held temporarily in server memory for live and reconnect display and is not written to the TownSquare data directory as a long-term transcript. The current deployment does not send TownSquare chat to Telegram, Gotify, or another third-party notification service.
 - For bounded operational analytics, TownSquare retains up to 30 days of random browser IDs grouped by UTC day and hour, plus daily message counts. It does not store chat text in those statistics. Clicks on the configured neighboring-site links are tallied by destination with a count and last-click time; the request IP is used for rate limiting but is not stored with that click tally.
 - The server records the most recently observed Journal page path for site operations. Visitor-join logs can contain the optional display name, IP address, a stable per-site fingerprint derived from the random browser ID, site origin, and bot-protection status. These are server logs rather than public site content.
 - IP addresses and random browser IDs may be retained when necessary for blocking, rate limiting, and moderation. The site also keeps a capped log of moderation actions.
