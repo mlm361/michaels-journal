@@ -12,10 +12,6 @@
   content: "💗";
 }
 
-.post-actions .post-action-kudos:empty::after {
-  content: "0";
-}
-
 .post-actions .bubbles-vote-slot {
   display: inline-flex;
   align-items: center;

@@ -98,7 +98,7 @@ def atom_urls(site_dir: Path) -> set[str]:
     return urls
 
 
-def check_built_site(site_dir: Path) -> list[str]:
+def check_built_site(site_dir: Path, *, require_fediverse: bool = False) -> list[str]:
     errors: list[str] = []
     feed_urls = atom_urls(site_dir)
     widget_by_url: dict[str, Path] = {}
@@ -139,11 +139,13 @@ def check_built_site(site_dir: Path) -> list[str]:
 
     if homepage_facts is None:
         errors.append("Built site is missing the homepage")
-    elif homepage_facts.bubbles_fediverse != [EXPECTED_FEDIVERSE]:
+    elif homepage_facts.bubbles_fediverse not in ([], [EXPECTED_FEDIVERSE]):
         errors.append(
-            "Homepage must expose exactly one verified Bubbles Fediverse identity: "
+            "Homepage has an unexpected Bubbles Fediverse identity: "
             f"{homepage_facts.bubbles_fediverse!r}"
         )
+    elif require_fediverse and homepage_facts.bubbles_fediverse != [EXPECTED_FEDIVERSE]:
+        errors.append("Controlled cutover build is missing the verified Bubbles Fediverse identity")
 
     loader = site_dir / "js" / "bubbles-vote-loader.js"
     if not loader.is_file():
@@ -169,9 +171,11 @@ def check_built_site(site_dir: Path) -> list[str]:
 
     for stylesheet_name in ("default.css", "dark.css"):
         stylesheet = (site_dir / stylesheet_name).read_text(encoding="utf-8")
-        for required in ("post-actions-break", "post-action-kudos:empty"):
+        for required in ("post-actions-break", "post-action-kudos:empty::before"):
             if required not in stylesheet:
                 errors.append(f"{stylesheet_name} is missing the action-layout fallback: {required}")
+        if "post-action-kudos:empty::after" in stylesheet:
+            errors.append(f"{stylesheet_name} must not render an unknown kudos count as zero")
 
     return errors
 
@@ -180,13 +184,17 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--site-dir", type=Path)
     parser.add_argument("--check-remote-hash", action="store_true")
+    parser.add_argument(
+        "--require-fediverse", action="store_true",
+        help="require the verified Mastodon metadata after the controlled PEP-to-Hub proof",
+    )
     args = parser.parse_args()
     if not args.site_dir and not args.check_remote_hash:
         parser.error("provide --site-dir and/or --check-remote-hash")
 
     errors: list[str] = []
     if args.site_dir:
-        errors.extend(check_built_site(args.site_dir.resolve()))
+        errors.extend(check_built_site(args.site_dir.resolve(), require_fediverse=args.require_fediverse))
     if args.check_remote_hash:
         errors.extend(check_remote_hash())
 
