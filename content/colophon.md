@@ -143,6 +143,8 @@ This site exists because of the work of other people whose tools made it possibl
 
 * Zola by Vincent Prouillet.
 * The Ergo theme by Andrew Plaza, which I have heavily customized.
+* [Jim Mitchell](https://jimmitchell.org/), whose work on Clodd CMS and encouragement inspired me to keep improving this site.
+* [Kev Quirk](https://kevquirk.com/), whose steady, consistent posting has encouraged me to keep showing up and publishing here.
 * webmention.io by Aaron Parecki, which received this site's webmentions for years and still serves the older ones.
 * Bridgy Fed by Ryan Barrett and Anuj Ahooja.
 * Bubbles.town for community-ranked blog discovery and the optional per-post vote-count widget.
