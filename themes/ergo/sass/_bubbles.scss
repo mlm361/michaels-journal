@@ -1,5 +1,21 @@
 // Bubbles engagement pill. The slot reserves its final dimensions so the
 // asynchronous third-party response cannot shift nearby controls or focus.
+.post-actions .post-actions-break {
+  flex: 0 0 100%;
+  inline-size: 0;
+  block-size: 0;
+}
+
+// Tinylytics normally replaces the empty button contents. Keep the established
+// heart visible when its third-party script is unavailable in local preview.
+.post-actions .post-action-kudos:empty::before {
+  content: "💗";
+}
+
+.post-actions .post-action-kudos:empty::after {
+  content: "0";
+}
+
 .post-actions .bubbles-vote-slot {
   display: inline-flex;
   align-items: center;
@@ -16,7 +32,7 @@
 }
 
 .post-actions .bubbles-vote-slot.is-empty {
-  visibility: hidden;
+  display: none;
 }
 
 .post-actions .bubbles-vote,

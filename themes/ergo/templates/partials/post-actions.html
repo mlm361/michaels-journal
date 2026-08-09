@@ -55,11 +55,13 @@
       {% endif %}
     {% endif %}
 
+    {% include "partials/bubbles-vote.html" %}
+
+    <span class="post-actions-break" aria-hidden="true"></span>
+
     <button class="post-action post-action-kudos tinylytics_kudos"
             type="button"
             aria-label="Kudos"></button>
-
-    {% include "partials/bubbles-vote.html" %}
   </div>
 </div>
 {% endif %}

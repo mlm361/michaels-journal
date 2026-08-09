@@ -32,11 +32,18 @@ class PageFacts(HTMLParser):
         self.official_script_count = 0
         self.og_url: str | None = None
         self.bubbles_fediverse: list[str] = []
+        self.action_markers: list[str] = []
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         values = dict(attrs)
+        classes = set((values.get("class") or "").split())
         if "data-bubbles-slot" in values:
             self.widget_urls.append(values.get("data-bubbles-url") or "")
+            self.action_markers.append("bubbles")
+        if "post-actions-break" in classes:
+            self.action_markers.append("break")
+        if "post-action-kudos" in classes:
+            self.action_markers.append("kudos")
         if tag == "script" and values.get("src") == "/js/bubbles-vote-loader.js":
             self.loader_count += 1
         if tag == "script" and values.get("src") == SCRIPT_URL:
@@ -114,6 +121,11 @@ def check_built_site(site_dir: Path) -> list[str]:
         if len(facts.widget_urls) != 1 or facts.loader_count != 1:
             errors.append(f"Expected one slot and loader on {route}; got {len(facts.widget_urls)} and {facts.loader_count}")
             continue
+        if facts.action_markers != ["bubbles", "break", "kudos"]:
+            errors.append(
+                f"Action order must preserve Bubbles before a forced break and Kudos last on {route}: "
+                f"{facts.action_markers!r}"
+            )
         widget_url = facts.widget_urls[0]
         if not widget_url or widget_url != facts.og_url:
             errors.append(f"Widget URL differs from og:url on {route}: {widget_url!r} != {facts.og_url!r}")
@@ -154,6 +166,12 @@ def check_built_site(site_dir: Path) -> list[str]:
     colophon = (site_dir / "colophon" / "index.html").read_text(encoding="utf-8")
     if "Bubbles.town" not in colophon:
         errors.append("Colophon is missing the Bubbles credit")
+
+    for stylesheet_name in ("default.css", "dark.css"):
+        stylesheet = (site_dir / stylesheet_name).read_text(encoding="utf-8")
+        for required in ("post-actions-break", "post-action-kudos:empty"):
+            if required not in stylesheet:
+                errors.append(f"{stylesheet_name} is missing the action-layout fallback: {required}")
 
     return errors
 
