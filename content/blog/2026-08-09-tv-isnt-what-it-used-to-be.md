@@ -13,6 +13,12 @@ stats_word_count = 260
 stats_reading_time = 2
 image = "https://media.mitchelltribe.xyz/images/2026/08/a1e6e41d_social-card-d11e9cb4bfd9459e0ea9.avif"
 card_fit = "contain"
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/117067039055159140"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3msoaq34zae2e"
+sharkey = "https://mitchelltribe.rodeo/notes/apppykxvnhaq00s3"
+nostr = "https://jumble.social/nevent1qqs0khqc95684qkd2ue2uu6r63j9u6urxe84wpzlhyc2fplrdnt22uqpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcjpstg9"
 +++
 
 <data class="p-summary" value="Read on ign.com · View original Mastodon post I don&#x27;t watch this series, though it has interested me. Still, its general theme fits what I want to talk about here. People wonder why TV viewing and TV series are dying. Well, when you have..."></data>
