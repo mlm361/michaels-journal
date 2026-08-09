@@ -77,9 +77,11 @@ The site is made from a few small pieces working together.
 
 The site leans into IndieWeb ideas. Posts include h-entry style markup, the Atom feed lives at /atom.xml, and the JSON Feed lives at /feed.json.
 
-Webmentions are now received by an endpoint I host myself. When someone links to a post and sends a webmention, it lands on my own server and flows into my personal inbox app, so replies and likes reach me without a third-party service in the middle. webmention.io, the hosted service that handled this job for years, still serves the older mentions that live there, and both sources appear together under each post.
+New Webmentions now arrive through a Cloudflare public edge at a receiver I operate. My receiver verifies the source link and sends the event into my self-hosted personal inbox app. webmention.io, the hosted service that handled this job for years, still serves the older mentions that live there, and both sources appear together under each post.
 
 Reactions to the syndicated copies of my posts on Mastodon, Bluesky, Sharkey, and Nostr are gathered by my own engagement sync and mirrored back onto each post here, so the conversation around a post stays visible on the canonical page.
+
+Bridgy Fed makes the public Journal identity and posts available to compatible Fediverse and AT Protocol services. A repository workflow reads the public Standard.site records from Bridgy Fed's PDS and stores the resulting post map with the site, allowing each article to advertise its matching `site.standard.document` record. Those services provide discovery and interoperability; Michael's Journal remains the canonical source and neither service publishes or edits the Journal itself.
 
 There is also a Gemini capsule at gemini://gemini.michaelreflects.com for readers who prefer the quietest corner of the small web.
 

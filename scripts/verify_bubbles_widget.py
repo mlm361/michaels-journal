@@ -121,9 +121,9 @@ def check_built_site(site_dir: Path, *, require_fediverse: bool = False) -> list
         if len(facts.widget_urls) != 1 or facts.loader_count != 1:
             errors.append(f"Expected one slot and loader on {route}; got {len(facts.widget_urls)} and {facts.loader_count}")
             continue
-        if facts.action_markers != ["bubbles", "break", "kudos"]:
+        if facts.action_markers != ["break", "kudos", "bubbles"]:
             errors.append(
-                f"Action order must preserve Bubbles before a forced break and Kudos last on {route}: "
+                f"Action order must preserve a forced second row with Kudos before Bubbles on {route}: "
                 f"{facts.action_markers!r}"
             )
         widget_url = facts.widget_urls[0]
@@ -162,12 +162,16 @@ def check_built_site(site_dir: Path, *, require_fediverse: bool = False) -> list
             errors.append("Loader must not move keyboard focus")
 
     privacy = (site_dir / "privacy" / "index.html").read_text(encoding="utf-8")
-    for required in ("Bubbles.town", "post's exact public permalink", "random browser ID"):
+    for required in (
+        "Bubbles.town", "post's exact public permalink", "random browser ID",
+        "Cloudflare provides the public edge", "Bridgy Fed and Standard.site",
+    ):
         if required not in privacy:
             errors.append(f"Privacy disclosure is missing: {required}")
     colophon = (site_dir / "colophon" / "index.html").read_text(encoding="utf-8")
-    if "Bubbles.town" not in colophon:
-        errors.append("Colophon is missing the Bubbles credit")
+    for required in ("Bubbles.town", "self-hosted personal inbox app", "site.standard.document"):
+        if required not in colophon:
+            errors.append(f"Colophon is missing the infrastructure disclosure: {required}")
 
     for stylesheet_name in ("default.css", "dark.css"):
         stylesheet = (site_dir / stylesheet_name).read_text(encoding="utf-8")

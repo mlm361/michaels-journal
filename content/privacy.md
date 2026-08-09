@@ -13,7 +13,7 @@ extra_css = ["/css/privacy-policy.css?v=20260522-privacy-dark-1"]
 
 *Last Updated: August 8, 2026*
 
-This Privacy Policy describes how I (the owner of this blog) use and protect any information collected when you visit **Michael's Journal** (hosted at `michaelreflects.com or as originally on michaels-journal.pages.dev`). This is a personal blog where I share my opinions, reviews, and thoughts on a variety of subjects; these opinions are mine alone and are subject to change.
+This Privacy Policy describes how I (the owner of this blog) use and protect any information collected when you visit **Michael's Journal**, hosted at `michaelreflects.com` and originally available at `michaels-journal.pages.dev`. This is a personal blog where I share my opinions, reviews, and thoughts on a variety of subjects; these opinions are mine alone and are subject to change.
 
 By continuing to use this site, you consent to the practices described in this Privacy Policy.
 
@@ -54,6 +54,10 @@ Eligible post pages can show an optional vote count from [Bubbles.town](https://
 
 When the widget loads, your browser requests a pinned script from `bubbles.town` and sends that post's exact public permalink to retrieve its vote count. The request does not send cookies, but Bubbles' server necessarily receives ordinary connection information such as your IP address, the requested article URL, and the time of the request. If you follow the resulting link, you leave Michael's Journal and Bubbles' own policies apply.
 
+### Bridgy Fed and Standard.site
+
+The site publishes metadata links that associate public Journal articles with their public Bridgy Fed and Standard.site/AT Protocol records. These links help compatible services recognize the Journal as the canonical source and render richer references to its posts. Ordinary page rendering does not load executable code from either service; a compatible client or a visitor who follows one of those links may contact the corresponding service. This integration uses already-public article and account metadata, not private visitor profiles or advertising identifiers.
+
 ---
 
 ## 2. Features I Host Myself
@@ -62,7 +66,7 @@ Some of this site's interactive features run on my own infrastructure rather tha
 
 ### Webmentions and reactions
 
-Webmentions sent to this site are received by an endpoint I host myself. When you send a webmention, my system processes the source and target URLs and fetches the public content of the linking page so the reply or like can be displayed under the post. Older mentions are still displayed from [webmention.io](https://webmention.io/), the hosted service that received them in earlier years, and a post page may request that historical data from webmention.io when it loads.
+New Webmentions are received by an endpoint I operate. Cloudflare provides the public edge and secure route to my receiver; my own receiver verifies the source and target URLs, fetches the public linking page, and forwards the result into my self-hosted personal inbox. Older mentions are still displayed from [webmention.io](https://webmention.io/), the hosted service that received them in earlier years, and a post page may request that historical data from webmention.io when it loads.
 
 Public reactions to the syndicated copies of my posts on Mastodon, Bluesky, Sharkey, and Nostr, such as likes, boosts, and replies, are gathered by my own engagement sync and displayed on the matching post here. This is information those platforms already publish, shown with the public display name, avatar, and link from the original platform.
 
