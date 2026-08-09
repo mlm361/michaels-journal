@@ -15,7 +15,7 @@ extra_css = ["/css/privacy-policy.css?v=20260522-privacy-dark-1"]
 
 This Privacy Policy describes how I (the owner of this blog) use and protect any information collected when you visit **Michael's Journal**, hosted at `michaelreflects.com` and originally available at `michaels-journal.pages.dev`. This is a personal blog where I share my opinions, reviews, and thoughts on a variety of subjects; these opinions are mine alone and are subject to change.
 
-By continuing to use this site, you consent to the practices described in this Privacy Policy.
+This policy describes the browser requests and data handling involved when the site and its optional interactive features are used.
 
 ---
 
@@ -25,16 +25,18 @@ By continuing to use this site, you consent to the practices described in this P
 
 I use [Tinylytics](https://tinylytics.app) to understand how visitors engage with my blog. Tinylytics takes a privacy-first approach:
 
-- **No cookies.** Tinylytics does not use cookies or local storage for visitor tracking.
-- **No persistent identifiers.** It generates unique hit counts via one-way hashing with a rotating daily salt, meaning no individual visitor is tracked across sessions.
-- **Anonymized data only.** Usage data (pages viewed, referral sources, general device type, country-level location) is aggregated and non-personally identifiable.
-- **EU-based data centers.** Data never leaves the EU.
+- **No tracking cookies.** Tinylytics does not use cookies or local storage to build a visitor-tracking profile.
+- **No persistent visitor identifiers.** Its documented unique-hit process uses a one-way hash that resets daily.
+- **Limited reporting data.** It processes page paths, referral information, general browser or device information, and country-level location. Its current documentation says raw IP addresses are not stored in analytics hits and user-agent strings and filtered server logs are deleted after seven days.
+- **Hosted in Europe.** Tinylytics documents European hosting while also identifying infrastructure and limited service providers in its own privacy documentation.
 
-I use this data solely to understand traffic patterns and improve content. I do not collect, store, or have access to any data that would directly identify you individually, so there is nothing for me to delete on request.
+I use the reporting available to me solely to understand traffic patterns and improve content. The dashboard gives me site-usage reporting rather than a visitor account or a direct personal identity.
 
 ### Cloudflare Pages
 
-This site is hosted on [Cloudflare Pages](https://pages.cloudflare.com). As part of normal CDN and hosting operations, Cloudflare may collect server-side data such as IP addresses, request logs, and performance metrics. This is standard infrastructure logging handled entirely by Cloudflare; I do not have access to or control over this data. For details, see [Cloudflare's Privacy Policy](https://www.cloudflare.com/privacypolicy/).
+This site is hosted on [Cloudflare Pages](https://pages.cloudflare.com). As part of normal DNS, CDN, security, and hosting operations, Cloudflare processes connection data such as IP addresses, request metadata, and performance information. Cloudflare controls its underlying network logs and retention and may expose aggregate or operational information to me through my account.
+
+Cloudflare Web Analytics is enabled and injects a JavaScript beacon into served pages. The beacon sends Cloudflare page-view and browser-performance measurements. I use its aggregate reports to understand site reliability and performance, not for advertising or behavioral profiling. For details, see [Cloudflare's Privacy Policy](https://www.cloudflare.com/privacypolicy/) and [Cloudflare Web Analytics documentation](https://developers.cloudflare.com/web-analytics/about/).
 
 ### Fonts, icons, and page features
 
@@ -47,6 +49,8 @@ Some pages load small third-party assets or scripts for presentation and site fe
 - [Creative Commons](https://creativecommons.org/) provides the license badge image shown in the footer.
 
 These services are used for display and site functionality. I do not use them for advertising, behavioral profiling, or selling visitor data.
+
+Posts and archive pages may also contain externally hosted images, avatars, video or audio players, and other embedded media. Examples include YouTube, PeerTube, Micro.blog-hosted images, public social-platform avatars, and movie artwork. Loading that content contacts the named host, which receives ordinary connection information and applies its own privacy policy. Most current Journal images are served from my dedicated `media.mitchelltribe.xyz` media host.
 
 ### Listening card
 
@@ -68,13 +72,13 @@ The site publishes metadata links that associate public Journal articles with th
 
 ## 2. Features I Host Myself
 
-Some of this site's interactive features run on my own infrastructure rather than a third-party service, which keeps the data involved under my control.
+The Webmention receiver and TownSquare service run on infrastructure I operate. The disclosures below identify the external services they still contact and the information retained for operation, abuse prevention, and private notifications.
 
 ### Webmentions and reactions
 
-New Webmentions are received by an endpoint I operate. Cloudflare provides the public edge and secure route to my receiver; my own receiver verifies the source and target URLs, fetches the public linking page, and forwards the result into my self-hosted personal inbox. Older mentions are still displayed from [webmention.io](https://webmention.io/), the hosted service that received them in earlier years, and a post page may request that historical data from webmention.io when it loads.
+New Webmentions are received by an endpoint I operate. Cloudflare provides the public edge and secure route to my receiver; my own receiver verifies the source and target URLs, fetches the public linking page, and forwards the result into my self-hosted personal inbox. Older mentions are still displayed from [webmention.io](https://webmention.io/), the hosted service that received them in earlier years, and a post page requests that historical data from webmention.io when it loads.
 
-Public reactions to the syndicated copies of my posts on Mastodon, Bluesky, Sharkey, and Nostr, such as likes, boosts, and replies, are gathered by my own engagement sync and displayed on the matching post here. This is information those platforms already publish, shown with the public display name, avatar, and link from the original platform.
+Public reactions to the syndicated copies of my posts on Mastodon, Bluesky, Sharkey, and Nostr, such as likes, boosts, and replies, are gathered by my own engagement sync and displayed on the matching post here. This is information those platforms already publish, shown with the public display name, avatar, and link from the original platform. Displaying an avatar may cause your browser to request the image from the original platform or its image host.
 
 ### The Town Square
 
@@ -82,18 +86,20 @@ The [Town Square](/townsquare/) is a small live-presence widget I self-host. Whi
 
 - Your browser's local storage keeps a random browser ID, a server-issued browser secret, your optional display name and color, and message-board read state. These values support recognition and reconnection across visits; they are not an account and can be removed using your browser's site-data controls.
 - The connection sends those random identity values, your optional profile choices, the current page title and URL, focus and widget visibility, movement and presence state, and any chat text needed to provide the live experience.
-- Recent chat may be held temporarily in server memory for live and reconnect display, but it is not written as long-term chat history on disk or published as site content.
-- Ordinary hosting and network layers necessarily receive IP addresses and request metadata, although Town Square does not use an IP address as the visitor identity.
+- Recent chat is held temporarily in server memory for live and reconnect display and is not written to the TownSquare data directory as a long-term transcript. Accepted chat messages are also sent to my private Telegram chat for notification together with the site, time, numeric visitor ID, and random browser ID; Telegram then retains that private copy according to my account settings and its own policies.
+- For bounded operational analytics, TownSquare retains up to 30 days of random browser IDs grouped by UTC day and hour, plus daily message counts. It does not store chat text in those statistics. Clicks on the configured neighboring-site links are tallied by destination with a count and last-click time; the request IP is used for rate limiting but is not stored with that click tally.
+- The server records the most recently observed Journal page path for site operations. Visitor-join logs can contain the optional display name, IP address, a stable per-site fingerprint derived from the random browser ID, site origin, and bot-protection status. These are server logs rather than public site content.
+- IP addresses and random browser IDs may be retained when necessary for blocking, rate limiting, and moderation. The site also keeps a capped log of moderation actions.
 - Closing the page ends the live connection and presence. If Town Square is offline, the rest of the site remains available and the widget hides itself.
 
 ---
 
 ## 3. Data I Do Not Collect
 
-- I do not use Google Analytics or any other advertising-based analytics.
+- I do not use Google Analytics or advertising-based analytics. The site uses only the Tinylytics, Cloudflare Web Analytics, and TownSquare operational measurements disclosed above.
 - I do not run ads.
 - I do not operate an account-based comment system.
-- I do not collect email addresses, names, or any form of registration data.
+- Reading the site requires no registration and no email address or real name. Optional TownSquare display names and already-public names attached to Webmentions or social reactions are handled as described above.
 
 ---
 

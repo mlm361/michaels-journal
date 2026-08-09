@@ -52,13 +52,13 @@ The site is made from a few small pieces working together.
 
 <section class="colophon-card">
   <h3>POSSE and Syndication</h3>
-  <p>Blog Poster, my custom-built personal publishing app, also handles POSSE, Publish (on your) Own Site, Syndicate Elsewhere, for Mastodon, Bluesky, Sharkey, Pixelfed, and Nostr. It records the syndicated URLs so posts on this site can point back to their copies elsewhere, while this site remains the canonical version.</p>
+  <p>Blog Poster coordinates POSSE, Publish (on your) Own Site, Syndicate Elsewhere, through my Personal Events Poster (PEP) service for Mastodon, Bluesky, Sharkey, Pixelfed, and Nostr. Blog Poster records the syndicated URLs so posts on this site can point back to their copies elsewhere, while this site remains the canonical version.</p>
 </section>
 
 <section class="colophon-card">
   <h3>Town Square</h3>
-  <p>At the bottom of every post, and on its own <a href="/townsquare/">Town Square</a> page, there is a small live park where anyone visiting at the same time shows up as a little figure. You can wander around, sit on a bench, and chat. It is a playful bit of real-time presence on an otherwise quiet static site.</p>
-  <p>It runs on TownSquare, an open-source presence widget that I self-host, so the realtime part stays under my own control. If it ever goes offline, the rest of the site is unaffected and the element simply hides itself.</p>
+  <p>At the bottom of most pages, and on its own <a href="/townsquare/">Town Square</a> page, there is a small live park where anyone visiting at the same time shows up as a little figure. You can wander around, sit on a bench, and chat. It is a playful bit of real-time presence on an otherwise quiet static site.</p>
+  <p>The TownSquare server and widget are self-hosted. Its live connection, operational statistics, moderation data, and private Telegram message notifications are described fully in the Privacy Policy. If TownSquare goes offline, the rest of the site is unaffected and the empty element hides itself.</p>
 </section>
 
 <section class="colophon-card">
@@ -106,11 +106,11 @@ Two details I am especially fond of are the rotating avatar in the corner and th
 
 ## Privacy
 
-There are no ads, and no tracking pixels. I prefer a site that feels like a place to read, not a place to be measured. But there are plenty of interaction points, like a water cooler for civil, polite dialogue. 
+There are no ads or advertising trackers. I prefer a site that feels like a place to read, not a place to be measured. But there are plenty of interaction points, like a water cooler for civil, polite dialogue.
 
-The only analytics I use are lightweight ones through Tinylytics. Cloudflare still sees request logs because it serves the site through its network, which is a normal part of using a CDN-backed hosting platform.
+The site uses lightweight Tinylytics and Cloudflare Web Analytics, and the self-hosted TownSquare keeps bounded operational visitor-activity and message-count statistics. The Privacy Policy documents those systems, the third-party resources a browser may contact, and the limited information involved.
 
-The contact link is obfuscated through Cloudflare’s email protection. It works well enough for normal use and makes scraping a little more annoying.
+On the production domain, the contact link is obfuscated through Cloudflare’s email protection. It works well enough for normal use and makes scraping a little more annoying.
 
 ## Standards
 
@@ -157,6 +157,7 @@ This site exists because of the work of other people whose tools made it possibl
 * Tinylytics by Vincent Ritter, which powers the lightweight analytics, the kudos hearts, and the footer counters.
 * [ListenBrainz](https://listenbrainz.org/), which supplies the public playing-now and recent-listen data shown on post pages.
 * The [Cover Art Archive](https://coverartarchive.org/), a joint Internet Archive and MusicBrainz project, which supplies available artwork for the Listening card.
+* Telegram, which delivers private TownSquare chat notifications to me.
 * Simple Icons, whose logo set appears on the share buttons under each post.
 * Dave Winer, whose work on RSS gave the web its feeds and made a site like this one worth following, and Sam Ruby, Mark Nottingham, and Robert Sayre, whose work with the IETF community produced the Atom format this site publishes.
 * JSON Feed by Brent Simmons and Manton Reece, the other feed this site publishes.
