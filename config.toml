@@ -26,6 +26,10 @@ profile = "avatar.png"
 color_themes = ["default", "dark"]
 country_flags = false
 
+# Bubbles comment notifications go to Michael's established Mastodon account.
+# PEP already reads this account's mentions for the Personal Web Hub.
+bubbles_fediverse = "@michael@mitchelltribe.social"
+
 # Webmention receiving endpoint — self-hosted edge (Cloudflare Worker ->
 # tunnel -> RSS Processor receiver -> Web Activity Hub inbox), live 2026-07-05.
 # webmention_provider stays "webmentions_io" so the display partial keeps

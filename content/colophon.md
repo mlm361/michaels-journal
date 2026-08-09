@@ -62,6 +62,11 @@ The site is made from a few small pieces working together.
 </section>
 
 <section class="colophon-card">
+  <h3>Bubbles.town</h3>
+  <p><a href="https://bubbles.town/">Bubbles.town</a> is a community-ranked blog discovery service that reads this site's public Atom feed. On eligible post pages, its optional, pinned widget supplies the vote count and a link to the corresponding Bubbles entry. Bubbles does not host or control the Journal or its posts.</p>
+</section>
+
+<section class="colophon-card">
   <h3>Built With</h3>
   <p class="colophon-card-signoff">Built with ❤️ using <a href="https://www.getzola.org/">Zola</a></p>
 </section>
@@ -138,6 +143,7 @@ This site exists because of the work of other people whose tools made it possibl
 * The Ergo theme by Andrew Plaza, which I have heavily customized.
 * webmention.io by Aaron Parecki, which received this site's webmentions for years and still serves the older ones.
 * Bridgy Fed by Ryan Barrett and Anuj Ahooja.
+* Bubbles.town for community-ranked blog discovery and the optional per-post vote-count widget.
 * TownSquare by Cauê Napier, the open-source live-presence widget that powers the town square.
 * Tinylytics by Vincent Ritter, which powers the lightweight analytics, the kudos hearts, and the footer counters.
 * Simple Icons, whose logo set appears on the share buttons under each post.

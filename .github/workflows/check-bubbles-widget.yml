@@ -1,0 +1,18 @@
+name: Check Bubbles widget pin
+
+on:
+  schedule:
+    - cron: "23 8 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-pin:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify the reviewed upstream script still matches the SRI pin
+        run: python3 scripts/verify_bubbles_widget.py --check-remote-hash

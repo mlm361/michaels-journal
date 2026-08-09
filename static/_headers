@@ -13,7 +13,9 @@
 #   Content-Security-Policy-Report-Only mode in a follow-up commit
 #   once we've mapped every third-party script (Font Awesome kit,
 #   Tinylytics, GLightbox, Webmention.io, YouTube/Vimeo embeds,
-#   Cloudflare email obfuscation injection, theme-toggle inline scripts).
+#   Cloudflare email obfuscation injection, theme-toggle inline scripts,
+#   and Bubbles.town). Bubbles will require the narrowly scoped additions
+#   `script-src https://bubbles.town` and `connect-src https://bubbles.town`.
 
 /*
   Strict-Transport-Security: max-age=15552000

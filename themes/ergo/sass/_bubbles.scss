@@ -1,0 +1,44 @@
+// Bubbles engagement pill. The slot reserves its final dimensions so the
+// asynchronous third-party response cannot shift nearby controls or focus.
+.post-actions .bubbles-vote-slot {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 10.5rem;
+  inline-size: 10.5rem;
+  block-size: 2rem;
+  min-block-size: 2rem;
+  box-sizing: border-box;
+  visibility: hidden;
+}
+
+.post-actions .bubbles-vote-slot.is-ready {
+  visibility: visible;
+}
+
+.post-actions .bubbles-vote-slot.is-empty {
+  visibility: hidden;
+}
+
+.post-actions .bubbles-vote,
+.post-actions a.bubbles-vote-btn {
+  inline-size: 100%;
+  margin: 0;
+}
+
+.post-actions a.bubbles-vote-btn.post-action {
+  display: inline-flex;
+  color: inherit !important;
+  font: inherit;
+  text-decoration: none !important;
+}
+
+.post-actions a.bubbles-vote-btn.post-action:hover {
+  text-decoration: none !important;
+}
+
+@media (max-width: 420px) {
+  .post-actions .bubbles-vote-slot {
+    flex-basis: 9.75rem;
+    inline-size: 9.75rem;
+  }
+}

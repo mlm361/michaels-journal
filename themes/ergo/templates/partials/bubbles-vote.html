@@ -1,0 +1,11 @@
+{#
+  Bubbles is intentionally a rendered-site feature, not a publishing target.
+  The local loader waits until this fixed-size slot approaches the viewport,
+  then loads the reviewed, SRI-pinned upstream widget exactly once.
+#}
+<span class="bubbles-vote-slot"
+      data-bubbles-slot
+      data-bubbles-url="{{ page.permalink }}"
+      aria-live="polite"
+      aria-busy="false"></span>
+<script src="/js/bubbles-vote-loader.js" defer></script>

@@ -11,7 +11,7 @@ extra_css = ["/css/privacy-policy.css?v=20260522-privacy-dark-1"]
 
 <img src="/img/privacy-policy.png" alt="Privacy Policy" style="max-width:100%;height:auto;border-radius:8px;margin-bottom:1.5rem;">
 
-*Last Updated: July 13, 2026*
+*Last Updated: August 8, 2026*
 
 This Privacy Policy describes how I (the owner of this blog) use and protect any information collected when you visit **Michael's Journal** (hosted at `michaelreflects.com or as originally on michaels-journal.pages.dev`). This is a personal blog where I share my opinions, reviews, and thoughts on a variety of subjects; these opinions are mine alone and are subject to change.
 
@@ -48,6 +48,12 @@ Some pages load small third-party assets or scripts for presentation and site fe
 
 These services are used for display and site functionality. I do not use them for advertising, behavioral profiling, or selling visitor data.
 
+### Bubbles.town
+
+Eligible post pages can show an optional vote count from [Bubbles.town](https://bubbles.town/), a community-ranked blog discovery service that reads this site's public Atom feed. The widget is loaded only when its reserved space near the response controls approaches the visible part of your browser; simply opening an article without reaching that area does not load it.
+
+When the widget loads, your browser requests a pinned script from `bubbles.town` and sends that post's exact public permalink to retrieve its vote count. The request does not send cookies, but Bubbles' server necessarily receives ordinary connection information such as your IP address, the requested article URL, and the time of the request. If you follow the resulting link, you leave Michael's Journal and Bubbles' own policies apply.
+
 ---
 
 ## 2. Features I Host Myself
@@ -62,11 +68,13 @@ Public reactions to the syndicated copies of my posts on Mastodon, Bluesky, Shar
 
 ### The Town Square
 
-The [Town Square](/townsquare/) is a small live-presence widget I self-host. While you are on a page with the town square, your browser holds an open connection to my server so you and other visitors can appear, move around, and chat. It requires no account or sign-in.
+The [Town Square](/townsquare/) is a small live-presence widget I self-host. While you are on a page with the town square, your browser holds an open WebSocket connection to my server so you and other visitors can appear, move around, and chat. It requires no account or sign-in.
 
-- Chat messages are relayed live to the other people present and are not archived; the server keeps no chat history on disk, and nothing said there is published anywhere on the site.
-- The server keeps aggregate visit statistics using random identifiers rather than names or IP addresses.
-- Closing the page ends your presence. If the town square is offline, the widget simply hides itself.
+- Your browser's local storage keeps a random browser ID, a server-issued browser secret, your optional display name and color, and message-board read state. These values support recognition and reconnection across visits; they are not an account and can be removed using your browser's site-data controls.
+- The connection sends those random identity values, your optional profile choices, the current page title and URL, focus and widget visibility, movement and presence state, and any chat text needed to provide the live experience.
+- Recent chat may be held temporarily in server memory for live and reconnect display, but it is not written as long-term chat history on disk or published as site content.
+- Ordinary hosting and network layers necessarily receive IP addresses and request metadata, although Town Square does not use an IP address as the visitor identity.
+- Closing the page ends the live connection and presence. If Town Square is offline, the rest of the site remains available and the widget hides itself.
 
 ---
 
