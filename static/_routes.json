@@ -1,5 +1,5 @@
 {
   "version": 1,
-  "include": ["/tweets/media/*"],
+  "include": ["/tweets/media/*", "/api/webmentions", "/reply/*"],
   "exclude": []
 }
