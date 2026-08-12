@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:webmention": "node --test tests/webmention-functions.test.mjs"
+  }
+}
