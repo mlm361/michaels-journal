@@ -12,6 +12,12 @@ tags = [ "entertainment", "gaming",]
 stats_word_count = 146
 stats_reading_time = 1
 image = "https://media.mitchelltribe.xyz/images/2026/08/6f80818c_0734583102f0.avif"
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/117081485884864696"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3msunzpwgoc2a"
+sharkey = "https://mitchelltribe.rodeo/notes/aptd7eeejill002c"
+nostr = "https://jumble.social/nevent1qqsvt7pvq6ww5ra889k9hydwkz7h3d75y8zt46mf58q43upjdakwzzspr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcwa6frr"
 +++
 
 <data class="p-summary" value="Happy Anniversary to Hello Games, No Man&#x27;s Sky. It is 10 years, and hopefully another 10. A sequel would be great. Thanks, Sean Murray, for a great game that started rough but has grown into a masterpiece, and all free after initial..."></data>
