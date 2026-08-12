@@ -65,6 +65,12 @@
   .wm-card-name:hover { text-decoration: underline; }
   .wm-card-date { font-size: 0.84rem; color: rgba(0, 0, 0, 0.45); }
   .wm-card-content { font-size: 0.96rem; line-height: 1.55; color: rgba(0, 0, 0, 0.82); margin: 0; overflow-wrap: anywhere; }
+  .wm-thread-children {
+    border-left: 2px solid rgba(36, 94, 62, 0.2);
+    margin: -0.25rem 0 0.95rem 1.1rem;
+    padding-left: 1rem;
+  }
+  .wm-thread-children .wm-card { background: rgba(36, 94, 62, 0.025); }
   html.theme-dark .webmentions-heading { color: rgba(247, 207, 96, 0.9); }
   html.theme-dark .webmentions-intro,
   html.theme-dark .wm-facepile-label,
@@ -73,6 +79,8 @@
   html.theme-dark .wm-card-name { color: rgba(255, 255, 255, 0.9); }
   html.theme-dark .wm-card-content { color: rgba(255, 255, 255, 0.8); }
   html.theme-dark .wm-card-date { color: rgba(255, 255, 255, 0.42); }
+  html.theme-dark .wm-thread-children { border-left-color: rgba(247, 207, 96, 0.22); }
+  html.theme-dark .wm-thread-children .wm-card { background: rgba(255, 255, 255, 0.025); }
 </style>
 <section class="webmentions" id="webmentions-wrap" aria-labelledby="webmentions-heading">
   <h3 class="webmentions-heading" id="webmentions-heading">Webmentions</h3>
@@ -85,6 +93,7 @@
   </div>
 </section>
 
+<script src="/js/webmention-threading.js"></script>
 <script>
   (function () {
     var target = encodeURIComponent({{ page.permalink | json_encode | safe }});
@@ -188,28 +197,29 @@
         + contentEl + "</article>";
     }
 
-    // Collapse the same like/repost (by author) or reply (by url) when it
-    // arrives from BOTH webmention.io and the self-hosted engagement feed.
-    function dedupeChildren(items) {
-      var seen = {}, out = [];
-      items.forEach(function (m) {
-        var prop = m["wm-property"] || "mention-of";
-        var a = m.author || {};
-        var key;
-        if (prop === "like-of" || prop === "repost-of") {
-          key = prop + "|" + ((a.url || a.name || "").toLowerCase());
-        } else if (m.url) {
-          key = "reply|" + m.url;
-        } else { out.push(m); return; }
-        if (seen[key]) return;
-        seen[key] = 1;
-        out.push(m);
-      });
-      return out;
+    function renderReplyTree(items) {
+      var forest = window.MichaelWebmentionThreads
+        ? window.MichaelWebmentionThreads.buildReplyForest(items)
+        : items.map(function (item) { return { item: item, children: [] }; });
+      function renderNode(node, ancestors) {
+        var item = node.item;
+        var id = item["wm-id"] ? String(item["wm-id"]) : "";
+        var nextAncestors = Object.assign({}, ancestors);
+        if (id && nextAncestors[id]) return renderReplyCard(item);
+        if (id) nextAncestors[id] = true;
+        var nested = node.children.map(function (child) {
+          return renderNode(child, nextAncestors);
+        }).join("");
+        return renderReplyCard(item)
+          + (nested ? "<div class='wm-thread-children'>" + nested + "</div>" : "");
+      }
+      return forest.map(function (root) { return renderNode(root, {}); }).join("");
     }
 
     function renderAll(items) {
-      items = dedupeChildren(items);
+      items = window.MichaelWebmentionThreads
+        ? window.MichaelWebmentionThreads.dedupeChildren(items)
+        : items;
       var heading = document.getElementById("webmentions-heading");
       if (heading && items.length) heading.textContent = "Webmentions (" + items.length + ")";
       if (!items.length) return;
@@ -229,7 +239,7 @@
       html += renderFacepile("↻", reposts, "repost");
       if (replies.length) {
         html += "<h4 class='wm-replies-heading'>" + replies.length + " " + (replies.length === 1 ? "Reply" : "Replies") + "</h4>";
-        html += replies.map(renderReplyCard).join("");
+        html += renderReplyTree(replies);
       }
       if (html) list.innerHTML = html;
     }
