@@ -1,6 +1,29 @@
 (function (root) {
   "use strict";
 
+  function fillMissing(target, source, key) {
+    if (!target[key] && source[key]) target[key] = source[key];
+  }
+
+  function mergeDuplicate(target, source) {
+    fillMissing(target, source, "wm-id");
+    fillMissing(target, source, "wm-parent-id");
+    fillMissing(target, source, "platform");
+    fillMissing(target, source, "published");
+    fillMissing(target, source, "url");
+
+    target.author = target.author || {};
+    var sourceAuthor = source.author || {};
+    fillMissing(target.author, sourceAuthor, "name");
+    fillMissing(target.author, sourceAuthor, "url");
+    fillMissing(target.author, sourceAuthor, "photo");
+
+    target.content = target.content || {};
+    var sourceContent = source.content || {};
+    fillMissing(target.content, sourceContent, "text");
+    fillMissing(target.content, sourceContent, "html");
+  }
+
   function dedupeChildren(items) {
     var seen = Object.create(null);
     var output = [];
@@ -18,12 +41,10 @@
         return;
       }
       if (seen[key]) {
-        // The Hub copy carries thread IDs that webmention.io does not. Merge
-        // those identifiers into the first card instead of rendering twice.
-        if (!seen[key]["wm-id"] && item["wm-id"]) seen[key]["wm-id"] = item["wm-id"];
-        if (!seen[key]["wm-parent-id"] && item["wm-parent-id"]) {
-          seen[key]["wm-parent-id"] = item["wm-parent-id"];
-        }
+        // Preserve the richest display data across legacy/native/Hub copies.
+        // The static engagement record usually has the avatar and platform;
+        // Hub adds durable thread IDs and sanitized text.
+        mergeDuplicate(seen[key], item);
         return;
       }
       seen[key] = item;
