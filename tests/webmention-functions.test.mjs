@@ -3,6 +3,7 @@ import test from 'node:test';
 
 import { onRequestGet as webmentions } from '../functions/api/webmentions.js';
 import { onRequestGet as reply, escapeHtml, validId } from '../functions/reply/[id].js';
+import { onRequest as deletedCanary } from '../functions/webmention-canary-sally-20260813-7f3c9a/[[path]].js';
 
 const originalFetch = globalThis.fetch;
 
@@ -104,4 +105,12 @@ test('reply IDs are strict and HTML escaping covers attribute characters', () =>
   assert.equal(validId('x'.repeat(32)), true);
   assert.equal(validId('../not-an-id'), false);
   assert.equal(escapeHtml(`<&>"'`), '&lt;&amp;&gt;&quot;&#39;');
+});
+
+test('deleted canary paths return an uncacheable 410 tombstone', async () => {
+  const response = deletedCanary();
+  assert.equal(response.status, 410);
+  assert.equal(response.headers.get('Cache-Control'), 'no-store');
+  assert.match(response.headers.get('X-Robots-Tag'), /noindex/);
+  assert.equal(await response.text(), 'Gone');
 });

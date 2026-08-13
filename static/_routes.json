@@ -1,5 +1,5 @@
 {
   "version": 1,
-  "include": ["/tweets/media/*", "/api/webmentions", "/reply/*"],
+  "include": ["/tweets/media/*", "/api/webmentions", "/reply/*", "/webmention-canary-sally-20260813-7f3c9a/*"],
   "exclude": []
 }
