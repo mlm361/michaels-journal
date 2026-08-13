@@ -72,6 +72,17 @@
 (function() {
   var idx, store;
 
+  function safeSearchHref(value) {
+    var href = window.MichaelUrlSafety
+      ? window.MichaelUrlSafety.publicHttpUrl(value)
+      : '';
+    if (!href) return '';
+    var parsed = new URL(href);
+    return (parsed.hostname === 'michaelreflects.com' || parsed.hostname === 'www.michaelreflects.com')
+      ? href
+      : '';
+  }
+
   fetch('/search_index.en.json')
     .then(function(r) { return r.json(); })
     .then(function(data) {
@@ -109,12 +120,19 @@
       var isUntitled = !title || title === 'Untitled' || title === '(No title)' || title === '(Untitled)';
       var snippet = (doc.body || '').replace(/\s+/g, ' ').trim().slice(0, 140);
       var label = isUntitled ? '✦ ' + (snippet || 'Untitled post') : title;
-      var href = doc.id || r.ref;
+      var href = safeSearchHref(doc.id || r.ref);
+      if (!href) return;
       var li = document.createElement('li');
       li.className = 'search-result';
-      li.innerHTML =
-        '<a href="' + href + '">' + label + '</a>' +
-        (snippet ? '<p>' + snippet + '…</p>' : '');
+      var anchor = document.createElement('a');
+      anchor.href = href;
+      anchor.textContent = label;
+      li.appendChild(anchor);
+      if (snippet) {
+        var summary = document.createElement('p');
+        summary.textContent = snippet + '…';
+        li.appendChild(summary);
+      }
       list.appendChild(li);
     });
   });

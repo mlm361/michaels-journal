@@ -127,6 +127,12 @@
     return /^https?:\/\/(www\.|mobile\.)?(twitter\.com|x\.com|t\.co)(\/|$)/i.test(url || '');
   }
 
+  function safeHttpUrl(value) {
+    return window.MichaelUrlSafety
+      ? window.MichaelUrlSafety.publicHttpUrl(value)
+      : '';
+  }
+
   // The bare t.co link Twitter appends for attached photos/videos is dead
   // clutter now that the media is rendered inline, so drop it from the text.
   function stripMediaShortlinks(text, media) {
@@ -146,8 +152,8 @@
     for (const u of urlEntities || []) {
       if (!u.url) continue;
       const display = escapeHtml(u.display_url || u.expanded_url || u.url);
-      const target = u.expanded_url || u.url;
-      const replacement = isTwitterUrl(target)
+      const target = safeHttpUrl(u.expanded_url || u.url);
+      const replacement = !target || isTwitterUrl(target)
         ? display
         : '<a href="' + escapeHtml(target) + '" rel="noopener noreferrer" target="_blank">' + display + '</a>';
       html = html.split(escapeHtml(u.url)).join(replacement);

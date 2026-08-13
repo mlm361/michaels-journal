@@ -15,8 +15,8 @@ const TYPE_BY_EXT = {
 
 function guessType(key) {
   const i = key.lastIndexOf('.');
-  if (i < 0) return 'application/octet-stream';
-  return TYPE_BY_EXT[key.slice(i + 1).toLowerCase()] || 'application/octet-stream';
+  if (i < 0) return null;
+  return TYPE_BY_EXT[key.slice(i + 1).toLowerCase()] || null;
 }
 
 function badPath(parts) {
@@ -44,16 +44,22 @@ export async function onRequestGet(context) {
   }
 
   const key = path.join('/');
+  const contentType = guessType(key);
+  if (!contentType) {
+    return new Response('Not found', { status: 404 });
+  }
   const obj = await bucket.get(key);
   if (!obj) {
     return new Response('Not found', { status: 404 });
   }
 
   const headers = new Headers();
-  const ct = (obj.httpMetadata && obj.httpMetadata.contentType) || guessType(key);
-  headers.set('Content-Type', ct);
+  // Never trust object metadata to turn this same-origin media route into an
+  // HTML/JS response. The allowlisted extension is the executable boundary.
+  headers.set('Content-Type', contentType);
   headers.set('Cache-Control', 'public, max-age=31536000, immutable');
   headers.set('X-Content-Type-Options', 'nosniff');
+  headers.set('Cross-Origin-Resource-Policy', 'same-origin');
   if (obj.etag) headers.set('ETag', obj.etag);
 
   return new Response(obj.body, { status: 200, headers });

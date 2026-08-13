@@ -81,7 +81,13 @@
     }
     function esc(s){ var e = document.createElement('div'); e.textContent = (s == null ? '' : String(s)); return e.innerHTML; }
     function clean(s){ return (s || '').replace(/^null:\s*/i, '').trim(); }
-    function cover(mm){ return (mm && mm.caa_release_mbid && mm.caa_id) ? 'https://coverartarchive.org/release/' + mm.caa_release_mbid + '/' + mm.caa_id + '-250.jpg' : null; }
+    function cover(mm){
+      if (!mm || !mm.caa_release_mbid || !mm.caa_id) return null;
+      var releaseId = String(mm.caa_release_mbid);
+      var coverId = String(mm.caa_id);
+      if (!/^[0-9a-f-]{36}$/i.test(releaseId) || !/^\d+$/.test(coverId)) return null;
+      return 'https://coverartarchive.org/release/' + releaseId + '/' + coverId + '-250.jpg';
+    }
     function row(listen, isNow){
       var t = listen.track_metadata || {}, mm = t.mbid_mapping || {}, src = cover(mm);
       var img = src ? '<img class="iw-cover" src="' + esc(src) + '" alt="" loading="lazy" onerror="this.remove()">' : '';

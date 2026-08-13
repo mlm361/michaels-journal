@@ -1,6 +1,11 @@
 var THEME_KEY = 'ergo-theme';
 
+function normalizeTheme(theme) {
+  return theme === 'dark' ? 'dark' : 'default';
+}
+
 function applyTheme(theme) {
+  theme = normalizeTheme(theme);
   var link = document.getElementById('themeCSS');
   if (link) link.href = '/' + theme + '.css';
   localStorage.setItem(THEME_KEY, theme);
@@ -25,6 +30,6 @@ function toggleTheme() {
 }
 
 function main() {
-  var stored = localStorage.getItem(THEME_KEY) || 'default';
+  var stored = normalizeTheme(localStorage.getItem(THEME_KEY));
   applyTheme(stored);
 }

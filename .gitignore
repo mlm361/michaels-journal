@@ -1,6 +1,35 @@
 *.log
 public/
 .wrangler/
+node_modules/
+coverage/
+dist/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+.dev.vars
+.dev.vars.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.kdbx
+*.sqlite
+*.sqlite3
+*.db
+
+# Local diagnostics, editor files, and accidental backups
+gcm-diagnose.log
+*.bak
+*.backup
+*.orig
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+
 docs/tinylytics-webmentions.md
 deploy.ps1
 publish.bat

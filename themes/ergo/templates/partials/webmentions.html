@@ -154,8 +154,9 @@
     }
 
     function safeUrl(value) {
-      var url = String(value || "");
-      return /^https?:\/\//i.test(url) ? url : "";
+      return window.MichaelUrlSafety
+        ? window.MichaelUrlSafety.publicHttpUrl(value)
+        : "";
     }
 
     function authorName(mention) {
@@ -187,9 +188,8 @@
     }
 
     function stripHtml(html) {
-      var d = document.createElement("div");
-      d.innerHTML = String(html || "");
-      return (d.textContent || d.innerText || "").trim();
+      var parsed = new DOMParser().parseFromString(String(html || ""), "text/html");
+      return (parsed.body.textContent || "").trim();
     }
 
     // Circular avatar (photo if present, else an initial). `cls` selects the
