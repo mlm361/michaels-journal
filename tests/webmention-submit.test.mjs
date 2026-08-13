@@ -38,9 +38,10 @@ const rejected = await webmention.submit({
   endpoint: "/webmention",
   source: "https://source.example/no-link",
   target: "https://michaelreflects.com/post/",
-  fetchImpl: async () => ({ ok: false, status: 400 })
+  fetchImpl: async () => ({ ok: false, status: 422 })
 });
 assert.equal(rejected.ok, false);
+assert.equal(rejected.status, 422);
 assert.match(rejected.message, /links to this post/i);
 
 let invalidFetchCalled = false;
@@ -64,4 +65,3 @@ assert.equal(unavailable.ok, false);
 assert.match(unavailable.message, /could not be reached/i);
 
 console.log("webmention submission: 4 tests passed");
-

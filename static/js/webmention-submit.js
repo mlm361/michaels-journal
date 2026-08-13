@@ -14,7 +14,7 @@
     if (status >= 200 && status < 300) {
       return "Webmention accepted. It will appear after verification and moderation.";
     }
-    if (status === 400) {
+    if (status === 400 || status === 422) {
       return "That page could not be verified. Make sure it is public and links to this post.";
     }
     if (status === 403) return "That target is not accepted by this endpoint.";
@@ -71,4 +71,3 @@
     submit: submit
   };
 })(typeof window !== "undefined" ? window : globalThis);
-
