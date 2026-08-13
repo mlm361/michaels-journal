@@ -13,6 +13,18 @@ export function validMichaelReflectsUrl(value) {
   }
 }
 
+export function validReplyTargetUrl(value) {
+  try {
+    const url = new URL(String(value || ''));
+    return (url.protocol === 'https:' || url.protocol === 'http:')
+      && Boolean(url.hostname)
+      && !url.username
+      && !url.password;
+  } catch (_error) {
+    return false;
+  }
+}
+
 export function originConfig(env) {
   const origin = String(env.WEBMENTION_HUB_ORIGIN || DEFAULT_PUBLIC_ORIGIN).replace(/\/+$/, '');
   const key = String(env.WEBMENTION_HUB_PROJECTION_KEY || '');

@@ -65,7 +65,7 @@ test('reply page escapes hostile text and emits required microformats', async ()
   const id = 'A'.repeat(32);
   globalThis.fetch = async () => new Response(JSON.stringify({
     body_text: '<script>alert(1)</script>',
-    in_reply_to_url: 'https://michaelreflects.com/blog/parent/',
+    in_reply_to_url: 'https://reader.example/replies/parent/',
     root_target_url: 'https://michaelreflects.com/blog/root/',
     published_at: '2026-08-11T21:30:00+00:00',
   }));
@@ -78,9 +78,26 @@ test('reply page escapes hostile text and emits required microformats', async ()
   assert.equal(response.status, 200);
   assert.match(html, /class="h-entry"/);
   assert.match(html, /class="u-in-reply-to"/);
+  assert.match(html, /https:\/\/reader\.example\/replies\/parent\//);
   assert.doesNotMatch(html, /<script>alert/);
   assert.match(html, /&lt;script&gt;alert\(1\)&lt;\/script&gt;/);
   assert.match(html, /noindex,nofollow,noarchive/);
+});
+
+test('reply page rejects a non-HTTP external reply target', async () => {
+  const id = 'B'.repeat(32);
+  globalThis.fetch = async () => new Response(JSON.stringify({
+    body_text: 'safe text',
+    in_reply_to_url: 'javascript:alert(1)',
+    root_target_url: 'https://michaelreflects.com/blog/root/',
+    published_at: '2026-08-11T21:30:00+00:00',
+  }));
+  const response = await reply({
+    request: new Request('https://michaelreflects.com/reply/' + id + '/'),
+    params: { id },
+    env: { WEBMENTION_HUB_ORIGIN: 'https://hub.example' },
+  });
+  assert.equal(response.status, 404);
 });
 
 test('reply IDs are strict and HTML escaping covers attribute characters', () => {

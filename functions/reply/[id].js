@@ -1,4 +1,9 @@
-import { fetchOriginJson, securityHeaders, validMichaelReflectsUrl } from '../_shared/webmention-origin.js';
+import {
+  fetchOriginJson,
+  securityHeaders,
+  validMichaelReflectsUrl,
+  validReplyTargetUrl,
+} from '../_shared/webmention-origin.js';
 
 function escapeHtml(value) {
   return String(value || '').replace(/[&<>"']/g, (char) => ({
@@ -45,7 +50,7 @@ export async function onRequestGet(context) {
       '/api/public/webmention-replies/' + encodeURIComponent(id),
     );
     if (!validMichaelReflectsUrl(reply.root_target_url)
-        || !validMichaelReflectsUrl(reply.in_reply_to_url)) return notFound();
+        || !validReplyTargetUrl(reply.in_reply_to_url)) return notFound();
     const canonical = new URL(context.request.url);
     canonical.search = '';
     canonical.hash = '';
