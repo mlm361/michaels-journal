@@ -3,7 +3,6 @@ import test from 'node:test';
 
 import { onRequestGet as webmentions } from '../functions/api/webmentions.js';
 import { onRequestGet as reply, escapeHtml, validId } from '../functions/reply/[id].js';
-import { onRequestPost as canaryReceiver } from '../functions/wm-canary-receiver-7f3c9a.js';
 
 const originalFetch = globalThis.fetch;
 
@@ -105,31 +104,4 @@ test('reply IDs are strict and HTML escaping covers attribute characters', () =>
   assert.equal(validId('x'.repeat(32)), true);
   assert.equal(validId('../not-an-id'), false);
   assert.equal(escapeHtml(`<&>"'`), '&lt;&amp;&gt;&quot;&#39;');
-});
-
-test('temporary canary receiver accepts only the exact labeled journey', async () => {
-  const good = new URLSearchParams({
-    source: 'https://michaelreflects.com/reply/' + 'x'.repeat(32) + '/',
-    target: 'https://michaels-journal.pages.dev/webmention-canary-sally-20260813-7f3c9a/',
-  });
-  const accepted = await canaryReceiver({
-    request: new Request('https://michaels-journal.pages.dev/wm-canary-receiver-7f3c9a', {
-      method: 'POST',
-      body: good,
-    }),
-  });
-  assert.equal(accepted.status, 202);
-  assert.match(await accepted.text(), /TEST ONLY/);
-
-  const foreign = new URLSearchParams({
-    source: 'https://attacker.example/post',
-    target: 'https://michaels-journal.pages.dev/webmention-canary-sally-20260813-7f3c9a/',
-  });
-  const rejected = await canaryReceiver({
-    request: new Request('https://michaels-journal.pages.dev/wm-canary-receiver-7f3c9a', {
-      method: 'POST',
-      body: foreign,
-    }),
-  });
-  assert.equal(rejected.status, 400);
 });
