@@ -30,11 +30,9 @@ country_flags = false
 # one controlled Mastodon mention is proven end-to-end through PEP into Hub.
 # bubbles_fediverse = "@michael@mitchelltribe.social"
 
-# Webmention receiving endpoint — self-hosted edge (Cloudflare Worker ->
-# tunnel -> RSS Processor receiver -> Web Activity Hub inbox), live 2026-07-05.
-# webmention_provider stays "webmentions_io" so the display partial keeps
-# showing historical mentions fetched from webmention.io.
-webmention_provider = "webmentions_io"
+# Webmention receiving and display are self-hosted: Cloudflare edge -> RSS
+# Processor receiver -> Web Activity Hub -> projection-only Pangolin origin.
+webmention_provider = "self_hosted"
 webmention_endpoint  = "https://michaelreflects.com/webmention"
 # Dynamic Hub projection is merged with the legacy/static sources. Keep those
 # reads until live count/card parity has passed beyond the controlled canary.

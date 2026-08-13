@@ -1,4 +1,4 @@
-{% if config.extra.webmention_provider == "webmentions_io" %}
+{% if config.extra.webmention_provider == "self_hosted" %}
 <style>
   .webmentions { margin-top: 2.5rem; }
   .webmentions-heading {
@@ -318,13 +318,7 @@
       };
     }
 
-    // Source 1: true inbound webmentions (webmention.io).
-    var wmFetch = fetch("https://webmention.io/api/mentions.jf2?target=" + target + "&per-page=100")
-      .then(function (r) { return r.json(); })
-      .then(function (d) { return d.children || []; })
-      .catch(function () { return []; });
-
-    // Source 2: self-hosted native-platform engagement, resolved from this
+    // Source 1: self-hosted native-platform engagement, resolved from this
     // post's syndication URLs via the committed engagement index.
     var engFetch = fetch("/engagement/index.json")
       .then(function (r) { return r.json(); })
@@ -341,9 +335,9 @@
       })
       .catch(function () { return []; });
 
-    // Source 3: Hub-owned verified reactions and approved text replies. The
-    // same-origin Pages Function authenticates to Hub; browser code never sees
-    // its origin or key. A Pi/origin outage deliberately degrades to [].
+    // Source 2: Hub-owned verified reactions and approved text replies. The
+    // same-origin Pages Function calls a projection-only Pangolin origin; the
+    // Hub key never leaves the Pi. An origin outage deliberately degrades to [].
     var hubFetch = hubProjectionEnabled
       ? fetch("/api/webmentions?target=" + target)
           .then(function (r) { return r.ok ? r.json() : { entries: [] }; })
@@ -351,8 +345,8 @@
           .catch(function () { return []; })
       : Promise.resolve([]);
 
-    Promise.all([wmFetch, engFetch, hubFetch]).then(function (res) {
-      renderAll(res[0].concat(res[1], res[2]));
+    Promise.all([engFetch, hubFetch]).then(function (res) {
+      renderAll(res[0].concat(res[1]));
     });
   })();
 </script>

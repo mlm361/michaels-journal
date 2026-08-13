@@ -102,7 +102,7 @@
       {% include "partials/post-actions.html" %}
 
 
-      {% if config.extra.webmention_provider == "webmentions_io" and not is_utility_page %}
+      {% if config.extra.webmention_provider == "self_hosted" and not is_utility_page %}
       {% include "partials/webmentions.html" %}
       {% endif %}
 

@@ -3,9 +3,16 @@ import fs from "node:fs";
 import vm from "node:vm";
 
 const source = fs.readFileSync(new URL("../static/js/webmention-threading.js", import.meta.url), "utf8");
+const template = fs.readFileSync(
+  new URL("../themes/ergo/templates/partials/webmentions.html", import.meta.url),
+  "utf8"
+);
 const window = {};
 vm.runInNewContext(source, { window, globalThis: window });
 const threads = window.MichaelWebmentionThreads;
+
+assert.doesNotMatch(template, /webmention\.io\/api\/mentions/);
+assert.doesNotMatch(template, /wmFetch/);
 
 const root = { "wm-id": "event:1", url: "https://a.example/root" };
 const michael = {
