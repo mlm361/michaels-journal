@@ -24,6 +24,37 @@
     fillMissing(target.content, sourceContent, "html");
   }
 
+  function platformInfo(item) {
+    var explicit = String((item && item.platform) || "").toLowerCase();
+    var urls = [
+      item && item.url,
+      item && item.source_url,
+      item && item.author && item.author.url
+    ].filter(Boolean).join(" ").toLowerCase();
+    var key = explicit;
+
+    if (!key || key === "webmention") {
+      if (/bsky\.app|bsky\.social|brid\.gy\/convert\/web\/https:\/\/bsky/.test(urls)) key = "bluesky";
+      else if (/nostr:|njump\.me|nostr\.com/.test(urls)) key = "nostr";
+      else if (/sharkey|mitchelltribe\.social/.test(urls)) key = "sharkey";
+      else if (/mastodon|ap\.brid\.gy|\/users\/|\/@[^/]+/.test(urls)) key = "mastodon";
+      else key = "webmention";
+    }
+
+    var known = {
+      bluesky: { key: "bluesky", label: "Bluesky", mark: "B" },
+      mastodon: { key: "mastodon", label: "Mastodon", mark: "M" },
+      sharkey: { key: "sharkey", label: "Sharkey", mark: "S" },
+      nostr: { key: "nostr", label: "Nostr", mark: "N" },
+      webmention: { key: "webmention", label: "Webmention", mark: "W" }
+    };
+    return known[key] || {
+      key: "webmention",
+      label: "Webmention",
+      mark: "W"
+    };
+  }
+
   function dedupeChildren(items) {
     var seen = Object.create(null);
     var output = [];
@@ -79,6 +110,7 @@
 
   root.MichaelWebmentionThreads = {
     dedupeChildren: dedupeChildren,
-    buildReplyForest: buildReplyForest
+    buildReplyForest: buildReplyForest,
+    platformInfo: platformInfo
   };
 })(typeof window !== "undefined" ? window : globalThis);

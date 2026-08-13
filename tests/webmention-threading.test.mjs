@@ -122,6 +122,19 @@ assert.equal(reverseOutpostsReply.author.photo, outpostsPhoto);
 assert.equal(reverseOutpostsReply.content.text, "Time to lead your crew! 🖖");
 assert.equal(reverseOutpostsReply.content.html, "Time to lead your crew! 🖖");
 
+assert.deepEqual(
+  { ...threads.platformInfo(staticEngagement[0]) },
+  { key: "bluesky", label: "Bluesky", mark: "B" }
+);
+assert.equal(
+  threads.platformInfo({ url: "https://mastodon.social/@alice/123" }).label,
+  "Mastodon"
+);
+assert.equal(
+  threads.platformInfo({ url: "https://example.com/a-webmention" }).label,
+  "Webmention"
+);
+
 const a = { "wm-id": "a", "wm-parent-id": "b" };
 const b = { "wm-id": "b", "wm-parent-id": "a" };
 assert.equal(threads.buildReplyForest([a, b]).length, 1);
