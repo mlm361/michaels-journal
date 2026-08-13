@@ -36,9 +36,9 @@ country_flags = false
 # showing historical mentions fetched from webmention.io.
 webmention_provider = "webmentions_io"
 webmention_endpoint  = "https://michaelreflects.com/webmention"
-# Dynamic Hub projection is enabled only after the authenticated Pages Function
-# origin and its fail-empty browser canary are live.
-webmention_hub_projection = false
+# Dynamic Hub projection is merged with the legacy/static sources. Keep those
+# reads until live count/card parity has passed beyond the controlled canary.
+webmention_hub_projection = true
 
 [[extra.socials]]
 icon = "envelope"
