@@ -1,4 +1,5 @@
 const ALLOWED_TARGET_HOSTS = new Set(['michaelreflects.com', 'www.michaelreflects.com']);
+const DEFAULT_PUBLIC_ORIGIN = 'https://webmention-hub.mitchelltribe.xyz';
 
 export function validMichaelReflectsUrl(value) {
   try {
@@ -13,9 +14,9 @@ export function validMichaelReflectsUrl(value) {
 }
 
 export function originConfig(env) {
-  const origin = String(env.WEBMENTION_HUB_ORIGIN || '').replace(/\/+$/, '');
+  const origin = String(env.WEBMENTION_HUB_ORIGIN || DEFAULT_PUBLIC_ORIGIN).replace(/\/+$/, '');
   const key = String(env.WEBMENTION_HUB_PROJECTION_KEY || '');
-  if (!origin || !key || !/^https:\/\//i.test(origin)) return null;
+  if (!origin || !/^https:\/\//i.test(origin)) return null;
   return { origin, key };
 }
 
@@ -25,11 +26,10 @@ export async function fetchOriginJson(context, path, cacheTtl = 30) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 3500);
   try {
+    const headers = { 'Accept': 'application/json' };
+    if (configured.key) headers['X-Public-Projection-Key'] = configured.key;
     const response = await fetch(configured.origin + path, {
-      headers: {
-        'Accept': 'application/json',
-        'X-Public-Projection-Key': configured.key,
-      },
+      headers,
       signal: controller.signal,
       cf: { cacheTtl, cacheEverything: true },
     });

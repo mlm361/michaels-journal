@@ -17,7 +17,8 @@ test('thread endpoint rejects foreign targets before origin fetch', async () => 
   assert.equal(response.status, 400);
 });
 
-test('thread endpoint fails empty when origin is unavailable', async () => {
+test('thread endpoint fails empty when the public origin is unavailable', async () => {
+  globalThis.fetch = async () => { throw new Error('origin down'); };
   const target = 'https://michaelreflects.com/blog/test/';
   const response = await webmentions({
     request: new Request('https://michaelreflects.com/api/webmentions?target=' + encodeURIComponent(target)),
@@ -25,6 +26,24 @@ test('thread endpoint fails empty when origin is unavailable', async () => {
   });
   assert.equal(response.status, 200);
   assert.deepEqual(await response.json(), { target, count: 0, entries: [] });
+});
+
+test('thread endpoint uses the narrow public origin without a browser-visible key', async () => {
+  globalThis.fetch = async (url, options) => {
+    assert.match(
+      String(url),
+      /^https:\/\/webmention-hub\.mitchelltribe\.xyz\/api\/public\/webmentions\?/,
+    );
+    assert.equal(options.headers['X-Public-Projection-Key'], undefined);
+    return new Response(JSON.stringify({ entries: [{ event_type: 'like' }] }));
+  };
+  const target = 'https://michaelreflects.com/blog/test/';
+  const response = await webmentions({
+    request: new Request('https://michaelreflects.com/api/webmentions?target=' + encodeURIComponent(target)),
+    env: {},
+  });
+  assert.equal(response.status, 200);
+  assert.equal((await response.json()).count, 1);
 });
 
 test('thread endpoint authenticates to origin and forwards only entries', async () => {
