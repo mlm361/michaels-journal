@@ -10,6 +10,43 @@
     margin: 0 0 0.7rem;
   }
   .webmentions-intro { font-size: 0.9rem; color: rgba(0, 0, 0, 0.58); margin: 0 0 1.3rem; }
+  .wm-submit {
+    border: 1px solid rgba(36, 94, 62, 0.16);
+    border-radius: 12px;
+    background: rgba(36, 94, 62, 0.035);
+    padding: 0.85rem 1rem;
+    margin: 0 0 1.5rem;
+  }
+  .wm-submit-label { display: block; font-size: 0.84rem; font-weight: 700; margin-bottom: 0.45rem; }
+  .wm-submit-row { display: flex; gap: 0.55rem; align-items: stretch; }
+  .wm-submit-input {
+    flex: 1 1 auto;
+    min-width: 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background: #fff;
+    color: rgba(0, 0, 0, 0.85);
+    font: inherit;
+    font-size: 0.88rem;
+    padding: 0.58rem 0.7rem;
+  }
+  .wm-submit-button {
+    border: 0;
+    border-radius: 8px;
+    background: #245e3e;
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.84rem;
+    font-weight: 700;
+    padding: 0.58rem 0.85rem;
+  }
+  .wm-submit-button:disabled { cursor: wait; opacity: 0.65; }
+  .wm-submit-help,
+  .wm-submit-status { font-size: 0.78rem; line-height: 1.45; margin: 0.5rem 0 0; }
+  .wm-submit-help { color: rgba(0, 0, 0, 0.52); }
+  .wm-submit-status { color: rgba(36, 94, 62, 0.9); font-weight: 600; }
+  .wm-submit-status[data-state="error"] { color: #a03931; }
   .wm-facepile { margin: 0 0 1.6rem; }
   .wm-facepile-label {
     font-size: 0.95rem;
@@ -106,6 +143,11 @@
   html.theme-dark .webmentions-intro,
   html.theme-dark .wm-facepile-label,
   html.theme-dark .wm-replies-heading { color: rgba(255, 255, 255, 0.62); }
+  html.theme-dark .wm-submit { border-color: rgba(247, 207, 96, 0.16); background: rgba(255, 255, 255, 0.025); }
+  html.theme-dark .wm-submit-input { border-color: rgba(255, 255, 255, 0.2); background: #1d2733; color: rgba(255, 255, 255, 0.9); }
+  html.theme-dark .wm-submit-help { color: rgba(255, 255, 255, 0.5); }
+  html.theme-dark .wm-submit-status { color: rgba(247, 207, 96, 0.9); }
+  html.theme-dark .wm-submit-status[data-state="error"] { color: #ff9a90; }
   html.theme-dark .wm-card { border-color: rgba(255, 255, 255, 0.13); }
   html.theme-dark .wm-card-name { color: rgba(255, 255, 255, 0.9); }
   html.theme-dark .wm-card-content { color: rgba(255, 255, 255, 0.8); }
@@ -118,6 +160,10 @@
   }
   html.theme-dark .wm-thread-children { border-left-color: rgba(247, 207, 96, 0.22); }
   html.theme-dark .wm-thread-children .wm-card { background: rgba(255, 255, 255, 0.025); }
+  @media (max-width: 560px) {
+    .wm-submit-row { flex-direction: column; }
+    .wm-submit-button { width: 100%; }
+  }
 </style>
 <section class="webmentions" id="webmentions-wrap" aria-labelledby="webmentions-heading">
   <h3 class="webmentions-heading" id="webmentions-heading">Webmentions</h3>
@@ -125,12 +171,24 @@
     Reply from your own site with a <a href="https://indieweb.org/Webmention" target="_blank" rel="noopener">webmention</a>; they are always welcome.
   </p>
 
+  <form class="wm-submit" id="webmention-submit-form" method="post" action="/webmention">
+    <label class="wm-submit-label" for="webmention-source">Already linked to this post from your site?</label>
+    <div class="wm-submit-row">
+      <input class="wm-submit-input" id="webmention-source" name="source" type="url" inputmode="url" autocomplete="url" spellcheck="false" placeholder="https://your-site.example/your-post" required>
+      <input name="target" type="hidden" value="{{ page.permalink }}">
+      <button class="wm-submit-button" type="submit">Send Webmention</button>
+    </div>
+    <p class="wm-submit-help">Your page must be public and link back here. Text replies may be held for approval.</p>
+    <p class="wm-submit-status" id="webmention-submit-status" role="status" aria-live="polite" hidden></p>
+  </form>
+
   <div id="webmentions-list" class="webmentions-list" aria-live="polite">
     <p class="webmentions-empty">No webmentions yet. Be the first!</p>
   </div>
 </section>
 
 <script src="/js/webmention-threading.js"></script>
+<script src="/js/webmention-submit.js"></script>
 <script>
   (function () {
     var target = encodeURIComponent({{ page.permalink | json_encode | safe }});
@@ -146,6 +204,32 @@
     var list = document.getElementById("webmentions-list");
     var hubProjectionEnabled = {{ config.extra.webmention_hub_projection }};
     if (!list) return;
+
+    var submitForm = document.getElementById("webmention-submit-form");
+    var submitStatus = document.getElementById("webmention-submit-status");
+    if (submitForm && submitStatus && window.MichaelWebmentionSubmit) {
+      submitForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        var button = submitForm.querySelector("button[type='submit']");
+        var sourceInput = submitForm.querySelector("input[name='source']");
+        var targetInput = submitForm.querySelector("input[name='target']");
+        if (button) button.disabled = true;
+        submitStatus.hidden = false;
+        submitStatus.dataset.state = "pending";
+        submitStatus.textContent = "Checking your page…";
+        window.MichaelWebmentionSubmit.submit({
+          endpoint: submitForm.action,
+          source: sourceInput ? sourceInput.value : "",
+          target: targetInput ? targetInput.value : ""
+        }).then(function (result) {
+          submitStatus.dataset.state = result.ok ? "success" : "error";
+          submitStatus.textContent = result.message;
+          if (result.ok && sourceInput) sourceInput.value = "";
+        }).finally(function () {
+          if (button) button.disabled = false;
+        });
+      });
+    }
 
     function escapeHtml(value) {
       return String(value || "").replace(/[&<>"']/g, function (char) {

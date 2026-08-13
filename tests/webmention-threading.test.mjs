@@ -13,6 +13,10 @@ const threads = window.MichaelWebmentionThreads;
 
 assert.doesNotMatch(template, /webmention\.io\/api\/mentions/);
 assert.doesNotMatch(template, /wmFetch/);
+assert.match(template, /id="webmention-submit-form"/);
+assert.match(template, /name="source" type="url"/);
+assert.match(template, /name="target" type="hidden"/);
+assert.match(template, /MichaelWebmentionSubmit\.submit/);
 
 const root = { "wm-id": "event:1", url: "https://a.example/root" };
 const michael = {

@@ -2,6 +2,6 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test:webmention": "node --test tests/webmention-functions.test.mjs tests/webmention-threading.test.mjs"
+    "test:webmention": "node --test tests/webmention-functions.test.mjs tests/webmention-threading.test.mjs tests/webmention-submit.test.mjs"
   }
 }
