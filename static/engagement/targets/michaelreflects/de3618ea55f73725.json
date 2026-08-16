@@ -1,8 +1,21 @@
 {
   "canonical_url": "https://mitchelltribe.com/2026/01/04/watched-the-pickup-from-amazon/",
-  "children": [],
-  "generated_at": "2026-08-16T17:56:47.972566+00:00",
-  "like_count": 0,
+  "children": [
+    {
+      "author": {
+        "name": "Go4Know",
+        "photo": "https://cdn.bsky.app/img/avatar/plain/did:plc:ydqzin7kctnatbefaxcp6f7s/bafkreifge7ltji5svfns2duunvcszuwxeucdlwz7d2rdzobj4cbcruhqua",
+        "url": "https://bsky.app/profile/go4know.com"
+      },
+      "platform": "bluesky",
+      "published": "2026-01-07T18:52:43.832Z",
+      "url": "https://bsky.app/profile/go4know.com",
+      "wm-property": "like-of",
+      "wm-target": "https://mitchelltribe.com/2026/01/04/watched-the-pickup-from-amazon/"
+    }
+  ],
+  "generated_at": "2026-08-16T18:51:53.233200+00:00",
+  "like_count": 1,
   "reply_count": 0,
   "source_post_id": 1140,
   "type": "feed",
