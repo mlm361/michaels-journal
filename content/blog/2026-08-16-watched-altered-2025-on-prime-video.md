@@ -13,6 +13,12 @@ stats_word_count = 82
 stats_reading_time = 1
 image = "https://media.mitchelltribe.xyz/images/2026/08/d1246bf0_tmdb_8ea0572e2720.avif"
 card_fit = "contain"
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/117106031093215876"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mt7ktleh6k2k"
+sharkey = "https://mitchelltribe.rodeo/notes/apzk6v7ijill01d6"
+nostr = "https://jumble.social/nevent1qqsd7d8crkqd80mnmqwssum7glxpvm7kxzk6ujlltg7szxfntttmhdcpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflca3xqal"
 +++
 
 <data class="p-summary" value="⚠️ **SPOILER WARNING:** FULL SPOILERS **My Rating:** ⭐ (1/5 stars) Not worth watching there were several times I wondered why I was watching this. Plot was kind of a mix of Giver, Enders Game, The Allegiant and Hunger Games all in one but..."></data>
