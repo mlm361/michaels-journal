@@ -13,6 +13,12 @@ stats_word_count = 310
 stats_reading_time = 2
 image = "https://media.mitchelltribe.xyz/images/2026/08/f692964b_social-card-4dad27e12b71de53ba9b.avif"
 card_fit = "contain"
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/117107555050590326"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mtaajfsyme23"
+sharkey = "https://mitchelltribe.rodeo/notes/apzy1o4kjill01dm"
+nostr = "https://jumble.social/nevent1qqs0ly0xevrqx36048t6he2kax7htlg65y7m83lnaka40sglqauu4pgpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflccursuf"
 +++
 
 <data class="p-summary" value="Read on ign.com · View original Mastodon post Here is another example of what I was talking about in a recent blog post TV Isn&#x27;t What It Used to Be. According to IGN, the first season came out 3.5 years ago. That is a long time to wait..."></data>
