@@ -1,21 +1,8 @@
 {
   "canonical_url": "https://mitchelltribe.com/2026/06/12/usf-turns/",
-  "children": [
-    {
-      "author": {
-        "name": "Shitsukan | TextureLoRALab (Nihonga -> Museum Studies MA)",
-        "photo": "https://cdn.bsky.app/img/avatar/plain/did:plc:jtb3pcccd34plxtezveq3wfd/bafkreickwzvhqekchodl5udtzdc66oe56u34wfbt5e34opu6klaovfxrj4",
-        "url": "https://bsky.app/profile/matiere-lab.bsky.social"
-      },
-      "platform": "bluesky",
-      "published": "2026-06-15T14:11:54.139Z",
-      "url": "https://bsky.app/profile/matiere-lab.bsky.social",
-      "wm-property": "like-of",
-      "wm-target": "https://mitchelltribe.com/2026/06/12/usf-turns/"
-    }
-  ],
-  "generated_at": "2026-08-16T22:48:35.249346+00:00",
-  "like_count": 1,
+  "children": [],
+  "generated_at": "2026-08-17T00:19:16.005040+00:00",
+  "like_count": 0,
   "reply_count": 0,
   "source_post_id": 1225,
   "type": "feed",
