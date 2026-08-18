@@ -1,6 +1,6 @@
 +++
 title = "Took Them Long Enough, Huh?"
-date = "2026-08-16T18:30:00-04:00"
+date = "2026-08-16T18:31:10-04:00"
 draft = false
 description = "Read on ign.com · View original Mastodon post Here is another example of what I was talking about in a recent blog post TV Isn't What It Used to Be. According to IGN, the first season came out 3.5 years ago. That is a long time to wait..."
 slug = "star-wars-disney-series-ahsoka-season-2-finally-ha"
@@ -46,6 +46,7 @@ You're telling me it took them 3.5 years to make a second season, and it will pr
 If this is the new trend, television execs need to be fired. Hire unknown actors and make series faster. If the series does well, the actors will become known.
 
 This line in the article stood out to me:
+
 > Disney has scaled back its live-action Star Wars show production over
 the past couple of years, following a splurge on limited series such as
 Obi-Wan Kenobi and The Book of Boba Fett, both of which landed to mixed
