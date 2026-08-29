@@ -29,7 +29,7 @@ Both World Wars to date were started in and over Eastern Europe land grabs (whil
 
 ## Footnotes
 
-<span id="user-content-fn-1"></span>1. _Munich Agreement_ overview (Sudetenland ceded to Germany, Sept. 30, 1938), Encyclopedia Britannica: <https://www.britannica.com/event/Munich-Agreement> [↩](#user-content-fnref-1)
+<span id="user-content-fn-1"></span>1. _Munich Agreement_ overview (Sudetenland ceded to Germany, Sept. 30, 1938), United States Holocaust Memorial Museum: <https://encyclopedia.ushmm.org/content/en/timeline-event/holocaust/1933-1938/munich-agreement> [↩](#user-content-fnref-1)
 
 <span id="user-content-fn-2"></span>2. Germany invaded Poland on Sept. 1, 1939; Britain and France declared war on Sept. 3. Chamberlain radio address (Yale Avalon): <https://avalon.law.yale.edu/wwii/gb3.asp> ; IWM background: <https://www.iwm.org.uk/history/how-europe-went-to-war-in-1939> [↩](#user-content-fnref-2)
 
