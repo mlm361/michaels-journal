@@ -17,7 +17,7 @@ stats_reading_time = 3
 
 
 
-I was just watching our local news on [fox13tampabay.com](https://www.fox13news.com/news/tampa-ranks-13th-worst-city-us-traffic-consumeraffairs-study), and they had a story on a [ConsumerAffairs](https://web.archive.org/web/20250804155353/https://www.consumeraffairs.com/automotive/cities-with-the-worst-traffic.html#methodology) report about which cities have the worst traffic. The city I have to travel to for work (Tampa) was ranked 13th worst in the nation and number 3 in the state, behind Miami and Orlando.
+I was just watching our local news on [fox13tampabay.com](https://www.fox13news.com/news/tampa-ranks-13th-worst-city-us-traffic-consumeraffairs-study), and they had a story on a [ConsumerAffairs](https://www.consumeraffairs.com/automotive/cities-with-the-worst-traffic.html#methodology) report about which cities have the worst traffic. The city I have to travel to for work (Tampa) was ranked 13th worst in the nation and number 3 in the state, behind Miami and Orlando.
 
 I will say I don't know much about Miami. I’ve only been there once for a few hours before leaving. Orlando, though, is definitely worse than Tampa. I've lived in the City of Tampa proper and now live in the suburbs, Brandon, and the traffic has always been bad in both places. But over the last couple of years, since everyone returned to the office, it has been the worst I’ve ever seen.
 
@@ -37,10 +37,11 @@ So when I saw this report, I said to myself, “Yes, I could have told you that.
 
 
 
-[^1]: Consumer Affairs Report – [August 4, 2025 archived copy](https://web.archive.org/web/20250804155353/https://www.consumeraffairs.com/automotive/cities-with-the-worst-traffic.html)
+[^1]: Consumer Affairs Report – [https://www.consumeraffairs.com/automotive/cities-with-the-worst-traffic.html](https://www.consumeraffairs.com/automotive/cities-with-the-worst-traffic.html)
 
 
 
 #TampaTraffic #CommuterLife #FloridaLiving
+
 
 

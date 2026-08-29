@@ -16,15 +16,6 @@ build_search_index = true
 [search]
 index_format = "elasticlunr_json"
 
-[link_checker]
-# These sites are live but intentionally reject or cannot complete Zola's
-# automated crawler requests. Keep their reader-facing links intact.
-skip_prefixes = [
-  "https://www.economist.com/",
-  "https://commonslibrary.parliament.uk/",
-  "https://tinylytics.app",
-]
-
 [[taxonomies]]
 name = "tags"
 feed = true

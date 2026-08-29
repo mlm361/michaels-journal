@@ -27,7 +27,7 @@ nostr = "https://jumble.social/nevent1qqsp5aw7clpqwn965m0hfmu29xhmhdra4w7vvclhcy
 
 
 
-> **[Why 1980s Meals Were Always Garnished With Parsley - Food Republic](https://www.foodrepublic.com/2130936/1980s-meals-garnished-parsley/)**
+> **[Why 1980s Meals Were Always Garnished With Parsley - Food Republic](https://www.foodrepublic.com/2130936/1980s-meals-garnished-parsley/?utm_term=Autofeed&utm_campaign=Echobox-FoodRepublic&utm_medium=Social-Distribution&utm_source=Bluesky#Echobox=1774818710)**
 >
 > From steak dinners to bowls of soup, 1980s restaurants topped nearly every dish with a sprig of parsley. But why was this garnish so ubiquitous?
 >
