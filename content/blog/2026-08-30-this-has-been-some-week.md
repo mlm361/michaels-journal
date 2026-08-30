@@ -11,6 +11,12 @@ tags = [ "hardware", "personal", "technology",]
 stats_word_count = 403
 stats_reading_time = 3
 titleless_label = "This has been some week"
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/117182652464736198"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mublownov422"
+sharkey = "https://mitchelltribe.rodeo/notes/aqiw9rsydu5m00hg"
+nostr = "https://jumble.social/nevent1qqsx60mw49fwhq5kxg0ll0ejq0nnucuwuzsjmqwzwz09k6tm07gkfmcpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcd5r8aw"
 +++
 
 <data class="p-summary" value="This has been some week for hardware and appliance problems in my household. Thursday, I had a silent hard drive crash. It could have happened before then, but I didn&#x27;t notice it until Thursday. The drive was there last week, but Windows..."></data>
