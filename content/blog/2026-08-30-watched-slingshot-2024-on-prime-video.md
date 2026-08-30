@@ -13,6 +13,12 @@ stats_word_count = 79
 stats_reading_time = 1
 image = "https://media.mitchelltribe.xyz/images/2026/08/51407559_tmdb_778fb067e8b2.avif"
 card_fit = "contain"
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/117185173921125319"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mucpjklbmf2w"
+sharkey = "https://mitchelltribe.rodeo/notes/aqjj6fj2du5m00n9"
+nostr = "https://jumble.social/nevent1qqs2k00chhe4mu7m2x9wk9yem9s8g9rtcg8l768hnrjuv45pt9ddancpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcqtgu7m"
 +++
 
 <data class="p-summary" value="⚠️ **SPOILER WARNING:** FULL SPOILERS **My Rating:** ½ (0.5/5 stars) Don&#x27;t waste your time. It looked interesting and had some big-name actors and actresses, but it wasn&#x27;t worth it. The movie was too long for the ending it had, and the..."></data>
