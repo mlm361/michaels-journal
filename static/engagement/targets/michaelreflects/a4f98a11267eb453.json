@@ -1,8 +1,21 @@
 {
   "canonical_url": "https://mitchelltribe.com/2026/08/30/watched-slingshot-on-prime-video/",
-  "children": [],
-  "generated_at": "2026-09-02T23:58:35.123372+00:00",
-  "like_count": 0,
+  "children": [
+    {
+      "author": {
+        "name": "onpolitics.news",
+        "photo": "https://cdn.bsky.app/img/avatar/plain/did:plc:frpkvbrtpqugqghzpxrrxuxc/bafkreiexwshoyuce4wc2m54p6b7crputmvogljjjqyfieaq5v6ocnpn4va",
+        "url": "https://bsky.app/profile/onpolitics.news"
+      },
+      "platform": "bluesky",
+      "published": "2026-09-04T20:00:22.463Z",
+      "url": "https://bsky.app/profile/onpolitics.news",
+      "wm-property": "like-of",
+      "wm-target": "https://mitchelltribe.com/2026/08/30/watched-slingshot-on-prime-video/"
+    }
+  ],
+  "generated_at": "2026-09-04T20:15:55.962741+00:00",
+  "like_count": 1,
   "reply_count": 0,
   "source_post_id": 1248,
   "type": "feed",
