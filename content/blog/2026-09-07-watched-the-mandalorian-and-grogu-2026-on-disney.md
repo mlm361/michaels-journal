@@ -13,6 +13,12 @@ stats_word_count = 162
 stats_reading_time = 1
 image = "https://media.mitchelltribe.xyz/images/2026/09/363ef6c2_tmdb_f46d2b415cff.avif"
 card_fit = "contain"
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/117227056570905064"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3muvcplivp72i"
+sharkey = "https://mitchelltribe.rodeo/notes/aqu3o3upc2fc004k"
+nostr = "https://jumble.social/nevent1qqsxlfhhyn669jadswdzz99jxe9fsa6l77w49xez2uw385rqmpcjqfspr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcc55j6e"
 +++
 
 <data class="p-summary" value="⚠️ **SPOILER WARNING:** FULL SPOILERS **My Rating:** ⭐⭐⭐⭐½ (4.5/5 stars)** Overall, I liked it a lot. I think Dave Filoni and Jon Favreau do the Star Wars Universe justice. My favorite moments were probably the little guys and Grogu. I..."></data>
