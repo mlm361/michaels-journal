@@ -185,7 +185,8 @@
     {% if not explicit_note %}{% continue %}{% endif %}
     {% set sticky_note = page.extra?.sticky_note or false %}
     {% set sticky_enabled = sticky_note and (sticky_note.enabled or false) %}
-    {% if sticky_enabled %}{% continue %}{% endif %}
+    {% set sticky_active = sticky_note and (sticky_note.active or false) %}
+    {% if sticky_enabled and sticky_active %}{% continue %}{% endif %}
     {% set_global has_notes = true %}
     {% set year = page.date | date(format="%Y") %}
     {% if year != current_year %}
