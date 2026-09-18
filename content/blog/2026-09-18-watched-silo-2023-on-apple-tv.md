@@ -13,6 +13,12 @@ stats_word_count = 220
 stats_reading_time = 2
 image = "https://media.mitchelltribe.xyz/images/2026/09/244d7b77_tmdb_e11bde465f6a.avif"
 card_fit = "contain"
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/117289804210504418"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mvr6fvrg7u23"
+sharkey = "https://mitchelltribe.rodeo/notes/ar9xpn9rsa4q00ai"
+nostr = "https://jumble.social/nevent1qqsf03zh5x2ss0d5s7w9zsgewcp6sdj3kzyyas5u2ajy6kpsvqt655spr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflc69rscp"
 +++
 
 <data class="p-summary" value="⚠️ **SPOILER WARNING:** FULL SPOILERS **My Rating:** ⭐⭐⭐⭐½ (4.5/5 stars)** **Episodes:** 10 | **Aired:** 07-02-2026 The whole season was fantastic. I was worried about the series after Season 2. Season 2 was necessary, but it was a little..."></data>
