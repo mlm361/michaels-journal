@@ -12,10 +12,22 @@
       "url": "https://tinymind.eu",
       "wm-property": "like-of",
       "wm-target": "https://mitchelltribe.com/2026/09/17/watched-silo-on-apple-tv/"
+    },
+    {
+      "author": {
+        "name": "KUNA",
+        "photo": "https://cdn.bsky.app/img/avatar/plain/did:plc:bpsosbombacnrcar6yci72mr/bafkreickyu7jmtq7pcbldfm67ji73nm5z5pbufkbdtgqcopc3yxc7nc6se",
+        "url": "https://bsky.app/profile/yurrpost.bsky.social"
+      },
+      "platform": "bluesky",
+      "published": "2026-09-19T17:46:47.401Z",
+      "url": "https://bsky.app/profile/yurrpost.bsky.social",
+      "wm-property": "like-of",
+      "wm-target": "https://mitchelltribe.com/2026/09/17/watched-silo-on-apple-tv/"
     }
   ],
-  "generated_at": "2026-09-18T03:07:14.250874+00:00",
-  "like_count": 1,
+  "generated_at": "2026-09-19T18:07:29.997155+00:00",
+  "like_count": 2,
   "reply_count": 0,
   "source_post_id": 1254,
   "type": "feed",
