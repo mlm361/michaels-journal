@@ -12,10 +12,22 @@
       "url": "https://tinymind.eu",
       "wm-property": "like-of",
       "wm-target": "https://mitchelltribe.com/2026/09/20/another-home-for-my-writing/"
+    },
+    {
+      "author": {
+        "name": "NIK",
+        "photo": "https://cdn.bsky.app/img/avatar/plain/did:plc:cdan5na3mspmsmcflk7msnsi/bafkreigcyaeonhnog5jwgfnsicnkws7oguf2gpycnul4kss5ucbml7m4ti",
+        "url": "https://bsky.app/profile/bounson.bsky.social"
+      },
+      "platform": "bluesky",
+      "published": "2026-09-21T19:50:18.076Z",
+      "url": "https://bsky.app/profile/bounson.bsky.social",
+      "wm-property": "like-of",
+      "wm-target": "https://mitchelltribe.com/2026/09/20/another-home-for-my-writing/"
     }
   ],
-  "generated_at": "2026-09-21T15:20:57.970166+00:00",
-  "like_count": 1,
+  "generated_at": "2026-09-21T19:50:58.124887+00:00",
+  "like_count": 2,
   "reply_count": 0,
   "source_post_id": 1256,
   "type": "feed",
