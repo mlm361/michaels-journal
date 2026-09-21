@@ -1,8 +1,8 @@
 +++
 title = "Another Home for My Writing: Introducing Inkwell.social"
-date = "2026-09-20T17:42:17-04:00"
+date = "2026-09-20T20:05:51-04:00"
 draft = false
-description = "I found another independent blogging service in the same general vein as Micro.blog, Scribbles.page, Pike.page and Pagecord.com. It is called Inkwell.social. Inkwell is inspired by the old LiveJournal. I never used LiveJournal myself, but..."
+description = "I found another independent blogging service in the same general vein as Micro.blog, Scribbles.page, Pika.page and Pagecord.com. It is called Inkwell.social. Inkwell is inspired by the old LiveJournal. I never used LiveJournal myself, but..."
 slug = "another-home-for-my-writing-introducing-inkwellsoc"
 
 [taxonomies]
@@ -20,7 +20,7 @@ sharkey = "https://mitchelltribe.rodeo/notes/are1trnm48g30027"
 nostr = "https://jumble.social/nevent1qqs9kj7q7f72w6lv3cf2ugzthjdqhzqewuz9w5wwj59rmauuv9kdzkgpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflc0sgjp2"
 +++
 
-<data class="p-summary" value="I found another independent blogging service in the same general vein as Micro.blog, Scribbles.page, Pike.page and Pagecord.com. It is called Inkwell.social. Inkwell is inspired by the old LiveJournal. I never used LiveJournal myself, but..."></data>
+<data class="p-summary" value="I found another independent blogging service in the same general vein as Micro.blog, Scribbles.page, Pika.page and Pagecord.com. It is called Inkwell.social. Inkwell is inspired by the old LiveJournal. I never used LiveJournal myself, but..."></data>
 
 
 
@@ -30,7 +30,7 @@ nostr = "https://jumble.social/nevent1qqs9kj7q7f72w6lv3cf2ugzthjdqhzqewuz9w5wwj5
 
 
 
-I found another independent blogging service in the same general vein as Micro.blog, Scribbles.page, Pike.page and Pagecord.com. It is called[ Inkwell.social](https://inkwell.social).
+I found another independent blogging service in the same general vein as Micro.blog, Scribbles.page, Pika.page and Pagecord.com. It is called[ Inkwell.social](https://inkwell.social).
 
 Inkwell is inspired by the old LiveJournal. I never used LiveJournal myself, but I certainly heard of it. After looking around Inkwell, it feels very much in the spirit of the IndieWeb to me. It is open source, supports ActivityPub, lets you use your own domain, and gives you ways to export your writing.
 <!--more-->
