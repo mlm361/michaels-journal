@@ -15,9 +15,9 @@ image = "https://media.mitchelltribe.xyz/images/2026/09/928060bd_33ea50bd1c2d.av
 
 [extra.posse]
 mastodon = "https://mitchelltribe.social/@michael/117306107951580843"
-bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mvyg45pei62q"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mvzxsoezhg2a"
 sharkey = "https://mitchelltribe.rodeo/notes/are1trnm48g30027"
-nostr = "https://jumble.social/nevent1qqs9kj7q7f72w6lv3cf2ugzthjdqhzqewuz9w5wwj59rmauuv9kdzkgpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflc0sgjp2"
+nostr = "https://jumble.social/nevent1qqspgh8w55sfgtt290jgt3sf4hlqrnrlsmengydw92sur5qdx950efcpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcdd9h3a"
 +++
 
 <data class="p-summary" value="I found another independent blogging service in the same general vein as Micro.blog, Scribbles.page, Pika.page and Pagecord.com. It is called Inkwell.social. Inkwell is inspired by the old LiveJournal. I never used LiveJournal myself, but..."></data>
