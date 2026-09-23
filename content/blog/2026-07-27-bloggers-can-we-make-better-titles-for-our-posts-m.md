@@ -11,6 +11,12 @@ tags = [ "blogging", "opinion", "writing",]
 [extra]
 stats_word_count = 407
 stats_reading_time = 3
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/117318052492314939"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mw5ptq2gdl2n"
+sharkey = "https://mitchelltribe.rodeo/notes/arh2c6myhz0c000n"
+nostr = "https://jumble.social/nevent1qqs8csn7v50z9qnpqz92h2rq65tagak4yu8q0lwp5av38fkhtspaxvcpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcjj6tc9"
 +++
 
 <data class="p-summary" value="**Bloggers, can we make better titles for our posts? michaelharley.net** By Michael Harley Read original post → I came across this blog post by Michael Harley. I started following him after I came across some of his blog posts on..."></data>
