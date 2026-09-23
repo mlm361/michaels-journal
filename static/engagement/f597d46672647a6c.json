@@ -1,0 +1,35 @@
+{
+  "canonical_url": "https://mitchelltribe.com/2026/07/26/im-guilty-of-bad-titles/",
+  "children": [
+    {
+      "author": {
+        "name": "Pip",
+        "photo": "https://cdn.masto.host/mitchelltribesocial/cache/accounts/avatars/117/262/777/435/430/566/original/cb71f23166d5d9f9.png",
+        "url": "https://tinymind.eu"
+      },
+      "platform": "mastodon",
+      "published": null,
+      "url": "https://tinymind.eu",
+      "wm-property": "like-of",
+      "wm-target": "https://mitchelltribe.com/2026/07/26/im-guilty-of-bad-titles/"
+    },
+    {
+      "author": {
+        "name": "Pip",
+        "photo": "https://mitchelltribe.rodeo/proxy/avatar.webp?url=https%3A%2F%2Fmitchelltribe.rodeo%2Ffiles%2F792fe431-4320-4075-b4ce-0303f3cd7625.png&avatar=1",
+        "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu"
+      },
+      "platform": "sharkey",
+      "published": "2026-09-23T02:43:37.867Z",
+      "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu",
+      "wm-property": "like-of",
+      "wm-target": "https://mitchelltribe.com/2026/07/26/im-guilty-of-bad-titles/"
+    }
+  ],
+  "generated_at": "2026-09-23T02:56:53.769017+00:00",
+  "like_count": 2,
+  "reply_count": 0,
+  "source_post_id": 1240,
+  "type": "feed",
+  "target_id": "michaelreflects"
+}
