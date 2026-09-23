@@ -2,7 +2,7 @@
 title = "📺 Watched Silo (2023) on Apple TV+"
 date = "2026-09-17T22:59:02-04:00"
 draft = false
-description = "⚠️ **SPOILER WARNING:** FULL SPOILERS **My Rating:** ⭐⭐⭐⭐½ (4.5/5 stars)** **Episodes:** 10 | **Aired:** 07-02-2026 The whole season was fantastic. I was worried about the series after Season 2. Season 2 was necessary, but it was a little..."
+description = "⚠️ SPOILER WARNING: FULL SPOILERS My Rating: ⭐⭐⭐⭐½ (4.5/5 stars) Episodes: 10 | Aired: 07-02-2026 The whole season was fantastic. I was worried about the series after Season 2. Season 2 was necessary, but it was a little..."
 slug = "watched-silo-2023-on-apple-tv"
 
 [taxonomies]

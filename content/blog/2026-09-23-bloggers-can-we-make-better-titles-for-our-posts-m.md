@@ -2,7 +2,7 @@
 title = "I'm Guilty of Bad Titles Too. Are You?"
 date = "2026-09-22T22:43:33-04:00"
 draft = false
-description = "**Bloggers, can we make better titles for our posts? michaelharley.net** By Michael Harley Read original post → I came across this blog post by Michael Harley. I started following him after I came across some of his blog posts on..."
+description = "Bloggers, can we make better titles for our posts? michaelharley.net By Michael Harley Read original post → I came across this blog post by Michael Harley. I started following him after I came across some of his blog posts on..."
 slug = "bloggers-can-we-make-better-titles-for-our-posts-m"
 
 [taxonomies]

@@ -2,7 +2,7 @@
 title = "🍿 Watched Slingshot (2024) on Prime Video"
 date = "2026-08-30T11:30:00-04:00"
 draft = false
-description = "⚠️ **SPOILER WARNING:** FULL SPOILERS **My Rating:** ½ (0.5/5 stars) Don't waste your time. It looked interesting and had some big-name actors and actresses, but it wasn't worth it. The movie was too long for the ending it had, and the..."
+description = "⚠️ SPOILER WARNING: FULL SPOILERS My Rating: ½ (0.5/5 stars) Don't waste your time. It looked interesting and had some big-name actors and actresses, but it wasn't worth it. The movie was too long for the ending it had, and the..."
 slug = "watched-slingshot-2024-on-prime-video"
 
 [taxonomies]

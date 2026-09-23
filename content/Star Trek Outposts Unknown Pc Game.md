@@ -2,7 +2,7 @@
 title = "Star Trek: Outposts Unknown PC Game"
 date = "2026-06-07T18:32:29+00:00"
 draft = false
-description = "**Star Trek: Outposts Unknown - Official Announcement Trailer - IGN** To boldly go… and build in Star Trek: Outposts Unknown. Check out the Star Trek: Outposts Unknown announcement trailer for this upcoming narrative-driven outpost..."
+description = "Star Trek: Outposts Unknown - Official Announcement Trailer - IGN To boldly go… and build in Star Trek: Outposts Unknown. Check out the Star Trek: Outposts Unknown announcement trailer for this upcoming narrative-driven outpost..."
 
 [taxonomies]
 tags = [ "opinion", "gaming", "Star Trek",]

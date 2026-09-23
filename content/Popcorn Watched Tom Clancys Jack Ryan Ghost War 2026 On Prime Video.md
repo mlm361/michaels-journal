@@ -2,7 +2,7 @@
 title = "🍿 Watched Tom Clancy's Jack Ryan: Ghost War (2026) on Prime Video"
 date = "2026-05-25T13:33:43+00:00"
 draft = false
-description = "⚠️ **SPOILER WARNING:** MILD SPOILERS **My Rating:** ⭐⭐⭐½ (3.5/5 stars) I agree with the other reviews. I loved the whole cast. John Krasinski does a fantastic job as the lead, and he works well as a replacement for Harrison Ford in this..."
+description = "⚠️ SPOILER WARNING: MILD SPOILERS My Rating: ⭐⭐⭐½ (3.5/5 stars) I agree with the other reviews. I loved the whole cast. John Krasinski does a fantastic job as the lead, and he works well as a replacement for Harrison Ford in this..."
 
 [taxonomies]
 tags = [ "movies", "review",]

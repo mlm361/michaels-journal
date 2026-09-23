@@ -2,7 +2,7 @@
 title = "🍿 Watched Altered (2025) on Prime Video"
 date = "2026-08-16T12:02:56-04:00"
 draft = false
-description = "⚠️ **SPOILER WARNING:** FULL SPOILERS **My Rating:** ⭐ (1/5 stars) Not worth watching there were several times I wondered why I was watching this. Plot was kind of a mix of Giver, Enders Game, The Allegiant and Hunger Games all in one but..."
+description = "⚠️ SPOILER WARNING: FULL SPOILERS My Rating: ⭐ (1/5 stars) Not worth watching there were several times I wondered why I was watching this. Plot was kind of a mix of Giver, Enders Game, The Allegiant and Hunger Games all in one but..."
 slug = "watched-altered-2025-on-prime-video"
 
 [taxonomies]

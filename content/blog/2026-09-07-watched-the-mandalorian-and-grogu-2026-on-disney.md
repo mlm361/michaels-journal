@@ -2,7 +2,7 @@
 title = "🍿 Watched The Mandalorian and Grogu (2026) on Disney+"
 date = "2026-09-06T21:01:18-04:00"
 draft = false
-description = "⚠️ **SPOILER WARNING:** FULL SPOILERS **My Rating:** ⭐⭐⭐⭐½ (4.5/5 stars)** Overall, I liked it a lot. I think Dave Filoni and Jon Favreau do the Star Wars Universe justice. My favorite moments were probably the little guys and Grogu. I..."
+description = "⚠️ SPOILER WARNING: FULL SPOILERS My Rating: ⭐⭐⭐⭐½ (4.5/5 stars) Overall, I liked it a lot. I think Dave Filoni and Jon Favreau do the Star Wars Universe justice. My favorite moments were probably the little guys and Grogu. I..."
 slug = "watched-the-mandalorian-and-grogu-2026-on-disney"
 
 [taxonomies]

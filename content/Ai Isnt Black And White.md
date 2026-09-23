@@ -2,7 +2,7 @@
 title = "AI Isn't Black and White"
 date = "2026-05-17T19:00:32+00:00"
 draft = false
-description = "Okay, this will probably sound controversial, but that's not my intent. I'm just sharing my thoughts because AI is everywhere right now, especially on social media and in blog posts. These views range from fairly neutral: - Manton Reece -..."
+description = "Okay, this will probably sound controversial, but that's not my intent. I'm just sharing my thoughts because AI is everywhere right now, especially on social media and in blog posts. These views range from fairly neutral: Manton Reece Tom..."
 
 [taxonomies]
 tags = [ "ai", "opinion", "technology",]

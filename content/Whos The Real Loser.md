@@ -2,7 +2,7 @@
 title = "Who's the Real Loser?"
 date = "2026-05-23T18:30:27+00:00"
 draft = false
-description = "**Why Gen X is the real loser generation** Don’t cry for millennials or Gen Z. Save your pity for those in their 50s — @daily-reads-TheEconomist on mastodon via Daily Reads I am a Gen Xer, and I do not consider myself part of a..."
+description = "Why Gen X is the real loser generation Don’t cry for millennials or Gen Z. Save your pity for those in their 50s — @daily-reads-TheEconomist on mastodon via Daily Reads I am a Gen Xer, and I do not consider myself part of a..."
 
 [taxonomies]
 tags = [ "opinion", "retirement", "family",]
