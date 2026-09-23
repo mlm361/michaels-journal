@@ -72,7 +72,9 @@
   .post-card-img {
     width: 160px;
     height: 120px;
-    object-fit: cover;
+    /* Show the whole image: a wide wordmark or banner used to lose its edges to
+       the crop. The wrapper's neutral tint fills whatever the image leaves. */
+    object-fit: contain;
     object-position: center center;
     display: block;
   }
@@ -144,12 +146,14 @@
     .post-card-img-wrap {
       flex: none;
       width: 100%;
+      /* Reserve the space before the image arrives, as the desktop box does. */
+      aspect-ratio: 4 / 3;
       height: auto;
       order: 0;
     }
     .post-card-img {
       width: 100%;
-      height: auto;
+      height: 100%;
       object-fit: contain;
     }
   }
@@ -249,7 +253,7 @@
     {% set_global _card_video = "" %}
     {% set_global _card_videoframe = "" %}
     {% set_global _card_poster = "" %}
-    {% set_global _card_fit = page.extra?.card_fit or "cover" %}
+    {# card_fit is no longer applied here: every card shows its whole image. #}
     {% set_global _card_position = page.extra?.card_position or "center center" %}
     {% if page.extra.image %}
       {% set _card_image_value = page.extra.image | trim %}
@@ -311,19 +315,19 @@
       <div class="post-card-main">
         {% if _card_video %}
         <a href="{{ page.permalink }}" class="post-card-img-wrap">
-          <video class="post-card-img" autoplay loop muted playsinline preload="metadata" style="object-fit: {{ _card_fit }}; object-position: {{ _card_position }};">
+          <video class="post-card-img" autoplay loop muted playsinline preload="metadata" style="object-position: {{ _card_position }};">
             <source src="{{ _card_video }}" type="video/mp4">
           </video>
         </a>
         {% elif _card_videoframe %}
         <a href="{{ page.permalink }}" class="post-card-img-wrap">
-          <video class="post-card-img" muted playsinline preload="metadata"{% if _card_poster %} poster="{{ _card_poster }}"{% endif %} style="object-fit: {{ _card_fit }}; object-position: {{ _card_position }};">
+          <video class="post-card-img" muted playsinline preload="metadata"{% if _card_poster %} poster="{{ _card_poster }}"{% endif %} style="object-position: {{ _card_position }};">
             <source src="{{ _card_videoframe }}" type="video/mp4">
           </video>
         </a>
         {% elif _card_img %}
         <a href="{{ page.permalink }}" class="post-card-img-wrap">
-          <img src="{{ _card_img }}" alt="{% if is_untitled %}Untitled post from {{ page.date | date(format='%B %-d, %Y') }}{% else %}{{ raw_title }}{% endif %}" class="post-card-img" loading="lazy" style="object-fit: {{ _card_fit }}; object-position: {{ _card_position }};">
+          <img src="{{ _card_img }}" alt="{% if is_untitled %}Untitled post from {{ page.date | date(format='%B %-d, %Y') }}{% else %}{{ raw_title }}{% endif %}" class="post-card-img" loading="lazy" style="object-position: {{ _card_position }};">
         </a>
         {% endif %}
         <div class="post-card-text">
