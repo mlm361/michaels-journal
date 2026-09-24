@@ -160,7 +160,14 @@
     }
 
     function authorName(mention) {
-      return (mention.author && mention.author.name) ? mention.author.name : "Someone";
+      var name = String((mention.author && mention.author.name) || "").trim();
+      if (name) return name;
+      var candidates = [(mention.author && mention.author.url), mention.url];
+      for (var i = 0; i < candidates.length; i++) {
+        var url = safeUrl(candidates[i]);
+        if (url) return new URL(url).hostname.replace(/^www\./, "").replace(/\.$/, "");
+      }
+      return "Someone";
     }
 
     function authorUrl(mention) {
@@ -311,7 +318,7 @@
         "platform": entry.platform || "webmention",
         "published": entry.occurred_at || entry.received_at || "",
         "author": {
-          "name": entry.actor_name || "Someone",
+          "name": entry.actor_name || "",
           "url": entry.actor_url || entry.source_url || ""
         },
         "content": { "text": entry.content_text || "" }

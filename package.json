@@ -3,7 +3,7 @@
   "type": "module",
   "scripts": {
     "test": "npm run test:webmention && npm run test:security",
-    "test:webmention": "node --test tests/webmention-functions.test.mjs tests/webmention-threading.test.mjs",
+    "test:webmention": "node --test tests/webmention-functions.test.mjs tests/webmention-threading.test.mjs tests/webmention-author.test.mjs",
     "test:security": "node --test tests/security-regressions.test.mjs"
   }
 }
