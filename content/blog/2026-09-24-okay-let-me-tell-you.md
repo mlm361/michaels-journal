@@ -11,6 +11,12 @@ tags = [ "customer-service", "personal", "shopping",]
 stats_word_count = 340
 stats_reading_time = 2
 titleless_label = "Okay let me tell you"
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/117327963397204972"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mwc4oojhrd2a"
+sharkey = "https://mitchelltribe.rodeo/notes/arjkdj9uhz0c001k"
+nostr = "https://jumble.social/nevent1qqsyv44ucrhevr4pwuuvdw6xymcdxeqpkvet8g9sxzu3ztamf584nqgpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflc8ysfup"
 +++
 
 <data class="p-summary" value="Okay, let me tell you about my day. I took today and tomorrow off because I am almost maxed out on my vacation time. That is a separate story and not really important to this one. I went to Costco to get a new pair of glasses. Once I get..."></data>
