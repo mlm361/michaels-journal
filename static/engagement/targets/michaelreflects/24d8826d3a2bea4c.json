@@ -15,6 +15,18 @@
     },
     {
       "author": {
+        "name": "This Grandpa Blogs",
+        "photo": "https://mitchelltribe.rodeo/proxy/avatar.webp?url=https%3A%2F%2Ffiles.mastodon.social%2Faccounts%2Favatars%2F115%2F583%2F863%2F737%2F563%2F958%2Foriginal%2F22fdd5653f8fa455.jpg&avatar=1",
+        "url": "https://mitchelltribe.rodeo/@ThisGrandpaBlogs@mastodon.social"
+      },
+      "platform": "sharkey",
+      "published": "2026-09-24T20:57:38.786Z",
+      "url": "https://mitchelltribe.rodeo/@ThisGrandpaBlogs@mastodon.social",
+      "wm-property": "like-of",
+      "wm-target": "https://mitchelltribe.com/2026/09/24/okay-let-me-tell-you/"
+    },
+    {
+      "author": {
         "name": "Pip",
         "photo": "https://mitchelltribe.rodeo/proxy/avatar.webp?url=https%3A%2F%2Fmitchelltribe.rodeo%2Ffiles%2F792fe431-4320-4075-b4ce-0303f3cd7625.png&avatar=1",
         "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu"
@@ -26,8 +38,8 @@
       "wm-target": "https://mitchelltribe.com/2026/09/24/okay-let-me-tell-you/"
     }
   ],
-  "generated_at": "2026-09-24T20:53:34.787890+00:00",
-  "like_count": 2,
+  "generated_at": "2026-09-24T21:23:35.066353+00:00",
+  "like_count": 3,
   "reply_count": 0,
   "source_post_id": 1258,
   "type": "feed",
