@@ -24,10 +24,22 @@
       "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu",
       "wm-property": "like-of",
       "wm-target": "https://mitchelltribe.com/2026/09/25/beavers-built-dams-that-outlasted/"
+    },
+    {
+      "author": {
+        "name": "rru.eurosky.social",
+        "photo": "https://cdn.bsky.app/img/avatar/plain/did:plc:ndis3g6h65gopwo7ujpuit3p/bafkreifilgkrmjazetl3bt5hitpajamizbkuvmu7iuo4yssbbenbifsqzq",
+        "url": "https://bsky.app/profile/rru.eurosky.social"
+      },
+      "platform": "bluesky",
+      "published": "2026-09-25T07:55:06.046Z",
+      "url": "https://bsky.app/profile/rru.eurosky.social",
+      "wm-property": "like-of",
+      "wm-target": "https://mitchelltribe.com/2026/09/25/beavers-built-dams-that-outlasted/"
     }
   ],
-  "generated_at": "2026-09-25T05:25:17.984694+00:00",
-  "like_count": 2,
+  "generated_at": "2026-09-25T07:55:18.153968+00:00",
+  "like_count": 3,
   "reply_count": 0,
   "source_post_id": 1255,
   "type": "feed",
