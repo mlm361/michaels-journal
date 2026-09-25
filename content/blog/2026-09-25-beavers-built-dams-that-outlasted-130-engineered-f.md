@@ -9,6 +9,12 @@ slug = "beavers-built-dams-that-outlasted-130-engineered-f"
 stats_word_count = 87
 stats_reading_time = 1
 image = "https://media.mitchelltribe.xyz/images/2026/09/6e406d33_social-card-751d45e858956f4df92d.avif"
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/117329896148870603"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mwcy5mrgcu2t"
+sharkey = "https://mitchelltribe.rodeo/notes/ark1xof2hz0c001m"
+nostr = "https://jumble.social/nevent1qqsf45vlxrs22u4q8wm8h2yyq5rvgek4s6w3etecv98vp2sxzv2x6nqpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflczzzc98"
 +++
 
 <data class="p-summary" value="Read on thecooldown.com · View original Mastodon post I thought this was interesting when I saw this pop in my social media feed. Beavers make better dams and they last longer than humans make. Maybe the computers and human engineers..."></data>
