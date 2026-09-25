@@ -1,12 +1,12 @@
 +++
 title = "Beavers built dams that outlasted 130 engineered flood barriers, study finds"
-date = "2026-09-25T00:55:01-04:00"
+date = "2026-09-25T00:55:31-04:00"
 draft = false
-description = "Read on thecooldown.com · View original Mastodon post I thought this was interesting when I saw this pop in my social media feed. Beavers make better dams and they last longer than humans make. Maybe the computers and human engineers..."
+description = "Read on thecooldown.com · View original Mastodon post I thought this was interesting when I saw it pop up in my social media feed. In this study, beaver dams outlasted 130 engineered flood barriers. Maybe computers and human engineers..."
 slug = "beavers-built-dams-that-outlasted-130-engineered-f"
 
 [extra]
-stats_word_count = 87
+stats_word_count = 97
 stats_reading_time = 1
 image = "https://media.mitchelltribe.xyz/images/2026/09/6e406d33_social-card-751d45e858956f4df92d.avif"
 
@@ -17,7 +17,7 @@ sharkey = "https://mitchelltribe.rodeo/notes/ark1xof2hz0c001m"
 nostr = "https://jumble.social/nevent1qqsf45vlxrs22u4q8wm8h2yyq5rvgek4s6w3etecv98vp2sxzv2x6nqpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflczzzc98"
 +++
 
-<data class="p-summary" value="Read on thecooldown.com · View original Mastodon post I thought this was interesting when I saw this pop in my social media feed. Beavers make better dams and they last longer than humans make. Maybe the computers and human engineers..."></data>
+<data class="p-summary" value="Read on thecooldown.com · View original Mastodon post I thought this was interesting when I saw it pop up in my social media feed. In this study, beaver dams outlasted 130 engineered flood barriers. Maybe computers and human engineers..."></data>
 
 
 
@@ -31,6 +31,6 @@ nostr = "https://jumble.social/nevent1qqsf45vlxrs22u4q8wm8h2yyq5rvgek4s6w3etecv9
 
 [Read on thecooldown.com](https://www.thecooldown.com/outdoors/beavers-flood-control-northern-england/) · [View original Mastodon post](https://mastodon.green/@MaQuest/117106117130593333)
 
-I thought this was interesting when I saw this pop in my social media feed. Beavers make better dams and they last longer than humans make. Maybe the computers and human engineers should learn from them. Nature does seem to do stuff better than us and we can learn and use are knowledge to make better versions of stuff. After all God did give man dominion over animals and most of nature. 
-
-Just a thought was an interesting read.
+I thought this was interesting when I saw it pop up in my social media feed. In this study, beaver dams outlasted 130 engineered flood barriers. Maybe computers and human engineers should learn a thing or two from them.
+Nature does seem to do some things better than we do, and we can learn from it and use that knowledge to make better versions of things ourselves. After all, God did give man dominion over the animals and much of nature.
+Just a thought. It was an interesting read.
