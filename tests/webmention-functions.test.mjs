@@ -114,3 +114,54 @@ test('deleted canary paths return an uncacheable 410 tombstone', async () => {
   assert.match(response.headers.get('X-Robots-Tag'), /noindex/);
   assert.equal(await response.text(), 'Gone');
 });
+
+async function renderReply(record) {
+  const id = 'C'.repeat(32);
+  globalThis.fetch = async () => new Response(JSON.stringify(record));
+  return reply({
+    request: new Request('https://michaelreflects.com/reply/' + id + '/'),
+    params: { id },
+    env: { WEBMENTION_HUB_ORIGIN: 'https://hub.example' },
+  });
+}
+
+test('a reply started on another site gets a page (2026-09-26 Kev Quirk 404)', async () => {
+  // Marginalia hands the Hub replies whose root is the external post itself. The
+  // page used to require a michaelreflects root, so it 404ed and the Webmention
+  // could never be sent.
+  const response = await renderReply({
+    body_text: 'Yes, I have noticed this trend too.',
+    in_reply_to_url: 'https://kevquirk.com/eight-years-and-done',
+    root_target_url: 'https://kevquirk.com/eight-years-and-done',
+    published_at: '2026-09-25T04:33:57+00:00',
+  });
+  const html = await response.text();
+  assert.equal(response.status, 200);
+  assert.match(html, /class="u-in-reply-to" href="https:\/\/kevquirk\.com\/eight-years-and-done"/);
+  assert.match(html, /this post on kevquirk\.com/);
+  assert.doesNotMatch(html, /View the original journal entry/);
+  assert.match(html, /noindex,nofollow,noarchive/);
+});
+
+test('a reply in a journal conversation still links its journal entry', async () => {
+  const response = await renderReply({
+    body_text: 'Thanks!',
+    in_reply_to_url: 'https://michaelharley.net/posts/2026/09/23/re/',
+    root_target_url: 'https://michaelreflects.com/blog/bloggers-titles/',
+    published_at: '2026-09-24T01:03:14+00:00',
+  });
+  const html = await response.text();
+  assert.equal(response.status, 200);
+  assert.match(html, /this conversation/);
+  assert.match(html, /href="https:\/\/michaelreflects\.com\/blog\/bloggers-titles\/">View the original journal entry/);
+});
+
+test('a non-HTTP root is still refused', async () => {
+  const response = await renderReply({
+    body_text: 'x',
+    in_reply_to_url: 'https://example.com/a',
+    root_target_url: 'javascript:alert(1)',
+    published_at: '2026-09-25T00:00:00+00:00',
+  });
+  assert.equal(response.status, 404);
+});

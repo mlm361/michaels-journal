@@ -11,6 +11,14 @@ function escapeHtml(value) {
   })[char]);
 }
 
+function hostOf(value) {
+  try {
+    return new URL(String(value || '')).hostname.replace(/^www\./, '');
+  } catch (_error) {
+    return 'another site';
+  }
+}
+
 function validId(value) {
   return /^[A-Za-z0-9_-]{32,80}$/.test(String(value || ''));
 }
@@ -28,6 +36,12 @@ function replyHtml(reply, canonicalUrl) {
   const root = escapeHtml(reply.root_target_url);
   const published = escapeHtml(reply.published_at);
   const canonical = escapeHtml(canonicalUrl);
+  // A reply in a conversation on the journal links back to that entry. A reply
+  // that started on someone else's site (e.g. from Marginalia) has no journal
+  // entry, so it names the post it answers instead.
+  const context = validMichaelReflectsUrl(reply.root_target_url)
+    ? `In reply to <a class="u-in-reply-to" href="${target}">this conversation</a> · <a href="${root}">View the original journal entry</a>`
+    : `In reply to <a class="u-in-reply-to" href="${target}">this post on ${escapeHtml(hostOf(reply.in_reply_to_url))}</a>`;
   return `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow,noarchive"><link rel="canonical" href="${canonical}">
@@ -36,7 +50,7 @@ function replyHtml(reply, canonicalUrl) {
 <body><main class="page"><div class="brand">Michael's Journal</div><article class="h-entry">
 <h1>Reply from <a class="p-author h-card" href="https://michaelreflects.com/">Michael</a></h1>
 <p class="e-content reply">${body}</p>
-<p class="meta">In reply to <a class="u-in-reply-to" href="${target}">this conversation</a> · <a href="${root}">View the original journal entry</a></p>
+<p class="meta">${context}</p>
 <time class="dt-published meta" datetime="${published}">${published}</time><a class="u-url" hidden href="${canonical}"></a>
 </article></main></body></html>`;
 }
@@ -49,7 +63,9 @@ export async function onRequestGet(context) {
       context,
       '/api/public/webmention-replies/' + encodeURIComponent(id),
     );
-    if (!validMichaelReflectsUrl(reply.root_target_url)
+    // The Hub only serves replies Michael published. The root may be his own
+    // journal entry or, for a reply started from Marginalia, the external post.
+    if (!validReplyTargetUrl(reply.root_target_url)
         || !validReplyTargetUrl(reply.in_reply_to_url)) return notFound();
     const canonical = new URL(context.request.url);
     canonical.search = '';
