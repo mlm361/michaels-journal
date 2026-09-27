@@ -228,7 +228,7 @@
   <figure class="user_logo">
       <a href="{{ base_url }}" style="background-image: url('{{ get_url(path='img/' ~ config.extra.profile) }}')"></a>
   </figure>
-  <h2 class="site_title">{{config.title}}</h2>
+  <h1 class="site_title">{{config.title}}</h1>
   <div>{{ config.description | str | markdown(inline=true) | safe }}</div>
   {% endblock header %}
 </header>
@@ -327,7 +327,7 @@
         </a>
         {% elif _card_img %}
         <a href="{{ page.permalink }}" class="post-card-img-wrap">
-          <img src="{{ _card_img }}" alt="{% if is_untitled %}Untitled post from {{ page.date | date(format='%B %-d, %Y') }}{% else %}{{ raw_title }}{% endif %}" class="post-card-img" loading="lazy" style="object-position: {{ _card_position }};">
+          <img src="{{ _card_img }}" alt="{% if is_untitled %}Untitled post from {{ page.date | date(format='%B %-d, %Y') }}{% else %}{{ raw_title }}{% endif %}" class="post-card-img" width="160" height="120" loading="lazy" style="object-position: {{ _card_position }};">
         </a>
         {% endif %}
         <div class="post-card-text">

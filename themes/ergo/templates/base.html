@@ -12,12 +12,48 @@
         <title> {{ config.title }} </title>
         {% endif %}
 
+        {# One description for search results, social cards and JSON-LD.
+           Most imported posts have neither a description nor a summary, so
+           use the post's opening prose (figures, code and footnote markers
+           skipped) before falling back to the site tagline. #}
+        {% if page?.description %}
+        {% set_global _meta_description = page.description %}
+        {% elif section?.description %}
+        {% set_global _meta_description = section.description %}
+        {% else %}
+        {% if page?.summary %}
+        {% set_global _meta_html = page.summary %}
+        {% elif page?.content %}
+        {% set_global _meta_html = page.content %}
+        {% else %}
+        {% set_global _meta_html = "" %}
+        {% endif %}
+        {% set_global _meta_description = _meta_html
+            | regex_replace(pattern=`(?s)<figure[ >].*?</figure>|<pre[ >].*?</pre>|<script[ >].*?</script>|<style[ >].*?</style>|<sup[ >].*?</sup>`, rep=" ")
+            | striptags
+            | replace(from="&quot;", to='"') | replace(from="&#39;", to="'") | replace(from="&#x27;", to="'")
+            | replace(from="&nbsp;", to=" ") | replace(from="&#160;", to=" ") | replace(from="&ndash;", to="–") | replace(from="&mdash;", to="—")
+            | replace(from="&lt;", to="<") | replace(from="&gt;", to=">") | replace(from="&amp;", to="&")
+            | regex_replace(pattern=`&#?[a-zA-Z0-9]+;`, rep=" ")
+            | regex_replace(pattern=`[[:space:]]+`, rep=" ") | trim | truncate(length=160) %}
+        {% endif %}
+        {% if not _meta_description %}
+        {% set_global _meta_description = config.description %}
+        {% endif %}
+        {% if page?.permalink %}
+        {% set_global _canonical_url = page.permalink %}
+        {% else %}
+        {% set_global _canonical_url = current_url %}
+        {% endif %}
+        <meta name="description" content="{{ _meta_description }}">
+        <link rel="canonical" href="{{ _canonical_url | safe }}">
+
         <!-- Open Graph -->
         <meta property="og:site_name" content="{{ config.title }}">
         <meta property="og:type" content="{% if page?.title %}article{% else %}website{% endif %}">
-        <meta property="og:url" content="{% if page?.permalink %}{{ page.permalink | safe }}{% else %}{{ config.base_url | safe }}{% endif %}">
+        <meta property="og:url" content="{{ _canonical_url | safe }}">
         <meta property="og:title" content="{% if page?.title %}{{ page.title }}{% else %}{{ config.title }}{% endif %}">
-        <meta property="og:description" content="{% if page?.description %}{{ page.description }}{% elif page?.summary %}{{ page.summary | striptags | truncate(length=160) }}{% else %}{{ config.description }}{% endif %}">
+        <meta property="og:description" content="{{ _meta_description }}">
         {# OG/Twitter image. Prefer page.extra.image; fall back to the site
            avatar so every post (and the homepage, tag pages, etc.) gets a
            large card on Bluesky, Twitter/X, Facebook, Mastodon, Discord. #}
@@ -34,7 +70,7 @@
         <meta property="og:image" content="{{ _meta_image | safe }}">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="{% if page?.title %}{{ page.title }}{% else %}{{ config.title }}{% endif %}">
-        <meta name="twitter:description" content="{% if page?.description %}{{ page.description }}{% elif page?.summary %}{{ page.summary | striptags | truncate(length=160) }}{% else %}{{ config.description }}{% endif %}">
+        <meta name="twitter:description" content="{{ _meta_description }}">
         <meta name="twitter:image" content="{{ _meta_image | safe }}">
 
         {# JSON-LD BlogPosting for article pages. Mirrors page.html's
@@ -48,7 +84,7 @@
           "@context": "https://schema.org",
           "@type": "BlogPosting",
           "headline": {{ page.title | json_encode | safe }},
-          "description": {% if page.description %}{{ page.description | json_encode | safe }}{% elif page.summary %}{{ page.summary | striptags | truncate(length=160) | json_encode | safe }}{% else %}{{ config.description | json_encode | safe }}{% endif %},
+          "description": {{ _meta_description | json_encode | safe }},
           "image": {{ _meta_image | json_encode | safe }},
           "datePublished": "{{ page.date | date(format='%Y-%m-%dT%H:%M:%S%:z') }}",
           "dateModified": "{{ (page.updated or page.date) | date(format='%Y-%m-%dT%H:%M:%S%:z') }}",
@@ -488,6 +524,15 @@
           }
         </style>
 
+        <style>
+          .e-content img { cursor: zoom-in; }
+          .mr-lightbox { position: fixed; inset: 0; background: rgba(0,0,0,0.88); display: none; align-items: center; justify-content: center; z-index: 9999; padding: 2vh 2vw; }
+          .mr-lightbox.is-open { display: flex; }
+          .mr-lightbox img { max-width: 92vw; max-height: 86vh; object-fit: contain; border-radius: 6px; box-shadow: 0 6px 40px rgba(0,0,0,0.5); }
+          .mr-lightbox-close { position: fixed; top: 12px; right: 18px; font-size: 2.4rem; line-height: 1; color: #fff; background: none; border: 0; cursor: pointer; padding: 0.1rem 0.6rem; border-radius: 8px; }
+          .mr-lightbox-close:hover { background: rgba(255,255,255,0.15); }
+        </style>
+
         {% block head_extra %}{% endblock head_extra %}
     </head>
 
@@ -590,25 +635,25 @@
             <p class="footer-social-heading">Social Links</p>
             <div id="social_links">
               <a rel="me" href="https://mitchelltribe.social/@michael">
-                <img src="https://cdn.simpleicons.org/mastodon/6364FF.svg" alt="Mastodon" />Mastodon
+                <img src="https://cdn.simpleicons.org/mastodon/6364FF.svg" alt="Mastodon" width="24" height="24" />Mastodon
               </a>
               <a rel="me" href="https://mitchelltribe.rodeo/@michael">
-                <img src="/img/sharkey-icon.png" alt="Sharkey" />Sharkey
+                <img src="/img/sharkey-icon.png" alt="Sharkey" width="24" height="24" />Sharkey
               </a>
               <a rel="me" href="https://pixelfed.social/mlm361">
-                <img src="https://cdn.simpleicons.org/pixelfed/000000.svg" alt="Pixelfed" class="footer-icon-invert" />Pixelfed
+                <img src="https://cdn.simpleicons.org/pixelfed/000000.svg" alt="Pixelfed" width="24" height="24" class="footer-icon-invert" />Pixelfed
               </a>
               <a rel="me" href="https://bsky.app/profile/mitchelltribe.com">
-                <img src="https://cdn.simpleicons.org/bluesky/0061F2.svg" alt="Bluesky" />Bluesky
+                <img src="https://cdn.simpleicons.org/bluesky/0061F2.svg" alt="Bluesky" width="24" height="24" />Bluesky
               </a>
               <a rel="me" href="https://iris.to/npub19af39pdnr0cpg0ntakhdprfz8fkhkdn4t0f383gj0zw8hy4wf8lqh0nfur">
-                <img src="/img/nostr-icon.gif" alt="Nostr" />Nostr
+                <img src="/img/nostr-icon.gif" alt="Nostr" width="24" height="24" />Nostr
               </a>
               <a href="mailto:michael@michaelmitchell.email">
-                <img src="/img/email-icon.png" alt="Email" />Email Me
+                <img src="/img/email-icon.png" alt="Email" width="24" height="24" />Email Me
               </a>
               <a href="{{ get_url(path='atom.xml', trailing_slash=false) }}">
-                <img src="https://cdn.simpleicons.org/rss/FFA500.svg" alt="RSS" />RSS
+                <img src="https://cdn.simpleicons.org/rss/FFA500.svg" alt="RSS" width="24" height="24" />RSS
               </a>
             </div>
 
@@ -619,7 +664,7 @@
 
             <div class="footer-cc">
               <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
-                <img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License" />
+                <img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" width="88" height="31" alt="Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License" />
               </a>
               <p class="footer-cc-text">This work is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="footer-cc-link">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
             </div>
@@ -702,14 +747,6 @@
             if (aboutImg) aboutImg.src = pick;
           })();
         </script>
-        <style>
-          .e-content img { cursor: zoom-in; }
-          .mr-lightbox { position: fixed; inset: 0; background: rgba(0,0,0,0.88); display: none; align-items: center; justify-content: center; z-index: 9999; padding: 2vh 2vw; }
-          .mr-lightbox.is-open { display: flex; }
-          .mr-lightbox img { max-width: 92vw; max-height: 86vh; object-fit: contain; border-radius: 6px; box-shadow: 0 6px 40px rgba(0,0,0,0.5); }
-          .mr-lightbox-close { position: fixed; top: 12px; right: 18px; font-size: 2.4rem; line-height: 1; color: #fff; background: none; border: 0; cursor: pointer; padding: 0.1rem 0.6rem; border-radius: 8px; }
-          .mr-lightbox-close:hover { background: rgba(255,255,255,0.15); }
-        </style>
         <script>
           (function () {
             var content = document.querySelector('.e-content');

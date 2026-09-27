@@ -134,7 +134,7 @@
 </nav>
 
 <header class="header">
-  <h2 class="site_title">{{ section.title or "Notes" }}</h2>
+  <h1 class="site_title">{{ section.title or "Notes" }}</h1>
   {% if section.description %}
   <div>{{ section.description | str | markdown(inline=true) | safe }}</div>
   {% endif %}
