@@ -20,6 +20,7 @@
     {% if last_updated is defined %}<updated>{{ last_updated | date(format="%Y-%m-%dT%H:%M:%S%:z") }}</updated>{% endif %}
     <id>{{ feed_url | safe }}</id>
     {%- for page in pages %}
+    {%- if not (page.extra?.skip_feed or false) and not (page.extra?.exclude_from_feed or false) %}
     <entry xml:lang="{{ page.lang }}">
         <title>{% if page.title %}{{ page.title }}{% elif page.extra?.titleless_label %}{{ page.extra.titleless_label }}{% elif page.description %}{{ page.description | truncate(length=90, end="…") }}{% else %}{{ page.content | striptags | trim | truncate(length=90, end="…") }}{% endif %}</title>
         <published>{{ page.date | date(format="%Y-%m-%dT%H:%M:%S%:z") }}</published>
@@ -37,5 +38,6 @@
         <content type="html" xml:base="{{ page.permalink | escape_xml | safe }}">{{ page.content }}</content>
         {% endif %}
     </entry>
+    {%- endif %}
     {%- endfor %}
 </feed>
