@@ -226,7 +226,7 @@
   {% block header %}
   {% set base_url = get_url(path="/", lang=lang) %}
   <figure class="user_logo">
-      <a href="{{ base_url }}" style="background-image: url('{{ get_url(path='img/' ~ config.extra.profile) }}')"></a>
+      <a href="{{ base_url }}" aria-label="{{ config.title }} home" style="background-image: url('{{ get_url(path='img/' ~ config.extra.profile) }}')"></a>
   </figure>
   <h1 class="site_title">{{config.title}}</h1>
   <div>{{ config.description | str | markdown(inline=true) | safe }}</div>

@@ -108,7 +108,7 @@
         {% endif %}
 
         <!-- Enable responsiveness on mobile devices-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" >
 
         <!-- js -->
         <script src="{{ config.base_url }}/theme_selector.js"></script>
@@ -539,8 +539,10 @@
     <body{% if page?.extra?.body_class %} class="{{ page.extra.body_class }}"{% endif %} onload="main();">
         {% include "menu.html" %}
 
+        <main id="main-content">
         {% block content %} {% endblock content %}
         {% block pagination %} {% endblock pagination %}
+        </main>
 
         <button class="scroll-to-top" id="scrollToTop" type="button" aria-label="Scroll to top" aria-hidden="true" tabindex="-1">
           <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
