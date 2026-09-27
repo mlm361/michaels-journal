@@ -9,7 +9,7 @@
 
 {% component mini_logo(classes, title, siteurl, logourl) %}
 <figure class="mini_logo {{ classes }}">
-    <a href="{{siteurl}}" aria-label="{{title}} home" style="background-image: url('/img/{{logourl}}')"></a>
+    <a href="{{siteurl}}" aria-label="{{title}} home" style="background-image: url('https://media.mitchelltribe.xyz/site/img/{{ logourl | replace(from=".png", to=".avif") | replace(from=".jpg", to=".avif") }}')"></a>
 </figure>
 <h5>
     <a href="{{siteurl}}">{{title}}</a>
