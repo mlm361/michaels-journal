@@ -330,6 +330,14 @@ h1.article_title {
     }
 }
 
+/* The title wraps to two lines on phones once Montserrat loads; reserve
+   that height so the late font never pushes the page down. */
+@media (max-width: 520px) {
+    .header > h1.site_title {
+        min-height: 2em;
+    }
+}
+
 .post_list_item {
     display: block;
     text-align: left;
