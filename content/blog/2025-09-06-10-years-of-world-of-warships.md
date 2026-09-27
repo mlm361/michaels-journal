@@ -11,7 +11,7 @@ source_url = "https://mitchelltribe.com/2025/09/06/years-of-world-of-warships/"
 
 +++
 <figure class="attachment attachment--preview flex-col justify-center attachment--jpg">
-<img alt="World of Warships profile badge with a silver-blue ship and dock cranes, showing “Registration date: 02.07.2015” and “Profile privacy: Private." class="lightbox__image strip-metadata lightbox__image" decoding="async" loading="lazy" src="https://media.mitchelltribe.xyz/gallery/imports/wows20start20date.avif" srcset="https://scribbles.page/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMlpRQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f040636ed79cb271a1f4ccd44afa777992b3941f/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJQUVHa0NBQXc2Q25OaGRtVnlld2M2Q25OMGNtbHdWRG9NY1hWaGJHbDBlV2xrIiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--95bb9764b8481bddaaffec4af57d9e494bae5163/WoWs%20start%20date.jpg 2x"/>
+<img alt="World of Warships profile badge with a silver-blue ship and dock cranes, showing “Registration date: 02.07.2015” and “Profile privacy: Private." class="lightbox__image strip-metadata lightbox__image" decoding="async" loading="lazy" src="https://media.mitchelltribe.xyz/gallery/imports/wows20start20date.avif"/>
 <figcaption class="attachment__caption text-center">
       Joined World of Warships on July 2, 2015
     </figcaption>
