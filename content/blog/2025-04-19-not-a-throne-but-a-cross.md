@@ -10,7 +10,7 @@ exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/04/19/not-a-throne-but-a/"
 +++
 
-<figure class="attachment attachment--preview flex-col justify-center attachment--png"><img class="lightbox__image strip-metadata lightbox__image" srcset="https://scribbles.page/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBLzBXQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--c5c4a356ce1e53686bf2deee608bad1f0f9db984/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJQUVHa0NBQXc2Q25OaGRtVnlld2M2Q25OMGNtbHdWRG9NY1hWaGJHbDBlV2xrIiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--a18847b6c1cccf2736612f487841b9c550593dc1/ChatGPT%20Image%20Apr%2010,%202025,%2011_40_17%20PM.png 2x" loading="lazy" src="https://media.mitchelltribe.xyz/gallery/imports/chatgpt20image20apr20102020252011-40-1720pm.avif" alt="Jesus on a donkey on a dirt road with a cityscape in the background" decoding="async" /></figure>
+<figure class="attachment attachment--preview flex-col justify-center attachment--png"><img class="lightbox__image strip-metadata lightbox__image" loading="lazy" src="https://media.mitchelltribe.xyz/gallery/imports/chatgpt20image20apr20102020252011-40-1720pm.avif" alt="Jesus on a donkey on a dirt road with a cityscape in the background" decoding="async" /></figure>
 <blockquote>Scripture Reading: Luke 19:28–48 (ESV)
 <p>(Luke 19:28) And when he had said these things, he went on ahead, going up to Jerusalem.<br />
 (Luke 19:29) When he drew near to Bethphage and Bethany, at the mount that is called Olivet, he sent two of the disciples,<br />

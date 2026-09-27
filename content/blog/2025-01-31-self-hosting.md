@@ -11,7 +11,7 @@ source_url = "https://mitchelltribe.com/2025/01/31/195648/"
 +++
 
 <figure class="attachment attachment--preview flex-col justify-center attachment--webp">
-      <img class="lightbox--image" srcset="https://scribbles.page/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBclgwIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--fba9c2adbef8f6ed27db6ecd745fb24dd6d58416/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBPZ2h3Ym1jNkZISmxjMmw2WlY5MGIxOXNhVzFwZEZzSGFRSUFFR2tDQUF3NkNuTmhkbVZ5ZXdjNkNuTjBjbWx3VkRvTWNYVmhiR2wwZVdsayIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--2066f9c7dfde546fec6d0e57c3025a67aa5b9055/DALL%C2%B7E%202025-01-31%2019.51.55%20-%20A%20visually%20engaging%20digital%20illustration%20of%20a%20person%20sitting%20at%20a%20desk,%20looking%20frustrated%20yet%20determined%20while%20working%20on%20a%20Raspberry%20Pi%205%20with%20a%20sma.webp 2x" loading="lazy" src="https://media.mitchelltribe.xyz/gallery/imports/dallc2b7e202025-01-312019.51.5520-20a20visually20engaging20digital20illustr.avif" alt="A visually engaging digital illustration of a person sitting at a desk, looking frustrated yet determined while working on a Raspberry Pi 5 ">
+      <img class="lightbox--image" loading="lazy" src="https://media.mitchelltribe.xyz/gallery/imports/dallc2b7e202025-01-312019.51.5520-20a20visually20engaging20digital20illustr.avif" alt="A visually engaging digital illustration of a person sitting at a desk, looking frustrated yet determined while working on a Raspberry Pi 5 ">
 </figure>
 
 <p>Trying to self-host is a lot of work. I’m not a techie—just a wannabe

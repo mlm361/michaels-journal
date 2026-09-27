@@ -10,7 +10,7 @@ exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/04/29/learning-faster-with-ai/"
 +++
 
-<figure class="attachment attachment--preview flex-col justify-center attachment--png"><img class="lightbox__image strip-metadata lightbox__image" srcset="https://scribbles.page/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNVFlQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--12271f522b1239f036ed85122821a0b2248fa792/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJQUVHa0NBQXc2Q25OaGRtVnlld2M2Q25OMGNtbHdWRG9NY1hWaGJHbDBlV2xrIiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--a18847b6c1cccf2736612f487841b9c550593dc1/ChatGPT%20Image%20Apr%2029,%202025,%2010_11_26%20PM.png 2x" loading="lazy" alt="Cartoon of a man at a computer receiving a “PowerShell Script” from a glowing AI assistant, with a “Learning Boost” mug and dusty tech manuals nearby." src="https://media.mitchelltribe.xyz/gallery/imports/chatgpt20image20apr20292020252010-11-2620pm.avif" decoding="async" />
+<figure class="attachment attachment--preview flex-col justify-center attachment--png"><img class="lightbox__image strip-metadata lightbox__image" loading="lazy" alt="Cartoon of a man at a computer receiving a “PowerShell Script” from a glowing AI assistant, with a “Learning Boost” mug and dusty tech manuals nearby." src="https://media.mitchelltribe.xyz/gallery/imports/chatgpt20image20apr20292020252010-11-2620pm.avif" decoding="async" />
 <figcaption class="attachment__caption text-center">When the AI hands you the script and the tea kicks in—suddenly, you’re unstoppable.</figcaption>
 </figure>
 <p><br />

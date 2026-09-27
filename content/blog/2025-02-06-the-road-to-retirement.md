@@ -10,7 +10,7 @@ exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/02/06/the-road-to-retirement/"
 +++
 
-<figure class="attachment attachment--preview flex-col justify-center attachment--jpeg"><img class="lightbox--image" srcset="https://scribbles.page/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbmYyIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--fd8f17aade0659d26dd4ef0298ae9ae9e456dad6/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lKYW5CbFp3WTZCa1ZVT2hSeVpYTnBlbVZmZEc5ZmJHbHRhWFJiQjJrQ0FCQnBBZ0FNT2dwellYWmxjbnNIT2dwemRISnBjRlE2REhGMVlXeHBkSGxwWkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--a744d8f75451afbcf118ec59ae617394a12029aa/pexels-photo-635279.jpeg 2x" loading="lazy" alt="Beach during sunset with soft waves hitting the sand" src="https://media.mitchelltribe.xyz/gallery/imports/pexels-photo-635279.avif" />
+<figure class="attachment attachment--preview flex-col justify-center attachment--jpeg"><img class="lightbox--image" loading="lazy" alt="Beach during sunset with soft waves hitting the sand" src="https://media.mitchelltribe.xyz/gallery/imports/pexels-photo-635279.avif" />
 <figcaption class="attachment__caption text-center">Photo by Pixabay on Pexels</figcaption>
 </figure>
 <p>I was thinking the other day after my doctor said the colonoscopy went well. He removed one polyp, and it was likely benign. The pathology results confirmed that it was indeed benign. The doctor also mentioned that I won’t need another colonoscopy for seven years—just two years before I retire.</p>

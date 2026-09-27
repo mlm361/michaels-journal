@@ -10,7 +10,7 @@ exclude_from_feed = true
 
 +++
 <figure class="attachment attachment--preview flex-col justify-center attachment--png">
-<img alt="Black-and-white ink drawing of a man in an armchair watching a vintage TV; rain on the window, lamp glow, single side table holding stacked DVDs, a glass of iced tea with visible cubes, a tablet with streaming icons, and a smartphone" class="lightbox__image strip-metadata lightbox__image" decoding="async" loading="lazy" src="https://media.mitchelltribe.xyz/gallery/imports/cozy-living-room-single-side-table-pen-ink.avif" srcset="https://scribbles.page/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeGhMQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f067e4db829e89e4fc7b3aedad4fc06333654ffa/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJQUVHa0NBQXc2Q25OaGRtVnlld2M2Q25OMGNtbHdWRG9NY1hWaGJHbDBlV2xrIiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--a18847b6c1cccf2736612f487841b9c550593dc1/cozy-living-room-single-side-table-pen-ink.png 2x"/>
+<img alt="Black-and-white ink drawing of a man in an armchair watching a vintage TV; rain on the window, lamp glow, single side table holding stacked DVDs, a glass of iced tea with visible cubes, a tablet with streaming icons, and a smartphone" class="lightbox__image strip-metadata lightbox__image" decoding="async" loading="lazy" src="https://media.mitchelltribe.xyz/gallery/imports/cozy-living-room-single-side-table-pen-ink.avif"/>
 <figcaption class="attachment__caption text-center">
       Rainy night comfort: vintage TV, streaming apps, and a glass of iced tea
     </figcaption>
