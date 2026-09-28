@@ -12,10 +12,22 @@
       "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu",
       "wm-property": "like-of",
       "wm-target": "https://mitchelltribe.com/2026/09/27/wordpress-drama-is-it-worth/"
+    },
+    {
+      "author": {
+        "name": "Leon Chevalier",
+        "photo": "https://cdn.bsky.app/img/avatar/plain/did:plc:uuadyfyad2gozf3v3iboiubk/bafkreifhlz27vmuerrtku6lvllfz4xjfkmmup5suh4uuds4i7lwmx42fyq",
+        "url": "https://bsky.app/profile/speedifypress.com"
+      },
+      "platform": "bluesky",
+      "published": "2026-09-28T14:30:38.195Z",
+      "url": "https://bsky.app/profile/speedifypress.com",
+      "wm-property": "like-of",
+      "wm-target": "https://mitchelltribe.com/2026/09/27/wordpress-drama-is-it-worth/"
     }
   ],
-  "generated_at": "2026-09-27T22:38:18.790064+00:00",
-  "like_count": 1,
+  "generated_at": "2026-09-28T14:31:08.699284+00:00",
+  "like_count": 2,
   "reply_count": 0,
   "source_post_id": 1253,
   "type": "feed",
