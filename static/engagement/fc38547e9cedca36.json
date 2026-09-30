@@ -15,6 +15,21 @@
     },
     {
       "author": {
+        "name": "Antonio Santos",
+        "photo": "https://cdn.masto.host/mitchelltribesocial/cache/accounts/avatars/117/360/185/360/905/929/original/4cf46d6a270a796a.png",
+        "url": "https://mastodon.social/@otolock"
+      },
+      "content": {
+        "html": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mitchelltribe.social/@michael\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>michael</span></a></span> I think you're on the right track. I had to switch domains after the last .io price increase. </p><p><a href=\"https://otolock.net/blog/re-domains-cost-more-blogs-disappear/\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">otolock.net/blog/re-domains-co</span><span class=\"invisible\">st-more-blogs-disappear/</span></a></p>"
+      },
+      "platform": "mastodon",
+      "published": "2026-09-30T13:19:18.000Z",
+      "url": "https://mastodon.social/@otolock/117360188369420963",
+      "wm-property": "in-reply-to",
+      "wm-target": "https://mitchelltribe.com/2026/09/30/domains-cost-more-blogs-disappear/"
+    },
+    {
+      "author": {
         "name": "Pip",
         "photo": "https://mitchelltribe.rodeo/proxy/avatar.webp?url=https%3A%2F%2Fmitchelltribe.rodeo%2Ffiles%2F792fe431-4320-4075-b4ce-0303f3cd7625.png&avatar=1",
         "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu"
@@ -26,9 +41,9 @@
       "wm-target": "https://mitchelltribe.com/2026/09/30/domains-cost-more-blogs-disappear/"
     }
   ],
-  "generated_at": "2026-09-30T11:16:49.376136+00:00",
+  "generated_at": "2026-09-30T13:46:50.648073+00:00",
   "like_count": 2,
-  "reply_count": 0,
+  "reply_count": 1,
   "source_post_id": 1260,
   "type": "feed",
   "target_id": "michaelreflects"
