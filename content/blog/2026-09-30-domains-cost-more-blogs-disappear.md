@@ -11,6 +11,12 @@ tags = [ "blogging", "personal", "technology",]
 [extra]
 stats_word_count = 556
 stats_reading_time = 3
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/117359644590849171"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mwq6vm67fl2a"
+sharkey = "https://mitchelltribe.rodeo/notes/arrk6txekvkl000w"
+nostr = "https://jumble.social/nevent1qqsgqty4w7t00uq96my79htzltre0xmepvcv0mtzskm9lfhrps8cw9cpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflculuz3q"
 +++
 
 <data class="p-summary" value="I have been noticing a couple of disturbing trends this year outside of the AI/LLM bubble. Has anyone else noticed them? First, domain registrars seem to be raising domain name prices like never before. Every couple of months, I get an..."></data>
