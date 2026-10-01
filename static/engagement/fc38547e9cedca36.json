@@ -30,6 +30,21 @@
     },
     {
       "author": {
+        "name": "Michael :verified: :mastodon:",
+        "photo": "https://cdn.masto.host/mitchelltribesocial/accounts/avatars/109/563/987/250/398/644/original/2421204ef873b947.png",
+        "url": "https://mitchelltribe.social/@michael"
+      },
+      "content": {
+        "html": "<p>Hi Antonio. Thanks for reading and I been following you for a while in my RSS reader. I don&#39;t blame you 51 dollars is a lot.</p>"
+      },
+      "platform": "mastodon",
+      "published": "2026-10-01T00:20:30.007Z",
+      "url": "https://mitchelltribe.social/@michael/117362788270686281",
+      "wm-property": "in-reply-to",
+      "wm-target": "https://mitchelltribe.com/2026/09/30/domains-cost-more-blogs-disappear/"
+    },
+    {
+      "author": {
         "name": "Pip",
         "photo": "https://mitchelltribe.rodeo/proxy/avatar.webp?url=https%3A%2F%2Fmitchelltribe.rodeo%2Ffiles%2F792fe431-4320-4075-b4ce-0303f3cd7625.png&avatar=1",
         "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu"
@@ -41,9 +56,9 @@
       "wm-target": "https://mitchelltribe.com/2026/09/30/domains-cost-more-blogs-disappear/"
     }
   ],
-  "generated_at": "2026-09-30T13:46:50.648073+00:00",
+  "generated_at": "2026-10-01T00:46:58.739436+00:00",
   "like_count": 2,
-  "reply_count": 1,
+  "reply_count": 2,
   "source_post_id": 1260,
   "type": "feed",
   "target_id": "michaelreflects"
