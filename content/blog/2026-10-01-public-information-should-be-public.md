@@ -12,6 +12,12 @@ tags = [ "government", "public-policy", "technology",]
 stats_word_count = 611
 stats_reading_time = 4
 image = "https://media.mitchelltribe.xyz/images/2026/10/9ee17436_214f427ab4b7.avif"
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/117368258963207770"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mwtzcz2urr26"
+sharkey = "https://mitchelltribe.rodeo/notes/artqg6tbkvkl001m"
+nostr = "https://jumble.social/nevent1qqsxpwmyt5f8tky3tdyj9dnsv3pyxf2x6dkdu5xfvds4n5sm0cmcs8spr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcmkfhmm"
 +++
 
 <data class="p-summary" value="Government updates belong in an open feed By Mark Kennedy Founder · via Open RSS Blog Read original post → I saw this blog post from OpenRSS in my RSS reader, and it interested me in more than one way. I agree wholeheartedly with its..."></data>
