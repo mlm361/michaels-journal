@@ -1,5 +1,5 @@
 {
-  "canonical_url": "https://mitchelltribe.com/2026/09/29/share-buttons-yay-or-nay/",
+  "canonical_url": "https://mitchelltribe.com/2026/10/01/public-information-should-be-public/",
   "children": [
     {
       "author": {
@@ -11,7 +11,7 @@
       "published": null,
       "url": "https://tinymind.eu",
       "wm-property": "like-of",
-      "wm-target": "https://mitchelltribe.com/2026/09/29/share-buttons-yay-or-nay/"
+      "wm-target": "https://mitchelltribe.com/2026/10/01/public-information-should-be-public/"
     },
     {
       "author": {
@@ -20,16 +20,16 @@
         "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu"
       },
       "platform": "sharkey",
-      "published": "2026-09-29T12:16:49.751Z",
+      "published": "2026-10-01T23:31:50.529Z",
       "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu",
       "wm-property": "like-of",
-      "wm-target": "https://mitchelltribe.com/2026/09/29/share-buttons-yay-or-nay/"
+      "wm-target": "https://mitchelltribe.com/2026/10/01/public-information-should-be-public/"
     }
   ],
-  "generated_at": "2026-10-01T23:46:43.631368+00:00",
+  "generated_at": "2026-10-01T23:47:36.409651+00:00",
   "like_count": 2,
   "reply_count": 0,
-  "source_post_id": 1242,
+  "source_post_id": 1252,
   "type": "feed",
   "target_id": "michaelreflects"
 }
