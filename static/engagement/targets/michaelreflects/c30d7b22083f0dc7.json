@@ -37,11 +37,12 @@
       "platform": "bluesky",
       "published": "2026-06-08T10:19:36.773Z",
       "url": "https://bsky.app/profile/stoutposts.bsky.social/post/3mnrhgjg3h22p",
+      "wm-id": "https://bsky.app/profile/stoutposts.bsky.social/post/3mnrhgjg3h22p",
       "wm-property": "in-reply-to",
       "wm-target": "https://mitchelltribe.com/2026/06/07/star-trek-outposts-unknown-pc/"
     }
   ],
-  "generated_at": "2026-10-01T23:46:40.776931+00:00",
+  "generated_at": "2026-10-03T21:49:32.289418+00:00",
   "like_count": 2,
   "reply_count": 1,
   "source_post_id": 1228,
