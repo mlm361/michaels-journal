@@ -2,7 +2,7 @@
 title = "Beavers built dams that outlasted 130 engineered flood barriers, study finds"
 date = "2026-09-25T00:55:31-04:00"
 draft = false
-description = "Read on thecooldown.com · View original Mastodon post I thought this was interesting when I saw it pop up in my social media feed. In this study, beaver dams outlasted 130 engineered flood barriers. Maybe computers and human engineers..."
+description = "I thought this was interesting when I saw it pop up in my social media feed. In this study, beaver dams outlasted 130 engineered flood barriers. Maybe computers and human engineers should learn a thing or two from them. Nature does seem..."
 slug = "beavers-built-dams-that-outlasted-130-engineered-f"
 
 [extra]

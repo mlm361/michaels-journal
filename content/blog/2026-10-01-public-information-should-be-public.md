@@ -2,7 +2,7 @@
 title = "Public Information Should Be Public"
 date = "2026-10-01T19:30:56-04:00"
 draft = false
-description = "Government updates belong in an open feed By Mark Kennedy Founder · via Open RSS Blog Read original post → I saw this blog post from OpenRSS in my RSS reader, and it interested me in more than one way. I agree wholeheartedly with its..."
+description = "I saw this blog post from OpenRSS in my RSS reader, and it interested me in more than one way. I agree wholeheartedly with its sentiment. Government offices, officials and agencies used to seem much more focused on making information..."
 slug = "public-information-should-be-public"
 
 [taxonomies]
