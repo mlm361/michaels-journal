@@ -15,6 +15,40 @@
     },
     {
       "author": {
+        "name": "Derek Hanson",
+        "photo": "https://cdn.masto.host/mitchelltribesocial/cache/accounts/avatars/117/354/568/980/516/012/original/b2106897297a4831.png",
+        "url": "https://mastodon.social/@derekahanson"
+      },
+      "content": {
+        "html": "<p>I really appreciate this critique, <span class=\"h-card\" translate=\"no\"><a href=\"https://mitchelltribe.social/@michael\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>michael</span></a></span>! This is a well crafted response that has me rethinking some of my position.</p><p>I also agree that some of my data is a bit dated.</p><p>I'm working on making my blog more part of the Indie Web, so I hope we can connect with each other!</p>"
+      },
+      "platform": "mastodon",
+      "published": "2026-09-29T13:41:56.000Z",
+      "url": "https://mastodon.social/@derekahanson/117354615061874973",
+      "wm-id": "https://mastodon.social/@derekahanson/117354615061874973",
+      "wm-property": "mention-of",
+      "wm-target": "https://mitchelltribe.com/2026/09/29/share-buttons-yay-or-nay/"
+    },
+    {
+      "author": {
+        "name": "Michael",
+        "photo": "https://cdn.masto.host/mitchelltribesocial/accounts/avatars/109/563/987/250/398/644/original/2421204ef873b947.png",
+        "url": "https://mitchelltribe.social/@michael"
+      },
+      "author-is-owner": true,
+      "content": {
+        "html": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@derekahanson\" class=\"u-url mention\">@<span>derekahanson</span></a></span> Hi Derek! Thanks for reading. It means a lot that you took the time to read and respond, and I’m glad I gave you something to think about. That was mutual. The IndieWeb is incredible, and there’s room for us all.</p>"
+      },
+      "platform": "mastodon",
+      "published": "2026-09-29T15:52:43.690Z",
+      "url": "https://mitchelltribe.social/@michael/117355129319591625",
+      "wm-id": "https://mitchelltribe.social/@michael/117355129319591625",
+      "wm-parent-id": "https://mastodon.social/@derekahanson/117354615061874973",
+      "wm-property": "in-reply-to",
+      "wm-target": "https://mitchelltribe.com/2026/09/29/share-buttons-yay-or-nay/"
+    },
+    {
+      "author": {
         "name": "Pip",
         "photo": "https://mitchelltribe.rodeo/proxy/avatar.webp?url=https%3A%2F%2Fmitchelltribe.rodeo%2Ffiles%2F792fe431-4320-4075-b4ce-0303f3cd7625.png&avatar=1",
         "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu"
@@ -26,9 +60,9 @@
       "wm-target": "https://mitchelltribe.com/2026/09/29/share-buttons-yay-or-nay/"
     }
   ],
-  "generated_at": "2026-10-03T21:49:35.306598+00:00",
+  "generated_at": "2026-10-04T15:22:40.072859+00:00",
   "like_count": 2,
-  "reply_count": 0,
+  "reply_count": 1,
   "source_post_id": 1242,
   "type": "feed",
   "target_id": "michaelreflects"
