@@ -12,6 +12,12 @@ tags = [ "community", "self-hosting", "technology",]
 stats_word_count = 334
 stats_reading_time = 2
 image = "https://media.mitchelltribe.xyz/images/2026/09/ad8a6dce_793a8ba4e49b.avif"
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/117385286473982663"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mx3lcpaai62n"
+sharkey = "https://mitchelltribe.rodeo/notes/ary155r6qb1w0011"
+nostr = "https://jumble.social/nevent1qqsrf3955g9t5l4asdr65a0f2kkkyt524m6rtwcawkm0m67yxjhylngpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflczn458d"
 +++
 
 <data class="p-summary" value="Back in August, I got a Tempest Weather Station. I had been wanting a weather station for some time. Why? Well, that is hard to put into words. I guess the answer is that I really like technology, I am fascinated with self-hosting as much..."></data>
