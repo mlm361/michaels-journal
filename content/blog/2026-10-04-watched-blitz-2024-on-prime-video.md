@@ -13,6 +13,12 @@ stats_word_count = 166
 stats_reading_time = 1
 image = "https://media.mitchelltribe.xyz/images/2026/10/dce1415a_tmdb_f20ca7a9a7aa.avif"
 card_fit = "contain"
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/117383559758436359"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mx2sqy2ve32i"
+sharkey = "https://mitchelltribe.rodeo/notes/arxlga3hqb1w000w"
+nostr = "https://jumble.social/nevent1qqstj0nwzwnd3334gwka7umhtdnfkr0u4ec09mfcqxlf4h22svuhx6gpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcespp4w"
 +++
 
 <data class="p-summary" value="⚠️ SPOILER WARNING: FULL SPOILERS My Rating: ⭐⭐⭐½ (3.5/5 stars) Final Verdict Not bad, but a heavy watch. After seeing all the kid went through in this movie, you almost wanted to reach out to him through the TV and say, “Let’s get you..."></data>
