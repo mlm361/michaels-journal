@@ -165,3 +165,29 @@ test('a non-HTTP root is still refused', async () => {
   });
   assert.equal(response.status, 404);
 });
+
+test('reply page keeps paragraphs and line breaks in the e-content HTML (2026-10-04)', async () => {
+  // The body was one <p> with raw newlines shown via pre-wrap, so a receiver
+  // rendering the HTML ran every paragraph together.
+  const response = await renderReply({
+    body_text: 'Hi Michael,\nThanks <b>a lot</b>.\n\nSecond paragraph.',
+    in_reply_to_url: 'https://michaelharley.net/posts/2026/09/23/re/',
+    root_target_url: 'https://michaelreflects.com/blog/bloggers-titles/',
+    published_at: '2026-10-04T01:00:00+00:00',
+  });
+  const html = await response.text();
+  assert.match(html, /<div class="e-content reply"><p>Hi Michael,<br>\nThanks &lt;b&gt;a lot&lt;\/b&gt;\.<\/p>\n<p>Second paragraph\.<\/p><\/div>/);
+  assert.doesNotMatch(html, /pre-wrap/);
+});
+
+test('reply page author h-card carries the same-origin avatar (2026-10-04)', async () => {
+  const response = await renderReply({
+    body_text: 'Thanks!',
+    in_reply_to_url: 'https://michaelharley.net/posts/2026/09/23/re/',
+    root_target_url: 'https://michaelreflects.com/blog/bloggers-titles/',
+    published_at: '2026-10-04T01:00:00+00:00',
+  });
+  const html = await response.text();
+  assert.match(html, /<a class="p-author h-card" href="https:\/\/michaelreflects\.com\/"><img class="u-photo avatar" src="https:\/\/michaelreflects\.com\/img\/avatar-stipple\.avif" alt=""[^>]*><span class="p-name">Michael<\/span><\/a>/);
+  assert.match(response.headers.get('Content-Security-Policy'), /img-src 'self'/);
+});
