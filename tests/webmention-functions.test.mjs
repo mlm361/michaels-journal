@@ -188,7 +188,9 @@ test('reply page author h-card carries the same-origin avatar (2026-10-04)', asy
     published_at: '2026-10-04T01:00:00+00:00',
   });
   const html = await response.text();
-  // An explicit u-photo switches off the implied u-url, so the link must be explicit.
-  assert.match(html, /<a class="p-author h-card u-url" href="https:\/\/michaelreflects\.com\/"><img class="u-photo avatar" src="https:\/\/michaelreflects\.com\/img\/avatar-stipple\.avif" alt=""[^>]*><span class="p-name">Michael<\/span><\/a>/);
+  // An explicit u-photo switches off the implied u-url, so the card needs its own
+  // u-url on a child; u-url on the h-card element itself would be the entry's URL.
+  assert.match(html, /<span class="p-author h-card"><a class="u-url" href="https:\/\/michaelreflects\.com\/"><img class="u-photo avatar" src="https:\/\/michaelreflects\.com\/img\/avatar-stipple\.avif" alt=""[^>]*><span class="p-name">Michael<\/span><\/a><\/span>/);
+  assert.doesNotMatch(html, /h-card u-url/);
   assert.match(response.headers.get('Content-Security-Policy'), /img-src 'self'/);
 });
