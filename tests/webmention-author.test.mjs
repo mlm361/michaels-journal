@@ -41,3 +41,46 @@ test('a long reply card is shown whole, line breaks kept (2026-10-04)', () => {
   const style = fs.readFileSync('themes/ergo/templates/partials/webmentions-style.html', 'utf8');
   assert.match(style, /\.wm-card-content \{[^}]*white-space: pre-line;/);
 });
+
+test('a trusted owner reply gets an accessible author badge', () => {
+  const full = vm.createContext({window: {}, URL});
+  vm.runInContext(fs.readFileSync('static/js/url-safety.js', 'utf8'), full);
+  vm.runInContext(template.slice(template.indexOf('    function escapeHtml'),
+                                 template.indexOf('    function renderReplyTree')), full);
+
+  const card = full.renderReplyCard({
+    'author-is-owner': true,
+    author: {name: 'Michael', url: 'https://michaelreflects.com/'},
+    content: {text: 'My reply.'},
+  });
+
+  assert.match(card, /class='wm-author-badge'/);
+  assert.match(card, /aria-label='Site author'>author<\/span>/);
+});
+
+test('an owner-looking name or URL cannot create the author badge', () => {
+  const full = vm.createContext({window: {}, URL});
+  vm.runInContext(fs.readFileSync('static/js/url-safety.js', 'utf8'), full);
+  vm.runInContext(template.slice(template.indexOf('    function escapeHtml'),
+                                 template.indexOf('    function renderReplyTree')), full);
+
+  for (const mention of [
+    {author: {name: 'Michael', url: 'https://michaelreflects.com/'}},
+    {'author-is-owner': false, author: {name: 'Michael'}},
+    {'author-is-owner': 1, author: {name: 'Michael'}},
+  ]) {
+    assert.doesNotMatch(full.renderReplyCard(mention), /wm-author-badge/);
+  }
+});
+
+test('Hub authored_by_me is normalized to the trusted owner flag', () => {
+  assert.equal(context.hubEntryToChild({authored_by_me: true})['author-is-owner'], true);
+  assert.equal(context.hubEntryToChild({authored_by_me: false})['author-is-owner'], false);
+  assert.equal(context.hubEntryToChild({authored_by_me: 1})['author-is-owner'], false);
+});
+
+test('the author badge has light and dark theme styles', () => {
+  const style = fs.readFileSync('themes/ergo/templates/partials/webmentions-style.html', 'utf8');
+  assert.match(style, /\.wm-author-badge \{/);
+  assert.match(style, /html\.theme-dark \.wm-author-badge \{/);
+});
