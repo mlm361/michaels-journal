@@ -114,6 +114,12 @@
         + "'>" + escapeHtml(platform.label) + "</span>";
     }
 
+    function authorBadge(mention) {
+      return mention["author-is-owner"] === true
+        ? "<span class='wm-author-badge' aria-label='Site author'>author</span>"
+        : "";
+    }
+
     function renderFacepile(icon, items, verb) {
       if (!items.length) return "";
       var faces = items.map(faceWithPlatform).join("");
@@ -129,6 +135,7 @@
       var nameEl = href
         ? "<a class='wm-card-name' href='" + escapeHtml(href) + "' target='_blank' rel='noopener'>" + name + "</a>"
         : "<span class='wm-card-name'>" + name + "</span>";
+      var authorLine = "<span class='wm-card-authorline'>" + nameEl + authorBadge(mention) + "</span>";
       var date = formatDate(mention.published);
       var dateEl = date ? "<span class='wm-card-date'>" + escapeHtml(date) + "</span>" : "";
       var submeta = "<span class='wm-card-submeta'>" + platformBadge(mention) + dateEl + "</span>";
@@ -139,7 +146,7 @@
       var contentEl = text ? "<p class='wm-card-content'>" + escapeHtml(text) + "</p>" : "";
       return "<article class='wm-card'>"
         + "<div class='wm-card-head'>" + avatar(mention, "wm-card-avatar")
-        + "<div class='wm-card-meta'>" + nameEl + submeta + "</div></div>"
+        + "<div class='wm-card-meta'>" + authorLine + submeta + "</div></div>"
         + contentEl + "</article>";
     }
 
@@ -197,6 +204,7 @@
         "wm-parent-id": entry.parent_event_id || null,
         "url": entry.source_url || "",
         "platform": entry.platform || "webmention",
+        "author-is-owner": entry.authored_by_me === true,
         "published": entry.occurred_at || entry.received_at || "",
         "author": {
           "name": entry.actor_name || "",
