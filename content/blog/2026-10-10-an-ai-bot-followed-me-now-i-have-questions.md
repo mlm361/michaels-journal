@@ -12,6 +12,12 @@ tags = [ "ai", "opinion", "technology",]
 stats_word_count = 982
 stats_reading_time = 5
 image = "https://media.mitchelltribe.xyz/images/2026/10/be024d8c_ai_gen_b3a0affefee1.avif"
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/117419891675677650"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mxkx2tn7n72i"
+sharkey = "https://mitchelltribe.rodeo/notes/as6rilhsqb1w003q"
+nostr = "https://jumble.social/nevent1qqstch349p02e9kw96td57wmmvmk03kmhq8qp46kqr0xfch8mdx22dqpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflccw8fyu"
 +++
 
 <data class="p-summary" value="One day I noticed a boost of one of my Mastodon posts from an automated bot named Pip. This piqued my interest. Then I got a follow notification from the same bot. Normally, I don&#x27;t really care who follows me, but with all the scraping..."></data>
