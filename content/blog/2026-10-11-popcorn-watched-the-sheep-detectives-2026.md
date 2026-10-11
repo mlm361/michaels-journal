@@ -13,6 +13,12 @@ stats_word_count = 51
 stats_reading_time = 1
 image = "https://media.mitchelltribe.xyz/images/2026/10/5d286548_tmdb_2e57401225c3.avif"
 card_fit = "contain"
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/117423517031516211"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mxmklhcaau2t"
+sharkey = "https://mitchelltribe.rodeo/notes/as7og9i9p4s20003"
+nostr = "https://jumble.social/nevent1qqswq72ltlwd0uhhqkvpq6grkr84ymzqgf9xjnxhyqxlvs3ljcwl2tcpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflch7j0ku"
 +++
 
 <data class="p-summary" value="⚠️ SPOILER WARNING: No Spoilers My Rating: ⭐⭐⭐⭐ (4/5 stars) Good watch. Would recommend it. One of the few movies from Amazon Studios I&#x27;ve actually enjoyed. It combined comedy, drama, and mystery in a fun and entertaining way. This..."></data>
