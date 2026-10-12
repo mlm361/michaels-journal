@@ -24,10 +24,22 @@
       "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu",
       "wm-property": "like-of",
       "wm-target": "https://mitchelltribe.com/2026/10/11/watched-the-sheep-detectives/"
+    },
+    {
+      "author": {
+        "name": "Sarah ❤️",
+        "photo": "https://cdn.bsky.app/img/avatar/plain/did:plc:vwn72vnuxpt36fq6bixzenn2/bafkreidjrhrkn33i4kp2l2eebib5zt6j25xejkw6ino7i6hnqn6yd2c2fu",
+        "url": "https://bsky.app/profile/zlmiller.bsky.social"
+      },
+      "platform": "bluesky",
+      "published": "2026-10-12T21:38:23.967Z",
+      "url": "https://bsky.app/profile/zlmiller.bsky.social",
+      "wm-property": "like-of",
+      "wm-target": "https://mitchelltribe.com/2026/10/11/watched-the-sheep-detectives/"
     }
   ],
-  "generated_at": "2026-10-11T18:02:50.111322+00:00",
-  "like_count": 2,
+  "generated_at": "2026-10-12T21:41:14.333925+00:00",
+  "like_count": 3,
   "reply_count": 0,
   "source_post_id": 1262,
   "type": "feed",
