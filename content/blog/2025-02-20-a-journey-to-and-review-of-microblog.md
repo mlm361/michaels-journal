@@ -26,7 +26,7 @@ source_url = "https://mitchelltribe.com/2025/02/20/a-journey-to-and-review/"
 <p>Since I use a custom domain with Cloudflare, I was happy to see that Micro.blog works well with Cloudflare DNS. Setting up a custom domain with Micro.blog was seamless, and Cloudflare’s security features provide an extra layer of protection.</p>
 <p><strong>User Experience &amp; Mobile Apps</strong></p>
 <p>Micro.blog is built on Hugo, users who are comfortable with Hugo’s templating system can deeply customize their sites. While the default theming is simple, those familiar with Hugo can modify templates, tweak layouts, and enhance functionality. For those who aren’t as comfortable with coding, Micro.blog’s built-in themes and plugins offer plenty of flexibility.</p>
-<p>Micro.blog has a vibrant plugin community. There are a lot of third-party themes from <a href="mattlangford.com">Matt Langford</a> and <a href="jimmitchell.org">Jim Mitchell</a> (not related, as far as I know). You can host podcasts with Micro.blog and send newsletters.</p>
+<p>Micro.blog has a vibrant plugin community. There are a lot of third-party themes from <a href="https://mattlangford.com">Matt Langford</a> and <a href="https://jimmitchell.org">Jim Mitchell</a> (not related, as far as I know). You can host podcasts with Micro.blog and send newsletters.</p>
 <p>For mobile users, there are apps for both iOS and Android. Since I primarily use Android, I can’t speak much about the iOS apps, but the Micro.blog Android app feels feature-rich.</p>
 <p>Micro.blog also offers companion apps, such as:</p>
 <ul>
