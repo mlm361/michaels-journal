@@ -13,5 +13,5 @@ source_url = "https://mlm361.micro.blog/2003/04/23/here-is-a-picture-of/"
 <br />
 <br />Going to do some minor updates to the website this week. Next week I will probably not have enough time, with starting my new job and everything. 
 <br />
-<br /><div class="media">[Listening to: Spoken For - <a href="http://www.windowsmedia.com/mg/search.asp?srch=Mercy+Me">Mercy Me</a> - Spoken For (04:09)]</div>
+<br /><div class="media">[Listening to: Spoken For - Mercy Me - Spoken For (04:09)]</div>
 <br />
