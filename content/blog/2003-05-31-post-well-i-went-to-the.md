@@ -18,5 +18,5 @@ Well, I went to the Doctor yesterday and I am on 2 antibiotics, a steroid, cough
 <br />
 <br />Well, this was a long entry because I wanted to catch everyone up. I updated the website with several new photos, some new music on some of the pages and update a couple of the pages (i.e. the My TV Shows page and My Calendar page). 
 <br />
-<br /><div class="media">[Listening to: Somebody's Praying Me Through - <a href="http://www.windowsmedia.com/mg/search.asp?srch=Allen+Asbury">Allen Asbury</a> - Somebody's Praying Me Through [Bonus Track] (04:03)]</div>
+<br /><div class="media">[Listening to: Somebody's Praying Me Through - Allen Asbury - Somebody's Praying Me Through [Bonus Track] (04:03)]</div>
 <br />
