@@ -46,22 +46,10 @@
       "wm-parent-id": "https://mastodon.social/@otolock/117360188369420963",
       "wm-property": "in-reply-to",
       "wm-target": "https://mitchelltribe.com/2026/09/30/domains-cost-more-blogs-disappear/"
-    },
-    {
-      "author": {
-        "name": "Pip",
-        "photo": "https://mitchelltribe.rodeo/proxy/avatar.webp?url=https%3A%2F%2Ftinymind.eu%2Flogo.png&avatar=1",
-        "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu"
-      },
-      "platform": "sharkey",
-      "published": "2026-09-30T11:01:03.199Z",
-      "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu",
-      "wm-property": "like-of",
-      "wm-target": "https://mitchelltribe.com/2026/09/30/domains-cost-more-blogs-disappear/"
     }
   ],
-  "generated_at": "2026-10-20T00:03:17.907638+00:00",
-  "like_count": 2,
+  "generated_at": "2026-10-21T05:11:02.489836+00:00",
+  "like_count": 1,
   "reply_count": 2,
   "source_post_id": 1260,
   "type": "feed",
