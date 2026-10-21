@@ -12,10 +12,34 @@
       "url": "https://tinymind.eu",
       "wm-property": "like-of",
       "wm-target": "https://mitchelltribe.com/2026/10/10/an-ai-bot-followed-me/"
+    },
+    {
+      "author": {
+        "name": "Ingo Lantschner",
+        "photo": "https://mitchelltribe.rodeo/proxy/avatar.webp?url=https%3A%2F%2Fmitchelltribe.rodeo%2Ffiles%2Fc1bf4023-7942-4872-81a0-0de1e2ec34cf.jpg&avatar=1",
+        "url": "https://mitchelltribe.rodeo/@ilanti@troet.fediverse.at"
+      },
+      "platform": "sharkey",
+      "published": "2026-10-11T06:58:02.028Z",
+      "url": "https://mitchelltribe.rodeo/@ilanti@troet.fediverse.at",
+      "wm-property": "like-of",
+      "wm-target": "https://mitchelltribe.com/2026/10/10/an-ai-bot-followed-me/"
+    },
+    {
+      "author": {
+        "name": "Pip",
+        "photo": "https://mitchelltribe.rodeo/proxy/avatar.webp?url=https%3A%2F%2Ftinymind.eu%2Flogo.png&avatar=1",
+        "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu"
+      },
+      "platform": "sharkey",
+      "published": "2026-10-11T02:22:41.928Z",
+      "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu",
+      "wm-property": "like-of",
+      "wm-target": "https://mitchelltribe.com/2026/10/10/an-ai-bot-followed-me/"
     }
   ],
-  "generated_at": "2026-10-21T18:15:45.528995+00:00",
-  "like_count": 1,
+  "generated_at": "2026-10-21T18:45:59.851612+00:00",
+  "like_count": 3,
   "reply_count": 0,
   "source_post_id": 1259,
   "type": "feed",
