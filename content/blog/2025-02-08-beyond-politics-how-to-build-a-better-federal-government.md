@@ -33,7 +33,7 @@ Many argue that calling a Constitutional Convention could lead to states going o
 
 **Legislative Branch**
 
-For Congress, this is how I propose fixing it, starting with the House of Representatives. The House was designed to be the branch of government closest to the people—not to political parties—but to the constituents they represent. With the U.S. population exceeding 330 million, the current representation ratio does not favor adequate representation. Each representative in the House currently serves, on average, 747,000\[^1\] people.
+For Congress, this is how I propose fixing it, starting with the House of Representatives. The House was designed to be the branch of government closest to the people—not to political parties—but to the constituents they represent. With the U.S. population exceeding 330 million, the current representation ratio does not favor adequate representation. Each representative in the House currently serves, on average, 747,000[^1] people.
 
 We are fast approaching an oligarchy if we do not improve this ratio. Increasing the number of representatives would reduce the concentration of power among a few individuals or corporations. Currently, corporations can influence or buy off 435 representatives relatively easily. If the number of representatives increased to 11,000, this would be far less feasible. Additionally, many representatives would serve districts without large corporations, focusing instead on small businesses and local constituents, making them more responsive to the people they represent.
 
@@ -43,7 +43,7 @@ There should also be a maximum age limit of 74. A person could run for Congress 
 
 The staggered implementation would work as follows: the current 435 representatives would serve six-year terms. During the first election after the amendment, 4,500 additional representatives would be added. Two years later, another 4,500 would be added. Finally, in the next election cycle, the remaining seats required to meet the new ratio would be added. This phased approach allows for gradual adjustment while ensuring that representatives have time to focus on serving their constituents instead of campaigning constantly.
 
-This expanded House would also allow Congress to reclaim powers that have been delegated to independent agencies like the SEC, FCC, and FTC. By hiring talent from these agencies as staffers, representatives would have the time and expertise to draft legislation directly. This approach would nullify Supreme Court decisions that allow bureaucrats to make laws and rules instead of Congress\[^2\]. With representatives serving smaller constituencies of 50,000 people, the voices of individual citizens would be amplified, and representatives would be more accountable to their communities.
+This expanded House would also allow Congress to reclaim powers that have been delegated to independent agencies like the SEC, FCC, and FTC. By hiring talent from these agencies as staffers, representatives would have the time and expertise to draft legislation directly. This approach would nullify Supreme Court decisions that allow bureaucrats to make laws and rules instead of Congress[^2]. With representatives serving smaller constituencies of 50,000 people, the voices of individual citizens would be amplified, and representatives would be more accountable to their communities.
 
 For the Senate, I propose increasing its size to 500 members but with a key distinction: term limits would mirror those outlined for the House. Of these 500 members, 300 would be elected by direct election as they are now, while the remaining 200 would be appointed by state legislatures, similar to the system before the Seventeenth Amendment. The original method of legislative appointment had merit, as it was intended to create a more measured and insulated institution.
 
@@ -91,6 +91,6 @@ This is my comprehensive plan to refine the federal government and further our F
 
 Notably, I have avoided addressing social issues. While social issues are important, they should always be handled through legislation, as societal views shift over time. What may be one person’s passionate cause could be another’s “over my dead body” moment.
 
-[1] Pew Research Center. U.S. population keeps growing, but House of Representatives is same size as in Taft era. Retrieved from https://www.pewresearch.org/short-reads/2018/05/31/u-s-population-keeps-growing-but-house-of-representatives-is-same-size-as-in-taft-era/
+[^1]: Pew Research Center. U.S. population keeps growing, but House of Representatives is same size as in Taft era. Retrieved from https://www.pewresearch.org/short-reads/2018/05/31/u-s-population-keeps-growing-but-house-of-representatives-is-same-size-as-in-taft-era/
 
-[2] SCOTUSblog. Supreme Court strikes down Chevron, curtailing power of federal agencies. Retrieved from https://www.scotusblog.com/2024/06/supreme-court-strikes-down-chevron-curtailing-power-of-federal-agencies/
+[^2]: SCOTUSblog. Supreme Court strikes down Chevron, curtailing power of federal agencies. Retrieved from https://www.scotusblog.com/2024/06/supreme-court-strikes-down-chevron-curtailing-power-of-federal-agencies/
