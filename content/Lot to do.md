@@ -12,6 +12,8 @@ lang = "en-us"
 stats_word_count = 191
 stats_reading_time = 1
 
+[taxonomies]
+tags = ["personal", "productivity", "technology"]
 +++
 
 
