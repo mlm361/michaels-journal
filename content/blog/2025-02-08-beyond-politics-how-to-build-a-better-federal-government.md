@@ -8,12 +8,19 @@ stats_word_count = 2017
 stats_reading_time = 11
 exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/02/08/beyond-politics-how-to-build/"
+
+[taxonomies]
+tags = ["government", "opinion", "politics"]
 +++
 
 
 
+<data class="p-summary" value="I have a multifaceted plan to restore integrity to the U.S. representative governing system. While I am not naive enough to believe this could happen through Congress alone, I think it is high time the states called for a Constitutional..."></data>
+
+
+
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
-<img src="https://media.mitchelltribe.xyz/gallery/imports/fscdtrsk.avif" alt="" style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
+<img src="https://i.snap.as/fSCdTRsK.webp" alt="" style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
 </figure>
 
 
@@ -78,14 +85,11 @@ The national debt shall be eliminated within 75 years, after which the measures 
 
 Congress may suspend the national debt elimination plan at any time during a national emergency, war, or economic crisis with a two-thirds vote in both chambers. Such a suspension shall be valid for a maximum of two years per vote. If the crisis persists, Congress must vote again to extend the suspension for another two-year period, ensuring regular accountability and preventing indefinite postponements.
 
-\---
-
 **Closing thoughts**
 
 This is my comprehensive plan to refine the federal government and further our Founding Fathers’ vision of a living Constitution. Since past and present Congresses lack the political will to implement these reforms, the states should call for a constitutional amendment. By limiting the scope of their convention, concerns about a runaway convention could be alleviated.
 
 Notably, I have avoided addressing social issues. While social issues are important, they should always be handled through legislation, as societal views shift over time. What may be one person’s passionate cause could be another’s “over my dead body” moment.
-
 
 [1] Pew Research Center. U.S. population keeps growing, but House of Representatives is same size as in Taft era. Retrieved from https://www.pewresearch.org/short-reads/2018/05/31/u-s-population-keeps-growing-but-house-of-representatives-is-same-size-as-in-taft-era/
 
