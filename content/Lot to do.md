@@ -16,14 +16,17 @@ stats_reading_time = 1
 
 
 
-<figure class="captioned">
-  <img src="https://media.mitchelltribe.xyz/gallery/posts/electronics_researcher_working_on_circuit_board.avif"
-       alt="A middle-aged man with a beard and glasses is deeply focused while working on an electronic circuit board in a high-tech lab environment. The view is framed as if seen through a circular lens, highlighting the intricate details of the circuitry and the thoughtful expression of the man. The background features futuristic digital displays and diagrams, enhancing the scene's innovative and technical atmosphere."
-       width="600" />
-  <figcaption>
-   An engineer lost in thought, surrounded by a maze of circuits and the glow of futuristic interfaces.
-  </figcaption>
+<data class="p-summary" value="Lately, I’ve been swamped with projects and short on energy to tackle them, partly because of my worsening eyesight. I have glaucoma, but thankfully no loss of vision. My treatment includes twice-yearly eye pressure checks and nightly..."></data>
+
+
+
+<figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
+<img src="https://media.mitchelltribe.xyz/gallery/posts/sha256-5ab9b1e52ab265c4dae33e75edb07558b515785ef42ceb577d922f3cb901ab82.avif" alt="A middle-aged man with a beard and glasses is deeply focused while working on an electronic circuit board in a high-tech lab environment. The view is framed as if seen through a circular lens, highlighting the intricate details of the circuitry and the thoughtful expression of the man. The background features futuristic digital displays and diagrams, enhancing the scene&#x27;s innovative and technical atmosphere." style="display: block !important; max-width: 100% !important; width: auto !important; height: auto !important; margin: 0 auto !important;">
 </figure>
+
+
+
+<figcaption>An engineer lost in thought, surrounded by a maze of circuits and the glow of futuristic interfaces.</figcaption>
 
 Lately, I’ve been swamped with projects and short on energy to tackle them, partly because of my worsening eyesight. I have glaucoma, but thankfully no loss of vision. My treatment includes twice-yearly eye pressure checks and nightly latanoprost. Even so, my glasses prescription seems to need constant updates, and I’ve always had a lot of floaters. My ophthalmologist reassures me that the floaters and eye pressure are fine, but my vision keeps changing, which is frustrating. After a recent visit to an optometrist for new glasses (an immediate improvement at first), I quickly found myself struggling again. It’s baffling how fast my eyesight shifts.
 
