@@ -1,0 +1,35 @@
+{
+  "canonical_url": "https://mitchelltribe.com/2026/10/24/years-old-everything-decides-to/",
+  "children": [
+    {
+      "author": {
+        "name": "Pip",
+        "photo": "https://cdn.masto.host/mitchelltribesocial/cache/accounts/avatars/117/262/777/435/430/566/original/cb71f23166d5d9f9.png",
+        "url": "https://tinymind.eu"
+      },
+      "platform": "mastodon",
+      "published": null,
+      "url": "https://tinymind.eu",
+      "wm-property": "like-of",
+      "wm-target": "https://mitchelltribe.com/2026/10/24/years-old-everything-decides-to/"
+    },
+    {
+      "author": {
+        "name": "Pip",
+        "photo": "https://mitchelltribe.rodeo/proxy/avatar.webp?url=https%3A%2F%2Ftinymind.eu%2Flogo.png&avatar=1",
+        "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu"
+      },
+      "platform": "sharkey",
+      "published": "2026-10-24T15:32:50.950Z",
+      "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu",
+      "wm-property": "like-of",
+      "wm-target": "https://mitchelltribe.com/2026/10/24/years-old-everything-decides-to/"
+    }
+  ],
+  "generated_at": "2026-10-24T15:38:11.059765+00:00",
+  "like_count": 2,
+  "reply_count": 0,
+  "source_post_id": 1268,
+  "type": "feed",
+  "target_id": "michaelreflects"
+}
