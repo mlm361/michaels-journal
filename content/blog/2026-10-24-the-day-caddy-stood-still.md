@@ -12,6 +12,12 @@ tags = [ "caddy", "self-hosting", "technology",]
 stats_word_count = 502
 stats_reading_time = 3
 image = "https://media.mitchelltribe.xyz/images/2026/10/d2bbb432_e628535478d4.avif"
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/117497503853551619"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mynfysfozr2f"
+sharkey = "https://mitchelltribe.rodeo/notes/asqclktthj0u00vx"
+nostr = "https://jumble.social/nevent1qqspgs9uxnn5glp4snjw27k0rch0waexurm50z33qwztm9kc39z2tscpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflctt99rq"
 +++
 
 <data class="p-summary" value="A couple of weeks ago, I went to update my VPS. Usually, I do this once a week, sometimes more frequently depending on any security news I see. I should probably have the AI agents I use do this, but I do it myself for now. I find..."></data>
