@@ -11,6 +11,12 @@ tags = [ "hardware", "personal", "technology",]
 [extra]
 stats_word_count = 292
 stats_reading_time = 2
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/117496608722796658"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mymzbngjrv2f"
+sharkey = "https://mitchelltribe.rodeo/notes/asq4gsbmhj0u00vv"
+nostr = "https://jumble.social/nevent1qqsxr2773th47fh20kn0805cspvu0tfsxdsae9e233cyrd4wk6cfgqspr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcq2e4eq"
 +++
 
 <data class="p-summary" value="This October has been an expensive one. First, our hot water heater went out. It was probably about 10 years old. Then, two days after our water heater went out, the refrigerator went out, and it was also about 10 years old. Fixing it..."></data>
