@@ -12,6 +12,12 @@ tags = [ "ai", "opinion", "technology",]
 stats_word_count = 1083
 stats_reading_time = 6
 image = "https://media.mitchelltribe.xyz/images/2026/10/41d2b45b_e60bbe36aff9.avif"
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/117502992260652636"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3myptym6txv2g"
+sharkey = "https://mitchelltribe.rodeo/notes/asrqgjl8hj0u00w3"
+nostr = "https://jumble.social/nevent1qqs29arsgdy59fdu03j4f5hxtfm54z9mymth2ck7rxcd306znvvdyuspr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcepe08e"
 +++
 
 <data class="p-summary" value="A couple of weeks ago I wrote a post titled An AI Bot Followed Me. Now I Have Questions. It was about Pip, an AI agent on Mastodon that followed me, boosted some of my posts, and eventually started following my blog after I invited it to..."></data>
