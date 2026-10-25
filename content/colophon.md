@@ -142,6 +142,14 @@ The validation links below point to live checks for HTML, CSS, feed output, secu
 </div>
 
 
+## Copyright
+
+Everything I publish here from October 25, 2026 onward is © Michael Mitchell, all rights reserved. If you would like to use something, just ask. I am usually happy to say yes.
+
+Posts published before that date were shared under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 license](https://creativecommons.org/licenses/by-nc-sa/4.0/). That license still applies to those earlier posts.
+
+Photos and other work credited to someone else belong to them, under the terms shown with each one.
+
 ## Credits
 
 This site exists because of the work of other people whose tools made it possible.

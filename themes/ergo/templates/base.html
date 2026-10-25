@@ -224,24 +224,6 @@
           #social_links a:hover img { transform: translateY(-1px); }
           /* Photogrid captions */
           .photogrid-caption { color: #666; }
-          .footer-cc {
-            margin: 0.75rem 0 0.5rem;
-          }
-          .footer-cc img {
-            border: 0;
-            margin-bottom: 0.4rem;
-          }
-          .footer-cc-text {
-            font-size: 0.82rem;
-            opacity: 0.75;
-            margin: 0.2rem 0 0;
-          }
-          .footer-cc-link {
-            color: #2d7a2d;
-            font-weight: 700;
-            text-decoration: underline;
-            text-underline-offset: 2px;
-          }
           .footer-rule {
             border: none;
             border-top: 1px solid rgba(128,128,128,0.15);
@@ -627,7 +609,7 @@
             </script>
             {% endif %}
 
-            <p class="footer-line">© 2001–<span id="currentYear"></span> <span class="p-name">Michael Mitchell</span></p>
+            <p class="footer-line">© 2001–<span id="currentYear">{{ now() | date(format="%Y") }}</span> <span class="p-name">Michael Mitchell</span>. All rights reserved.</p>
             <a class="u-url u-uid mf2-hidden" rel="me" href="{{ config.base_url | safe }}/">Michael Mitchell</a>
 
             <p class="footer-social-heading">Social Links</p>
@@ -660,12 +642,7 @@
             <p class="footer-line" id="blog-uptime"></p>
             <p class="footer-line">Visits: <span class="tinylytics_hits"></span> &middot; Uptime: <span class="tinylytics_uptime"></span></p>
 
-            <div class="footer-cc">
-              <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
-                <img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" width="88" height="31" alt="Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License" />
-              </a>
-              <p class="footer-cc-text">This work is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="footer-cc-link">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
-            </div>
+            <p class="footer-line footer-rights">Posts published before October 25, 2026 were shared under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="footer-link" target="_blank" rel="noopener">Creative Commons BY-NC-SA 4.0 license</a>, which still applies to those posts.</p>
 
             <p class="footer-line"><a href="/privacy/" class="footer-link">Privacy Policy</a> &middot; <a href="/colophon/" class="footer-link">Colophon</a></p>
 

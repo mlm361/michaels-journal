@@ -11,7 +11,7 @@ extra_css = ["/css/privacy-policy.css?v=20260522-privacy-dark-1"]
 
 <img src="/img/privacy-policy.png" alt="Privacy Policy" style="max-width:100%;height:auto;border-radius:8px;margin-bottom:1.5rem;">
 
-*Last Updated: August 8, 2026*
+*Last Updated: October 25, 2026*
 
 This Privacy Policy describes how I (the owner of this blog) use and protect any information collected when you visit **Michael's Journal**, hosted at `michaelreflects.com` and originally available at `michaels-journal.pages.dev`. This is a personal blog where I share my opinions, reviews, and thoughts on a variety of subjects; these opinions are mine alone and are subject to change.
 
@@ -46,7 +46,6 @@ Some pages load small third-party assets or scripts for presentation and site fe
 - [Font Awesome](https://fontawesome.com/) provides some icons.
 - [Simple Icons](https://simpleicons.org/) provides several social and service icons.
 - [jsDelivr](https://www.jsdelivr.com/) is used on specific pages for JavaScript/CSS libraries such as Chart.js and GLightbox.
-- [Creative Commons](https://creativecommons.org/) provides the license badge image shown in the footer.
 
 These services are used for display and site functionality. I do not use them for advertising, behavioral profiling, or selling visitor data.
 
