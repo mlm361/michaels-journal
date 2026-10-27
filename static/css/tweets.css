@@ -26,7 +26,8 @@ body.tweets-page-body::before {
   background-size: min(1600px, 100vw) auto;
   opacity: 1;
 }
-body.tweets-page-body > .post_container,
+/* Content sits in <main id="main-content"> since the 2026-09-27 accessibility landmark. */
+body.tweets-page-body > #main-content,
 body.tweets-page-body > .site-footer {
   position: relative;
   z-index: 1;

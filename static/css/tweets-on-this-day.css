@@ -30,7 +30,9 @@ body.tweets-otd-page-body::after {
   opacity: 0.88;
 }
 
-body.tweets-otd-page-body > .tweets-on-this-day-page,
+/* Content sits in <main id="main-content"> since the 2026-09-27 accessibility landmark;
+   lift it (and the footer) above the fixed ::before/::after backdrop layers. */
+body.tweets-otd-page-body > #main-content,
 body.tweets-otd-page-body > .site-footer {
   position: relative;
   z-index: 1;
