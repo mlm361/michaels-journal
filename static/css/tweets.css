@@ -26,8 +26,9 @@ body.tweets-page-body::before {
   background-size: min(1600px, 100vw) auto;
   opacity: 1;
 }
-/* Content sits in <main id="main-content"> since the 2026-09-27 accessibility landmark. */
-body.tweets-page-body > #main-content,
+/* Content sits in <main id="main-content"> since the 2026-09-27 accessibility landmark.
+   Lift the content wrapper, not main (#overlord is absolutely positioned inside it). */
+body.tweets-page-body #main-content > .post_container,
 body.tweets-page-body > .site-footer {
   position: relative;
   z-index: 1;

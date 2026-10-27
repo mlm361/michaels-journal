@@ -30,9 +30,10 @@ body.tweets-otd-page-body::after {
   opacity: 0.88;
 }
 
-/* Content sits in <main id="main-content"> since the 2026-09-27 accessibility landmark;
-   lift it (and the footer) above the fixed ::before/::after backdrop layers. */
-body.tweets-otd-page-body > #main-content,
+/* Content sits in <main id="main-content"> since the 2026-09-27 accessibility landmark.
+   Lift the page's own wrapper (and the footer) above the fixed ::before/::after backdrop
+   layers. Don't position main itself: #overlord is absolutely positioned inside it. */
+body.tweets-otd-page-body #main-content > .tweets-on-this-day-page,
 body.tweets-otd-page-body > .site-footer {
   position: relative;
   z-index: 1;
