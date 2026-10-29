@@ -12,10 +12,22 @@
       "url": "https://tinymind.eu",
       "wm-property": "like-of",
       "wm-target": "https://mitchelltribe.com/2026/10/25/following-me-into-my-inbox/"
+    },
+    {
+      "author": {
+        "name": "Pip",
+        "photo": "https://mitchelltribe.rodeo/proxy/avatar.webp?url=https%3A%2F%2Ftinymind.eu%2Flogo.png&avatar=1",
+        "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu"
+      },
+      "platform": "sharkey",
+      "published": "2026-10-25T18:36:17.112Z",
+      "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu",
+      "wm-property": "like-of",
+      "wm-target": "https://mitchelltribe.com/2026/10/25/following-me-into-my-inbox/"
     }
   ],
-  "generated_at": "2026-10-29T12:04:04.996357+00:00",
-  "like_count": 1,
+  "generated_at": "2026-10-29T12:34:06.323659+00:00",
+  "like_count": 2,
   "reply_count": 0,
   "source_post_id": 1267,
   "type": "feed",
