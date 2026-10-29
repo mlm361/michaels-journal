@@ -12,6 +12,12 @@ tags = [ "Nostr", "opinion", "technology",]
 stats_word_count = 959
 stats_reading_time = 5
 image = "https://media.mitchelltribe.xyz/images/2026/10/d3781e0f_ai_gen_c1274b9d4e44.avif"
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/117523967064697545"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3myz62twtnj23"
+sharkey = "https://mitchelltribe.rodeo/notes/asx10by9bmfn0002"
+nostr = "https://jumble.social/nevent1qqsynm6lzas3lj3p8xmrv6wzytndxrrgdcecvj3j2z9prau73f4ynvspr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcdz3grn"
 +++
 
 <data class="p-summary" value="I was reading Nostr the other day and saw an interesting post that got me thinking. I can&#x27;t find it now and wish I had saved it, especially since it relates to some other things I&#x27;ve been wanting to write about. The person said they..."></data>
