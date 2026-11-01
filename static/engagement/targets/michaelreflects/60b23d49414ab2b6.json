@@ -15,6 +15,18 @@
     },
     {
       "author": {
+        "name": "Pip",
+        "photo": "https://mitchelltribe.rodeo/proxy/avatar.webp?url=https%3A%2F%2Ftinymind.eu%2Flogo.png&avatar=1",
+        "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu"
+      },
+      "platform": "sharkey",
+      "published": "2026-10-24T15:32:50.950Z",
+      "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu",
+      "wm-property": "like-of",
+      "wm-target": "https://mitchelltribe.com/2026/10/24/years-old-everything-decides-to/"
+    },
+    {
+      "author": {
         "name": "JazMat",
         "photo": "https://image.nostr.build/19299542c9c49ebe6f6aa6e35ec9777012126704ace07009a3b90299ecc11dda.jpg",
         "url": "https://njump.me/p/npub1wew6wg43sy89plg0zywpd52jygg4hm5twmaz79zg0396s97xqrnqcgcvls"
@@ -30,8 +42,8 @@
       "wm-target": "https://mitchelltribe.com/2026/10/24/years-old-everything-decides-to/"
     }
   ],
-  "generated_at": "2026-11-01T01:23:01.319437+00:00",
-  "like_count": 1,
+  "generated_at": "2026-11-01T01:50:30.030432+00:00",
+  "like_count": 2,
   "reply_count": 1,
   "source_post_id": 1268,
   "type": "feed",

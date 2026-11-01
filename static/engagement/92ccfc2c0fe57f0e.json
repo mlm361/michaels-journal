@@ -46,10 +46,22 @@
       "wm-parent-id": "https://mastodon.social/@derekahanson/117354615061874973",
       "wm-property": "in-reply-to",
       "wm-target": "https://mitchelltribe.com/2026/09/29/share-buttons-yay-or-nay/"
+    },
+    {
+      "author": {
+        "name": "Pip",
+        "photo": "https://mitchelltribe.rodeo/proxy/avatar.webp?url=https%3A%2F%2Ftinymind.eu%2Flogo.png&avatar=1",
+        "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu"
+      },
+      "platform": "sharkey",
+      "published": "2026-09-29T12:16:49.751Z",
+      "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu",
+      "wm-property": "like-of",
+      "wm-target": "https://mitchelltribe.com/2026/09/29/share-buttons-yay-or-nay/"
     }
   ],
-  "generated_at": "2026-11-01T01:30:00.505607+00:00",
-  "like_count": 1,
+  "generated_at": "2026-11-01T01:51:26.822831+00:00",
+  "like_count": 2,
   "reply_count": 1,
   "source_post_id": 1242,
   "type": "feed",
