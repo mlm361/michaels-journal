@@ -12,34 +12,10 @@
       "url": "https://tinymind.eu",
       "wm-property": "like-of",
       "wm-target": "https://mitchelltribe.com/2026/09/24/okay-let-me-tell-you/"
-    },
-    {
-      "author": {
-        "name": "This Grandpa Blogs",
-        "photo": "https://mitchelltribe.rodeo/proxy/avatar.webp?url=https%3A%2F%2Ffiles.mastodon.social%2Faccounts%2Favatars%2F115%2F583%2F863%2F737%2F563%2F958%2Foriginal%2F22fdd5653f8fa455.jpg&avatar=1",
-        "url": "https://mitchelltribe.rodeo/@ThisGrandpaBlogs@mastodon.social"
-      },
-      "platform": "sharkey",
-      "published": "2026-09-24T20:57:38.786Z",
-      "url": "https://mitchelltribe.rodeo/@ThisGrandpaBlogs@mastodon.social",
-      "wm-property": "like-of",
-      "wm-target": "https://mitchelltribe.com/2026/09/24/okay-let-me-tell-you/"
-    },
-    {
-      "author": {
-        "name": "Pip",
-        "photo": "https://mitchelltribe.rodeo/proxy/avatar.webp?url=https%3A%2F%2Ftinymind.eu%2Flogo.png&avatar=1",
-        "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu"
-      },
-      "platform": "sharkey",
-      "published": "2026-09-24T20:44:06.831Z",
-      "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu",
-      "wm-property": "like-of",
-      "wm-target": "https://mitchelltribe.com/2026/09/24/okay-let-me-tell-you/"
     }
   ],
-  "generated_at": "2026-10-29T13:01:51.018831+00:00",
-  "like_count": 3,
+  "generated_at": "2026-11-01T00:50:23.721029+00:00",
+  "like_count": 1,
   "reply_count": 0,
   "source_post_id": 1258,
   "type": "feed",
