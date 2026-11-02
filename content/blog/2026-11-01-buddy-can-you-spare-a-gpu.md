@@ -12,6 +12,12 @@ tags = [ "hardware", "opinion", "technology",]
 stats_word_count = 2384
 stats_reading_time = 12
 image = "https://media.mitchelltribe.xyz/images/2026/11/bc9bde3b_f1e77af63c3b.avif"
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/117544085810679046"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mzc3xtaa5r2d"
+sharkey = "https://mitchelltribe.rodeo/notes/at23s5otptgh00f6"
+nostr = "https://jumble.social/nevent1qqsfuruqu3xhtu2v3rnaqq03zfavyz8jy77g095d54zzl7u0s6hnnscpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcy47pfc"
 +++
 
 <data class="p-summary" value="I wanted to write this blog post earlier in October but got hung up with work last month. For some reason, work has been crazy lately. So Ed Zitron, Paul from Paul&#x27;s Hardware, Steve Burke from Gamers Nexus and others beat me to this..."></data>
