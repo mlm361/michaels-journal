@@ -10,11 +10,7 @@ exclude_from_feed = true
 source_url = "https://mitchelltribe.com/2025/03/10/microsofts-disconnect-with-consumers/"
 +++
 
-I totally agree with Leo's perspective in this [YouTube video](
-
-{{ <youtube id="Cgs7_2wtf1Q" /> }}
-
- If I could easily move all my PC games to macOS or Linux, I'd jump ship in a heartbeat.
+I totally agree with Leo's perspective in this [YouTube video](https://youtu.be/Cgs7_2wtf1Q). If I could easily move all my PC games to macOS or Linux, I'd jump ship in a heartbeat.
 
 The problem is that not all of my games are compatible with macOS or Linux, and the cost of switching would be significant. If there were a one-time platform transfer option, that would be a game-changer—I’d be gone in an instant.
 
