@@ -32,22 +32,14 @@ nostr = "https://jumble.social/nevent1qqsfuruqu3xhtu2v3rnaqq03zfavyz8jy77g095d54
 
 <br>
 
-I wanted to write this blog post earlier in October but got hung up with work last month. For some reason, work has been crazy lately. So Ed Zitron, Paul from Paul's Hardware, Steve Burke from Gamers Nexus and others beat me to this topic, and Vex, a YouTuber, does [a great job explaining it](
-
-{{ youtube(id="RltZycbuAUE") }}
-
- too. Just as I was finishing this, Brennan published [I Am Relentless and Undaunted](https://brennan.day/i-am-relentless-and-undaunted/). Go read it. It's worth your time.
+I wanted to write this blog post earlier in October but got hung up with work last month. For some reason, work has been crazy lately. So Ed Zitron, Paul from Paul's Hardware, Steve Burke from Gamers Nexus and others beat me to this topic, and Vex, a YouTuber, does [a great job explaining it](https://www.youtube.com/watch?v=RltZycbuAUE) too. Just as I was finishing this, Brennan published [I Am Relentless and Undaunted](https://brennan.day/i-am-relentless-and-undaunted/). Go read it. It's worth your time.
 
 So I don't have to make this a long post, sorry, just kidding, it will be very long. I have to get this off my chest and vent. I believe there's a conspiracy here, and it deserves some attention.
 <!--more-->
 
 I'm putting on my tinfoil hat for this one.
 
-I try not to be a conspiracy theorist, but come on. How can you look at what's happening and not think these shortages and high component prices are being deliberately created? At the heart of it, I believe, is Nvidia and its bottom line. As we've learned from [Ed Zitron](
-
-{{ youtube(id="HzBUsbqbVkM") }}
-
- and Business Insider's reporting, Amazon is sitting on [warehouses full of GPUs](https://finance.yahoo.com/technology/ai/articles/amazon-stockpiles-nvidia-ai-hardware-194615746.html), and by extension, I suspect there's memory and storage equipment sitting around too. Why? Because some of these data centers aren't ready, and others don't have enough electrical power to operate the equipment. Microsoft has acknowledged similar problems and has pulled back from some planned data center projects. So why are these companies buying billions of dollars in GPUs that could be outdated by the time they're installed?
+I try not to be a conspiracy theorist, but come on. How can you look at what's happening and not think these shortages and high component prices are being deliberately created? At the heart of it, I believe, is Nvidia and its bottom line. As we've learned from [Ed Zitron](https://www.youtube.com/watch?v=HzBUsbqbVkM) and Business Insider's reporting, Amazon is sitting on [warehouses full of GPUs](https://finance.yahoo.com/technology/ai/articles/amazon-stockpiles-nvidia-ai-hardware-194615746.html), and by extension, I suspect there's memory and storage equipment sitting around too. Why? Because some of these data centers aren't ready, and others don't have enough electrical power to operate the equipment. Microsoft has acknowledged similar problems and has pulled back from some planned data center projects. So why are these companies buying billions of dollars in GPUs that could be outdated by the time they're installed?
 
 I have a theory.
 
@@ -63,15 +55,7 @@ And before anyone tells me these companies would never manipulate a market, let'
 
 Nvidia isn't stopping with GPUs. It invested $5 billion in Intel, entered into partnerships across the industry, and has agreed to acquire Hugging Face, one of the biggest platforms for distributing open AI models. The U.S. Justice Department is already asking questions about that deal.[^5] Nvidia says Hugging Face will remain open to competing hardware. I hope that's true, but I have to wonder how much of the AI industry Nvidia intends to influence. Now look at consumer graphics cards. Nvidia already dominates the market, AMD has pulled back from competing at the very high end, and Intel is putting considerable attention into professional AI graphics hardware. Maybe all this is just a coincidence, but consumers are certainly getting fewer choices at the high end, both price-wise and hardware-wise, with the rumored end of the RTX 5090, which Nvidia denies. And it's not just the 5090. The RTX 5080, which launched at $999, now has listings for $2,000 or more, and Nvidia's own store has quietly pulled it too.[^6] Even Intel's Arc Pro B70, originally priced under $1,000, has appeared at prices exceeding $2,000.[^7] AMD cards haven't escaped the increases either.[^8] These price increases are happening at every rung of the ladder. How is the average consumer supposed to afford this stuff anymore?
 
-I wonder whether we're slowly being pushed toward a future where ordinary consumers aren't expected to own powerful computers anymore. Instead, we're expected to rent computing power from somebody else's data center. Just when I thought this couldn't get any more ridiculous, Sam Altman of OpenAI said something recently that really bothered me. During an interview on the Cheeky Pint podcast, Altman argued that it's "***quite terrible***" for people to have so much of the world's limited DRAM in personal computers, supposedly being used only 5% of the time. He believes cloud data centers can make better use of that memory.[^9] Really, Sam? Paul from Paul's Hardware had the perfect answer in [a recent video](
-
-{{ youtube(id="eW1wjcy63gc") }}
-
- "I feel the same way about Sam's bank account. He's not using all that money all the time, so it should definitely be reallocated to people who will make better use of it." I heard that and almost fell over laughing, because it's a very apt comparison. Gamers Nexus covered the same interview in its latest [HW News episode](
-
-{{ youtube(id="t61q4kCbH9M") }}
-
- and Steve Burke summed it up: "Sam is saying the quiet part out loud."
+I wonder whether we're slowly being pushed toward a future where ordinary consumers aren't expected to own powerful computers anymore. Instead, we're expected to rent computing power from somebody else's data center. Just when I thought this couldn't get any more ridiculous, Sam Altman of OpenAI said something recently that really bothered me. During an interview on the Cheeky Pint podcast, Altman argued that it's "***quite terrible***" for people to have so much of the world's limited DRAM in personal computers, supposedly being used only 5% of the time. He believes cloud data centers can make better use of that memory.[^9] Really, Sam? Paul from Paul's Hardware had the perfect answer in [a recent video](https://www.youtube.com/watch?v=eW1wjcy63gc&t=604s): "I feel the same way about Sam's bank account. He's not using all that money all the time, so it should definitely be reallocated to people who will make better use of it." I heard that and almost fell over laughing, because it's a very apt comparison. Gamers Nexus covered the same interview in its latest [HW News episode](https://www.youtube.com/watch?v=t61q4kCbH9M&t=403s), and Steve Burke summed it up: "Sam is saying the quiet part out loud."
 
 The CEO of one of the largest AI companies, whose industry is buying enormous amounts of memory and hardware, suggesting that consumers having RAM in their own computers is an inefficient use of resources. Apparently, it's perfectly fine for billions of dollars in GPUs to sit in warehouses waiting for electricity, but heaven forbid I have 32 or 64 GB of RAM in my own computer that isn't being used every second of the day. What arrogance. My computer belongs to me. I bought it with my own money, and I should be able to use it whenever and however I want. The attitude behind his comments shows an utter lack of understanding of ordinary people. It's a Marie Antoinette, "*let them eat cake*" moment.
 
@@ -124,11 +108,7 @@ I promise some shorter ones.</p>
 
 [^5]: [CNBC, October 28, 2026: DOJ questions Nvidia's $12.9 billion Hugging Face deal](https://www.cnbc.com/2026/10/28/doj-questions-nvidias-12point9-billion-hugging-face-deal.html).
 
-[^6]: [Tom's Hardware, October 30, 2026: Nvidia store quietly pulls the RTX 5080 following RTX 5090 removal](https://www.tomshardware.com/pc-components/gpus/nvidia-store-quietly-pulls-the-rtx-5080-following-rtx-5090-removal-street-prices-climb-to-2-2x-over-msrp). Also [Gamers Nexus's coverage](
-
-{{ youtube(id="t61q4kCbH9M") }}
-
-
+[^6]: [Tom's Hardware, October 30, 2026: Nvidia store quietly pulls the RTX 5080 following RTX 5090 removal](https://www.tomshardware.com/pc-components/gpus/nvidia-store-quietly-pulls-the-rtx-5080-following-rtx-5090-removal-street-prices-climb-to-2-2x-over-msrp). Also [Gamers Nexus's coverage](https://www.youtube.com/watch?v=t61q4kCbH9M&t=884s).
 
 [^7]: [VideoCardz, October 2026: Intel Arc Pro B70 prices more than double in US, now listed for up to $2,400](https://videocardz.com/newz/intel-arc-pro-b70-prices-more-than-double-in-us-now-listed-for-up-to-2400).
 
