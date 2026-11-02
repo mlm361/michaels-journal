@@ -131,9 +131,8 @@
           })();
         </script>
 
-        <!-- fonts -->
-        <link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,500,500i,600,700,800,900%7CRaleway" as="style">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,500,500i,600,700,800,900%7CRaleway">
+        <!-- fonts: self-hosted (@font-face in sass/_fonts.scss); nothing is requested from Google -->
+        <link rel="preload" href="/fonts/montserrat/montserrat-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
         {% endblock head %}
 
         {% block rss %}

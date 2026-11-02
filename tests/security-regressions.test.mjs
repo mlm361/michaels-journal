@@ -117,3 +117,20 @@ test('committed content has no insecure active HTTP resources', () => {
     );
   }
 });
+
+test('fonts are self-hosted: no template, stylesheet or static file loads Google Fonts', () => {
+  // 2026-11-02: Montserrat and Raleway moved to /fonts/; every visit used to send the
+  // visitor's IP and page to fonts.googleapis.com / fonts.gstatic.com.
+  const files = [
+    ...filesUnder('templates', '.html'), ...filesUnder('themes', '.html'),
+    ...filesUnder('themes', '.scss'),
+    ...filesUnder('static', '.css'), ...filesUnder('static', '.js'), ...filesUnder('static', '.html'),
+  ];
+  const offenders = files.filter((file) => /fonts\.(googleapis|gstatic)\.com/.test(fs.readFileSync(file, 'utf8')));
+  assert.deepEqual(offenders.map((file) => path.relative(root, file)), []);
+  const fontCss = read('themes/ergo/sass/_fonts.scss');
+  for (const family of ['Montserrat', 'Raleway']) assert.match(fontCss, new RegExp(`font-family: '${family}'`));
+  for (const match of fontCss.matchAll(/url\((\/fonts\/[^)]+)\)/g)) {
+    assert.ok(fs.existsSync(path.join(root, 'static', match[1])), `missing ${match[1]}`);
+  }
+});
