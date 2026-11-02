@@ -1,8 +1,21 @@
 {
   "canonical_url": "https://mitchelltribe.com/2026/07/19/responding-to-the-ai-image/",
-  "children": [],
-  "generated_at": "2026-11-02T05:58:52.825559+00:00",
-  "like_count": 0,
+  "children": [
+    {
+      "author": {
+        "name": "James",
+        "photo": "https://mitchelltribe.rodeo/proxy/avatar.webp?url=https%3A%2F%2Ffiles.mastodon.social%2Faccounts%2Favatars%2F110%2F635%2F833%2F467%2F728%2F192%2Foriginal%2F6542e1173d7de345.png&avatar=1",
+        "url": "https://mitchelltribe.rodeo/@nonzerosumjames@mastodon.social"
+      },
+      "platform": "sharkey",
+      "published": "2026-07-19T22:03:16.192Z",
+      "url": "https://mitchelltribe.rodeo/@nonzerosumjames@mastodon.social",
+      "wm-property": "like-of",
+      "wm-target": "https://mitchelltribe.com/2026/07/19/responding-to-the-ai-image/"
+    }
+  ],
+  "generated_at": "2026-11-02T06:28:55.445530+00:00",
+  "like_count": 1,
   "reply_count": 0,
   "source_post_id": 1236,
   "type": "feed",

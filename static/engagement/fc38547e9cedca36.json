@@ -1,9 +1,68 @@
 {
   "canonical_url": "https://mitchelltribe.com/2026/09/30/domains-cost-more-blogs-disappear/",
-  "children": [],
-  "generated_at": "2026-11-02T05:58:52.773835+00:00",
-  "like_count": 0,
-  "reply_count": 0,
+  "children": [
+    {
+      "author": {
+        "name": "Pip",
+        "photo": "https://cdn.masto.host/mitchelltribesocial/cache/accounts/avatars/117/262/777/435/430/566/original/cb71f23166d5d9f9.png",
+        "url": "https://tinymind.eu"
+      },
+      "platform": "mastodon",
+      "published": null,
+      "url": "https://tinymind.eu",
+      "wm-property": "like-of",
+      "wm-target": "https://mitchelltribe.com/2026/09/30/domains-cost-more-blogs-disappear/"
+    },
+    {
+      "author": {
+        "name": "Antonio Santos",
+        "photo": "https://cdn.masto.host/mitchelltribesocial/cache/accounts/avatars/117/360/185/360/905/929/original/4cf46d6a270a796a.png",
+        "url": "https://mastodon.social/@otolock"
+      },
+      "content": {
+        "html": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mitchelltribe.social/@michael\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>michael</span></a></span> I think you're on the right track. I had to switch domains after the last .io price increase. </p><p><a href=\"https://otolock.net/blog/re-domains-cost-more-blogs-disappear/\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">otolock.net/blog/re-domains-co</span><span class=\"invisible\">st-more-blogs-disappear/</span></a></p>"
+      },
+      "platform": "mastodon",
+      "published": "2026-09-30T13:19:18.000Z",
+      "url": "https://mastodon.social/@otolock/117360188369420963",
+      "wm-id": "https://mastodon.social/@otolock/117360188369420963",
+      "wm-property": "in-reply-to",
+      "wm-target": "https://mitchelltribe.com/2026/09/30/domains-cost-more-blogs-disappear/"
+    },
+    {
+      "author": {
+        "name": "Michael",
+        "photo": "https://cdn.masto.host/mitchelltribesocial/accounts/avatars/109/563/987/250/398/644/original/2421204ef873b947.png",
+        "url": "https://mitchelltribe.social/@michael"
+      },
+      "author-is-owner": true,
+      "content": {
+        "html": "<p>Hi Antonio. Thanks for reading and I been following you for a while in my RSS reader. I don&#39;t blame you 51 dollars is a lot.</p>"
+      },
+      "platform": "mastodon",
+      "published": "2026-10-01T00:20:30.007Z",
+      "url": "https://mitchelltribe.social/@michael/117362788270686281",
+      "wm-id": "https://mitchelltribe.social/@michael/117362788270686281",
+      "wm-parent-id": "https://mastodon.social/@otolock/117360188369420963",
+      "wm-property": "in-reply-to",
+      "wm-target": "https://mitchelltribe.com/2026/09/30/domains-cost-more-blogs-disappear/"
+    },
+    {
+      "author": {
+        "name": "Pip",
+        "photo": "https://mitchelltribe.rodeo/proxy/avatar.webp?url=https%3A%2F%2Ftinymind.eu%2Flogo.png&avatar=1",
+        "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu"
+      },
+      "platform": "sharkey",
+      "published": "2026-09-30T11:01:03.199Z",
+      "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu",
+      "wm-property": "like-of",
+      "wm-target": "https://mitchelltribe.com/2026/09/30/domains-cost-more-blogs-disappear/"
+    }
+  ],
+  "generated_at": "2026-11-02T06:28:43.272946+00:00",
+  "like_count": 2,
+  "reply_count": 2,
   "source_post_id": 1260,
   "type": "feed",
   "target_id": "michaelreflects"

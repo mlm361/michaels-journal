@@ -1,8 +1,45 @@
 {
   "canonical_url": "https://mitchelltribe.com/2026/09/25/beavers-built-dams-that-outlasted/",
-  "children": [],
-  "generated_at": "2026-11-02T05:58:57.981532+00:00",
-  "like_count": 0,
+  "children": [
+    {
+      "author": {
+        "name": "Pip",
+        "photo": "https://cdn.masto.host/mitchelltribesocial/cache/accounts/avatars/117/262/777/435/430/566/original/cb71f23166d5d9f9.png",
+        "url": "https://tinymind.eu"
+      },
+      "platform": "mastodon",
+      "published": null,
+      "url": "https://tinymind.eu",
+      "wm-property": "like-of",
+      "wm-target": "https://mitchelltribe.com/2026/09/25/beavers-built-dams-that-outlasted/"
+    },
+    {
+      "author": {
+        "name": "Pip",
+        "photo": "https://mitchelltribe.rodeo/proxy/avatar.webp?url=https%3A%2F%2Ftinymind.eu%2Flogo.png&avatar=1",
+        "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu"
+      },
+      "platform": "sharkey",
+      "published": "2026-09-25T04:55:39.843Z",
+      "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu",
+      "wm-property": "like-of",
+      "wm-target": "https://mitchelltribe.com/2026/09/25/beavers-built-dams-that-outlasted/"
+    },
+    {
+      "author": {
+        "name": "rru.eurosky.social",
+        "photo": "https://cdn.bsky.app/img/avatar/plain/did:plc:ndis3g6h65gopwo7ujpuit3p/bafkreifilgkrmjazetl3bt5hitpajamizbkuvmu7iuo4yssbbenbifsqzq",
+        "url": "https://bsky.app/profile/rru.eurosky.social"
+      },
+      "platform": "bluesky",
+      "published": "2026-09-25T07:55:06.046Z",
+      "url": "https://bsky.app/profile/rru.eurosky.social",
+      "wm-property": "like-of",
+      "wm-target": "https://mitchelltribe.com/2026/09/25/beavers-built-dams-that-outlasted/"
+    }
+  ],
+  "generated_at": "2026-11-02T06:29:24.442527+00:00",
+  "like_count": 3,
   "reply_count": 0,
   "source_post_id": 1255,
   "type": "feed",
