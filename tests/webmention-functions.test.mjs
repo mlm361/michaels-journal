@@ -112,7 +112,10 @@ test('deleted canary paths return an uncacheable 410 tombstone', async () => {
   assert.equal(response.status, 410);
   assert.equal(response.headers.get('Cache-Control'), 'no-store');
   assert.match(response.headers.get('X-Robots-Tag'), /noindex/);
-  assert.equal(await response.text(), 'Gone');
+  assert.match(response.headers.get('Content-Security-Policy'), /default-src 'none'/);
+  const html = await response.text();
+  assert.match(html, /class="h-entry"/);
+  assert.match(html, /class="e-content">Deleted/);
 });
 
 async function renderReply(record) {
