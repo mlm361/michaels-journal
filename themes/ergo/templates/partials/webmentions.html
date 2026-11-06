@@ -120,6 +120,33 @@
         : "";
     }
 
+    function sourceLink(mention) {
+      var source = safeUrl(mention.url);
+      if (!source) return "";
+      var host = new URL(source).hostname.replace(/^www\./, "").replace(/\.$/, "");
+      var property = mention["wm-property"] || "mention-of";
+      var lead = property === "rsvp"
+        ? "View the RSVP at "
+        : (property === "mention-of" || property === "webmention")
+          ? "Read the mentioning post at "
+          : "Read the full response at ";
+      return "<p class='wm-card-source'><a href='" + escapeHtml(source)
+        + "' target='_blank' rel='noopener'>" + escapeHtml(lead + host)
+        + " <span aria-hidden='true'>→</span></a></p>";
+    }
+
+    function responseTypeBadge(mention) {
+      if ((mention["wm-property"] || "") !== "rsvp") return "";
+      var values = {
+        yes: "Going",
+        no: "Not going",
+        maybe: "Maybe",
+        interested: "Interested"
+      };
+      var label = values[mention["rsvp-status"]] || "RSVP";
+      return "<span class='wm-response-type'>" + escapeHtml(label) + "</span>";
+    }
+
     function renderFacepile(icon, items, verb) {
       if (!items.length) return "";
       var faces = items.map(faceWithPlatform).join("");
@@ -138,16 +165,18 @@
       var authorLine = "<span class='wm-card-authorline'>" + nameEl + authorBadge(mention) + "</span>";
       var date = formatDate(mention.published);
       var dateEl = date ? "<span class='wm-card-date'>" + escapeHtml(date) + "</span>" : "";
-      var submeta = "<span class='wm-card-submeta'>" + platformBadge(mention) + dateEl + "</span>";
+      var submeta = "<span class='wm-card-submeta'>" + platformBadge(mention)
+        + responseTypeBadge(mention) + dateEl + "</span>";
       var c = mention.content || {};
-      // Whole reply, line breaks kept by .wm-card-content's white-space: pre-line.
-      // The Hub already caps and sanitizes the text it serves.
+      // Render exactly what the public Hub feed supplies: a contextual excerpt
+      // for inbound Webmentions, or the full text for Michael's own replies.
+      // Line breaks are kept by .wm-card-content's white-space: pre-line.
       var text = (c.text ? c.text : (c.html ? stripHtml(c.html) : "")).trim();
       var contentEl = text ? "<p class='wm-card-content'>" + escapeHtml(text) + "</p>" : "";
       return "<article class='wm-card'>"
         + "<div class='wm-card-head'>" + avatar(mention, "wm-card-avatar")
         + "<div class='wm-card-meta'>" + authorLine + submeta + "</div></div>"
-        + contentEl + "</article>";
+        + contentEl + sourceLink(mention) + "</article>";
     }
 
     function renderReplyTree(items) {
@@ -200,6 +229,7 @@
     function hubEntryToChild(entry) {
       return {
         "wm-property": entry.wm_property || "mention-of",
+        "rsvp-status": entry.rsvp_status || null,
         "wm-id": entry.id || null,
         "wm-parent-id": entry.parent_event_id || null,
         "url": entry.source_url || "",

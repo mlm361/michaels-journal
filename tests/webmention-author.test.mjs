@@ -42,6 +42,56 @@ test('a long reply card is shown whole, line breaks kept (2026-10-04)', () => {
   assert.match(style, /\.wm-card-content \{[^}]*white-space: pre-line;/);
 });
 
+test('a public response links to the exact source post, separate from the author profile', () => {
+  const full = vm.createContext({window: {}, URL});
+  vm.runInContext(fs.readFileSync('static/js/url-safety.js', 'utf8'), full);
+  vm.runInContext(template.slice(template.indexOf('    function escapeHtml'),
+                                 template.indexOf('    function renderReplyTree')), full);
+  const card = full.renderReplyCard({
+    'wm-property': 'in-reply-to',
+    url: 'https://writer.example/posts/the-response',
+    author: {name: 'Writer', url: 'https://writer.example/about'},
+    content: {text: 'One contextual paragraph.'},
+  });
+  assert.match(card, /href='https:\/\/writer\.example\/about'[^>]*>Writer<\/a>/);
+  assert.match(card, /href='https:\/\/writer\.example\/posts\/the-response'/);
+  assert.match(card, /Read the full response at writer\.example/);
+});
+
+test('generic mentions get a source-post label and unsafe source URLs get no link', () => {
+  const full = vm.createContext({window: {}, URL});
+  vm.runInContext(fs.readFileSync('static/js/url-safety.js', 'utf8'), full);
+  vm.runInContext(template.slice(template.indexOf('    function escapeHtml'),
+                                 template.indexOf('    function renderReplyTree')), full);
+  assert.match(
+    full.renderReplyCard({
+      'wm-property': 'mention-of',
+      url: 'https://blog.example/post',
+      content: {text: 'The paragraph containing the backlink.'},
+    }),
+    /Read the mentioning post at blog\.example/
+  );
+  assert.doesNotMatch(
+    full.renderReplyCard({url: 'javascript:alert(1)', content: {text: 'No link.'}}),
+    /wm-card-source/
+  );
+});
+
+test('RSVP cards expose the normalized response and exact source', () => {
+  const full = vm.createContext({window: {}, URL});
+  vm.runInContext(fs.readFileSync('static/js/url-safety.js', 'utf8'), full);
+  vm.runInContext(template.slice(template.indexOf('    function escapeHtml'),
+                                 template.indexOf('    function renderReplyTree')), full);
+  const card = full.renderReplyCard({
+    'wm-property': 'rsvp',
+    'rsvp-status': 'yes',
+    url: 'https://events.example/alice-rsvp',
+    content: {text: 'Looking forward to it.'},
+  });
+  assert.match(card, /wm-response-type'>Going<\/span>/);
+  assert.match(card, /View the RSVP at events\.example/);
+});
+
 test('a trusted owner reply gets an accessible author badge', () => {
   const full = vm.createContext({window: {}, URL});
   vm.runInContext(fs.readFileSync('static/js/url-safety.js', 'utf8'), full);
@@ -77,6 +127,12 @@ test('Hub authored_by_me is normalized to the trusted owner flag', () => {
   assert.equal(context.hubEntryToChild({authored_by_me: true})['author-is-owner'], true);
   assert.equal(context.hubEntryToChild({authored_by_me: false})['author-is-owner'], false);
   assert.equal(context.hubEntryToChild({authored_by_me: 1})['author-is-owner'], false);
+});
+
+test('Hub RSVP status is normalized for rendering', () => {
+  const child = context.hubEntryToChild({wm_property: 'rsvp', rsvp_status: 'maybe'});
+  assert.equal(child['wm-property'], 'rsvp');
+  assert.equal(child['rsvp-status'], 'maybe');
 });
 
 test('the author badge has light and dark theme styles', () => {
