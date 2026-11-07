@@ -11,6 +11,12 @@ tags = [ "hardware", "opinion", "technology",]
 [extra]
 stats_word_count = 622
 stats_reading_time = 4
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/117572541957556117"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mzoqe3d22b2o"
+sharkey = "https://mitchelltribe.rodeo/notes/at9aans5xkpb0007"
+nostr = "https://jumble.social/nevent1qqs0uprl48ka5fnnp5utrzu63trd9g2ercraz5ytszpnruh5l0yj43spr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcuk6ep4"
 +++
 
 <data class="p-summary" value="Storage devices such as hard disk drives (HDDs), solid-state drives (SSDs), and NVMe drives are reaching increasingly ridiculous prices and becoming more difficult to obtain. With hosting services raising prices throughout 2026 and..."></data>
