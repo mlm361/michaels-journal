@@ -1,4 +1,4 @@
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -40,6 +40,58 @@ function functionSource(repoRoot, destination) {
     'export function onRequest() {\n  return deletedPostResponse();\n}\n';
 }
 
+function escaped(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function functionRoute(relative) {
+  const segments = relative.replace(/\.(?:js|ts)$/, '').split('/');
+  if (segments.at(-1) === 'index') segments.pop();
+  if (segments.at(-1) === '_middleware') segments.splice(-1, 1, '[[path]]');
+  let pattern = '^';
+  for (const segment of segments) {
+    if (/^\[\[.+\]\]$/.test(segment)) pattern += '(?:/.*)?';
+    else if (/^\[.+\]$/.test(segment)) pattern += '/[^/]+';
+    else pattern += '/' + escaped(segment);
+  }
+  return new RegExp(pattern + '/?$', 'i');
+}
+
+async function functionFiles(directory, prefix = '') {
+  let entries;
+  try { entries = await readdir(directory, { withFileTypes: true }); }
+  catch (error) { if (error.code === 'ENOENT') return []; throw error; }
+  const files = [];
+  for (const entry of entries) {
+    if (entry.name.startsWith('_') && !/^_middleware\.(js|ts)$/.test(entry.name)) continue;
+    const relative = prefix + entry.name;
+    if (entry.isDirectory()) files.push(...await functionFiles(path.join(directory, entry.name), relative + '/'));
+    else if (entry.isFile() && /\.(js|ts)$/.test(entry.name)) files.push(relative);
+  }
+  return files;
+}
+
+async function assertRouteAvailable(repoRoot, canonical, routes, destination, desiredSource) {
+  // This separately routed receiver intercepted /webmention-* before Pages.
+  if (canonical.toLowerCase().startsWith('/webmention')) {
+    throw new Error('path overlaps the external Webmention receiver route');
+  }
+  for (const rule of routes.exclude || []) {
+    const matches = new RegExp('^' + rule.split('*').map(escaped).join('.*') + '$');
+    if (tombstoneRouteRules(canonical).some(route => matches.test(route))) {
+      throw new Error(`path is excluded from Pages Functions: ${rule}`);
+    }
+  }
+  const functions = path.join(repoRoot, 'functions');
+  for (const relative of await functionFiles(functions)) {
+    const filename = path.join(functions, ...relative.split('/'));
+    if (filename === destination && await readFile(filename, 'utf8') === desiredSource) continue;
+    if (functionRoute(relative).test(canonical)) {
+      throw new Error(`refusing to replace existing Function route: ${relative}`);
+    }
+  }
+}
+
 export async function installTombstone(repoRoot, value) {
   const canonical = normalizeTombstonePath(value);
   const routesPath = path.join(repoRoot, 'static', '_routes.json');
@@ -56,6 +108,7 @@ export async function installTombstone(repoRoot, value) {
 
   const destination = functionFileForPath(repoRoot, canonical);
   const desiredSource = functionSource(repoRoot, destination);
+  await assertRouteAvailable(repoRoot, canonical, routes, destination, desiredSource);
   await mkdir(path.dirname(destination), { recursive: true });
   await writeFile(destination, desiredSource, { encoding: 'utf8', flag: 'wx' })
     .catch(async (error) => {
