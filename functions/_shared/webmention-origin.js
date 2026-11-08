@@ -32,7 +32,7 @@ export function originConfig(env) {
   return { origin, key };
 }
 
-export async function fetchOriginJson(context, path, cacheTtl = 30) {
+export async function fetchOriginJson(context, path, cacheTtl = 30, allowGone = false) {
   const configured = originConfig(context.env || {});
   if (!configured) throw new Error('origin unavailable');
   const controller = new AbortController();
@@ -43,14 +43,15 @@ export async function fetchOriginJson(context, path, cacheTtl = 30) {
     const response = await fetch(configured.origin + path, {
       headers,
       signal: controller.signal,
-      cf: { cacheTtl, cacheEverything: true },
+      cf: { cacheTtl, cacheEverything: cacheTtl > 0 },
     });
-    if (!response.ok) {
+    if (!response.ok && !(allowGone && response.status === 410)) {
       const error = new Error('origin rejected request');
       error.status = response.status;
       throw error;
     }
-    return await response.json();
+    const payload = await response.json();
+    return allowGone ? { ...payload, origin_status: response.status } : payload;
   } finally {
     clearTimeout(timer);
   }

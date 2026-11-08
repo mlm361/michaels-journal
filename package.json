@@ -4,7 +4,7 @@
   "scripts": {
     "test": "npm run test:webmention && npm run test:security",
     "tombstone:add": "node scripts/add-webmention-tombstone.mjs",
-    "test:webmention": "node --test tests/webmention-functions.test.mjs tests/webmention-threading.test.mjs tests/webmention-author.test.mjs tests/webmention-tombstone-tool.test.mjs",
+    "test:webmention": "node --test tests/webmention-functions.test.mjs tests/webmention-threading.test.mjs tests/webmention-author.test.mjs tests/webmention-tombstone-tool.test.mjs tests/webmention-lifecycle.test.mjs",
     "test:security": "node --test tests/security-regressions.test.mjs"
   }
 }
