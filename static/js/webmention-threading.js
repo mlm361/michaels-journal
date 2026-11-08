@@ -6,6 +6,8 @@
   }
 
   function mergeDuplicate(target, source) {
+    var sourceIsOwnReply = source["author-is-owner"] === true
+      && String(source["wm-id"] || "").indexOf("reply:") === 0;
     fillMissing(target, source, "wm-id");
     fillMissing(target, source, "wm-parent-id");
     fillMissing(target, source, "platform");
@@ -22,6 +24,13 @@
     var sourceContent = source.content || {};
     fillMissing(target.content, sourceContent, "text");
     fillMissing(target.content, sourceContent, "html");
+    if (sourceIsOwnReply) {
+      target["wm-id"] = source["wm-id"];
+      target["author-is-owner"] = true;
+      target.content.text = sourceContent.text || "";
+      // Hub's current full reply wins over an old cached/excerpted copy.
+      target.content.html = "";
+    }
   }
 
   function platformInfo(item) {

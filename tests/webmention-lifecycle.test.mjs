@@ -1,6 +1,7 @@
+import { withReplyShell } from './helpers/reply-shell.mjs';
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { onRequestGet as reply } from '../functions/reply/[id].js';
+import { onRequestGet as rawReply } from '../functions/reply/[id].js';
 
 const originalFetch = globalThis.fetch;
 const id = 'R'.repeat(32);
@@ -48,3 +49,5 @@ test('unknown reply remains 404', async () => {
   globalThis.fetch = async () => Response.json({ error: 'not_found' }, { status: 404 });
   assert.equal((await reply(context())).status, 404);
 });
+
+function reply(context) { return rawReply(withReplyShell(context)); }

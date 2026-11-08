@@ -1,3 +1,4 @@
+import { renderReplyPage } from '../_shared/reply-page.js';
 import {
   fetchOriginJson,
   securityHeaders,
@@ -59,22 +60,20 @@ function replyHtml(reply, canonicalUrl) {
   const context = validMichaelReflectsUrl(reply.root_target_url)
     ? `In reply to <a class="u-in-reply-to" href="${target}">this conversation</a> · <a href="${root}">View the original journal entry</a>`
     : `In reply to <a class="u-in-reply-to" href="${target}">this post on ${escapeHtml(hostOf(reply.in_reply_to_url))}</a>`;
-  return `<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow,noarchive"><link rel="canonical" href="${canonical}">
-<title>Reply from Michael · Michael's Journal</title>
-<style>:root{color-scheme:light dark;--paper:#f7f2e7;--ink:#20251f;--muted:#667166;--accent:#245e3e;--line:#d8d1c2}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:18px/1.65 Georgia,serif}.page{width:min(760px,calc(100% - 2rem));margin:8vh auto}.brand{font:800 .76rem/1.2 system-ui,sans-serif;letter-spacing:.13em;text-transform:uppercase;color:var(--accent)}article{margin-top:1rem;padding:clamp(1.25rem,4vw,2.5rem);border:1px solid var(--line);border-radius:14px;background:color-mix(in srgb,var(--paper) 92%,white)}h1{font-size:clamp(1.5rem,4vw,2.2rem);line-height:1.2;margin:.2rem 0 1.5rem}.meta{font:500 .84rem/1.5 system-ui,sans-serif;color:var(--muted)}.reply{overflow-wrap:anywhere}.reply p{margin:0 0 1em}.avatar{width:1.5em;height:1.5em;border-radius:50%;vertical-align:-.3em;margin-right:.35em}a{color:var(--accent)}@media(prefers-color-scheme:dark){:root{--paper:#171b18;--ink:#e9e6dc;--muted:#adb7ae;--accent:#f7cf60;--line:#394139}}</style></head>
-<body><main class="page"><div class="brand">Michael's Journal</div><article class="h-entry" data-reply-revision="${Number(reply.revision) || 1}">
-<h1>Reply from <span class="p-author h-card"><a class="u-url" href="https://michaelreflects.com/"><img class="u-photo avatar" src="${AVATAR_URL}" alt="" width="48" height="48"><span class="p-name">Michael</span></a></span></h1>
+  return `<section class="post_container"><article class="h-entry" data-reply-revision="${Number(reply.revision) || 1}">
+<h1 class="article_title">Reply from <span class="p-author h-card"><a class="u-url" href="https://michaelreflects.com/"><img class="u-photo avatar" src="${AVATAR_URL}" alt="" width="48" height="48"><span class="p-name">Michael</span></a></span></h1>
+<p class="reply-meta">${context}</p>
 <div class="e-content reply">${body}</div>
-<p class="meta">${context}</p>
-<time class="dt-published meta" datetime="${published}">${published}</time><a class="u-url" hidden href="${canonical}"></a>
-</article></main></body></html>`;
+<time class="dt-published reply-meta" datetime="${published}">${published}</time><a class="u-url" hidden href="${canonical}"></a>
+</article></section>`;
 }
 
 export async function onRequestGet(context) {
   const id = String(context.params.id || '');
   if (!validId(id)) return notFound();
+  const canonical = new URL(context.request.url);
+  canonical.search = '';
+  canonical.hash = '';
   try {
     const reply = await fetchOriginJson(
       context,
@@ -84,10 +83,10 @@ export async function onRequestGet(context) {
     );
     if (reply.state === 'withdrawn' && reply.origin_status === 410
         && reply.opaque_id === id && Number.isSafeInteger(reply.revision) && reply.revision > 0) {
-      return new Response(`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow,noarchive"><title>Reply withdrawn</title></head><body><article class="h-entry" data-reply-revision="${reply.revision}"><h1>Reply withdrawn</h1><p class="e-content">Michael withdrew this reply.</p></article></body></html>`, {
-        status: 410,
-        headers: securityHeaders('text/html; charset=utf-8', 'no-store'),
-      });
+      return await renderReplyPage(context,
+        `<section class="post_container"><article class="h-entry" data-reply-revision="${reply.revision}"><h1 class="article_title">Reply withdrawn</h1><p class="e-content">Michael withdrew this reply.</p></article></section>`,
+        escapeHtml(canonical.toString()), 410);
+
     }
     if (reply.origin_status !== 200) {
       return new Response('Reply temporarily unavailable', {
@@ -99,13 +98,7 @@ export async function onRequestGet(context) {
     // journal entry or, for a reply started from Marginalia, the external post.
     if (!validReplyTargetUrl(reply.root_target_url)
         || !validReplyTargetUrl(reply.in_reply_to_url)) return notFound();
-    const canonical = new URL(context.request.url);
-    canonical.search = '';
-    canonical.hash = '';
-    return new Response(replyHtml(reply, canonical.toString()), {
-      status: 200,
-      headers: securityHeaders('text/html; charset=utf-8', 'no-store'),
-    });
+    return await renderReplyPage(context, replyHtml(reply, canonical.toString()), escapeHtml(canonical.toString()));
   } catch (error) {
     if (error.status === 404) return notFound();
     return new Response('Reply temporarily unavailable', {

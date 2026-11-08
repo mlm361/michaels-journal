@@ -1,0 +1,7 @@
+/* Typography, colors, navigation and footer come from the Journal theme. */
+.reply-page #main-content { padding-top: 4rem; }
+.reply-page .post_container { max-width: 900px; margin: 2rem auto; padding: 0 1.5rem; }
+.reply-page .reply { overflow-wrap: anywhere; }
+.reply-page .reply-meta { font-size: .88rem; opacity: .75; line-height: 1.7; }
+.reply-page .h-entry .avatar { width: 1.4em; height: 1.4em; border-radius: 50%; vertical-align: -.25em; margin-right: .3em; }
+.reply-page .article_title { line-height: 1.25; }

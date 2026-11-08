@@ -125,7 +125,7 @@
       if (!source) return "";
       var host = new URL(source).hostname.replace(/^www\./, "").replace(/\.$/, "");
       var property = mention["wm-property"] || "mention-of";
-      var lead = property === "rsvp"
+      var lead = mention["author-is-owner"] === true ? "View reply page at " : property === "rsvp"
         ? "View the RSVP at "
         : (property === "mention-of" || property === "webmention")
           ? "Read the mentioning post at "

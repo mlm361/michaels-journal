@@ -1,8 +1,9 @@
+import { withReplyShell } from './helpers/reply-shell.mjs';
 import assert from 'node:assert/strict';
 import test from 'node:test';
 
 import { onRequestGet as webmentions } from '../functions/api/webmentions.js';
-import { onRequestGet as reply, escapeHtml, validId } from '../functions/reply/[id].js';
+import { onRequestGet as rawReply, escapeHtml, validId } from '../functions/reply/[id].js';
 import { onRequest as deletedCanary } from '../functions/deleted-source-canary-sally-20260813-7f3c9a/[[path]].js';
 
 const originalFetch = globalThis.fetch;
@@ -197,3 +198,5 @@ test('reply page author h-card carries the same-origin avatar (2026-10-04)', asy
   assert.doesNotMatch(html, /h-card u-url/);
   assert.match(response.headers.get('Content-Security-Policy'), /img-src 'self'/);
 });
+
+function reply(context) { return rawReply(withReplyShell(context)); }
