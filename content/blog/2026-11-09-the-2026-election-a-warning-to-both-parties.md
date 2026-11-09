@@ -11,6 +11,12 @@ tags = [ "current-events", "opinion", "politics",]
 [extra]
 stats_word_count = 805
 stats_reading_time = 5
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/117584002664657472"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3mztt7trn4v2y"
+sharkey = "https://mitchelltribe.rodeo/notes/atc6evgp7hcc00az"
+nostr = "https://jumble.social/nevent1qqsr87hq9fh8x07qmgwgz48dzn0k45thc0w6rx2fmmyze0a8v77fj9spr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflc49nu3h"
 +++
 
 <data class="p-summary" value="I have been waiting a bit to write my take on the election. I know a lot of people have already, and I wanted to let people make their views known while I refine mine. I am not going to make this a long post. But here is my take, with a..."></data>
