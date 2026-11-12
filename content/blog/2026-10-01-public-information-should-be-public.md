@@ -11,7 +11,7 @@ tags = [ "government", "public-policy", "technology",]
 [extra]
 stats_word_count = 611
 stats_reading_time = 4
-image = "https://media.mitchelltribe.xyz/images/2026/10/9ee17436_214f427ab4b7.avif"
+image = "https://media.mitchelltribe.xyz/images/2026/10/ccf8b984_214f427ab4b7.avif"
 
 [extra.posse]
 mastodon = "https://mitchelltribe.social/@michael/117368258963207770"
@@ -25,7 +25,7 @@ nostr = "https://jumble.social/nevent1qqsxpwmyt5f8tky3tdyj9dnsv3pyxf2x6dkdu5xfvd
 
 
 <figure style="max-width: 100% !important; margin: 1.5em auto !important; padding: 0 !important;">
-<img src="https://media.mitchelltribe.xyz/images/2026/10/9ee17436_214f427ab4b7.avif" alt="Illustration showing a flow of public information from government to the public through open feeds. On the left is a stylized government building with a dome and flag, labeled &quot;GOVERNMENT PUBLIC INFORMATION.&quot; An arrow points right to a webpage titled &quot;Public Updates&quot; with text lines and an image placeholder, captioned &quot;PUBLISH ON PUBLIC INFRASTRUCTURE FIRST.&quot; Another arrow points right to an orange RSS feed icon labeled &quot;OPEN FEEDS&quot; with the subtext &quot;OPEN STANDARDS WIDER ACCESS A MORE INFORMED PUBLIC.&quot; From the RSS icon, four arrows branch out to four circular icons on the right: a webpage icon labeled &quot;WEBSITES NEWS, BLOGS, COMMUNITY SITES,&quot; a group of people icon labeled &quot;SOCIAL PLATFORMS REACH MORE PEOPLE,&quot; a smartphone icon labeled &quot;APPS &amp; TOOLS BUILD NEW SERVICES,&quot; and an envelope icon labeled &quot;NEWSLETTERS DIRECT TO PEOPLE.&quot; The background includes light clouds and a cityscape silhouette with trees. At the bottom center is the phrase &quot;OPEN INFORMATION STRONGER COMMUNITIES.&quot;" style="display: block !important; max-width: 100% !important; height: auto !important; margin: 0 auto !important;" width="1672" height="941">
+<img src="https://media.mitchelltribe.xyz/images/2026/10/ccf8b984_214f427ab4b7.avif" alt="Illustration showing a flow of public information from government to the public through open feeds. On the left is a stylized government building with a dome and flag, labeled &quot;GOVERNMENT PUBLIC INFORMATION.&quot; An arrow points right to a webpage titled &quot;Public Updates&quot; with text lines and an image placeholder, captioned &quot;PUBLISH ON PUBLIC INFRASTRUCTURE FIRST.&quot; Another arrow points right to an orange RSS feed icon labeled &quot;OPEN FEEDS&quot; with the subtext &quot;OPEN STANDARDS WIDER ACCESS A MORE INFORMED PUBLIC.&quot; From the RSS icon, four arrows branch out to four circular icons on the right: a webpage icon labeled &quot;WEBSITES NEWS, BLOGS, COMMUNITY SITES,&quot; a group of people icon labeled &quot;SOCIAL PLATFORMS REACH MORE PEOPLE,&quot; a smartphone icon labeled &quot;APPS &amp; TOOLS BUILD NEW SERVICES,&quot; and an envelope icon labeled &quot;NEWSLETTERS DIRECT TO PEOPLE.&quot; The background includes light clouds and a cityscape silhouette with trees. At the bottom center is the phrase &quot;OPEN INFORMATION STRONGER COMMUNITIES.&quot;" style="display: block !important; max-width: 100% !important; height: auto !important; margin: 0 auto !important;" width="1672" height="941">
 </figure>
 
 
