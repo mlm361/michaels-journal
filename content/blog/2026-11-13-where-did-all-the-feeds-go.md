@@ -12,6 +12,12 @@ tags = [ "opinion", "rss", "technology",]
 stats_word_count = 656
 stats_reading_time = 4
 image = "https://media.mitchelltribe.xyz/images/2026/11/25a1e81b_68c371df06db.avif"
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/117609414461079989"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3n274du3oji2p"
+sharkey = "https://mitchelltribe.rodeo/notes/atil9t5p7c81001v"
+nostr = "https://jumble.social/nevent1qqspa9636h90ycnnqlyrmnnltv9ft7klnh9e6xq2x52fhta9aakl0uspr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcsc6x46"
 +++
 
 <data class="p-summary" value="I&#x27;ve noticed a troubling trend lately. RSS feeds seem to be disappearing from a lot of business, news, and even personal websites, and the trend seems to be accelerating. Now Reddit is pulling its RSS feeds. This isn&#x27;t a new trend..."></data>
