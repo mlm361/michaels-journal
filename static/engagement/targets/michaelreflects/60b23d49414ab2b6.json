@@ -27,8 +27,8 @@
     },
     {
       "author": {
-        "name": "JazMat",
-        "photo": "https://image.nostr.build/19299542c9c49ebe6f6aa6e35ec9777012126704ace07009a3b90299ecc11dda.jpg",
+        "name": "npub1wew6wg43sy8",
+        "photo": null,
         "url": "https://njump.me/p/npub1wew6wg43sy89plg0zywpd52jygg4hm5twmaz79zg0396s97xqrnqcgcvls"
       },
       "content": {
@@ -42,7 +42,7 @@
       "wm-target": "https://mitchelltribe.com/2026/10/24/years-old-everything-decides-to/"
     }
   ],
-  "generated_at": "2026-11-13T20:57:25.334750+00:00",
+  "generated_at": "2026-11-14T11:06:44.341781+00:00",
   "like_count": 2,
   "reply_count": 1,
   "source_post_id": 1268,
