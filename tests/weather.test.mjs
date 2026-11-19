@@ -164,6 +164,27 @@ test('a snapshot older than two hours renders the offline card', () => {
   assert.match(html, /wx-sky-offline/);
 });
 
+test('moon phase matches known eclipses and points at a real self-hosted AVIF', () => {
+  const W = loadWidget();
+  const solarEclipse = W.moonInfo(Date.UTC(2024, 3, 8, 18, 17));   // total solar eclipse = new moon
+  assert.ok(solarEclipse.illum < 0.01, String(solarEclipse.illum));
+  assert.equal(solarEclipse.name, 'New moon');
+  assert.equal(solarEclipse.frame, 0);
+  const lunarEclipse = W.moonInfo(Date.UTC(2025, 2, 14, 6, 58));   // total lunar eclipse = full moon
+  assert.ok(lunarEclipse.illum > 0.99, String(lunarEclipse.illum));
+  assert.equal(lunarEclipse.name, 'Full moon');
+  assert.equal(lunarEclipse.frame, 15);
+  const nextFull = W.moonInfo(Date.UTC(2025, 2, 1)).nextFull;
+  assert.ok(Math.abs(nextFull - Date.UTC(2025, 2, 14, 6, 55)) < 3 * 3600000, new Date(nextFull).toISOString());
+  const waxing = W.moonInfo(Date.UTC(2025, 2, 10, 12));
+  assert.equal(waxing.name, 'Waxing gibbous');
+  for (let k = 0; k < 30; k++) {
+    const file = path.join(root, 'static/img/moon', 'moon-' + String(k).padStart(2, '0') + '.avif');
+    assert.ok(fs.statSync(file).size < 12 * 1024, file);
+  }
+  assert.match(W.pageHtml(W.normalize(sample())), /<img class="wx-moon-img" src="\/img\/moon\/moon-\d\d\.avif" width="96" height="96" alt="The moon now: [A-Za-z ]+, \d+% lit">/);
+});
+
 /* ---------------- wiring ---------------- */
 
 test('templates, routes and page are wired up', () => {

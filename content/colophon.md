@@ -73,7 +73,7 @@ The site is made from a few small pieces working together.
 
 <section class="colophon-card">
   <h3>Weather at Home</h3>
-  <p>The weather card beside the posts, and the full <a href="/weather/">Weather</a> page, show live readings from my own Tempest weather station at home in Brandon, Florida. A small program at home sends a fresh snapshot to the site every five minutes. The forecast, UV index, and air quality come from <a href="https://www.weatherapi.com/">WeatherAPI.com</a>.</p>
+  <p>The weather card beside the posts, and the full <a href="/weather/">Weather</a> page, show live readings from my own Tempest weather station at home in Brandon, Florida. A small program at home sends a fresh snapshot to the site every five minutes. The forecast, UV index, and air quality come from <a href="https://www.weatherapi.com/">WeatherAPI.com</a>. The moon phase is worked out right in your browser, and the moon pictures are drawn from a public-domain NASA photo.</p>
   <p>The card never shows my address, map position, or any station identifiers. If the station goes quiet, it says so instead of showing old numbers.</p>
 </section>
 
@@ -173,6 +173,7 @@ This site exists because of the work of other people whose tools made it possibl
 * The [Cover Art Archive](https://coverartarchive.org/), a joint Internet Archive and MusicBrainz project, which supplies available artwork for the Listening card.
 * Simple Icons, whose logo set appears on the share buttons under each post.
 * Tempest by WeatherFlow, the home weather station behind the Weather page, and [WeatherAPI.com](https://www.weatherapi.com/), which supplies its forecast, UV index, and air quality.
+* NASA's Lunar Reconnaissance Orbiter team (NASA/GSFC/Arizona State University), whose public-domain photo of the moon's near side is the basis of the moon pictures on the Weather page.
 * Dave Winer, whose work on RSS gave the web its feeds and made a site like this one worth following, and Sam Ruby, Mark Nottingham, and Robert Sayre, whose work with the IETF community produced the Atom format this site publishes.
 * JSON Feed by Brent Simmons and Manton Reece, the other feed this site publishes.
 * Cloudflare Pages for hosting and deployment.

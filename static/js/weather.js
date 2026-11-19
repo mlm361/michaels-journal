@@ -65,8 +65,7 @@
       },
       today: {
         hi: toNum(today.hi_f, -60, 140), lo: toNum(today.lo_f, -60, 140),
-        sunrise: toNum(today.sunrise, 1e9, 1e10), sunset: toNum(today.sunset, 1e9, 1e10),
-        moon: shortText(today.moon, 30)
+        sunrise: toNum(today.sunrise, 1e9, 1e10), sunset: toNum(today.sunset, 1e9, 1e10)
       },
       rain: { yesterday: toNum(rain.yesterday_in, 0, 60), month: toNum(rain.month_in, 0, 200) },
       aqi: toNum(raw.aqi && raw.aqi.category, 1, 6),
@@ -114,6 +113,54 @@
     return Math.round(s / 86400) + ' days ago';
   }
   function uvWord(uv) { return uv === null ? '' : uv >= 11 ? 'extreme' : uv >= 8 ? 'very high' : uv >= 6 ? 'high' : uv >= 3 ? 'moderate' : 'low'; }
+
+  /* ---------------- moon (calculated here; the phase is the same everywhere on Earth) ---------------- */
+  // Low-precision lunar phase angle (Meeus, Astronomical Algorithms ch. 48), good to well under an hour.
+  var MOON_NAMES = ['New moon', 'Waxing crescent', 'First quarter', 'Waxing gibbous', 'Full moon', 'Waning gibbous', 'Last quarter', 'Waning crescent'];
+  function moonAngles(ms) {
+    var rad = Math.PI / 180;
+    var T = (ms / 86400000 + 2440587.5 - 2451545) / 36525;
+    var D = 297.8501921 + 445267.1114034 * T - 0.0018819 * T * T;
+    var M = 357.5291092 + 35999.0502909 * T - 0.0001536 * T * T;
+    var Mp = 134.9633964 + 477198.8675055 * T + 0.0087414 * T * T;
+    var i = 180 - D - 6.289 * Math.sin(Mp * rad) + 2.1 * Math.sin(M * rad) - 1.274 * Math.sin((2 * D - Mp) * rad) -
+      0.658 * Math.sin(2 * D * rad) - 0.214 * Math.sin(2 * Mp * rad) - 0.11 * Math.sin(D * rad);
+    return { elong: (((180 - i) % 360) + 360) % 360, illum: (1 + Math.cos(i * rad)) / 2 };
+  }
+  function nextMoonEvent(ms, target) {
+    var prev = moonAngles(ms).elong;
+    for (var h = 1; h <= 24 * 32; h++) {
+      var t = ms + h * 3600000;
+      var e = moonAngles(t).elong;
+      if (target === 180 ? (prev < 180 && e >= 180) : (prev > 270 && e < 90)) return t;
+      prev = e;
+    }
+    return null;
+  }
+  function moonInfo(ms) {
+    var a = moonAngles(ms);
+    var e = a.elong;
+    var q = Math.round(e / 90) % 4;                       // nearest principal phase
+    var off = Math.abs(((e - q * 90 + 540) % 360) - 180);  // degrees away from it
+    var name = off <= 12 ? MOON_NAMES[q * 2] : MOON_NAMES[(Math.floor(e / 90) % 4) * 2 + 1];
+    return { elong: e, illum: a.illum, name: name, frame: Math.round(e / 12) % 30,
+      nextFull: nextMoonEvent(ms, 180), nextNew: nextMoonEvent(ms, 0) };
+  }
+  function shortDate(ms) {
+    try {
+      return new Intl.DateTimeFormat('en-US', { weekday: 'short', month: 'short', day: 'numeric', timeZone: TZ }).format(new Date(ms));
+    } catch (_e) { return ''; }
+  }
+  function moonTile() {
+    var m = moonInfo(Date.now());
+    var pct = Math.round(m.illum * 100);
+    var file = '/img/moon/moon-' + (m.frame < 10 ? '0' : '') + m.frame + '.avif';
+    return '<div class="wx-tile wx-wide wx-moon"><h4>The moon</h4><div class="wx-moon-row">' +
+      '<img class="wx-moon-img" src="' + file + '" width="96" height="96" alt="' + esc('The moon now: ' + m.name + ', ' + pct + '% lit') + '">' +
+      '<div class="wx-moon-text"><div class="wx-big wx-big-word">' + esc(m.name) + '</div><div class="wx-muted wx-small">' + pct + '% lit</div></div>' +
+      '<div class="wx-moon-next">' + kv('Next full moon', m.nextFull ? shortDate(m.nextFull) : '–') + kv('Next new moon', m.nextNew ? shortDate(m.nextNew) : '–') + '</div>' +
+      '</div></div>';
+  }
 
   /* ---------------- icons (SVG, presentation attributes only) ---------------- */
   function cloud(x, y, s, fill, cls) {
@@ -346,8 +393,7 @@
       '<div class="wx-tile"><h4>UV index</h4><div class="wx-big">' + fmt(n.uv) + ' <span class="wx-muted wx-word">' + esc(uvWord(n.uv)) + '</span></div>' +
         '<div class="wx-bar wx-uv"><i data-wx-w="' + Math.min(100, (n.uv || 0) / 11 * 100).toFixed(0) + '"></i></div>' +
         kv('Sunlight', n.solar === null ? '–' : Math.round(n.solar) + ' W/m²') +
-        kv('Sunrise', d.today.sunrise ? clock(d.today.sunrise) : '–') + kv('Sunset', d.today.sunset ? clock(d.today.sunset) : '–') +
-        (d.today.moon ? kv('Moon', d.today.moon) : '') + '</div>' +
+        kv('Sunrise', d.today.sunrise ? clock(d.today.sunrise) : '–') + kv('Sunset', d.today.sunset ? clock(d.today.sunset) : '–') + '</div>' +
       '<div class="wx-tile"><h4>Air quality</h4><div class="wx-big wx-big-word">' + esc(q ? q.name : 'Unavailable') + '</div>' +
         (q ? '<div class="wx-muted wx-small">US EPA category ' + d.aqi + ' of 6</div>' : '') +
         '<div class="wx-aqi">' + aqiSeg + '</div><div class="wx-aqi-lbl"><span>Good</span><span>Hazardous</span></div></div>' +
@@ -355,7 +401,8 @@
         kv('Yesterday', d.rain.yesterday === null ? '–' : d.rain.yesterday.toFixed(2) + ' in') + kv('This month', d.rain.month === null ? '–' : d.rain.month.toFixed(2) + ' in') + '</div>' +
       '<div class="wx-tile"><h4>Lightning, last 3 hours</h4><div class="wx-big">' + fmt(n.strikes) + '</div><div class="wx-muted wx-small">strikes detected</div>' +
         kv('Closest', n.strikes && n.closest !== null ? 'about ' + Math.round(n.closest) + ' mi' : 'none') +
-        kv('Last strike', n.strikes && n.lastStrike ? ago(n.lastStrike) : '–') + '</div>';
+        kv('Last strike', n.strikes && n.lastStrike ? ago(n.lastStrike) : '–') + '</div>' +
+      moonTile();
 
     return '<p class="wx-intro">The weather in my backyard in Brandon, Florida, measured by my own Tempest weather station.</p>' +
       head + hero +
@@ -368,7 +415,9 @@
         'Temperature, humidity, wind, pressure, rain, sunlight and lightning are measured here. The forecast, UV index and air quality come from ' +
         '<a href="https://www.weatherapi.com/" rel="noopener" target="_blank">WeatherAPI.com</a>.<ul>' +
         '<li>To protect my privacy, this page never shows my address, map position, or any station identifiers.</li>' +
-        '<li>Sunrise and sunset are for Brandon in general.</li><li>No cookies and no tracking.</li></ul></div></div>';
+        '<li>Sunrise and sunset are for Brandon in general.</li>' +
+        '<li>The moon phase is calculated on this page. The moon pictures are drawn from a public-domain photo by NASA’s Lunar Reconnaissance Orbiter (NASA/GSFC/Arizona State University).</li>' +
+        '<li>No cookies and no tracking.</li></ul></div></div>';
   }
 
   /* ---------------- mount ---------------- */
@@ -470,7 +519,7 @@
     root.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(function () { chooseSlots(doc); }, 150); });
   }
 
-  root.MichaelWeather = { normalize: normalize, esc: esc, toNum: toNum, widgetHtml: widgetHtml, pageHtml: pageHtml };
+  root.MichaelWeather = { normalize: normalize, esc: esc, toNum: toNum, widgetHtml: widgetHtml, pageHtml: pageHtml, moonInfo: moonInfo };
   if (root.document && root.fetch) {
     if (root.document.readyState === 'loading') root.document.addEventListener('DOMContentLoaded', init);
     else init();
