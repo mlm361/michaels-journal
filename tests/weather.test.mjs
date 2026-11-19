@@ -177,6 +177,8 @@ test('templates, routes and page are wired up', () => {
   const page = read('content/weather.md');
   assert.match(page, /body_class = "weather-theme-page"/);
   assert.match(page, /id="wx-page"/);
+  assert.match(read('content/privacy.md'), /### Weather[\s\S]*\/weather\.json[\s\S]*never contacts WeatherAPI\.com/);
+  assert.match(read('content/colophon.md'), /<h3>Weather at Home<\/h3>/);
   for (const file of ['static/js/weather.js', 'static/css/weather.css', 'static/css/weather-page.css', 'content/weather.md']) {
     assert.doesNotMatch(read(file), /\b(ST|HB)-\d{6,}/, file + ' must not contain station or hub serials');
     assert.doesNotMatch(read(file), /27\.9\d{2,}|-82\.2\d{2,}/, file + ' must not contain coordinates');

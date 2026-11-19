@@ -436,6 +436,10 @@
     }
     var page = doc.getElementById('wx-page');
     if (page) {
+      var body = doc.body, sky = !d ? 'offline' : ageState(d) === 'offline' ? 'offline' : skyClass(d).replace('wx-sky-', '');
+      var old = (body.className.match(/\bwx-page-sky-[a-z]+\b/g) || []);
+      for (var o = 0; o < old.length; o++) body.classList.remove(old[o]);
+      body.classList.add('wx-page-sky-' + sky);
       if (d) { page.innerHTML = pageHtml(d); finishRender(page, d); }
       else page.innerHTML = '<p class="wx-intro">Weather data is unavailable right now. Please check back in a few minutes.</p>';
     }

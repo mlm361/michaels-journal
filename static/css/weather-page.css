@@ -1,9 +1,18 @@
 /* /weather/ page: themed like Colophon and Tweets (body class + gutter art + icon headings). Loaded only on that page. */
+/* The page edges take the color of the current sky (class set by weather.js) and fade to white in the middle. */
 body.weather-theme-page { position: relative; isolation: isolate; min-height: 100vh; overflow-x: hidden;
-  background: radial-gradient(ellipse at -9% 22%, rgba(63, 146, 222, 0.13), transparent 30rem),
-              radial-gradient(ellipse at 109% 30%, rgba(63, 146, 222, 0.12), transparent 31rem),
-              radial-gradient(ellipse at 50% 100%, rgba(246, 190, 70, 0.08), transparent 34rem),
-              linear-gradient(180deg, #ffffff 0%, #fbfdff 48%, #ffffff 100%); }
+  --wx-edge: rgba(63, 146, 222, .18); --wx-edge-dark: rgba(70, 120, 170, .26); --wx-base: #ffffff; --wx-base-dark: #0e151d;
+  background: linear-gradient(90deg, var(--wx-edge) 0%, transparent 32%, transparent 68%, var(--wx-edge) 100%),
+              linear-gradient(180deg, var(--wx-base) 0%, #fbfdff 48%, var(--wx-base) 100%);
+  background-attachment: fixed; }
+body.weather-theme-page.wx-page-sky-sunny   { --wx-edge: rgba(79, 166, 245, .28);  --wx-edge-dark: rgba(70, 130, 200, .30); }
+body.weather-theme-page.wx-page-sky-partly  { --wx-edge: rgba(110, 150, 195, .30); --wx-edge-dark: rgba(80, 115, 160, .30); }
+body.weather-theme-page.wx-page-sky-cloudy  { --wx-edge: rgba(128, 142, 158, .34); --wx-edge-dark: rgba(110, 120, 135, .30); }
+body.weather-theme-page.wx-page-sky-fog     { --wx-edge: rgba(150, 160, 170, .36); --wx-edge-dark: rgba(120, 128, 138, .30); }
+body.weather-theme-page.wx-page-sky-rain    { --wx-edge: rgba(95, 115, 140, .36);  --wx-edge-dark: rgba(80, 100, 130, .34); }
+body.weather-theme-page.wx-page-sky-storm   { --wx-edge: rgba(78, 80, 118, .38);   --wx-edge-dark: rgba(95, 90, 150, .34); }
+body.weather-theme-page.wx-page-sky-night   { --wx-edge: rgba(40, 58, 110, .30);   --wx-edge-dark: rgba(40, 60, 130, .42); }
+body.weather-theme-page.wx-page-sky-offline { --wx-edge: rgba(140, 146, 156, .28); --wx-edge-dark: rgba(110, 115, 125, .28); }
 body.weather-theme-page::after { content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none; background-repeat: no-repeat; opacity: .62;
   background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2088%2088%22%20fill%3D%22none%22%20stroke%3D%22%233f92de%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2244%22%20cy%3D%2244%22%20r%3D%2214%22%20stroke%3D%22%23f2b632%22%2F%3E%3Cline%20x1%3D%2266.0%22%20y1%3D%2244.0%22%20x2%3D%2274.0%22%20y2%3D%2244.0%22%20stroke%3D%22%23f2b632%22%2F%3E%3Cline%20x1%3D%2259.6%22%20y1%3D%2259.6%22%20x2%3D%2265.2%22%20y2%3D%2265.2%22%20stroke%3D%22%23f2b632%22%2F%3E%3Cline%20x1%3D%2244.0%22%20y1%3D%2266.0%22%20x2%3D%2244.0%22%20y2%3D%2274.0%22%20stroke%3D%22%23f2b632%22%2F%3E%3Cline%20x1%3D%2228.4%22%20y1%3D%2259.6%22%20x2%3D%2222.8%22%20y2%3D%2265.2%22%20stroke%3D%22%23f2b632%22%2F%3E%3Cline%20x1%3D%2222.0%22%20y1%3D%2244.0%22%20x2%3D%2214.0%22%20y2%3D%2244.0%22%20stroke%3D%22%23f2b632%22%2F%3E%3Cline%20x1%3D%2228.4%22%20y1%3D%2228.4%22%20x2%3D%2222.8%22%20y2%3D%2222.8%22%20stroke%3D%22%23f2b632%22%2F%3E%3Cline%20x1%3D%2244.0%22%20y1%3D%2222.0%22%20x2%3D%2244.0%22%20y2%3D%2214.0%22%20stroke%3D%22%23f2b632%22%2F%3E%3Cline%20x1%3D%2259.6%22%20y1%3D%2228.4%22%20x2%3D%2265.2%22%20y2%3D%2222.8%22%20stroke%3D%22%23f2b632%22%2F%3E%3C%2Fsvg%3E"),
     url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2096%2070%22%20fill%3D%22none%22%20stroke%3D%22%233f92de%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M22%2058h52a14%2014%200%200%200%200-28%2020%2020%200%200%200-38-6%2015%2015%200%200%200-14%2034z%22%2F%3E%3C%2Fsvg%3E"),
@@ -89,7 +98,10 @@ body.weather-theme-page #overlord { z-index: 2; }
 @keyframes wx-rise { to { opacity: 1; transform: none; } }
 @keyframes wx-wobble { 0%, 100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); } }
 
-html[data-theme="dark"] body.weather-theme-page { background: radial-gradient(ellipse at -9% 22%, rgba(70, 120, 170, .26), transparent 30rem), radial-gradient(ellipse at 109% 30%, rgba(70, 120, 170, .22), transparent 31rem), linear-gradient(180deg, #0b1118 0%, #0f1720 48%, #0b1118 100%); }
+html[data-theme="dark"] body.weather-theme-page {
+  background: linear-gradient(90deg, var(--wx-edge-dark) 0%, transparent 32%, transparent 68%, var(--wx-edge-dark) 100%),
+              linear-gradient(180deg, #0b1118 0%, #0f1720 48%, #0b1118 100%);
+  background-attachment: fixed; }
 html[data-theme="dark"] body.weather-theme-page::after { opacity: .42; }
 html[data-theme="dark"] .wx-h2 { color: #cfe3d4; }
 html[data-theme="dark"] .wx-intro { color: #a3b2a8; }
