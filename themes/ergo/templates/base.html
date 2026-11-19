@@ -133,6 +133,8 @@
 
         <!-- fonts: self-hosted (@font-face in sass/_fonts.scss); nothing is requested from Google -->
         <link rel="preload" href="/fonts/montserrat/montserrat-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <!-- Weather at home widget (static/js/weather.js reads /weather.json) -->
+        <link rel="stylesheet" href="/css/weather.css?v=20261119">
         {% endblock head %}
 
         {% block rss %}
@@ -515,6 +517,7 @@
 
     <body{% if page?.extra?.body_class %} class="{{ page.extra.body_class }}"{% endif %} onload="main();">
         {% include "menu.html" %}
+        <aside class="wx wx-side" aria-labelledby="wx-side-title"><p class="wx-side-title" id="wx-side-title">Weather at home</p><div class="wx-slot"></div></aside>
 
         <main id="main-content">
         {% block content %} {% endblock content %}
@@ -607,6 +610,8 @@
               })();
             </script>
             {% endif %}
+
+            <section class="wx wx-foot-wrap" aria-labelledby="wx-foot-title"><p class="footer-social-heading wx-foot-title" id="wx-foot-title">Weather at home</p><div class="wx-slot"></div></section>
 
             <p class="footer-line">© 2001–<span id="currentYear">{{ now() | date(format="%Y") }}</span> <span class="p-name">Michael Mitchell</span>. All rights reserved.</p>
             <a class="u-url u-uid mf2-hidden" rel="me" href="{{ config.base_url | safe }}/">Michael Mitchell</a>
@@ -747,5 +752,6 @@
             document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && ov.classList.contains('is-open')) close(); });
           })();
         </script>
+        <script src="/js/weather.js?v=20261119" defer></script>
     </body>
 </html>
