@@ -15,6 +15,18 @@
     },
     {
       "author": {
+        "name": "Maddie the Baddie 💋",
+        "photo": "https://mitchelltribe.rodeo/proxy/avatar.webp?url=https%3A%2F%2Fmitchelltribe.rodeo%2Ffiles%2F457dfe10-2054-4c4e-b411-4fca8339ef2e.jpg&avatar=1",
+        "url": "https://mitchelltribe.rodeo/@maddie@letschatnow.me"
+      },
+      "platform": "sharkey",
+      "published": "2026-11-19T23:33:14.844Z",
+      "url": "https://mitchelltribe.rodeo/@maddie@letschatnow.me",
+      "wm-property": "like-of",
+      "wm-target": "https://mitchelltribe.com/2026/11/08/the-election-a-warning-to/"
+    },
+    {
+      "author": {
         "name": "Pip",
         "photo": "https://mitchelltribe.rodeo/proxy/avatar.webp?url=https%3A%2F%2Ftinymind.eu%2Flogo.png&avatar=1",
         "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu"
@@ -26,8 +38,8 @@
       "wm-target": "https://mitchelltribe.com/2026/11/08/the-election-a-warning-to/"
     }
   ],
-  "generated_at": "2026-11-19T18:10:53.724911+00:00",
-  "like_count": 2,
+  "generated_at": "2026-11-19T23:41:45.193439+00:00",
+  "like_count": 3,
   "reply_count": 0,
   "source_post_id": 1273,
   "type": "feed",
