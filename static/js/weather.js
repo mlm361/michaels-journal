@@ -7,7 +7,21 @@
 (function (root) {
   'use strict';
 
-  var ENDPOINT = '/weather.json';
+  // Two homes. The journal loads this file plainly. michaelponders.com (Blogger) loads it with
+  // data-wx-site="ponders" on the script tag; it then reads data, moon pictures and its stylesheets
+  // from the origin the script itself came from, which must be on the allowlist below.
+  var ORIGINS = ['https://michaelreflects.com', 'https://www.michaelreflects.com', 'http://127.0.0.1:1111'];
+  var SCRIPT_EL = root.document && root.document.currentScript;
+  var SITE = SCRIPT_EL && SCRIPT_EL.getAttribute('data-wx-site') === 'ponders' ? 'ponders' : 'journal';
+  var HOME = '';
+  if (SITE === 'ponders') {
+    var srcOrigin = (String(SCRIPT_EL.src || '').match(/^https?:\/\/[^/]+/) || [''])[0];
+    HOME = ORIGINS.indexOf(srcOrigin) >= 0 ? srcOrigin : ORIGINS[0];
+  }
+  var ENDPOINT = HOME + '/weather.json';
+  var MOON_BASE = HOME + '/img/moon/';
+  var PAGE_URL = SITE === 'ponders' ? 'https://www.michaelponders.com/p/weather.html' : '/weather/';
+  var ASSET_V = '20261119';
   var REFRESH_MS = 5 * 60 * 1000;
   var STALE_S = 20 * 60;
   var OFFLINE_S = 2 * 60 * 60;
@@ -154,7 +168,7 @@
   function moonTile() {
     var m = moonInfo(Date.now());
     var pct = Math.round(m.illum * 100);
-    var file = '/img/moon/moon-' + (m.frame < 10 ? '0' : '') + m.frame + '.avif';
+    var file = MOON_BASE + 'moon-' + (m.frame < 10 ? '0' : '') + m.frame + '.avif';
     return '<div class="wx-tile wx-wide wx-moon"><h4>The moon</h4><div class="wx-moon-row">' +
       '<img class="wx-moon-img" src="' + file + '" width="96" height="96" alt="' + esc('The moon now: ' + m.name + ', ' + pct + '% lit') + '">' +
       '<div class="wx-moon-text"><div class="wx-big wx-big-word">' + esc(m.name) + '</div><div class="wx-muted wx-small">' + pct + '% lit</div></div>' +
@@ -269,7 +283,7 @@
     if (state === 'offline') {
       return '<div class="wx-sky wx-card wx-sky-offline"><div class="wx-in"><div class="wx-place">' + PIN + esc(d.place) + '</div>' +
         '<div class="wx-offline-msg">The weather station is offline.</div><div class="wx-foot"><span>Last reading ' + esc(ago(d.observed)) + '</span>' +
-        '<a href="/weather/">Full weather ›</a></div></div></div>';
+        '<a href="' + PAGE_URL + '">Full weather ›</a></div></div></div>';
     }
     var hl = [];
     if (d.today.hi !== null) hl.push('H ' + deg(d.today.hi));
@@ -288,7 +302,7 @@
       '</div>' +
       '<div class="wx-foot"><span><span class="wx-live' + (state === 'stale' ? ' wx-live-stale' : '') + '"></span>' +
         '<span class="wx-ago" data-wx-epoch="' + d.observed + '">Updated ' + esc(ago(d.observed)) + '</span></span>' +
-        '<a href="/weather/">Full weather ›</a></div>' +
+        '<a href="' + PAGE_URL + '">Full weather ›</a></div>' +
       '</div></div>';
   }
 
@@ -506,21 +520,44 @@
       .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
       .then(function (raw) { return normalize(raw); })
       .catch(function () { return null; })
-      .then(function (d) { render(doc, d); chooseSlots(doc); return d; });
+      .then(function (d) { render(doc, d); if (SITE === 'journal') chooseSlots(doc); return d; });
   }
+  function addStylesheets(doc) {
+    // michaelponders.com: the shared card/page styles plus its own skin, once per page.
+    if (doc.querySelector('link[data-wx-css-loaded]')) return;
+    var files = ['/css/weather.css', '/css/weather-page.css', '/css/ponders-weather.css'];
+    for (var i = 0; i < files.length; i++) {
+      var link = doc.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = HOME + files[i] + '?v=' + ASSET_V;
+      link.setAttribute('data-wx-css-loaded', '');
+      doc.head.appendChild(link);
+    }
+  }
+  var started = false;
   function init() {
     var doc = root.document;
-    if (!doc.querySelector('.wx-slot') && !doc.getElementById('wx-page')) return;
-    placeSide(doc);
+    if (started || (!doc.querySelector('.wx-slot') && !doc.getElementById('wx-page'))) return;
+    started = true;                                  // Blogger may include the script in two gadgets
+    if (SITE === 'ponders') {
+      addStylesheets(doc);
+      doc.documentElement.classList.add('wx-ponders');
+    } else {
+      placeSide(doc);
+    }
     load(doc);
     root.setInterval(function () { load(doc); }, REFRESH_MS);
     root.setInterval(function () { tickAgo(doc); }, 60 * 1000);
-    var t = null;
-    root.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(function () { chooseSlots(doc); }, 150); });
+    if (SITE === 'journal') {
+      var t = null;
+      root.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(function () { chooseSlots(doc); }, 150); });
+    }
   }
 
-  root.MichaelWeather = { normalize: normalize, esc: esc, toNum: toNum, widgetHtml: widgetHtml, pageHtml: pageHtml, moonInfo: moonInfo };
-  if (root.document && root.fetch) {
+  var already = !!root.MichaelWeather;                // a second copy of this script on the same page stays idle
+  root.MichaelWeather = { normalize: normalize, esc: esc, toNum: toNum, widgetHtml: widgetHtml, pageHtml: pageHtml, moonInfo: moonInfo,
+    site: SITE, endpoint: ENDPOINT };
+  if (!already && root.document && root.fetch) {
     if (root.document.readyState === 'loading') root.document.addEventListener('DOMContentLoaded', init);
     else init();
   }

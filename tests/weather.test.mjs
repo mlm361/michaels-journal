@@ -185,6 +185,32 @@ test('moon phase matches known eclipses and points at a real self-hosted AVIF', 
   assert.match(W.pageHtml(W.normalize(sample())), /<img class="wx-moon-img" src="\/img\/moon\/moon-\d\d\.avif" width="96" height="96" alt="The moon now: [A-Za-z ]+, \d+% lit">/);
 });
 
+function loadAs(attrs) {
+  const script = { src: attrs.src, getAttribute: (k) => (k in attrs ? attrs[k] : null) };
+  const context = { window: { document: { currentScript: script } } };
+  vm.createContext(context);
+  vm.runInContext(read('static/js/weather.js'), context, { filename: 'weather.js' });
+  return context.window.MichaelWeather;
+}
+
+test('michaelponders mode reads from michaelreflects.com and links to the Blogger page', () => {
+  const W = loadAs({ src: 'https://michaelreflects.com/js/weather.js', 'data-wx-site': 'ponders' });
+  assert.equal(W.site, 'ponders');
+  assert.equal(W.endpoint, 'https://michaelreflects.com/weather.json');
+  const d = W.normalize(sample());
+  assert.match(W.widgetHtml(d), /href="https:\/\/www\.michaelponders\.com\/p\/weather\.html"/);
+  assert.match(W.pageHtml(d), /src="https:\/\/michaelreflects\.com\/img\/moon\/moon-\d\d\.avif"/);
+  // A copy served from anywhere else still talks only to michaelreflects.com.
+  assert.equal(loadAs({ src: 'https://evil.example/js/weather.js', 'data-wx-site': 'ponders' }).endpoint, 'https://michaelreflects.com/weather.json');
+  // The journal is unchanged: same-origin data, local page link and moon path.
+  const J = loadAs({ src: 'https://michaelreflects.com/js/weather.js' });
+  assert.equal(J.site, 'journal');
+  assert.equal(J.endpoint, '/weather.json');
+  assert.match(J.widgetHtml(d), /href="\/weather\/"/);
+  assert.match(J.pageHtml(d), /src="\/img\/moon\//);
+  assert.match(read('static/css/ponders-weather.css'), /min-width: 1440px/);
+});
+
 /* ---------------- wiring ---------------- */
 
 test('templates, routes and page are wired up', () => {
