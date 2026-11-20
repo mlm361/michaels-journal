@@ -52,11 +52,8 @@
     serverOrigin: "{{ config.extra.townsquare.origin | safe }}",
     socketPath: "{{ (config.extra.townsquare?.socket_path or '/live') | safe }}",
     {% if config.extra.townsquare.site_key %}siteKey: "{{ config.extra.townsquare.site_key | safe }}",{% endif %}
-    connections: [
-      { side: "left",  label: "Cauê Napier", url: "https://cauenapier.com/" },
-      { side: "right", label: "Kev Quirk",   url: "https://kevquirk.com/" },
-      { side: "left",  label: "Forking Mad", url: "https://forkingmad.com/" }
-    ],
+    // Signposts (neighbouring towns) come live from the TownSquare dashboard.
+    // Do not list connections here: an inline list overrides the dashboard.
     theme: "host"
   });
 </script>
