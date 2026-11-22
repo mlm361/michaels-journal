@@ -77,7 +77,8 @@ test('DOM rendering and third-party gallery assets stay hardened', () => {
   assert.match(tweetsOnThisDay, /MichaelUrlSafety\.publicHttpUrl/);
   assert.match(webmentions, /MichaelUrlSafety\.publicHttpUrl/);
   assert.match(webmentions, /new DOMParser\(\)\.parseFromString/);
-  assert.match(gallery, /glightbox@3\.3\.1/);
+  assert.match(gallery, /\/vendor\/glightbox-3\.3\.1\/glightbox\.min\.css"/);
+  assert.match(gallery, /\/vendor\/glightbox-3\.3\.1\/glightbox\.min\.js"/);
   assert.match(gallery, /integrity="sha384-GPAzSuZc0kFvdIev6wm9zg8gnafE8tLso7rsAYQfc9hAdWCpOcpcNI5W9lWkYcsd"/);
   assert.match(gallery, /integrity="sha384-MZZbZ6RXJudK43v1qY1zOWKOU2yfeBPatuFoKyHAaAgHTUZhwblRTc9CphTt4IGQ"/);
   assert.match(postShare, /\^\[0-9a-f-\]\{36\}\$/);
@@ -132,5 +133,38 @@ test('fonts are self-hosted: no template, stylesheet or static file loads Google
   for (const family of ['Montserrat', 'Raleway']) assert.match(fontCss, new RegExp(`font-family: '${family}'`));
   for (const match of fontCss.matchAll(/url\((\/fonts\/[^)]+)\)/g)) {
     assert.ok(fs.existsSync(path.join(root, 'static', match[1])), `missing ${match[1]}`);
+  }
+});
+
+test('JOURNAL-CSP-01 Phase 1: icons and libraries are self-hosted, byte-checked', async () => {
+  const { createHash } = await import('node:crypto');
+  const sri = (relative) => 'sha384-' + createHash('sha384').update(fs.readFileSync(path.join(root, relative))).digest('base64');
+  // The vendored GLightbox files are the exact bytes the SRI pins.
+  assert.equal(sri('static/vendor/glightbox-3.3.1/glightbox.min.css'), 'sha384-GPAzSuZc0kFvdIev6wm9zg8gnafE8tLso7rsAYQfc9hAdWCpOcpcNI5W9lWkYcsd');
+  assert.equal(sri('static/vendor/glightbox-3.3.1/glightbox.min.js'), 'sha384-MZZbZ6RXJudK43v1qY1zOWKOU2yfeBPatuFoKyHAaAgHTUZhwblRTc9CphTt4IGQ');
+  // No template, content page or config loads from the hosts Phase 1 removed.
+  const removed = /kit\.fontawesome\.com|cdn\.simpleicons\.org|cdn\.jsdelivr\.net/;
+  const walk = (dir) => fs.readdirSync(path.join(root, dir), { withFileTypes: true }).flatMap((entry) => {
+    const relative = path.join(dir, entry.name);
+    if (entry.isDirectory()) return walk(relative);
+    return /\.(html|md|toml|js)$/.test(entry.name) ? [relative] : [];
+  });
+  const sources = ['config.toml', ...walk('templates'), ...walk('themes/ergo/templates'), ...walk('content'), ...walk('static/js')];
+  for (const file of sources) {
+    if (file.split(path.sep).join('/') === 'content/privacy.md') continue; // names services in prose, loads nothing
+    assert.doesNotMatch(read(file), removed, `${file} still references a removed outside host`);
+  }
+  // Every icon the stylesheet maps exists, and every fa- class in use is mapped.
+  const iconCss = read('static/icons/icons.css');
+  const mapped = new Set([...iconCss.matchAll(/\.fa-([a-z0-9-]+) \{ --fa-icon: url\("\/icons\/fa\/\1\.svg"\); \}/g)].map((m) => m[1]));
+  for (const name of mapped) assert.ok(fs.existsSync(path.join(root, 'static/icons/fa', `${name}.svg`)), `missing icon ${name}`);
+  for (const file of sources) {
+    for (const m of read(file).matchAll(/\bfas fa-([a-z0-9-]+)/g)) assert.ok(mapped.has(m[1]), `${file} uses unmapped icon fa-${m[1]}`);
+  }
+  // Brand images point at files that exist.
+  for (const file of sources) {
+    for (const m of read(file).matchAll(/\/icons\/brands\/([a-z0-9.-]+\.svg)/g)) {
+      assert.ok(fs.existsSync(path.join(root, 'static/icons/brands', m[1])), `${file} uses missing brand icon ${m[1]}`);
+    }
   }
 });

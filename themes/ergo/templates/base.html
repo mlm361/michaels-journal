@@ -113,7 +113,7 @@
         <!-- js -->
         <script src="{{ config.base_url }}/theme_selector.js"></script>
         <script src="{{ config.base_url }}/js/url-safety.js"></script>
-        <script src="https://kit.fontawesome.com/{{ config.extra.font_awesome.kit }}.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{{ config.base_url }}/icons/icons.css?v=20261122">
 
         <!-- css: a parser-inserted stylesheet, so the browser waits for it before
              first paint (no unstyled paint, no whole-page layout shift). -->
@@ -616,16 +616,16 @@
             <p class="footer-social-heading">Social Links</p>
             <div id="social_links">
               <a rel="me" href="https://mitchelltribe.social/@michael">
-                <img src="https://cdn.simpleicons.org/mastodon/6364FF.svg" alt="Mastodon" width="24" height="24" />Mastodon
+                <img src="{{ config.base_url }}/icons/brands/mastodon.svg" alt="Mastodon" width="24" height="24" />Mastodon
               </a>
               <a rel="me" href="https://mitchelltribe.rodeo/@michael">
                 <img src="https://media.mitchelltribe.xyz/site/img/sharkey-icon.avif" alt="Sharkey" width="24" height="24" />Sharkey
               </a>
               <a rel="me" href="https://pixelfed.social/mlm361">
-                <img src="https://cdn.simpleicons.org/pixelfed/000000.svg" alt="Pixelfed" width="24" height="24" class="footer-icon-invert" />Pixelfed
+                <img src="{{ config.base_url }}/icons/brands/pixelfed.svg" alt="Pixelfed" width="24" height="24" class="footer-icon-invert" />Pixelfed
               </a>
               <a rel="me" href="https://bsky.app/profile/mitchelltribe.com">
-                <img src="https://cdn.simpleicons.org/bluesky/0061F2.svg" alt="Bluesky" width="24" height="24" />Bluesky
+                <img src="{{ config.base_url }}/icons/brands/bluesky.svg" alt="Bluesky" width="24" height="24" />Bluesky
               </a>
               <a rel="me" href="https://iris.to/npub19af39pdnr0cpg0ntakhdprfz8fkhkdn4t0f383gj0zw8hy4wf8lqh0nfur">
                 <img src="https://media.mitchelltribe.xyz/site/img/nostr-icon.avif" alt="Nostr" width="24" height="24" />Nostr
@@ -634,7 +634,7 @@
                 <img src="https://media.mitchelltribe.xyz/site/img/email-icon.avif" alt="Email" width="24" height="24" />Email Me
               </a>
               <a href="{{ get_url(path='atom.xml', trailing_slash=false) }}">
-                <img src="https://cdn.simpleicons.org/rss/FFA500.svg" alt="RSS" width="24" height="24" />RSS
+                <img src="{{ config.base_url }}/icons/brands/rss.svg" alt="RSS" width="24" height="24" />RSS
               </a>
             </div>
 

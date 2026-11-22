@@ -1,0 +1,24 @@
+/* Self-hosted icons for michaelreflects.com (JOURNAL-CSP-01 Phase 1).
+   Font Awesome Free 7.3.1 solid icons by Fonticons, Inc. (https://fontawesome.com), CC BY 4.0
+   (https://fontawesome.com/license/free). Each icon is the unmodified SVG in /icons/fa/.
+   Existing <i class="fas fa-NAME"></i> markup keeps working: the SVG is drawn as a mask filled
+   with the current text color, in Font Awesome 7's default fixed-width box (1.25em x 1em). */
+.fas, .fa-solid {
+  display: inline-block;
+  width: 1.25em;
+  height: 1em;
+  vertical-align: -0.125em;
+  background-color: currentColor;
+  -webkit-mask: var(--fa-icon) no-repeat center / contain;
+  mask: var(--fa-icon) no-repeat center / contain;
+}
+.fa-rss { --fa-icon: url("/icons/fa/rss.svg"); }
+.fa-music { --fa-icon: url("/icons/fa/music.svg"); }
+.fa-chevron-down { --fa-icon: url("/icons/fa/chevron-down.svg"); }
+.fa-share-nodes { --fa-icon: url("/icons/fa/share-nodes.svg"); }
+.fa-link { --fa-icon: url("/icons/fa/link.svg"); }
+.fa-envelope { --fa-icon: url("/icons/fa/envelope.svg"); }
+.fa-arrow-up-from-bracket { --fa-icon: url("/icons/fa/arrow-up-from-bracket.svg"); }
+
+/* The Bluesky butterfly in white, for the filled share button. */
+.icon-white { filter: brightness(0) invert(1); }

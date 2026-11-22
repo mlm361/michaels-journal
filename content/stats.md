@@ -170,7 +170,7 @@ extra_css = ["/css/stats.css"]
     return new Promise((resolve, reject) => {
       if (window.Chart) return resolve();
       const s = document.createElement('script');
-      s.src = 'https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js';
+      s.src = '/vendor/chart.js-4.4.1/chart.umd.js';
       s.async = true;
       s.onload = resolve;
       s.onerror = () => reject(new Error('Chart.js failed'));

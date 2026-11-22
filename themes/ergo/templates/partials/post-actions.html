@@ -26,13 +26,13 @@
       <a class="post-action post-action-posse"
          href="{{ posse.mastodon }}"
          rel="syndication noopener noreferrer"
-         target="_blank"><span class="post-action-icon" aria-hidden="true"><img src="https://cdn.simpleicons.org/mastodon/6364FF.svg" alt=""></span>Mastodon</a>
+         target="_blank"><span class="post-action-icon" aria-hidden="true"><img src="{{ config.base_url }}/icons/brands/mastodon.svg" alt=""></span>Mastodon</a>
       {% endif %}
       {% if posse.bluesky %}
       <a class="post-action post-action-posse"
          href="{{ posse.bluesky }}"
          rel="syndication noopener noreferrer"
-         target="_blank"><span class="post-action-icon" aria-hidden="true"><img src="https://cdn.simpleicons.org/bluesky/0061F2.svg" alt=""></span>Bluesky</a>
+         target="_blank"><span class="post-action-icon" aria-hidden="true"><img src="{{ config.base_url }}/icons/brands/bluesky.svg" alt=""></span>Bluesky</a>
       {% endif %}
       {% if posse.sharkey %}
       <a class="post-action post-action-posse"
