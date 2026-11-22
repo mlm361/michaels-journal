@@ -11,6 +11,8 @@
 *.yml text eol=lf
 *.yaml text eol=lf
 *.svg text eol=lf
+*.sh text eol=lf
+*.mjs text eol=lf
 
 *.ps1 text eol=crlf
 *.bat text eol=crlf
