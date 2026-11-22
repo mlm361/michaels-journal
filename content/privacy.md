@@ -11,7 +11,7 @@ extra_css = ["/css/privacy-policy.css?v=20260522-privacy-dark-1"]
 
 <img src="/img/privacy-policy.png" alt="Privacy Policy" style="max-width:100%;height:auto;border-radius:8px;margin-bottom:1.5rem;">
 
-*Last Updated: November 2, 2026*
+*Last Updated: November 19, 2026*
 
 This Privacy Policy describes how I (the owner of this blog) use and protect any information collected when you visit **Michael's Journal**, hosted at `michaelreflects.com` and originally available at `michaels-journal.pages.dev`. This is a personal blog where I share my opinions, reviews, and thoughts on a variety of subjects; these opinions are mine alone and are subject to change.
 
@@ -91,6 +91,12 @@ The [Town Square](/townsquare/) is a small live-presence widget I self-host. Whi
 - The server records the most recently observed Journal page path for site operations. Visitor-join logs can contain the optional display name, IP address, a stable per-site fingerprint derived from the random browser ID, site origin, and bot-protection status. These are server logs rather than public site content.
 - IP addresses and random browser IDs may be retained when necessary for blocking, rate limiting, and moderation. The site also keeps a capped log of moderation actions.
 - Closing the page ends the live connection and presence. If Town Square is offline, the rest of the site remains available and the widget hides itself.
+
+### Weather
+
+The weather card and the [Weather](/weather/) page load one small file, `/weather.json`, from this site. It contains only weather readings from my home station, a general place name (Brandon, Florida), and a forecast. It never contains my address, map position, or station identifiers, and it does not set cookies, identify you, or record anything about you beyond the normal Cloudflare request handling described above.
+
+The forecast comes from the Tempest forecast service, and the UV index and air quality figures come from [WeatherAPI.com](https://www.weatherapi.com/). Your browser never contacts Tempest or WeatherAPI.com; my own software at home fetches them and includes them in the snapshot. My other blog, michaelponders.com, shows the same weather card, so its visitors' browsers request this same file from michaelreflects.com.
 
 ---
 

@@ -1,0 +1,876 @@
+{
+ "lightning_180km": {
+  "aqi": {
+   "category": 2
+  },
+  "daily": [
+   {
+    "cond": "rain",
+    "date": "2026-11-19",
+    "hi_f": 81,
+    "lo_f": 65,
+    "pop": 40
+   },
+   {
+    "cond": "rain",
+    "date": "2026-11-20",
+    "hi_f": 82,
+    "lo_f": 65,
+    "pop": 40
+   },
+   {
+    "cond": "rain",
+    "date": "2026-11-21",
+    "hi_f": 83,
+    "lo_f": 65,
+    "pop": 40
+   },
+   {
+    "cond": "rain",
+    "date": "2026-11-22",
+    "hi_f": 84,
+    "lo_f": 65,
+    "pop": 40
+   },
+   {
+    "cond": "rain",
+    "date": "2026-11-23",
+    "hi_f": 85,
+    "lo_f": 65,
+    "pop": 40
+   },
+   {
+    "cond": "rain",
+    "date": "2026-11-24",
+    "hi_f": 86,
+    "lo_f": 65,
+    "pop": 40
+   }
+  ],
+  "generated": 1795118400,
+  "history": {
+   "pressure_inhg": [
+    30.0,
+    30.0,
+    30.0,
+    30.0,
+    30.0,
+    30.0,
+    30.0,
+    30.0,
+    30.0,
+    30.0,
+    30.0,
+    30.0,
+    30.0,
+    30.0,
+    30.0,
+    30.0,
+    30.0,
+    30.0,
+    30.0,
+    30.0,
+    30.0,
+    30.0,
+    30.0,
+    30.0,
+    30.0
+   ],
+   "rain_in": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "temp_f": [
+    75.0,
+    75.0,
+    75.0,
+    75.0,
+    75.0,
+    75.0,
+    75.0,
+    75.0,
+    75.0,
+    75.0,
+    75.0,
+    75.0,
+    75.0,
+    75.0,
+    75.0,
+    75.0,
+    75.0,
+    75.0,
+    75.0,
+    75.0,
+    75.0,
+    75.0,
+    75.0,
+    75.0,
+    75.0
+   ]
+  },
+  "hourly": [
+   {
+    "cond": "partly",
+    "is_day": true,
+    "pop": 10,
+    "t": 1795118400,
+    "temp_f": 77
+   },
+   {
+    "cond": "partly",
+    "is_day": true,
+    "pop": 10,
+    "t": 1795122000,
+    "temp_f": 76
+   },
+   {
+    "cond": "partly",
+    "is_day": true,
+    "pop": 10,
+    "t": 1795125600,
+    "temp_f": 75
+   },
+   {
+    "cond": "night",
+    "is_day": false,
+    "pop": 10,
+    "t": 1795129200,
+    "temp_f": 74
+   },
+   {
+    "cond": "night",
+    "is_day": false,
+    "pop": 10,
+    "t": 1795132800,
+    "temp_f": 73
+   },
+   {
+    "cond": "night",
+    "is_day": false,
+    "pop": 10,
+    "t": 1795136400,
+    "temp_f": 72
+   },
+   {
+    "cond": "night",
+    "is_day": false,
+    "pop": 10,
+    "t": 1795140000,
+    "temp_f": 71
+   },
+   {
+    "cond": "night",
+    "is_day": false,
+    "pop": 10,
+    "t": 1795143600,
+    "temp_f": 70
+   },
+   {
+    "cond": "night",
+    "is_day": false,
+    "pop": 10,
+    "t": 1795147200,
+    "temp_f": 69
+   },
+   {
+    "cond": "night",
+    "is_day": false,
+    "pop": 10,
+    "t": 1795150800,
+    "temp_f": 68
+   },
+   {
+    "cond": "night",
+    "is_day": false,
+    "pop": 10,
+    "t": 1795154400,
+    "temp_f": 67
+   },
+   {
+    "cond": "night",
+    "is_day": false,
+    "pop": 10,
+    "t": 1795158000,
+    "temp_f": 66
+   }
+  ],
+  "now": {
+   "cond": "partly",
+   "dew_f": 67.8,
+   "feels_f": 80.1,
+   "gust_mph": 14.9,
+   "humidity": 70,
+   "is_day": true,
+   "label": "Partly cloudy",
+   "lightning_3h": 540,
+   "lightning_closest_mi": null,
+   "lightning_last": 1795118360,
+   "pressure_inhg": 30.02,
+   "pressure_trend": "steady",
+   "rain_today_in": 0.0,
+   "solar_wm2": 455,
+   "temp_f": 78.4,
+   "uv": 4.0,
+   "wind_dir_deg": 62,
+   "wind_mph": 8.2
+  },
+  "observed": 1795118360,
+  "place": "Brandon, FL",
+  "rain": {
+   "month_in": 1.82,
+   "yesterday_in": 0.05
+  },
+  "today": {
+   "hi_f": 81,
+   "lo_f": 65,
+   "sunrise": 1795089600,
+   "sunset": 1795125660
+  },
+  "v": 1
+ },
+ "lower": {
+  "aqi": null,
+  "daily": [],
+  "generated": 1795118400,
+  "history": {
+   "pressure_inhg": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "rain_in": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "temp_f": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "hourly": [],
+  "now": {
+   "cond": "night",
+   "dew_f": null,
+   "feels_f": -80.0,
+   "gust_mph": 0.0,
+   "humidity": 1,
+   "is_day": false,
+   "label": "Clear",
+   "lightning_3h": 0,
+   "lightning_closest_mi": null,
+   "lightning_last": null,
+   "pressure_inhg": 25.0,
+   "pressure_trend": "rising",
+   "rain_today_in": 0.0,
+   "solar_wm2": 455,
+   "temp_f": -60.0,
+   "uv": 0.0,
+   "wind_dir_deg": 0,
+   "wind_mph": 0.0
+  },
+  "observed": 1795118360,
+  "place": "Brandon, FL",
+  "rain": {
+   "month_in": 0.0,
+   "yesterday_in": null
+  },
+  "today": {
+   "hi_f": -60,
+   "lo_f": null,
+   "sunrise": null,
+   "sunset": null
+  },
+  "v": 1
+ },
+ "ordinary": {
+  "aqi": {
+   "category": 2
+  },
+  "daily": [
+   {
+    "cond": "rain",
+    "date": "2026-11-19",
+    "hi_f": 81,
+    "lo_f": 65,
+    "pop": 40
+   },
+   {
+    "cond": "rain",
+    "date": "2026-11-20",
+    "hi_f": 82,
+    "lo_f": 65,
+    "pop": 40
+   },
+   {
+    "cond": "rain",
+    "date": "2026-11-21",
+    "hi_f": 83,
+    "lo_f": 65,
+    "pop": 40
+   },
+   {
+    "cond": "rain",
+    "date": "2026-11-22",
+    "hi_f": 84,
+    "lo_f": 65,
+    "pop": 40
+   },
+   {
+    "cond": "rain",
+    "date": "2026-11-23",
+    "hi_f": 85,
+    "lo_f": 65,
+    "pop": 40
+   },
+   {
+    "cond": "rain",
+    "date": "2026-11-24",
+    "hi_f": 86,
+    "lo_f": 65,
+    "pop": 40
+   }
+  ],
+  "generated": 1795118400,
+  "history": {
+   "pressure_inhg": [
+    29.95,
+    29.95,
+    29.95,
+    29.96,
+    29.96,
+    29.96,
+    29.97,
+    29.97,
+    29.97,
+    29.97,
+    29.98,
+    29.98,
+    29.98,
+    29.99,
+    29.99,
+    29.99,
+    30.0,
+    30.0,
+    30.0,
+    30.0,
+    30.01,
+    30.01,
+    30.01,
+    30.02,
+    30.02
+   ],
+   "rain_in": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "temp_f": [
+    70.0,
+    70.0,
+    70.0,
+    70.0,
+    70.0,
+    70.0,
+    70.0,
+    70.0,
+    70.0,
+    70.0,
+    70.0,
+    70.0,
+    70.0,
+    70.0,
+    70.0,
+    70.0,
+    70.0,
+    70.0,
+    70.0,
+    70.0,
+    70.0,
+    70.0,
+    70.0,
+    70.0,
+    70.0
+   ]
+  },
+  "hourly": [
+   {
+    "cond": "partly",
+    "is_day": true,
+    "pop": 10,
+    "t": 1795118400,
+    "temp_f": 77
+   },
+   {
+    "cond": "partly",
+    "is_day": true,
+    "pop": 10,
+    "t": 1795122000,
+    "temp_f": 76
+   },
+   {
+    "cond": "partly",
+    "is_day": true,
+    "pop": 10,
+    "t": 1795125600,
+    "temp_f": 75
+   },
+   {
+    "cond": "night",
+    "is_day": false,
+    "pop": 10,
+    "t": 1795129200,
+    "temp_f": 74
+   },
+   {
+    "cond": "night",
+    "is_day": false,
+    "pop": 10,
+    "t": 1795132800,
+    "temp_f": 73
+   },
+   {
+    "cond": "night",
+    "is_day": false,
+    "pop": 10,
+    "t": 1795136400,
+    "temp_f": 72
+   },
+   {
+    "cond": "night",
+    "is_day": false,
+    "pop": 10,
+    "t": 1795140000,
+    "temp_f": 71
+   },
+   {
+    "cond": "night",
+    "is_day": false,
+    "pop": 10,
+    "t": 1795143600,
+    "temp_f": 70
+   },
+   {
+    "cond": "night",
+    "is_day": false,
+    "pop": 10,
+    "t": 1795147200,
+    "temp_f": 69
+   },
+   {
+    "cond": "night",
+    "is_day": false,
+    "pop": 10,
+    "t": 1795150800,
+    "temp_f": 68
+   },
+   {
+    "cond": "night",
+    "is_day": false,
+    "pop": 10,
+    "t": 1795154400,
+    "temp_f": 67
+   },
+   {
+    "cond": "night",
+    "is_day": false,
+    "pop": 10,
+    "t": 1795158000,
+    "temp_f": 66
+   }
+  ],
+  "now": {
+   "cond": "partly",
+   "dew_f": 67.8,
+   "feels_f": 80.1,
+   "gust_mph": 14.9,
+   "humidity": 70,
+   "is_day": true,
+   "label": "Partly cloudy",
+   "lightning_3h": 0,
+   "lightning_closest_mi": null,
+   "lightning_last": null,
+   "pressure_inhg": 30.02,
+   "pressure_trend": "steady",
+   "rain_today_in": 0.0,
+   "solar_wm2": 455,
+   "temp_f": 78.4,
+   "uv": 4.0,
+   "wind_dir_deg": 62,
+   "wind_mph": 8.2
+  },
+  "observed": 1795118360,
+  "place": "Brandon, FL",
+  "rain": {
+   "month_in": 1.82,
+   "yesterday_in": 0.05
+  },
+  "today": {
+   "hi_f": 81,
+   "lo_f": 65,
+   "sunrise": 1795089600,
+   "sunset": 1795125660
+  },
+  "v": 1
+ },
+ "upper": {
+  "aqi": {
+   "category": 6
+  },
+  "daily": [
+   {
+    "cond": "rain",
+    "date": "2026-11-19",
+    "hi_f": 140,
+    "lo_f": -60,
+    "pop": 100
+   },
+   {
+    "cond": "rain",
+    "date": "2026-11-20",
+    "hi_f": 140,
+    "lo_f": -60,
+    "pop": 100
+   },
+   {
+    "cond": "rain",
+    "date": "2026-11-21",
+    "hi_f": 140,
+    "lo_f": -60,
+    "pop": 100
+   },
+   {
+    "cond": "rain",
+    "date": "2026-11-22",
+    "hi_f": 140,
+    "lo_f": -60,
+    "pop": 100
+   },
+   {
+    "cond": "rain",
+    "date": "2026-11-23",
+    "hi_f": 140,
+    "lo_f": -60,
+    "pop": 100
+   },
+   {
+    "cond": "rain",
+    "date": "2026-11-24",
+    "hi_f": 140,
+    "lo_f": -60,
+    "pop": 100
+   }
+  ],
+  "generated": 1795118400,
+  "history": {
+   "pressure_inhg": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "rain_in": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "temp_f": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "hourly": [
+   {
+    "cond": "partly",
+    "is_day": true,
+    "pop": 10,
+    "t": 1795118400,
+    "temp_f": 77
+   },
+   {
+    "cond": "partly",
+    "is_day": true,
+    "pop": 10,
+    "t": 1795122000,
+    "temp_f": 76
+   },
+   {
+    "cond": "partly",
+    "is_day": true,
+    "pop": 10,
+    "t": 1795125600,
+    "temp_f": 75
+   },
+   {
+    "cond": "sunny",
+    "is_day": true,
+    "pop": 10,
+    "t": 1795129200,
+    "temp_f": 74
+   },
+   {
+    "cond": "sunny",
+    "is_day": true,
+    "pop": 10,
+    "t": 1795132800,
+    "temp_f": 73
+   },
+   {
+    "cond": "sunny",
+    "is_day": true,
+    "pop": 10,
+    "t": 1795136400,
+    "temp_f": 72
+   },
+   {
+    "cond": "sunny",
+    "is_day": true,
+    "pop": 10,
+    "t": 1795140000,
+    "temp_f": 71
+   },
+   {
+    "cond": "sunny",
+    "is_day": true,
+    "pop": 10,
+    "t": 1795143600,
+    "temp_f": 70
+   },
+   {
+    "cond": "sunny",
+    "is_day": true,
+    "pop": 10,
+    "t": 1795147200,
+    "temp_f": 69
+   },
+   {
+    "cond": "night",
+    "is_day": false,
+    "pop": 10,
+    "t": 1795150800,
+    "temp_f": 68
+   },
+   {
+    "cond": "night",
+    "is_day": false,
+    "pop": 10,
+    "t": 1795154400,
+    "temp_f": 67
+   },
+   {
+    "cond": "night",
+    "is_day": false,
+    "pop": 10,
+    "t": 1795158000,
+    "temp_f": 66
+   }
+  ],
+  "now": {
+   "cond": "partly",
+   "dew_f": 140.0,
+   "feels_f": 160.0,
+   "gust_mph": 300.0,
+   "humidity": 100,
+   "is_day": true,
+   "label": "Partly cloudy",
+   "lightning_3h": 1000000,
+   "lightning_closest_mi": null,
+   "lightning_last": 1795118360,
+   "pressure_inhg": 33.0,
+   "pressure_trend": "falling",
+   "rain_today_in": null,
+   "solar_wm2": 2000,
+   "temp_f": 140.0,
+   "uv": 20.0,
+   "wind_dir_deg": 360,
+   "wind_mph": 250.0
+  },
+  "observed": 1795118360,
+  "place": "Brandon, FL",
+  "rain": {
+   "month_in": null,
+   "yesterday_in": 78.74
+  },
+  "today": {
+   "hi_f": null,
+   "lo_f": -60,
+   "sunrise": 1000000020,
+   "sunset": null
+  },
+  "v": 1
+ }
+}
