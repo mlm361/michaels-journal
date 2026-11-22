@@ -18,17 +18,22 @@ function memoryKv(initial = null) {
 function sample(overrides = {}) {
   return {
     v: 1,
+    generated: Math.floor(Date.now() / 1000) - 60,
     observed: Math.floor(Date.now() / 1000) - 120,
     place: 'Brandon, FL',
     now: { cond: 'partly', label: 'Partly cloudy', is_day: true, temp_f: 78, feels_f: 80, humidity: 71, dew_f: 68,
       pressure_inhg: 30.02, pressure_trend: 'steady', wind_mph: 8, gust_mph: 14, wind_dir_deg: 62, uv: 4, solar_wm2: 455,
-      rain_today_in: 0, lightning_3h: 0 },
-    today: { hi_f: 81, lo_f: 65, sunrise: 1795089780, sunset: 1795127760, moon: 'Waxing gibbous' },
+      rain_today_in: 0, lightning_3h: 0, lightning_closest_mi: null, lightning_last: null },
+    today: { hi_f: 81, lo_f: 65, sunrise: 1795089780, sunset: 1795127760 },
     rain: { yesterday_in: 0.4, month_in: 2.31 },
     aqi: { category: 1 },
     hourly: [{ t: 1795114800, cond: 'partly', is_day: true, temp_f: 78, pop: 10 }, { t: 1795118400, cond: 'rain', is_day: true, temp_f: 76, pop: 40 }],
     daily: [{ date: '2026-11-19', cond: 'partly', lo_f: 65, hi_f: 81, pop: 10 }, { date: '2026-11-20', cond: 'sunny', lo_f: 63, hi_f: 82, pop: 0 }],
-    history: { temp_f: [70, 72, 75, 78], pressure_inhg: [30.0, 30.01, 30.02, 30.02], rain_in: [0, 0, 0.02, 0] },
+    history: {
+      temp_f: Array.from({ length: 25 }, (_, k) => 70 + (k % 8)),
+      pressure_inhg: Array.from({ length: 25 }, (_, k) => (k === 3 ? null : 30.02)),
+      rain_in: Array.from({ length: 24 }, (_, k) => (k === 20 ? 0.02 : 0)),
+    },
     ...overrides,
   };
 }
@@ -106,6 +111,124 @@ test('validSnapshot rejects wrong shapes', () => {
   assert.equal(validSnapshot({ v: 1, observed: 1795113817 }), false);
   assert.equal(validSnapshot({ v: 1, observed: 12, now: {} }), false);
   assert.equal(validSnapshot(sample()), true);
+});
+
+/* ---------------- WX-01 rework (Sally review 2026-11-21) ---------------- */
+
+const TOKEN = 'correct horse battery staple';
+const withNow = (patch) => sample({ now: { ...sample().now, ...patch } });
+
+test('ingest refuses unknown top-level and nested fields, wrong types and out-of-bounds arrays', async () => {
+  const s = sample();
+  const bad = {
+    'top-level field': sample({ station_id: 12345 }),
+    'now field': withNow({ station_serial: 'ST-00000000' }),
+    'today field': sample({ today: { ...s.today, moon: 'Waxing gibbous' } }),
+    'rain field': sample({ rain: { ...s.rain, lat: 27.9 } }),
+    'aqi field': sample({ aqi: { category: 1, pm2_5: 9 } }),
+    'hourly item field': sample({ hourly: [{ ...s.hourly[0], lat: 27.9 }] }),
+    'daily item field': sample({ daily: [{ ...s.daily[0], lon: -82.3 }] }),
+    'history field': sample({ history: { ...s.history, elevation_m: 10 } }),
+    'missing field': (() => { const x = sample(); delete x.now.uv; return x; })(),
+    'now as array': sample({ now: [s.now] }),
+    'today as array': sample({ today: [] }),
+    'string number': withNow({ temp_f: '78' }),
+    'boolean as number': withNow({ is_day: 1 }),
+    'unknown condition': withNow({ cond: 'blizzard' }),
+    'label with control char': withNow({ label: 'Rain\u0007' }),
+    'label too long': withNow({ label: 'x'.repeat(41) }),
+    'other place': sample({ place: 'Tampa, FL' }),
+    'version 2': sample({ v: 2 }),
+    'fractional epoch': sample({ observed: 1795113817.5 }),
+    'aqi out of range': sample({ aqi: { category: 7 } }),
+    'hourly too long': sample({ hourly: Array.from({ length: 13 }, () => s.hourly[0]) }),
+    'daily too long': sample({ daily: Array.from({ length: 7 }, () => s.daily[0]) }),
+    'history too short': sample({ history: { ...s.history, temp_f: s.history.temp_f.slice(1) } }),
+    'history item type': sample({ history: { ...s.history, rain_in: [...s.history.rain_in.slice(1), 'x'] } }),
+  };
+  for (const [name, snap] of Object.entries(bad)) {
+    const kv = memoryKv();
+    const r = await onRequestPost({ request: post(snap, TOKEN), env: { WEATHER_KV: kv, WEATHER_PUSH_TOKEN: TOKEN } });
+    assert.equal(r.status, 400, name);
+    assert.equal(kv.store.size, 0, name);
+  }
+  // Nulls the publisher really sends are fine, and the stored value is exactly the public projection.
+  const kv = memoryKv();
+  const good = sample({ aqi: null, now: { ...s.now, uv: null, pressure_trend: null, lightning_last: s.observed - 60 } });
+  assert.equal((await onRequestPost({ request: post(good, TOKEN), env: { WEATHER_KV: kv, WEATHER_PUSH_TOKEN: TOKEN } })).status, 200);
+  assert.deepEqual(JSON.parse(kv.store.get('current')), good);
+});
+
+test('GET projects a stored value: unknown fields are dropped and a wrong shape is not served', async () => {
+  const s = sample();
+  const stored = { ...s, station_id: 12345, now: { ...s.now, lat: 27.9 }, hourly: [{ ...s.hourly[0], serial: 'HB-1' }] };
+  const r = await onRequestGet({ request: get(), env: { WEATHER_KV: memoryKv(JSON.stringify(stored)) } });
+  assert.equal(r.status, 200);
+  const body = await r.json();
+  assert.deepEqual(body, sample({ observed: s.observed, generated: s.generated, hourly: [s.hourly[0]] }));
+  assert.equal(JSON.stringify(body).includes('27.9') || JSON.stringify(body).includes('HB-1') || 'station_id' in body, false);
+  for (const broken of [sample({ now: [s.now] }), sample({ hourly: 'none' }), withNow({ temp_f: '78' })]) {
+    const g = await onRequestGet({ request: get(), env: { WEATHER_KV: memoryKv(JSON.stringify(broken)) } });
+    assert.equal(g.status, 503);
+  }
+});
+
+function streamPost(chunks, headers = {}) {
+  let pulls = 0;
+  const body = new ReadableStream({ // highWaterMark 0: a chunk is pulled only when the endpoint reads
+    pull(controller) {
+      if (pulls < chunks.length) controller.enqueue(chunks[pulls]);
+      else controller.close();
+      pulls += 1;
+    },
+  }, { highWaterMark: 0 });
+  const request = new Request('https://michaelreflects.com/weather.json', {
+    method: 'POST', body, duplex: 'half', headers: { Authorization: 'Bearer ' + TOKEN, ...headers },
+  });
+  return { request, pulls: () => pulls };
+}
+
+test('POST counts body bytes while reading and stops at the 64 KiB ceiling', async () => {
+  const env = () => ({ WEATHER_KV: memoryKv(), WEATHER_PUSH_TOKEN: TOKEN });
+  // No Content-Length: reading stops on the chunk that crosses the ceiling; later chunks are never pulled.
+  const big = streamPost([new Uint8Array(60 * 1024), new Uint8Array(8 * 1024), new Uint8Array(8 * 1024), new Uint8Array(8 * 1024)]);
+  let e = env();
+  assert.equal((await onRequestPost({ request: big.request, env: e })).status, 413);
+  assert.equal(big.pulls(), 2);
+  assert.equal(e.WEATHER_KV.store.size, 0);
+  // Bytes, not UTF-16 units: 22,000 three-byte characters are 66,000 bytes.
+  const euros = new TextEncoder().encode('"' + '€'.repeat(22000) + '"');
+  assert.ok('€'.repeat(22000).length < 64 * 1024 && euros.byteLength > 64 * 1024);
+  assert.equal((await onRequestPost({ request: streamPost([euros]).request, env: env() })).status, 413);
+  // A declared length over the ceiling is refused before any read.
+  const declared = streamPost([new Uint8Array(10)], { 'Content-Length': String(64 * 1024 + 1) });
+  assert.equal((await onRequestPost({ request: declared.request, env: env() })).status, 413);
+  assert.equal(declared.pulls(), 0);
+  // Exactly at the ceiling is read in full (then refused as JSON); invalid UTF-8 is bad JSON.
+  assert.equal((await onRequestPost({ request: streamPost([new Uint8Array(64 * 1024).fill(32)]).request, env: env() })).status, 400);
+  assert.equal((await onRequestPost({ request: streamPost([new Uint8Array([0x7b, 0xff, 0x7d])]).request, env: env() })).status, 400);
+  // A valid snapshot sent as a stream in pieces is accepted.
+  const bytes = new TextEncoder().encode(JSON.stringify(sample()));
+  e = env();
+  assert.equal((await onRequestPost({ request: streamPost([bytes.slice(0, 100), bytes.slice(100)]).request, env: e })).status, 200);
+  assert.equal(e.WEATHER_KV.store.size, 1);
+});
+
+test('ordering is best-effort for one publisher: a stale KV read cannot stop an older push (documented)', async () => {
+  const newer = sample();
+  const older = sample({ observed: newer.observed - 600 });
+  // Fresh read: an older observation is refused.
+  const kv = memoryKv(JSON.stringify(newer));
+  assert.equal((await onRequestPost({ request: post(older, TOKEN), env: { WEATHER_KV: kv, WEATHER_PUSH_TOKEN: TOKEN } })).status, 409);
+  // Stale cached read (KV is eventually consistent, no compare-and-swap): last write wins.
+  const store = new Map([['current', JSON.stringify(newer)]]);
+  const staleKv = { store, get: async () => JSON.stringify(sample({ observed: newer.observed - 1200 })), put: async (k, v) => { store.set(k, v); } };
+  assert.equal((await onRequestPost({ request: post(older, TOKEN), env: { WEATHER_KV: staleKv, WEATHER_PUSH_TOKEN: TOKEN } })).status, 200);
+  assert.equal(JSON.parse(store.get('current')).observed, older.observed);
+  // The contract says so where the endpoint is defined.
+  const source = read('functions/weather.json.js');
+  assert.match(source, /Ordering is best-effort for a single publisher/);
+  assert.match(source, /last write wins/);
 });
 
 /* ---------------- widget script ---------------- */
@@ -224,8 +347,16 @@ test('templates, routes and page are wired up', () => {
   const page = read('content/weather.md');
   assert.match(page, /body_class = "weather-theme-page"/);
   assert.match(page, /id="wx-page"/);
-  assert.match(read('content/privacy.md'), /### Weather[\s\S]*\/weather\.json[\s\S]*never contacts WeatherAPI\.com/);
+  assert.match(read('content/privacy.md'), /### Weather[\s\S]*\/weather\.json[\s\S]*never contacts Tempest or WeatherAPI\.com/);
   assert.match(read('content/colophon.md'), /<h3>Weather at Home<\/h3>/);
+  // Sources (Sally review 2026-11-21): Tempest supplies the forecast; WeatherAPI.com only UV and air quality.
+  const credits = ['content/colophon.md', 'content/privacy.md', 'blogger/weather/4-privacy-weather-section.html', 'static/js/weather.js'];
+  for (const file of credits) {
+    const text = read(file);
+    assert.match(text, /forecast comes from the Tempest forecast service/, file);
+    assert.doesNotMatch(text, /forecast, UV index,? and air quality/i, file);
+  }
+  assert.match(read('content/colophon.md'), /source of its forecast, and \[WeatherAPI\.com\]\([^)]*\), which supplies its UV index and air quality\./);
   for (const file of ['static/js/weather.js', 'static/css/weather.css', 'static/css/weather-page.css', 'content/weather.md']) {
     assert.doesNotMatch(read(file), /\b(ST|HB)-\d{6,}/, file + ' must not contain station or hub serials');
     assert.doesNotMatch(read(file), /27\.9\d{2,}|-82\.2\d{2,}/, file + ' must not contain coordinates');

@@ -3,13 +3,125 @@
 // GET  : public. Serves the last snapshot from Workers KV (binding WEATHER_KV, key "current").
 //        Readable cross-origin only by michaelponders.com (the Blogger widget); same-origin needs no CORS.
 // POST : the home station's publisher replaces the snapshot. Requires
-//        "Authorization: Bearer <WEATHER_PUSH_TOKEN>" (a Pages secret). The body must be a v1 snapshot
-//        no larger than MAX_BYTES and not older than the stored one.
-// The snapshot is built from an allowlist at home; this endpoint never adds location or device data.
+//        "Authorization: Bearer <WEATHER_PUSH_TOKEN>" (a Pages secret). The body must be at most MAX_BYTES
+//        (counted while reading) and match the v1 public schema below exactly; unknown fields are refused.
+//
+// The public schema is enforced here, not only at home: POST stores only the projection of SCHEMA, and GET
+// projects the stored value again, so a field the privacy pages promise to omit can never be served.
+//
+// Ordering is best-effort for a single publisher. Workers KV has no compare-and-swap and a read can be
+// served from a cache up to about 60 s old, so the "not older than stored" check refuses a replayed or
+// stale push but cannot order two overlapping pushes (last write wins). The home publisher sends one
+// request at a time, every 5 minutes, so overlap does not happen in normal operation.
 
 const KEY = 'current';
 const MAX_BYTES = 64 * 1024;
+const PLACE = 'Brandon, FL';
 const ALLOWED_ORIGINS = new Set(['https://www.michaelponders.com', 'https://michaelponders.com']);
+
+/* ---------------- public schema (v1) ---------------- */
+
+const CONDS = ['sunny', 'partly', 'cloudy', 'rain', 'storm', 'fog', 'night'];
+const num = (lo, hi, int = false) => ({ t: 'num', lo, hi, int });
+const opt = (spec) => ({ ...spec, nullable: true });
+const obj = (fields) => ({ t: 'obj', fields });
+const arr = (of, min, max) => ({ t: 'arr', of, min, max });
+const oneOf = (...values) => ({ t: 'enum', values });
+const BOOL = { t: 'bool' };
+const EPOCH = num(1e9, 1e10, true);
+const TEMP = num(-60, 140);
+const COND = oneOf(...CONDS);
+const PCT = num(0, 100);
+
+const SCHEMA = obj({
+  v: oneOf(1),
+  generated: EPOCH,
+  observed: EPOCH,
+  place: oneOf(PLACE),
+  now: obj({
+    cond: COND,
+    label: { t: 'str', re: /^[^\u0000-\u001f\u007f]{0,40}$/u },
+    is_day: BOOL,
+    temp_f: opt(TEMP),
+    feels_f: opt(num(-80, 160)),
+    humidity: opt(PCT),
+    dew_f: opt(num(-100, 140)),
+    pressure_inhg: opt(num(25, 33)),
+    pressure_trend: opt(oneOf('rising', 'falling', 'steady')),
+    wind_mph: opt(num(0, 250)),
+    gust_mph: opt(num(0, 300)),
+    wind_dir_deg: opt(num(0, 360)),
+    uv: opt(num(0, 20)),
+    solar_wm2: opt(num(0, 2000)),
+    rain_today_in: opt(num(0, 100)),
+    lightning_3h: num(0, 1e6, true),
+    lightning_closest_mi: opt(num(0, 100)),
+    lightning_last: opt(EPOCH),
+  }),
+  today: obj({ hi_f: opt(TEMP), lo_f: opt(TEMP), sunrise: opt(EPOCH), sunset: opt(EPOCH) }),
+  rain: obj({ yesterday_in: opt(num(0, 100)), month_in: opt(num(0, 200)) }),
+  aqi: opt(obj({ category: num(1, 6, true) })),
+  hourly: arr(obj({ t: EPOCH, cond: COND, is_day: BOOL, temp_f: opt(TEMP), pop: opt(PCT) }), 0, 12),
+  daily: arr(obj({ date: { t: 'str', re: /^\d{4}-\d{2}-\d{2}$/ }, cond: COND, lo_f: TEMP, hi_f: TEMP, pop: opt(PCT) }), 0, 6),
+  history: obj({
+    temp_f: arr(opt(TEMP), 25, 25),
+    pressure_inhg: arr(opt(num(25, 33)), 25, 25),
+    rain_in: arr(opt(num(0, 100)), 24, 24),
+  }),
+});
+
+class Invalid extends Error {}
+
+function project(spec, value, strict) {
+  if (value === null && spec.nullable) return null;
+  switch (spec.t) {
+    case 'num':
+      if (typeof value !== 'number' || !Number.isFinite(value) || value < spec.lo || value > spec.hi
+        || (spec.int && !Number.isInteger(value))) throw new Invalid();
+      return value;
+    case 'bool':
+      if (typeof value !== 'boolean') throw new Invalid();
+      return value;
+    case 'enum':
+      if (!spec.values.includes(value)) throw new Invalid();
+      return value;
+    case 'str':
+      if (typeof value !== 'string' || !spec.re.test(value)) throw new Invalid();
+      return value;
+    case 'arr':
+      if (!Array.isArray(value) || value.length < spec.min || value.length > spec.max) throw new Invalid();
+      return value.map((item) => project(spec.of, item, strict));
+    case 'obj': {
+      if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Invalid();
+      if (strict && Object.keys(value).some((key) => !Object.hasOwn(spec.fields, key))) throw new Invalid();
+      const out = {};
+      for (const [key, field] of Object.entries(spec.fields)) {
+        if (!Object.hasOwn(value, key)) throw new Invalid();
+        out[key] = project(field, value[key], strict);
+      }
+      return out;
+    }
+    default:
+      throw new Invalid();
+  }
+}
+
+// A fresh object holding only public-schema fields, or null. strict (ingest) also refuses unknown fields;
+// non-strict (serving a stored value) drops them.
+export function publicSnapshot(data, { strict = false } = {}) {
+  try {
+    return project(SCHEMA, data, strict);
+  } catch (error) {
+    if (error instanceof Invalid) return null;
+    throw error;
+  }
+}
+
+export function validSnapshot(data) {
+  return publicSnapshot(data, { strict: true }) !== null;
+}
+
+/* ---------------- HTTP ---------------- */
 
 function baseHeaders(request) {
   const headers = new Headers({
@@ -33,18 +145,6 @@ function json(request, status, body, extra = {}) {
   return new Response(JSON.stringify(body), { status, headers });
 }
 
-export function validSnapshot(data) {
-  return Boolean(data)
-    && typeof data === 'object'
-    && !Array.isArray(data)
-    && data.v === 1
-    && Number.isFinite(data.observed)
-    && data.observed > 1e9
-    && data.observed < 1e10
-    && typeof data.now === 'object'
-    && data.now !== null;
-}
-
 async function sameSecret(given, expected) {
   if (!given || !expected) return false;
   const enc = new TextEncoder();
@@ -58,17 +158,42 @@ async function sameSecret(given, expected) {
   return diff === 0;
 }
 
+// Reads at most max bytes of the body; stops and returns null as soon as it is exceeded.
+export async function readCapped(request, max) {
+  if (!request.body) return new Uint8Array(0);
+  const reader = request.body.getReader();
+  const chunks = [];
+  let total = 0;
+  for (;;) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    total += value.byteLength;
+    if (total > max) {
+      await reader.cancel().catch(() => {});
+      return null;
+    }
+    chunks.push(value);
+  }
+  const out = new Uint8Array(total);
+  let at = 0;
+  for (const chunk of chunks) {
+    out.set(chunk, at);
+    at += chunk.byteLength;
+  }
+  return out;
+}
+
 export async function onRequestGet({ request, env }) {
   const kv = env && env.WEATHER_KV;
   if (!kv) return json(request, 503, { error: 'unavailable' }, { 'Cache-Control': 'no-store' });
   let data = null;
   try {
     const raw = await kv.get(KEY);
-    data = raw ? JSON.parse(raw) : null;
+    data = raw ? publicSnapshot(JSON.parse(raw)) : null;
   } catch (_error) {
     data = null;
   }
-  if (!validSnapshot(data)) return json(request, 503, { error: 'unavailable' }, { 'Cache-Control': 'no-store' });
+  if (!data) return json(request, 503, { error: 'unavailable' }, { 'Cache-Control': 'no-store' });
   return json(request, 200, data);
 }
 
@@ -86,23 +211,23 @@ export async function onRequestPost({ request, env }) {
   const auth = request.headers.get('Authorization') || '';
   const given = auth.startsWith('Bearer ') ? auth.slice(7) : '';
   if (!(await sameSecret(given, String(expected)))) return json(request, 401, { error: 'unauthorized' }, noStore);
-  const length = Number(request.headers.get('Content-Length') || 0);
-  if (length > MAX_BYTES) return json(request, 413, { error: 'too large' }, noStore);
-  const text = await request.text();
-  if (text.length > MAX_BYTES) return json(request, 413, { error: 'too large' }, noStore);
+  if (Number(request.headers.get('Content-Length')) > MAX_BYTES) return json(request, 413, { error: 'too large' }, noStore);
+  const bytes = await readCapped(request, MAX_BYTES);
+  if (bytes === null) return json(request, 413, { error: 'too large' }, noStore);
   let data;
   try {
-    data = JSON.parse(text);
+    data = JSON.parse(new TextDecoder('utf-8', { fatal: true }).decode(bytes));
   } catch (_error) {
     return json(request, 400, { error: 'bad json' }, noStore);
   }
-  if (!validSnapshot(data)) return json(request, 400, { error: 'bad snapshot' }, noStore);
+  const snapshot = publicSnapshot(data, { strict: true });
+  if (!snapshot) return json(request, 400, { error: 'bad snapshot' }, noStore);
   try {
-    const current = JSON.parse((await kv.get(KEY)) || 'null');
-    if (validSnapshot(current) && data.observed < current.observed) {
+    const current = publicSnapshot(JSON.parse((await kv.get(KEY)) || 'null'));
+    if (current && snapshot.observed < current.observed) {
       return json(request, 409, { error: 'older than stored' }, noStore);
     }
   } catch (_error) { /* a broken stored value is simply replaced */ }
-  await kv.put(KEY, JSON.stringify(data));
-  return json(request, 200, { ok: true, observed: data.observed }, noStore);
+  await kv.put(KEY, JSON.stringify(snapshot));
+  return json(request, 200, { ok: true, observed: snapshot.observed }, noStore);
 }

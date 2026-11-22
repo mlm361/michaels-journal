@@ -426,7 +426,7 @@
       '<h2 class="wx-h2">The next 5 days</h2><div class="wx-grid"><div class="wx-tile wx-wide"><h4>Forecast</h4><div class="wx-days">' + dailyHtml(d) + '</div></div></div>' +
       '<h2 class="wx-h2">About this station</h2><div class="wx-grid"><div class="wx-tile wx-wide wx-about"><h4>Where this comes from</h4>' +
         'These readings come from a Tempest weather station at my home in Brandon, Florida, updated every 5 minutes. ' +
-        'Temperature, humidity, wind, pressure, rain, sunlight and lightning are measured here. The forecast, UV index and air quality come from ' +
+        'Temperature, humidity, wind, pressure, rain, sunlight and lightning are measured here. The forecast comes from the Tempest forecast service; the UV index and air quality come from ' +
         '<a href="https://www.weatherapi.com/" rel="noopener" target="_blank">WeatherAPI.com</a>.<ul>' +
         '<li>To protect my privacy, this page never shows my address, map position, or any station identifiers.</li>' +
         '<li>Sunrise and sunset are for Brandon in general.</li>' +

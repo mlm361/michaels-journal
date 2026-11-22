@@ -96,7 +96,7 @@ The [Town Square](/townsquare/) is a small live-presence widget I self-host. Whi
 
 The weather card and the [Weather](/weather/) page load one small file, `/weather.json`, from this site. It contains only weather readings from my home station, a general place name (Brandon, Florida), and a forecast. It never contains my address, map position, or station identifiers, and it does not set cookies, identify you, or record anything about you beyond the normal Cloudflare request handling described above.
 
-The forecast, UV index, and air quality figures come from [WeatherAPI.com](https://www.weatherapi.com/), but your browser never contacts WeatherAPI.com; my own software at home fetches them and includes them in the snapshot. My other blog, michaelponders.com, shows the same weather card, so its visitors' browsers request this same file from michaelreflects.com.
+The forecast comes from the Tempest forecast service, and the UV index and air quality figures come from [WeatherAPI.com](https://www.weatherapi.com/). Your browser never contacts Tempest or WeatherAPI.com; my own software at home fetches them and includes them in the snapshot. My other blog, michaelponders.com, shows the same weather card, so its visitors' browsers request this same file from michaelreflects.com.
 
 ---
 
