@@ -776,43 +776,43 @@
     "temp_f": 75
    },
    {
-    "cond": "night",
-    "is_day": false,
+    "cond": "sunny",
+    "is_day": true,
     "pop": 10,
     "t": 1795129200,
     "temp_f": 74
    },
    {
-    "cond": "night",
-    "is_day": false,
+    "cond": "sunny",
+    "is_day": true,
     "pop": 10,
     "t": 1795132800,
     "temp_f": 73
    },
    {
-    "cond": "night",
-    "is_day": false,
+    "cond": "sunny",
+    "is_day": true,
     "pop": 10,
     "t": 1795136400,
     "temp_f": 72
    },
    {
-    "cond": "night",
-    "is_day": false,
+    "cond": "sunny",
+    "is_day": true,
     "pop": 10,
     "t": 1795140000,
     "temp_f": 71
    },
    {
-    "cond": "night",
-    "is_day": false,
+    "cond": "sunny",
+    "is_day": true,
     "pop": 10,
     "t": 1795143600,
     "temp_f": 70
    },
    {
-    "cond": "night",
-    "is_day": false,
+    "cond": "sunny",
+    "is_day": true,
     "pop": 10,
     "t": 1795147200,
     "temp_f": 69
@@ -868,8 +868,8 @@
   "today": {
    "hi_f": null,
    "lo_f": -60,
-   "sunrise": 1795089600,
-   "sunset": 1795125660
+   "sunrise": 1000000020,
+   "sunset": null
   },
   "v": 1
  }
