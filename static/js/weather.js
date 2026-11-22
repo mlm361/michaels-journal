@@ -428,7 +428,6 @@
         'These readings come from a Tempest weather station at my home in Brandon, Florida, updated every 5 minutes. ' +
         'Temperature, humidity, wind, pressure, rain, sunlight and lightning are measured here. The forecast comes from the Tempest forecast service; the UV index and air quality come from ' +
         '<a href="https://www.weatherapi.com/" rel="noopener" target="_blank">WeatherAPI.com</a>.<ul>' +
-        '<li>To protect my privacy, this page never shows my address, map position, or any station identifiers.</li>' +
         '<li>Sunrise and sunset are for Brandon in general.</li>' +
         '<li>The moon phase is calculated on this page. The moon pictures are drawn from a public-domain photo by NASA’s Lunar Reconnaissance Orbiter (NASA/GSFC/Arizona State University).</li>' +
         '<li>No cookies and no tracking.</li></ul></div></div>';
