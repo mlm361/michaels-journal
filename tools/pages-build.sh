@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
-# Cloudflare Pages build entry point for michaelreflects.com (JOURNAL-CSP-01 Phase 0).
+# Cloudflare Pages build entry point for michaelreflects.com (JOURNAL-CSP-01).
 #
 # The Pages dashboard runs: bash tools/pages-build.sh
-# This revision declares CSP_PHASE=none. The build steps below are the dashboard's
+# This revision declares CSP_PHASE=2a-report-only (Phase 2a: the policy in csp/phase2.policy
+# is sent as Content-Security-Policy-Report-Only). The build steps below are the dashboard's
 # baseline command recorded 2026-11-22 (docs/csp/phase0-baseline.md), unchanged.
 # Each later CSP phase edits this file and declares its own phase; the header gate
 # always runs, with no skip path. See docs/csp/phase0-baseline.md for the rollback.
 set -euo pipefail
 
-CSP_PHASE=none
+CSP_PHASE=2a-report-only
 
 # --- Baseline build (verbatim from the dashboard, one command per line) ---
 archive="$(mktemp)"
@@ -20,4 +21,4 @@ tar -xzf "$archive" -C "$zola_dir"
 "$zola_dir/zola" build
 
 # --- CSP header gate for this revision's declared phase (always runs) ---
-node tools/csp-headers-check.mjs "$CSP_PHASE" public/_headers
+node tools/csp-headers-check.mjs "$CSP_PHASE" public/_headers csp/phase2.policy

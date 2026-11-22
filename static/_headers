@@ -9,13 +9,14 @@
 # - X-Frame-Options: DENY (no one needs to embed this in a frame).
 # - Permissions-Policy: deny features the site never uses, including the
 #   privacy-hostile FLoC interest-cohort.
-# - CSP intentionally omitted from this pass — will be added in
-#   Content-Security-Policy-Report-Only mode in a follow-up commit
-#   once we've mapped every third-party script (Font Awesome kit,
-#   Tinylytics, GLightbox, Webmention.io, YouTube/Vimeo embeds,
-#   Cloudflare email obfuscation injection, theme-toggle inline scripts,
-#   and Bubbles.town). Bubbles will require the narrowly scoped additions
-#   `script-src https://bubbles.town` and `connect-src https://bubbles.town`.
+# - CSP (JOURNAL-CSP-01 Phase 2a, 2026-11-22): sent as
+#   Content-Security-Policy-Report-Only, so browsers report violations and block
+#   nothing. The value below must equal csp/phase2.policy exactly; the Pages build
+#   (tools/pages-build.sh, CSP_PHASE=2a-report-only) fails if it doesn't. Edit both
+#   together. Why each host is allowed: docs/csp/phase2a-report-only.md.
+#   Phase 2b switches the same policy to enforcing Content-Security-Policy.
+#   Pages Functions (reply pages, weather.json, deleted posts) are not covered by
+#   this file and keep their own headers.
 
 /*
   Strict-Transport-Security: max-age=15552000
@@ -23,3 +24,4 @@
   Referrer-Policy: strict-origin-when-cross-origin
   X-Content-Type-Options: nosniff
   Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), interest-cohort=()
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline' https://tinylytics.app https://townsquare.michaelreflects.com https://bubbles.town https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://townsquare.michaelreflects.com; img-src 'self' data: https://media.mitchelltribe.xyz https://img.youtube.com https://www.themoviedb.org https://cdn.uploads.micro.blog https://i.snap.as https://mitchelltribe.com https://scribbles.page https://cdn.bsky.app https://coverartarchive.org https://*.archive.org https://tinylytics.app https://mitchelltribe.social https://mitchelltribe.rodeo https://cdn.masto.host https://image.nostr.build https://avatars.webmention.io; media-src 'self' https://media.mitchelltribe.xyz; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://mitchelltribe.tube; connect-src 'self' https://tinylytics.app https://townsquare.michaelreflects.com wss://townsquare.michaelreflects.com https://api.listenbrainz.org https://coverartarchive.org https://bubbles.town; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests
