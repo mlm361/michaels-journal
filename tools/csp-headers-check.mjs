@@ -45,12 +45,20 @@ export function policyProblems(policyText) {
   if (body !== body.trim()) return ['policy file has leading or trailing spaces'];
   const problems = [];
   const seen = new Set();
-  for (const directive of body.split('; ')) {
-    const name = directive.split(' ')[0].toLowerCase();
+  // Split on the semicolon itself (CSP allows optional whitespace around it), so a duplicate
+  // can't hide behind a missing space; then require the canonical '; ' separator as well.
+  const parts = body.split(';').map((part) => part.trim());
+  for (const directive of parts) {
+    if (directive === '') {
+      problems.push('policy has an empty directive');
+      continue;
+    }
+    const name = directive.split(/\s+/)[0].toLowerCase();
     if (!/^[a-z-]+$/.test(name)) problems.push(`policy has a malformed directive: "${directive}"`);
     else if (seen.has(name)) problems.push(`policy names ${name} twice`);
     seen.add(name);
   }
+  if (body !== parts.join('; ')) problems.push("policy must separate directives with exactly '; '");
   return problems;
 }
 

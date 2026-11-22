@@ -99,6 +99,15 @@ test('JOURNAL-CSP-01 Phase 2a: the 2a gate refuses every mismatch', () => {
   refuse(ok, '', /policy file is empty/, 'empty policy file');
   refuse(ok, "default-src 'self';\nimg-src 'self'\n", /single line/, 'two-line policy file');
   refuse(ok, "default-src 'self'; default-src 'none'\n", /twice/, 'duplicate directive');
+  // Sally 2a review: a duplicate right after a semicolon with no space, header bytes matching the policy.
+  const dup = "default-src 'self';default-src 'none'; object-src 'none'";
+  refuse(`/*\n  Content-Security-Policy-Report-Only: ${dup}\n`, dup + '\n', /names default-src twice/,
+    'duplicate after a semicolon without a space');
+  refuse(`/*\n  Content-Security-Policy-Report-Only: ${dup}\n`, dup + '\n', /exactly '; '/, 'noncanonical separator');
+  const gap = "default-src 'self';img-src 'self'";
+  refuse(`/*\n  Content-Security-Policy-Report-Only: ${gap}\n`, gap + '\n', /exactly '; '/, 'missing space after a semicolon');
+  const empty = "default-src 'self'; ; img-src 'self'";
+  refuse(`/*\n  Content-Security-Policy-Report-Only: ${empty}\n`, empty + '\n', /empty directive/, 'empty directive');
   assert.deepEqual(checkHeaders(null, '2a-report-only', policy), ['public/_headers is missing']);
 });
 
