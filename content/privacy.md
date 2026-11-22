@@ -44,9 +44,8 @@ The site's fonts (Montserrat and Raleway) are served from this site itself, so l
 
 Some pages load small third-party assets or scripts for presentation and site features:
 
-- [Font Awesome](https://fontawesome.com/) provides some icons.
-- [Simple Icons](https://simpleicons.org/) provides several social and service icons.
-- [jsDelivr](https://www.jsdelivr.com/) is used on specific pages for JavaScript/CSS libraries such as Chart.js and GLightbox.
+- Icons from [Font Awesome](https://fontawesome.com/) (CC BY 4.0), [Simple Icons](https://simpleicons.org/) (CC0) and the official brand assets of Mastodon, Bluesky, Write.as, Pixelfed and Micro.blog are served from this site itself. The brand logos belong to their owners.
+- The Chart.js and GLightbox libraries are also served from this site itself, so loading them sends nothing to a CDN.
 
 These services are used for display and site functionality. I do not use them for advertising, behavioral profiling, or selling visitor data.
 

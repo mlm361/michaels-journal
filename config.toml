@@ -101,8 +101,6 @@ display = "Blogger"
 uri = "https://michaelleemitchell.net"
 color = "#FF5722"
 
-[extra.font_awesome]
-kit = "6ab1c683ab"
 
 # TownSquare realtime presence widget (self-hosted). Mounted site-wide in the footer
 # and as a full /townsquare/ page. site_key = the registered site on the instance;

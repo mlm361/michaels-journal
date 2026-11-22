@@ -22,7 +22,7 @@
         <a class="iw-share-bsky"
            href="https://bsky.app/intent/compose?text={{ bluesky_text | urlencode }}"
            target="_blank" rel="noopener noreferrer">
-          <img src="https://cdn.simpleicons.org/bluesky/ffffff" alt=""> Share on Bluesky
+          <img src="{{ config.base_url }}/icons/brands/bluesky.svg" alt="" class="icon-white"> Share on Bluesky
         </a>
         <button class="iw-share-btn iw-share-native" type="button" data-share-url="{{ share_url }}" data-share-title="{{ share_title }}"><i class="fas fa-arrow-up-from-bracket"></i> Share</button>
       </div>
