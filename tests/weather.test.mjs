@@ -229,6 +229,51 @@ test('ordering is best-effort for one publisher: a stale KV read cannot stop an 
   const source = read('functions/weather.json.js');
   assert.match(source, /Ordering is best-effort for a single publisher/);
   assert.match(source, /last write wins/);
+  assert.match(source, /strictly older than the value it reads from KV; an equal time is accepted/);
+});
+
+/* ---------------- WX-01 R2 rework (Sally review 2026-11-21 20:45) ---------------- */
+
+test('an equal observation time is accepted and replaces the stored snapshot', async () => {
+  const first = sample();
+  const kv = memoryKv(JSON.stringify(first));
+  const same = sample({ observed: first.observed, now: { ...first.now, temp_f: 79 } });
+  assert.equal((await onRequestPost({ request: post(same, TOKEN), env: { WEATHER_KV: kv, WEATHER_PUSH_TOKEN: TOKEN } })).status, 200);
+  assert.equal(JSON.parse(kv.store.get('current')).now.temp_f, 79);
+});
+
+test('the condition label is a fixed word: other text is refused at ingest and blanked on read', async () => {
+  for (const label of ['Light rain shower', 'Rain likely', 'Thunderstorms Likely Near 123 Main St', 'partly cloudy']) {
+    const kv = memoryKv();
+    const r = await onRequestPost({ request: post(withNow({ label }), TOKEN), env: { WEATHER_KV: kv, WEATHER_PUSH_TOKEN: TOKEN } });
+    assert.equal(r.status, 400, label);
+    assert.equal(kv.store.size, 0, label);
+  }
+  for (const label of ['', 'Sunny', 'Partly cloudy', 'Cloudy', 'Rain', 'Thunderstorm', 'Fog', 'Clear']) {
+    assert.equal(validSnapshot(withNow({ label })), true, label);
+  }
+  // A stored value from older code: served with label '' so the widget shows its own word for `cond`.
+  const r = await onRequestGet({ request: get(), env: { WEATHER_KV: memoryKv(JSON.stringify(withNow({ label: 'Rain likely' }))) } });
+  assert.equal(r.status, 200);
+  const body = await r.json();
+  assert.equal(body.now.label, '');
+  assert.equal(body.now.cond, 'partly');
+});
+
+test('real publisher output (shared contract fixture) passes the endpoint schema unchanged', async () => {
+  const fixture = JSON.parse(read('tests/fixtures/publisher-contract-snapshots.json'));
+  assert.deepEqual(Object.keys(fixture).sort(), ['lightning_180km', 'lower', 'ordinary', 'upper']);
+  for (const [name, snap] of Object.entries(fixture)) {
+    assert.equal(validSnapshot(snap), true, name);
+    const kv = memoryKv();
+    const r = await onRequestPost({ request: post(snap, TOKEN), env: { WEATHER_KV: kv, WEATHER_PUSH_TOKEN: TOKEN } });
+    assert.equal(r.status, 200, name);
+    assert.deepEqual(JSON.parse(kv.store.get('current')), snap, name);
+  }
+  // Sally's case: 180 km would be 112 mi, outside the agreed 0 to 100 mi, so the publisher sends null.
+  assert.equal(fixture.lightning_180km.now.lightning_closest_mi, null);
+  assert.equal(fixture.upper.now.lightning_closest_mi, null);
+  assert.equal(validSnapshot({ ...fixture.lightning_180km, now: { ...fixture.lightning_180km.now, lightning_closest_mi: 112 } }), false);
 });
 
 /* ---------------- widget script ---------------- */

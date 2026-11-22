@@ -9,10 +9,15 @@
 // The public schema is enforced here, not only at home: POST stores only the projection of SCHEMA, and GET
 // projects the stored value again, so a field the privacy pages promise to omit can never be served.
 //
-// Ordering is best-effort for a single publisher. Workers KV has no compare-and-swap and a read can be
-// served from a cache up to about 60 s old, so the "not older than stored" check refuses a replayed or
-// stale push but cannot order two overlapping pushes (last write wins). The home publisher sends one
-// request at a time, every 5 minutes, so overlap does not happen in normal operation.
+// Ordering is best-effort for a single publisher. POST refuses (409) a snapshot whose `observed` time is
+// strictly older than the value it reads from KV; an equal time is accepted and replaces it. That read is
+// itself best-effort: Workers KV has no compare-and-swap and a read can be served from a cache up to about
+// 60 s old, so a stale read can let an older snapshot through, and between two overlapping pushes
+// last write wins. The home publisher sends one request at a time, every 5 minutes, so overlap does not happen in
+// normal operation.
+//
+// Value ranges below are agreed with the publisher (PUBLIC_LIMITS in publisher.py), which sends null for
+// a derived value outside its range. The label is a fixed word for the condition, never upstream text.
 
 const KEY = 'current';
 const MAX_BYTES = 64 * 1024;
@@ -32,6 +37,9 @@ const EPOCH = num(1e9, 1e10, true);
 const TEMP = num(-60, 140);
 const COND = oneOf(...CONDS);
 const PCT = num(0, 100);
+// The publisher's LABELS (the widget's own words). On read, an unfamiliar stored label becomes '' so the
+// widget falls back to its label for `cond`; ingest refuses it.
+const LABEL = { ...oneOf('', 'Sunny', 'Partly cloudy', 'Cloudy', 'Rain', 'Thunderstorm', 'Fog', 'Clear'), fallback: '' };
 
 const SCHEMA = obj({
   v: oneOf(1),
@@ -40,7 +48,7 @@ const SCHEMA = obj({
   place: oneOf(PLACE),
   now: obj({
     cond: COND,
-    label: { t: 'str', re: /^[^\u0000-\u001f\u007f]{0,40}$/u },
+    label: LABEL,
     is_day: BOOL,
     temp_f: opt(TEMP),
     feels_f: opt(num(-80, 160)),
@@ -83,8 +91,9 @@ function project(spec, value, strict) {
       if (typeof value !== 'boolean') throw new Invalid();
       return value;
     case 'enum':
-      if (!spec.values.includes(value)) throw new Invalid();
-      return value;
+      if (spec.values.includes(value)) return value;
+      if (!strict && Object.hasOwn(spec, 'fallback')) return spec.fallback;
+      throw new Invalid();
     case 'str':
       if (typeof value !== 'string' || !spec.re.test(value)) throw new Invalid();
       return value;
