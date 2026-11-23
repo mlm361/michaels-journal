@@ -11,6 +11,12 @@ tags = [ "personal", "pets",]
 [extra]
 stats_word_count = 233
 stats_reading_time = 2
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/117668320691817505"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3n2zbi3we5a24"
+sharkey = "https://mitchelltribe.rodeo/notes/atxgfb1oxbcl009n"
+nostr = "https://jumble.social/nevent1qqsrr6nkptf3lgwjpzu8p9z70de8yd39xu44k44wq7tus5a788x6lqqpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflc6hzajz"
 +++
 
 <data class="p-summary" value="One of our two cats has passed away. He was almost 14 years old. We took him to the vet after he stopped eating this weekend and became lethargic. The vet advised that it would probably be best to put him down, as they couldn&#x27;t guarantee..."></data>
