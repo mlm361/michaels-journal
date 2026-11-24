@@ -1,0 +1,19 @@
+# JOURNAL-CSP-01 Phase 2b: retention for the CSP report aggregates. Michael deploys this Worker.
+# Secret (set once, never in this file): KUMA_PUSH_URL.
+name = "csp-retention"
+main = "index.js"
+compatibility_date = "2025-07-05"
+workers_dev = false
+
+[triggers]
+crons = ["17 3 * * *"]  # daily, 03:17 UTC
+
+[[d1_databases]]
+binding = "PREVIEW_DB"
+database_name = "csp-reports-preview"
+database_id = "58866c8d-c3d5-4d42-9112-a7724397a274"
+
+[[d1_databases]]
+binding = "PROD_DB"
+database_name = "csp-reports-prod"
+database_id = "d8eb48c2-693a-4c08-ae47-de1473ccefaf"
