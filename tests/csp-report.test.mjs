@@ -7,7 +7,7 @@ import path from 'node:path';
 import test from 'node:test';
 import { DatabaseSync } from 'node:sqlite';
 
-import { DAILY_KEYS, _clearCache, handle, itemBucket, parseLegacy, parseModern, sha16 } from '../functions/_shared/csp-report-core.js';
+import { DAILY_KEYS, _clearCache, handle, itemBucket, parseLegacy, parseModern, policyId, sha16 } from '../functions/_shared/csp-report-core.js';
 
 const root = path.resolve(import.meta.dirname, '..');
 const SCHEMA = fs.readFileSync(path.join(root, 'csp/d1-schema.sql'), 'utf8');
@@ -171,6 +171,25 @@ test('collector: attribution by position, handlers separately, ambiguity reporte
   assert.equal(itemBucket(pos, 'script-src-elem', 99, 1), 'ambiguous');
   assert.equal(itemBucket(null, 'script-src-elem', 12, 9), 'ambiguous');
   assert.equal(itemBucket(pos, 'script-src-elem', 'x', 9), 'ambiguous');
+});
+
+test('collector: Firefox absolute report-uri in original-policy matches on our own hosts only', async () => {
+  const firefox = (policy, host) => policy.replace('report-uri /api/csp-report', `report-uri https://${host}/api/csp-report`);
+  const meta = { canonical_host: 'michaelreflects.com', preview_host: 'abc.michaels-journal.pages.dev',
+    policies: { 'enforce-2b': ENFORCE, 'ro-phase3': RO } };
+  assert.equal(policyId(meta, firefox(ENFORCE, 'michaelreflects.com'), 'michaelreflects.com'), 'enforce-2b');
+  assert.equal(policyId(meta, firefox(RO, 'abc.michaels-journal.pages.dev'), 'abc.michaels-journal.pages.dev'), 'ro-phase3');
+  assert.equal(policyId(meta, firefox(ENFORCE, 'evil.example'), 'michaelreflects.com'), null, 'a foreign host never matches');
+  assert.equal(policyId(meta, firefox(ENFORCE, 'michaelreflects.com').replace('https://', 'http://'), 'michaelreflects.com'), null, 'https only');
+  assert.equal(policyId(meta, ENFORCE.replace("img-src", "img-src https://extra.example"), 'michaelreflects.com'), null, 'other changes still refuse');
+
+  // End to end, Firefox's legacy body as captured on the preview (fixture-legacy) and on production.
+  const e = await env();
+  await handle(post({ 'csp-report': { 'blocked-uri': 'https://evil.example/x.png?q=1', 'column-number': 20, disposition: 'enforce',
+    'document-uri': `https://michaelreflects.com${PAGE}`, 'effective-directive': 'img-src', 'line-number': 164,
+    'original-policy': firefox(ENFORCE, 'michaelreflects.com'), referrer: '', 'source-file': 'resource', 'status-code': 200, 'violated-directive': 'img-src' } }), e);
+  const rows = e.CSP_REPORTS.rows();
+  assert.deepEqual(rows.map((r) => [r.policy_id, r.directive, r.blocked, r.page_id, r.n]), [['enforce-2b', 'img-src', 'other-external', PAGE, 1]]);
 });
 
 test('collector: handlers by sample hash first (Chromium reports them at 0:0 or a wrong position)', async () => {

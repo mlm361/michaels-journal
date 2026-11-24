@@ -123,8 +123,24 @@ export function parseLegacy(json) {
 }
 
 // ---- buckets ----
-export function policyId(meta, policy) {
-  const text = squash(policy);
+// Firefox reports `original-policy` with report-uri made absolute
+// (`report-uri https://<this host>/api/csp-report`). A report-uri value on one of our own hosts is
+// compared as its path; any other host stays as written, so it can't match a known policy.
+function ownReportUri(text, ownHosts) {
+  return text.replace(/(^|;\s*)(report-uri)((?:\s+[^\s;]+)+)/gi, (all, lead, name, list) =>
+    lead + name + list.replace(/\S+/g, (token) => {
+      try {
+        const u = new URL(token);
+        return u.protocol === 'https:' && ownHosts.includes(u.host) ? u.pathname : token;
+      } catch {
+        return token;
+      }
+    }));
+}
+
+export function policyId(meta, policy, requestHost = null) {
+  const own = [requestHost, meta.canonical_host, meta.preview_host].filter(Boolean);
+  const text = ownReportUri(squash(policy), own);
   for (const [id, value] of Object.entries(meta.policies || {})) if (squash(value) === text) return id;
   return null;
 }
@@ -199,7 +215,7 @@ export function utcDay(now = new Date()) {
 
 // One aggregate key per record, or null to drop it.
 export async function normalize(record, ctx) {
-  const id = policyId(ctx.meta, record.policy);
+  const id = policyId(ctx.meta, record.policy, ctx.host);
   if (!id) return null;
   const expected = POLICY_DISPOSITION[id];
   const disposition = record.disposition == null ? expected : String(record.disposition).toLowerCase();
