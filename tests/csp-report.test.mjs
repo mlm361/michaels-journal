@@ -1,6 +1,7 @@
 // JOURNAL-CSP-01 Phase 2b, part B: the CSP violation collector against a D1 stand-in on
 // node:sqlite (same SQL, real transactions). Preview D1 is exercised by the browser suite.
 import assert from 'node:assert/strict';
+import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
@@ -40,6 +41,8 @@ class D1 {
 }
 
 const PAGE = '/blog/hello/';
+// 12 hex of the SHA-256, as tools/csp-inline-inventory.mjs names inline handlers.
+const h12 = (value) => crypto.createHash('sha256').update(value).digest('hex').slice(0, 12);
 async function assets({ mode = 'production', previewHost = null, policies } = {}) {
   const files = {
     '/__csp/meta.json': {
@@ -49,7 +52,8 @@ async function assets({ mode = 'production', previewHost = null, policies } = {}
     },
     '/__csp/routes.json': ['/', PAGE, '/__csp-fixture/legacy/'],
     // [id, line, col, endLine]
-    [`/__csp/pos/${await sha16(PAGE)}.json`]: [['handler:body.onload:abc', 10, 3, 10], ['base.1', 12, 9, 12], ['base.2', 20, 9, 21], ['webmentions.1', 30, 1, 30], ['content:feed', 30, 40, 30]],
+    [`/__csp/pos/${await sha16(PAGE)}.json`]: [['handler:body.onload:abc', 10, 3, 10], ['base.1', 12, 9, 12], ['base.2', 20, 9, 21], ['webmentions.1', 30, 1, 30], ['content:feed', 30, 40, 30],
+      [`handler:button.onclick:${h12('toggleNav()')}`, 40, 5, 40]],
   };
   return {
     fetch: async (req) => {
@@ -167,6 +171,28 @@ test('collector: attribution by position, handlers separately, ambiguity reporte
   assert.equal(itemBucket(pos, 'script-src-elem', 99, 1), 'ambiguous');
   assert.equal(itemBucket(null, 'script-src-elem', 12, 9), 'ambiguous');
   assert.equal(itemBucket(pos, 'script-src-elem', 'x', 9), 'ambiguous');
+});
+
+test('collector: handlers by sample hash first (Chromium reports them at 0:0 or a wrong position)', async () => {
+  const nav = `handler:button.onclick:${h12('toggleNav()')}`;
+  const same = h12('go()');
+  const pos = [[nav, 40, 5, 40], [`handler:a.onclick:${same}`, 50, 1, 50], [`handler:div.onclick:${same}`, 51, 1, 51], ['base.1', 12, 9, 12]];
+  assert.equal(itemBucket(pos, 'script-src-attr', 0, 0, h12('toggleNav()')), nav, 'line 0 still attributes');
+  assert.equal(itemBucket(pos, 'script-src-attr', 12, 9, h12('toggleNav()')), nav, 'sample beats a wrong position');
+  assert.equal(itemBucket(pos, 'script-src-attr', 0, 0, same), 'ambiguous', 'two ids with one value');
+  assert.equal(itemBucket(pos, 'script-src-attr', 50, 1, same), `handler:a.onclick:${same}`, 'then position decides');
+  assert.equal(itemBucket(pos, 'script-src-attr', 0, 0, h12('unknown()')), 'ambiguous');
+  assert.equal(itemBucket(pos, 'script-src-elem', 0, 0, h12('toggleNav()')), 'ambiguous', 'scripts never use the sample');
+  assert.equal(itemBucket(pos, 'script-src-attr', 0, 0, 'not-hex'), 'ambiguous');
+
+  // End to end: both wire formats, the sample is used and not stored.
+  const e = await env();
+  await handle(post([modern({ effectiveDirective: 'script-src-attr', lineNumber: 0, columnNumber: 0, sample: 'toggleNav()' })], { type: 'application/reports+json' }), e);
+  await handle(post({ 'csp-report': { 'document-uri': `https://michaelreflects.com${PAGE}`, 'effective-directive': 'script-src-attr',
+    'blocked-uri': 'inline', 'original-policy': RO, disposition: 'report', 'line-number': 793, 'column-number': 35, 'script-sample': 'toggleNav()' } }), e);
+  const rows = e.CSP_REPORTS.rows();
+  assert.deepEqual(rows.map((r) => [r.policy_id, r.directive, r.blocked, r.page_id, r.item_id, r.n]), [['ro-phase3', 'script-src-attr', 'inline', PAGE, nav, 2]]);
+  assert.doesNotMatch(JSON.stringify(rows), /toggleNav|\(\)/);
 });
 
 test('collector: the two parsers accept only their own schema', () => {

@@ -4,6 +4,7 @@
 // What is stored: per UTC day, per policy, a count for a fixed-bucket key. Never a URL, query,
 // referrer, user agent, IP, sample text or sample hash. Every value is either a fixed word, a
 // host named in the shipped policies, a canonical page path from the build, or an inventory id.
+// An inline handler's sample is hashed in memory only, to pick its inventory id (see itemBucket).
 //
 // Data from the build (tools/csp-inline-inventory.mjs emit), read through env.ASSETS:
 //   /__csp/meta.json      mode, canonical/preview host, the known policies, the policy hosts
@@ -101,6 +102,7 @@ export function parseModern(json) {
     disposition: r.body.disposition,
     line: r.body.lineNumber,
     column: r.body.columnNumber,
+    sample: r.body.sample,
   }));
 }
 
@@ -116,6 +118,7 @@ export function parseLegacy(json) {
     disposition: r.disposition,
     line: r['line-number'],
     column: r['column-number'],
+    sample: r['script-sample'],
   }];
 }
 
@@ -165,10 +168,20 @@ export function pageBucket(documentUrl, origin, routes) {
   return routes.has(url.pathname) ? url.pathname : 'other';
 }
 
-// The inventory item an inline violation belongs to, by position (D5b).
-export function itemBucket(positions, kind, line, column) {
+// The inventory item an inline violation belongs to (D5b).
+// Handlers first by sample: Chromium reports a handler's violation at 0:0 or at the position of
+// whatever script was running, never at the attribute. Inventory handler ids end in 12 hex of the
+// attribute value's SHA-256, and the browser's sample is that value (up to 40 characters), so
+// `handlerHash` (12 hex of the sample's SHA-256) picks the id when exactly one id on the page has it.
+// Longer handlers and anything else fall back to position.
+export function itemBucket(positions, kind, line, column, handlerHash = null) {
+  if (!Array.isArray(positions)) return 'ambiguous';
+  if (kind === 'script-src-attr' && typeof handlerHash === 'string' && /^[0-9a-f]{12}$/.test(handlerHash)) {
+    const ids = new Set(positions.map(([id]) => id).filter((id) => id.startsWith('handler:') && id.endsWith(':' + handlerHash)));
+    if (ids.size === 1) return [...ids][0];
+  }
   const L = Number(line);
-  if (!Array.isArray(positions) || !Number.isInteger(L) || L < 1) return 'ambiguous';
+  if (!Number.isInteger(L) || L < 1) return 'ambiguous';
   const wanted = kind === 'script-src-attr' ? 'handler:' : null;
   const candidates = positions.filter(([id, start, , end]) => (wanted ? id.startsWith(wanted) : !id.startsWith('handler:')) && start <= L && L <= end);
   if (candidates.length === 1) return candidates[0][0];
@@ -196,7 +209,9 @@ export async function normalize(record, ctx) {
   const page_id = pageBucket(record.document, ctx.origin, ctx.routes);
   let item_id = 'none';
   if (blocked === 'inline' && (directive === 'script-src-elem' || directive === 'script-src-attr')) {
-    item_id = page_id === 'other' ? 'ambiguous' : itemBucket(await ctx.positions(page_id), directive, record.line, record.column);
+    const handlerHash = directive === 'script-src-attr' && typeof record.sample === 'string' && record.sample
+      ? (await sha16(record.sample)).slice(0, 12) : null;
+    item_id = page_id === 'other' ? 'ambiguous' : itemBucket(await ctx.positions(page_id), directive, record.line, record.column, handlerHash);
   }
   return { day: ctx.day, policy_id: id, disposition, directive, blocked, page_id, item_id };
 }
