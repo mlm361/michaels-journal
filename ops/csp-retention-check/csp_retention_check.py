@@ -10,7 +10,12 @@ Configuration comes from the environment (systemd EnvironmentFile, 0600):
   CSP_D1_READ_TOKEN   Cloudflare token with D1 Read only (never logged)
   CSP_CF_ACCOUNT_ID   Cloudflare account id
   CSP_PROD_D1_ID      csp-reports-prod database id
-  CSP_KUMA_PUSH_URL   http://127.0.0.1:3001/api/push/<token> (never logged; any query is replaced)
+  CSP_KUMA_PUSH_URL   exactly http://127.0.0.1:3001/api/push/<token> (never logged; any query is
+                      replaced)
+
+UP needs a real receipt: statement success, cron 17 3 * * *, scheduled at 03:17:00 UTC, completed
+0-15 min after that, keep_from = scheduled day - 30, nothing over 5 min in the future, and the
+SCHEDULED run under 26 h old. Redirects are never followed, and 401/403 bodies are never read.
 
 Messages carry reason codes only, never a token, a response body or headers. Standard library only.
 """
@@ -26,9 +31,13 @@ import urllib.request
 from datetime import date, datetime, timedelta, timezone
 
 API = 'https://api.cloudflare.com/client/v4'
-SQL = 'SELECT last_ok_at, scheduled_at, keep_from FROM retention_status WHERE id = 1'
-MAX_AGE = timedelta(hours=26)
+SQL = 'SELECT last_ok_at, scheduled_at, cron, keep_from FROM retention_status WHERE id = 1'
+CRON = '17 3 * * *'           # workers/csp-retention/wrangler.toml
+RETENTION_DAYS = 30           # workers/csp-retention/index.js RETENTION_DAYS
+MAX_AGE = timedelta(hours=26)  # measured from the SCHEDULED run, so an old run can't mask a missed one
 FUTURE_SLACK = timedelta(minutes=5)
+MAX_RUN = timedelta(minutes=15)  # scheduled -> completion; a Cron Trigger invocation is far shorter
+KUMA_HOST, KUMA_PORT = '127.0.0.1', 3001
 D1_TIMEOUT = 15
 PUSH_TIMEOUT = 10
 REQUIRED = ('CSP_D1_READ_TOKEN', 'CSP_CF_ACCOUNT_ID', 'CSP_PROD_D1_ID', 'CSP_KUMA_PUSH_URL')
@@ -56,9 +65,12 @@ def decide(http_status, payload, now):
     if not isinstance(payload, dict) or payload.get('success') is not True:
         return 'down', 'api_error'
     try:
-        rows = payload['result'][0]['results']
+        statement = payload['result'][0]
+        rows = statement['results']
     except (KeyError, IndexError, TypeError):
         return 'down', 'malformed'
+    if not isinstance(statement, dict) or statement.get('success') is not True:
+        return 'down', 'api_error'
     if not isinstance(rows, list):
         return 'down', 'malformed'
     if not rows:
@@ -66,22 +78,60 @@ def decide(http_status, payload, now):
     row = rows[0] if isinstance(rows[0], dict) else {}
     last_ok = _parse_utc(row.get('last_ok_at'))
     scheduled = _parse_utc(row.get('scheduled_at'))
-    try:
-        date.fromisoformat(str(row.get('keep_from')))
-    except ValueError:
-        return 'down', 'malformed'
     if last_ok is None or scheduled is None:
         return 'down', 'malformed'
-    age = now - last_ok
-    if age < -FUTURE_SLACK:
+    if row.get('cron') != CRON:
+        return 'down', 'cron'
+    # The scheduled time must be a real instant of the cron (03:17:00 UTC) ...
+    if (scheduled.hour, scheduled.minute, scheduled.second, scheduled.microsecond) != (3, 17, 0, 0):
+        return 'down', 'receipt'
+    # ... completed after it was scheduled, within one invocation ...
+    if not (timedelta(0) <= last_ok - scheduled <= MAX_RUN):
+        return 'down', 'receipt'
+    # ... with the Worker's cutoff rule: keep_from = scheduled UTC day - RETENTION_DAYS.
+    if row.get('keep_from') != (scheduled.date() - timedelta(days=RETENTION_DAYS)).isoformat():
+        return 'down', 'keep_from'
+    if last_ok - now > FUTURE_SLACK or scheduled - now > FUTURE_SLACK:
         return 'down', 'future'
+    age = now - scheduled
     if age >= MAX_AGE:
         return 'down', f'stale_{int(age.total_seconds() // 3600)}h'
-    return 'up', f'ok age {max(0, int(age.total_seconds() // 60))}m run {scheduled.strftime("%Y-%m-%dT%H:%MZ")}'
+    return 'up', f'ok run {scheduled.strftime("%Y-%m-%dT%H:%MZ")} age {max(0, int(age.total_seconds() // 60))}m'
 
 
-def query_d1(env, opener=urllib.request.urlopen):
+class _NoRedirect(urllib.request.HTTPRedirectHandler):
+    """Never follow a redirect: the D1 token and the push token stay bound to their fixed endpoints."""
+
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        return None
+
+
+_OPENER = urllib.request.build_opener(_NoRedirect)
+
+
+def _read_bounded(resp_or_error):
+    try:
+        return resp_or_error.read(65536)
+    except Exception:  # noqa: BLE001 - an unreadable body is treated as no body
+        return None
+
+
+def kuma_url_ok(base):
+    """The push destination must be the documented loopback Kuma: http://127.0.0.1:3001/api/push/<token>."""
+    try:
+        parts = urllib.parse.urlsplit(base)
+        port = parts.port
+    except ValueError:
+        return False
+    token = parts.path[len('/api/push/'):]
+    return (parts.scheme == 'http' and parts.hostname == KUMA_HOST and port == KUMA_PORT
+            and parts.username is None and parts.password is None
+            and parts.path.startswith('/api/push/') and bool(token) and '/' not in token)
+
+
+def query_d1(env, opener=None):
     """POST the fixed query. Returns (http_status, payload or None). Network errors -> (None, None)."""
+    opener = opener or _OPENER.open
     url = f"{API}/accounts/{env['CSP_CF_ACCOUNT_ID']}/d1/database/{env['CSP_PROD_D1_ID']}/query"
     req = urllib.request.Request(url, data=json.dumps({'sql': SQL}).encode(), method='POST', headers={
         'Authorization': 'Bearer ' + env['CSP_D1_READ_TOKEN'],
@@ -90,11 +140,19 @@ def query_d1(env, opener=urllib.request.urlopen):
     })
     try:
         with opener(req, timeout=D1_TIMEOUT) as resp:
-            status, body = resp.status, resp.read(65536)
+            status = resp.status
+            body = _read_bounded(resp)
+            if body is None:
+                return None, None
     except urllib.error.HTTPError as exc:
-        status, body = exc.code, exc.read(65536)
-    except (urllib.error.URLError, OSError, TimeoutError):
+        status = exc.code
+        if status in (401, 403):  # decided from the status alone; the body is never read
+            return status, None
+        body = _read_bounded(exc)
+    except (urllib.error.URLError, OSError, TimeoutError, ValueError):
         return None, None
+    if body is None:
+        return status, None
     try:
         return status, json.loads(body)
     except ValueError:
@@ -108,32 +166,39 @@ def push_url(base, status, msg):
     return urllib.parse.urlunsplit((parts.scheme, parts.netloc, parts.path, query, ''))
 
 
-def push(base, status, msg, opener=urllib.request.urlopen):
+def push(base, status, msg, opener=None):
+    opener = opener or _OPENER.open
     try:
         with opener(push_url(base, status, msg), timeout=PUSH_TIMEOUT) as resp:
             return 200 <= resp.status < 300
-    except (urllib.error.URLError, OSError, TimeoutError):
+    except (urllib.error.URLError, OSError, TimeoutError, ValueError):
         return False
 
 
 def fixture(kind, now):
-    ages = {'fresh': timedelta(hours=1), 'stale': timedelta(hours=27)}
-    stamp = (now - ages[kind]).strftime('%Y-%m-%dT%H:%M:%S.000Z')
-    return 200, {'success': True, 'result': [{'results': [
-        {'last_ok_at': stamp, 'scheduled_at': stamp, 'keep_from': '2026-01-01'}]}]}
+    """A canned, real-shaped D1 answer whose receipt is about 27 h old (alert-path proof only)."""
+    assert kind == 'stale'
+    day = (now - timedelta(hours=27)).date()
+    scheduled = datetime(day.year, day.month, day.day, 3, 17, tzinfo=timezone.utc)
+    if now - scheduled < MAX_AGE:
+        scheduled -= timedelta(days=1)
+    done = scheduled + timedelta(seconds=4)
+    return 200, {'success': True, 'errors': [], 'messages': [], 'result': [{'success': True, 'meta': {}, 'results': [{
+        'last_ok_at': done.strftime('%Y-%m-%dT%H:%M:%S.000Z'), 'scheduled_at': scheduled.strftime('%Y-%m-%dT%H:%M:%S.000Z'),
+        'cron': CRON, 'keep_from': (scheduled.date() - timedelta(days=RETENTION_DAYS)).isoformat()}]}]}
 
 
-def main(argv=None, env=None, now=None, opener=urllib.request.urlopen):
+def main(argv=None, env=None, now=None, opener=None):
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    ap.add_argument('--fixture', choices=('fresh', 'stale'),
-                    help='skip D1 and push the decision for a canned stamp (alert-path proof)')
+    ap.add_argument('--fixture', choices=('stale',),
+                    help='skip D1 and push DOWN for a canned, about 27 h old receipt (alert-path proof only)')
     ap.add_argument('--dry-run', action='store_true', help='print the decision; do not push')
     args = ap.parse_args(argv)
     env = os.environ if env is None else env
     now = now or datetime.now(timezone.utc)
     missing = [k for k in REQUIRED if not env.get(k)]
-    if 'CSP_KUMA_PUSH_URL' in missing:
-        print('csp-retention-check: CSP_KUMA_PUSH_URL is not set', file=sys.stderr)
+    if 'CSP_KUMA_PUSH_URL' in missing or not kuma_url_ok(env['CSP_KUMA_PUSH_URL']):
+        print('csp-retention-check: CSP_KUMA_PUSH_URL must be http://127.0.0.1:3001/api/push/<token>', file=sys.stderr)
         return 2
     if missing:
         status, reason = 'down', 'config'
