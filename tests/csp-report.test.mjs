@@ -295,3 +295,67 @@ test('collector: a batch is all-or-nothing', async () => {
   await assert.rejects(() => d1.batch([good, bad]));
   assert.deepEqual(d1.rows(), []);
 });
+
+// Sally 2b r1 finding 1: a failed read of build data must be visible and must not stick.
+// failing: path -> how many times to fail, and how ('503', 'throw' or 'garbage').
+async function flaky(failing, opts = {}) {
+  const real = await assets(opts);
+  const left = { ...failing };
+  const fetches = {};
+  return {
+    fetches,
+    fetch: async (req) => {
+      const p = new URL(req.url).pathname;
+      fetches[p] = (fetches[p] || 0) + 1;
+      const f = left[p];
+      if (f && f.times > 0) {
+        f.times--;
+        if (f.how === 'throw') throw new Error('transient');
+        if (f.how === 'garbage') return new Response('{"not":"meta"}', { status: 200 });
+        return new Response('busy', { status: 503 });
+      }
+      return real.fetch(req);
+    },
+  };
+}
+
+test('collector: a transient meta or routes read failure returns 503, writes nothing and recovers', async () => {
+  for (const file of ['/__csp/meta.json', '/__csp/routes.json']) {
+    for (const how of ['503', 'throw', 'garbage']) {
+      _clearCache();
+      const ASSETS = await flaky({ [file]: { times: 1, how } });
+      const e = { ASSETS, CSP_REPORTS: new D1() };
+      const first = await handle(post(legacy()), e);
+      assert.equal(first.status, 503, `${file} ${how}: failure is observable`);
+      assert.equal(first.headers.get('Retry-After'), '60');
+      assert.equal(e.CSP_REPORTS.batches, 0, `${file} ${how}: nothing written`);
+      assert.equal((await handle(post(legacy()), e)).status, 204);
+      assert.equal((await handle(post(legacy()), e)).status, 204);
+      assert.equal(e.CSP_REPORTS.batches, 2, `${file} ${how}: the next requests write`);
+      assert.equal(e.CSP_REPORTS.rows()[0].n, 2);
+      assert.equal(ASSETS.fetches[file], 2, `${file} ${how}: retried once, then cached`);
+    }
+  }
+});
+
+test('collector: a disabled host still answers 204 without writing, and needs no routes read', async () => {
+  _clearCache();
+  const ASSETS = await flaky({ '/__csp/routes.json': { times: 99, how: '503' } });
+  const e = { ASSETS, CSP_REPORTS: new D1() };
+  assert.equal((await handle(post(legacy(), { host: 'abc12345.michaels-journal.pages.dev' }), e)).status, 204);
+  assert.equal(e.CSP_REPORTS.batches, 0);
+  assert.equal(ASSETS.fetches['/__csp/routes.json'], undefined);
+});
+
+test('collector: a failed position read falls back to ambiguous and is not cached', async () => {
+  _clearCache();
+  const pos = `/__csp/pos/${await sha16(PAGE)}.json`;
+  const ASSETS = await flaky({ [pos]: { times: 1, how: 'throw' } });
+  const e = { ASSETS, CSP_REPORTS: new D1() };
+  const base1 = [modern()];
+  assert.equal((await handle(post(base1, { type: 'application/reports+json' }), e)).status, 204);
+  assert.equal((await handle(post(base1, { type: 'application/reports+json' }), e)).status, 204);
+  const items = e.CSP_REPORTS.rows().map((r) => [r.item_id, r.n]).sort();
+  assert.deepEqual(items, [['ambiguous', 1], ['base.1', 1]]);
+  assert.equal(ASSETS.fetches[pos], 2);
+});

@@ -38,24 +38,39 @@ export function responseHeaders() {
 }
 
 const reply = (status, extra = {}) => new Response(null, { status, headers: { ...responseHeaders(), ...extra } });
+// Required build data could not be read: observable (status + one log line naming the file, no
+// request data), nothing written, and not cached so the next request tries again.
+function unavailable(which, status) {
+  console.error(`csp-report: build data unavailable: ${which} (status ${status})`);
+  return reply(503, { 'Retry-After': '60' });
+}
 const squash = (s) => String(s ?? '').trim().replace(/\s+/g, ' ');
 
 // ---- build data (cached per isolate and deployment) ----
+// Only data that was read and validated is cached. A failed or invalid read is never cached, so a
+// transient ASSETS error costs one request, not the isolate (Sally 2b r1 finding 1).
 const cache = new Map();
-async function asset(env, request, path, fallback) {
+export async function asset(env, request, path, valid) {
   const url = new URL(path, request.url).toString();
-  if (cache.has(url)) return cache.get(url);
-  let value = fallback;
+  if (cache.has(url)) return { ok: true, value: cache.get(url) };
+  let value;
   try {
     const res = await env.ASSETS.fetch(new Request(url));
-    if (res.ok) value = await res.json();
+    if (!res.ok) return { ok: false, status: res.status };
+    value = await res.json();
   } catch {
-    value = fallback;
+    return { ok: false, status: 0 };
   }
+  if (!valid(value)) return { ok: false, status: 0 };
   if (cache.size > 200) cache.clear();
   cache.set(url, value);
-  return value;
+  return { ok: true, value };
 }
+const isObj = (v) => v !== null && typeof v === 'object' && !Array.isArray(v);
+export const validMeta = (m) => isObj(m) && typeof m.mode === 'string' && typeof m.canonical_host === 'string'
+  && isObj(m.policies) && Array.isArray(m.hosts);
+export const validRoutes = (r) => Array.isArray(r) && r.every((x) => typeof x === 'string');
+export const validPositions = (p) => Array.isArray(p) && p.every((x) => Array.isArray(x) && x.length === 4 && typeof x[0] === 'string');
 export const _clearCache = () => cache.clear();
 
 export async function sha16(text) {
@@ -286,18 +301,27 @@ export async function handle(request, env, { now = new Date() } = {}) {
     return reply(400);
   }
   const url = new URL(request.url);
-  const meta = await asset(env, request, '/__csp/meta.json', null);
+  // Required build data: if it can't be read, say so (503) and write nothing; the next request retries.
+  const metaRead = await asset(env, request, '/__csp/meta.json', validMeta);
+  if (!metaRead.ok) return unavailable('meta', metaRead.status);
+  const meta = metaRead.value;
   if (!env.CSP_REPORTS || !writeAllowed(meta, url.host)) return reply(204);
   const records = (type === 'application/reports+json' ? parseModern(json) : parseLegacy(json)).slice(0, MAX_RECORDS);
   if (!records.length) return reply(204);
-  const routes = new Set(await asset(env, request, '/__csp/routes.json', []));
+  const routesRead = await asset(env, request, '/__csp/routes.json', validRoutes);
+  if (!routesRead.ok) return unavailable('routes', routesRead.status);
+  const routes = new Set(routesRead.value);
   const ctx = {
     meta,
     routes,
     host: url.host,
     origin: url.origin,
     day: utcDay(now),
-    positions: async (page) => asset(env, request, `/__csp/pos/${await sha16(page)}.json`, null),
+    // Optional: without positions the item is 'ambiguous' (privacy-safe); nothing is cached on failure.
+    positions: async (page) => {
+      const r = await asset(env, request, `/__csp/pos/${await sha16(page)}.json`, validPositions);
+      return r.ok ? r.value : null;
+    },
   };
   const keys = [];
   for (const r of records) {
