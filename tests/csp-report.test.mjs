@@ -237,6 +237,12 @@ test('collector: concurrent requests lose no increments, and the cap holds under
   assert.equal(rows.reduce((s, r) => s + r.n, 0), 529, 'every report is counted somewhere');
 });
 
+test('collector: /api/csp-report is routed to Functions (static/_routes.json)', () => {
+  const routes = JSON.parse(fs.readFileSync(path.join(root, 'static/_routes.json'), 'utf8'));
+  assert.ok(routes.include.includes('/api/csp-report'), 'without it Pages serves 404/405 and no report is stored');
+  assert.ok(!routes.exclude.some((r) => r === '/api/*' || r === '/api/csp-report'));
+});
+
 test('collector: a batch is all-or-nothing', async () => {
   const d1 = new D1();
   const good = d1.prepare("INSERT INTO agg VALUES ('2026-11-23','enforce-2b','enforce','img-src','data','/','none',1)").bind();
