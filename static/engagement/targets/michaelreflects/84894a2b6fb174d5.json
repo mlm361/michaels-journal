@@ -3,6 +3,18 @@
   "children": [
     {
       "author": {
+        "name": "JumpinRudy",
+        "photo": "https://cdn.masto.host/mitchelltribesocial/cache/accounts/avatars/110/623/624/311/559/432/original/e9ee6aedd686be78.jpg",
+        "url": "https://mstdn.social/@JumpinRudy"
+      },
+      "platform": "mastodon",
+      "published": null,
+      "url": "https://mstdn.social/@JumpinRudy",
+      "wm-property": "like-of",
+      "wm-target": "https://mitchelltribe.com/2026/11/23/one-less-pawprint/"
+    },
+    {
+      "author": {
         "name": "Pip",
         "photo": "https://cdn.masto.host/mitchelltribesocial/cache/accounts/avatars/117/262/777/435/430/566/original/cb71f23166d5d9f9.png",
         "url": "https://tinymind.eu"
@@ -26,8 +38,8 @@
       "wm-target": "https://mitchelltribe.com/2026/11/23/one-less-pawprint/"
     }
   ],
-  "generated_at": "2026-11-23T23:24:38.644054+00:00",
-  "like_count": 2,
+  "generated_at": "2026-11-23T23:54:50.924476+00:00",
+  "like_count": 3,
   "reply_count": 0,
   "source_post_id": 1280,
   "type": "feed",
