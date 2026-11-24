@@ -2,14 +2,17 @@
 # Cloudflare Pages build entry point for michaelreflects.com (JOURNAL-CSP-01).
 #
 # The Pages dashboard runs: bash tools/pages-build.sh
-# This revision declares CSP_PHASE=2a-report-only (Phase 2a: the policy in csp/phase2.policy
-# is sent as Content-Security-Policy-Report-Only). The build steps below are the dashboard's
-# baseline command recorded 2026-11-22 (docs/csp/phase0-baseline.md), unchanged.
+# This revision declares CSP_PHASE=2b-enforce (Phase 2b: csp/phase2.policy is enforced,
+# csp/phase3-report-only.policy is sent alongside as Report-Only, and violation reports go to
+# functions/api/csp-report.js). The build steps below are the dashboard's baseline command
+# recorded 2026-11-22 (docs/csp/phase0-baseline.md), unchanged. After them, three steps always
+# run: the preview step (nothing changes on master), the inline-code data for the collector,
+# then the header gate.
 # Each later CSP phase edits this file and declares its own phase; the header gate
 # always runs, with no skip path. See docs/csp/phase0-baseline.md for the rollback.
 set -euo pipefail
 
-CSP_PHASE=2a-report-only
+CSP_PHASE=2b-enforce
 
 # --- Baseline build (verbatim from the dashboard, one command per line) ---
 archive="$(mktemp)"
@@ -20,5 +23,11 @@ tar -xzf "$archive" -C "$zola_dir"
 "$zola_dir/zola" --version
 "$zola_dir/zola" build
 
+# --- Preview only: rebuild with the preview's own base URL, add the CSP fixtures (always runs) ---
+node tools/csp-preview.mjs "$zola_dir/zola"
+
+# --- Collector data: page routes, inline-code positions, shipped policies (always runs) ---
+node tools/csp-inline-inventory.mjs emit public
+
 # --- CSP header gate for this revision's declared phase (always runs) ---
-node tools/csp-headers-check.mjs "$CSP_PHASE" public/_headers csp/phase2.policy
+node tools/csp-headers-check.mjs "$CSP_PHASE" public/_headers csp/phase2.policy csp/phase3-report-only.policy

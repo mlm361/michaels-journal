@@ -118,7 +118,7 @@
         <!-- css: a parser-inserted stylesheet, so the browser waits for it before
              first paint (no unstyled paint, no whole-page layout shift). -->
         <link id="themeCSS" rel="stylesheet" href="{{ config.base_url }}/default.css">
-        <script>
+        <script data-csp-id="base.1">
           (function() {
             var storedTheme = localStorage.getItem('ergo-theme');
             var t = storedTheme === 'dark' ? 'dark' : 'default';
@@ -536,7 +536,7 @@
             <div class="ts-scale">
               <div id="townsquare-root"></div>
             </div>
-            <script type="module">
+            <script type="module" data-csp-id="base.2">
               import { mountTownSquare } from "{{ config.extra.townsquare.origin | safe }}/townsquare.mjs";
               // Load the widget stylesheet at runtime. It uses valid modern CSS
               // (container queries, vector-effect) that the W3C validator flags as
@@ -555,7 +555,7 @@
                 theme: "host"
               });
             </script>
-            <script>
+            <script data-csp-id="base.3">
               // Fit the footer TownSquare on phones: lay it out at a fixed
               // desktop-like width (so scene props don't collide) and scale the
               // whole widget down to the available width. Only kicks in <=640px.
@@ -593,7 +593,7 @@
                (UM690/instance down), the widget never mounts. After a grace period,
                collapse the empty box and reveal any offline note. The rest of the
                site is on Cloudflare Pages and is unaffected. #}
-            <script>
+            <script data-csp-id="base.4">
               (function () {
                 var root = document.getElementById('townsquare-root');
                 if (!root) return;
@@ -653,7 +653,7 @@
              switched on in Tinylytics Settings, Tracking, Widgets, not on the tag. -->
         <script defer src="https://tinylytics.app/js/script.js" data-site="h2Q2CzgAf-te_SJUBWQ1"></script>
 
-        <script>
+        <script data-csp-id="base.5">
           document.addEventListener("DOMContentLoaded", function () {
             var yearEl = document.getElementById("currentYear");
             if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -704,7 +704,7 @@
             syncButtonVisibility();
           })();
         </script>
-        <script>
+        <script data-csp-id="base.6">
           (function () {
             var avatars = [
               'https://media.mitchelltribe.xyz/site/img/avatar.avif',
@@ -724,7 +724,7 @@
             if (aboutImg) aboutImg.src = pick;
           })();
         </script>
-        <script>
+        <script data-csp-id="base.7">
           (function () {
             var content = document.querySelector('.e-content');
             if (!content) return;

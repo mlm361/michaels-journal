@@ -68,7 +68,7 @@
 </section>
 
 <script src="/elasticlunr.min.js"></script>
-<script>
+<script data-csp-id="search.1">
 (function() {
   var idx, store;
 
@@ -78,7 +78,9 @@
       : '';
     if (!href) return '';
     var parsed = new URL(href);
-    return (parsed.hostname === 'michaelreflects.com' || parsed.hostname === 'www.michaelreflects.com')
+    // The production host, or the build's own host (a preview built with --base-url).
+    return (parsed.hostname === 'michaelreflects.com' || parsed.hostname === 'www.michaelreflects.com'
+            || parsed.hostname === window.location.hostname)
       ? href
       : '';
   }

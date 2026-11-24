@@ -11,7 +11,7 @@
 </section>
 
 <script src="/js/webmention-threading.js"></script>
-<script>
+<script data-csp-id="webmentions.1">
   (function () {
     var target = encodeURIComponent({{ page.permalink | json_encode | safe }});
     // Syndication URLs for this post (Bluesky/Mastodon/Sharkey/Nostr). The
@@ -26,6 +26,19 @@
     var list = document.getElementById("webmentions-list");
     var hubProjectionEnabled = {{ config.extra.webmention_hub_projection }};
     if (!list) return;
+
+    // JOURNAL-CSP-01 2b (D4): an avatar the browser can't load (host down, or not allowed by
+    // img-src) becomes the same initial-letter badge used when there's no photo. One capturing
+    // listener on the container; no inline handler.
+    list.addEventListener("error", function (event) {
+      var img = event.target;
+      if (!img || img.tagName !== "IMG" || !img.hasAttribute("data-initial")) return;
+      var badge = document.createElement("span");
+      badge.className = "wm-face-initial";
+      badge.setAttribute("aria-hidden", "true");
+      badge.textContent = img.getAttribute("data-initial");
+      img.replaceWith(badge);
+    }, true);
 
     function escapeHtml(value) {
       return String(value || "").replace(/[&<>"']/g, function (char) {
@@ -85,7 +98,7 @@
       var photo = authorPhoto(mention);
       var name = escapeHtml(authorName(mention));
       var inner = photo
-        ? "<img src='" + escapeHtml(photo) + "' alt='" + name + "' loading='lazy'>"
+        ? "<img src='" + escapeHtml(photo) + "' alt='" + name + "' loading='lazy' data-initial='" + escapeHtml(initialFor(mention)) + "'>"
         : "<span class='wm-face-initial' aria-hidden='true'>" + escapeHtml(initialFor(mention)) + "</span>";
       var href = authorUrl(mention);
       if (href) {

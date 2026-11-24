@@ -1,0 +1,129 @@
+{
+  "version": 1,
+  "items": {
+    "archive.1": {
+      "kind": "script",
+      "example": "/archive/"
+    },
+    "base.1": {
+      "kind": "script",
+      "example": "/"
+    },
+    "base.2": {
+      "kind": "script",
+      "example": "/"
+    },
+    "base.3": {
+      "kind": "script",
+      "example": "/"
+    },
+    "base.4": {
+      "kind": "script",
+      "example": "/"
+    },
+    "base.5": {
+      "kind": "script",
+      "example": "/"
+    },
+    "base.6": {
+      "kind": "script",
+      "example": "/"
+    },
+    "base.7": {
+      "kind": "script",
+      "example": "/"
+    },
+    "content:33d22fa0baba9ca6": {
+      "kind": "script",
+      "example": "/on-this-day/"
+    },
+    "content:96918fce9db65000": {
+      "kind": "script",
+      "example": "/blog/watched-project-hail-mary-2026-on-prime-video/"
+    },
+    "content:a6ecef6587a56cfd": {
+      "kind": "script",
+      "example": "/page/1/"
+    },
+    "content:e1348d7a74989a98": {
+      "kind": "script",
+      "example": "/blog/my-visions-big-comeback/"
+    },
+    "content:e9cb8fe838f23459": {
+      "kind": "script",
+      "example": "/about/"
+    },
+    "content:ed0f84ecb0246210": {
+      "kind": "script",
+      "example": "/stats/"
+    },
+    "gallery-single.1": {
+      "kind": "script",
+      "example": "/gallery/ruby-fall-chattanooga-2013/"
+    },
+    "gallery-slideshow.1": {
+      "kind": "script",
+      "example": "/gallery/dreamsbeans-gallery/"
+    },
+    "handler:a.onclick:c8db21efb1b2": {
+      "kind": "handler",
+      "example": "/blog/my-visions-big-comeback/"
+    },
+    "handler:body.onload:496849c3a4c5": {
+      "kind": "handler",
+      "example": "/"
+    },
+    "handler:button.onclick:03aa16e682c7": {
+      "kind": "handler",
+      "example": "/blog/my-visions-big-comeback/"
+    },
+    "handler:button.onclick:a87fc7e44dfd": {
+      "kind": "handler",
+      "example": "/"
+    },
+    "handler:button.onclick:e49f1020dd2e": {
+      "kind": "handler",
+      "example": "/"
+    },
+    "handler:div.onclick:a10d5456e79e": {
+      "kind": "handler",
+      "example": "/blog/my-visions-big-comeback/"
+    },
+    "handler:img.onclick:8c7179853225": {
+      "kind": "handler",
+      "example": "/blog/my-visions-big-comeback/"
+    },
+    "handler:img.onerror:f5ff192b97a9": {
+      "kind": "handler",
+      "example": "/a-day-of-celestial-discoveries-and-misty-mornings/"
+    },
+    "menu.1": {
+      "kind": "script",
+      "example": "/"
+    },
+    "notes.1": {
+      "kind": "script",
+      "example": "/notes/"
+    },
+    "pagination.1": {
+      "kind": "script",
+      "example": "/"
+    },
+    "post-share.1": {
+      "kind": "script",
+      "example": "/a-day-of-celestial-discoveries-and-misty-mornings/"
+    },
+    "search.1": {
+      "kind": "script",
+      "example": "/search/"
+    },
+    "townsquare.1": {
+      "kind": "script",
+      "example": "/townsquare/"
+    },
+    "webmentions.1": {
+      "kind": "script",
+      "example": "/a-day-of-celestial-discoveries-and-misty-mornings/"
+    }
+  }
+}

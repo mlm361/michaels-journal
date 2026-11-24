@@ -3,13 +3,16 @@ import fs from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
 
-import { checkHeaders, cspLines, policyProblems } from '../tools/csp-headers-check.mjs';
+import { checkHeaders, cspLines, headerLines, policyProblems } from '../tools/csp-headers-check.mjs';
+import { FIXTURES, fixtureHeaders, isPreview, previewBaseUrl, run as runPreview } from '../tools/csp-preview.mjs';
 
 const root = path.resolve(import.meta.dirname, '..');
 const read = (relative) => fs.readFileSync(path.join(root, relative), 'utf8');
 
-const DECLARED = 'CSP_PHASE=2a-report-only';
-const GATE = 'node tools/csp-headers-check.mjs "$CSP_PHASE" public/_headers csp/phase2.policy';
+const DECLARED = 'CSP_PHASE=2b-enforce';
+const PREVIEW = 'node tools/csp-preview.mjs "$zola_dir/zola"';
+const EMIT = 'node tools/csp-inline-inventory.mjs emit public';
+const GATE = 'node tools/csp-headers-check.mjs "$CSP_PHASE" public/_headers csp/phase2.policy csp/phase3-report-only.policy';
 
 test('JOURNAL-CSP-01: pages-build.sh runs the recorded baseline command, unchanged, then the gate', () => {
   const doc = read('docs/csp/phase0-baseline.md');
@@ -30,26 +33,50 @@ test('JOURNAL-CSP-01: pages-build.sh runs the recorded baseline command, unchang
   }
   // Nothing else runs before or between them, apart from the phase declaration.
   const extra = lines.filter((l) => !baseline.includes(l));
-  assert.deepEqual(extra, ['set -euo pipefail', DECLARED, GATE]);
-  // The gate is the last step, after the build, with no condition around it.
-  assert.equal(lines.at(-1), GATE);
-  assert.equal(lines.at(-2), '"$zola_dir/zola" build');
+  assert.deepEqual(extra, ['set -euo pipefail', DECLARED, PREVIEW, EMIT, GATE]);
+  // After the baseline build: the preview step, the collector data, then the gate last, with no
+  // condition around any of them (the preview tool decides inside, and fails closed).
+  assert.deepEqual(lines.slice(-4), ['"$zola_dir/zola" build', PREVIEW, EMIT, GATE]);
   for (const l of lines) assert.doesNotMatch(l, /^(if|\[|test)\b|\|\||&&/, `no conditional or skip path: ${l}`);
 });
 
-test('JOURNAL-CSP-01 Phase 2a: the committed _headers and policy pass 2a-report-only and fail none', () => {
-  const headers = read('static/_headers');
-  const policy = read('csp/phase2.policy');
-  assert.deepEqual(checkHeaders(headers, '2a-report-only', policy), []);
-  const lines = cspLines(headers);
-  assert.equal(lines.length, 1);
-  assert.equal(lines[0].name, 'content-security-policy-report-only');
-  assert.equal(lines[0].path, '/*');
-  assert.equal(checkHeaders(headers, 'none').length, 1, 'the none rule must refuse a Phase 2a file');
+const opts = (extra = {}) => ({
+  reportOnlyPolicyText: read('csp/phase3-report-only.policy'),
+  preview: false,
+  fixturePolicies: Object.fromEntries(Object.entries(FIXTURES).map(([n, f]) => [n, read(f.policyFile)])),
+  ...extra,
 });
 
-test('JOURNAL-CSP-01 Phase 2a: the policy keeps its baseline protections', () => {
+test('JOURNAL-CSP-01 Phase 2b: the committed _headers and policies pass 2b-enforce and fail 2a and none', () => {
+  const headers = read('static/_headers');
   const policy = read('csp/phase2.policy');
+  assert.deepEqual(checkHeaders(headers, '2b-enforce', policy, opts()), []);
+  assert.deepEqual(cspLines(headers).map((l) => [l.path, l.name]), [
+    ['/*', 'content-security-policy'], ['/*', 'content-security-policy-report-only'],
+  ]);
+  assert.ok(checkHeaders(headers, '2a-report-only', policy).length >= 1, 'the 2a rule must refuse a 2b file');
+  assert.equal(checkHeaders(headers, 'none').length, 2, 'the none rule must refuse a 2b file');
+});
+
+test('JOURNAL-CSP-01 Phase 2b: enforced and Report-Only policies differ only as planned', () => {
+  const enforce = read('csp/phase2.policy').trimEnd().split('; ');
+  const ro = read('csp/phase3-report-only.policy').trimEnd().split('; ');
+  assert.equal(ro.length, enforce.length);
+  const differing = enforce.map((d, i) => [d, ro[i]]).filter(([a, b]) => a !== b);
+  assert.equal(differing.length, 1, 'only script-src differs');
+  const [e, r] = differing[0];
+  assert.match(e, /^script-src 'self' 'unsafe-inline' /);
+  assert.equal(r, e.replace(" 'unsafe-inline'", " 'report-sample'"));
+  for (const p of [enforce, ro]) {
+    assert.ok(p.includes("worker-src 'self' blob:"), 'TownSquare needs a blob: worker (D2)');
+    assert.ok(p.includes('report-uri /api/csp-report') && p.includes('report-to csp'), 'both reporting mechanisms (v3 D3)');
+    assert.ok(!p.find((d) => d.startsWith('connect-src ')).includes('cloudflareinsights'),
+      'v2 research: the auto-injected beacon posts to /cdn-cgi/rum, so no connect-src host for it');
+  }
+});
+
+for (const file of ['csp/phase2.policy', 'csp/phase3-report-only.policy']) test(`JOURNAL-CSP-01: ${file} keeps its baseline protections`, () => {
+  const policy = read(file);
   assert.deepEqual(policyProblems(policy), []);
   assert.doesNotMatch(policy, /\r/);
   const directives = new Map(policy.trimEnd().split('; ').map((d) => {
@@ -127,7 +154,7 @@ test('JOURNAL-CSP-01: the none gate still refuses any CSP header; unknown phases
   }
   assert.deepEqual(cspLines(base + '/x\n  ! Content-Security-Policy\n'), [], 'a detach line sets nothing');
   assert.deepEqual(checkHeaders(null, 'none'), ['public/_headers is missing']);
-  for (const phase of ['', '2b-enforce', '3-strict', 'NONE', '2A-REPORT-ONLY']) {
+  for (const phase of ['', '2B-ENFORCE', '3-strict', 'NONE', '2A-REPORT-ONLY']) {
     assert.deepEqual(checkHeaders(base, phase), [`unknown CSP_PHASE "${phase}"`]);
   }
 });
