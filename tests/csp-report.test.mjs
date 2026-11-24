@@ -14,6 +14,7 @@ const SCHEMA = fs.readFileSync(path.join(root, 'csp/d1-schema.sql'), 'utf8');
 const ENFORCE = fs.readFileSync(path.join(root, 'csp/phase2.policy'), 'utf8').trimEnd();
 const RO = fs.readFileSync(path.join(root, 'csp/phase3-report-only.policy'), 'utf8').trimEnd();
 const LEGACY_FX = fs.readFileSync(path.join(root, 'csp/fixture-legacy.policy'), 'utf8').trimEnd();
+const CONTROL = fs.readFileSync(path.join(root, 'csp/d1-preview-control.sql'), 'utf8');
 
 class D1 {
   constructor() {
@@ -22,7 +23,20 @@ class D1 {
     this.batches = 0;
   }
   prepare(sql) {
-    return { bind: (...args) => ({ sql, args }) };
+    return {
+      bind: (...args) => ({ sql, args }),
+      first: async () => {
+        if (this.controlFails) throw new Error('D1 unavailable');
+        const row = this.db.prepare(sql).get();
+        return row ? { ...row } : null;
+      },
+    };
+  }
+  // The preview switch, set the way csp/d1-preview-control.sql documents it.
+  control(active) {
+    this.db.exec(CONTROL);
+    if (active === null) this.db.prepare("DELETE FROM control WHERE name = 'active_preview_host'").run();
+    else this.db.prepare("INSERT INTO control (name, value) VALUES ('active_preview_host', ?) ON CONFLICT (name) DO UPDATE SET value = excluded.value").run(active);
   }
   async batch(stmts) {
     this.batches++;
@@ -63,9 +77,12 @@ async function assets({ mode = 'production', previewHost = null, policies } = {}
   };
 }
 
+// A preview database gets the control table; by default the switch names this build's host.
 async function env(opts = {}) {
   _clearCache();
-  return { ASSETS: await assets(opts), CSP_REPORTS: new D1() };
+  const db = new D1();
+  if (opts.mode === 'preview') db.control('active' in opts ? opts.active : opts.previewHost);
+  return { ASSETS: await assets(opts), CSP_REPORTS: db };
 }
 
 const post = (body, { host = 'michaelreflects.com', type = 'application/csp-report', headers = {} } = {}) =>
@@ -358,4 +375,56 @@ test('collector: a failed position read falls back to ambiguous and is not cache
   const items = e.CSP_REPORTS.rows().map((r) => [r.item_id, r.n]).sort();
   assert.deepEqual(items, [['ambiguous', 1], ['base.1', 1]]);
   assert.equal(ASSETS.fetches[pos], 2);
+});
+
+// Sally 2b r1 finding 2: a superseded preview must not write, whatever its own metadata says.
+test('collector: a preview writes only while the preview switch names its host; retiring is one update', async () => {
+  const ACTIVE = 'new11111.michaels-journal.pages.dev';
+  const OLD = 'old22222.michaels-journal.pages.dev';
+  const fx = (host) => post(legacy({ 'document-uri': `https://${host}/__csp-fixture/legacy/`, 'original-policy': LEGACY_FX,
+    'effective-directive': 'script-src-elem', 'blocked-uri': 'inline' }), { host });
+  // Each build sees its own immutable metadata; they share one preview database.
+  const shared = new D1();
+  shared.control(ACTIVE);
+  _clearCache();
+  const newBuild = { ASSETS: await assets({ mode: 'preview', previewHost: ACTIVE }), CSP_REPORTS: shared };
+  const oldBuild = { ASSETS: { fetch: async (req) => (await assets({ mode: 'preview', previewHost: OLD })).fetch(req) }, CSP_REPORTS: shared };
+  assert.equal((await handle(fx(ACTIVE), newBuild)).status, 204);
+  assert.equal(shared.batches, 1, 'the active preview writes');
+  _clearCache();
+  assert.equal((await handle(fx(OLD), oldBuild)).status, 204);
+  assert.equal(shared.batches, 1, 'an older hash of the same branch does not write, though its metadata names itself');
+  for (const host of ['feat-csp-phase2b.michaels-journal.pages.dev', 'michaels-journal.pages.dev', 'michaelreflects.com']) {
+    _clearCache();
+    await handle(fx(host), newBuild);
+  }
+  assert.equal(shared.batches, 1, 'the branch alias, the production alias and the canonical host do not write from a preview build');
+  // Retire: clear the switch, and nothing writes, not even the build that was active.
+  shared.control(null);
+  _clearCache();
+  assert.equal((await handle(fx(ACTIVE), newBuild)).status, 204);
+  assert.equal(shared.batches, 1, 'switch cleared: no preview writes');
+  // Hand over to the old one: only it writes now.
+  shared.control(OLD);
+  _clearCache();
+  await handle(fx(ACTIVE), newBuild);
+  _clearCache();
+  await handle(fx(OLD), oldBuild);
+  assert.equal(shared.batches, 2);
+  assert.deepEqual(shared.rows().map((r) => [r.policy_id, r.n]), [['fixture-legacy', 2]]);
+});
+
+test('collector: an unreadable preview switch returns 503 and writes nothing; production never reads it', async () => {
+  const p = await env({ mode: 'preview', previewHost: 'abc12345.michaels-journal.pages.dev' });
+  p.CSP_REPORTS.controlFails = true;
+  const r = await handle(post(legacy({ 'document-uri': 'https://abc12345.michaels-journal.pages.dev/' }), { host: 'abc12345.michaels-journal.pages.dev' }), p);
+  assert.equal(r.status, 503);
+  assert.equal(p.CSP_REPORTS.batches, 0);
+  p.CSP_REPORTS.controlFails = false;
+  assert.equal((await handle(post(legacy({ 'document-uri': 'https://abc12345.michaels-journal.pages.dev/' }), { host: 'abc12345.michaels-journal.pages.dev' }), p)).status, 204);
+  assert.equal(p.CSP_REPORTS.batches, 1, 'recovers on the next request');
+  const prod = await env();
+  prod.CSP_REPORTS.controlFails = true; // production has no control table and must not need one
+  assert.equal((await handle(post(legacy()), prod)).status, 204);
+  assert.equal(prod.CSP_REPORTS.batches, 1);
 });

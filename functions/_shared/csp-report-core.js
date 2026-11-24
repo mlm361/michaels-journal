@@ -280,12 +280,22 @@ export function statements(db, rows) {
   return rows.map((r) => db.prepare(UPSERT).bind(r.day, r.policy_id, r.disposition, r.directive, r.blocked, r.page_id, r.item_id, r.n));
 }
 
-// May this deployment write at this host? (Sally v4 amendment 2)
-export function writeAllowed(meta, host) {
+// May this deployment write at this host? (Sally v4 amendment 2, 2b r1 finding 2)
+// Production: only at the canonical host. Preview: only at the build's own host AND only while the
+// preview database's control row names that host. The row lives outside every build, so one UPDATE
+// retires every other preview at once, including older hash URLs of the same branch.
+export const ACTIVE_PREVIEW_SQL = "SELECT value FROM control WHERE name = 'active_preview_host'";
+export function writeAllowed(meta, host, activePreviewHost = null) {
   if (!meta) return false;
   if (meta.mode === 'production') return host === meta.canonical_host;
-  if (meta.mode === 'preview') return Boolean(meta.preview_host) && host === meta.preview_host;
+  if (meta.mode === 'preview') return Boolean(meta.preview_host) && host === meta.preview_host && host === activePreviewHost;
   return false;
+}
+
+// Read the preview switch. null = no active preview; throws if the database can't be read.
+export async function activePreviewHost(db) {
+  const row = await db.prepare(ACTIVE_PREVIEW_SQL).first();
+  return row && typeof row.value === 'string' && row.value ? row.value : null;
 }
 
 export async function handle(request, env, { now = new Date() } = {}) {
@@ -305,7 +315,16 @@ export async function handle(request, env, { now = new Date() } = {}) {
   const metaRead = await asset(env, request, '/__csp/meta.json', validMeta);
   if (!metaRead.ok) return unavailable('meta', metaRead.status);
   const meta = metaRead.value;
-  if (!env.CSP_REPORTS || !writeAllowed(meta, url.host)) return reply(204);
+  if (!env.CSP_REPORTS) return reply(204);
+  let active = null;
+  if (meta.mode === 'preview' && meta.preview_host === url.host) {
+    try {
+      active = await activePreviewHost(env.CSP_REPORTS);
+    } catch {
+      return unavailable('preview switch', 0);
+    }
+  }
+  if (!writeAllowed(meta, url.host, active)) return reply(204);
   const records = (type === 'application/reports+json' ? parseModern(json) : parseLegacy(json)).slice(0, MAX_RECORDS);
   if (!records.length) return reply(204);
   const routesRead = await asset(env, request, '/__csp/routes.json', validRoutes);
