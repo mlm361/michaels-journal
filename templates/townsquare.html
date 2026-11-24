@@ -40,7 +40,7 @@
 {% if config.extra.townsquare.enabled %}
 <div id="townsquare-root"></div>
 <p class="townsquare-offline" hidden>The town square is offline right now. Check back soon.</p>
-<script type="module">
+<script type="module" data-csp-id="townsquare.1">
   import { mountTownSquare } from "{{ config.extra.townsquare.origin | safe }}/townsquare.mjs";
   // Load the widget stylesheet at runtime (keeps third-party widget.css, which uses
   // valid modern CSS the W3C validator flags, out of static validation).

@@ -137,6 +137,8 @@ function baseHeaders(request) {
     'Content-Type': 'application/json; charset=utf-8',
     'Cache-Control': 'public, max-age=60',
     'X-Content-Type-Options': 'nosniff',
+    // JOURNAL-CSP-01 2b (D6): Functions don't get _headers; JSON needs no capabilities.
+    'Content-Security-Policy': "default-src 'none'; frame-ancestors 'none'",
     'Vary': 'Origin',
   });
   const origin = request.headers.get('Origin');
