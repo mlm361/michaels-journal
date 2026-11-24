@@ -67,10 +67,21 @@ export async function asset(env, request, path, valid) {
   return { ok: true, value };
 }
 const isObj = (v) => v !== null && typeof v === 'object' && !Array.isArray(v);
-export const validMeta = (m) => isObj(m) && typeof m.mode === 'string' && typeof m.canonical_host === 'string'
-  && isObj(m.policies) && Array.isArray(m.hosts);
-export const validRoutes = (r) => Array.isArray(r) && r.every((x) => typeof x === 'string');
-export const validPositions = (p) => Array.isArray(p) && p.every((x) => Array.isArray(x) && x.length === 4 && typeof x[0] === 'string');
+// Validate what the collector consumes, before anything is cached (Sally 2b R2 finding 2):
+// a structurally valid file with a bad nested value must fail the read, not the requests after it.
+const HOST = /^[a-z0-9](?:[a-z0-9-]*[a-z0-9])?(?:\.[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)+(?::\d{1,5})?$/;
+const isHost = (h) => typeof h === 'string' && HOST.test(h);
+const isHostPattern = (h) => typeof h === 'string' && (h.startsWith('*.') ? HOST.test(h.slice(2)) : HOST.test(h));
+const isPolicies = (p, mode) => isObj(p) && 'enforce-2b' in p && 'ro-phase3' in p
+  && Object.entries(p).every(([id, text]) => id in POLICY_DISPOSITION && typeof text === 'string' && text.trim() !== ''
+    && (mode === 'preview' || !id.startsWith('fixture-')));
+const isInt = (n) => Number.isInteger(n) && n >= 0;
+export const validMeta = (m) => isObj(m) && m.version === 1 && isHost(m.canonical_host)
+  && ((m.mode === 'production' && m.preview_host === null) || (m.mode === 'preview' && isHost(m.preview_host)))
+  && isPolicies(m.policies, m.mode) && Array.isArray(m.hosts) && m.hosts.every(isHostPattern);
+export const validRoutes = (r) => Array.isArray(r) && r.every((x) => typeof x === 'string' && x.startsWith('/'));
+export const validPositions = (p) => Array.isArray(p) && p.every((x) => Array.isArray(x) && x.length === 4
+  && typeof x[0] === 'string' && x[0] !== '' && isInt(x[1]) && isInt(x[2]) && isInt(x[3]));
 export const _clearCache = () => cache.clear();
 
 export async function sha16(text) {
@@ -276,8 +287,17 @@ SELECT ?1, ?2, ?3,
 FROM fits WHERE true
 ON CONFLICT (day, policy_id, disposition, directive, blocked, page_id, item_id) DO UPDATE SET n = n + excluded.n`;
 
-export function statements(db, rows) {
-  return rows.map((r) => db.prepare(UPSERT).bind(r.day, r.policy_id, r.disposition, r.directive, r.blocked, r.page_id, r.item_id, r.n));
+// Preview writes re-check the switch inside the write itself (Sally 2b R2 finding 1): D1 runs a batch
+// as one transaction, so a switch change ordered before it retires the report even if this request
+// was authorized earlier. Production statements never touch the control table.
+export const UPSERT_PREVIEW = UPSERT.replace('FROM fits WHERE true',
+  "FROM fits WHERE EXISTS (SELECT 1 FROM control WHERE name = 'active_preview_host' AND value = ?9)");
+
+export function statements(db, rows, activeHost = null) {
+  return rows.map((r) => {
+    const args = [r.day, r.policy_id, r.disposition, r.directive, r.blocked, r.page_id, r.item_id, r.n];
+    return activeHost === null ? db.prepare(UPSERT).bind(...args) : db.prepare(UPSERT_PREVIEW).bind(...args, activeHost);
+  });
 }
 
 // May this deployment write at this host? (Sally v4 amendment 2, 2b r1 finding 2)
@@ -347,6 +367,7 @@ export async function handle(request, env, { now = new Date() } = {}) {
     const k = await normalize(r, ctx);
     if (k) keys.push(k);
   }
-  if (keys.length) await env.CSP_REPORTS.batch(statements(env.CSP_REPORTS, coalesce(keys)));
+  const guard = meta.mode === 'preview' ? url.host : null;
+  if (keys.length) await env.CSP_REPORTS.batch(statements(env.CSP_REPORTS, coalesce(keys), guard));
   return reply(204);
 }

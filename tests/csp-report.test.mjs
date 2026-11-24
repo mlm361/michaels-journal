@@ -329,6 +329,7 @@ async function flaky(failing, opts = {}) {
         f.times--;
         if (f.how === 'throw') throw new Error('transient');
         if (f.how === 'garbage') return new Response('{"not":"meta"}', { status: 200 });
+        if (f.how === 'body') return new Response(JSON.stringify(f.body), { status: 200 });
         return new Response('busy', { status: 503 });
       }
       return real.fetch(req);
@@ -427,4 +428,84 @@ test('collector: an unreadable preview switch returns 503 and writes nothing; pr
   prod.CSP_REPORTS.controlFails = true; // production has no control table and must not need one
   assert.equal((await handle(post(legacy()), prod)).status, 204);
   assert.equal(prod.CSP_REPORTS.batches, 1);
+});
+
+// Sally 2b R2 finding 2: structurally valid build data with a bad nested value must fail the read.
+test('collector: bad nested meta, routes or positions fail the read (503), are not cached, and recover', async () => {
+  const good = { version: 1, mode: 'production', canonical_host: 'michaelreflects.com', preview_host: null,
+    policies: { 'enforce-2b': ENFORCE, 'ro-phase3': RO }, hosts: ['*.archive.org', 'tinylytics.app'] };
+  const bad = [
+    { ...good, hosts: [99] },
+    { ...good, hosts: ['https://x.example/'] },
+    { ...good, mode: 'staging' },
+    { ...good, version: 2 },
+    { ...good, canonical_host: '' },
+    { ...good, preview_host: 'abc12345.michaels-journal.pages.dev' },
+    { ...good, mode: 'preview', preview_host: null },
+    { ...good, policies: { 'enforce-2b': 5, 'ro-phase3': RO } },
+    { ...good, policies: { 'enforce-2b': ENFORCE } },
+    { ...good, policies: { ...good.policies, 'made-up': 'x' } },
+    { ...good, policies: { ...good.policies, 'fixture-legacy': LEGACY_FX } },
+  ];
+  for (const body of bad) {
+    _clearCache();
+    const ASSETS = await flaky({ '/__csp/meta.json': { times: 1, how: 'body', body } });
+    const e = { ASSETS, CSP_REPORTS: new D1() };
+    const first = await handle(post(legacy()), e);
+    assert.equal(first.status, 503, JSON.stringify(body).slice(0, 120));
+    assert.equal(e.CSP_REPORTS.batches, 0);
+    assert.equal((await handle(post(legacy()), e)).status, 204, 'the next read recovers');
+    assert.equal(e.CSP_REPORTS.rows().length, 1);
+    assert.equal(ASSETS.fetches['/__csp/meta.json'], 2);
+  }
+  for (const body of [['/', 7], ['no-slash']]) {
+    _clearCache();
+    const ASSETS = await flaky({ '/__csp/routes.json': { times: 1, how: 'body', body } });
+    const e = { ASSETS, CSP_REPORTS: new D1() };
+    assert.equal((await handle(post(legacy()), e)).status, 503);
+    assert.equal((await handle(post(legacy()), e)).status, 204);
+    assert.equal(e.CSP_REPORTS.batches, 1);
+  }
+  _clearCache();
+  const pos = `/__csp/pos/${await sha16(PAGE)}.json`;
+  const ASSETS = await flaky({ [pos]: { times: 1, how: 'body', body: [['base.1', '12', 9, 12]] } });
+  const e = { ASSETS, CSP_REPORTS: new D1() };
+  await handle(post([modern()], { type: 'application/reports+json' }), e);
+  await handle(post([modern()], { type: 'application/reports+json' }), e);
+  assert.deepEqual(e.CSP_REPORTS.rows().map((r) => [r.item_id, r.n]).sort(), [['ambiguous', 1], ['base.1', 1]]);
+});
+
+// Sally 2b R2 finding 1: the switch is enforced in the write transaction, not only before it.
+test('collector: a request authorized by the switch writes nothing if the switch changes before its write', async () => {
+  const ACTIVE = 'abc12345.michaels-journal.pages.dev';
+  for (const change of ['clear', 'transfer']) {
+    _clearCache();
+    const db = new D1();
+    db.control(ACTIVE);
+    const real = await assets({ mode: 'preview', previewHost: ACTIVE });
+    let reached;
+    const atRoutes = new Promise((r) => { reached = r; });
+    let release;
+    const gate = new Promise((r) => { release = r; });
+    const ASSETS = { fetch: async (req) => {
+      if (new URL(req.url).pathname === '/__csp/routes.json') { reached(); await gate; }
+      return real.fetch(req);
+    } };
+    const report = post(legacy({ 'document-uri': `https://${ACTIVE}/__csp-fixture/legacy/`, 'original-policy': LEGACY_FX,
+      'effective-directive': 'script-src-elem', 'blocked-uri': 'inline' }), { host: ACTIVE });
+    const pending = handle(report, { ASSETS, CSP_REPORTS: db });
+    await atRoutes; // the switch has already authorized this request
+    db.control(change === 'clear' ? null : 'zzz99999.michaels-journal.pages.dev');
+    release();
+    assert.equal((await pending).status, 204);
+    assert.deepEqual(db.rows(), [], `${change}: no row after retirement`);
+  }
+  // Control: with the switch unchanged, the same paused request does write.
+  _clearCache();
+  const db = new D1();
+  db.control(ACTIVE);
+  const p = { ASSETS: await assets({ mode: 'preview', previewHost: ACTIVE }), CSP_REPORTS: db };
+  await handle(post(legacy({ 'document-uri': `https://${ACTIVE}/__csp-fixture/legacy/`, 'original-policy': LEGACY_FX,
+    'effective-directive': 'script-src-elem', 'blocked-uri': 'inline' }), { host: ACTIVE }), p);
+  assert.equal(db.rows().length, 1);
 });

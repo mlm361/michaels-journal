@@ -9,6 +9,7 @@ import test from 'node:test';
 import { checkHeaders, headerLines } from '../tools/csp-headers-check.mjs';
 import { FIXTURES, fixtureHeaders, isPreview, previewBaseUrl, run as runPreview } from '../tools/csp-preview.mjs';
 import { emit, inventoryOf, pagePath, policyHosts, readInventory, routeKey, scanPage, unlisted } from '../tools/csp-inline-inventory.mjs';
+import { validMeta, validPositions, validRoutes } from '../functions/_shared/csp-report-core.js';
 
 const root = path.resolve(import.meta.dirname, '..');
 const read = (relative) => fs.readFileSync(path.join(root, relative), 'utf8');
@@ -163,6 +164,14 @@ test('inventory: the real build has no unlisted inline code, and emit writes the
     assert.ok(routes.includes('/') && routes.includes('/about/'));
     const home = JSON.parse(fs.readFileSync(path.join(out, '__csp', 'pos', `${routeKey('/')}.json`), 'utf8'));
     assert.ok(home.some(([id]) => id === 'base.1'));
+    // What the build writes must pass the collector's own validators, or the collector would 503 forever.
+    assert.ok(validMeta(meta), 'production meta.json passes validMeta');
+    assert.ok(validRoutes(routes) && validPositions(home));
+    const p = emit(out, { root, env: { CF_PAGES_BRANCH: 'feat/x', CF_PAGES_URL: 'https://abc12345.michaels-journal.pages.dev' } });
+    assert.equal(p.mode, 'preview');
+    const pmeta = JSON.parse(fs.readFileSync(path.join(out, '__csp', 'meta.json'), 'utf8'));
+    assert.equal(pmeta.preview_host, 'abc12345.michaels-journal.pages.dev');
+    assert.ok(validMeta(pmeta), 'preview meta.json passes validMeta');
   } finally {
     fs.rmSync(out, { recursive: true, force: true });
   }
