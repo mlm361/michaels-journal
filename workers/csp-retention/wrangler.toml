@@ -1,5 +1,5 @@
-# JOURNAL-CSP-01 Phase 2b: retention for the CSP report aggregates. Michael deploys this Worker.
-# Secret (set once, never in this file): KUMA_PUSH_URL.
+# JOURNAL-CSP-01: retention for the CSP report aggregates. No secrets and no outbound calls:
+# success is stamped in PROD_DB retention_status (csp/d1-prod-retention-status.sql), read by a pi5 poller.
 name = "csp-retention"
 main = "index.js"
 compatibility_date = "2025-07-05"

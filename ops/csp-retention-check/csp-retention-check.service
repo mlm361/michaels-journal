@@ -1,0 +1,14 @@
+# JOURNAL-CSP-01: push the csp-retention Worker's last success stamp to Uptime Kuma #52 (LAN).
+[Unit]
+Description=CSP retention stamp check -> Uptime Kuma push
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+EnvironmentFile=%h/.config/csp-retention-check/env
+ExecStart=/usr/bin/python3 -I %h/csp-retention-check/csp_retention_check.py
+Nice=10
+MemoryMax=64M
+CPUQuota=25%
+TimeoutStartSec=60
