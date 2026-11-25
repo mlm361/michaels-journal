@@ -24,6 +24,19 @@ jobs:
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: '24'
+      - name: Install Zola for the CSP build test
+        shell: bash
+        run: |
+          zola_dir="$RUNNER_TEMP/zola"
+          archive="$RUNNER_TEMP/zola-v0.23.6.tar.gz"
+          mkdir -p "$zola_dir"
+          curl --fail --silent --show-error --location --retry 3 \
+            --output "$archive" \
+            https://github.com/getzola/zola/releases/download/v0.23.6/zola-v0.23.6-x86_64-unknown-linux-gnu.tar.gz
+          printf '%s  %s\n' '8f5132b3522412d04e395e0b25f6d68613ad272a873e54a2b3ebf664873024a4' "$archive" | sha256sum --check
+          tar -xzf "$archive" -C "$zola_dir" zola
+          "$zola_dir/zola" --version
+          printf '%s\n' "$zola_dir" >> "$GITHUB_PATH"
       - run: npm test
 
   codeql:

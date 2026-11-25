@@ -15,7 +15,7 @@
 //
 // Identity (stable across posts):
 //   template scripts   their data-csp-id attribute (templates tag every inline <script>);
-//   content scripts    "content:" + the first 16 hex of the SHA-256 of the script text;
+//   content scripts    "content:" + the first 16 hex of the SHA-256 of the script text with LF line endings;
 //   inline handlers    "handler:<element>.<attribute>:" + 12 hex of the value's SHA-256.
 // JSON data blocks (application/json, application/ld+json, importmap) are not code.
 import fs from 'node:fs';
@@ -54,7 +54,8 @@ export function scanPage(html) {
     const attrs = m[1];
     if (/\bsrc\s*=/i.test(attrs) || DATA_TYPE.test(attrs)) continue;
     const tagged = attrs.match(/\bdata-csp-id\s*=\s*"([a-z0-9.-]+)"/i);
-    const id = tagged ? tagged[1] : `content:${sha(m[2]).slice(0, 16)}`;
+    // Zola's built-in redirect scripts use the platform's line endings.
+    const id = tagged ? tagged[1] : `content:${sha(m[2].replace(/\r\n/g, '\n')).slice(0, 16)}`;
     const start = lineCol(html, m.index);
     const body = lineCol(html, m.index + m[0].indexOf('>') + 1);
     items.push({ id, kind: 'script', line: start.line, col: start.col, endLine: body.line });

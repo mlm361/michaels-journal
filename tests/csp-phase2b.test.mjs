@@ -113,6 +113,8 @@ test('inventory: scanPage identifies template, content and handler code with pos
     ['*.b.example', 'a.example', 'c.example']);
   assert.equal(routeKey('/'), routeKey('/'));
   assert.notEqual(routeKey('/a/'), routeKey('/b/'));
+  const redirect = '<script>\nwindow.location.replace("/");\n</script>';
+  assert.equal(scanPage(redirect)[0].id, scanPage(redirect.replaceAll('\n', '\r\n'))[0].id);
 });
 
 test('inventory: every template inline script is tagged with data-csp-id', () => {
@@ -149,7 +151,8 @@ test('inventory: the real build has no unlisted inline code, and emit writes the
   const out = fs.mkdtempSync(path.join(os.tmpdir(), 'csp-inventory-'));
   try {
     const built = spawnSync('zola', ['build', '-o', out, '--force'], { cwd: root, encoding: 'utf8' });
-    assert.equal(built.status, 0, built.stderr);
+    if (built.error) throw built.error;
+    assert.equal(built.status, 0, built.stderr || 'Zola build failed');
     const inventory = readInventory(path.join(root, 'csp/phase3-inline-inventory.json'));
     assert.deepEqual(unlisted(out, inventory), [], 'add new inline code with: node tools/csp-inline-inventory.mjs write <build>');
     const { pages } = inventoryOf(out);
