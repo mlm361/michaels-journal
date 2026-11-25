@@ -67,8 +67,15 @@
       return safeUrl((mention.author && mention.author.url) || mention.url);
     }
 
+    // JOURNAL-CSP-01 2c (C1, transitional): a self-hosted avatar path or, as before, a
+    // public http(s) URL. A picture that fails to load becomes the initial badge (above).
+    var SELF_HOSTED_AVATAR = /^\/avatars\/(engagement|webmention)\/[0-9a-f]{64}\.webp$/;
+
     function authorPhoto(mention) {
-      return (mention.author && mention.author.photo) ? safeUrl(mention.author.photo) : "";
+      var photo = mention.author && mention.author.photo;
+      if (!photo) return "";
+      if (typeof photo === "string" && SELF_HOSTED_AVATAR.test(photo)) return photo;
+      return safeUrl(photo);
     }
 
     function initialFor(mention) {
