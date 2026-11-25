@@ -24,7 +24,7 @@ function d1(days, { prod = false } = {}) {
     const r = st.run(...args);
     return { success: true, results: [], meta: { changes: Number(r.changes) } };
   };
-  const stmt = (sql, args = []) => ({ sql, args, bind: (...a) => stmt(sql, a), run: async () => exec(sql, args) });
+  const stmt = (sql, args = []) => ({ sql, args, bind: (...a) => stmt(sql, a), run: async () => exec(sql, args), all: async () => exec(sql, args) });
   return {
     raw: db,
     prepare: (sql) => stmt(sql),
@@ -140,8 +140,8 @@ test('retention: a kept row that vanished during the prune fails the run (valid 
   assert.deepEqual(prod.status(), PRIOR);
 });
 
-// The stamp batch is [INSERT OR REPLACE, read-back SELECT]. These fakes answer it WITHOUT executing,
-// so the previous stamp must survive and the run must fail.
+// The stamp batch is [forward-only upsert, read-back SELECT]. These fakes answer it WITHOUT executing,
+// so the fresh re-read finds the previous stamp, and the error says so (it does not assume it).
 function fakeStamp(prod, answer) {
   return { ...prod, batch: async (stmts) => (stmts.length === 2 ? answer(stmts) : prod.batch(stmts)) };
 }
@@ -157,12 +157,84 @@ const stampFailures = {
   'short stamp batch': [/unexpected shape/, () => [{ success: true, meta: { changes: 1 } }]],
 };
 for (const [name, [re, answer]] of Object.entries(stampFailures)) {
-  test(`retention: stamp ${name} -> run fails and the previous stamp stays intact`, async () => {
+  test(`retention: stamp ${name} (not executed) -> not confirmed, re-read reports the previous stamp`, async () => {
     const prod = withPrior(d1([], { prod: true }));
     await assert.rejects(() => runRetention({ PREVIEW_DB: d1([]), PROD_DB: fakeStamp(prod, answer) }, { scheduledTime: SCHED, cron: '17 3 * * *' }), re);
+    await assert.rejects(() => runRetention({ PREVIEW_DB: d1([]), PROD_DB: fakeStamp(prod, answer) }, { scheduledTime: SCHED, cron: '17 3 * * *' }),
+      /^Error: status stamp not confirmed \(.*\); re-read found scheduled_at 2026-11-22T03:17:00\.000Z, last_ok_at 2026-11-22T03:17:04\.000Z$/);
     assert.deepEqual(prod.status(), PRIOR);
   });
 }
+
+// Sally R2 P1: real transactions on the stand-in, not synthetic replies.
+// Runs the REAL stamp batch (it commits), then replaces or drops D1's reply.
+function committedThen(prod, reply, { rereadFails = false } = {}) {
+  return {
+    ...prod,
+    prepare: rereadFails ? (sql) => {
+      const st = prod.prepare(sql);
+      return { ...st, bind: (...a) => ({ ...st.bind(...a), all: async () => { throw new Error('D1 unavailable'); } }) };
+    } : prod.prepare,
+    batch: async (stmts) => {
+      if (stmts.length !== 2) return prod.batch(stmts);
+      const out = await prod.batch(stmts.map((st) => prod.prepare(st.sql).bind(...st.args)));
+      return reply(out);
+    },
+  };
+}
+const ours = (prod) => prod.status().scheduled_at === SCHED.toISOString();
+
+test('retention: an invalid stamp is rolled back by the table CHECKs; the re-read reports the previous stamp', async () => {
+  for (const [cron, sched] of [['', SCHED], ['17 3 * * *', new Date('2099-01-01T03:17:00Z')]]) {
+    const prod = withPrior(d1([], { prod: true }));
+    await assert.rejects(() => runRetention({ PREVIEW_DB: d1([]), PROD_DB: prod }, { scheduledTime: sched, cron }),
+      /^Error: status stamp not confirmed \(status stamp batch failed: CHECK constraint failed: .*\); re-read found scheduled_at 2026-11-22T03:17:00\.000Z/);
+    assert.deepEqual(prod.status(), PRIOR);
+  }
+});
+
+const lostReplies = {
+  'the reply is lost (batch throws after commit)': () => { throw new Error('Network connection lost'); },
+  'the read-back reply has no row': (o) => [o[0], { ...o[1], results: [] }],
+  'the reply is malformed': () => ({}),
+  'the reply reports no change': (o) => [{ ...o[0], meta: { changes: 0 } }, o[1]],
+};
+for (const [name, reply] of Object.entries(lostReplies)) {
+  test(`retention: stamp committed but ${name} -> a fresh re-read confirms this run`, async () => {
+    const prod = withPrior(d1([], { prod: true }));
+    const r = await runRetention({ PREVIEW_DB: d1([]), PROD_DB: committedThen(prod, reply) }, { scheduledTime: SCHED, cron: '17 3 * * *' });
+    assert.equal(r.outcome, 'stamped (confirmed by re-read)');
+    assert.deepEqual({ ...prod.status(), id: undefined }, { ...r.stamp, id: undefined });
+  });
+  test(`retention: stamp committed, ${name} and the re-read fails -> outcome unknown, and the row DID advance`, async () => {
+    const prod = withPrior(d1([], { prod: true }));
+    await assert.rejects(() => runRetention({ PREVIEW_DB: d1([]), PROD_DB: committedThen(prod, reply, { rereadFails: true }) }, { scheduledTime: SCHED, cron: '17 3 * * *' }),
+      /^Error: status stamp outcome unknown \(.*; D1 unavailable\): the stored receipt may be from this run or an earlier one$/);
+    assert.ok(ours(prod), 'the thrown error must not be read as "previous row kept": this one committed');
+  });
+}
+
+test('retention: a late, older invocation keeps the newer receipt (real upsert guard, no change)', async () => {
+  const prod = d1([], { prod: true });
+  const NEWER = { ...PRIOR, last_ok_at: '2026-11-24T03:17:05.000Z', scheduled_at: '2026-11-24T03:17:00.000Z', keep_from: '2026-10-25' };
+  prod.raw.prepare('INSERT INTO retention_status VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)').run(...Object.values(NEWER));
+  let changes;
+  const watched = committedThen(prod, (o) => { changes = o[0].meta.changes; return o; });
+  const r = await runRetention({ PREVIEW_DB: d1([]), PROD_DB: watched }, { scheduledTime: SCHED, cron: '17 3 * * *' });
+  assert.equal(changes, 0);
+  assert.equal(r.outcome, 'newer receipt kept (scheduled_at 2026-11-24T03:17:00.000Z, last_ok_at 2026-11-24T03:17:05.000Z)');
+  assert.deepEqual(prod.status(), NEWER);
+});
+
+test('retention: a re-run of the same scheduled time moves the receipt forward, an identical one does not', async () => {
+  const prod = withPrior(d1([], { prod: true }));
+  const first = await runRetention({ PREVIEW_DB: d1([]), PROD_DB: prod }, { scheduledTime: SCHED, cron: '17 3 * * *' });
+  await new Promise((res) => setTimeout(res, 5));
+  const second = await runRetention({ PREVIEW_DB: d1([]), PROD_DB: prod }, { scheduledTime: SCHED, cron: '17 3 * * *' });
+  assert.equal(first.outcome, 'stamped');
+  assert.equal(second.outcome, 'stamped');
+  assert.equal(prod.status().last_ok_at, second.stamp.last_ok_at);
+});
 
 test('retention: a missing binding, a missing prod table or a bad scheduled time fails the run', async () => {
   await assert.rejects(() => runRetention({ PROD_DB: d1([], { prod: true }) }, { scheduledTime: SCHED }), /PREVIEW_DB is missing/);
@@ -222,6 +294,23 @@ test('retention: the prod status migration is additive and idempotent', () => {
   assert.match(STATUS_SQL, /CREATE TABLE IF NOT EXISTS retention_status/);
   assert.doesNotMatch(STATUS_SQL, /\b(DROP|DELETE|ALTER|UPDATE|INSERT)\b/i);
   assert.throws(() => db.prepare("INSERT INTO retention_status VALUES (2, 'a', 'b', 'c', 'd', 0, 0, 0, 0)").run(), /CHECK/);
+  const ok = ['2026-11-23T03:17:04.000Z', '2026-11-23T03:17:00.000Z', '17 3 * * *', '2026-10-24', 5, 7, 0, 1];
+  const bad = {
+    'impossible date': { 0: '2026-02-30T03:17:04.000Z', 1: '2026-02-30T03:17:00.000Z', 3: '2026-01-31' },
+    'not toISOString form': { 1: '2026-11-23 03:17:00' },
+    'keep_from off by a day': { 3: '2026-10-23' },
+    'completed before scheduled': { 0: '2026-11-23T03:16:59.000Z' },
+    'empty cron': { 2: '' },
+    'fractional count': { 4: 5.5 },
+    'negative count': { 7: -1 },
+    'non-numeric text count': { 5: 'seven' },
+  };
+  const put = (v) => { db.exec('DELETE FROM retention_status'); db.prepare('INSERT INTO retention_status VALUES (1, ?, ?, ?, ?, ?, ?, ?, ?)').run(...v); };
+  for (const [name, patch] of Object.entries(bad)) {
+    assert.throws(() => put(ok.map((v, i) => (i in patch ? patch[i] : v))), /CHECK constraint failed/, name);
+  }
+  put(ok);
+  assert.equal(db.prepare('SELECT count(*) AS n FROM retention_status').get().n, 1);
 });
 
 test('retention: wrangler.toml binds both databases, runs daily, has no route and no secret', () => {

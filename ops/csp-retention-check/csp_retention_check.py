@@ -15,7 +15,8 @@ Configuration comes from the environment (systemd EnvironmentFile, 0600):
 
 UP needs a real receipt: statement success, cron 17 3 * * *, scheduled at 03:17:00 UTC, completed
 0-15 min after that, keep_from = scheduled day - 30, nothing over 5 min in the future, and the
-SCHEDULED run under 26 h old. Redirects are never followed, and 401/403 bodies are never read.
+SCHEDULED run under 26 h old. Anything else, including an unforeseen error while deciding, pushes
+DOWN. Redirects are never followed, and 401/403 bodies are never read.
 
 Messages carry reason codes only, never a token, a response body or headers. Standard library only.
 """
@@ -88,14 +89,20 @@ def decide(http_status, payload, now):
     # ... completed after it was scheduled, within one invocation ...
     if not (timedelta(0) <= last_ok - scheduled <= MAX_RUN):
         return 'down', 'receipt'
-    # ... with the Worker's cutoff rule: keep_from = scheduled UTC day - RETENTION_DAYS.
-    if row.get('keep_from') != (scheduled.date() - timedelta(days=RETENTION_DAYS)).isoformat():
-        return 'down', 'keep_from'
+    # Age and future checks come BEFORE any date arithmetic on the receipt, so an extreme but
+    # parseable timestamp (year 1, year 9999) is DOWN, never an overflow (Sally R2 P2).
     if last_ok - now > FUTURE_SLACK or scheduled - now > FUTURE_SLACK:
         return 'down', 'future'
     age = now - scheduled
     if age >= MAX_AGE:
         return 'down', f'stale_{int(age.total_seconds() // 3600)}h'
+    # ... with the Worker's cutoff rule: keep_from = scheduled UTC day - RETENTION_DAYS.
+    try:
+        expected_keep_from = (scheduled.date() - timedelta(days=RETENTION_DAYS)).isoformat()
+    except OverflowError:
+        return 'down', 'malformed'
+    if row.get('keep_from') != expected_keep_from:
+        return 'down', 'keep_from'
     return 'up', f'ok run {scheduled.strftime("%Y-%m-%dT%H:%MZ")} age {max(0, int(age.total_seconds() // 60))}m'
 
 
@@ -207,7 +214,13 @@ def main(argv=None, env=None, now=None, opener=None):
         reason = f'fixture {args.fixture}: {reason}'
     else:
         http_status, payload = query_d1(env, opener)
-        status, reason = ('down', 'network') if http_status is None else decide(http_status, payload, now)
+        if http_status is None:
+            status, reason = 'down', 'network'
+        else:
+            try:
+                status, reason = decide(http_status, payload, now)
+            except Exception:  # noqa: BLE001 - any unforeseen receipt still reaches Kuma as DOWN
+                status, reason = 'down', 'internal'
     print(f'csp-retention-check: {status} {reason}')
     if args.dry_run:
         return 0

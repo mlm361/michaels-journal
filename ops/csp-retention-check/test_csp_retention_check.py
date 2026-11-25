@@ -44,6 +44,12 @@ def d1(row, statement_success=True):
             'errors': [], 'messages': [], 'success': True}
 
 
+# Sally R2 P2: parseable but extreme timestamps. The keep_from is whatever a buggy writer might send.
+YEAR1 = {'last_ok_at': '0001-01-01T03:17:04.000Z', 'scheduled_at': '0001-01-01T03:17:00.000Z',
+         'cron': '17 3 * * *', 'keep_from': '0001-01-01'}
+YEAR9999 = {'last_ok_at': '9999-12-31T03:17:04.000Z', 'scheduled_at': '9999-12-31T03:17:00.000Z',
+            'cron': '17 3 * * *', 'keep_from': '9999-12-01'}
+
 D = NOW.date()
 Y = D - timedelta(days=1)
 
@@ -163,6 +169,14 @@ class Decide(unittest.TestCase):
             with self.subTest(bad=bad):
                 self.assertEqual(c.decide(200, d1(receipt(**bad)), NOW), ('down', 'malformed'))
 
+    def test_extreme_timestamps_are_down_without_overflow(self):
+        self.assertEqual(c.decide(200, d1(YEAR1), NOW)[0], 'down')
+        self.assertTrue(c.decide(200, d1(YEAR1), NOW)[1].startswith('stale_'))
+        self.assertEqual(c.decide(200, d1(YEAR9999), NOW), ('down', 'future'))
+        # even with the clock at the start of time, the cutoff overflow is DOWN malformed, not a crash
+        early = datetime(1, 1, 1, 4, 0, tzinfo=timezone.utc)
+        self.assertEqual(c.decide(200, d1(YEAR1), early), ('down', 'malformed'))
+
     def test_statement_level_failure_is_down(self):
         self.assertEqual(c.decide(200, d1(receipt(), statement_success=False), NOW), ('down', 'api_error'))
         p = d1(receipt())
@@ -232,6 +246,36 @@ class Main(unittest.TestCase):
                 self.assertEqual(net.pushes()[0]['msg'], [reason])
                 self.assert_no_secret(net, text)
                 self.assertNotIn('oops', text)
+
+    def test_year_one_receipt_pushes_down_end_to_end_and_a_normal_receipt_still_pushes_up(self):
+        net = FakeNet((200, d1(YEAR1)))
+        code, text = run(net)
+        self.assertEqual(code, 0)
+        self.assertEqual(len(net.pushes()), 1)
+        self.assertEqual(net.pushes()[0]['status'], ['down'])
+        self.assertTrue(net.pushes()[0]['msg'][0].startswith('stale_'))
+        self.assert_no_secret(net, text)
+        net = FakeNet((200, d1(receipt())))
+        code, _ = run(net)
+        self.assertEqual(code, 0)
+        self.assertEqual(net.pushes()[0]['status'], ['up'])
+        self.assertEqual(net.pushes()[0]['msg'], ['ok run 2026-11-25T03:17Z age 163m'])
+
+    def test_an_unforeseen_error_while_deciding_still_pushes_down(self):
+        orig = c.decide
+
+        def boom(*a):
+            raise OverflowError('date value out of range')
+        c.decide = boom
+        try:
+            net = FakeNet((200, d1(receipt())))
+            code, text = run(net)
+        finally:
+            c.decide = orig
+        self.assertEqual(code, 0)
+        self.assertEqual(net.pushes()[0]['status'], ['down'])
+        self.assertEqual(net.pushes()[0]['msg'], ['internal'])
+        self.assertNotIn('out of range', text)
 
     def test_auth_errors_never_read_the_body_and_still_push_down(self):
         for code_ in (401, 403):
