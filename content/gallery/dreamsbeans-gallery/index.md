@@ -33,7 +33,7 @@ alts = [
     "Illustration of a gray-haired man wearing black glasses and a light button-up shirt, smiling as he pours amber-colored tea from a glass press with a metal filter into a tall glass of ice. He steadies the glass with his other hand. Fresh mint leaves lie on the pale marble counter beside scattered dried spices, a small dish of spices, and an open rectangular tin. Behind him, kitchen shelves hold jars of dry ingredients and a trailing green plant; sunlight comes through a window at right, where another potted plant is visible. The word “dreambeans” appears in white lettering above him. The scene is rendered in warm, softly colored watercolor-and-ink style.",
 ]
 captions = [
-    "Real me on Hawiian Day at work",
+    "Real me on Hawaiian Day at work",
     "",
     "",
     "",
