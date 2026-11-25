@@ -59,11 +59,20 @@ export function manifestDeadline(manifest, kind, stem) {
   return listed ? validUntil : null;
 }
 
+// A storage read error is treated exactly like a missing object: 404, no-store.
 async function readManifest(bucket, kind) {
-  const object = await bucket.get(`manifest/${kind}.json`);
-  if (!object || typeof object.size !== 'number' || object.size > MAX_MANIFEST_BYTES) return null;
   try {
+    const object = await bucket.get(`manifest/${kind}.json`);
+    if (!object || typeof object.size !== 'number' || object.size > MAX_MANIFEST_BYTES) return null;
     return JSON.parse(await object.text());
+  } catch {
+    return null;
+  }
+}
+
+async function readObject(bucket, key, head) {
+  try {
+    return head ? await bucket.head(key) : await bucket.get(key);
   } catch {
     return null;
   }
@@ -83,7 +92,7 @@ async function serve(context, head) {
   if (deadline === null || Date.now() >= deadline) return notFound();
 
   const key = `${kind}/${name}`;
-  const object = head ? await bucket.head(key) : await bucket.get(key);
+  const object = await readObject(bucket, key, head);
   if (!object) return notFound();
   const contentType = object.httpMetadata && object.httpMetadata.contentType;
   if (contentType !== 'image/webp' || typeof object.size !== 'number' || object.size > MAX_OBJECT_BYTES) {

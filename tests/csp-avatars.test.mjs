@@ -279,6 +279,65 @@ test('version pin: the Function keeps the manifest check, the lease bound and no
   assert.ok(Number.isNaN(parseTimestamp('2026-11-25 12:00:00Z')));
 });
 
+// Sally C1 review P2: a rejected R2 read must give the same 404/no-store, never a thrown error.
+function failingBucket(failOn) {
+  const b = bucket(good());
+  for (const method of ['get', 'head']) {
+    const real = b[method];
+    b[method] = async (key) => {
+      const which = key.startsWith('manifest/') ? `manifest ${method}` : `object ${method}`;
+      if (which === failOn) {
+        b.calls.push([method, key, 'rejected']);
+        throw new Error(`R2 ${which} failed`);
+      }
+      return real.call(b, key);
+    };
+  }
+  return b;
+}
+
+test('storage error on the manifest GET: 404 no-store, and the object is never read', async () => {
+  at(NOW);
+  for (const method of ['GET', 'HEAD']) {
+    const b = failingBucket('manifest get');
+    const res = await call('webmention', `${K1}.webp`, b, method);
+    assert.equal(res.status, 404, method);
+    assert.equal(res.headers.get('cache-control'), 'no-store');
+    assert.deepEqual(b.calls, [['get', 'manifest/webmention.json', 'rejected']], method);
+  }
+});
+
+test('storage error on the object GET or HEAD: 404 no-store', async () => {
+  at(NOW);
+  for (const [failOn, method] of [['object get', 'GET'], ['object head', 'HEAD']]) {
+    const b = failingBucket(failOn);
+    const res = await call('webmention', `${K1}.webp`, b, method);
+    assert.equal(res.status, 404, failOn);
+    assert.equal(res.headers.get('cache-control'), 'no-store', failOn);
+    assert.equal(res.headers.get('content-type'), 'text/plain;charset=UTF-8', failOn);
+    assert.deepEqual(b.calls.map((c) => c[0] + ' ' + c[1] + (c[2] ? ' ' + c[2] : '')),
+      ['get manifest/webmention.json', `${method.toLowerCase()} webmention/${K1}.webp rejected`], failOn);
+  }
+});
+
+test('storage error on the manifest body read: 404 no-store', async () => {
+  at(NOW);
+  const objects = good();
+  objects['manifest/webmention.json'] = { size: 10, httpMetadata: { contentType: 'application/json' },
+    text: async () => { throw new Error('R2 body stream failed'); } };
+  const b = bucket(objects);
+  const res = await call('webmention', `${K1}.webp`, b);
+  assert.equal(res.status, 404);
+  assert.deepEqual(b.calls, [['get', 'manifest/webmention.json']]);
+});
+
+test('after a successful read the response-boundary clock check still applies', async () => {
+  const deadline = NOW + 90 * MIN;
+  at(deadline - 60000);
+  const b = bucket(good(), { onGet: (key) => { if (key.endsWith('.webp')) at(deadline - 1000); } });
+  assert.equal((await call('webmention', `${K1}.webp`, b)).status, 404);
+});
+
 test('routes: /avatars/* reaches the Function', () => {
   const routes = JSON.parse(read('static/_routes.json'));
   assert.ok(routes.include.includes('/avatars/*'));
