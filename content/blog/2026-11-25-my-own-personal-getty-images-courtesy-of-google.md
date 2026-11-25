@@ -11,6 +11,12 @@ tags = [ "ai", "apps", "technology",]
 [extra]
 stats_word_count = 391
 stats_reading_time = 2
+
+[extra.posse]
+mastodon = "https://mitchelltribe.social/@michael/117678186114816519"
+bluesky = "https://bsky.app/profile/mitchelltribe.com/post/3n35no2ivod2k"
+sharkey = "https://mitchelltribe.rodeo/notes/atzy1olyxbcl00e5"
+nostr = "https://jumble.social/nevent1qqs8ny9x5a8nxxwkj76tddq9xxjkc7ejcywx9sf2a9c3gg4lf8rf2jgpr4mhxue69uhhyetvv9ujumtfw33ksetvd368y6tzv5hxxmmdqyxhwumn8ghj7mn0wvhxcmmvqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygp02vfgtvcm7q2ru6ld4mgg6g36d4anva2m6vfu2yncn3ae9tjflcujtxsl"
 +++
 
 <data class="p-summary" value="It has been a busy couple of months, and I am finally able to sit down and type up another blog post. I have been meaning to talk about an app I have grown to really enjoy. Dreambeans from Google. Now, I know some people are vehemently..."></data>
