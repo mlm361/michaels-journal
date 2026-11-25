@@ -8,7 +8,7 @@ stays LAN-only.
 **UP needs a real receipt:**
 - the envelope and the statement both report success;
 - `cron` is `17 3 * * *`;
-- `scheduled_at` is a 03:17:00 UTC instant;
+- `scheduled_at` is from 03:17:00 up to, not including, 03:32:00 UTC (Cloudflare's `scheduledTime` trails the cron instant: the first prod run said 03:17:41);
 - `last_ok_at` is 0 to 15 min after it;
 - `keep_from` is the scheduled UTC day minus 30;
 - nothing is more than 5 min in the future;

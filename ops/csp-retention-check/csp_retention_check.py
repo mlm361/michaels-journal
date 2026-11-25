@@ -13,8 +13,8 @@ Configuration comes from the environment (systemd EnvironmentFile, 0600):
   CSP_KUMA_PUSH_URL   exactly http://127.0.0.1:3001/api/push/<token> (never logged; any query is
                       replaced)
 
-UP needs a real receipt: statement success, cron 17 3 * * *, scheduled at 03:17:00 UTC, completed
-0-15 min after that, keep_from = scheduled day - 30, nothing over 5 min in the future, and the
+UP needs a real receipt: statement success, cron 17 3 * * *, scheduled in 03:17:00-03:31:59 UTC (Cloudflare's
+scheduledTime carries dispatch jitter: the first prod run said 03:17:41), completed 0-15 min after that, keep_from = scheduled day - 30, nothing over 5 min in the future, and the
 SCHEDULED run under 26 h old. Anything else, including an unforeseen error while deciding, pushes
 DOWN. Redirects are never followed, and 401/403 bodies are never read.
 
@@ -38,6 +38,7 @@ RETENTION_DAYS = 30           # workers/csp-retention/index.js RETENTION_DAYS
 MAX_AGE = timedelta(hours=26)  # measured from the SCHEDULED run, so an old run can't mask a missed one
 FUTURE_SLACK = timedelta(minutes=5)
 MAX_RUN = timedelta(minutes=15)  # scheduled -> completion; a Cron Trigger invocation is far shorter
+SCHED_JITTER = timedelta(minutes=15)  # scheduledTime may trail 03:17:00 (2026-11-25 prod: 03:17:41)
 KUMA_HOST, KUMA_PORT = '127.0.0.1', 3001
 D1_TIMEOUT = 15
 PUSH_TIMEOUT = 10
@@ -83,8 +84,12 @@ def decide(http_status, payload, now):
         return 'down', 'malformed'
     if row.get('cron') != CRON:
         return 'down', 'cron'
-    # The scheduled time must be a real instant of the cron (03:17:00 UTC) ...
-    if (scheduled.hour, scheduled.minute, scheduled.second, scheduled.microsecond) != (3, 17, 0, 0):
+    # The scheduled time must belong to a cron firing: from 03:17:00 UTC on its own day up to,
+    # not including, 03:32:00. Cloudflare's scheduledTime is not the exact cron instant (the
+    # first prod run reported 03:17:41), so an exact-second rule would never be UP ...
+    offset = timedelta(hours=scheduled.hour, minutes=scheduled.minute, seconds=scheduled.second,
+                       microseconds=scheduled.microsecond) - timedelta(hours=3, minutes=17)
+    if not (timedelta(0) <= offset < SCHED_JITTER):
         return 'down', 'receipt'
     # ... completed after it was scheduled, within one invocation ...
     if not (timedelta(0) <= last_ok - scheduled <= MAX_RUN):

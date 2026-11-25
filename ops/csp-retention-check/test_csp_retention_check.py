@@ -150,11 +150,24 @@ class Decide(unittest.TestCase):
         self.assertEqual(c.decide(200, d1(receipt()), very_early), ('down', 'future'))
 
     def test_scheduled_time_must_be_the_cron_instant(self):
-        for bad in ('2026-11-25T03:18:00.000Z', '2026-11-25T04:17:00.000Z', '2026-11-25T03:17:01.000Z',
-                    '2026-11-25T03:17:00.500Z'):
+        for bad in ('2026-11-25T03:16:59.999Z', '2026-11-25T03:32:00.000Z', '2026-11-25T04:17:00.000Z',
+                    '2026-11-25T02:17:00.000Z', '2026-11-25T00:00:00.000Z'):
             with self.subTest(bad=bad):
-                r = receipt(scheduled_at=bad, last_ok_at='2026-11-25T04:20:00.000Z')
-                self.assertEqual(c.decide(200, d1(r), NOW), ('down', 'receipt'))
+                done = iso(datetime.strptime(bad, '%Y-%m-%dT%H:%M:%S.%fZ') + timedelta(seconds=4))
+                r = receipt(scheduled_at=bad, last_ok_at=done)
+                self.assertEqual(c.decide(200, d1(r), datetime(2026, 11, 25, 6, 0, tzinfo=timezone.utc)),
+                                 ('down', 'receipt'))
+
+    def test_cloudflare_dispatch_jitter_is_up(self):
+        # 2026-11-25 prod, the first real run: scheduled_at 03:17:41.000Z, last_ok_at 03:17:43.464Z.
+        real = receipt(scheduled_at='2026-11-25T03:17:41.000Z', last_ok_at='2026-11-25T03:17:43.464Z')
+        self.assertEqual(c.decide(200, d1(real), datetime(2026, 11, 25, 3, 21, tzinfo=timezone.utc)),
+                         ('up', 'ok run 2026-11-25T03:17Z age 3m'))
+        for ok in ('2026-11-25T03:17:00.500Z', '2026-11-25T03:31:59.999Z'):
+            with self.subTest(ok=ok):
+                done = iso(datetime.strptime(ok, '%Y-%m-%dT%H:%M:%S.%fZ') + timedelta(seconds=4))
+                r = receipt(scheduled_at=ok, last_ok_at=done)
+                self.assertEqual(c.decide(200, d1(r), datetime(2026, 11, 25, 6, 0, tzinfo=timezone.utc))[0], 'up')
 
     def test_cron_and_keep_from_must_match(self):
         self.assertEqual(c.decide(200, d1(receipt(cron='manual')), NOW), ('down', 'cron'))
