@@ -4,7 +4,7 @@
     {
       "author": {
         "name": "Pip",
-        "photo": "https://cdn.masto.host/mitchelltribesocial/cache/accounts/avatars/117/262/777/435/430/566/original/cb71f23166d5d9f9.png",
+        "photo": "/avatars/engagement/c531e699facab09479835dfdd97fbe45f907825bf830ab34c54e712963ba366d.webp",
         "url": "https://tinymind.eu"
       },
       "platform": "mastodon",
@@ -16,18 +16,18 @@
     {
       "author": {
         "name": "Pip",
-        "photo": "https://mitchelltribe.rodeo/proxy/avatar.webp?url=https%3A%2F%2Ftinymind.eu%2Flogo.png&avatar=1",
-        "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu"
+        "photo": "/avatars/engagement/c531e699facab09479835dfdd97fbe45f907825bf830ab34c54e712963ba366d.webp",
+        "url": "https://tinymind.eu"
       },
-      "platform": "sharkey",
-      "published": "2026-10-11T17:44:40.452Z",
-      "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu",
-      "wm-property": "like-of",
+      "platform": "mastodon",
+      "published": null,
+      "url": "https://tinymind.eu",
+      "wm-property": "repost-of",
       "wm-target": "https://mitchelltribe.com/2026/10/11/watched-the-sheep-detectives/"
     }
   ],
-  "generated_at": "2026-11-26T02:13:56.531545+00:00",
-  "like_count": 2,
+  "generated_at": "2026-11-26T04:44:49.943722+00:00",
+  "like_count": 1,
   "reply_count": 0,
   "source_post_id": 1262,
   "type": "feed",

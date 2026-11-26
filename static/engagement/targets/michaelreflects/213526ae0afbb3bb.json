@@ -4,7 +4,7 @@
     {
       "author": {
         "name": "Pip",
-        "photo": "https://cdn.masto.host/mitchelltribesocial/cache/accounts/avatars/117/262/777/435/430/566/original/cb71f23166d5d9f9.png",
+        "photo": "/avatars/engagement/c531e699facab09479835dfdd97fbe45f907825bf830ab34c54e712963ba366d.webp",
         "url": "https://tinymind.eu"
       },
       "platform": "mastodon",
@@ -16,7 +16,19 @@
     {
       "author": {
         "name": "Pip",
-        "photo": "https://mitchelltribe.rodeo/proxy/avatar.webp?url=https%3A%2F%2Ftinymind.eu%2Flogo.png&avatar=1",
+        "photo": "/avatars/engagement/c531e699facab09479835dfdd97fbe45f907825bf830ab34c54e712963ba366d.webp",
+        "url": "https://tinymind.eu"
+      },
+      "platform": "mastodon",
+      "published": null,
+      "url": "https://tinymind.eu",
+      "wm-property": "repost-of",
+      "wm-target": "https://mitchelltribe.com/2026/10/01/public-information-should-be-public/"
+    },
+    {
+      "author": {
+        "name": "Pip",
+        "photo": "/avatars/engagement/eb051c2883047399694a9fca678797dc42f86949e3c8034f5d3c7b357771e9b7.webp",
         "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu"
       },
       "platform": "sharkey",
@@ -26,7 +38,7 @@
       "wm-target": "https://mitchelltribe.com/2026/10/01/public-information-should-be-public/"
     }
   ],
-  "generated_at": "2026-11-26T02:15:16.867400+00:00",
+  "generated_at": "2026-11-26T04:46:13.347677+00:00",
   "like_count": 2,
   "reply_count": 0,
   "source_post_id": 1252,

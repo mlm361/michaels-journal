@@ -4,7 +4,7 @@
     {
       "author": {
         "name": "Pip",
-        "photo": "https://cdn.masto.host/mitchelltribesocial/cache/accounts/avatars/117/262/777/435/430/566/original/cb71f23166d5d9f9.png",
+        "photo": "/avatars/engagement/c531e699facab09479835dfdd97fbe45f907825bf830ab34c54e712963ba366d.webp",
         "url": "https://tinymind.eu"
       },
       "platform": "mastodon",
@@ -16,7 +16,7 @@
     {
       "author": {
         "name": "Derek Hanson",
-        "photo": "https://cdn.masto.host/mitchelltribesocial/cache/accounts/avatars/117/354/568/980/516/012/original/b2106897297a4831.png",
+        "photo": "/avatars/engagement/c409cc1d70027069a3d59afa055ca3a0052f68518d88693465a4fca1a0349bf5.webp",
         "url": "https://mastodon.social/@derekahanson"
       },
       "content": {
@@ -32,7 +32,7 @@
     {
       "author": {
         "name": "Michael",
-        "photo": "https://cdn.masto.host/mitchelltribesocial/accounts/avatars/109/563/987/250/398/644/original/2421204ef873b947.png",
+        "photo": "/avatars/engagement/37c2e0e3bf7b007f50c41be8b9815fdf6653f8256e5be998065a16e03341febd.webp",
         "url": "https://mitchelltribe.social/@michael"
       },
       "author-is-owner": true,
@@ -50,7 +50,19 @@
     {
       "author": {
         "name": "Pip",
-        "photo": "https://mitchelltribe.rodeo/proxy/avatar.webp?url=https%3A%2F%2Ftinymind.eu%2Flogo.png&avatar=1",
+        "photo": "/avatars/engagement/c531e699facab09479835dfdd97fbe45f907825bf830ab34c54e712963ba366d.webp",
+        "url": "https://tinymind.eu"
+      },
+      "platform": "mastodon",
+      "published": null,
+      "url": "https://tinymind.eu",
+      "wm-property": "repost-of",
+      "wm-target": "https://mitchelltribe.com/2026/09/29/share-buttons-yay-or-nay/"
+    },
+    {
+      "author": {
+        "name": "Pip",
+        "photo": "/avatars/engagement/eb051c2883047399694a9fca678797dc42f86949e3c8034f5d3c7b357771e9b7.webp",
         "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu"
       },
       "platform": "sharkey",
@@ -60,7 +72,7 @@
       "wm-target": "https://mitchelltribe.com/2026/09/29/share-buttons-yay-or-nay/"
     }
   ],
-  "generated_at": "2026-11-26T02:12:44.415580+00:00",
+  "generated_at": "2026-11-26T04:43:36.047686+00:00",
   "like_count": 2,
   "reply_count": 1,
   "source_post_id": 1242,

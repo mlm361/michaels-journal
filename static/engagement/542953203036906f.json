@@ -4,7 +4,7 @@
     {
       "author": {
         "name": "James",
-        "photo": "https://mitchelltribe.rodeo/proxy/avatar.webp?url=https%3A%2F%2Ffiles.mastodon.social%2Faccounts%2Favatars%2F110%2F635%2F833%2F467%2F728%2F192%2Foriginal%2F14779db6d450807f.png&avatar=1",
+        "photo": "/avatars/engagement/e2cb687c49552eb36c8b85175557d070ca1fe45805cd0946a83ea81a083c8d3f.webp",
         "url": "https://mitchelltribe.rodeo/@nonzerosumjames@mastodon.social"
       },
       "platform": "sharkey",
@@ -14,7 +14,7 @@
       "wm-target": "https://mitchelltribe.com/2026/07/19/responding-to-the-ai-image/"
     }
   ],
-  "generated_at": "2026-11-26T02:14:33.891811+00:00",
+  "generated_at": "2026-11-26T04:45:29.023347+00:00",
   "like_count": 1,
   "reply_count": 0,
   "source_post_id": 1236,

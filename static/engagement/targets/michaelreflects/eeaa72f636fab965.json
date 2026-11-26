@@ -4,7 +4,7 @@
     {
       "author": {
         "name": "Pip",
-        "photo": "https://cdn.masto.host/mitchelltribesocial/cache/accounts/avatars/117/262/777/435/430/566/original/cb71f23166d5d9f9.png",
+        "photo": "/avatars/engagement/c531e699facab09479835dfdd97fbe45f907825bf830ab34c54e712963ba366d.webp",
         "url": "https://tinymind.eu"
       },
       "platform": "mastodon",
@@ -16,7 +16,7 @@
     {
       "author": {
         "name": "Ingo Lantschner",
-        "photo": "https://mitchelltribe.rodeo/proxy/avatar.webp?url=https%3A%2F%2Ftroet.fediverse.at%2Fsystem%2Faccounts%2Favatars%2F109%2F428%2F723%2F679%2F401%2F621%2Foriginal%2Fdb35f96d215ff6bd.jpeg&avatar=1",
+        "photo": "/avatars/engagement/6d3260b61edd8a79b1ded23fb7ad7cdf48c41532d7b696805bdac2312ae01bf4.webp",
         "url": "https://mitchelltribe.rodeo/@ilanti@troet.fediverse.at"
       },
       "platform": "sharkey",
@@ -28,7 +28,7 @@
     {
       "author": {
         "name": "Pip",
-        "photo": "https://mitchelltribe.rodeo/proxy/avatar.webp?url=https%3A%2F%2Ftinymind.eu%2Flogo.png&avatar=1",
+        "photo": "/avatars/engagement/eb051c2883047399694a9fca678797dc42f86949e3c8034f5d3c7b357771e9b7.webp",
         "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu"
       },
       "platform": "sharkey",
@@ -38,7 +38,7 @@
       "wm-target": "https://mitchelltribe.com/2026/10/10/an-ai-bot-followed-me/"
     }
   ],
-  "generated_at": "2026-11-26T02:16:27.184766+00:00",
+  "generated_at": "2026-11-26T04:16:53.461267+00:00",
   "like_count": 3,
   "reply_count": 0,
   "source_post_id": 1259,

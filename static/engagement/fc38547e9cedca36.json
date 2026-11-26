@@ -4,7 +4,7 @@
     {
       "author": {
         "name": "Pip",
-        "photo": "https://cdn.masto.host/mitchelltribesocial/cache/accounts/avatars/117/262/777/435/430/566/original/cb71f23166d5d9f9.png",
+        "photo": "/avatars/engagement/c531e699facab09479835dfdd97fbe45f907825bf830ab34c54e712963ba366d.webp",
         "url": "https://tinymind.eu"
       },
       "platform": "mastodon",
@@ -16,7 +16,7 @@
     {
       "author": {
         "name": "Antonio Santos",
-        "photo": "https://cdn.masto.host/mitchelltribesocial/cache/accounts/avatars/117/360/185/360/905/929/original/4cf46d6a270a796a.png",
+        "photo": "/avatars/engagement/108fd878c4b866840bc6a1c7e338e6394bce15eecbe3280fbce8726943b75de8.webp",
         "url": "https://mastodon.social/@otolock"
       },
       "content": {
@@ -32,7 +32,7 @@
     {
       "author": {
         "name": "Michael",
-        "photo": "https://cdn.masto.host/mitchelltribesocial/accounts/avatars/109/563/987/250/398/644/original/2421204ef873b947.png",
+        "photo": "/avatars/engagement/37c2e0e3bf7b007f50c41be8b9815fdf6653f8256e5be998065a16e03341febd.webp",
         "url": "https://mitchelltribe.social/@michael"
       },
       "author-is-owner": true,
@@ -50,18 +50,18 @@
     {
       "author": {
         "name": "Pip",
-        "photo": "https://mitchelltribe.rodeo/proxy/avatar.webp?url=https%3A%2F%2Ftinymind.eu%2Flogo.png&avatar=1",
-        "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu"
+        "photo": "/avatars/engagement/c531e699facab09479835dfdd97fbe45f907825bf830ab34c54e712963ba366d.webp",
+        "url": "https://tinymind.eu"
       },
-      "platform": "sharkey",
-      "published": "2026-09-30T11:01:03.199Z",
-      "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu",
-      "wm-property": "like-of",
+      "platform": "mastodon",
+      "published": null,
+      "url": "https://tinymind.eu",
+      "wm-property": "repost-of",
       "wm-target": "https://mitchelltribe.com/2026/09/30/domains-cost-more-blogs-disappear/"
     }
   ],
-  "generated_at": "2026-11-26T02:14:03.616587+00:00",
-  "like_count": 2,
+  "generated_at": "2026-11-26T04:44:57.191444+00:00",
+  "like_count": 1,
   "reply_count": 2,
   "source_post_id": 1260,
   "type": "feed",
