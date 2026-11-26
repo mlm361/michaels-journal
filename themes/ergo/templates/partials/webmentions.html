@@ -68,7 +68,7 @@
     }
 
     // JOURNAL-CSP-01 2c (C2, strict): only a self-hosted avatar path or a Bluesky CDN
-    // picture (https://cdn.bsky.app/..., the one avatar host left in img-src). Anything
+    // picture (https://cdn.bsky.app/..., the one avatar host that stays in img-src). Anything
     // else is no photo, so the initial badge shows. A picture that fails to load also
     // becomes the badge (above).
     var SELF_HOSTED_AVATAR = /^\/avatars\/(engagement|webmention)\/[0-9a-f]{64}\.webp$/;
