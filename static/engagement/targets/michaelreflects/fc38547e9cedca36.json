@@ -58,10 +58,22 @@
       "url": "https://tinymind.eu",
       "wm-property": "repost-of",
       "wm-target": "https://mitchelltribe.com/2026/09/30/domains-cost-more-blogs-disappear/"
+    },
+    {
+      "author": {
+        "name": "Pip",
+        "photo": "/avatars/engagement/eb051c2883047399694a9fca678797dc42f86949e3c8034f5d3c7b357771e9b7.webp",
+        "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu"
+      },
+      "platform": "sharkey",
+      "published": "2026-09-30T11:01:03.199Z",
+      "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu",
+      "wm-property": "like-of",
+      "wm-target": "https://mitchelltribe.com/2026/09/30/domains-cost-more-blogs-disappear/"
     }
   ],
-  "generated_at": "2026-11-26T04:44:57.191444+00:00",
-  "like_count": 1,
+  "generated_at": "2026-11-26T05:14:51.007526+00:00",
+  "like_count": 2,
   "reply_count": 2,
   "source_post_id": 1260,
   "type": "feed",

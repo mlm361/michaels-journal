@@ -24,10 +24,22 @@
       "url": "https://tinymind.eu",
       "wm-property": "repost-of",
       "wm-target": "https://mitchelltribe.com/2026/10/11/watched-the-sheep-detectives/"
+    },
+    {
+      "author": {
+        "name": "Pip",
+        "photo": "/avatars/engagement/eb051c2883047399694a9fca678797dc42f86949e3c8034f5d3c7b357771e9b7.webp",
+        "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu"
+      },
+      "platform": "sharkey",
+      "published": "2026-10-11T17:44:40.452Z",
+      "url": "https://mitchelltribe.rodeo/@pip@tinymind.eu",
+      "wm-property": "like-of",
+      "wm-target": "https://mitchelltribe.com/2026/10/11/watched-the-sheep-detectives/"
     }
   ],
-  "generated_at": "2026-11-26T04:44:49.943722+00:00",
-  "like_count": 1,
+  "generated_at": "2026-11-26T05:14:43.552777+00:00",
+  "like_count": 2,
   "reply_count": 0,
   "source_post_id": 1262,
   "type": "feed",
