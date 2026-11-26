@@ -412,3 +412,20 @@ test('Hub webmentions carry the projection avatar through the strict reader', ()
   assert.equal(shown(undefined), '');
   assert.equal(shown({ url: `/avatars/webmention/${K1}.webp` }), '');
 });
+
+test('step 6 (D): the five remote avatar hosts are gone from img-src; Bluesky stays', () => {
+  const removed = ['https://mitchelltribe.social', 'https://mitchelltribe.rodeo', 'https://cdn.masto.host',
+    'https://image.nostr.build', 'https://avatars.webmention.io'];
+  const policies = [read('csp/phase2.policy'), read('csp/phase3-report-only.policy'),
+    ...read('static/_headers').split('\n')
+      .filter((line) => /^\s+Content-Security-Policy(-Report-Only)?: /.test(line))
+      .map((line) => line.replace(/^\s+Content-Security-Policy(-Report-Only)?: /, ''))];
+  assert.equal(policies.length, 4);
+  for (const policy of policies) {
+    const img = policy.split(';').map((d) => d.trim().split(/\s+/)).find((d) => d[0] === 'img-src');
+    assert.ok(img, 'img-src present');
+    for (const host of removed) assert.ok(!img.includes(host), `${host} left img-src`);
+    assert.ok(img.includes('https://cdn.bsky.app'), 'cdn.bsky.app stays');
+    assert.ok(img.includes("'self'"), "'self' stays");
+  }
+});
