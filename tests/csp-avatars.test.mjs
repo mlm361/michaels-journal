@@ -392,3 +392,23 @@ test('strict reader (C2): same-origin avatar paths or https://cdn.bsky.app only;
   assert.equal(context.authorPhoto({ author: { photo: ['https://cdn.bsky.app/img/a@jpeg'] } }), '');
   assert.equal(context.authorPhoto({ author: { photo: { url: 'https://cdn.bsky.app/img/a@jpeg' } } }), '');
 });
+
+test('Hub webmentions carry the projection avatar through the strict reader', () => {
+  const template = read('themes/ergo/templates/partials/webmentions.html');
+  const context = vm.createContext({ window: {}, URL });
+  vm.runInContext(read('static/js/url-safety.js'), context);
+  vm.runInContext(template.slice(template.indexOf('    function escapeHtml'),
+                                 template.indexOf('    function initialFor')), context);
+  vm.runInContext(template.slice(template.indexOf('    function hubEntryToChild'),
+                                 template.indexOf('    // Source 1:')), context);
+  const shown = (actor_photo_url) => context.authorPhoto(context.hubEntryToChild({ actor_name: 'A', actor_photo_url }));
+
+  assert.equal(shown(`/avatars/webmention/${K1}.webp`), `/avatars/webmention/${K1}.webp`);
+  assert.equal(shown('https://cdn.bsky.app/img/avatar/plain/did/x@jpeg'), 'https://cdn.bsky.app/img/avatar/plain/did/x@jpeg');
+  // Projection switch off (remote URLs) or anything unexpected: no photo, so the badge.
+  assert.equal(shown('https://mitchelltribe.rodeo/proxy/avatar.webp?url=x'), '');
+  assert.equal(shown('https://avatars.webmention.io/x.png'), '');
+  assert.equal(shown(null), '');
+  assert.equal(shown(undefined), '');
+  assert.equal(shown({ url: `/avatars/webmention/${K1}.webp` }), '');
+});

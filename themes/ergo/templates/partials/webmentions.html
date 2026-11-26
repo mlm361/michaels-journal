@@ -263,7 +263,10 @@
         "published": entry.occurred_at || entry.received_at || "",
         "author": {
           "name": entry.actor_name || "",
-          "url": entry.actor_url || entry.source_url || ""
+          "url": entry.actor_url || entry.source_url || "",
+          // JOURNAL-CSP-01 2c: the projection's avatar (a self-hosted path when the Hub's
+          // public avatar paths are on). authorPhoto() decides whether it may be shown.
+          "photo": entry.actor_photo_url || ""
         },
         "content": { "text": entry.content_text || "" }
       };
