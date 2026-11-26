@@ -345,7 +345,7 @@ test('routes: /avatars/* reaches the Function', () => {
   assert.ok(routes.include.length <= 100);
 });
 
-test('transitional reader: same-origin avatar paths or public URLs; anything else is no photo', () => {
+test('strict reader (C2): same-origin avatar paths or https://cdn.bsky.app only; anything else is no photo', () => {
   const template = read('themes/ergo/templates/partials/webmentions.html');
   const context = vm.createContext({ window: {}, URL });
   vm.runInContext(read('static/js/url-safety.js'), context);
@@ -356,8 +356,25 @@ test('transitional reader: same-origin avatar paths or public URLs; anything els
   assert.equal(photo(`/avatars/webmention/${K1}.webp`), `/avatars/webmention/${K1}.webp`);
   assert.equal(photo(`/avatars/engagement/${K2}.webp`), `/avatars/engagement/${K2}.webp`);
   assert.equal(photo('https://cdn.bsky.app/img/avatar/plain/did/x@jpeg'), 'https://cdn.bsky.app/img/avatar/plain/did/x@jpeg');
-  assert.equal(photo('https://avatars.webmention.io/x.png'), 'https://avatars.webmention.io/x.png');
+  assert.equal(photo('https://CDN.BSKY.APP/img/a@jpeg'), 'https://cdn.bsky.app/img/a@jpeg');
+  assert.equal(photo('https://cdn.bsky.app:443/img/a@jpeg'), 'https://cdn.bsky.app/img/a@jpeg');
   for (const bad of [
+    // The five img-src hosts step 6 removes, and other remote avatar hosts.
+    'https://avatars.webmention.io/x.png',
+    'https://mitchelltribe.social/system/accounts/avatars/1.png',
+    'https://mitchelltribe.rodeo/proxy/avatar.webp?url=x',
+    'https://cdn.masto.host/x/accounts/avatars/1.png',
+    'https://image.nostr.build/x.jpg',
+    'https://michaelreflects.com/avatars/webmention/' + K1 + '.webp',
+    // Bluesky look-alikes: wrong scheme, port, host or credentials.
+    'http://cdn.bsky.app/img/a@jpeg',
+    'https://cdn.bsky.app:8443/img/a@jpeg',
+    'https://cdn.bsky.app.evil.example/img/a@jpeg',
+    'https://evil.example/cdn.bsky.app/img/a@jpeg',
+    'https://xcdn.bsky.app/img/a@jpeg',
+    'https://bsky.app/img/a@jpeg',
+    'https://user:pw@cdn.bsky.app/img/a@jpeg',
+    `/avatars/engagement/${K2}.png`,
     `/avatars/other/${K1}.webp`,
     `/avatars/webmention/${K1.toUpperCase()}.webp`,
     `/avatars/webmention/${K1}.webp?x=1`,
@@ -372,4 +389,6 @@ test('transitional reader: same-origin avatar paths or public URLs; anything els
   }
   assert.equal(context.authorPhoto({ author: {} }), '');
   assert.equal(context.authorPhoto({}), '');
+  assert.equal(context.authorPhoto({ author: { photo: ['https://cdn.bsky.app/img/a@jpeg'] } }), '');
+  assert.equal(context.authorPhoto({ author: { photo: { url: 'https://cdn.bsky.app/img/a@jpeg' } } }), '');
 });

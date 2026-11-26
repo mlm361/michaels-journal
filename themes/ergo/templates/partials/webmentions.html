@@ -67,15 +67,20 @@
       return safeUrl((mention.author && mention.author.url) || mention.url);
     }
 
-    // JOURNAL-CSP-01 2c (C1, transitional): a self-hosted avatar path or, as before, a
-    // public http(s) URL. A picture that fails to load becomes the initial badge (above).
+    // JOURNAL-CSP-01 2c (C2, strict): only a self-hosted avatar path or a Bluesky CDN
+    // picture (https://cdn.bsky.app/..., the one avatar host left in img-src). Anything
+    // else is no photo, so the initial badge shows. A picture that fails to load also
+    // becomes the badge (above).
     var SELF_HOSTED_AVATAR = /^\/avatars\/(engagement|webmention)\/[0-9a-f]{64}\.webp$/;
+    var BLUESKY_AVATAR_ORIGIN = "https://cdn.bsky.app";
 
     function authorPhoto(mention) {
       var photo = mention.author && mention.author.photo;
-      if (!photo) return "";
-      if (typeof photo === "string" && SELF_HOSTED_AVATAR.test(photo)) return photo;
-      return safeUrl(photo);
+      if (typeof photo !== "string" || !photo) return "";
+      if (SELF_HOSTED_AVATAR.test(photo)) return photo;
+      var url = safeUrl(photo);
+      if (!url) return "";
+      return new URL(url).origin === BLUESKY_AVATAR_ORIGIN ? url : "";
     }
 
     function initialFor(mention) {
