@@ -429,3 +429,23 @@ test('step 6 (D): the five remote avatar hosts are gone from img-src; Bluesky st
     assert.ok(img.includes("'self'"), "'self' stays");
   }
 });
+
+test('album art: img-src allows bare archive.org, the Cover Art Archive redirect hop', () => {
+  // coverartarchive.org 307-redirects to https://archive.org/download/..., then to a *.archive.org
+  // server. A wildcard does not match the bare host, so without it the Listening card art is blocked.
+  const policies = [read('csp/phase2.policy'), read('csp/phase3-report-only.policy'),
+    ...read('static/_headers').split('\n')
+      .filter((line) => /^\s+Content-Security-Policy(-Report-Only)?: /.test(line))
+      .map((line) => line.replace(/^\s+Content-Security-Policy(-Report-Only)?: /, ''))];
+  assert.equal(policies.length, 4);
+  for (const policy of policies) {
+    const directives = policy.split(';').map((d) => d.trim().split(/\s+/));
+    const img = directives.find((d) => d[0] === 'img-src');
+    for (const host of ['https://coverartarchive.org', 'https://*.archive.org', 'https://archive.org']) {
+      assert.ok(img.includes(host), `${host} in img-src`);
+    }
+    for (const d of directives) {
+      if (d[0] !== 'img-src') assert.ok(!d.includes('https://archive.org'), `archive.org only in img-src, not ${d[0]}`);
+    }
+  }
+});
