@@ -104,3 +104,11 @@
 /notes/note-watched-the-hunters-old-movie /blog/post-watched-the-hunters-old-movie-164/ 301
 /notes/note-well-its-official-ive-got/ /blog/post-well-its-official-ive-got-200/ 301
 /notes/note-well-its-official-ive-got /blog/post-well-its-official-ive-got-200/ 301
+
+# JOURNAL-CSP-01 Phase 3 step 1 (2026-11-27): Zola's generated alias pages, as HTTP 301s so the
+# browser keeps any #fragment with or without JavaScript. Every <title>Redirect</title> page the build
+# emits needs both lines here; tests/csp-redirects.test.mjs enforces it.
+/page/1/ / 301
+/page/1 / 301
+/blog/watched-project-hail-mary-2026-on-prime-video/ /blog/popcorn-watched-project-hail-mary-2026-on-prime-video/ 301
+/blog/watched-project-hail-mary-2026-on-prime-video /blog/popcorn-watched-project-hail-mary-2026-on-prime-video/ 301
