@@ -118,18 +118,7 @@
         <!-- css: a parser-inserted stylesheet, so the browser waits for it before
              first paint (no unstyled paint, no whole-page layout shift). -->
         <link id="themeCSS" rel="stylesheet" href="{{ config.base_url }}/default.css">
-        <script data-csp-id="base.1">
-          (function() {
-            var storedTheme = localStorage.getItem('ergo-theme');
-            var t = storedTheme === 'dark' ? 'dark' : 'default';
-            if (storedTheme !== t) localStorage.setItem('ergo-theme', t);
-            document.documentElement.dataset.theme = t;
-            document.documentElement.classList.toggle('theme-dark', t === 'dark');
-            document.documentElement.classList.toggle('theme-default', t !== 'dark');
-            // Dark readers: switch the same element before first paint.
-            if (t === 'dark') document.getElementById('themeCSS').href = '/dark.css';
-          })();
-        </script>
+        <script src="/js/site-theme-init.js"></script>
 
         <!-- fonts: self-hosted (@font-face in sass/_fonts.scss); nothing is requested from Google -->
         <link rel="preload" href="/fonts/montserrat/montserrat-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -515,7 +504,7 @@
         {% block head_extra %}{% endblock head_extra %}
     </head>
 
-    <body{% if page?.extra?.body_class %} class="{{ page.extra.body_class }}"{% endif %} onload="main();">
+    <body{% if page?.extra?.body_class %} class="{{ page.extra.body_class }}"{% endif %}>
         {% include "menu.html" %}
         <aside class="wx wx-side" aria-labelledby="wx-side-title"><p class="wx-side-title" id="wx-side-title">Weather at home</p><div class="wx-slot"></div></aside>
 
@@ -534,58 +523,10 @@
 
             {% if config.extra.townsquare.enabled and not (page?.extra?.no_footer_townsquare or false) %}
             <div class="ts-scale">
-              <div id="townsquare-root"></div>
+              <div id="townsquare-root" data-ts-origin="{{ config.extra.townsquare.origin }}" data-ts-socket-path="{{ config.extra.townsquare?.socket_path or '/live' }}"{% if config.extra.townsquare.site_key %} data-ts-site-key="{{ config.extra.townsquare.site_key }}"{% endif %}></div>
             </div>
-            <script type="module" data-csp-id="base.2">
-              import { mountTownSquare } from "{{ config.extra.townsquare.origin | safe }}/townsquare.mjs";
-              // Load the widget stylesheet at runtime. It uses valid modern CSS
-              // (container queries, vector-effect) that the W3C validator flags as
-              // errors; injecting it via JS keeps that third-party CSS out of static
-              // validation so our own (valid) CSS is what gets checked.
-              var _tsCss = document.createElement("link");
-              _tsCss.rel = "stylesheet";
-              _tsCss.href = "{{ config.extra.townsquare.origin | safe }}/widget.css";
-              document.head.appendChild(_tsCss);
-              mountTownSquare(document.getElementById("townsquare-root"), {
-                serverOrigin: "{{ config.extra.townsquare.origin | safe }}",
-                socketPath: "{{ (config.extra.townsquare?.socket_path or '/live') | safe }}",
-                {% if config.extra.townsquare.site_key %}siteKey: "{{ config.extra.townsquare.site_key | safe }}",{% endif %}
-                // Signposts (neighbouring towns) come live from the TownSquare dashboard.
-                // Do not list connections here: an inline list overrides the dashboard.
-                theme: "host"
-              });
-            </script>
-            <script data-csp-id="base.3">
-              // Fit the footer TownSquare on phones: lay it out at a fixed
-              // desktop-like width (so scene props don't collide) and scale the
-              // whole widget down to the available width. Only kicks in <=640px.
-              (function () {
-                var LOGICAL_WIDTH = 640;
-                var wrap = document.querySelector('.ts-scale');
-                var root = wrap && wrap.querySelector('#townsquare-root');
-                if (!wrap || !root) return;
-                function fit() {
-                  if (window.innerWidth > 640) {
-                    root.style.transform = '';
-                    wrap.style.height = '';
-                    return;
-                  }
-                  var avail = wrap.clientWidth || window.innerWidth;
-                  var scale = avail / LOGICAL_WIDTH;
-                  root.style.transform = 'scale(' + scale + ')';
-                  // offsetHeight is the unscaled layout height; reserve the
-                  // scaled height so there is no empty gap below the widget.
-                  wrap.style.height = (root.offsetHeight * scale) + 'px';
-                }
-                window.addEventListener('resize', fit);
-                window.addEventListener('orientationchange', fit);
-                // The widget mounts asynchronously and changes height as it
-                // renders, so refit on resize + whenever its size changes.
-                if (window.ResizeObserver) { new ResizeObserver(fit).observe(root); }
-                fit();
-                [200, 600, 1500, 3000].forEach(function (t) { window.setTimeout(fit, t); });
-              })();
-            </script>
+            <script type="module" src="/js/site-townsquare-footer.js"></script>
+            <script src="/js/site-townsquare-fit.js"></script>
             {% endif %}
 
             {% if config.extra.townsquare.enabled %}
@@ -593,19 +534,7 @@
                (UM690/instance down), the widget never mounts. After a grace period,
                collapse the empty box and reveal any offline note. The rest of the
                site is on Cloudflare Pages and is unaffected. #}
-            <script data-csp-id="base.4">
-              (function () {
-                var root = document.getElementById('townsquare-root');
-                if (!root) return;
-                window.setTimeout(function () {
-                  if (root.childElementCount === 0) {
-                    root.style.display = 'none';
-                    var msg = document.querySelector('.townsquare-offline');
-                    if (msg) msg.hidden = false;
-                  }
-                }, 8000);
-              })();
-            </script>
+            <script src="/js/site-townsquare-offline.js"></script>
             {% endif %}
 
             <section class="wx wx-foot-wrap" aria-labelledby="wx-foot-title"><p class="footer-social-heading wx-foot-title" id="wx-foot-title">Weather at home</p><div class="wx-slot"></div></section>
@@ -653,102 +582,7 @@
              switched on in Tinylytics Settings, Tracking, Widgets, not on the tag. -->
         <script defer src="https://tinylytics.app/js/script.js" data-site="h2Q2CzgAf-te_SJUBWQ1"></script>
 
-        <script data-csp-id="base.5">
-          document.addEventListener("DOMContentLoaded", function () {
-            var yearEl = document.getElementById("currentYear");
-            if (yearEl) yearEl.textContent = new Date().getFullYear();
-          });
-
-          var _uptimeStart = new Date("2025-07-05T00:00:00Z");
-          function _updateUptime() {
-            var diff    = new Date() - _uptimeStart;
-            var secs    = Math.floor(diff / 1000);
-            var mins    = Math.floor(secs / 60);
-            var hours   = Math.floor(mins / 60);
-            var days    = Math.floor(hours / 24);
-            var years   = Math.floor(days / 365);
-            var months  = Math.floor((days % 365) / 30);
-            var remDays = days % 365 % 30;
-            var remHrs  = hours % 24;
-            var remMins = mins % 60;
-            var remSecs = secs % 60;
-            var parts   = [];
-            if (years)             parts.push(years   + (years   === 1 ? " year"   : " years"));
-            if (months)            parts.push(months  + (months  === 1 ? " month"  : " months"));
-            if (remDays || parts.length) parts.push(remDays + (remDays === 1 ? " day"    : " days"));
-            parts.push(remHrs  + (remHrs  === 1 ? " hour"   : " hours"));
-            parts.push(remMins + (remMins === 1 ? " minute" : " minutes"));
-            parts.push(remSecs + (remSecs === 1 ? " second" : " seconds"));
-            var el = document.getElementById("blog-uptime");
-            if (el) el.textContent = "This blog has been running for: " + parts.join(", ") + ".";
-          }
-          _updateUptime();
-          setInterval(_updateUptime, 1000);
-
-          (function () {
-            var button = document.getElementById("scrollToTop");
-            if (!button) return;
-
-            var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-            function syncButtonVisibility() {
-              var visible = window.scrollY > 420;
-              button.classList.toggle("is-visible", visible);
-              button.setAttribute("aria-hidden", visible ? "false" : "true");
-              button.tabIndex = visible ? 0 : -1;
-            }
-
-            button.addEventListener("click", function () {
-              window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
-            });
-            window.addEventListener("scroll", syncButtonVisibility, { passive: true });
-            syncButtonVisibility();
-          })();
-        </script>
-        <script data-csp-id="base.6">
-          (function () {
-            var avatars = [
-              'https://media.mitchelltribe.xyz/site/img/avatar.avif',
-              'https://media.mitchelltribe.xyz/site/img/avatar-1.avif', 'https://media.mitchelltribe.xyz/site/img/avatar-2.avif', 'https://media.mitchelltribe.xyz/site/img/avatar-3.avif', 'https://media.mitchelltribe.xyz/site/img/avatar-4.avif',
-              'https://media.mitchelltribe.xyz/site/img/avatar-5.avif', 'https://media.mitchelltribe.xyz/site/img/avatar-6.avif', 'https://media.mitchelltribe.xyz/site/img/avatar-7.avif', 'https://media.mitchelltribe.xyz/site/img/avatar-8.avif',
-              'https://media.mitchelltribe.xyz/site/img/avatar-9.avif', 'https://media.mitchelltribe.xyz/site/img/avatar-10.avif', 'https://media.mitchelltribe.xyz/site/img/avatar-11.avif'
-            ];
-            var now = new Date();
-            var startOfYear = Date.UTC(now.getUTCFullYear(), 0, 0);
-            var dayOfYear = Math.floor((Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()) - startOfYear) / 86400000);
-            var key = now.getUTCFullYear() * 1000 + dayOfYear;
-            var pick = avatars[key % avatars.length];
-            document.querySelectorAll('.user_logo a, .mini_logo a').forEach(function (a) {
-              a.style.backgroundImage = 'url(' + pick + ')';
-            });
-            var aboutImg = document.querySelector('.about-avatar img');
-            if (aboutImg) aboutImg.src = pick;
-          })();
-        </script>
-        <script data-csp-id="base.7">
-          (function () {
-            var content = document.querySelector('.e-content');
-            if (!content) return;
-            var IMG_RE = /\.(jpe?g|png|gif|avif|webp)(\?|$)/i;
-            var ov = document.createElement('div');
-            ov.className = 'mr-lightbox';
-            ov.setAttribute('aria-hidden', 'true');
-            ov.innerHTML = '<button class="mr-lightbox-close" aria-label="Close">&times;</button><img alt="">';
-            document.body.appendChild(ov);
-            var ovImg = ov.querySelector('img');
-            function open(src) { ovImg.src = src; ov.classList.add('is-open'); ov.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; }
-            function close() { ov.classList.remove('is-open'); ov.setAttribute('aria-hidden', 'true'); ovImg.src = ''; document.body.style.overflow = ''; }
-            content.addEventListener('click', function (e) {
-              var a = e.target.closest ? e.target.closest('a') : null;
-              var img = e.target.closest ? e.target.closest('img') : null;
-              var src = null;
-              if (a && IMG_RE.test(a.getAttribute('href') || '')) { src = a.href; }
-              else if (img) { var pa = img.closest('a'); src = (pa && IMG_RE.test(pa.getAttribute('href') || '')) ? pa.href : (img.currentSrc || img.src); }
-              if (src) { e.preventDefault(); open(src); }
-            });
-            ov.addEventListener('click', function (e) { if (e.target === ov || e.target.classList.contains('mr-lightbox-close')) close(); });
-            document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && ov.classList.contains('is-open')) close(); });
-          })();
-        </script>
+        <script src="/js/site-page.js"></script>
         <script src="/js/weather.js?v=20261119" defer></script>
     </body>
 </html>

@@ -5,34 +5,6 @@
       "kind": "script",
       "example": "/archive/"
     },
-    "base.1": {
-      "kind": "script",
-      "example": "/"
-    },
-    "base.2": {
-      "kind": "script",
-      "example": "/"
-    },
-    "base.3": {
-      "kind": "script",
-      "example": "/"
-    },
-    "base.4": {
-      "kind": "script",
-      "example": "/"
-    },
-    "base.5": {
-      "kind": "script",
-      "example": "/"
-    },
-    "base.6": {
-      "kind": "script",
-      "example": "/"
-    },
-    "base.7": {
-      "kind": "script",
-      "example": "/"
-    },
     "content:33d22fa0baba9ca6": {
       "kind": "script",
       "example": "/on-this-day/"
@@ -61,21 +33,9 @@
       "kind": "handler",
       "example": "/blog/my-visions-big-comeback/"
     },
-    "handler:body.onload:496849c3a4c5": {
-      "kind": "handler",
-      "example": "/"
-    },
     "handler:button.onclick:03aa16e682c7": {
       "kind": "handler",
       "example": "/blog/my-visions-big-comeback/"
-    },
-    "handler:button.onclick:a87fc7e44dfd": {
-      "kind": "handler",
-      "example": "/"
-    },
-    "handler:button.onclick:e49f1020dd2e": {
-      "kind": "handler",
-      "example": "/"
     },
     "handler:div.onclick:a10d5456e79e": {
       "kind": "handler",
@@ -88,10 +48,6 @@
     "handler:img.onerror:f5ff192b97a9": {
       "kind": "handler",
       "example": "/a-day-of-celestial-discoveries-and-misty-mornings/"
-    },
-    "menu.1": {
-      "kind": "script",
-      "example": "/"
     },
     "notes.1": {
       "kind": "script",

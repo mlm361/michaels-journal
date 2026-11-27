@@ -166,7 +166,11 @@ test('inventory: the real build has no unlisted inline code, and emit writes the
     const routes = JSON.parse(fs.readFileSync(path.join(out, '__csp', 'routes.json'), 'utf8'));
     assert.ok(routes.includes('/') && routes.includes('/about/'));
     const home = JSON.parse(fs.readFileSync(path.join(out, '__csp', 'pos', `${routeKey('/')}.json`), 'utf8'));
-    assert.ok(home.some(([id]) => id === 'base.1'));
+    // The home page's position file lists exactly the inline items on the built home page
+    // (Phase 3 step 2 moved base.1 and the other layout scripts out, so no fixed id is assumed).
+    const homeItems = scanPage(fs.readFileSync(path.join(out, 'index.html'), 'utf8')).map((i) => i.id);
+    assert.ok(homeItems.length > 0);
+    assert.deepEqual(home.map(([id]) => id), homeItems);
     // What the build writes must pass the collector's own validators, or the collector would 503 forever.
     assert.ok(validMeta(meta), 'production meta.json passes validMeta');
     assert.ok(validRoutes(routes) && validPositions(home));

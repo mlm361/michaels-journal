@@ -68,7 +68,7 @@ test('DOM rendering and third-party gallery assets stay hardened', () => {
   const postShare = read('themes/ergo/templates/partials/post-share.html');
 
   assert.doesNotMatch(base, /document\.write/);
-  assert.match(base, /storedTheme === 'dark' \? 'dark' : 'default'/);
+  assert.match(read('static/js/site-theme-init.js'), /storedTheme === 'dark' \? 'dark' : 'default'/);
   assert.match(themeSelector, /function normalizeTheme/);
   assert.doesNotMatch(search, /li\.innerHTML/);
   assert.match(search, /anchor\.textContent = label/);
