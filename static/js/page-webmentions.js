@@ -1,0 +1,298 @@
+(function () {
+  // JOURNAL-CSP-01 Phase 3 step 4: the page values come from data attributes on
+  // #webmentions-wrap (partials/webmentions.html) instead of template code.
+  var wrap = document.getElementById("webmentions-wrap");
+  var data = (wrap && wrap.dataset) || {};
+  var target = encodeURIComponent(data.wmTarget || "");
+  // Syndication URLs for this post (Bluesky/Mastodon/Sharkey/Nostr). The
+  // self-hosted engagement index is keyed by these, so they resolve this
+  // post's likes/replies gathered from the native platforms.
+  var posseUrls = {};
+  if (wrap && wrap.hasAttribute("data-wm-posse")) {
+    posseUrls = {
+      "bluesky": data.wmPosseBluesky || "",
+      "mastodon": data.wmPosseMastodon || "",
+      "sharkey": data.wmPosseSharkey || "",
+      "nostr": data.wmPosseNostr || ""
+    };
+  }
+  var list = document.getElementById("webmentions-list");
+  var hubProjectionEnabled = data.wmHub === "true";
+  if (!list) return;
+
+  // JOURNAL-CSP-01 2b (D4): an avatar the browser can't load (host down, or not allowed by
+  // img-src) becomes the same initial-letter badge used when there's no photo. One capturing
+  // listener on the container; no inline handler.
+  list.addEventListener("error", function (event) {
+    var img = event.target;
+    if (!img || img.tagName !== "IMG" || !img.hasAttribute("data-initial")) return;
+    var badge = document.createElement("span");
+    badge.className = "wm-face-initial";
+    badge.setAttribute("aria-hidden", "true");
+    badge.textContent = img.getAttribute("data-initial");
+    img.replaceWith(badge);
+  }, true);
+
+  function escapeHtml(value) {
+    return String(value || "").replace(/[&<>"']/g, function (char) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char];
+    });
+  }
+
+  function safeUrl(value) {
+    return window.MichaelUrlSafety
+      ? window.MichaelUrlSafety.publicHttpUrl(value)
+      : "";
+  }
+
+  function authorName(mention) {
+    var name = String((mention.author && mention.author.name) || "").trim();
+    if (name) return name;
+    var candidates = [(mention.author && mention.author.url), mention.url];
+    for (var i = 0; i < candidates.length; i++) {
+      var url = safeUrl(candidates[i]);
+      if (url) return new URL(url).hostname.replace(/^www\./, "").replace(/\.$/, "");
+    }
+    return "Someone";
+  }
+
+  function authorUrl(mention) {
+    return safeUrl((mention.author && mention.author.url) || mention.url);
+  }
+
+  // JOURNAL-CSP-01 2c (C2, strict): only a self-hosted avatar path or a Bluesky CDN
+  // picture (https://cdn.bsky.app/..., the one avatar host that stays in img-src). Anything
+  // else is no photo, so the initial badge shows. A picture that fails to load also
+  // becomes the badge (above).
+  var SELF_HOSTED_AVATAR = /^\/avatars\/(engagement|webmention)\/[0-9a-f]{64}\.webp$/;
+  var BLUESKY_AVATAR_ORIGIN = "https://cdn.bsky.app";
+
+  function authorPhoto(mention) {
+    var photo = mention.author && mention.author.photo;
+    if (typeof photo !== "string" || !photo) return "";
+    if (SELF_HOSTED_AVATAR.test(photo)) return photo;
+    var url = safeUrl(photo);
+    if (!url) return "";
+    return new URL(url).origin === BLUESKY_AVATAR_ORIGIN ? url : "";
+  }
+
+  function initialFor(mention) {
+    var name = authorName(mention).replace(/[^\w]/g, "").trim();
+    return name ? name.charAt(0).toUpperCase() : "?";
+  }
+
+  function formatDate(value) {
+    if (!value) return "";
+    var date = new Date(value);
+    if (Number.isNaN(date.getTime())) return "";
+    return date.toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
+  }
+
+  function plural(count, singular, pluralValue) {
+    return count === 1 ? singular : (pluralValue || singular + "s");
+  }
+
+  function stripHtml(html) {
+    var parsed = new DOMParser().parseFromString(String(html || ""), "text/html");
+    return (parsed.body.textContent || "").trim();
+  }
+
+  // Circular avatar (photo if present, else an initial). `cls` selects the
+  // face size class. Wrapped in the author link when a URL is available.
+  function avatar(mention, cls) {
+    var photo = authorPhoto(mention);
+    var name = escapeHtml(authorName(mention));
+    var inner = photo
+      ? "<img src='" + escapeHtml(photo) + "' alt='" + name + "' loading='lazy' data-initial='" + escapeHtml(initialFor(mention)) + "'>"
+      : "<span class='wm-face-initial' aria-hidden='true'>" + escapeHtml(initialFor(mention)) + "</span>";
+    var href = authorUrl(mention);
+    if (href) {
+      return "<a class='" + cls + "' href='" + escapeHtml(href) + "' target='_blank' rel='noopener' title='" + name + "'>" + inner + "</a>";
+    }
+    return "<span class='" + cls + "' title='" + name + "'>" + inner + "</span>";
+  }
+
+  function platformInfo(mention) {
+    return window.MichaelWebmentionThreads
+      ? window.MichaelWebmentionThreads.platformInfo(mention)
+      : { key: "webmention", label: "Webmention", mark: "W" };
+  }
+
+  function faceWithPlatform(mention) {
+    var platform = platformInfo(mention);
+    return "<span class='wm-face-wrap'>" + avatar(mention, "wm-face")
+      + "<span class='wm-platform-mark wm-platform-" + escapeHtml(platform.key)
+      + "' title='" + escapeHtml(platform.label) + "' aria-label='" + escapeHtml(platform.label)
+      + "'>" + escapeHtml(platform.mark) + "</span></span>";
+  }
+
+  function platformBadge(mention) {
+    var platform = platformInfo(mention);
+    return "<span class='wm-platform-badge wm-platform-" + escapeHtml(platform.key)
+      + "'>" + escapeHtml(platform.label) + "</span>";
+  }
+
+  function authorBadge(mention) {
+    return mention["author-is-owner"] === true
+      ? "<span class='wm-author-badge' aria-label='Site author'>author</span>"
+      : "";
+  }
+
+  function sourceLink(mention) {
+    var source = safeUrl(mention.url);
+    if (!source) return "";
+    var host = new URL(source).hostname.replace(/^www\./, "").replace(/\.$/, "");
+    var property = mention["wm-property"] || "mention-of";
+    var lead = mention["author-is-owner"] === true ? "View reply page at " : property === "rsvp"
+      ? "View the RSVP at "
+      : (property === "mention-of" || property === "webmention")
+        ? "Read the mentioning post at "
+        : "Read the full response at ";
+    return "<p class='wm-card-source'><a href='" + escapeHtml(source)
+      + "' target='_blank' rel='noopener'>" + escapeHtml(lead + host)
+      + " <span aria-hidden='true'>→</span></a></p>";
+  }
+
+  function responseTypeBadge(mention) {
+    if ((mention["wm-property"] || "") !== "rsvp") return "";
+    var values = {
+      yes: "Going",
+      no: "Not going",
+      maybe: "Maybe",
+      interested: "Interested"
+    };
+    var label = values[mention["rsvp-status"]] || "RSVP";
+    return "<span class='wm-response-type'>" + escapeHtml(label) + "</span>";
+  }
+
+  function renderFacepile(icon, items, verb) {
+    if (!items.length) return "";
+    var faces = items.map(faceWithPlatform).join("");
+    var label = items.length + " " + escapeHtml(plural(items.length, verb));
+    return "<div class='wm-facepile'>"
+      + "<div class='wm-facepile-label'><span class='wm-facepile-icon' aria-hidden='true'>" + escapeHtml(icon) + "</span> " + label + "</div>"
+      + "<div class='wm-faces'>" + faces + "</div></div>";
+  }
+
+  function renderReplyCard(mention) {
+    var href = authorUrl(mention);
+    var name = escapeHtml(authorName(mention));
+    var nameEl = href
+      ? "<a class='wm-card-name' href='" + escapeHtml(href) + "' target='_blank' rel='noopener'>" + name + "</a>"
+      : "<span class='wm-card-name'>" + name + "</span>";
+    var authorLine = "<span class='wm-card-authorline'>" + nameEl + authorBadge(mention) + "</span>";
+    var date = formatDate(mention.published);
+    var dateEl = date ? "<span class='wm-card-date'>" + escapeHtml(date) + "</span>" : "";
+    var submeta = "<span class='wm-card-submeta'>" + platformBadge(mention)
+      + responseTypeBadge(mention) + dateEl + "</span>";
+    var c = mention.content || {};
+    // Render exactly what the public Hub feed supplies: a contextual excerpt
+    // for inbound Webmentions, or the full text for Michael's own replies.
+    // Line breaks are kept by .wm-card-content's white-space: pre-line.
+    var text = (c.text ? c.text : (c.html ? stripHtml(c.html) : "")).trim();
+    var contentEl = text ? "<p class='wm-card-content'>" + escapeHtml(text) + "</p>" : "";
+    return "<article class='wm-card'>"
+      + "<div class='wm-card-head'>" + avatar(mention, "wm-card-avatar")
+      + "<div class='wm-card-meta'>" + authorLine + submeta + "</div></div>"
+      + contentEl + sourceLink(mention) + "</article>";
+  }
+
+  function renderReplyTree(items) {
+    var forest = window.MichaelWebmentionThreads
+      ? window.MichaelWebmentionThreads.buildReplyForest(items)
+      : items.map(function (item) { return { item: item, children: [] }; });
+    function renderNode(node, ancestors) {
+      var item = node.item;
+      var id = item["wm-id"] ? String(item["wm-id"]) : "";
+      var nextAncestors = Object.assign({}, ancestors);
+      if (id && nextAncestors[id]) return renderReplyCard(item);
+      if (id) nextAncestors[id] = true;
+      var nested = node.children.map(function (child) {
+        return renderNode(child, nextAncestors);
+      }).join("");
+      return renderReplyCard(item)
+        + (nested ? "<div class='wm-thread-children'>" + nested + "</div>" : "");
+    }
+    return forest.map(function (root) { return renderNode(root, {}); }).join("");
+  }
+
+  function renderAll(items) {
+    items = window.MichaelWebmentionThreads
+      ? window.MichaelWebmentionThreads.dedupeChildren(items)
+      : items;
+    var heading = document.getElementById("webmentions-heading");
+    if (heading && items.length) heading.textContent = "Webmentions (" + items.length + ")";
+    if (!items.length) return;
+
+    var replies = [], likes = [], reposts = [];
+    items.forEach(function (mention) {
+      var type = mention["wm-property"] || "mention-of";
+      if (type === "like-of") likes.push(mention);
+      else if (type === "repost-of") reposts.push(mention);
+      else if (type === "in-reply-to" || type === "mention-of") replies.push(mention);
+      else replies.push(mention);
+    });
+    replies.sort(function (a, b) { return new Date(a.published || 0) - new Date(b.published || 0); });
+
+    var html = "";
+    html += renderFacepile("♥", likes, "like");
+    html += renderFacepile("↻", reposts, "repost");
+    if (replies.length) {
+      html += "<h4 class='wm-replies-heading'>" + replies.length + " " + (replies.length === 1 ? "Reply" : "Replies") + "</h4>";
+      html += renderReplyTree(replies);
+    }
+    if (html) list.innerHTML = html;
+  }
+
+  function hubEntryToChild(entry) {
+    return {
+      "wm-property": entry.wm_property || "mention-of",
+      "rsvp-status": entry.rsvp_status || null,
+      "wm-id": entry.id || null,
+      "wm-parent-id": entry.parent_event_id || null,
+      "url": entry.source_url || "",
+      "platform": entry.platform || "webmention",
+      "author-is-owner": entry.authored_by_me === true,
+      "published": entry.occurred_at || entry.received_at || "",
+      "author": {
+        "name": entry.actor_name || "",
+        "url": entry.actor_url || entry.source_url || "",
+        // JOURNAL-CSP-01 2c: the projection's avatar (a self-hosted path when the Hub's
+        // public avatar paths are on). authorPhoto() decides whether it may be shown.
+        "photo": entry.actor_photo_url || ""
+      },
+      "content": { "text": entry.content_text || "" }
+    };
+  }
+
+  // Source 1: self-hosted native-platform engagement, resolved from this
+  // post's syndication URLs via the committed engagement index.
+  var engFetch = fetch("/engagement/index.json")
+    .then(function (r) { return r.json(); })
+    .then(function (index) {
+      var urls = Object.keys(posseUrls || {}).map(function (k) { return posseUrls[k]; });
+      var slug = null;
+      for (var i = 0; i < urls.length; i++) {
+        if (index[urls[i]]) { slug = index[urls[i]]; break; }
+      }
+      if (!slug) return [];
+      return fetch("/engagement/" + slug + ".json")
+        .then(function (r) { return r.json(); })
+        .then(function (d) { return d.children || []; });
+    })
+    .catch(function () { return []; });
+
+  // Source 2: Hub-owned verified reactions and approved text replies. The
+  // same-origin Pages Function calls a projection-only Pangolin origin; the
+  // Hub key never leaves the Pi. An origin outage deliberately degrades to [].
+  var hubFetch = hubProjectionEnabled
+    ? fetch("/api/webmentions?target=" + target)
+        .then(function (r) { return r.ok ? r.json() : { entries: [] }; })
+        .then(function (d) { return (d.entries || []).map(hubEntryToChild); })
+        .catch(function () { return []; })
+    : Promise.resolve([]);
+
+  Promise.all([engFetch, hubFetch]).then(function (res) {
+    renderAll(res[0].concat(res[1]));
+  });
+})();

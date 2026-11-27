@@ -64,7 +64,7 @@ test('DOM rendering and third-party gallery assets stay hardened', () => {
   const search = read('static/js/page-search.js');
   const tweets = read('static/js/tweets.js');
   const tweetsOnThisDay = read('static/js/tweets-on-this-day.js');
-  const webmentions = read('themes/ergo/templates/partials/webmentions.html');
+  const webmentions = read('static/js/page-webmentions.js');
   const gallery = read('templates/gallery/single.html');
   const postShare = read('static/js/page-post-share.js');
 

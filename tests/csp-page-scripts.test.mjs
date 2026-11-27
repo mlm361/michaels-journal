@@ -25,6 +25,8 @@ const PAGES = {
   'themes/ergo/templates/partials/post-share.html': '/js/page-post-share.js',
   'templates/search.html': '/js/page-search.js',
   'templates/townsquare.html': '/js/site-townsquare-footer.js',
+  // Phase 3 step 4.
+  'themes/ergo/templates/partials/webmentions.html': '/js/page-webmentions.js',
 };
 
 test('step 3: the page templates have no inline script, no on* handler, no script body beside src', () => {
@@ -85,7 +87,7 @@ test('step 3: every page-*.js is loaded by exactly one template, none is orphane
   const present = fs.readdirSync(path.join(root, 'static/js')).filter((f) => /^page-.*\.js$/.test(f)).sort();
   const referenced = Object.values(PAGES).filter((s) => s.startsWith('/js/page-')).map((s) => s.slice(4)).sort();
   assert.deepEqual(present, referenced);
-  assert.equal(present.length, 7);
+  assert.equal(present.length, 8); // 7 from step 3, page-webmentions.js from step 4
   for (const f of present) {
     const text = read(`static/js/${f}`);
     assert.doesNotThrow(() => new vm.Script(text, { filename: f }), f);

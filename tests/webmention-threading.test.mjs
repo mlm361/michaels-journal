@@ -3,10 +3,12 @@ import fs from "node:fs";
 import vm from "node:vm";
 
 const source = fs.readFileSync(new URL("../static/js/webmention-threading.js", import.meta.url), "utf8");
-const template = fs.readFileSync(
-  new URL("../themes/ergo/templates/partials/webmentions.html", import.meta.url),
-  "utf8"
-);
+// Phase 3 step 4 moved the webmentions code into static/js/page-webmentions.js, so the
+// "gone for good" checks below cover the partial and that file together.
+const template = [
+  "../themes/ergo/templates/partials/webmentions.html",
+  "../static/js/page-webmentions.js",
+].map((file) => fs.readFileSync(new URL(file, import.meta.url), "utf8")).join("\n");
 const window = {};
 vm.runInNewContext(source, { window, globalThis: window });
 const threads = window.MichaelWebmentionThreads;

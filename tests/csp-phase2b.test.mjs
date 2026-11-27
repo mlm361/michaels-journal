@@ -197,7 +197,9 @@ test('inventory: the real build has no unlisted inline code, and emit writes the
 });
 
 test('D4: failed webmention avatars fall back to the initial badge without an inline handler', () => {
-  const partial = read('themes/ergo/templates/partials/webmentions.html');
+  // Phase 3 step 4 moved the code from the partial into static/js/page-webmentions.js.
+  const partial = read('static/js/page-webmentions.js');
+  assert.doesNotMatch(read('themes/ergo/templates/partials/webmentions.html'), /onerror\s*=/);
   assert.match(partial, /list\.addEventListener\("error", function \(event\) \{/);
   assert.match(partial, /\}, true\);/, 'capturing listener: error events do not bubble');
   assert.match(partial, /data-initial='" \+ escapeHtml\(initialFor\(mention\)\) \+ "'/);

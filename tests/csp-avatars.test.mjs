@@ -346,11 +346,11 @@ test('routes: /avatars/* reaches the Function', () => {
 });
 
 test('strict reader (C2): same-origin avatar paths or https://cdn.bsky.app only; anything else is no photo', () => {
-  const template = read('themes/ergo/templates/partials/webmentions.html');
+  const template = read('static/js/page-webmentions.js');
   const context = vm.createContext({ window: {}, URL });
   vm.runInContext(read('static/js/url-safety.js'), context);
-  vm.runInContext(template.slice(template.indexOf('    function escapeHtml'),
-                                 template.indexOf('    function initialFor')), context);
+  vm.runInContext(template.slice(template.indexOf('  function escapeHtml'),
+                                 template.indexOf('  function initialFor')), context);
   const photo = (value) => context.authorPhoto({ author: { photo: value } });
 
   assert.equal(photo(`/avatars/webmention/${K1}.webp`), `/avatars/webmention/${K1}.webp`);
@@ -394,13 +394,13 @@ test('strict reader (C2): same-origin avatar paths or https://cdn.bsky.app only;
 });
 
 test('Hub webmentions carry the projection avatar through the strict reader', () => {
-  const template = read('themes/ergo/templates/partials/webmentions.html');
+  const template = read('static/js/page-webmentions.js');
   const context = vm.createContext({ window: {}, URL });
   vm.runInContext(read('static/js/url-safety.js'), context);
-  vm.runInContext(template.slice(template.indexOf('    function escapeHtml'),
-                                 template.indexOf('    function initialFor')), context);
-  vm.runInContext(template.slice(template.indexOf('    function hubEntryToChild'),
-                                 template.indexOf('    // Source 1:')), context);
+  vm.runInContext(template.slice(template.indexOf('  function escapeHtml'),
+                                 template.indexOf('  function initialFor')), context);
+  vm.runInContext(template.slice(template.indexOf('  function hubEntryToChild'),
+                                 template.indexOf('  // Source 1:')), context);
   const shown = (actor_photo_url) => context.authorPhoto(context.hubEntryToChild({ actor_name: 'A', actor_photo_url }));
 
   assert.equal(shown(`/avatars/webmention/${K1}.webp`), `/avatars/webmention/${K1}.webp`);

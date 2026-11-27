@@ -32,10 +32,6 @@
     "handler:img.onclick:8c7179853225": {
       "kind": "handler",
       "example": "/blog/my-visions-big-comeback/"
-    },
-    "webmentions.1": {
-      "kind": "script",
-      "example": "/a-day-of-celestial-discoveries-and-misty-mornings/"
     }
   }
 }

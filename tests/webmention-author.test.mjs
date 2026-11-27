@@ -3,14 +3,15 @@ import fs from 'node:fs';
 import test from 'node:test';
 import vm from 'node:vm';
 
-const template = fs.readFileSync('themes/ergo/templates/partials/webmentions.html', 'utf8');
+// Phase 3 step 4 moved the webmentions code from the partial into static/js/page-webmentions.js.
+const template = fs.readFileSync('static/js/page-webmentions.js', 'utf8');
 const window = {};
 const context = vm.createContext({window, URL});
 vm.runInContext(fs.readFileSync('static/js/url-safety.js', 'utf8'), context);
-vm.runInContext(template.slice(template.indexOf('    function escapeHtml'),
-                              template.indexOf('    function authorPhoto')), context);
-vm.runInContext(template.slice(template.indexOf('    function hubEntryToChild'),
-                              template.indexOf('    // Source 1:')), context);
+vm.runInContext(template.slice(template.indexOf('  function escapeHtml'),
+                              template.indexOf('  function authorPhoto')), context);
+vm.runInContext(template.slice(template.indexOf('  function hubEntryToChild'),
+                              template.indexOf('  // Source 1:')), context);
 
 for (const [label, entry, expected] of [
   ['missing name', {actor_url: 'https://michaelharley.net', source_url: 'https://other.example/reply'}, 'michaelharley.net'],
@@ -32,8 +33,8 @@ test('a long reply card is shown whole, line breaks kept (2026-10-04)', () => {
   // Cards cut replies at 500 characters and the CSS collapsed their line breaks.
   const full = vm.createContext({window: {}, URL});
   vm.runInContext(fs.readFileSync('static/js/url-safety.js', 'utf8'), full);
-  vm.runInContext(template.slice(template.indexOf('    function escapeHtml'),
-                                 template.indexOf('    function renderReplyTree')), full);
+  vm.runInContext(template.slice(template.indexOf('  function escapeHtml'),
+                                 template.indexOf('  function renderReplyTree')), full);
   const text = 'First paragraph.\n\n' + 'x'.repeat(900) + ' <end>';
   const card = full.renderReplyCard({author: {name: 'A'}, content: {text}});
   assert.match(card, /First paragraph\.\n\nx{900} &lt;end&gt;<\/p>/);
@@ -45,8 +46,8 @@ test('a long reply card is shown whole, line breaks kept (2026-10-04)', () => {
 test('a public response links to the exact source post, separate from the author profile', () => {
   const full = vm.createContext({window: {}, URL});
   vm.runInContext(fs.readFileSync('static/js/url-safety.js', 'utf8'), full);
-  vm.runInContext(template.slice(template.indexOf('    function escapeHtml'),
-                                 template.indexOf('    function renderReplyTree')), full);
+  vm.runInContext(template.slice(template.indexOf('  function escapeHtml'),
+                                 template.indexOf('  function renderReplyTree')), full);
   const card = full.renderReplyCard({
     'wm-property': 'in-reply-to',
     url: 'https://writer.example/posts/the-response',
@@ -61,8 +62,8 @@ test('a public response links to the exact source post, separate from the author
 test('generic mentions get a source-post label and unsafe source URLs get no link', () => {
   const full = vm.createContext({window: {}, URL});
   vm.runInContext(fs.readFileSync('static/js/url-safety.js', 'utf8'), full);
-  vm.runInContext(template.slice(template.indexOf('    function escapeHtml'),
-                                 template.indexOf('    function renderReplyTree')), full);
+  vm.runInContext(template.slice(template.indexOf('  function escapeHtml'),
+                                 template.indexOf('  function renderReplyTree')), full);
   assert.match(
     full.renderReplyCard({
       'wm-property': 'mention-of',
@@ -80,8 +81,8 @@ test('generic mentions get a source-post label and unsafe source URLs get no lin
 test('RSVP cards expose the normalized response and exact source', () => {
   const full = vm.createContext({window: {}, URL});
   vm.runInContext(fs.readFileSync('static/js/url-safety.js', 'utf8'), full);
-  vm.runInContext(template.slice(template.indexOf('    function escapeHtml'),
-                                 template.indexOf('    function renderReplyTree')), full);
+  vm.runInContext(template.slice(template.indexOf('  function escapeHtml'),
+                                 template.indexOf('  function renderReplyTree')), full);
   const card = full.renderReplyCard({
     'wm-property': 'rsvp',
     'rsvp-status': 'yes',
@@ -95,8 +96,8 @@ test('RSVP cards expose the normalized response and exact source', () => {
 test('a trusted owner reply gets an accessible author badge', () => {
   const full = vm.createContext({window: {}, URL});
   vm.runInContext(fs.readFileSync('static/js/url-safety.js', 'utf8'), full);
-  vm.runInContext(template.slice(template.indexOf('    function escapeHtml'),
-                                 template.indexOf('    function renderReplyTree')), full);
+  vm.runInContext(template.slice(template.indexOf('  function escapeHtml'),
+                                 template.indexOf('  function renderReplyTree')), full);
 
   const card = full.renderReplyCard({
     'author-is-owner': true,
@@ -111,8 +112,8 @@ test('a trusted owner reply gets an accessible author badge', () => {
 test('an owner-looking name or URL cannot create the author badge', () => {
   const full = vm.createContext({window: {}, URL});
   vm.runInContext(fs.readFileSync('static/js/url-safety.js', 'utf8'), full);
-  vm.runInContext(template.slice(template.indexOf('    function escapeHtml'),
-                                 template.indexOf('    function renderReplyTree')), full);
+  vm.runInContext(template.slice(template.indexOf('  function escapeHtml'),
+                                 template.indexOf('  function renderReplyTree')), full);
 
   for (const mention of [
     {author: {name: 'Michael', url: 'https://michaelreflects.com/'}},
