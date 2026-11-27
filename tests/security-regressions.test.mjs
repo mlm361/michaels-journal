@@ -60,12 +60,13 @@ test('R2 media proxy cannot serve same-origin HTML from object metadata', async 
 test('DOM rendering and third-party gallery assets stay hardened', () => {
   const base = read('themes/ergo/templates/base.html');
   const themeSelector = read('themes/ergo/static/theme_selector.js');
-  const search = read('templates/search.html');
+  // Phase 3 step 3 moved the search and post-share code into static/js.
+  const search = read('static/js/page-search.js');
   const tweets = read('static/js/tweets.js');
   const tweetsOnThisDay = read('static/js/tweets-on-this-day.js');
   const webmentions = read('themes/ergo/templates/partials/webmentions.html');
   const gallery = read('templates/gallery/single.html');
-  const postShare = read('themes/ergo/templates/partials/post-share.html');
+  const postShare = read('static/js/page-post-share.js');
 
   assert.doesNotMatch(base, /document\.write/);
   assert.match(read('static/js/site-theme-init.js'), /storedTheme === 'dark' \? 'dark' : 'default'/);

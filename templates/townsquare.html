@@ -38,25 +38,11 @@
 </div>
 
 {% if config.extra.townsquare.enabled %}
-<div id="townsquare-root"></div>
+<div id="townsquare-root" data-ts-origin="{{ config.extra.townsquare.origin }}" data-ts-socket-path="{{ config.extra.townsquare?.socket_path or '/live' }}"{% if config.extra.townsquare.site_key %} data-ts-site-key="{{ config.extra.townsquare.site_key }}"{% endif %}></div>
 <p class="townsquare-offline" hidden>The town square is offline right now. Check back soon.</p>
-<script type="module" data-csp-id="townsquare.1">
-  import { mountTownSquare } from "{{ config.extra.townsquare.origin | safe }}/townsquare.mjs";
-  // Load the widget stylesheet at runtime (keeps third-party widget.css, which uses
-  // valid modern CSS the W3C validator flags, out of static validation).
-  var _tsCss = document.createElement("link");
-  _tsCss.rel = "stylesheet";
-  _tsCss.href = "{{ config.extra.townsquare.origin | safe }}/widget.css";
-  document.head.appendChild(_tsCss);
-  mountTownSquare(document.getElementById("townsquare-root"), {
-    serverOrigin: "{{ config.extra.townsquare.origin | safe }}",
-    socketPath: "{{ (config.extra.townsquare?.socket_path or '/live') | safe }}",
-    {% if config.extra.townsquare.site_key %}siteKey: "{{ config.extra.townsquare.site_key | safe }}",{% endif %}
-    // Signposts (neighbouring towns) come live from the TownSquare dashboard.
-    // Do not list connections here: an inline list overrides the dashboard.
-    theme: "host"
-  });
-</script>
+{# JOURNAL-CSP-01 Phase 3 step 3: was inline module townsquare.1. The same loader as the
+   footer widget (this page sets no_footer_townsquare, so there is one #townsquare-root). #}
+<script type="module" src="/js/site-townsquare-footer.js"></script>
 {% else %}
 <p class="townsquare-closed">The town square is closed at the moment.</p>
 {% endif %}

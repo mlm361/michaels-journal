@@ -1,4 +1,6 @@
 // JOURNAL-CSP-01 Phase 3 step 2: mount the footer TownSquare (was inline module base.2).
+// Step 3: the /townsquare/ page uses it too (was inline module townsquare.1); that page
+// has no footer widget, so there is only ever one #townsquare-root.
 // The template writes the origin, socket path and optional site key as data-ts-*
 // attributes on #townsquare-root. Loaded with type="module".
 const root = document.getElementById('townsquare-root');

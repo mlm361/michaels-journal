@@ -165,12 +165,24 @@ test('inventory: the real build has no unlisted inline code, and emit writes the
     assert.ok(meta.hosts.includes('tinylytics.app') && !meta.hosts.some((h) => h.includes('/')));
     const routes = JSON.parse(fs.readFileSync(path.join(out, '__csp', 'routes.json'), 'utf8'));
     assert.ok(routes.includes('/') && routes.includes('/about/'));
-    const home = JSON.parse(fs.readFileSync(path.join(out, '__csp', 'pos', `${routeKey('/')}.json`), 'utf8'));
-    // The home page's position file lists exactly the inline items on the built home page
-    // (Phase 3 step 2 moved base.1 and the other layout scripts out, so no fixed id is assumed).
-    const homeItems = scanPage(fs.readFileSync(path.join(out, 'index.html'), 'utf8')).map((i) => i.id);
-    assert.ok(homeItems.length > 0);
-    assert.deepEqual(home.map(([id]) => id), homeItems);
+    const posOf = (route) => JSON.parse(fs.readFileSync(path.join(out, '__csp', 'pos', `${routeKey(route)}.json`), 'utf8'));
+    const scanOf = (route) => scanPage(fs.readFileSync(path.join(out, ...route.split('/').filter(Boolean), 'index.html'), 'utf8'));
+    // Every page gets a position file listing exactly the inline items on the built page. Phase 3
+    // steps 2 and 3 emptied the home page, so its file is checked as written (possibly []), and
+    // the "positions are real" check uses a page that still has inline code: the example page of
+    // an item still in the inventory. Once the inventory is empty (step 6) there is none to pick.
+    const home = posOf('/');
+    assert.deepEqual(home.map(([id]) => id), scanOf('/').map((i) => i.id));
+    const examples = [...new Set(Object.values(inventory.items).map((i) => i.example))].sort();
+    const withCode = examples.find((route) => scanOf(route).length > 0);
+    if (Object.keys(inventory.items).length > 0) {
+      assert.ok(withCode, 'an inventory example page still has inline code');
+      const found = scanOf(withCode);
+      const pos = posOf(withCode);
+      assert.deepEqual(pos.map(([id]) => id), found.map((i) => i.id));
+      assert.deepEqual(pos.map(([, line, col, end]) => [line, col, end]), found.map((i) => [i.line, i.col, i.endLine]));
+      assert.ok(validPositions(pos));
+    }
     // What the build writes must pass the collector's own validators, or the collector would 503 forever.
     assert.ok(validMeta(meta), 'production meta.json passes validMeta');
     assert.ok(validRoutes(routes) && validPositions(home));

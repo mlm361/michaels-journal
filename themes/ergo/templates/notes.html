@@ -218,17 +218,5 @@
   {% endif %}
 </section>
 
-<script data-csp-id="notes.1">
-(function () {
-  document.querySelectorAll('[data-sticky-toggle]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var note = btn.closest('.sticky-note');
-      if (!note) return;
-      var expanded = note.classList.toggle('is-expanded');
-      btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
-      btn.textContent = expanded ? 'Collapse' : 'Expand';
-    });
-  });
-})();
-</script>
+<script src="/js/page-notes.js"></script>
 {% endblock content %}

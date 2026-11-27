@@ -1,10 +1,6 @@
 {
   "version": 1,
   "items": {
-    "archive.1": {
-      "kind": "script",
-      "example": "/archive/"
-    },
     "content:33d22fa0baba9ca6": {
       "kind": "script",
       "example": "/on-this-day/"
@@ -21,14 +17,6 @@
       "kind": "script",
       "example": "/stats/"
     },
-    "gallery-single.1": {
-      "kind": "script",
-      "example": "/gallery/ruby-fall-chattanooga-2013/"
-    },
-    "gallery-slideshow.1": {
-      "kind": "script",
-      "example": "/gallery/dreamsbeans-gallery/"
-    },
     "handler:a.onclick:c8db21efb1b2": {
       "kind": "handler",
       "example": "/blog/my-visions-big-comeback/"
@@ -44,30 +32,6 @@
     "handler:img.onclick:8c7179853225": {
       "kind": "handler",
       "example": "/blog/my-visions-big-comeback/"
-    },
-    "handler:img.onerror:f5ff192b97a9": {
-      "kind": "handler",
-      "example": "/a-day-of-celestial-discoveries-and-misty-mornings/"
-    },
-    "notes.1": {
-      "kind": "script",
-      "example": "/notes/"
-    },
-    "pagination.1": {
-      "kind": "script",
-      "example": "/"
-    },
-    "post-share.1": {
-      "kind": "script",
-      "example": "/a-day-of-celestial-discoveries-and-misty-mornings/"
-    },
-    "search.1": {
-      "kind": "script",
-      "example": "/search/"
-    },
-    "townsquare.1": {
-      "kind": "script",
-      "example": "/townsquare/"
     },
     "webmentions.1": {
       "kind": "script",
