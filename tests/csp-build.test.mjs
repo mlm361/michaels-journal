@@ -70,8 +70,12 @@ test('JOURNAL-CSP-01 Phase 2b: enforced and Report-Only policies differ only as 
   for (const p of [enforce, ro]) {
     assert.ok(p.includes("worker-src 'self' blob:"), 'TownSquare needs a blob: worker (D2)');
     assert.ok(p.includes('report-uri /api/csp-report') && p.includes('report-to csp'), 'both reporting mechanisms (v3 D3)');
-    assert.ok(!p.find((d) => d.startsWith('connect-src ')).includes('cloudflareinsights'),
-      'v2 research: the auto-injected beacon posts to /cdn-cgi/rum, so no connect-src host for it');
+    // Phase 3 F2 (2026-11-27): clean Chromium on production showed the Pages-injected beacon POSTs to
+    // https://cloudflareinsights.com/cdn-cgi/rum (not same-origin), blocked under both headers. Exactly that
+    // host, https only, and no wildcard.
+    const connect = p.find((d) => d.startsWith('connect-src ')).split(' ');
+    assert.ok(connect.includes('https://cloudflareinsights.com'), 'the Web Analytics beacon endpoint (F2)');
+    assert.deepEqual(connect.filter((s) => s.includes('cloudflareinsights')), ['https://cloudflareinsights.com']);
   }
 });
 

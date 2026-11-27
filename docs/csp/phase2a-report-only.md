@@ -44,6 +44,7 @@ runtime load in `static/js`, the templates and the content pages (fetch, import,
 | | `https://api.listenbrainz.org` | now playing (`post-share.html:101`) |
 | | `https://coverartarchive.org` | cover-art lookups |
 | | `https://bubbles.town` | vote API |
+| | `https://cloudflareinsights.com` | Web Analytics beacon `POST /cdn-cgi/rum` (added 2026-11-27, Phase 3 F2) |
 | font-src | `'self'` | self-hosted fonts |
 | object-src | `'none'` | no plugins |
 | base-uri | `'self'` | |
@@ -51,8 +52,9 @@ runtime load in `static/js`, the templates and the content pages (fetch, import,
 | frame-ancestors | `'none'` | matches `X-Frame-Options: DENY` |
 | | `upgrade-insecure-requests` | browsers ignore it in Report-Only; it takes effect in 2b |
 
-**Not added yet:** `connect-src https://cloudflareinsights.com`. It's added only if a live
-crawl captures a successful beacon POST to it (plan v3 R2-F2).
+**Added 2026-11-27 (Phase 3 F2):** `connect-src https://cloudflareinsights.com`. Clean Chromium on production
+captured the Pages-injected beacon sending `POST https://cloudflareinsights.com/cdn-cgi/rum`, blocked under both
+headers (the plan v3 R2-F2 condition; the earlier assumption of a same-origin `/cdn-cgi/rum` was wrong for Pages).
 
 ## Open for Phase 2b (decide before enforcing)
 
