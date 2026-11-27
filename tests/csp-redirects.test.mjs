@@ -1,6 +1,6 @@
 // JOURNAL-CSP-01 Phase 3 step 1: Zola's generated redirect pages (front-matter aliases and the
-// paginator's /page/1/) carry no inline code, and each one is also an HTTP 301 in static/_redirects,
-// so Cloudflare redirects before the page is served and the browser keeps the #fragment.
+// paginator's /page/1/) carry no inline code and still redirect: an external helper keeps the #fragment,
+// and a plain meta refresh works without JavaScript. (Pages serves these files even if _redirects names them.)
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
 import fs from 'node:fs';
@@ -14,16 +14,6 @@ import { scanPage } from '../tools/csp-inline-inventory.mjs';
 const root = path.resolve(import.meta.dirname, '..');
 const read = (relative) => fs.readFileSync(path.join(root, relative), 'utf8');
 const ORIGIN = 'https://michaelreflects.com';
-
-function redirectRules() {
-  const rules = new Map();
-  for (const line of read('static/_redirects').split('\n')) {
-    const parts = line.trim().split(/\s+/);
-    if (!parts[0] || parts[0].startsWith('#')) continue;
-    rules.set(parts[0], { to: parts[1], status: parts[2] });
-  }
-  return rules;
-}
 
 function redirectPages(dir, publicDir = dir, out = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -50,24 +40,54 @@ test('step 1: the alias template has no inline code and runs the helper before t
   assert.match(template, /<a href="\{\{ url \}\}">Click here<\/a>/);
 });
 
-test('step 1: every generated redirect page is script-free inline and has its 301 in _redirects', () => {
+// The source of truth: every front-matter alias (redirecting to the page that declares it) and the
+// paginator's first page of each paginated section (redirecting to the section).
+function expectedRedirects() {
+  const expected = new Map();
+  const walk = (dir) => {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) { walk(full); continue; }
+      if (!entry.name.endsWith('.md')) continue;
+      const front = fs.readFileSync(full, 'utf8').match(/^\+\+\+\r?\n([\s\S]*?)\r?\n\+\+\+/)?.[1] ?? '';
+      const rel = path.relative(path.join(root, 'content'), dir).split(path.sep).join('/');
+      if (entry.name === '_index.md' && /^paginate_by\s*=/m.test(front)) {
+        const section = rel ? `/${rel}/` : '/';
+        expected.set(`${section}page/1/`, { section });
+      }
+      const aliases = front.match(/^aliases\s*=\s*\[([^\]]*)\]/m)?.[1];
+      for (const alias of aliases ? [...aliases.matchAll(/"([^"]+)"/g)].map((m) => m[1]) : []) {
+        expected.set(alias, { title: JSON.parse(front.match(/^title\s*=\s*("(?:[^"\\]|\\.)*")/m)[1]) });
+      }
+    }
+  };
+  walk(path.join(root, 'content'));
+  return expected;
+}
+
+test('step 1: every generated redirect page is script-free inline and targets its source of truth', () => {
   const out = fs.mkdtempSync(path.join(os.tmpdir(), 'csp-redirects-'));
   try {
     const built = spawnSync('zola', ['build', '-o', out, '--force'], { cwd: root, encoding: 'utf8' });
     if (built.error) throw built.error;
     assert.equal(built.status, 0, built.stderr || 'Zola build failed');
     const pages = redirectPages(out);
-    // Today: the paginator's first page and the one front-matter alias. More may come; each needs rules.
-    assert.ok(pages.some((p) => p.route === '/page/1/'), 'paginator redirect page');
-    assert.ok(pages.some((p) => p.route === '/blog/watched-project-hail-mary-2026-on-prime-video/'), 'alias page');
-    const rules = redirectRules();
+    const expected = expectedRedirects();
+    assert.deepEqual(pages.map((p) => p.route).sort(), [...expected.keys()].sort(), 'redirect pages == aliases + /page/1/');
+    assert.ok(expected.has('/page/1/') && expected.has('/blog/watched-project-hail-mary-2026-on-prime-video/'));
     for (const { route, html } of pages) {
       assert.deepEqual(scanPage(html), [], `${route} has inline code`);
       const target = html.match(/data-target="([^"]+)"/)?.[1];
       assert.ok(target && target.startsWith(ORIGIN + '/'), `${route} target`);
-      const want = target.slice(ORIGIN.length);
-      for (const from of [route, route.replace(/\/$/, '')]) {
-        assert.deepEqual(rules.get(from), { to: want, status: '301' }, `_redirects needs "${from} ${want} 301"`);
+      for (const attr of [`href="${target}"`, `content="0; url=${target}"`]) assert.ok(html.includes(attr), `${route}: ${attr}`);
+      const want = expected.get(route);
+      const targetPath = target.slice(ORIGIN.length);
+      if (want.section) assert.equal(targetPath, want.section, `${route} -> its section`);
+      else {
+        const page = fs.readFileSync(path.join(out, targetPath, 'index.html'), 'utf8');
+        assert.ok(!page.includes('<title>Redirect</title>'), `${route} target is a real page`);
+        const escaped = want.title.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        assert.ok(page.includes(want.title) || page.includes(escaped), `${route} -> the page that declares the alias`);
       }
     }
   } finally {

@@ -2,9 +2,9 @@
 <meta charset="utf-8">
 <title>Redirect</title>
 <link rel="canonical" href="{{ url }}">
-{# JOURNAL-CSP-01 Phase 3 step 1: no inline script. Cloudflare serves these paths as HTTP 301s from
-   static/_redirects (the browser keeps the #fragment). If this page is ever served instead, the helper
-   keeps the fragment and the meta refresh still redirects without JavaScript. #}
+{# JOURNAL-CSP-01 Phase 3 step 1: no inline script. The external helper runs first and keeps the
+   #fragment; without JavaScript the meta refresh still redirects (without the fragment). Cloudflare Pages
+   serves this file even when static/_redirects names the same path (checked on preview 2026-11-27). #}
 <script src="/js/alias-redirect.js" data-target="{{ url }}"></script>
 <meta http-equiv="refresh" content="0; url={{ url }}">
 <p><a href="{{ url }}">Click here</a> to be redirected.</p>
