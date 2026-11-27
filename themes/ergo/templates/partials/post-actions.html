@@ -17,8 +17,8 @@
   <p class="post-response-copy">Reply by email, respond where this post was shared, or send a webmention. Tap the heart to leave a like or just say hello.</p>
 
   <div class="post-actions">
-    <a class="post-action reply-by-email"
-       href="mailto:michael@michaelmitchell.email?subject={{ email_subject | urlencode }}">✍️ Reply by email</a>
+    {# One line on purpose: Cloudflare Email Address Obfuscation rewrites this tag onto one line at the edge, and a two-line tag would shift every later line away from the CSP collector's build-time positions (JOURNAL-CSP-01 step 0, F1). #}
+    <a class="post-action reply-by-email" href="mailto:michael@michaelmitchell.email?subject={{ email_subject | urlencode }}">✍️ Reply by email</a>
 
     {% set posse = page.extra?.posse or false %}
     {% if posse %}
