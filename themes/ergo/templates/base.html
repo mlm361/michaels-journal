@@ -557,11 +557,8 @@
                 <img src="{{ config.base_url }}/icons/brands/bluesky.svg" alt="Bluesky" width="24" height="24" />Bluesky
               </a>
               <a rel="me" href="https://ditto.pub/npub19af39pdnr0cpg0ntakhdprfz8fkhkdn4t0f383gj0zw8hy4wf8lqh0nfur">
-                {# Plays 4 times (about 3.5 s) and stops; still icon for reduced motion (WCAG 2.2.2). #}
-                <picture>
-                  <source media="(prefers-reduced-motion: reduce)" srcset="https://media.mitchelltribe.xyz/site/img/nostr-icon.avif" />
-                  <img src="https://media.mitchelltribe.xyz/site/img/nostr-icon-animated-4x.avif" alt="Nostr" width="24" height="24" />
-                </picture>Nostr
+                {# Still icon; /js/footer-ostrich.js animates it once in view and stops within 5 s (WCAG 2.2.2). #}
+                <img src="https://media.mitchelltribe.xyz/site/img/nostr-icon.avif" data-anim-src="https://media.mitchelltribe.xyz/site/img/nostr-icon-animated-4x.avif" alt="Nostr" width="24" height="24" />Nostr
               </a>
               <a href="mailto:michael@michaelmitchell.email">
                 <img src="https://media.mitchelltribe.xyz/site/img/email-icon.avif" alt="Email" width="24" height="24" />Email Me
@@ -587,6 +584,7 @@
         <script defer src="https://tinylytics.app/js/script.js" data-site="h2Q2CzgAf-te_SJUBWQ1"></script>
 
         <script src="/js/site-page.js"></script>
+        <script src="/js/footer-ostrich.js" defer></script>
         <script src="/js/weather.js?v=20261119" defer></script>
         {#- JOURNAL-CSP-01 Phase 3 step 5a: the Photo Grid lightbox, only where the new markup is. #}
         {%- if page is defined and "data-pg-open" in page.content %}
