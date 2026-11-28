@@ -584,5 +584,9 @@
 
         <script src="/js/site-page.js"></script>
         <script src="/js/weather.js?v=20261119" defer></script>
+        {#- JOURNAL-CSP-01 Phase 3 step 5a: the Photo Grid lightbox, only where the new markup is. #}
+        {%- if page is defined and "data-pg-open" in page.content %}
+        <script src="/js/photo-grid.js" defer></script>
+        {%- endif %}
     </body>
 </html>
