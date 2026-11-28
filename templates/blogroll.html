@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block head_extra %}
+<link rel="blogroll" type="text/x-opml" title="Michael Mitchell's blogroll" href="/blogroll.opml">
 <style>
   .blogroll-category { margin-bottom: 1.75rem; }
   .blogroll-cat-heading {
@@ -87,7 +88,7 @@
 <section class="post_container">
   <article>
     <h1 class="article_title">📚 Blogroll</h1>
-    <p style="opacity:0.55;font-size:0.9rem;margin-top:0;">People, blogs, and ministries worth reading or listening to.</p>
+    <p style="opacity:0.55;font-size:0.9rem;margin-top:0;">People, blogs, and ministries worth reading or listening to. <a href="/blogroll.opml" type="text/x-opml">Get the list as OPML</a> to follow them all in your own feed reader.</p>
     {% include "partials/blogroll.html" %}
   </article>
 </section>

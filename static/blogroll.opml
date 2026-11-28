@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>Michael Mitchell's blogroll</title>
+    <ownerName>Michael Mitchell</ownerName>
+    <ownerId>https://michaelreflects.com/</ownerId>
+    <docs>https://opml.org/spec2.opml</docs>
+  </head>
+  <body>
+    <outline text="Tech &amp; Gadgets" title="Tech &amp; Gadgets">
+      <outline type="rss" text="Lon Seidman" title="Lon Seidman" xmlUrl="https://blog.lon.tv/feed/" htmlUrl="https://blog.lon.tv/"/>
+      <outline type="rss" text="Leo Laporte" title="Leo Laporte" xmlUrl="https://leo.fm/feed.xml" htmlUrl="https://leo.fm"/>
+      <outline type="rss" text="Juan Carlos Bagnell" title="Juan Carlos Bagnell" xmlUrl="https://somegadgetguy.com/feed/" htmlUrl="https://somegadgetguy.com/"/>
+      <outline type="rss" text="Paul Thurrott" title="Paul Thurrott" xmlUrl="https://www.thurrott.com/feed" htmlUrl="https://www.thurrott.com"/>
+      <outline type="rss" text="Tom Casavant" title="Tom Casavant" xmlUrl="https://tomcasavant.com/blog.xml" htmlUrl="https://tomcasavant.com/"/>
+      <outline type="rss" text="Daniel Jalkut" title="Daniel Jalkut" xmlUrl="https://bitsplitting.org/feed/" htmlUrl="https://bitsplitting.org/"/>
+      <outline type="rss" text="Dave Winer" title="Dave Winer" xmlUrl="http://scripting.com/rss.xml" htmlUrl="https://scripting.com"/>
+      <outline type="rss" text="Ricardo Mendes" title="Ricardo Mendes" xmlUrl="https://rmendes.net/feed.xml" htmlUrl="https://rmendes.net/"/>
+      <outline type="rss" text="Beto Dealmeida" title="Beto Dealmeida" xmlUrl="https://robida.net/feed.xml" htmlUrl="https://robida.net/"/>
+      <outline type="rss" text="Molly White" title="Molly White" xmlUrl="https://www.mollywhite.net/feed/feed.xml" htmlUrl="https://www.mollywhite.net/"/>
+      <outline type="rss" text="Greg Morris" title="Greg Morris" xmlUrl="https://gregmorris.co.uk/feed/" htmlUrl="https://gregmorris.co.uk/"/>
+      <outline type="rss" text="Ask Leo!" title="Ask Leo!" xmlUrl="https://askleo.com/feed/" htmlUrl="https://askleo.com/"/>
+      <outline type="rss" text="Mike Elgan" title="Mike Elgan" xmlUrl="https://elgan.com/posts.atom" htmlUrl="https://elgan.com/"/>
+      <outline type="rss" text="Hacker News" title="Hacker News" xmlUrl="https://news.ycombinator.com/rss" htmlUrl="https://news.ycombinator.com/"/>
+      <outline type="rss" text="Dale Mellor" title="Dale Mellor" xmlUrl="https://khleedril.org/blog/rss" htmlUrl="https://khleedril.org/blog"/>
+    </outline>
+    <outline text="Blogging &amp; IndieWeb" title="Blogging &amp; IndieWeb">
+      <outline type="rss" text="Manton Reece" title="Manton Reece" xmlUrl="https://www.manton.org/feed.xml" htmlUrl="https://www.manton.org/"/>
+      <outline type="rss" text="Matt Baer" title="Matt Baer" xmlUrl="https://write.as/matt/feed/" htmlUrl="https://write.as/matt/"/>
+      <outline type="rss" text="Vincent Ritter" title="Vincent Ritter" xmlUrl="https://vincentritter.com/feeds/all.rss" htmlUrl="https://vincentritter.com"/>
+      <outline type="rss" text="Ye Olde Blogroll" title="Ye Olde Blogroll" xmlUrl="https://blogroll.org/feed" htmlUrl="https://blogroll.org"/>
+      <outline type="rss" text="Bubbles.town" title="Bubbles.town" xmlUrl="https://bubbles.town/feed" htmlUrl="https://bubbles.town/"/>
+    </outline>
+    <outline text="Personal" title="Personal">
+      <outline type="rss" text="Along the Ray" title="Along the Ray" xmlUrl="https://alongtheray.com/feed.rss" htmlUrl="https://alongtheray.com"/>
+      <outline type="rss" text="Jim Mitchell" title="Jim Mitchell" xmlUrl="https://jimmitchell.org/feed.xml" htmlUrl="https://jimmitchell.org/"/>
+      <outline type="rss" text="Hey Loura!" title="Hey Loura!" xmlUrl="https://heyloura.com/feed.xml" htmlUrl="https://heyloura.com"/>
+      <outline type="rss" text="Kev Quirk" title="Kev Quirk" xmlUrl="https://kevquirk.com/feed" htmlUrl="https://kevquirk.com/"/>
+      <outline type="rss" text="Numeric Citizen" title="Numeric Citizen" xmlUrl="https://feedpress.me/numericcitizen-space" htmlUrl="https://numericcitizen.me/"/>
+      <outline type="rss" text="Mark — CodeMacLife" title="Mark — CodeMacLife" xmlUrl="https://blog.codemaclife.net/feed.atom" htmlUrl="https://blog.codemaclife.net/"/>
+      <outline type="rss" text="Michael Harley" title="Michael Harley" xmlUrl="https://michaelharley.net/feed.xml" htmlUrl="https://michaelharley.net/"/>
+      <outline type="rss" text="Nicola Losito — Nicola' Scribbles" title="Nicola Losito — Nicola' Scribbles" xmlUrl="https://scribbles.page/nicola/feed.atom" htmlUrl="https://scribbles.page/nicola"/>
+      <outline type="rss" text="Michael Thomas — blog.thms.uk" title="Michael Thomas — blog.thms.uk" xmlUrl="https://blog.thms.uk/rss.xml" htmlUrl="https://blog.thms.uk/"/>
+      <outline type="rss" text="Forking Mad+" title="Forking Mad+" xmlUrl="https://forkingmad.blog/feed/?type=rss" htmlUrl="https://forkingmad.blog/"/>
+    </outline>
+    <outline text="Christian" title="Christian">
+      <outline type="rss" text="David Jeremiah Blog" title="David Jeremiah Blog" xmlUrl="https://davidjeremiah.blog/feed/" htmlUrl="https://davidjeremiah.blog/"/>
+      <outline type="rss" text="Alistair Begg / Truth For Life" title="Alistair Begg / Truth For Life" xmlUrl="https://feeds.feedburner.com/TruthForLife" htmlUrl="https://www.truthforlife.org/"/>
+    </outline>
+    <outline text="Christian Media" title="Christian Media">
+      <outline type="rss" text="Moody Radio" title="Moody Radio" xmlUrl="https://www.moodyradio.org/rss" htmlUrl="https://www.moodyradio.org/"/>
+      <outline type="rss" text="Turning Point Ministries" title="Turning Point Ministries" xmlUrl="https://media.rss.com/the-david-jeremiah-podcast/feed.xml" htmlUrl="https://www.davidjeremiah.org/"/>
+      <outline type="rss" text="Our Daily Bread Ministries" title="Our Daily Bread Ministries" xmlUrl="https://odb.org/feed/" htmlUrl="https://www.odbm.org/en/"/>
+    </outline>
+  </body>
+</opml>
