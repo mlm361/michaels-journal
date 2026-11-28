@@ -557,7 +557,11 @@
                 <img src="{{ config.base_url }}/icons/brands/bluesky.svg" alt="Bluesky" width="24" height="24" />Bluesky
               </a>
               <a rel="me" href="https://ditto.pub/npub19af39pdnr0cpg0ntakhdprfz8fkhkdn4t0f383gj0zw8hy4wf8lqh0nfur">
-                <img src="https://media.mitchelltribe.xyz/site/img/nostr-icon-animated.avif" alt="Nostr" width="24" height="24" />Nostr
+                {# Plays 4 times (about 3.5 s) and stops; still icon for reduced motion (WCAG 2.2.2). #}
+                <picture>
+                  <source media="(prefers-reduced-motion: reduce)" srcset="https://media.mitchelltribe.xyz/site/img/nostr-icon.avif" />
+                  <img src="https://media.mitchelltribe.xyz/site/img/nostr-icon-animated-4x.avif" alt="Nostr" width="24" height="24" />
+                </picture>Nostr
               </a>
               <a href="mailto:michael@michaelmitchell.email">
                 <img src="https://media.mitchelltribe.xyz/site/img/email-icon.avif" alt="Email" width="24" height="24" />Email Me
